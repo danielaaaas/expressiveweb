@@ -65,7 +65,7 @@ svg {
     display: block;
 }
 
-.notebook {
+/* .notebook {
     display: none;
     position: fixed;
     top: 50%;
@@ -79,19 +79,49 @@ svg {
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
     z-index: 100;
 
-    /* tprm edge effect ATTEMPT using shadow */
+    /* tprm edge effect ATTEMPT using shadow *-/
     box-shadow: 
     4px 4px 20px rgba(0, 0, 0, 0.5),
     inset 3px 0 0 #E8D5B0,
     inset 4px 0 0 #F5F0E0,
     inset 5px 0 0 #E8D5B0;
-    /* slight rotation for a worn out effect? will lessen for following notebooks on other apartment pages */
+    /* slight rotation for a worn out effect? will lessen for following notebooks on other apartment pages *-/
     transform: translate(-50%, -50%) rotate(-1deg);
 }
 
 .notebook.open {
     display: block;
+} */
+
+.notebook {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  background-color: #F5F0E0;
+  border: 2px solid #9B3434;
+  border-radius: 4px;
+  width: 340px;
+  padding: 30px 30px 30px 60px;
+  box-shadow: 
+    4px 4px 20px rgba(0, 0, 0, 0.5),
+    inset 3px 0 0 #E8D5B0,
+    inset 4px 0 0 #F5F0E0,
+    inset 5px 0 0 #E8D5B0;
+  z-index: 100;
+  /* for the animation */
+  transform: translate(-50%, -50%) rotate(-1deg) scaleY(0);
+  transform-origin: top center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
 }
+
+.notebook.open {
+  transform: translate(-50%, -50%) rotate(-1deg) scaleY(1);
+  opacity: 1;
+  pointer-events: all;
+}
+
 
 .notebook h2 {
     font-family: 'Dear Diary', 'Killara', cursive;
