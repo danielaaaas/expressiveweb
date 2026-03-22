@@ -13,6 +13,76 @@
 
 <body>
     <h1>tester header</h1>
+
+    <div class="floor-plan-container">
+        <svg width="612" height="759" viewbox="0 0 612 759"
+        fill="none" xmlns="http://wwww.w3.org/2000/svg"> <!-- xmlns = XML namespace -->
+        <!-- these are the main rooms -->
+            <rect id="apartment-one" x="1" y="4" width="602" height="752" fill="white"
+            stroke="#A1E1FC" stroke-width="2"/>
+            <rect id="master-bedroom" class="room" x="1" y="4" width="602" height="240" fill="#F5F5F5"
+            stroke="#A1E1FC" stroke-width="2"/>
+            <rect id="main-hallway" class="room" x="129" y="244" width="150" height="246" fill="#F5F5F5"
+            stroke="#A1E1FC" stroke-width="2"/>
+            <rect id="bedroom-closet" class="room" x="1" y="244" width="128" height="124" fill="#F5F5F5"
+            stroke="#A1E1FC" stroke-width="2"/>
+            <rect id="hallway-closet" class="room" x="1" y="366" width="128" height="124" fill="#F5F5F5"
+            stroke="#A1E1FC" stroke-width="2"/>
+            <rect id="bathroom" class="room" x="279" y="244" width="324" height="174" fill="#F5F5F5"
+            stroke="#A1E1FC" stroke-width="2"/>
+            <!-- ...nearly gave up on this part -->
+            <mask id="path-10-inside-1_1_49" fill="white">
+                    <path d="M604 417V538H446V655.001H0.0185547V485.804H278.007V417H604Z"/>
+            </mask>
+            <path id="living-room" class="room" d="M604 417V538H446V655.001H0.0185547V485.804H278.007V417H604Z" fill="#F5F5F5"/>
+            <path d="M604 417H606V415H604V417ZM604 538V540H606V538H604ZM446 538V536H444V538H446ZM446 655.001V657.001H448V655.001H446ZM0.0185547 
+            655.001H-1.98145V657.001H0.0185547V655.001ZM0.0185547 485.804V483.804H-1.98145V485.804H0.0185547ZM278.007 485.804V487.804H280.007V485.804H278.007ZM278.007 
+            417V415H276.007V417H278.007ZM604 417H602V538H604H606V417H604ZM604 538V536H446V538V540H604V538ZM446 538H444V655.001H446H448V538H446ZM446 
+            655.001V653.001H0.0185547V655.001V657.001H446V655.001ZM0.0185547 655.001H2.01855V485.804H0.0185547H-1.98145V655.001H0.0185547ZM0.0185547 
+            485.804V487.804H278.007V485.804V483.804H0.0185547V485.804ZM278.007 485.804H280.007V417H278.007H276.007V485.804H278.007ZM278.007 417V419H604V417V415H278.007V417Z" 
+            fill="#A1E1FC" mask="url(#path-10-inside-1_1_49)"/>
+            <!-- end of: ...nearly gave up on this part -->
+            <rect id="kitchen" class="room" x="441" y="536" width="162" height="118" fill="#F5F5F5"
+            stroke="#A1E1FC" stroke-width="2"/>
+            <rect id="front-closet" class="room" x="1" y="654" width="118" height="102" fill="#F5F5F5"
+            stroke="#A1E1FC" stroke-width="2"/>
+            <rect id="front-hallway" class="room" x="117" y="654" width="486" height="102" fill="#F5F5F5"
+            stroke="#A1E1FC" stroke-width="2"/>
+            
+        <!-- these will be windows and doors-->
+            <!-- doors -->
+            <line id="bedroom-door" x1="153" y1="244" x2="257" y2="244" stroke="#54CCFF" stroke-width="8" stroke-linecap="round"/>
+            <line id="front-door" x1="481" y1="755" x2="585" y2="755" stroke="#54CCFF" stroke-width="8" stroke-linecap="round"/>
+            <line id="bathroom-door" x1="280" y1="279" x2="280" y2="383" stroke="#54CCFF" stroke-width="8" stroke-linecap="round"/>
+            <line id="bedroomcloset-door" x1="21" y1="244" x2="107" y2="244" stroke="#54CCFF" stroke-width="8" stroke-linecap="round"/>
+            <line id="hallwaycloset-door" x1="128" y1="384" x2="128" y2="470" stroke="#54CCFF" stroke-width="8" stroke-linecap="round"/>
+            <line id="frontcloset-door" x1="117" y1="667" x2="117" y2="743" stroke="#54CCFF" stroke-width="8" stroke-linecap="round"/>
+            
+            <!-- doorways -->
+            <line id="main-doorway" x1="143" y1="654" x2="299" y2="654" stroke="#54CCFF" stroke-width="8" stroke-linecap="round"/>
+            <line id="kitchen-doorway" x1="442" y1="553" x2="442" y2="639" stroke="#54CCFF" stroke-width="8" stroke-linecap="round"/>
+
+            <!-- windows -->
+            <line id="bedroom-windowone" x1="128" y1="4" x2="244" y2="4" stroke="#00B3FF" stroke-width="8" stroke-linecap="square"/>
+            <line id="bedroom-windowtwo" x1="366" y1="4" x2="482" y2="4" stroke="#00B3FF" stroke-width="8" stroke-linecap="square"/>
+            <line id="bathroom-window" x1="604" y1="279" x2="604" y2="363" stroke="#00B3FF" stroke-width="8" stroke-linecap="square"/>
+            <line id="livingroom-windowone" x1="604" y1="435" x2="604" y2="519" stroke="#00B3FF" stroke-width="8" stroke-linecap="square"/>
+            <line id="kitchen-windowone" x1="604" y1="554" x2="604" y2="638" stroke="#00B3FF" stroke-width="8" stroke-linecap="square"/>
+        </svg>
+    </div>
+
+    <!-- overlay. to come -->
+     <div class="overlay" id="overlay"></div>
+
+    <!-- notebook popup...still need to build it -->
+     <div class="notebook" id="notebook">
+        <button class="close-button" id="close-button">x</button>
+        <h2 id="notebook-title">room</h2> <!-- can i make this a like [ insert room name ] moment? -->
+        <p id="notebook-text">...</p>
+     </div>
+
+    <script id="cursor" src="cursorworkaround/key.js"></script>
+    <script id="mainjava" src="java/main.js"></script>
 </body>
 
 </html>

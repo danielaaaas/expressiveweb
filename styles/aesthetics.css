@@ -12,3 +12,92 @@ h1 {
     font-weight: <weight>;
     font-style: normal;
 }
+
+body {
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: "Pixel Operator", "Pixelify Sans", sans-serif;
+}
+
+.floor-plan-container {
+    position: relative;
+}
+
+.room {
+    cursor: url('https://64.media.tumblr.com/821cf7001bf745e2ddca3d248163c513/894ac02f0d28ad70-56/s1280x1920/b524d63c6de82323756b1603e624961da509144e.png'), auto;
+    /* also included cursor in a .js if this doesn't work */
+    transition: fill 0.2s;
+}
+
+.room:hover {
+    fill: rgba(50, 159, 206, 0.672)
+}
+
+.room:visited {
+    fill: rgba(190, 175, 255, 0.3);
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.notebook {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F5F0E0;
+    border: 2px solid #9B3434;
+    border-radius: 4px;
+    width: 340px;
+    padding: 30px;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.notebook.open {
+    display: block;
+}
+
+.notebook h2 {
+    font-size: 20px;
+    margin: 0 0 12px 0;
+    color: #3A2E1E;
+    border-bottom: 1px solid #8B7355;
+    padding-bottom: 8px;
+}
+
+.notebook p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: #3A2E1E;
+    margin: 0;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    cursor: url('https://64.media.tumblr.com/821cf7001bf745e2ddca3d248163c513/894ac02f0d28ad70-56/s1280x1920/b524d63c6de82323756b1603e624961da509144e.png'), auto;
+    /* also included cursor in a .js if this doesn't work */
+    font-size: 18px;
+    color: #8B7355;
+    background: none;
+    border: none;
+}
