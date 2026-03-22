@@ -6,14 +6,8 @@
   font-style: normal;
 }
 
-.vt323-regular {
-  font-family: "VT323", monospace;
-  font-weight: 400;
-  font-style: normal;
-}
-
 h1 {
-    font-family: "Pixel Operator", "vt323-regular", "Pixelify Sans", sans-serif;
+    font-family: "Pixel Operator", "Pixelify Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -26,7 +20,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    font-family: "Pixel Operator", "vt323-regular", "Pixelify Sans", sans-serif;
+    font-family: "Pixel Operator", "Pixelify Sans", sans-serif;
 }
 
 .floor-plan-container {
@@ -47,7 +41,7 @@ svg {
 }
 
 .room:hover {
-    fill: rgba(50, 159, 206, 0.672)
+    fill: rgba(50, 159, 206, 0.672);
     cursor: url('https://64.media.tumblr.com/821cf7001bf745e2ddca3d248163c513/894ac02f0d28ad70-56/s1280x1920/b524d63c6de82323756b1603e624961da509144e.png'), auto;
     /* also included cursor in a .js if this doesn't work */
 }
