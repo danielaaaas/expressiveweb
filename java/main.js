@@ -78,7 +78,7 @@ document.querySelectorAll('.room').forEach(room => {
         const door = document.getElementById('door-transition');
         door.classList.add('active');
         setTimeout(() => {
-            window.location.href = '../apartmentdos/index.html';
+            window.location.href = '/apartmentdos';
             }, 1500);
     return;
 }
