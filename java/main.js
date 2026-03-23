@@ -1,3 +1,15 @@
+  // typewriter function for the notebook
+    function typeWriter(text, elementId, speed = 30) {
+        const el = document.getElementById(elementId);
+        el.textContent = '';
+        let i = 0;
+        const timer = setInterval(() => {
+            el.textContent += text[i];
+            i++;
+            if (i >= text.length) clearInterval(timer);
+        }, speed);
+    }
+
 // room dictionary ( stores title and text for each room )
 const rooms = {
     'master-bedroom': {
@@ -60,6 +72,17 @@ Object.keys(visited).forEach(id => {
 document.querySelectorAll('.room').forEach(room => {
   room.addEventListener('click', () => {
     const id = room.id;
+
+    // bedroom closet should lead to apartment numero dos
+    if (id === 'bedroom-closet') {
+        const door = document.getElementById('door-transition');
+        door.classList.add('active');
+        setTimeout(() => {
+            window.location.href = '../apartment-two/index.html';
+            }, 1500);
+    return;
+}
+
     const data = rooms[id];
     if (!data) return;
 
@@ -68,16 +91,6 @@ document.querySelectorAll('.room').forEach(room => {
     // localStorage.setItem('visited-apt1', JSON.stringify(visited));
     room.classList.add('visited');
 
-    // typewriter function for the notebook
-    function typeWriter(text, elementId, speed = 30) {
-        const el = document.getElementById(elementId);
-        el.textContent = '';
-        let i = 0;
-        const timer = setInterval(() => {
-            el.textContent += text[i];
-            i++;
-            if (i >= text.length) clearInterval(timer);
-        }, speed);
 
     // only typewrite if notebook isn't already showing this room
         if (document.getElementById('notebook-title').textContent !== data.title) {
@@ -86,7 +99,6 @@ document.querySelectorAll('.room').forEach(room => {
             document.getElementById('notebook-text').textContent = data.text;
         }
 
-    }
 
 
     // opens the notebook 
