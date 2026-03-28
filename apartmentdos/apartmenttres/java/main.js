@@ -78,7 +78,7 @@ document.querySelectorAll('.room').forEach(room => {
         const door = document.getElementById('door-transition');
         door.classList.add('active');
         setTimeout(() => {
-            window.location.href = 'https://danielaaaas.github.io/unhogartemporal/apartmentdos/index.html';
+            window.location.href = 'https://danielaaaas.github.io/unhogartemporal/apartmentdos/apartmenttres/apartamentcuatro/index.html';
             }, 1500);
     return;
 }
