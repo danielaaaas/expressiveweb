@@ -12,23 +12,18 @@
 
 // room dictionary ( stores title and text for each room )
 const rooms = {
-    'master-bedroom': {
-        title: 'master bedroom',
+    'bedroom-one': {
+        title: 'bedroom one',
         text: 'to be added.'
     },
 
-    'main-hallway': {
-        title: 'main hallway',
+   'bedroom-two': {
+        title: 'bedroom two',
         text: 'to be added.'
     },
 
-    'bedroom-closet': {
-        title: 'bedroom closet',
-        text: 'to be added.'
-    },
-
-    'hallway-closet': {
-        title: 'hallway closet',
+   'bedroom-three': {
+        title: 'bedroom three',
         text: 'to be added.'
     },
 
@@ -37,23 +32,8 @@ const rooms = {
         text: 'to be added.'
     },
 
-    'living-room': {
-        title: 'living room',
-        text: 'to be added.'
-    },
-
-    'kitchen': {
-        title: 'kitchen',
-        text: 'to be added.'
-    },
-
-    'front-closet': {
-        title: 'front closet',
-        text: 'to be added.'
-    },
-
-    'front-hallway': {
-        title: 'front hallway',
+    'living-kitchen': {
+        title: 'living room & kitchen',
         text: 'to be added.'
     }
 };

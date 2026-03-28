@@ -14,7 +14,49 @@
 <body>
     <h1>el tercer hogar</h1>
 
-    <!-- leaving room for the apartment svg -->
+<div class="floor-plan-container">
+        <svg width="610" height="758" viewbox="0 0 610 758" 
+        fill="none" xmlns="http://wwww.w3.org/2000/svg"> <!-- xmlns = XML namespace -->
+        <!-- these are the main rooms -->
+        <rect id="apartment-three" x="1" y="3" width="602" height="752" fill="white"
+        stroke="#A1E1FC" stroke-width="2"/>
+        <rect id="bedroom-one" class="room" x="1" y="3" width="264" height="300" fill="#F5F5F5"
+        stroke="#A1E1FC" stroke-width="2"/>
+        <rect id="bedroom-two" class="room" x="263" y="4" width="340" height="300" fill="#F5F5F5"
+        stroke="#A1E1FC" stroke-width="2"/>
+        <rect id="bedroom-three" class="room" x="365" y="303" width="238" height="330" fill="#F5F5F5"
+        stroke="#A1E1FC" stroke-width="2"/>
+        <rect id="bathroom" class="room" x="241" y="629" width="362" height="126" fill="#F5F5F5"
+        stroke="#A1E1FC" stroke-width="2"/>
+        <!-- big merged shape area begins -->
+        <mask id="path-6-inside-1_4003_15" fill="white">
+            <path d="M368 630H244V756H0V302H368V630Z"/>
+        </mask>
+        <path id="living-kitchen" class="room" d="M368 630H244V756H0V302H368V630Z" fill="#F5F5F5"/>
+        <path d="M368 630V632H370V630H368ZM244 630V628H242V630H244ZM244 756V758H246V756H244ZM0 756H-2V758H0V756ZM0 
+        302V300H-2V302H0ZM368 302H370V300H368V302ZM368 630V628H244V630V632H368V630ZM244 630H242V756H244H246V630H244ZM244 
+        756V754H0V756V758H244V756ZM0 756H2V302H0H-2V756H0ZM0 302V304H368V302V300H0V302ZM368 302H366V630H368H370V302H368Z" 
+        fill="#A1E1FC" mask="url(#path-6-inside-1_4003_15)"/>
+        <!-- big merge shape area ends -->
+
+          <!-- these will be windows and doors-->
+            <!-- doors -->
+            <line id="bdrmtwo-door" x1="281" y1="302" x2="353" y2="302" stroke="#54CCFF" stroke-width="8" stroke-linecap="round"/>
+            <line id="bdrmthree-door" x1="367" y1="343" x2="367" y2="415" stroke="#54CCFF" stroke-width="8" stroke-linecap="round"/>
+            <line id="bathroom-door" x1="243" y1="660" x2="243" y2="730" stroke="#54CCFF" stroke-width="8" stroke-linecap="round"/>
+            <line id="front-door" x1="83" y1="754" x2="155" y2="754" stroke="#54CCFF" stroke-width="8" stroke-linecap="round"/>
+            
+            <!-- doorways -->
+            <line id="bdrmone-doorway" x1="156" y1="302" x2="228" y2="302" stroke="#006A99" stroke-width="8" stroke-linecap="round"/>
+
+            <!-- windows -->
+            <line id="bdrmone-window" x1="81" y1="4" x2="197" y2="4" stroke="#00B3FF" stroke-width="8" stroke-linecap="square"/>
+            <line id="bdrmtwo-window" x1="393" y1="4" x2="509" y2="4" stroke="#00B3FF" stroke-width="8" stroke-linecap="square"/>
+            <line id="bdrmthree-window" x1="602" y1="470" x2="602" y2="544" stroke="#00B3FF" stroke-width="8" stroke-linecap="square"/>
+            <line id="bathroom-window" x1="602" y1="655" x2="602" y2="729" stroke="#00B3FF" stroke-width="8" stroke-linecap="square"/>
+
+        </svg>
+    </div>
 
     <!-- overlay, for when the notebook is clicked, there is a darkening in the background -->
      <div class="overlay" id="overlay"></div>
