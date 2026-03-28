@@ -53,8 +53,8 @@ document.querySelectorAll('.room').forEach(room => {
   room.addEventListener('click', () => {
     const id = room.id;
 
-    // bedroom closet should lead to apartment numero dos
-    if (id === 'bedroom-closet') {
+    // bedroom closet should lead to apartment numero cuatro
+    if (id === 'bedroom-one') {
         const door = document.getElementById('door-transition');
         door.classList.add('active');
         setTimeout(() => {
