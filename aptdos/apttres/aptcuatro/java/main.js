@@ -125,3 +125,40 @@ document.getElementById('overlay').addEventListener('click', closeNotebook);
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeNotebook();
 });
+
+// bathroom mirror draft
+function openMirror () {
+    document.getElementById('mirror-overlay').classList.add('active');
+    document.getElementById('mirror-input').value = '';
+    document.getElementById('mirror-message').textContent = '';
+    document.getElementById('mirror-message').classList.remove('fade-out');
+    setTimeout(() => {
+        document.getElementById('mirror-input').focus();
+    }, 300);
+}
+
+function closeMirror () {
+    document.getElementById('mirror-overlay').classList.remove('active');
+}
+
+document.getElementById('mirror-submit').addEventListener('click', () => {
+    const msg = document.getElementById('mirror-input').value.trim();
+    if (!msg) return;
+
+    const display = document.getElementById('mirror-message');
+    display.textContent = msg;
+    display.classList.remove('fade-out');
+    document.getElementById('mirror-input').value = '';
+
+    // fade out after a moment...but i might keep the text instead
+    setTimeout(() => {
+        display.classList.add('fade-out');
+    }, 3000);
+});
+
+// text to be submitted with the enter key
+document.getElementById('mirror-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter') document.getElementById('mirror-submit').click();
+});
+
+document.getElementById('mirror-close').addEventListener('click', closeMirror);

@@ -289,3 +289,88 @@ svg {
     border-color: #9B3434;
     color: #F5F0E0;
 }
+
+/* bathroom mirror */
+#mirror-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+}
+
+#mirror-overlay.active {
+    display: flex;
+}
+
+#mirror {
+    background:linear-gradient(135deg,rgba(180, 210, 220, 0.45), rgba(140, 180, 200, 0.25));
+    border: 4px solid rgba(200, 230, 240, 0.6);
+    padding: 32px 40px;
+    text-align: center;
+    width: min(420px, 90vw);
+    image-rendering: pixelated;
+    box-shadow: 0 0 60px rgba(180, 220, 240, 0.6), inset 0 0 40px rgba(255, 255, 255, 0.08);
+    position: relative;
+}
+
+.mirror-prompt {
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+#mirror-message {
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 22px;
+    min-height: 32px;
+    margin-bottom: 24px;
+    transition: opacity 2s ease;
+    text-shadow: 0 0 12px rgba(200, 240, 225, 0.8);
+}
+
+#mirror-message.fade-out {
+    opacity: 0
+}
+
+#mirror-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    outline: none;
+    margin-bottom: 19px;
+    padding: 5px 0;
+}
+
+#mirror-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+#mirror-submit, #mirror-close {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 0.6);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 13px;
+    padding: 5px 14px;
+    cursor: url('https://64.media.tumblr.com/821cf7001bf745e2ddca3d248163c513/894ac02f0d28ad70-56/s1280x1920/b524d63c6de82323756b1603e624961da509144e.png'), auto;
+    /* also included cursor in a .js if this doesn't work */
+    margin: 0 5px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+#mirror-submit:hover, #mirror-close:hover {
+    color: rgba(255, 255, 255, 0.95);
+    border-color: rgba(255, 255, 255, 0.6);
+}
