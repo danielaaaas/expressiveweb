@@ -375,3 +375,110 @@ svg {
     color: rgba(255, 255, 255, 0.95);
     border-color: rgba(255, 255, 255, 0.6);
 }
+
+/* hallway closet */
+#closet-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 8, 6, 0.93);
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+}
+
+#closet-overlay.active {
+    display: flex;
+}
+
+#closet {
+    position: relative;
+    background: linear-gradient(160deg, rgba(30, 20, 15, 0.95), rgba(15, 10, 8, 0.98));
+    border: 2px solid rgba(120, 90, 60, 0.4);
+    box-shadow: 0 0 60px rgba(80, 50, 20, 0.3), inset 0 0 40px rgba(0, 0, 0, 0.6);
+    padding: 32px 40px;
+    text-align: center;
+    width: min(400px, 90vw);
+}
+
+.closet-prompt {
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    color: rgba(180, 150, 100, 0.7);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#closet-wall {
+    position: relative;
+    min-height: 80px;
+    margin-bottom: 20px;
+}
+
+#closet-text {
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    color: rgba(200, 170, 120, 0.9);
+    font-size: 16px;
+    min-height: 40px;
+    text-shadow: 0 0 8px rgba(180, 140, 80, 0.5);
+    word-break: break-word;
+}
+
+#crumble-pile {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(400px, 90vw);
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1px;
+    z-index: 300;
+    pointer-events: none;
+}
+
+.crumb {
+    width: 3px;
+    height: 3px;
+    background: rgba(180, 140, 80, 0.6);
+    display: inline-block;
+    image-rendering: pixelated;
+}
+
+#closet-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(120, 90, 60, 0.4);
+    color: rgba(200, 170, 120, 0.8);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    outline: none;
+    margin-bottom: 16px;
+    padding: 5px 0;
+}
+
+#closet-input::placeholder {
+    color: rgba(120, 90, 60, 0.4);
+}
+
+#closet-submit, #closet-close {
+    background: transparent;
+    border: 1px solid rgba(180, 150, 100, 0.6);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 13px;
+    color: rgba(180, 150, 100, 0.6);
+    padding: 5px 14px;
+    cursor: url('https://64.media.tumblr.com/821cf7001bf745e2ddca3d248163c513/894ac02f0d28ad70-56/s1280x1920/b524d63c6de82323756b1603e624961da509144e.png'), auto;
+    /* also included cursor in a .js if this doesn't work */
+    margin: 0 5px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+#closet-submit:hover, #closet-close:hover {
+    color: rgba(220, 190, 140, 0.95);
+    border-color: rgba(180, 140, 80, 0.6);
+}
