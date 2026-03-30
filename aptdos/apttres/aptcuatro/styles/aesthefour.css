@@ -1,3 +1,9 @@
+.vt323-regular {
+  font-family: "VT323", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .pixelify-sans {
   font-family: "Pixelify Sans", sans-serif;
   font-optical-sizing: auto;
@@ -6,7 +12,7 @@
 }
 
 h1 {
-    font-family: "Pixel Operator", "Pixelify Sans", sans-serif;
+    font-family: "Pixel Operator", "VT323", "Pixelify Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -19,7 +25,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    font-family: "Pixel Operator", "Pixelify Sans", sans-serif;
+    font-family: "Pixel Operator", "VT323", "Pixelify Sans", sans-serif;
 }
 
 .floor-plan-container {

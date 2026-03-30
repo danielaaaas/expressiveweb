@@ -76,11 +76,24 @@ document.querySelectorAll('.room').forEach(room => {
     // bedroom closet should lead to apartment numero dos
     // test updt
     if (id === 'bedroom-closet') {
-        const door = document.getElementById('door-transition');
-        door.classList.add('active');
-        setTimeout(() => {
-            window.location.href = 'https://danielaaaas.github.io/unhogartemporal/aptdos/index.html';
+        // show the note first 
+        const door = document.getElementById('door-note');
+        door.classList.add('visible');
+
+        // if yes...proceed with original transition. rmbr to add door asset
+        document.getElementById('note-yes').onclick = () => {
+            note.classList.remove('visible');
+            const door = document.getElementById('door-transition');
+            door.classList.add('active');
+            setTimeout(() => {
+                window.location.href = 'https://danielaaaas.github.io/unhogartemporal/aptdos/index.html';
             }, 1500);
+        };
+
+        // if no, remain on the page...nothing fancy ( sparkles would be nice though )
+        document.getElementById('note-no').onclick = () => {
+            note.classList.remove('visible');
+        };
     return;
 }
 
