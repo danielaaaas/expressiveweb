@@ -89,6 +89,22 @@ document.querySelectorAll('.room').forEach(room => {
     return;
 }
 
+// bathroom opening to mirror
+    if (id === 'bathroom') {
+        visited[id] = true;
+        room.classList.add('visited');
+        openMirror();
+        return;
+    }
+
+// closet opening 
+    if (id === 'hallway-closet') {
+        visited[id] = true;
+        room.classList.add('visited');
+        openCloset();
+        return;
+    }
+
     const data = rooms[id];
     if (!data) return;
 
@@ -162,3 +178,64 @@ document.getElementById('mirror-input').addEventListener('keydown', e => {
 });
 
 document.getElementById('mirror-close').addEventListener('click', closeMirror);
+
+// for the closet crumble 
+function openCloset() {
+    document.getElementById('closet-overlay').classList.add('active');
+    document.getElementById('closet-input').value = '';
+    document.getElementById('closet-text').textContent = '';
+    setTimeout(() => {
+        document.getElementById('closet-input').focus();
+    }, 300);
+}
+
+function closeCloset() {
+    document.getElementById('closet-overlay').classList.remove('active');
+}
+
+function crumbleText(text) {
+    const textEl = document.getElementById('closet-text');
+    const pile = document.getElementById('crumble-pile');
+    // const text = textEl.textContent;
+    // if (!text) return;
+
+    // turns number of characters into crumbs
+    // const crumbCount = Math.min(text.length * 2, 80);
+
+    // crumble letter by letter 
+    let i = text.length;
+    const clearTimer = setInterval(() => {
+        i--;
+        textEl.textContent = text.substring(0, i);
+        // add a crumb for every letter
+        const crumb = document.createElement('div');
+        crumb.classList.add('crumb');
+        // size variation like confetti
+        const size = 2 + Math.floor(Math.random() * 3);
+        crumb.style.width = size + 'px';
+        crumb.style.height = size + 'px';
+        crumb.style.opacity = 0.4 + Math.random() * 0.6;
+        pile.appendChild(crumb);
+        if (i<=0) clearInterval(clearTimer);
+        }, 40);
+}
+
+document.getElementById('closet-submit').addEventListener('click', () => {
+    const msg = document.getElementById('closet-input').value.trim();
+    if (!msg) return;
+
+    document.getElementById('closet-input').value = '';
+
+    // types the message on the wall first ( this part is giving me a headacheeeeeeee, thankfully it's recycling what i already used )
+    typeWriter(msg, 'closet-text', 40);
+
+    // then, once its written, it crumbles
+    const crumbleDelay = msg.length * 40 + 800;
+    setTimeout(() => crumbleText(msg), crumbleDelay);
+});
+
+document.getElementById('closet-input').addEventListener('keydown', e => {
+    if (e.key === 'Enter') document.getElementById('closet-submit').click();
+});
+
+document.getElementById('closet-close').addEventListener('click', closeCloset);

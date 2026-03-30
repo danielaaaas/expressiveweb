@@ -192,7 +192,6 @@ function openCloset() {
     document.getElementById('closet-overlay').classList.add('active');
     document.getElementById('closet-input').value = '';
     document.getElementById('closet-text').textContent = '';
-    document.getElementById('crumble-pile').innerHTML = '';
     setTimeout(() => {
         document.getElementById('closet-input').focus();
     }, 300);

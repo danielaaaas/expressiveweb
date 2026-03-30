@@ -1,18 +1,18 @@
 .vt323-regular {
-  font-family: "VT323", monospace;
+  font-family: 'VT323', monospace;
   font-weight: 400;
   font-style: normal;
 }
 
 .pixelify-sans {
-  font-family: "Pixelify Sans", sans-serif;
+  font-family: 'Pixelify Sans', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
 }
 
 h1 {
-    font-family: "Pixel Operator", "VT323", "Pixelify Sans", sans-serif;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
@@ -25,7 +25,7 @@ body {
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    font-family: "Pixel Operator", "VT323", "Pixelify Sans", sans-serif;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
 }
 
 .floor-plan-container {
@@ -131,7 +131,8 @@ svg {
     font-size: 20px;
     margin: 0 0 12px 0;
     color: #3A2E1E;
-    border-bottom: 1px solid #C4A882;
+    border-bottom: 1px solid #9B3434;
+    display: inline-block;
     padding-bottom: 8px;
     image-rendering: pixelated;
 }
@@ -206,6 +207,88 @@ svg {
     60% { background-image: url('/elements/door3.png'), url('https://64.media.tumblr.com/0e11d2246c38fe29340180fb14dfc715/385834a2d42a4bea-ee/s1280x1920/d9908e5e37539b592a24d9e7881f799840235489.png');}
     80% { background-image: url('/elements/door4.png'), url('https://64.media.tumblr.com/8957c3b43409b5860be5d3ccfae7e766/385834a2d42a4bea-08/s1280x1920/9798cb1055b936faacd0addef46d8866f8ac06d3.png');}
     100% { background-image: url('/elements/door5.png'), url('https://64.media.tumblr.com/ffcd1bec3a10a2388b857efa5c4a6a6c/385834a2d42a4bea-3c/s1280x1920/5b4ded3490ca16b189a87720b56f535512ac0a8f.png'); }
+}
+
+.door-note {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(1deg);
+    z-index: 200;
+    width: 280px;
+    image-rendering: pixelated;
+}
+
+.door-note.visible {
+    display: block;
+}
+
+.note-tape {
+    /* need a pixel tape asset */
+    width: 60px;
+    height: 22px;
+    background-color: rgba(255, 240, 180, 0.85);
+    border: 1px solid rgba(200, 180, 100, 0.5);
+    margin: 0 auto -14px auto;
+    position: relative;
+    z-index: 1;
+}
+
+.note-content {
+    border-bottom: 2px solid #8B7355;
+    padding: 30px 24px 24px 50px;
+    background-image: url('/elements/paper.png'), url('https://64.media.tumblr.com/e22746716a993ade136498b9b0398c13/385834a2d42a4bea-c8/s1280x1920/e127c48b18da6a5cf701c663aedefbceda6c928f.png');
+    /* asset credited to: LCSkeleton/Robin Norkum */
+    background-size: cover;
+    image-rendering: pixelated;
+}
+
+.note-text {
+    font-family: "Pixel Operator", "VT323", "Pixelify Sans", sans-serif;
+    font-size: 20px;
+    color: #3A2E1E;
+    margin: 0 0 0 0;
+    line-height: 1.1;
+    padding-bottom: 15px;
+}
+
+.note-subtext {
+    font-family: "Pixel Operator", "VT323", "Pixelify Sans", sans-serif;
+    font-size: 14px;
+    color: #6A5A4A;
+    margin: 0 0 24px 0;
+    font-style: italic;
+    line-height: 1.2;
+}
+
+.note-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.note-button {
+    font-family: "Pixel Operator", "VT323", "Pixelify Sans", sans-serif;
+    font-size: 18px;
+    padding: 8px 24px;
+    border: 2px solid #3A2E1E;
+    background-color: #F5F0E0;
+    color: #3A2E1E;
+    cursor: url('https://64.media.tumblr.com/821cf7001bf745e2ddca3d248163c513/894ac02f0d28ad70-56/s1280x1920/b524d63c6de82323756b1603e624961da509144e.png'), auto;
+    /* also included cursor in a .js if this doesn't work */
+    image-rendering: pixelated;
+    transition: background-color 0.1s;
+}
+
+.note-button:hover {
+    background-color: #3A2E1E;
+    color: #F5F0E0;
+}
+
+.yes-button:hover {
+    background-color: #3A2E1E;
+    border-color: #9B3434;
+    color: #F5F0E0;
 }
 
 /* bathroom mirror */
@@ -291,4 +374,111 @@ svg {
 #mirror-submit:hover, #mirror-close:hover {
     color: rgba(255, 255, 255, 0.95);
     border-color: rgba(255, 255, 255, 0.6);
+}
+
+/* hallway closet */
+#closet-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(10, 8, 6, 0.93);
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+}
+
+#closet-overlay.active {
+    display: flex;
+}
+
+#closet {
+    position: relative;
+    background: linear-gradient(160deg, rgba(30, 20, 15, 0.95), rgba(15, 10, 8, 0.98));
+    border: 2px solid rgba(120, 90, 60, 0.4);
+    box-shadow: 0 0 60px rgba(80, 50, 20, 0.3), inset 0 0 40px rgba(0, 0, 0, 0.6);
+    padding: 32px 40px;
+    text-align: center;
+    width: min(400px, 90vw);
+}
+
+.closet-prompt {
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    color: rgba(180, 150, 100, 0.7);
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#closet-wall {
+    position: relative;
+    min-height: 80px;
+    margin-bottom: 20px;
+}
+
+#closet-text {
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    color: rgba(200, 170, 120, 0.9);
+    font-size: 16px;
+    min-height: 40px;
+    text-shadow: 0 0 8px rgba(180, 140, 80, 0.5);
+    word-break: break-word;
+}
+
+#crumble-pile {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(400px, 90vw);
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 1px;
+    z-index: 300;
+    pointer-events: none;
+}
+
+.crumb {
+    width: 3px;
+    height: 3px;
+    background: rgba(180, 140, 80, 0.6);
+    display: inline-block;
+    image-rendering: pixelated;
+}
+
+#closet-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(120, 90, 60, 0.4);
+    color: rgba(200, 170, 120, 0.8);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    outline: none;
+    margin-bottom: 16px;
+    padding: 5px 0;
+}
+
+#closet-input::placeholder {
+    color: rgba(120, 90, 60, 0.4);
+}
+
+#closet-submit, #closet-close {
+    background: transparent;
+    border: 1px solid rgba(180, 150, 100, 0.6);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 13px;
+    color: rgba(180, 150, 100, 0.6);
+    padding: 5px 14px;
+    cursor: url('https://64.media.tumblr.com/821cf7001bf745e2ddca3d248163c513/894ac02f0d28ad70-56/s1280x1920/b524d63c6de82323756b1603e624961da509144e.png'), auto;
+    /* also included cursor in a .js if this doesn't work */
+    margin: 0 5px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+#closet-submit:hover, #closet-close:hover {
+    color: rgba(220, 190, 140, 0.95);
+    border-color: rgba(180, 140, 80, 0.6);
 }
