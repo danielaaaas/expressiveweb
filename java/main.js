@@ -202,20 +202,20 @@ function closeCloset() {
     document.getElementById('closet-overlay').classList.remove('active');
 }
 
-function crumbleText() {
+function crumbleText(text) {
     const textEl = document.getElementById('closet-text');
     const pile = document.getElementById('crumble-pile');
-    const text = textEl.textContent;
-    if (!text) return;
+    // const text = textEl.textContent;
+    // if (!text) return;
 
     // turns number of characters into crumbs
-    const crumbCount = Math.min(text.length * 2, 80);
+    // const crumbCount = Math.min(text.length * 2, 80);
 
     // crumble letter by letter 
     let i = text.length;
     const clearTimer = setInterval(() => {
-        textEl.textContent = text.substring(0, i);
         i--;
+        textEl.textContent = text.substring(0, i);
         // add a crumb for every letter
         const crumb = document.createElement('div');
         crumb.classList.add('crumb');
@@ -225,7 +225,7 @@ function crumbleText() {
         crumb.style.height = size + 'px';
         crumb.style.opacity = 0.4 + Math.random() * 0.6;
         pile.appendChild(crumb);
-        if ( i<0 ) clearInterval(clearTimer);
+        if (i<=0) clearInterval(clearTimer);
         }, 40);
 }
 
@@ -233,7 +233,6 @@ document.getElementById('closet-submit').addEventListener('click', () => {
     const msg = document.getElementById('closet-input').value.trim();
     if (!msg) return;
 
-    const textEl = document.getElementById('closet-text');
     document.getElementById('crumble-pile').innerHTML = '';
     document.getElementById('closet-input').value = '';
 
@@ -242,7 +241,7 @@ document.getElementById('closet-submit').addEventListener('click', () => {
 
     // then, once its written, it crumbles
     const crumbleDelay = msg.length * 40 + 800;
-    selectTimeout(crumbleText, crumbleDelay);
+    setTimeout(crumbleText, crumbleDelay);
 });
 
 document.getElementById('closet-input').addEventListener('keydown', e => {
