@@ -31,6 +31,7 @@ body {
 
 .floor-plan-container {
     position: relative;
+    filter: sepia(0.1) contrast(0.99) brightness(0.98);
 }
 
 svg {
@@ -51,7 +52,7 @@ svg {
 }
 
 .room.visited {
-    fill: rgba(190, 175, 255, 0.3);
+    fill: rgba(50, 159, 206, 0.52);
     cursor: url('https://64.media.tumblr.com/821cf7001bf745e2ddca3d248163c513/894ac02f0d28ad70-56/s1280x1920/b524d63c6de82323756b1603e624961da509144e.png'), auto;
     /* also included cursor in a .js if this doesn't work */
 }
@@ -499,8 +500,4 @@ svg {
 #closet-submit:hover, #closet-close:hover {
     color: rgba(220, 190, 140, 0.95);
     border-color: rgba(180, 140, 80, 0.6);
-}
-
-.apt-three .floor-plan-container {
-    filter: sepia(0.1) contrast(0.99) brightness(0.98);
 }

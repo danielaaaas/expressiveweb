@@ -105,13 +105,20 @@
 .clock-hand-hour {
     width: 2px;
     height: 6px;
-    transform: translate(-50%, -100%) rotate(305deg);
+    transform: translate(-50%, -100%) rotate(var(--clock-hour-deg, 0deg));
 }
 
 .clock-hand-minute {
     width: 2px;
     height: 8px;
-    transform: translate(-50%, -100%) rotate(28deg);
+    transform: translate(-50%, -100%) rotate(var(--clock-minute-deg, 0deg));
+}
+
+.clock-hand-second {
+    width: 1px;
+    height: 9px;
+    background: #c93030;
+    transform: translate(-50%, -100%) rotate(var(--clock-second-deg, 0deg));
 }
 
 .clock-window {
@@ -149,15 +156,9 @@
     background: #d3b06e;
 }
 
-.clock-title {
-    display: block;
-    margin-bottom: 1px;
-    font-size: 11px;
-    text-transform: lowercase;
-}
-
 .clock-time {
     display: block;
+    margin-top: 2px;
     font-size: 13px;
 }
 
@@ -224,6 +225,40 @@
     text-transform: lowercase;
 }
 
+.light-switch-label-inner {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.light-switch-icons {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.light-switch-svg {
+    flex-shrink: 0;
+    display: block;
+    image-rendering: pixelated;
+}
+
+/* Pixel moon: same rendering hints as the sun icon */
+.light-switch-svg-moon {
+    image-rendering: pixelated;
+    shape-rendering: crispEdges;
+}
+
+/* Day: sun only. Night: moon only. Auto: sun + moon (follows clock). */
+.light-switch--day .light-switch-svg-moon {
+    display: none;
+}
+
+.light-switch--night .light-switch-svg-sun {
+    display: none;
+}
+
 .light-switch:hover .light-switch-track {
     filter: brightness(1.04);
 }
@@ -232,6 +267,11 @@
 body.night-active svg .room.room-night-lit {
     fill: rgba(255, 244, 220, 0.42) !important;
     filter: brightness(1.12) saturate(0.95);
+}
+
+/* Visited tint under night overlay (lit rooms keep warm fill above). */
+body.night-active svg .room.visited:not(.room-night-lit) {
+    fill: rgba(50, 159, 206, 0.52) !important;
 }
 
 @keyframes pendulum-swing {
@@ -252,6 +292,15 @@ body.night-active svg .room.room-night-lit {
 
 body.night-active .night-overlay {
     opacity: 1;
+}
+
+/* Lamps only exist visually at night (layer stays in DOM for storage + mask holes). */
+#room-lamp-layer {
+    display: none;
+}
+
+body.night-active #room-lamp-layer {
+    display: block;
 }
 
 .room-lamp {

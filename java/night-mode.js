@@ -36,8 +36,10 @@
   refreshClock();
   evaluateNightState();
 
-  setInterval(() => {
+  window.setInterval(() => {
     refreshClock();
+  }, 1000);
+  window.setInterval(() => {
     evaluateNightState();
   }, 30000);
 
@@ -138,6 +140,121 @@
     return Number.isFinite(n) ? n : fallback;
   }
 
+  /**
+   * Flashlight: radius of the radial cutout in the night overlay mask (CSS pixels).
+   * Lower = smaller pool of light around the cursor. Tweak here only.
+   */
+  const FLASHLIGHT_RADIUS_PX = 100;
+
+  function rectsOverlap2D(ax, ay, aw, ah, bx, by, bw, bh) {
+    return bx < ax + aw && bx + bw > ax && by < ay + ah && by + bh > ay;
+  }
+
+  /** Return up to four axis-aligned pieces of rectangle A minus rectangle B (SVG user units). */
+  function subtractAxisAlignedRects(ax, ay, aw, ah, bx, by, bw, bh) {
+    const ar = ax + aw;
+    const ab = ay + ah;
+    const br = bx + bw;
+    const bb = by + bh;
+    const out = [];
+    if (!rectsOverlap2D(ax, ay, aw, ah, bx, by, bw, bh)) {
+      return [{ x: ax, y: ay, width: aw, height: ah }];
+    }
+    if (by > ay) {
+      const h = Math.min(by, ab) - ay;
+      if (h > 0) out.push({ x: ax, y: ay, width: aw, height: h });
+    }
+    if (bb < ab) {
+      const y0 = Math.max(bb, ay);
+      const h = ab - y0;
+      if (h > 0) out.push({ x: ax, y: y0, width: aw, height: h });
+    }
+    const midY0 = Math.max(ay, by);
+    const midY1 = Math.min(ab, bb);
+    if (midY1 > midY0) {
+      if (bx > ax) {
+        const w = bx - ax;
+        if (w > 0) out.push({ x: ax, y: midY0, width: w, height: midY1 - midY0 });
+      }
+      if (br < ar) {
+        const w = ar - br;
+        if (w > 0) out.push({ x: br, y: midY0, width: w, height: midY1 - midY0 });
+      }
+    }
+    return out.filter((r) => r.width > 0.5 && r.height > 0.5);
+  }
+
+  function subtractRectFromAllPieces(pieces, bx, by, bw, bh) {
+    return pieces.flatMap((p) =>
+      subtractAxisAlignedRects(p.x, p.y, p.width, p.height, bx, by, bw, bh)
+    );
+  }
+
+  /**
+   * #living-room is an L-shaped <path>; its axis bbox covers kitchen, hallways, closets, etc.
+   * Build mask holes as that bbox minus every other .room bbox (same SVG user space), then map to screen.
+   */
+  function clientRectsForLitPathLivingRoom(livingEl) {
+    const lb = livingEl.getBBox();
+    let pieces = [{ x: lb.x, y: lb.y, width: lb.width, height: lb.height }];
+    rooms.forEach((other) => {
+      if (other.id === 'living-room') return;
+      const ob = other.getBBox();
+      if (!rectsOverlap2D(lb.x, lb.y, lb.width, lb.height, ob.x, ob.y, ob.width, ob.height)) return;
+      pieces = subtractRectFromAllPieces(pieces, ob.x, ob.y, ob.width, ob.height);
+    });
+    return pieces
+      .filter((p) => p.width > 1.5 && p.height > 1.5)
+      .map((p) => svgUserRectToClientRect(p.x, p.y, p.width, p.height))
+      .filter(Boolean);
+  }
+
+  /** Map an axis-aligned rect in floor SVG user space to a viewport AABB (for mask holes). */
+  function svgUserRectToClientRect(x, y, rw, rh) {
+    const ctm = floorSvg.getScreenCTM();
+    if (!ctm) return null;
+    const corners = [
+      { x, y },
+      { x: x + rw, y },
+      { x, y: y + rh },
+      { x: x + rw, y: y + rh }
+    ];
+    let minX = Infinity;
+    let minY = Infinity;
+    let maxX = -Infinity;
+    let maxY = -Infinity;
+    corners.forEach((c) => {
+      const pt = floorSvg.createSVGPoint();
+      pt.x = c.x;
+      pt.y = c.y;
+      const p = pt.matrixTransform(ctm);
+      minX = Math.min(minX, p.x);
+      minY = Math.min(minY, p.y);
+      maxX = Math.max(maxX, p.x);
+      maxY = Math.max(maxY, p.y);
+    });
+    return { left: minX, top: minY, width: maxX - minX, height: maxY - minY };
+  }
+
+  /**
+   * @param {object} [opts]
+   * @param {number} [opts.expandPx]  Slight grow to hide hairline seams between merged mask rects.
+   * @param {number} [opts.rx]         Corner radius on the mask rect (0 avoids a faint seam line at joins).
+   */
+  function appendMaskHoleRect(mask, clientRect, opts) {
+    if (!clientRect || clientRect.width < 2 || clientRect.height < 2) return;
+    const expand = opts && opts.expandPx ? opts.expandPx : 0;
+    const rx = opts && opts.rx != null ? opts.rx : 2;
+    const hole = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    hole.setAttribute('x', String(clientRect.left - expand));
+    hole.setAttribute('y', String(clientRect.top - expand));
+    hole.setAttribute('width', String(clientRect.width + 2 * expand));
+    hole.setAttribute('height', String(clientRect.height + 2 * expand));
+    hole.setAttribute('rx', String(rx));
+    hole.setAttribute('fill', '#000000');
+    mask.appendChild(hole);
+  }
+
   function updateNightOverlayMask() {
     const mask = document.querySelector('#uht-night-overlay-mask');
     const grad = document.querySelector('#uht-flash-mask-grad');
@@ -157,7 +274,7 @@
 
     const fx = parsePxVar(overlay.style.getPropertyValue('--flashlight-x'), w * 0.5);
     const fy = parsePxVar(overlay.style.getPropertyValue('--flashlight-y'), h * 0.5);
-    const fr = 200;
+    const fr = FLASHLIGHT_RADIUS_PX;
     grad.setAttribute('cx', String(fx));
     grad.setAttribute('cy', String(fy));
     grad.setAttribute('r', String(fr));
@@ -172,16 +289,21 @@
     rooms.forEach((roomEl) => {
       const id = roomEl.id;
       if (!id || !litSet.has(id)) return;
+
+      // L-shaped #living-room (path): bbox overlaps other rooms — subtract all other .room bboxes, then project.
+      if (id === 'living-room' && roomEl instanceof SVGPathElement) {
+        const holes = clientRectsForLitPathLivingRoom(roomEl);
+        if (holes.length > 0) {
+          holes.forEach((cr) =>
+            appendMaskHoleRect(mask, cr, { expandPx: 0.75, rx: 0 })
+          );
+          return;
+        }
+        /* fall through if geometry produced no pieces */
+      }
+
       const r = roomEl.getBoundingClientRect();
-      if (r.width < 2 || r.height < 2) return;
-      const hole = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-      hole.setAttribute('x', String(r.left));
-      hole.setAttribute('y', String(r.top));
-      hole.setAttribute('width', String(r.width));
-      hole.setAttribute('height', String(r.height));
-      hole.setAttribute('rx', '2');
-      hole.setAttribute('fill', '#000000');
-      mask.appendChild(hole);
+      appendMaskHoleRect(mask, r);
     });
 
     bindOverlaySvgMask();
@@ -210,9 +332,42 @@
     overlay.style.webkitMaskImage = 'none';
   }
 
+  /**
+   * Pixel crescent from a disk-minus-offset-disk grid; `#` and `Y` are both moon fill (no outline).
+   */
+  function buildPixelMoonSvgMarkup() {
+    const moonFill = '#c4b5e0';
+    const rows = [
+      '.######...',
+      '#YYYYYY#..',
+      '#YYYYYYY#.',
+      '.#YYYYYY#.',
+      '..#YYYYYY#',
+      '..#YYYYYY#',
+      '..#YYYYYY#',
+      '.#YYYYYY#.',
+      '#YYYYYYY#.',
+      '#YYYYYY#..',
+      '.######...'
+    ];
+    const w = rows[0].length;
+    const h = rows.length;
+    const rects = [];
+    rows.forEach((row, y) => {
+      for (let x = 0; x < row.length; x++) {
+        const ch = row.charAt(x);
+        if (ch === '#' || ch === 'Y') {
+          rects.push(`<rect x="${x}" y="${y}" width="1" height="1" fill="${moonFill}"/>`);
+        }
+      }
+    });
+    return `<svg class="light-switch-svg light-switch-svg-moon" viewBox="0 0 ${w} ${h}" width="12" height="12" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">${rects.join('')}</svg>`;
+  }
+
   function createClockWidget() {
     const wrapper = document.createElement('aside');
     wrapper.className = 'grandfather-clock';
+    const moonSvg = buildPixelMoonSvgMarkup();
     wrapper.innerHTML = `
       <div class="grandfather-clock-upper">
         <div class="clock-sprite" aria-hidden="true">
@@ -221,6 +376,7 @@
             <div class="clock-face">
               <div class="clock-hand clock-hand-hour"></div>
               <div class="clock-hand clock-hand-minute"></div>
+              <div class="clock-hand clock-hand-second" aria-hidden="true"></div>
               <div class="clock-face-dot"></div>
             </div>
             <div class="clock-window">
@@ -228,14 +384,31 @@
             </div>
           </div>
         </div>
-        <span class="clock-title">grandfather clock</span>
         <span class="clock-time" aria-live="polite">--:-- -- EST</span>
       </div>
       <button class="light-switch" type="button" style="--paddle-top: 14px" aria-label="Lighting: automatic by time of day. Click to cycle override.">
         <span class="light-switch-track" aria-hidden="true">
           <span class="light-switch-paddle"></span>
         </span>
-        <span class="light-switch-label">auto</span>
+        <span class="light-switch-label">
+          <span class="light-switch-label-inner">
+            <span class="light-switch-icons" aria-hidden="true">
+              <svg class="light-switch-svg light-switch-svg-sun" viewBox="0 0 11 11" width="12" height="12" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
+                <rect x="5" y="1" width="1" height="2" fill="#ffd030"/>
+                <rect x="5" y="8" width="1" height="2" fill="#ffd030"/>
+                <rect x="1" y="5" width="2" height="1" fill="#ffd030"/>
+                <rect x="8" y="5" width="2" height="1" fill="#ffd030"/>
+                <rect x="4" y="4" width="3" height="3" fill="#ffd030"/>
+                <rect x="4" y="3" width="3" height="1" fill="#ffd030"/>
+                <rect x="4" y="7" width="3" height="1" fill="#ffd030"/>
+                <rect x="3" y="4" width="1" height="3" fill="#ffd030"/>
+                <rect x="7" y="4" width="1" height="3" fill="#ffd030"/>
+              </svg>
+              ${moonSvg}
+            </span>
+            <span class="light-switch-text">auto</span>
+          </span>
+        </span>
       </button>
     `;
     document.body.appendChild(wrapper);
@@ -499,6 +672,33 @@
     requestNightMaskUpdate();
   }
 
+  function getEstClockAngles(date) {
+    const parts = new Intl.DateTimeFormat('en-US', {
+      timeZone: EST_TIMEZONE,
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+      hour12: false
+    }).formatToParts(date);
+    const map = {};
+    for (let i = 0; i < parts.length; i++) {
+      const p = parts[i];
+      if (p.type !== 'literal') {
+        map[p.type] = Number(p.value);
+      }
+    }
+    const hour24 = map.hour;
+    const minute = map.minute;
+    const second = map.second;
+    const hourFraction = (hour24 % 12) + minute / 60 + second / 3600;
+    const minuteFraction = minute + second / 60;
+    return {
+      hourDeg: hourFraction * 30,
+      minuteDeg: minuteFraction * 6,
+      secondDeg: second * 6
+    };
+  }
+
   function refreshClock() {
     const now = new Date();
     const formatted = new Intl.DateTimeFormat('en-US', {
@@ -511,6 +711,14 @@
 
     const el = clock.querySelector('.clock-time');
     if (el) el.textContent = formatted;
+
+    const face = clock.querySelector('.clock-face');
+    if (face) {
+      const { hourDeg, minuteDeg, secondDeg } = getEstClockAngles(now);
+      face.style.setProperty('--clock-hour-deg', `${hourDeg}deg`);
+      face.style.setProperty('--clock-minute-deg', `${minuteDeg}deg`);
+      face.style.setProperty('--clock-second-deg', `${secondDeg}deg`);
+    }
   }
 
   function evaluateNightState() {
@@ -569,9 +777,9 @@
     button.classList.add(`light-switch--${mode}`);
     const paddleTop = mode === 'day' ? '7px' : mode === 'night' ? '21px' : '14px';
     button.style.setProperty('--paddle-top', paddleTop);
-    const label = button.querySelector('.light-switch-label');
-    if (label) {
-      label.textContent = mode === 'night' ? 'night' : mode === 'day' ? 'day' : 'auto';
+    const textEl = button.querySelector('.light-switch-text');
+    if (textEl) {
+      textEl.textContent = mode === 'night' ? 'night' : mode === 'day' ? 'day' : 'auto';
     }
     const aria =
       mode === 'night'

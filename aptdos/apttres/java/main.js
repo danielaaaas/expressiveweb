@@ -38,12 +38,19 @@ const rooms = {
     }
 };
 
-// localStorage so rooms visited can be tracked
-// const visited = JSON.parse(localStorage.getItem('visited-apt1') || '{}');
-const visited = {};
+const VISITED_KEY = 'uht-visited-apt3';
+const visited =
+  typeof window.uhtVisitedStorage !== 'undefined' && window.uhtVisitedStorage.loadVisited
+    ? window.uhtVisitedStorage.loadVisited(VISITED_KEY)
+    : {};
 
-// so that rooms you visited can be colored...might be obsolete when i do the pixel overlay
-Object.keys(visited).forEach(id => {
+function persistVisitedState() {
+  if (typeof window.uhtVisitedStorage !== 'undefined' && window.uhtVisitedStorage.saveVisited) {
+    window.uhtVisitedStorage.saveVisited(VISITED_KEY, visited);
+  }
+}
+
+Object.keys(visited).forEach((id) => {
   const el = document.getElementById(id);
   if (el) el.classList.add('visited');
 });
@@ -83,6 +90,7 @@ document.querySelectorAll('.room').forEach(room => {
 // bathroom opening to mirror
     if (id === 'bathroom') {
         visited[id] = true;
+        persistVisitedState();
         room.classList.add('visited');
         openMirror();
         return;
@@ -91,6 +99,7 @@ document.querySelectorAll('.room').forEach(room => {
 // closet opening 
     if (id === 'bedroom-three') {
         visited[id] = true;
+        persistVisitedState();
         room.classList.add('visited');
         openCloset();
         return;
@@ -101,7 +110,7 @@ document.querySelectorAll('.room').forEach(room => {
 
     // this will mark a room as visited
     visited[id] = true;
-    // localStorage.setItem('visited-apt1', JSON.stringify(visited));
+    persistVisitedState();
     room.classList.add('visited');
 
     // only typewrite if notebook isn't already showing this room
