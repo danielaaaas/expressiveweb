@@ -93,6 +93,10 @@ document.querySelectorAll('.room').forEach(room => {
             noteOverlay.classList.remove('visible');
             const door = document.getElementById('door-transition');
             door.classList.add('active');
+            // First home reads this on load for “return” / light-adjacent progression (see java/return-home.js)
+            try {
+                localStorage.setItem('uht-arriving-from-fourth-home', '1');
+            } catch (_err) { /* private mode / quota */ }
             setTimeout(() => {
                 window.location.href = 'https://danielaaaas.github.io/unhogartemporal/index.html';
             }, 1500);

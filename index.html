@@ -3,6 +3,7 @@
 <head>
     <title>Un Hogar Temporal</title>
     <link rel="stylesheet" type="text/css" href="styles/aesthetics.css">
+    <link rel="stylesheet" type="text/css" href="styles/night-mode.css">
     <link rel="icon" href="https://static.vecteezy.com/system/resources/thumbnails/061/905/322/small/a-pixel-art-image-of-purple-flowers-png.png" type="image/png"/>
 
         <!-- adding the code below so that the font also shows upp on safari -->
@@ -11,7 +12,8 @@
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<!-- class apt-one: floor plan color treatment only; keep on <body> (matches deployed site scale) -->
+<body class="apt-one">
     <h1>el primer hogar</h1>
 
     <div class="floor-plan-container">
@@ -68,6 +70,7 @@
             <line id="bathroom-window" x1="604" y1="279" x2="604" y2="363" stroke="#00B3FF" stroke-width="8" stroke-linecap="square"/>
             <line id="livingroom-windowone" x1="604" y1="435" x2="604" y2="519" stroke="#00B3FF" stroke-width="8" stroke-linecap="square"/>
             <line id="kitchen-windowone" x1="604" y1="554" x2="604" y2="638" stroke="#00B3FF" stroke-width="8" stroke-linecap="square"/>
+
         </svg>
     </div>
 
@@ -126,10 +129,10 @@
 
      <div id="crumble-pile"></div>
 
-     <body class="apt-one">
-
     <script id="cursor" src="cursorworkaround/key.js"></script>
     <script id="mainjava" src="java/main.js"></script>
+    <script src="java/night-mode.js"></script>
+    <script src="java/return-home.js"></script>
 </body>
 
 </html>
