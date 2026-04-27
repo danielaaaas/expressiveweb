@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 230" shape-rendering="crispEdges" aria-hidden="true">
+  <!-- Stage 1: silhouette-first isometric room -->
+
+  <!-- shell -->
+  <polygon points="56,66 156,24 258,66 158,108" fill="#f1cf85"/>
+  <polygon points="56,66 158,108 158,184 56,144" fill="#e7b868"/>
+  <polygon points="258,66 158,108 158,184 258,144" fill="#dfaa5e"/>
+
+  <!-- inner wall planes (bottom edge snapped to floor ridge) -->
+  <polygon points="66,72 158,109 158,176 66,140" fill="#f4ead3"/>
+  <polygon points="250,72 158,109 158,176 250,140" fill="#f4ead3"/>
+
+  <!-- floor plane -->
+  <polygon points="66,140 158,176 250,140 158,208" fill="#6ab8c1"/>
+  <polygon points="158,208 250,140 250,145 158,213" fill="#2a5968"/>
+  <polygon points="66,140 158,176 158,213 66,177" fill="#4aa8b4"/>
+
+  <!-- seam trim: drawn above floor so wall/floor connection reads -->
+  <polygon points="66,140 158,176 160,175 68,139" fill="#d3c29f"/>
+  <polygon points="158,176 250,140 248,139 156,175" fill="#d3c29f"/>
+  <path d="M66 140L158 176L250 140" stroke="#9f8f70" stroke-width="2"/>
+
+  <!-- simple furniture blocks for proportion checks only -->
+
+  <!-- bathtub block -->
+  <polygon points="174,106 224,87 241,93 191,112" fill="#bdf7f2"/>
+  <polygon points="174,106 191,112 191,136 174,130" fill="#7bcbd0"/>
+  <polygon points="191,112 241,93 241,117 191,136" fill="#96e4e1"/>
+
+  <!-- toilet block -->
+  <polygon points="218,129 234,123 244,126 228,132" fill="#acece7"/>
+  <polygon points="218,129 228,132 228,149 218,145" fill="#74bec4"/>
+  <polygon points="228,132 244,126 244,143 228,149" fill="#8ad3d6"/>
+
+  <!-- vanity block -->
+  <polygon points="98,118 123,110 136,114 111,123" fill="#64a9b1"/>
+  <polygon points="98,118 111,123 111,145 98,140" fill="#417983"/>
+  <polygon points="111,123 136,114 136,136 111,145" fill="#538f98"/>
+
+  <!-- mirror blocks -->
+  <polygon points="93,80 111,73 111,106 93,113" fill="#cbfbff"/>
+  <polygon points="116,71 134,64 134,97 116,104" fill="#cbfbff"/>
+</svg>

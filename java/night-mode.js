@@ -11,8 +11,35 @@
   const NIGHT_OVERRIDE_KEY = 'uht-night-override';
   const PAGE_KEY = window.location.pathname;
 
+  /**
+   * Lighting preset only — not a gradient picker.
+   * - `auto`: America/New_York time drives the full ambient path (dusk → night → dawn, smooth fades).
+   * - `night` / `day`: two manual snaps (full night with flashlight vs clear day). All in-between
+   *   sky states exist only while you stay on auto and let the clock run.
+   */
+
+  /** Smooth overlay darkness by EST wall clock (fractional hours; used in auto + for visuals when forced night). */
+  const AMBIENT_DAWN_START = 5;
+  const AMBIENT_DAWN_END = 7;
+  const AMBIENT_DAY_START = 7;
+  const AMBIENT_DAY_END = 17;
+  const AMBIENT_DUSK_START = 17;
+  const AMBIENT_DUSK_END = 19;
+  const AMBIENT_DEEPEN_END = 21;
+  /** ~7pm plateau (before deepen): darker so entering night mode already feels constrained. */
+  const AMBIENT_ALPHA_SEVEN_PM = 0.56;
+  /** Full night (auto deep hours + forced night): darkest overlay; always above dusk plateaus. */
+  const AMBIENT_ALPHA_MAX = 1;
+  /** When `nightActive` (flashlight window): never let the veil go too light—navigation needs the beam. */
+  const NIGHT_ACTIVE_VEIL_MUL = 1.1;
+  const NIGHT_ACTIVE_VEIL_MIN = 0.88;
+
+  let maskRaf = 0;
+  let overlayMaskCanvas = null;
+  let overlayMaskCtx = null;
+
   let nightOverride = readNightOverride();
-  ensureNightMaskSvg();
+  ensureOverlayMaskCanvas();
   const overlay = createNightOverlay();
   const clock = createClockWidget();
   const lampLayer = createLampLayer();
@@ -25,16 +52,12 @@
   const LAMP_HIT_HALF_H_UP = 32;
   const LAMP_HIT_HALF_H_DOWN = 16;
 
-  let maskRaf = 0;
-
   const litRoomsByPage = readLitRooms();
   const litSet = new Set(litRoomsByPage[PAGE_KEY] || []);
 
   let nightActive = false;
 
   mountLamps();
-  refreshClock();
-  evaluateNightState();
 
   window.setInterval(() => {
     refreshClock();
@@ -43,17 +66,21 @@
     evaluateNightState();
   }, 30000);
 
-  document.addEventListener('mousemove', (event) => {
-    overlay.style.setProperty('--flashlight-x', `${event.clientX}px`);
-    overlay.style.setProperty('--flashlight-y', `${event.clientY}px`);
+  refreshClock();
+  evaluateNightState();
+
+  function onPointerFlashlight(event) {
+    syncFlashlightCoords(event.clientX, event.clientY);
     requestNightMaskUpdate();
-  });
+  }
+  document.addEventListener('mousemove', onPointerFlashlight, { passive: true });
+  window.addEventListener('pointermove', onPointerFlashlight, { passive: true, capture: true });
 
   let resizeTimer = null;
   window.addEventListener('resize', () => {
     window.clearTimeout(resizeTimer);
     resizeTimer = window.setTimeout(() => {
-      syncMaskSvgSize();
+      syncOverlayMaskCanvasSize();
       requestNightMaskUpdate();
     }, 120);
   });
@@ -61,73 +88,52 @@
   document.addEventListener('touchmove', (event) => {
     if (!event.touches.length) return;
     const firstTouch = event.touches[0];
-    overlay.style.setProperty('--flashlight-x', `${firstTouch.clientX}px`);
-    overlay.style.setProperty('--flashlight-y', `${firstTouch.clientY}px`);
-    requestNightMaskUpdate();
+    onPointerFlashlight(firstTouch);
   }, { passive: true });
+
+  function syncFlashlightCoords(clientX, clientY) {
+    const x = `${Math.round(clientX)}px`;
+    const y = `${Math.round(clientY)}px`;
+    overlay.style.setProperty('--flashlight-x', x);
+    overlay.style.setProperty('--flashlight-y', y);
+    document.documentElement.style.setProperty('--flashlight-x', x);
+    document.documentElement.style.setProperty('--flashlight-y', y);
+  }
 
   function createNightOverlay() {
     const el = document.createElement('div');
     el.className = 'night-overlay';
-    el.style.setProperty('--flashlight-x', `${window.innerWidth * 0.5}px`);
-    el.style.setProperty('--flashlight-y', `${window.innerHeight * 0.45}px`);
+    const cx = window.innerWidth * 0.5;
+    const cy = window.innerHeight * 0.45;
+    el.style.setProperty('--flashlight-x', `${cx}px`);
+    el.style.setProperty('--flashlight-y', `${cy}px`);
+    document.documentElement.style.setProperty('--flashlight-x', `${cx}px`);
+    document.documentElement.style.setProperty('--flashlight-y', `${cy}px`);
     document.body.appendChild(el);
     return el;
   }
 
-  /** SVG mask: white = show dark overlay, black = cut hole (flashlight + lit rooms). */
-  function ensureNightMaskSvg() {
-    if (document.getElementById('uht-night-mask-svg')) return;
-    const NS = 'http://www.w3.org/2000/svg';
-    const svg = document.createElementNS(NS, 'svg');
-    svg.setAttribute('id', 'uht-night-mask-svg');
-    svg.setAttribute('aria-hidden', 'true');
-    svg.setAttribute('width', '1');
-    svg.setAttribute('height', '1');
-    /* opacity 0 can make WebKit skip mask rasterization; keep nearly invisible */
-    svg.style.cssText = 'position:fixed;left:0;top:0;width:1px;height:1px;overflow:hidden;pointer-events:none;opacity:0.01;';
-    const defs = document.createElementNS(NS, 'defs');
-    const rg = document.createElementNS(NS, 'radialGradient');
-    rg.setAttribute('id', 'uht-flash-mask-grad');
-    rg.setAttribute('gradientUnits', 'userSpaceOnUse');
-    const s0 = document.createElementNS(NS, 'stop');
-    s0.setAttribute('offset', '0%');
-    s0.setAttribute('stop-color', '#000000');
-    const s1 = document.createElementNS(NS, 'stop');
-    s1.setAttribute('offset', '38%');
-    s1.setAttribute('stop-color', '#1a1a1a');
-    const s2 = document.createElementNS(NS, 'stop');
-    s2.setAttribute('offset', '100%');
-    s2.setAttribute('stop-color', '#ffffff');
-    rg.append(s0, s1, s2);
-    const mask = document.createElementNS(NS, 'mask');
-    mask.setAttribute('id', 'uht-night-overlay-mask');
-    mask.setAttribute('mask-type', 'luminance');
-    mask.setAttribute('maskUnits', 'userSpaceOnUse');
-    mask.setAttribute('maskContentUnits', 'userSpaceOnUse');
-    mask.setAttribute('x', '0');
-    mask.setAttribute('y', '0');
-    mask.setAttribute('width', String(window.innerWidth));
-    mask.setAttribute('height', String(window.innerHeight));
-    mask.setAttribute('data-mask-root', 'true');
-    defs.append(rg, mask);
-    svg.appendChild(defs);
-    document.body.appendChild(svg);
-    syncMaskSvgSize();
+  /** Off-screen canvas → PNG for lit-room holes only (intersected with CSS radial flashlight mask). */
+  function ensureOverlayMaskCanvas() {
+    if (overlayMaskCanvas) return;
+    overlayMaskCanvas = document.createElement('canvas');
+    overlayMaskCanvas.setAttribute('aria-hidden', 'true');
+    overlayMaskCtx = overlayMaskCanvas.getContext('2d', { alpha: true });
   }
 
-  function syncMaskSvgSize() {
-    const mask = document.querySelector('#uht-night-overlay-mask');
-    if (!mask) return;
+  function syncOverlayMaskCanvasSize() {
+    if (!overlayMaskCanvas) return;
     const w = window.innerWidth;
     const h = window.innerHeight;
-    mask.setAttribute('width', String(w));
-    mask.setAttribute('height', String(h));
+    if (overlayMaskCanvas.width !== w || overlayMaskCanvas.height !== h) {
+      overlayMaskCanvas.width = w;
+      overlayMaskCanvas.height = h;
+    }
   }
 
   function requestNightMaskUpdate() {
     if (!nightActive) return;
-    if (maskRaf) return;
+    if (maskRaf) window.cancelAnimationFrame(maskRaf);
     maskRaf = window.requestAnimationFrame(() => {
       maskRaf = 0;
       updateNightOverlayMask();
@@ -144,7 +150,7 @@
    * Flashlight: radius of the radial cutout in the night overlay mask (CSS pixels).
    * Lower = smaller pool of light around the cursor. Tweak here only.
    */
-  const FLASHLIGHT_RADIUS_PX = 100;
+  const FLASHLIGHT_RADIUS_PX = 140;
 
   function rectsOverlap2D(ax, ay, aw, ah, bx, by, bw, bh) {
     return bx < ax + aw && bx + bw > ax && by < ay + ah && by + bh > ay;
@@ -236,93 +242,110 @@
     return { left: minX, top: minY, width: maxX - minX, height: maxY - minY };
   }
 
-  /**
-   * @param {object} [opts]
-   * @param {number} [opts.expandPx]  Slight grow to hide hairline seams between merged mask rects.
-   * @param {number} [opts.rx]         Corner radius on the mask rect (0 avoids a faint seam line at joins).
-   */
-  function appendMaskHoleRect(mask, clientRect, opts) {
+  function appendCanvasMaskRoomHole(ctx, clientRect, opts) {
     if (!clientRect || clientRect.width < 2 || clientRect.height < 2) return;
     const expand = opts && opts.expandPx ? opts.expandPx : 0;
-    const rx = opts && opts.rx != null ? opts.rx : 2;
-    const hole = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-    hole.setAttribute('x', String(clientRect.left - expand));
-    hole.setAttribute('y', String(clientRect.top - expand));
-    hole.setAttribute('width', String(clientRect.width + 2 * expand));
-    hole.setAttribute('height', String(clientRect.height + 2 * expand));
-    hole.setAttribute('rx', String(rx));
-    hole.setAttribute('fill', '#000000');
-    mask.appendChild(hole);
+    ctx.fillRect(
+      clientRect.left - expand,
+      clientRect.top - expand,
+      clientRect.width + 2 * expand,
+      clientRect.height + 2 * expand
+    );
   }
 
   function updateNightOverlayMask() {
-    const mask = document.querySelector('#uht-night-overlay-mask');
-    const grad = document.querySelector('#uht-flash-mask-grad');
-    if (!mask || !grad) return;
-
-    while (mask.firstChild) mask.removeChild(mask.firstChild);
+    if (!nightActive) return;
+    ensureOverlayMaskCanvas();
+    syncOverlayMaskCanvasSize();
+    const ctx = overlayMaskCtx;
+    if (!ctx || !overlayMaskCanvas) return;
 
     const w = window.innerWidth;
     const h = window.innerHeight;
-    const base = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-    base.setAttribute('x', '0');
-    base.setAttribute('y', '0');
-    base.setAttribute('width', String(w));
-    base.setAttribute('height', String(h));
-    base.setAttribute('fill', '#ffffff');
-    mask.appendChild(base);
-
     const fx = parsePxVar(overlay.style.getPropertyValue('--flashlight-x'), w * 0.5);
     const fy = parsePxVar(overlay.style.getPropertyValue('--flashlight-y'), h * 0.5);
     const fr = FLASHLIGHT_RADIUS_PX;
-    grad.setAttribute('cx', String(fx));
-    grad.setAttribute('cy', String(fy));
-    grad.setAttribute('r', String(fr));
 
-    const flashCircle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    flashCircle.setAttribute('cx', String(fx));
-    flashCircle.setAttribute('cy', String(fy));
-    flashCircle.setAttribute('r', String(fr));
-    flashCircle.setAttribute('fill', 'url(#uht-flash-mask-grad)');
-    mask.appendChild(flashCircle);
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, w, h);
 
+    ctx.save();
+    ctx.globalCompositeOperation = 'destination-out';
+    ctx.fillStyle = 'rgba(0,0,0,1)';
     rooms.forEach((roomEl) => {
       const id = roomEl.id;
       if (!id || !litSet.has(id)) return;
 
-      // L-shaped #living-room (path): bbox overlaps other rooms — subtract all other .room bboxes, then project.
       if (id === 'living-room' && roomEl instanceof SVGPathElement) {
         const holes = clientRectsForLitPathLivingRoom(roomEl);
         if (holes.length > 0) {
-          holes.forEach((cr) =>
-            appendMaskHoleRect(mask, cr, { expandPx: 0.75, rx: 0 })
-          );
+          holes.forEach((cr) => appendCanvasMaskRoomHole(ctx, cr, { expandPx: 0.75 }));
           return;
         }
-        /* fall through if geometry produced no pieces */
       }
 
       const r = roomEl.getBoundingClientRect();
-      appendMaskHoleRect(mask, r);
+      appendCanvasMaskRoomHole(ctx, r);
     });
+    ctx.restore();
 
-    bindOverlaySvgMask();
+    const roomPngUrl = overlayMaskCanvas.toDataURL('image/png');
+    bindOverlayFlashlightAndRoomMask(roomPngUrl, fx, fy, fr);
   }
 
-  /** Safari + Chrome: set mask longhands (shorthand alone is flaky after SVG mask edits). */
-  function bindOverlaySvgMask() {
+  /**
+   * Flashlight = CSS radial-gradient (alpha mask; follows pointer reliably).
+   * Lit rooms = second mask layer (canvas PNG); intersect = holes from either layer.
+   */
+  function bindOverlayFlashlightAndRoomMask(roomPngDataUrl, fx, fy, fr) {
     if (!nightActive) return;
-    const url = 'url(#uht-night-overlay-mask)';
+    /* Opaque *white* = keep the dim veil; transparent = hole. Black stops confuse luminance + alpha masking. */
+    const grad = `radial-gradient(circle ${fr}px at ${fx}px ${fy}px, transparent 0%, transparent 38%, rgba(255,255,255,0.92) 72%, white 100%)`;
+
+    let hasLitRoom = false;
+    for (let ri = 0; ri < rooms.length; ri++) {
+      const id = rooms[ri].id;
+      if (id && litSet.has(id)) {
+        hasLitRoom = true;
+        break;
+      }
+    }
+
     overlay.style.mask = 'none';
     overlay.style.webkitMask = 'none';
-    overlay.style.maskImage = url;
-    overlay.style.maskRepeat = 'no-repeat';
-    overlay.style.maskSize = '100% 100%';
-    overlay.style.maskPosition = '0 0';
-    overlay.style.webkitMaskImage = url;
-    overlay.style.webkitMaskRepeat = 'no-repeat';
-    overlay.style.webkitMaskSize = '100% 100%';
-    overlay.style.webkitMaskPosition = '0 0';
+
+    if (!hasLitRoom) {
+      overlay.style.maskImage = grad;
+      overlay.style.webkitMaskImage = grad;
+      overlay.style.maskRepeat = 'no-repeat';
+      overlay.style.webkitMaskRepeat = 'no-repeat';
+      overlay.style.maskSize = '100% 100%';
+      overlay.style.webkitMaskSize = '100% 100%';
+      overlay.style.maskPosition = '0 0';
+      overlay.style.webkitMaskPosition = '0 0';
+      overlay.style.maskMode = 'alpha';
+      overlay.style.webkitMaskMode = 'alpha';
+      overlay.style.maskComposite = '';
+      overlay.style.webkitMaskComposite = '';
+      return;
+    }
+
+    const roomUrl = `url("${roomPngDataUrl.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}")`;
+    const layers = `${grad}, ${roomUrl}`;
+    overlay.style.maskImage = layers;
+    overlay.style.webkitMaskImage = layers;
+    overlay.style.maskRepeat = 'no-repeat, no-repeat';
+    overlay.style.webkitMaskRepeat = 'no-repeat, no-repeat';
+    overlay.style.maskSize = '100% 100%, 100% 100%';
+    overlay.style.webkitMaskSize = '100% 100%, 100% 100%';
+    overlay.style.maskPosition = '0 0, 0 0';
+    overlay.style.webkitMaskPosition = '0 0, 0 0';
+    overlay.style.maskMode = 'alpha, alpha';
+    overlay.style.webkitMaskMode = 'alpha, alpha';
+    overlay.style.maskComposite = 'intersect';
+    overlay.style.webkitMaskComposite = '';
   }
 
   function clearOverlaySvgMask() {
@@ -330,44 +353,15 @@
     overlay.style.webkitMask = 'none';
     overlay.style.maskImage = 'none';
     overlay.style.webkitMaskImage = 'none';
-  }
-
-  /**
-   * Pixel crescent from a disk-minus-offset-disk grid; `#` and `Y` are both moon fill (no outline).
-   */
-  function buildPixelMoonSvgMarkup() {
-    const moonFill = '#c4b5e0';
-    const rows = [
-      '.######...',
-      '#YYYYYY#..',
-      '#YYYYYYY#.',
-      '.#YYYYYY#.',
-      '..#YYYYYY#',
-      '..#YYYYYY#',
-      '..#YYYYYY#',
-      '.#YYYYYY#.',
-      '#YYYYYYY#.',
-      '#YYYYYY#..',
-      '.######...'
-    ];
-    const w = rows[0].length;
-    const h = rows.length;
-    const rects = [];
-    rows.forEach((row, y) => {
-      for (let x = 0; x < row.length; x++) {
-        const ch = row.charAt(x);
-        if (ch === '#' || ch === 'Y') {
-          rects.push(`<rect x="${x}" y="${y}" width="1" height="1" fill="${moonFill}"/>`);
-        }
-      }
-    });
-    return `<svg class="light-switch-svg light-switch-svg-moon" viewBox="0 0 ${w} ${h}" width="12" height="12" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">${rects.join('')}</svg>`;
+    overlay.style.maskMode = '';
+    overlay.style.webkitMaskMode = '';
+    overlay.style.maskComposite = '';
+    overlay.style.webkitMaskComposite = '';
   }
 
   function createClockWidget() {
     const wrapper = document.createElement('aside');
     wrapper.className = 'grandfather-clock';
-    const moonSvg = buildPixelMoonSvgMarkup();
     wrapper.innerHTML = `
       <div class="grandfather-clock-upper">
         <div class="clock-sprite" aria-hidden="true">
@@ -386,29 +380,8 @@
         </div>
         <span class="clock-time" aria-live="polite">--:-- -- EST</span>
       </div>
-      <button class="light-switch" type="button" style="--paddle-top: 14px" aria-label="Lighting: automatic by time of day. Click to cycle override.">
-        <span class="light-switch-track" aria-hidden="true">
-          <span class="light-switch-paddle"></span>
-        </span>
-        <span class="light-switch-label">
-          <span class="light-switch-label-inner">
-            <span class="light-switch-icons" aria-hidden="true">
-              <svg class="light-switch-svg light-switch-svg-sun" viewBox="0 0 11 11" width="12" height="12" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges">
-                <rect x="5" y="1" width="1" height="2" fill="#ffd030"/>
-                <rect x="5" y="8" width="1" height="2" fill="#ffd030"/>
-                <rect x="1" y="5" width="2" height="1" fill="#ffd030"/>
-                <rect x="8" y="5" width="2" height="1" fill="#ffd030"/>
-                <rect x="4" y="4" width="3" height="3" fill="#ffd030"/>
-                <rect x="4" y="3" width="3" height="1" fill="#ffd030"/>
-                <rect x="4" y="7" width="3" height="1" fill="#ffd030"/>
-                <rect x="3" y="4" width="1" height="3" fill="#ffd030"/>
-                <rect x="7" y="4" width="1" height="3" fill="#ffd030"/>
-              </svg>
-              ${moonSvg}
-            </span>
-            <span class="light-switch-text">auto</span>
-          </span>
-        </span>
+      <button class="light-switch" type="button" aria-label="Sky lighting: automatic Eastern Time with smooth transitions, or simple presets night and day. Click to cycle auto, night, day.">
+        <span class="light-switch-text">auto</span>
       </button>
     `;
     document.body.appendChild(wrapper);
@@ -672,7 +645,81 @@
     requestNightMaskUpdate();
   }
 
-  function getEstClockAngles(date) {
+  function clamp01(t) {
+    return Math.max(0, Math.min(1, t));
+  }
+
+  function lerp(a, b, t) {
+    return a + (b - a) * t;
+  }
+
+  function lerpRgb(a, b, t) {
+    return [
+      Math.round(lerp(a[0], b[0], t)),
+      Math.round(lerp(a[1], b[1], t)),
+      Math.round(lerp(a[2], b[2], t))
+    ];
+  }
+
+  /** Overlay sky hues (RGB); strength still comes from --night-dim-alpha in CSS. */
+  const O_NIGHT_T = [34, 22, 72];
+  const O_NIGHT_B = [4, 2, 14];
+  const O_SUNRISE_T = [255, 186, 148];
+  const O_SUNRISE_B = [112, 52, 88];
+  const O_SUNSET_T = [255, 138, 96];
+  const O_SUNSET_B = [78, 28, 58];
+  const O_EVENING_T = [52, 34, 98];
+  const O_EVENING_B = [14, 8, 32];
+
+  function pushOverlayTint(topRgb, botRgb) {
+    overlay.style.setProperty('--o-r1', String(topRgb[0]));
+    overlay.style.setProperty('--o-g1', String(topRgb[1]));
+    overlay.style.setProperty('--o-b1', String(topRgb[2]));
+    overlay.style.setProperty('--o-r2', String(botRgb[0]));
+    overlay.style.setProperty('--o-g2', String(botRgb[1]));
+    overlay.style.setProperty('--o-b2', String(botRgb[2]));
+  }
+
+  function clearOverlayTint() {
+    overlay.style.removeProperty('--o-r1');
+    overlay.style.removeProperty('--o-g1');
+    overlay.style.removeProperty('--o-b1');
+    overlay.style.removeProperty('--o-r2');
+    overlay.style.removeProperty('--o-g2');
+    overlay.style.removeProperty('--o-b2');
+  }
+
+  /** Top / bottom gradient stops for auto mode (America/New_York fractional hour). */
+  function overlayTintForAutoFractionalHour(fh) {
+    if (fh >= AMBIENT_DAWN_START && fh < AMBIENT_DAWN_END) {
+      const t = clamp01((fh - AMBIENT_DAWN_START) / (AMBIENT_DAWN_END - AMBIENT_DAWN_START));
+      return { top: lerpRgb(O_NIGHT_T, O_SUNRISE_T, t), bot: lerpRgb(O_NIGHT_B, O_SUNRISE_B, t) };
+    }
+    if (fh >= AMBIENT_DUSK_START && fh < AMBIENT_DUSK_END) {
+      const t = clamp01((fh - AMBIENT_DUSK_START) / (AMBIENT_DUSK_END - AMBIENT_DUSK_START));
+      return {
+        top: lerpRgb(O_EVENING_T, O_SUNSET_T, 1 - t),
+        bot: lerpRgb(O_EVENING_B, O_SUNSET_B, 1 - t)
+      };
+    }
+    if (fh >= AMBIENT_DUSK_END && fh < AMBIENT_DEEPEN_END) {
+      const t = clamp01((fh - AMBIENT_DUSK_END) / (AMBIENT_DEEPEN_END - AMBIENT_DUSK_END));
+      return { top: lerpRgb(O_EVENING_T, O_NIGHT_T, t), bot: lerpRgb(O_EVENING_B, O_NIGHT_B, t) };
+    }
+    return { top: O_NIGHT_T.slice(), bot: O_NIGHT_B.slice() };
+  }
+
+  /** Intl sometimes embeds bidi marks in part values; Number() then becomes NaN and breaks the clock. */
+  function parseIntlNumericPart(raw) {
+    if (raw == null || raw === '') return NaN;
+    const cleaned = String(raw).replace(/[\u200e\u200f\u202a-\u202e\u2066-\u2069]/g, '').trim();
+    const n = Number(cleaned);
+    if (Number.isFinite(n)) return n;
+    const digits = cleaned.match(/\d+/);
+    return digits ? parseInt(digits[0], 10) : NaN;
+  }
+
+  function getEstCalendarParts(date) {
     const parts = new Intl.DateTimeFormat('en-US', {
       timeZone: EST_TIMEZONE,
       hour: 'numeric',
@@ -680,16 +727,109 @@
       second: 'numeric',
       hour12: false
     }).formatToParts(date);
-    const map = {};
+    const map = { hour: NaN, minute: 0, second: 0 };
     for (let i = 0; i < parts.length; i++) {
       const p = parts[i];
-      if (p.type !== 'literal') {
-        map[p.type] = Number(p.value);
+      if (p.type === 'hour' || p.type === 'minute' || p.type === 'second') {
+        map[p.type] = parseIntlNumericPart(p.value);
       }
     }
-    const hour24 = map.hour;
-    const minute = map.minute;
-    const second = map.second;
+    return map;
+  }
+
+  function getEstFractionalHour(date) {
+    const m = getEstCalendarParts(date);
+    let h = Number.isFinite(m.hour) ? m.hour : 12;
+    if (h === 24) h = 0;
+    const min = Number.isFinite(m.minute) ? m.minute : 0;
+    const sec = Number.isFinite(m.second) ? m.second : 0;
+    return h + min / 60 + sec / 3600;
+  }
+
+  /** Overlay alpha 0 … AMBIENT_ALPHA_MAX: dusk → deepen → night → dawn. */
+  function computeAmbientDimAlpha(fh) {
+    if (fh >= AMBIENT_DAWN_START && fh < AMBIENT_DAWN_END) {
+      return lerp(
+        AMBIENT_ALPHA_MAX,
+        0,
+        clamp01((fh - AMBIENT_DAWN_START) / (AMBIENT_DAWN_END - AMBIENT_DAWN_START))
+      );
+    }
+    if (fh >= AMBIENT_DAY_START && fh < AMBIENT_DAY_END) {
+      return 0;
+    }
+    if (fh >= AMBIENT_DUSK_START && fh < AMBIENT_DUSK_END) {
+      return lerp(
+        0,
+        AMBIENT_ALPHA_SEVEN_PM,
+        clamp01((fh - AMBIENT_DUSK_START) / (AMBIENT_DUSK_END - AMBIENT_DUSK_START))
+      );
+    }
+    if (fh >= AMBIENT_DUSK_END && fh < AMBIENT_DEEPEN_END) {
+      return lerp(
+        AMBIENT_ALPHA_SEVEN_PM,
+        AMBIENT_ALPHA_MAX,
+        clamp01((fh - AMBIENT_DUSK_END) / (AMBIENT_DEEPEN_END - AMBIENT_DUSK_END))
+      );
+    }
+    return AMBIENT_ALPHA_MAX;
+  }
+
+  function applyAmbientVisuals(date) {
+    if (nightOverride === 'day') {
+      document.body.classList.remove('night-ambient');
+      overlay.style.removeProperty('--night-dim-alpha');
+      clearOverlayTint();
+      document.body.removeAttribute('data-ambient-phase');
+      return;
+    }
+    let alpha;
+    if (nightOverride === 'night') {
+      alpha = AMBIENT_ALPHA_MAX;
+    } else {
+      alpha = computeAmbientDimAlpha(getEstFractionalHour(date));
+    }
+    if (alpha < 0.02) {
+      document.body.classList.remove('night-ambient');
+      overlay.style.removeProperty('--night-dim-alpha');
+      clearOverlayTint();
+      document.body.removeAttribute('data-ambient-phase');
+      return;
+    }
+    document.body.classList.add('night-ambient');
+    let displayAlpha = alpha;
+    if (nightActive) {
+      displayAlpha = Math.min(
+        AMBIENT_ALPHA_MAX,
+        Math.max(alpha * NIGHT_ACTIVE_VEIL_MUL, NIGHT_ACTIVE_VEIL_MIN)
+      );
+    }
+    overlay.style.setProperty('--night-dim-alpha', displayAlpha.toFixed(4));
+
+    const fh = getEstFractionalHour(date);
+    if (nightOverride === 'night') {
+      pushOverlayTint(O_NIGHT_T, O_NIGHT_B);
+    } else {
+      const { top, bot } = overlayTintForAutoFractionalHour(fh);
+      pushOverlayTint(top, bot);
+    }
+
+    let phase = 'night';
+    if (nightOverride !== 'night') {
+      if (fh >= AMBIENT_DUSK_START && fh < AMBIENT_DUSK_END) phase = 'dusk';
+      else if (fh >= AMBIENT_DUSK_END && fh < AMBIENT_DEEPEN_END) phase = 'evening';
+      else if (fh >= AMBIENT_DAWN_START && fh < AMBIENT_DAWN_END) phase = 'dawn';
+      else if (fh >= AMBIENT_DAY_START && fh < AMBIENT_DAY_END) phase = 'day';
+    }
+    document.body.setAttribute('data-ambient-phase', phase);
+  }
+
+  function getEstClockAngles(date) {
+    const map = getEstCalendarParts(date);
+    let hour24 = Number.isFinite(map.hour) ? map.hour : 12;
+    if (hour24 === 24) hour24 = 0;
+    const minute = Number.isFinite(map.minute) ? map.minute : 0;
+    const second = Number.isFinite(map.second) ? map.second : 0;
     const hourFraction = (hour24 % 12) + minute / 60 + second / 3600;
     const minuteFraction = minute + second / 60;
     return {
@@ -719,39 +859,45 @@
       face.style.setProperty('--clock-minute-deg', `${minuteDeg}deg`);
       face.style.setProperty('--clock-second-deg', `${secondDeg}deg`);
     }
+
+    applyAmbientVisuals(now);
   }
 
   function evaluateNightState() {
     const now = new Date();
-    const estHour = Number(new Intl.DateTimeFormat('en-US', {
-      timeZone: EST_TIMEZONE,
-      hour: 'numeric',
-      hour12: false
-    }).format(now));
+    try {
+      const partsMap = getEstCalendarParts(now);
+      let estHour = Number.isFinite(partsMap.hour) ? partsMap.hour : 12;
+      if (estHour === 24) estHour = 0;
 
-    const shouldBeNightByClock = estHour >= NIGHT_START_HOUR_EST || estHour < NIGHT_END_HOUR_EST;
-    const shouldBeNight =
-      nightOverride === 'night'
-        ? true
-        : nightOverride === 'day'
-          ? false
-          : shouldBeNightByClock;
-    nightActive = shouldBeNight;
-    document.body.classList.toggle('night-active', nightActive);
-    if (nightActive) {
-      syncMaskSvgSize();
-      syncRoomIllumination();
-      requestNightMaskUpdate();
-    } else {
-      clearOverlaySvgMask();
-      const mask = document.querySelector('#uht-night-overlay-mask');
-      if (mask) {
-        while (mask.firstChild) mask.removeChild(mask.firstChild);
+      const shouldBeNightByClock = estHour >= NIGHT_START_HOUR_EST || estHour < NIGHT_END_HOUR_EST;
+      const shouldBeNight =
+        nightOverride === 'night'
+          ? true
+          : nightOverride === 'day'
+            ? false
+            : shouldBeNightByClock;
+      nightActive = shouldBeNight;
+      document.body.classList.toggle('night-active', nightActive);
+      document.body.classList.toggle('night-override-auto', nightOverride === 'auto');
+      document.body.classList.toggle('night-override-day', nightOverride === 'day');
+      document.body.classList.toggle('night-override-night', nightOverride === 'night');
+      if (nightActive) {
+        syncOverlayMaskCanvasSize();
+        syncRoomIllumination();
+        updateNightOverlayMask();
+      } else {
+        clearOverlaySvgMask();
+        syncRoomIllumination();
       }
-      syncRoomIllumination();
+
+      applyAmbientVisuals(now);
+    } catch (_err) {
+      /* Night/mask path must not take down the EST clock tickers. */
     }
   }
 
+  /** Cycles the three presets: auto (timed sky) → night → day → auto. Does not step individual gradient phases. */
   function cycleNightOverride() {
     if (nightOverride === 'auto') {
       nightOverride = 'night';
@@ -773,20 +919,19 @@
 
   function applyOverrideToSwitch(button) {
     button.classList.remove('light-switch--auto', 'light-switch--night', 'light-switch--day');
-    const mode = nightOverride === 'night' ? 'night' : nightOverride === 'day' ? 'day' : 'auto';
+    const mode =
+      nightOverride === 'night' ? 'night' : nightOverride === 'day' ? 'day' : 'auto';
     button.classList.add(`light-switch--${mode}`);
-    const paddleTop = mode === 'day' ? '7px' : mode === 'night' ? '21px' : '14px';
-    button.style.setProperty('--paddle-top', paddleTop);
     const textEl = button.querySelector('.light-switch-text');
     if (textEl) {
       textEl.textContent = mode === 'night' ? 'night' : mode === 'day' ? 'day' : 'auto';
     }
     const aria =
       mode === 'night'
-        ? 'Lighting: forced night (dark + flashlight). Click to cycle.'
+        ? 'Preset: forced night (dark veil and flashlight). Click for bright day, then automatic sky.'
         : mode === 'day'
-          ? 'Lighting: forced day. Click to cycle.'
-          : 'Lighting: automatic by time of day. Click to cycle.';
+          ? 'Preset: forced bright day. Click for automatic Eastern Time with smooth dusk-to-dawn gradients.'
+          : 'Automatic Eastern Time: smooth sky gradients over the day. Click for night or day presets only.';
     button.setAttribute('aria-label', aria);
   }
 
@@ -815,7 +960,9 @@
   function readNightOverride() {
     try {
       const value = localStorage.getItem(NIGHT_OVERRIDE_KEY);
-      return value === 'night' || value === 'day' ? value : 'auto';
+      if (value === 'twilight') return 'auto';
+      if (value === 'night' || value === 'day') return value;
+      return 'auto';
     } catch (_err) {
       return 'auto';
     }

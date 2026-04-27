@@ -7,7 +7,7 @@
     flex-direction: column;
     align-items: center;
     width: max-content;
-    max-width: min(42vw, 180px);
+    max-width: min(46vw, 200px);
     padding: 4px 10px 10px;
     color: #2f251c;
     font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
@@ -162,105 +162,100 @@
     font-size: 13px;
 }
 
-/* Pixel wall switch: below clock stack, centered with the clock column */
+/* Dimmed plan (dusk through dawn): readable clock + switch copy */
+body.night-ambient .grandfather-clock {
+    color: #ede8df;
+}
+
+body.night-ambient .grandfather-clock .light-switch {
+    color: #ede8df;
+}
+
+body.night-ambient .grandfather-clock .clock-time,
+body.night-ambient .grandfather-clock .light-switch-text {
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+/* Lighting preset: one pixel wall-plate button (auto → night → day). */
 .light-switch {
     position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
     margin-top: 10px;
-    padding: 0;
-    border: none;
-    background: transparent;
+    min-width: 76px;
+    padding: 8px 12px 9px;
+    border: 3px solid #4f3626;
+    border-radius: 2px;
     cursor: pointer;
     font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
-    color: #2f251c;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    text-transform: lowercase;
+    color: #2a1f14;
     text-align: center;
     -webkit-appearance: none;
     appearance: none;
     align-self: center;
     outline: none;
     -webkit-tap-highlight-color: transparent;
-}
-
-.light-switch:focus,
-.light-switch:focus-visible {
-    outline: none;
-    box-shadow: none;
-}
-
-.light-switch-track {
-    position: relative;
-    display: block;
-    width: 34px;
-    height: 48px;
-    margin: 0 auto;
-    background: #e8dcc4;
-    border: 3px solid #4a3324;
+    image-rendering: pixelated;
+    background: linear-gradient(180deg, #f0e4c4 0%, #d3b06e 42%, #a67c5d 100%);
     box-shadow:
-        inset 2px 2px 0 rgba(255, 255, 255, 0.35),
-        inset -2px -2px 0 rgba(0, 0, 0, 0.12),
-        2px 2px 0 rgba(40, 28, 18, 0.45);
-    image-rendering: pixelated;
+        inset 1px 2px 0 rgba(255, 255, 255, 0.42),
+        inset -1px -2px 0 rgba(0, 0, 0, 0.12),
+        2px 2px 0 rgba(40, 28, 18, 0.38);
+    transition: filter 0.15s ease, box-shadow 0.1s ease, transform 0.08s ease;
 }
 
-.light-switch-paddle {
-    position: absolute;
-    left: calc(50% - 8px);
-    top: var(--paddle-top, 14px);
-    width: 12px;
-    height: 18px;
-    box-sizing: content-box;
-    background: #c9a87a;
-    border: 2px solid #3d2818;
-    box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.25);
-    transition: top 0.15s ease;
+.light-switch:hover {
+    filter: brightness(1.06);
+}
+
+.light-switch:active {
+    transform: translate(1px, 1px);
+    box-shadow:
+        inset 1px 2px 0 rgba(255, 255, 255, 0.35),
+        inset -1px -2px 0 rgba(0, 0, 0, 0.14),
+        1px 1px 0 rgba(40, 28, 18, 0.35);
+}
+
+.light-switch:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.light-switch:focus-visible {
+    outline: 2px solid #d3b06e;
+    outline-offset: 3px;
+}
+
+.light-switch--night {
+    color: #ede8f4;
+    background: linear-gradient(180deg, #5a4a78 0%, #3d3058 50%, #2a223c 100%);
+    border-color: #2c2438;
+    box-shadow:
+        inset 0 0 0 1px rgba(200, 188, 232, 0.35),
+        inset 1px 2px 0 rgba(255, 255, 255, 0.2),
+        inset -1px -2px 0 rgba(0, 0, 0, 0.35),
+        2px 2px 0 rgba(24, 18, 32, 0.45);
+}
+
+.light-switch--day {
+    color: #3d2818;
+    background: linear-gradient(180deg, #fff6dc 0%, #f2e0b8 45%, #e4c46a 100%);
+    border-color: #6b5228;
+    box-shadow:
+        inset 0 0 0 1px rgba(255, 214, 120, 0.45),
+        inset 1px 2px 0 rgba(255, 255, 255, 0.55),
+        inset -1px -2px 0 rgba(0, 0, 0, 0.08),
+        2px 2px 0 rgba(40, 28, 18, 0.32);
+}
+
+.light-switch-text {
+    display: block;
     pointer-events: none;
-}
-
-.light-switch-label {
-    display: block;
-    margin-top: 3px;
-    font-size: 10px;
-    letter-spacing: 0.04em;
-    text-transform: lowercase;
-}
-
-.light-switch-label-inner {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-}
-
-.light-switch-icons {
-    display: inline-flex;
-    align-items: center;
-    gap: 3px;
-}
-
-.light-switch-svg {
-    flex-shrink: 0;
-    display: block;
-    image-rendering: pixelated;
-}
-
-/* Pixel moon: same rendering hints as the sun icon */
-.light-switch-svg-moon {
-    image-rendering: pixelated;
-    shape-rendering: crispEdges;
-}
-
-/* Day: sun only. Night: moon only. Auto: sun + moon (follows clock). */
-.light-switch--day .light-switch-svg-moon {
-    display: none;
-}
-
-.light-switch--night .light-switch-svg-sun {
-    display: none;
-}
-
-.light-switch:hover .light-switch-track {
-    filter: brightness(1.04);
 }
 
 /* Lit rooms in night: brighter fill under flashlight + glow layer above overlay */
@@ -284,14 +279,54 @@ body.night-active svg .room.visited:not(.room-night-lit) {
     inset: 0;
     z-index: 95;
     pointer-events: none;
-    /* Holes (flashlight + lit rooms) come from SVG mask in night-mode.js */
-    background: rgba(0, 0, 0, 0.88);
+    /*
+      Hue from JS (--o-r1…--o-b2): dawn/dusk warm coral–peach, night blue–violet.
+      --night-dim-alpha scales strength (0…1). Fallbacks match default night until JS runs.
+    */
+    --night-dim-alpha: 0;
+    background: linear-gradient(
+        188deg,
+        rgb(
+            var(--o-r1, 34) var(--o-g1, 22) var(--o-b1, 72) /
+                calc(var(--night-dim-alpha, 0) * 0.78)
+        ),
+        rgb(var(--o-r2, 4) var(--o-g2, 2) var(--o-b2, 14) / var(--night-dim-alpha, 0))
+    );
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.55s ease;
 }
 
-body.night-active .night-overlay {
+body.night-ambient .night-overlay {
     opacity: 1;
+}
+
+/* Night: alpha mask — CSS radial = flashlight hole; optional 2nd layer = lit-room holes (intersect). */
+body.night-active .night-overlay {
+    mask-mode: alpha;
+    -webkit-mask-mode: alpha;
+}
+
+/* Flashlight window: slightly stronger veil than ambient-only hours. */
+body.night-active.night-ambient .night-overlay {
+    background: linear-gradient(
+        188deg,
+        rgb(
+            var(--o-r1, 34) var(--o-g1, 22) var(--o-b1, 72) /
+                calc(var(--night-dim-alpha, 0) * 0.9)
+        ),
+        rgb(var(--o-r2, 4) var(--o-g2, 2) var(--o-b2, 14) / var(--night-dim-alpha, 0))
+    );
+}
+
+/* Forced night: full dim quickly. Forced day: clear overlay without a long fade. */
+body.night-override-night .night-overlay {
+    transition-duration: 0.06s;
+    transition-timing-function: ease-out;
+}
+
+body.night-override-day .night-overlay {
+    transition-duration: 0.1s;
+    transition-timing-function: ease-out;
 }
 
 /* Lamps only exist visually at night (layer stays in DOM for storage + mask holes). */

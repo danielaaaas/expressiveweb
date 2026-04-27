@@ -97,12 +97,53 @@
 
           <!-- bathroom mirror -->
      <div id="mirror-overlay">
+        <div class="mirror-backdrop" aria-hidden="true"></div>
+        <div class="mirror-steam-page" aria-hidden="true">
+            <div class="steam-wisp"></div>
+            <div class="steam-wisp"></div>
+            <div class="steam-wisp"></div>
+            <div class="steam-wisp"></div>
+            <div class="steam-wisp"></div>
+            <div class="steam-wisp"></div>
+            <div class="steam-wisp"></div>
+            <div class="steam-wisp"></div>
+            <div class="steam-wisp"></div>
+            <div class="steam-wisp"></div>
+            <div class="steam-wisp"></div>
+            <div class="steam-wisp"></div>
+            <div class="steam-wisp"></div>
+            <div class="steam-wisp"></div>
+            <div class="steam-wisp"></div>
+            <div class="steam-wisp"></div>
+            <div class="steam-wisp"></div>
+            <div class="steam-wisp"></div>
+        </div>
         <div id="mirror">
-            <p class="mirror-prompt">leave a message.</p>
-            <div id="mirror-message"></div>
-            <input id="mirror-input" type="text" placeholder="leave a wish in the steam..." maxlength="80" autocomplete="off" spellcheck="false" />
-            <button id="mirror-submit">leave it</button>
-            <button id="mirror-close">wipe away</button>
+            <div class="mirror-diorama" aria-label="bathroom mirror scene">
+                <div class="mirror-side-dock">
+                    <div class="mirror-pixel-frame">
+                        <div class="mirror-glass-inner">
+                            <p class="mirror-prompt">leave a message.</p>
+                            <div id="mirror-message"></div>
+                        </div>
+                    </div>
+                    <div class="mirror-counter-pixel">
+                        <div class="counter-items-pixel" aria-hidden="true">
+                            <span class="counter-item counter-item-soap"></span>
+                            <span class="counter-item counter-item-cup"></span>
+                            <span class="counter-item counter-item-brush"></span>
+                        </div>
+                        <div class="mirror-submission-bar">
+                            <input id="mirror-input" type="text" placeholder="leave a wish in the steam..." maxlength="80" autocomplete="off" spellcheck="false" />
+                            <button type="button" id="mirror-submit">leave it</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mirror-room-stage">
+                    <img class="mirror-room-art" src="elements/bathroom-room-inspired.svg" alt="" width="400" height="240" decoding="async" />
+                </div>
+            </div>
+            <button type="button" id="mirror-close">wipe away</button>
         </div>
      </div>
 

@@ -58,11 +58,80 @@ const rooms = {
     }
 };
 
+const roomItems = {
+    'master-bedroom:journal': {
+        title: 'journal',
+        text: 'the first scratched notes and tiny drawings lived here, folded in corners where only familiar hands would look.'
+    },
+    'main-hallway:radio': {
+        title: 'radio',
+        text: 'it hummed between stations all afternoon, catching songs halfway through and somehow still feeling complete.'
+    },
+    'kitchen:mug': {
+        title: 'mug',
+        text: 'tea stains and chipped enamel; proof that comfort can survive even when everything else changes shape.'
+    },
+    'living-room:lamp': {
+        title: 'lamp',
+        text: 'it kept one small circle of warmth alive late at night, when conversations got quiet and real.'
+    }
+};
+
+const bathroomHotspotEntries = {
+    'hit-sink': {
+        title: 'sink',
+        text: 'the sink remembers hurried mornings, soap bubbles, and those rare quiet minutes alone.'
+    },
+    'hit-tub': {
+        title: 'tub',
+        text: 'the tub held long exhale moments, where steam turned the room soft and time slowed down.'
+    },
+    'hit-toilet': {
+        title: 'toilet',
+        text: 'one of those ordinary anchors of home life; not glamorous, but always part of the daily rhythm.'
+    },
+    'hit-cabinet': {
+        title: 'cabinet',
+        text: 'medicine, hair ties, and half-forgotten things lived behind this little door for years.'
+    }
+};
+
 const visited = {};
 
 Object.keys(visited).forEach((id) => {
   const el = document.getElementById(id);
   if (el) el.classList.add('visited');
+});
+
+function openNotebookEntry(title, text) {
+    const notebookTitle = document.getElementById('notebook-title');
+    const notebookText = document.getElementById('notebook-text');
+
+    if (notebookTitle.textContent !== title) {
+        typeWriter(text, 'notebook-text');
+    } else {
+        notebookText.textContent = text;
+    }
+
+    notebookTitle.textContent = title;
+    document.getElementById('notebook').classList.add('open');
+    document.getElementById('overlay').classList.add('active');
+}
+
+document.querySelectorAll('.room-item').forEach((itemEl) => {
+    itemEl.addEventListener('click', (event) => {
+        event.stopPropagation();
+        const roomId = itemEl.dataset.room;
+        const itemId = itemEl.dataset.item;
+        const data = roomItems[`${roomId}:${itemId}`];
+        if (!data) return;
+
+        visited[roomId] = true;
+        const roomEl = document.getElementById(roomId);
+        if (roomEl) roomEl.classList.add('visited');
+
+        openNotebookEntry(data.title, data.text);
+    });
 });
 
 // click listener for rooms
@@ -121,18 +190,7 @@ document.querySelectorAll('.room').forEach(room => {
     visited[id] = true;
     room.classList.add('visited');
 
-    // only typewrite if notebook isn't already showing this room
-        if (document.getElementById('notebook-title').textContent !== data.title) {
-            typeWriter(data.text, 'notebook-text');
-            } else {
-            document.getElementById('notebook-text').textContent = data.text;
-        }
-
-    // opens the notebook 
-    document.getElementById('notebook-title').textContent = data.title;
-    // typeWriter(data.text, 'notebook-text');
-    document.getElementById('notebook').classList.add('open');
-    document.getElementById('overlay').classList.add('active');
+    openNotebookEntry(data.title, data.text);
   });
 });
 
@@ -164,6 +222,38 @@ function openMirror () {
 function closeMirror () {
     document.getElementById('mirror-overlay').classList.remove('active');
 }
+
+function setupMirrorRoomHotspots() {
+    const roomObject = document.getElementById('mirror-room-svg');
+    if (!roomObject) return;
+
+    const bindHotspots = () => {
+        const svgDoc = roomObject.contentDocument;
+        if (!svgDoc) return;
+
+        const svgRoot = svgDoc.documentElement;
+        if (!svgRoot || svgRoot.dataset.hotspotsBound === 'true') return;
+
+        Object.entries(bathroomHotspotEntries).forEach(([hotspotId, entry]) => {
+            const hotspot = svgDoc.getElementById(hotspotId);
+            if (!hotspot) return;
+
+            hotspot.style.cursor = "url('https://64.media.tumblr.com/821cf7001bf745e2ddca3d248163c513/894ac02f0d28ad70-56/s1280x1920/b524d63c6de82323756b1603e624961da509144e.png'), auto";
+            hotspot.addEventListener('click', (event) => {
+                event.stopPropagation();
+                closeMirror();
+                openNotebookEntry(entry.title, entry.text);
+            });
+        });
+
+        svgRoot.dataset.hotspotsBound = 'true';
+    };
+
+    roomObject.addEventListener('load', bindHotspots);
+    bindHotspots();
+}
+
+setupMirrorRoomHotspots();
 
 document.getElementById('mirror-submit').addEventListener('click', () => {
     const msg = document.getElementById('mirror-input').value.trim();

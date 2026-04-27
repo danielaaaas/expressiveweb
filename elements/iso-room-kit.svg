@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" shape-rendering="crispEdges">
+  <title>Isometric Room Kit</title>
+  <desc>Reusable base shell, props, and hotspot layer for room composition.</desc>
+
+  <defs>
+    <pattern id="tile-floor-a" width="16" height="16" patternUnits="userSpaceOnUse">
+      <rect width="16" height="16" fill="#5faeb7"/>
+      <rect x="0" y="0" width="8" height="8" fill="#8ed3cf"/>
+      <rect x="8" y="8" width="8" height="8" fill="#8ed3cf"/>
+      <rect x="3" y="3" width="2" height="2" fill="#3b8790"/>
+      <rect x="11" y="11" width="2" height="2" fill="#3b8790"/>
+    </pattern>
+
+    <symbol id="shell-square" viewBox="0 0 320 230">
+      <polygon points="56,66 156,24 258,66 158,108" fill="#f0cf82"/>
+      <polygon points="56,66 158,108 158,184 56,144" fill="#ebb76b"/>
+      <polygon points="258,66 158,108 158,184 258,144" fill="#e7ad61"/>
+
+      <polygon points="66,72 158,109 158,176 66,140" fill="#f4ead2"/>
+      <polygon points="250,72 158,109 158,176 250,140" fill="#f4ead2"/>
+
+      <polygon points="66,140 158,176 250,140 158,208" fill="url(#tile-floor-a)"/>
+      <polygon points="66,140 158,176 250,140 158,208" fill="none" stroke="#356f7d" stroke-width="2"/>
+      <polygon points="158,208 250,140 250,145 158,213" fill="#235466"/>
+      <polygon points="66,140 158,176 158,213 66,177" fill="#48a7b5"/>
+      <path d="M66 140L158 176L250 140" stroke="#a08f71" stroke-width="2"/>
+    </symbol>
+
+    <symbol id="prop-vanity" viewBox="0 0 64 64">
+      <polygon points="6,30 30,22 43,26 19,34" fill="#62a7b0"/>
+      <polygon points="6,30 19,34 19,56 6,51" fill="#3e7783"/>
+      <polygon points="19,34 43,26 43,48 19,56" fill="#518f98"/>
+      <polygon points="11,32 26,27 33,29 18,34" fill="#a6e9e8"/>
+      <path d="M19 35v20M31 30v20" stroke="#32656f" stroke-width="1"/>
+      <rect x="23" y="11" width="2" height="13" fill="#8799a0"/>
+      <rect x="18" y="9" width="12" height="3" fill="#8799a0"/>
+    </symbol>
+
+    <symbol id="prop-bathtub" viewBox="0 0 88 64">
+      <polygon points="6,22 58,3 75,9 23,28" fill="#bdf9f3"/>
+      <polygon points="6,22 23,28 23,51 6,45" fill="#75c9cf"/>
+      <polygon points="23,28 75,9 75,32 23,51" fill="#92e2df"/>
+      <polygon points="15,24 51,11 62,14 26,27" fill="#ebfffd"/>
+      <polygon points="31,29 61,18 70,21 40,32" fill="#a3e9e6"/>
+    </symbol>
+
+    <symbol id="prop-toilet" viewBox="0 0 48 56">
+      <polygon points="6,24 22,18 32,21 16,27" fill="#aaece7"/>
+      <polygon points="6,24 16,27 16,44 6,40" fill="#73bdc4"/>
+      <polygon points="16,27 32,21 32,38 16,44" fill="#8ad3d5"/>
+      <polygon points="12,11 20,8 27,10 19,13" fill="#72b6bc"/>
+      <polygon points="17,28 24,25 28,27 21,30" fill="#4d8892"/>
+    </symbol>
+
+    <symbol id="prop-mirrors" viewBox="0 0 56 56">
+      <polygon points="6,16 24,9 24,42 6,49" fill="#c6fbff"/>
+      <polygon points="29,7 47,0 47,33 29,40" fill="#c6fbff"/>
+      <polygon points="7,18 22,12 22,22 7,28" fill="#ebffff"/>
+      <polygon points="30,9 45,3 45,13 30,19" fill="#ebffff"/>
+    </symbol>
+  </defs>
+
+  <!-- Composition Example -->
+  <g id="example-room" transform="translate(120 40)">
+    <use href="#shell-square" x="0" y="0" width="320" height="230"/>
+    <use href="#prop-mirrors" x="86" y="62" width="56" height="56"/>
+    <use href="#prop-vanity" x="92" y="112" width="64" height="64"/>
+    <use href="#prop-bathtub" x="172" y="101" width="88" height="64"/>
+    <use href="#prop-toilet" x="216" y="125" width="48" height="56"/>
+  </g>
+
+  <!-- Optional hotspot guide layer (keep hidden in production exports) -->
+  <g id="hotspot-guide" opacity="0.35">
+    <rect x="232" y="167" width="34" height="28" fill="#ff4d4d"/>
+    <rect x="306" y="140" width="44" height="30" fill="#4d7dff"/>
+    <rect x="350" y="165" width="26" height="24" fill="#5bbd4a"/>
+  </g>
+</svg>

@@ -1,0 +1,121 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 416 398" shape-rendering="crispEdges">
+  <title>Editable Isometric Room Template</title>
+  <desc>Uses room-base-guide.png as tracing guide; edit shell/props/hotspots groups.</desc>
+
+  <!-- GUIDE LAYER: intentionally empty in runtime version -->
+  <g id="guide" opacity="0.35" style="display:none"></g>
+
+  <!-- SHELL LAYER: open cutaway walls + connected floor -->
+  <g id="shell">
+    <!-- left wall -->
+    <polygon points="54,116 198,52 198,206 54,270" fill="#6f9fca" />
+    <!-- right wall -->
+    <polygon points="342,116 198,52 198,206 342,270" fill="#86b7e3" />
+
+    <!-- interior floor (visible inside the room, like reference) -->
+    <polygon points="54,270 198,206 342,270 198,336" fill="#e8cbb3" />
+
+    <!-- top rim -->
+    <path d="M54 116L198 52L342 116" fill="none" stroke="#d9ecff" stroke-width="4" />
+    <!-- outer wall edges -->
+    <path d="M54 116L54 270M342 116L342 270" fill="none" stroke="#d9ecff" stroke-width="4" />
+    <!-- center spine -->
+    <path d="M198 52L198 206" fill="none" stroke="#7ea2c0" stroke-width="2" />
+    <!-- wall-floor seam -->
+    <path d="M54 270L198 206L342 270" fill="none" stroke="#9a7a5e" stroke-width="3" />
+    <!-- front floor edge -->
+    <path d="M54 270L198 336L342 270" fill="none" stroke="#86654f" stroke-width="3" />
+  </g>
+
+  <!-- PROPS LAYER: polished modular prop set -->
+  <g id="props">
+    <!-- floor contact shadows -->
+    <g id="prop-shadows" opacity="0.18">
+      <polygon points="94,258 124,245 138,252 108,265" fill="#4a5e6b" />
+      <polygon points="170,255 190,264 228,247 208,238" fill="#3f5563" />
+      <polygon points="246,232 270,243 343,210 319,199" fill="#3f5563" />
+      <polygon points="309,258 323,264 347,253 333,247" fill="#3f5563" />
+    </g>
+
+    <!-- medicine cabinet -->
+    <g id="prop-cabinet">
+      <polygon points="94,190 124,177 124,245 94,258" fill="#7a5a43" />
+      <polygon points="124,177 138,184 138,252 124,245" fill="#624733" />
+      <polygon points="97,194 122,183 122,198 97,209" fill="#8a6a50" />
+      <polygon points="97,216 122,205 122,220 97,231" fill="#8a6a50" />
+      <polygon points="97,238 122,227 122,242 97,253" fill="#8a6a50" />
+      <polygon points="94,258 124,245 138,252 108,265" fill="#5a4331" />
+    </g>
+
+    <!-- vanity with sink -->
+    <g id="prop-sink">
+      <polygon points="170,223 208,206 228,215 190,232" fill="#6ea4b8" />
+      <polygon points="170,223 190,232 190,266 170,257" fill="#4f778d" />
+      <polygon points="190,232 228,215 228,249 190,266" fill="#5f8ca4" />
+      <polygon points="178,224 203,213 216,218 191,229" fill="#bde7ef" />
+      <path d="M190 233v31M208 225v31" stroke="#44667a" stroke-width="1" />
+      <rect x="198" y="187" width="3" height="24" fill="#8f9da6" />
+      <rect x="190" y="184" width="16" height="4" fill="#8f9da6" />
+      <rect x="196" y="181" width="6" height="3" fill="#7e8a92" />
+      <path d="M190 232L228 215" stroke="#8d6d53" stroke-width="1" />
+    </g>
+
+    <!-- twin mirrors -->
+    <g id="prop-mirrors">
+      <polygon points="168,130 191,120 191,171 168,181" fill="#c8f8ff" />
+      <polygon points="198,117 221,107 221,158 198,168" fill="#c8f8ff" />
+      <polygon points="170,134 188,126 188,141 170,149" fill="#eeffff" />
+      <polygon points="200,121 218,113 218,128 200,136" fill="#eeffff" />
+      <polygon points="165,129 191,118 194,120 168,131" fill="#7c6048" />
+      <polygon points="196,116 222,105 225,107 199,118" fill="#7c6048" />
+    </g>
+
+    <!-- bathtub -->
+    <g id="prop-tub">
+      <polygon points="246,194 319,161 343,172 270,205" fill="#b8f4f2" />
+      <polygon points="246,194 270,205 270,243 246,232" fill="#7bc7cb" />
+      <polygon points="270,205 343,172 343,210 270,243" fill="#97e1e0" />
+      <polygon points="257,195 307,172 324,180 274,203" fill="#ecfffd" />
+      <polygon points="282,206 325,186 338,192 295,212" fill="#a5e6e3" />
+      <polygon points="309,213 325,206 334,210 318,217" fill="#84cfcf" />
+      <path d="M270 205L343 172" stroke="#8d6d53" stroke-width="1" />
+    </g>
+
+    <!-- toilet -->
+    <g id="prop-toilet">
+      <polygon points="309,232 333,221 347,227 323,238" fill="#afe9ea" />
+      <polygon points="309,232 323,238 323,264 309,258" fill="#72b6c0" />
+      <polygon points="323,238 347,227 347,253 323,264" fill="#8bd0d5" />
+      <polygon points="318,214 330,208 340,212 328,218" fill="#80c4ca" />
+      <polygon points="325,239 335,234 341,237 331,242" fill="#4d8892" />
+    </g>
+
+    <!-- floor rug -->
+    <g id="prop-rug">
+      <polygon points="205,262 244,244 270,256 231,274" fill="#f6e6c1" />
+      <polygon points="205,262 231,274 231,286 205,274" fill="#e2c693" />
+    </g>
+
+    <!-- tiny shelf props -->
+    <g id="prop-bottles">
+      <polygon points="229,306 236,302 241,304 234,308" fill="#d66c66" />
+      <polygon points="237,303 244,300 249,302 242,305" fill="#5a82b8" />
+      <polygon points="245,300 252,297 257,299 250,302" fill="#71935b" />
+    </g>
+
+    <!-- thin seam contacts instead of heavy wall shadows -->
+    <g id="prop-wall-contacts" opacity="0.45">
+      <path d="M124 245L138 252" stroke="#8d6d53" stroke-width="1" />
+      <path d="M170 257L190 266" stroke="#8d6d53" stroke-width="1" />
+      <path d="M309 258L323 264" stroke="#8d6d53" stroke-width="1" />
+    </g>
+  </g>
+
+  <!-- HOTSPOTS LAYER: transparent clickable polygons -->
+  <g id="hotspots">
+    <polygon id="hit-sink" points="170,223 208,206 228,215 190,232 170,223" fill="#ff4d4d" fill-opacity="0.01" />
+    <polygon id="hit-tub" points="246,194 319,161 343,172 270,205 246,194" fill="#4d7dff" fill-opacity="0.01" />
+    <polygon id="hit-toilet" points="309,232 333,221 347,227 323,238 309,232" fill="#5bbd4a" fill-opacity="0.01" />
+    <polygon id="hit-cabinet" points="94,190 124,177 138,184 108,197 94,190" fill="#e3a14d" fill-opacity="0.01" />
+  </g>
+</svg>
