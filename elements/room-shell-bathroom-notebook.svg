@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 416 398" shape-rendering="crispEdges">
+  <title>Notebook diorama (bathroom tile)</title>
+  <desc>Tile wall and tile floor for journal when opened from bathroom mirror hotspots only.</desc>
+
+  <defs>
+    <pattern id="bathWallTile" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#c8d5de"/>
+      <path d="M0 0H20M0 20H20M0 0V20M20 0V20" stroke="#b5c3cc" stroke-width="1"/>
+    </pattern>
+    <pattern id="bathFloorTile" width="24" height="24" patternUnits="userSpaceOnUse">
+      <rect width="24" height="24" fill="#d8c4ad"/>
+      <path d="M0 0H24M0 24H24M0 0V24M24 0V24" stroke="#c6b29b" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect x="0" y="0" width="416" height="398" fill="#dee6eb"/>
+  <rect x="0" y="0" width="416" height="248" fill="url(#bathWallTile)"/>
+  <rect x="0" y="248" width="416" height="150" fill="url(#bathFloorTile)"/>
+  <rect x="0" y="242" width="416" height="6" fill="#9f8e7e"/>
+  <rect x="0" y="0" width="416" height="398" fill="none" stroke="#73818b" stroke-width="4"/>
+
+  <!-- Window shifted up and toward the right -->
+  <rect x="208" y="54" width="112" height="92" fill="#4f5f6d"/>
+  <rect x="214" y="60" width="100" height="80" fill="#dff3f8"/>
+  <rect x="214" y="60" width="100" height="8" fill="#f0fbfe" opacity="0.75"/>
+  <rect x="260" y="60" width="4" height="80" fill="#9ab8c7"/>
+
+  <g id="furniture" pointer-events="none" style="image-rendering:pixelated"></g>
+</svg>

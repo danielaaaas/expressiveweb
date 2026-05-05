@@ -85,10 +85,19 @@
 
     <!-- notebook popup...still need to build the pixel asset -->
      <div class="notebook" id="notebook">
-        <div class="red-margin"></div>
-        <button class="close-button" id="close-button">x</button>
-        <h2 id="notebook-title">room</h2>
-        <p id="notebook-text">...</p>
+        <div class="notebook-diorama" aria-hidden="true">
+            <object
+                class="notebook-shell-embed"
+                type="image/svg+xml"
+                data="elements/room-shell-only.svg"
+                aria-hidden="true"
+            ></object>
+        </div>
+        <div class="notebook-main">
+            <button class="close-button" id="close-button">x</button>
+            <h2 id="notebook-title">room</h2>
+            <p id="notebook-text">...</p>
+        </div>
      </div>
 
      <div class="door-note-overlay" id="door-note-overlay"></div>
@@ -134,6 +143,15 @@
         </div>
         <div id="mirror">
             <div class="mirror-diorama" aria-label="bathroom mirror scene">
+                <div class="mirror-room-stage">
+                    <object
+                        id="mirror-room-svg"
+                        class="mirror-room-embed"
+                        type="image/svg+xml"
+                        data="elements/mirror-bathroom-2d.svg"
+                        aria-label="bathroom diorama room"
+                    ></object>
+                </div>
                 <div class="mirror-side-dock">
                     <div class="mirror-pixel-frame">
                         <div class="mirror-glass-inner">
@@ -153,15 +171,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="mirror-room-stage">
-                    <object
-                        id="mirror-room-svg"
-                        class="mirror-room-embed"
-                        type="image/svg+xml"
-                        data="elements/room-base-template.svg"
-                        aria-label="bathroom diorama room"
-                    ></object>
-                </div>
             </div>
             <button type="button" id="mirror-close">wipe away</button>
         </div>
@@ -170,13 +179,23 @@
      <!-- sorta magical closet -->
      <div id="closet-overlay">
         <div id="closet">
-            <p class="closet-prompt">would you mind leaving something behind?</p>
-            <div id="closet-wall">
-                <div id="closet-text"></div>
+            <div class="closet-diorama" aria-hidden="true">
+                <object
+                    class="closet-shell-embed"
+                    type="image/svg+xml"
+                    data="elements/room-shell-closet.svg"
+                    aria-hidden="true"
+                ></object>
             </div>
-            <input id="closet-input" type="text" placeholder="write a secret on the wall..." maxlength="80" autocomplete="off" spellcheck="false" />
-            <button id="closet-submit">let it go</button>
-            <button id="closet-close">hold it close</button>
+            <div class="closet-main">
+                <p class="closet-prompt">would you mind leaving something behind?</p>
+                <div id="closet-wall">
+                    <div id="closet-text"></div>
+                </div>
+                <input id="closet-input" type="text" placeholder="write a secret on the wall..." maxlength="80" autocomplete="off" spellcheck="false" />
+                <button id="closet-submit">let it go</button>
+                <button id="closet-close">hold it close</button>
+            </div>
         </div>
      </div>
 

@@ -34,7 +34,7 @@
       <polygon points="94,258 124,245 138,252 108,265" fill="#4a5e6b" />
       <polygon points="170,255 190,264 228,247 208,238" fill="#3f5563" />
       <polygon points="246,232 270,243 343,210 319,199" fill="#3f5563" />
-      <polygon points="309,258 323,264 347,253 333,247" fill="#3f5563" />
+      <polygon points="299,264 313,270 337,259 323,253" fill="#3f5563" />
     </g>
 
     <!-- medicine cabinet -->
@@ -60,8 +60,8 @@
       <path d="M190 232L228 215" stroke="#8d6d53" stroke-width="1" />
     </g>
 
-    <!-- twin mirrors -->
-    <g id="prop-mirrors">
+    <!-- mirrors: sit just above vanity back edge (was floating high toward room center) -->
+    <g id="prop-mirrors" transform="translate(-28, 52)">
       <polygon points="168,130 191,120 191,171 168,181" fill="#c8f8ff" />
       <polygon points="198,117 221,107 221,158 198,168" fill="#c8f8ff" />
       <polygon points="170,134 188,126 188,141 170,149" fill="#eeffff" />
@@ -81,8 +81,8 @@
       <path d="M270 205L343 172" stroke="#8d6d53" stroke-width="1" />
     </g>
 
-    <!-- toilet -->
-    <g id="prop-toilet">
+    <!-- toilet: nudged off tub corner for clearer read -->
+    <g id="prop-toilet" transform="translate(-10, 6)">
       <polygon points="309,232 333,221 347,227 323,238" fill="#afe9ea" />
       <polygon points="309,232 323,238 323,264 309,258" fill="#72b6c0" />
       <polygon points="323,238 347,227 347,253 323,264" fill="#8bd0d5" />
@@ -96,26 +96,19 @@
       <polygon points="205,262 231,274 231,286 205,274" fill="#e2c693" />
     </g>
 
-    <!-- tiny shelf props -->
-    <g id="prop-bottles">
-      <polygon points="229,306 236,302 241,304 234,308" fill="#d66c66" />
-      <polygon points="237,303 244,300 249,302 242,305" fill="#5a82b8" />
-      <polygon points="245,300 252,297 257,299 250,302" fill="#71935b" />
-    </g>
-
     <!-- thin seam contacts instead of heavy wall shadows -->
     <g id="prop-wall-contacts" opacity="0.45">
       <path d="M124 245L138 252" stroke="#8d6d53" stroke-width="1" />
       <path d="M170 257L190 266" stroke="#8d6d53" stroke-width="1" />
-      <path d="M309 258L323 264" stroke="#8d6d53" stroke-width="1" />
+      <path d="M299 264L313 270" stroke="#8d6d53" stroke-width="1" />
     </g>
   </g>
 
   <!-- HOTSPOTS LAYER: transparent clickable polygons -->
   <g id="hotspots">
-    <polygon id="hit-sink" points="170,223 208,206 228,215 190,232 170,223" fill="#ff4d4d" fill-opacity="0.01" />
-    <polygon id="hit-tub" points="246,194 319,161 343,172 270,205 246,194" fill="#4d7dff" fill-opacity="0.01" />
-    <polygon id="hit-toilet" points="309,232 333,221 347,227 323,238 309,232" fill="#5bbd4a" fill-opacity="0.01" />
-    <polygon id="hit-cabinet" points="94,190 124,177 138,184 108,197 94,190" fill="#e3a14d" fill-opacity="0.01" />
+    <polygon id="hit-sink" points="170,223 208,206 228,215 190,232 170,223" fill="transparent" stroke="none" pointer-events="all" />
+    <polygon id="hit-tub" points="246,194 319,161 343,172 270,205 246,194" fill="transparent" stroke="none" pointer-events="all" />
+    <polygon id="hit-toilet" points="299,238 323,227 337,233 313,244 299,238" fill="transparent" stroke="none" pointer-events="all" />
+    <polygon id="hit-cabinet" points="94,190 124,177 138,184 108,197 94,190" fill="transparent" stroke="none" pointer-events="all" />
   </g>
 </svg>

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 416 398" shape-rendering="crispEdges">
+  <title>Bathroom mirror room - 2D base</title>
+  <desc>Clean 2D bathroom layout with simple styling and stable hotspots.</desc>
+
+  <defs>
+    <pattern id="wallGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <rect width="20" height="20" fill="#c8d5de"/>
+      <path d="M0 0H20M0 20H20M0 0V20M20 0V20" stroke="#b5c3cc" stroke-width="1"/>
+    </pattern>
+    <pattern id="floorGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <rect width="24" height="24" fill="#d8c4ad"/>
+      <path d="M0 0H24M0 24H24M0 0V24M24 0V24" stroke="#c6b29b" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- room shell -->
+  <rect x="0" y="0" width="416" height="398" fill="#dee6eb"/>
+  <rect x="0" y="0" width="416" height="248" fill="url(#wallGrid)"/>
+  <rect x="0" y="248" width="416" height="150" fill="url(#floorGrid)"/>
+  <rect x="0" y="242" width="416" height="6" fill="#9f8e7e"/>
+  <rect x="0" y="0" width="416" height="398" fill="none" stroke="#73818b" stroke-width="4"/>
+
+  <!-- left shelving cabinet -->
+  <g id="cabinet-art">
+    <rect x="28" y="132" width="72" height="138" fill="#7c5f4a"/>
+    <rect x="34" y="140" width="60" height="34" fill="#917058"/>
+    <rect x="34" y="180" width="60" height="34" fill="#917058"/>
+    <rect x="34" y="220" width="60" height="44" fill="#917058"/>
+    <rect x="28" y="132" width="72" height="6" fill="#a2836c"/>
+  </g>
+
+  <!-- mirror + sink vanity -->
+  <g id="sink-art">
+    <rect x="126" y="112" width="112" height="104" fill="#4f5f6d"/>
+    <rect x="132" y="118" width="100" height="92" fill="#dff3f8"/>
+    <rect x="132" y="118" width="100" height="8" fill="#f0fbfe" opacity="0.7"/>
+
+    <rect x="132" y="212" width="112" height="86" fill="#5b8298"/>
+    <rect x="132" y="212" width="112" height="12" fill="#7ca7bc"/>
+    <rect x="138" y="226" width="50" height="66" fill="#547a90"/>
+    <rect x="190" y="226" width="48" height="66" fill="#547a90"/>
+
+    <rect x="172" y="184" width="28" height="28" fill="#a6b5bc"/>
+    <rect x="168" y="180" width="36" height="6" fill="#8f9ca4"/>
+    <rect x="180" y="168" width="12" height="12" fill="#8f9ca4"/>
+  </g>
+
+  <!-- bathtub -->
+  <g id="tub-art">
+    <rect x="260" y="166" width="134" height="102" fill="#98d7da"/>
+    <rect x="260" y="166" width="134" height="12" fill="#ccf2f4"/>
+    <rect x="266" y="180" width="122" height="52" fill="#8dced1"/>
+    <rect x="266" y="180" width="122" height="6" fill="#dff9f9" opacity="0.7"/>
+  </g>
+
+  <!-- toilet -->
+  <g id="toilet-art">
+    <rect x="340" y="232" width="48" height="82" fill="#84c4ca"/>
+    <rect x="340" y="222" width="48" height="12" fill="#bee8ea"/>
+    <rect x="348" y="258" width="32" height="44" fill="#7ab6bd"/>
+  </g>
+
+  <!-- mat + tiny accents -->
+  <rect x="202" y="268" width="72" height="40" fill="#ead8be"/>
+  <rect x="202" y="268" width="72" height="6" fill="#f4e8d5"/>
+  <rect x="54" y="296" width="8" height="12" fill="#d87a79"/>
+  <rect x="64" y="296" width="8" height="12" fill="#6fa1cf"/>
+  <rect x="74" y="296" width="8" height="12" fill="#88b477"/>
+
+  <!-- subtle shadows -->
+  <rect x="34" y="274" width="66" height="8" fill="#6f5d4e" opacity="0.28"/>
+  <rect x="152" y="302" width="92" height="10" fill="#6f5d4e" opacity="0.25"/>
+  <rect x="286" y="272" width="104" height="10" fill="#6f5d4e" opacity="0.28"/>
+
+  <!-- interactive zones (ids must match JS) -->
+  <g id="hotspots">
+    <rect id="hit-cabinet" x="28" y="132" width="72" height="138" fill="transparent" pointer-events="all"/>
+    <rect id="hit-sink" x="132" y="168" width="112" height="130" fill="transparent" pointer-events="all"/>
+    <rect id="hit-tub" x="260" y="166" width="134" height="102" fill="transparent" pointer-events="all"/>
+    <rect id="hit-toilet" x="340" y="222" width="48" height="92" fill="transparent" pointer-events="all"/>
+  </g>
+</svg>

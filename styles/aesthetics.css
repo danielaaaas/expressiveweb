@@ -131,21 +131,65 @@ svg {
   position: fixed;
   top: 50%;
   left: 50%;
-  background-image: url('/elements/journal.png'), url('https://64.media.tumblr.com/e7b9b8b7663677e23a8335ea814e7908/99f9485623f4a2c0-f6/s1280x1920/1cd802a75f31225996c8d4584fabcd7be02a8502.png');
-  background-size: 100% 100%;
-  image-rendering: pixelated;
+  background: transparent;
   border: none;
   border-radius: none;
   width: 380px;
   height: 320px;
-  padding: 100px 80px 70px 90px;
+  padding: 0;
   box-shadow: none;
   z-index: 100;
-  /* for the animation */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
   transform: translate(-50%, -50%) rotate(-1deg) scaleY(0);
   transform-origin: top center;
   transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 0;
+  pointer-events: none;
+}
+
+.notebook--with-diorama {
+  width: min(880px, 94vw);
+  height: min(420px, 78vh);
+}
+
+.notebook-diorama {
+  display: none;
+  flex: 1 1 50%;
+  min-width: 0;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: 10px;
+}
+
+.notebook--with-diorama .notebook-diorama {
+  display: flex;
+}
+
+.notebook-main {
+  flex: 1 1 100%;
+  min-width: 0;
+  position: relative;
+  background-image: url('/elements/journal.png'), url('https://64.media.tumblr.com/e7b9b8b7663677e23a8335ea814e7908/99f9485623f4a2c0-f6/s1280x1920/1cd802a75f31225996c8d4584fabcd7be02a8502.png');
+  background-size: 100% 100%;
+  image-rendering: pixelated;
+  padding: 100px 80px 70px 90px;
+}
+
+.notebook--with-diorama .notebook-main {
+  flex: 1 1 50%;
+  border: none;
+}
+
+.notebook-shell-embed {
+  width: 100%;
+  height: 100%;
+  max-height: 72vh;
+  border: 0;
+  object-fit: contain;
   pointer-events: none;
 }
 
@@ -160,7 +204,7 @@ svg {
     font-size: 20px;
     margin: 0 0 12px 0;
     color: #3A2E1E;
-    border-bottom: 1px solid #9B3434;
+    border-bottom: 1px solid rgba(58, 46, 30, 0.4);
     display: inline-block;
     padding-bottom: 8px;
     image-rendering: pixelated;
@@ -179,6 +223,10 @@ svg {
     column-gap: 40px;
 }
 
+.notebook:not(.notebook--with-diorama) #notebook-text {
+    column-count: 1;
+}
+
 @font-face {
     font-family: 'Pixel Operator';
     src: url('/fonts/PixelOperator.ttf') format('truetype');
@@ -186,14 +234,14 @@ svg {
 
 .close-button {
     position: absolute;
-    top: 100px;
-    right: 100px;
+    top: 22px;
+    right: 24px;
     cursor: url('https://64.media.tumblr.com/821cf7001bf745e2ddca3d248163c513/894ac02f0d28ad70-56/s1280x1920/b524d63c6de82323756b1603e624961da509144e.png'), auto;
     /* also included cursor in a .js if this doesn't work */
     font-size: 18px;
     color: #8B7355;
     background-color: #F5F0E0;
-    border: 2px solid #9B3434;
+    border: 2px solid #6e5a48;
     padding: 2px 6px;
     image-rendering: pixelated;
     z-index: 101;
@@ -682,21 +730,27 @@ svg {
     overflow: visible;
     image-rendering: pixelated;
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    align-items: flex-end;
-    gap: clamp(14px, 2.5vw, 28px);
+    align-items: stretch;
+    gap: 0;
+    width: 100%;
+    max-width: min(920px, 96vw);
+    margin: 0 auto;
     background: transparent;
     border: none;
     box-shadow: none;
     min-height: 0;
 }
 
-/* Pixel bathroom: fixed stage so art is not covered by UI */
+/* Pixel bathroom: room + UI each ~half width */
 .mirror-room-stage {
     position: relative;
-    flex: 0 0 auto;
-    width: min(640px, 68vw);
+    flex: 1 1 50%;
+    width: 50%;
+    min-width: 0;
     height: min(500px, 70vh);
+    max-width: 50%;
     overflow: visible;
     margin: 0;
     box-shadow: none;
@@ -729,13 +783,17 @@ svg {
 
 .mirror-side-dock {
     position: relative;
-    flex: 0 0 auto;
-    width: min(242px, 27vw);
+    flex: 1 1 50%;
+    width: 50%;
+    max-width: 50%;
+    min-width: 0;
     z-index: 2;
     display: flex;
     flex-direction: column;
     gap: 8px;
+    justify-content: flex-end;
     margin-bottom: 8px;
+    padding-right: clamp(8px, 1.5vw, 16px);
     opacity: 1;
 }
 
@@ -900,17 +958,23 @@ svg {
     .mirror-diorama {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 12px;
+        max-width: min(720px, 92vw);
     }
 
     .mirror-room-stage {
+        flex: 1 1 auto;
         width: min(720px, 92vw);
+        max-width: 100%;
         height: min(420px, 58vh);
     }
 
     .mirror-side-dock {
+        flex: 1 1 auto;
         width: min(420px, 92vw);
+        max-width: 100%;
         margin-bottom: 0;
+        padding-right: 0;
     }
 }
 
@@ -945,12 +1009,45 @@ svg {
 
 #closet {
     position: relative;
-    background: linear-gradient(160deg, rgba(30, 20, 15, 0.95), rgba(15, 10, 8, 0.98));
-    border: 2px solid rgba(120, 90, 60, 0.4);
-    box-shadow: 0 0 60px rgba(80, 50, 20, 0.3), inset 0 0 40px rgba(0, 0, 0, 0.6);
-    padding: 32px 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    width: min(880px, 92vw);
+    max-width: 96vw;
+    padding: 0;
     text-align: center;
-    width: min(400px, 90vw);
+    border: none;
+    box-shadow: 0 0 60px rgba(80, 50, 20, 0.3);
+    overflow: hidden;
+}
+
+.closet-diorama {
+    flex: 0 1 32%;
+    max-width: min(280px, 34vw);
+    min-width: 168px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    padding: 12px 8px;
+}
+
+.closet-shell-embed {
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    border: 0;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.closet-main {
+    flex: 1 1 68%;
+    min-width: 0;
+    padding: 32px 40px;
+    background: linear-gradient(160deg, rgba(30, 20, 15, 0.95), rgba(15, 10, 8, 0.98));
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.6);
 }
 
 .closet-prompt {

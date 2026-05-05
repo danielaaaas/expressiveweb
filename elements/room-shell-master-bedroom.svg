@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 416 398" shape-rendering="crispEdges">
+  <title>Notebook diorama (master bedroom)</title>
+  <desc>Two windows on plain walls and hardwood floor.</desc>
+
+  <defs>
+    <pattern id="woodFloorMb" width="56" height="10" patternUnits="userSpaceOnUse">
+      <rect width="56" height="10" fill="#8f5f3c"/>
+      <rect x="0" y="0" width="18" height="10" fill="#9d6b45"/>
+      <rect x="18" y="0" width="22" height="10" fill="#835335"/>
+      <rect x="40" y="0" width="16" height="10" fill="#966246"/>
+      <path d="M0 10H56" stroke="#5c3a24" stroke-width="1"/>
+      <path d="M14 0V10M32 0V10M48 0V10" stroke="#6d4428" stroke-width="1" opacity="0.55"/>
+    </pattern>
+  </defs>
+
+  <rect x="0" y="0" width="416" height="398" fill="#e8e4dc"/>
+  <rect x="0" y="0" width="416" height="248" fill="#ddd8cf"/>
+  <rect x="0" y="168" width="416" height="80" fill="#d4cec3"/>
+  <rect x="0" y="248" width="416" height="150" fill="url(#woodFloorMb)"/>
+  <rect x="0" y="242" width="416" height="6" fill="#6b4a32"/>
+  <rect x="0" y="0" width="416" height="398" fill="none" stroke="#6a5c52" stroke-width="4"/>
+
+  <!-- left window -->
+  <rect x="48" y="64" width="92" height="86" fill="#4a5560"/>
+  <rect x="54" y="70" width="80" height="74" fill="#cfe8f0"/>
+  <rect x="54" y="70" width="80" height="8" fill="#e8f7fc" opacity="0.85"/>
+  <rect x="90" y="70" width="4" height="74" fill="#8aaab8"/>
+
+  <!-- right window -->
+  <rect x="276" y="64" width="92" height="86" fill="#4a5560"/>
+  <rect x="282" y="70" width="80" height="74" fill="#cfe8f0"/>
+  <rect x="282" y="70" width="80" height="8" fill="#e8f7fc" opacity="0.85"/>
+  <rect x="318" y="70" width="4" height="74" fill="#8aaab8"/>
+
+  <g id="furniture" pointer-events="none" style="image-rendering:pixelated"></g>
+</svg>
