@@ -101,10 +101,23 @@ const visited = {};
 const NOTEBOOK_SHELL_DEFAULT = 'elements/room-shell-only.svg';
 const NOTEBOOK_SHELL_BATHROOM = 'elements/room-shell-bathroom-notebook.svg';
 const NOTEBOOK_SHELL_MASTER = 'elements/room-shell-master-bedroom.svg';
+const NOTEBOOK_SHELL_KITCHEN_FRIDGE = 'elements/room-shell-kitchen-fridge.svg';
+const NOTEBOOK_SHELL_NO_WINDOW = 'elements/room-shell-no-window.svg';
 
+/**
+ * Notebook left-panel diorama (`<object class="notebook-shell-embed">`).
+ * Return null to use NOTEBOOK_SHELL_DEFAULT (`room-shell-only.svg`, with window).
+ * Bathroom mirror hotspots use NOTEBOOK_SHELL_BATHROOM directly, not this map.
+ */
 function notebookShellForRoom(roomId) {
     if (roomId === 'master-bedroom' || roomId === 'bedroom-one') {
         return NOTEBOOK_SHELL_MASTER;
+    }
+    if (roomId === 'kitchen') {
+        return NOTEBOOK_SHELL_KITCHEN_FRIDGE;
+    }
+    if (roomId === 'main-hallway' || roomId === 'front-hallway' || roomId === 'front-closet') {
+        return NOTEBOOK_SHELL_NO_WINDOW;
     }
     return null;
 }
@@ -164,7 +177,7 @@ document.querySelectorAll('.room-item').forEach((itemEl) => {
         const roomEl = document.getElementById(roomId);
         if (roomEl) roomEl.classList.add('visited');
 
-        openNotebookEntry(data.title, data.text, roomId !== 'kitchen', notebookShellForRoom(roomId));
+        openNotebookEntry(data.title, data.text, true, notebookShellForRoom(roomId));
     });
 });
 
@@ -224,7 +237,7 @@ document.querySelectorAll('.room').forEach(room => {
     visited[id] = true;
     room.classList.add('visited');
 
-    openNotebookEntry(data.title, data.text, id !== 'kitchen', notebookShellForRoom(id));
+    openNotebookEntry(data.title, data.text, true, notebookShellForRoom(id));
   });
 });
 

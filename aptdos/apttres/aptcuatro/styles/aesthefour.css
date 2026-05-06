@@ -357,7 +357,7 @@ svg {
     color: #F5F0E0;
 }
 
-/* bathroom mirror — diorama */
+/* bathroom mirror — 2D diorama beside classic card + full-page steam */
 #mirror-overlay {
     display: none;
     position: fixed;
@@ -686,36 +686,20 @@ svg {
     animation-delay: -2.4s;
 }
 
-#mirror {
+.mirror-layout {
     position: relative;
     z-index: 2;
-    background: transparent;
-    border: none;
-    padding: 2px 2px 8px;
-    text-align: center;
-    width: min(920px, 96vw);
-    box-shadow: none;
-}
-
-.mirror-diorama {
-    position: relative;
-    overflow: visible;
-    image-rendering: pixelated;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: stretch;
-    gap: 0;
+    justify-content: center;
+    gap: clamp(12px, 2vw, 24px);
     width: 100%;
     max-width: min(920px, 96vw);
     margin: 0 auto;
-    background: transparent;
-    border: none;
-    box-shadow: none;
-    min-height: 0;
+    pointer-events: auto;
 }
 
-/* Pixel bathroom: room + UI each ~half width */
 .mirror-room-stage {
     position: relative;
     flex: 1 1 50%;
@@ -724,21 +708,6 @@ svg {
     height: min(500px, 70vh);
     max-width: 50%;
     overflow: visible;
-    margin: 0;
-    box-shadow: none;
-}
-
-.mirror-room-art {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center center;
-    z-index: 0;
-    pointer-events: none;
-    image-rendering: pixelated;
-    filter: saturate(1.06) hue-rotate(4deg) brightness(1.01);
 }
 
 .mirror-room-embed {
@@ -748,189 +717,147 @@ svg {
     height: 100%;
     border: 0;
     object-fit: contain;
-    z-index: 1;
+    object-position: center center;
+    pointer-events: auto;
     image-rendering: pixelated;
     background: transparent;
 }
 
-.mirror-side-dock {
-    position: relative;
+.mirror-side {
     flex: 1 1 50%;
     width: 50%;
     max-width: 50%;
     min-width: 0;
-    z-index: 2;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    justify-content: flex-end;
-    margin-bottom: 8px;
-    padding-right: clamp(8px, 1.5vw, 16px);
-    opacity: 1;
+    align-items: stretch;
+    justify-content: center;
 }
 
-.mirror-pixel-frame {
-    padding: 3px;
-    background: rgba(95, 110, 122, 0.82);
-    border: 3px solid #3d4850;
-    box-shadow: 3px 3px 0 rgba(10, 12, 16, 0.45);
+#mirror {
     position: relative;
+    z-index: 2;
+    padding: 2px 2px 8px;
+    text-align: center;
+    width: min(920px, 96vw);
+    max-width: 96vw;
+    pointer-events: auto;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+}
+
+.mirror-card {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+    border: 1px solid rgba(170, 198, 218, 0.5);
+    background: rgba(30, 38, 50, 0.5);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 32px 28px 24px;
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
 }
 
 .mirror-glass-inner {
     position: relative;
-    z-index: 2;
-    background: rgba(28, 36, 44, 0.48);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 2px solid rgba(255, 255, 255, 0.24);
-    padding: 8px 7px 10px;
-    min-height: 86px;
-    box-shadow:
-        inset 1px 1px 0 rgba(255, 255, 255, 0.12),
-        inset -1px -1px 0 rgba(0, 0, 0, 0.25);
+    z-index: 0;
+    background: transparent;
+    border: none;
+    padding: 0 0 6px;
+    min-height: 0;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 }
 
 .mirror-prompt {
     font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
-    color: rgba(255, 255, 255, 0.92);
-    font-size: 13px;
-    margin: 0 0 8px;
-    text-shadow:
-        0 1px 0 #000,
-        0 0 12px rgba(0, 0, 0, 0.65);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    margin: 0 0 20px;
+    text-shadow: none;
+    letter-spacing: 0.03em;
 }
 
 #mirror-message {
     font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
-    color: rgba(248, 255, 252, 0.98);
-    font-size: 15px;
-    min-height: 22px;
-    margin: 0;
+    color: rgba(248, 255, 252, 0.95);
+    font-size: 14px;
+    min-height: 20px;
+    margin: 0 0 10px;
     transition: opacity 2s ease;
-    text-shadow:
-        0 1px 0 #000,
-        0 0 14px rgba(0, 40, 50, 0.85);
-    line-height: 1.25;
+    text-shadow: none;
+    line-height: 1.35;
 }
 
 #mirror-message.fade-out {
     opacity: 0;
 }
 
-.mirror-counter-pixel {
-    margin: 0;
-    max-width: none;
-    background-color: #7a624e;
-    border: 4px solid #3d3026;
-    border-top-color: #9c8268;
-    padding: 6px 6px 5px;
-    box-shadow: 4px 4px 0 #1a1612;
-}
-
-.counter-items-pixel {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 8px;
-    margin-bottom: 5px;
-    min-height: 16px;
-}
-
-.counter-item {
-    display: block;
-    image-rendering: pixelated;
-    flex-shrink: 0;
-}
-
-.counter-item-soap {
-    width: 18px;
-    height: 8px;
-    background: #6ec4b0;
-    box-shadow: 2px 2px 0 #3a7868;
-}
-
-.counter-item-cup {
-    width: 12px;
-    height: 13px;
-    background: #5a8eb8;
-    box-shadow: 2px 2px 0 #345070;
-}
-
-.counter-item-brush {
-    width: 5px;
-    height: 16px;
-    background: #b89850;
-    box-shadow: 2px 0 0 #d05858;
-}
-
-.mirror-submission-bar {
-    display: flex;
-    gap: 6px;
-    align-items: stretch;
-    background: #2a3238;
-    padding: 6px;
-    border: 3px solid #14181c;
-    box-shadow: inset 2px 2px 0 #3a4450;
+.mirror-field {
+    margin: 8px 0 26px;
+    padding: 0 2px 6px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.82);
 }
 
 #mirror-input {
-    flex: 1;
-    min-width: 0;
-    background: #151a1f;
-    border: 2px solid #4a5c6a;
-    color: #e2eef8;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    background: transparent;
+    border: none;
+    color: rgba(235, 245, 255, 0.96);
     font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
-    font-size: 12px;
-    text-align: left;
+    font-size: 13px;
+    text-align: center;
     outline: none;
     margin: 0;
-    padding: 5px 7px;
-    box-shadow: inset 2px 2px 0 rgba(0, 0, 0, 0.35);
+    padding: 6px 4px;
+    box-shadow: none;
+    caret-color: #5ad4ff;
 }
 
 #mirror-input::placeholder {
-    color: rgba(200, 220, 235, 0.35);
+    color: rgba(160, 180, 198, 0.6);
 }
 
-#mirror-submit {
-    flex-shrink: 0;
-    background: #4a7384;
-    border: 3px solid #2d4450;
-    color: #e8f8ff;
-    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
-    font-size: 11px;
-    padding: 5px 8px;
-    margin: 0;
-    cursor: url('https://64.media.tumblr.com/821cf7001bf745e2ddca3d248163c513/894ac02f0d28ad70-56/s1280x1920/b524d63c6de82323756b1603e624961da509144e.png'), auto;
-    box-shadow: 3px 3px 0 #151c22;
-    transition: background-color 0.12s, color 0.12s, border-color 0.12s;
+.mirror-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
-#mirror-submit:hover {
-    background: #5a8a9e;
-    color: #ffffff;
-    border-color: #3d5a68;
-}
-
+#mirror-submit,
 #mirror-close {
-    margin-top: 14px;
-    background: #2a343c;
-    border: 3px solid #4a5660;
-    color: rgba(220, 235, 245, 0.75);
+    flex: 1 1 0;
+    min-width: 120px;
+    max-width: 180px;
+    margin: 0;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.78);
+    color: rgba(237, 245, 252, 0.92);
     font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
-    font-size: 13px;
-    padding: 6px 18px;
+    font-size: 12px;
+    padding: 9px 16px;
     cursor: url('https://64.media.tumblr.com/821cf7001bf745e2ddca3d248163c513/894ac02f0d28ad70-56/s1280x1920/b524d63c6de82323756b1603e624961da509144e.png'), auto;
-    box-shadow: 2px 2px 0 #151c22;
+    box-shadow: none;
     transition: color 0.15s, border-color 0.15s, background-color 0.15s;
 }
 
+#mirror-submit:hover,
+#mirror-close:hover {
+    color: rgba(255, 255, 255, 0.98);
+    border-color: rgba(255, 255, 255, 0.95);
+    background: rgba(255, 255, 255, 0.06);
+}
+
 @media (max-width: 900px) {
-    .mirror-diorama {
+    .mirror-layout {
         flex-direction: column;
         align-items: center;
-        gap: 12px;
         max-width: min(720px, 92vw);
     }
 
@@ -941,19 +868,16 @@ svg {
         height: min(420px, 58vh);
     }
 
-    .mirror-side-dock {
+    .mirror-side {
         flex: 1 1 auto;
         width: min(420px, 92vw);
         max-width: 100%;
-        margin-bottom: 0;
-        padding-right: 0;
     }
-}
 
-#mirror-close:hover {
-    color: rgba(255, 255, 255, 0.95);
-    border-color: rgba(200, 220, 235, 0.55);
-    background: #354450;
+    .mirror-card {
+        max-width: none;
+        padding: 26px 22px 20px;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -40,3 +40,22 @@ Use this process to create many rooms quickly without redrawing from zero.
 3. Color pass
 4. Detail pass
 5. Hotspot wiring
+
+## 6) Notebook shell SVGs (el primer hogar)
+
+Shells live under `elements/room-shell*.svg` (viewBox `0 0 416 398` for the notebook `<object>`). `java/main.js` maps rooms in `notebookShellForRoom()`; anything not listed uses `room-shell-only.svg`.
+
+| Room id(s) | Shell file |
+|-------------|------------|
+| `master-bedroom` (and legacy `bedroom-one`) | `room-shell-master-bedroom.svg` |
+| `kitchen` | `room-shell-kitchen-fridge.svg` |
+| `main-hallway`, `front-hallway`, `front-closet` | `room-shell-no-window.svg` |
+| (default) | `room-shell-only.svg` |
+
+**XML hygiene:** `<title>` / `<desc>` / text nodes must be valid XML (no raw control characters; use `&amp;` for `&`). CI runs `xmllint --noout` on every `elements/*.svg` when those files change.
+
+Validate locally after editing:
+
+```bash
+find elements -name '*.svg' -print0 | xargs -0 -I{} xmllint --noout {}
+```

@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 416 398" shape-rendering="crispEdges">
+  <title>Notebook diorama (refrigerator interior)</title>
+  <desc>Looking into a lit fridge: shelves, cold back wall, crisper below, a few quiet leftovers.</desc>
+
+  <defs>
+    <linearGradient id="fridgeBackGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8fbff"/>
+      <stop offset="55%" stop-color="#e4eef8"/>
+      <stop offset="100%" stop-color="#d0e0f0"/>
+    </linearGradient>
+    <linearGradient id="fridgeSideL" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9eb4cc"/>
+      <stop offset="100%" stop-color="#c8d8ea"/>
+    </linearGradient>
+    <linearGradient id="fridgeSideR" x1="100%" y1="0%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#9eb4cc"/>
+      <stop offset="100%" stop-color="#c8d8ea"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer shell (fridge body around the opening) -->
+  <rect x="0" y="0" width="416" height="398" fill="#3d4a5c"/>
+  <rect x="8" y="8" width="400" height="382" fill="#2c3544"/>
+
+  <!-- Interior cavity -->
+  <rect x="16" y="16" width="384" height="366" fill="url(#fridgeBackGlow)"/>
+
+  <!-- Side walls (depth read) -->
+  <rect x="16" y="16" width="36" height="366" fill="url(#fridgeSideL)"/>
+  <rect x="364" y="16" width="36" height="366" fill="url(#fridgeSideR)"/>
+
+  <!-- Back wall panel (slightly inset) -->
+  <rect x="56" y="48" width="304" height="318" fill="#eaf2fa"/>
+  <rect x="56" y="48" width="304" height="318" fill="none" stroke="#b8c8dc" stroke-width="2"/>
+
+  <!-- Ceiling strip + LED bar -->
+  <rect x="16" y="16" width="384" height="28" fill="#d8e6f4"/>
+  <rect x="72" y="22" width="272" height="8" fill="#ffffee"/>
+  <rect x="72" y="22" width="272" height="3" fill="#ffffff" opacity="0.9"/>
+
+  <!-- Door seal hints (rubber) -->
+  <rect x="16" y="16" width="8" height="366" fill="#1a222c"/>
+  <rect x="392" y="16" width="8" height="366" fill="#1a222c"/>
+  <rect x="16" y="374" width="384" height="8" fill="#1a222c"/>
+
+  <!-- Wire-style shelves -->
+  <rect x="52" y="118" width="312" height="4" fill="#a8b8c8"/>
+  <rect x="52" y="116" width="312" height="2" fill="#d8e4f4"/>
+  <rect x="52" y="198" width="312" height="4" fill="#a8b8c8"/>
+  <rect x="52" y="196" width="312" height="2" fill="#d8e4f4"/>
+  <rect x="52" y="278" width="312" height="4" fill="#a8b8c8"/>
+  <rect x="52" y="276" width="312" height="2" fill="#d8e4f4"/>
+  <!-- shelf bracket dots -->
+  <rect x="58" y="112" width="4" height="10" fill="#8898a8"/>
+  <rect x="354" y="112" width="4" height="10" fill="#8898a8"/>
+  <rect x="58" y="192" width="4" height="10" fill="#8898a8"/>
+  <rect x="354" y="192" width="4" height="10" fill="#8898a8"/>
+  <rect x="58" y="272" width="4" height="10" fill="#8898a8"/>
+  <rect x="354" y="272" width="4" height="10" fill="#8898a8"/>
+
+  <!-- Top shelf: milk carton -->
+  <rect x="88" y="72" width="34" height="42" fill="#f4f4f4"/>
+  <rect x="88" y="72" width="34" height="12" fill="#6ec8d0"/>
+  <rect x="102" y="78" width="6" height="30" fill="#c8d0d8"/>
+  <rect x="90" y="86" width="14" height="8" fill="#88a0b0"/>
+
+  <!-- Top shelf: small butter box -->
+  <rect x="200" y="82" width="40" height="22" fill="#ffe8a0"/>
+  <rect x="204" y="86" width="32" height="6" fill="#e8c860"/>
+
+  <!-- Mid shelf: glass jar -->
+  <rect x="120" y="158" width="28" height="36" fill="#c8e0f0" opacity="0.85"/>
+  <rect x="124" y="150" width="20" height="8" fill="#8898a8"/>
+  <rect x="128" y="168" width="12" height="18" fill="#6a90b0" opacity="0.5"/>
+
+  <!-- Mid shelf: covered dish -->
+  <rect x="220" y="168" width="52" height="20" fill="#dce4ec"/>
+  <rect x="224" y="164" width="44" height="6" fill="#a8b4c4"/>
+
+  <!-- Lower shelf: orange (blocky) -->
+  <rect x="94" y="244" width="28" height="24" fill="#e88820"/>
+  <rect x="98" y="240" width="20" height="28" fill="#f0a030"/>
+  <rect x="102" y="244" width="12" height="18" fill="#f8c050"/>
+  <rect x="106" y="248" width="4" height="6" fill="#fff0c0" opacity="0.7"/>
+  <rect x="104" y="266" width="8" height="4" fill="#4a8a4a"/>
+
+  <!-- Lower shelf: bottle -->
+  <rect x="240" y="220" width="22" height="56" fill="#4a7a9a"/>
+  <rect x="244" y="224" width="14" height="20" fill="#78b0d8" opacity="0.6"/>
+  <rect x="246" y="216" width="10" height="8" fill="#6a6058"/>
+
+  <!-- Lower shelf: egg carton corner -->
+  <rect x="300" y="248" width="48" height="16" fill="#e8e4d8"/>
+  <rect x="306" y="252" width="8" height="8" fill="#f8f4e8"/>
+  <rect x="318" y="252" width="8" height="8" fill="#f8f4e8"/>
+  <rect x="330" y="252" width="8" height="8" fill="#f8f4e8"/>
+
+  <!-- Crisper / bottom drawer front -->
+  <rect x="52" y="312" width="312" height="56" fill="#b8c8d8"/>
+  <rect x="56" y="316" width="304" height="4" fill="#8898a8"/>
+  <rect x="56" y="356" width="304" height="8" fill="#7890a8"/>
+  <rect x="180" y="334" width="56" height="8" fill="#6a7a88"/>
+  <rect x="196" y="332" width="24" height="4" fill="#98a8b8"/>
+
+  <!-- Condensation / cold highlights (subtle) -->
+  <rect x="300" y="60" width="2" height="40" fill="#ffffff" opacity="0.35"/>
+  <rect x="72" y="140" width="2" height="48" fill="#ffffff" opacity="0.25"/>
+
+  <rect x="0" y="0" width="416" height="398" fill="none" stroke="#6a5c52" stroke-width="4"/>
+
+  <g id="furniture" pointer-events="none" style="image-rendering:pixelated"/>
+</svg>

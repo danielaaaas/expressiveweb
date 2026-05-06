@@ -1,0 +1,36 @@
+# Well-formed XML for SVGs — catches illegal PCDATA/control chars that break embedded <object> dioramas.
+name: Validate SVG (XML)
+
+on:
+  push:
+    paths:
+      - 'elements/**/*.svg'
+      - '.github/workflows/validate-svg.yml'
+  pull_request:
+    paths:
+      - 'elements/**/*.svg'
+      - '.github/workflows/validate-svg.yml'
+
+jobs:
+  xmllint-elements:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install xmllint
+        run: sudo apt-get update && sudo apt-get install -y libxml2-utils
+
+      - name: Validate elements/**/*.svg
+        run: |
+          set -euo pipefail
+          count=0
+          while IFS= read -r -d '' f; do
+            echo "xmllint: $f"
+            xmllint --noout "$f"
+            count=$((count + 1))
+          done < <(find elements -name '*.svg' -print0)
+          if [ "$count" -eq 0 ]; then
+            echo "No SVG files under elements/"
+            exit 1
+          fi
+          echo "All $count file(s) OK."

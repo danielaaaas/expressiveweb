@@ -33,13 +33,23 @@
   /** When `nightActive` (flashlight window): never let the veil go too light—navigation needs the beam. */
   const NIGHT_ACTIVE_VEIL_MUL = 1.1;
   const NIGHT_ACTIVE_VEIL_MIN = 0.88;
+  /** Radius of the radial cutout in the night overlay mask (CSS px); matches --flashlight-r. */
+  const FLASHLIGHT_RADIUS_PX = 140;
 
   let maskRaf = 0;
-  let overlayMaskCanvas = null;
-  let overlayMaskCtx = null;
+  /** Full-viewport canvas inside .night-overlay: draws dim + flashlight + lit-room holes (no CSS mask). */
+  let veilCanvas = null;
+  let veilCtx = null;
+  /** Last pointer position for repaints (resize, lamp toggles, clock tint). */
+  let lastVeilX = window.innerWidth * 0.5;
+  let lastVeilY = window.innerHeight * 0.45;
+
+  /** Flashlight whenever the dim veil is visible (dusk through night), not only clock "night" hours. */
+  function shouldPaintFlashlightMask() {
+    return nightOverride !== 'day' && document.body.classList.contains('night-ambient');
+  }
 
   let nightOverride = readNightOverride();
-  ensureOverlayMaskCanvas();
   const overlay = createNightOverlay();
   const clock = createClockWidget();
   const lampLayer = createLampLayer();
@@ -70,25 +80,34 @@
   evaluateNightState();
 
   function onPointerFlashlight(event) {
-    syncFlashlightCoords(event.clientX, event.clientY);
-    requestNightMaskUpdate();
+    const cx = event.clientX;
+    const cy = event.clientY;
+    lastVeilX = cx;
+    lastVeilY = cy;
+    syncFlashlightCoords(cx, cy);
+    if (!shouldPaintFlashlightMask()) return;
+    paintNightVeilCanvas(cx, cy);
   }
-  document.addEventListener('mousemove', onPointerFlashlight, { passive: true });
+  window.addEventListener('mousemove', onPointerFlashlight, { passive: true });
   window.addEventListener('pointermove', onPointerFlashlight, { passive: true, capture: true });
+  document.addEventListener('pointermove', onPointerFlashlight, { passive: true, capture: true });
 
   let resizeTimer = null;
   window.addEventListener('resize', () => {
     window.clearTimeout(resizeTimer);
     resizeTimer = window.setTimeout(() => {
-      syncOverlayMaskCanvasSize();
-      requestNightMaskUpdate();
+      if (shouldPaintFlashlightMask()) requestNightMaskUpdate();
     }, 120);
   });
 
+  document.addEventListener('touchstart', (event) => {
+    if (!event.touches.length) return;
+    onPointerFlashlight(event.touches[0]);
+  }, { passive: true });
+
   document.addEventListener('touchmove', (event) => {
     if (!event.touches.length) return;
-    const firstTouch = event.touches[0];
-    onPointerFlashlight(firstTouch);
+    onPointerFlashlight(event.touches[0]);
   }, { passive: true });
 
   function syncFlashlightCoords(clientX, clientY) {
@@ -103,54 +122,114 @@
   function createNightOverlay() {
     const el = document.createElement('div');
     el.className = 'night-overlay';
+    const c = document.createElement('canvas');
+    c.className = 'night-veil-canvas';
+    c.setAttribute('aria-hidden', 'true');
+    el.appendChild(c);
+    veilCanvas = c;
+    veilCtx = c.getContext('2d', { alpha: true });
     const cx = window.innerWidth * 0.5;
     const cy = window.innerHeight * 0.45;
+    lastVeilX = cx;
+    lastVeilY = cy;
+    el.style.setProperty('--flashlight-r', `${FLASHLIGHT_RADIUS_PX}px`);
     el.style.setProperty('--flashlight-x', `${cx}px`);
     el.style.setProperty('--flashlight-y', `${cy}px`);
+    document.documentElement.style.setProperty('--flashlight-r', `${FLASHLIGHT_RADIUS_PX}px`);
     document.documentElement.style.setProperty('--flashlight-x', `${cx}px`);
     document.documentElement.style.setProperty('--flashlight-y', `${cy}px`);
     document.body.appendChild(el);
     return el;
   }
 
-  /** Off-screen canvas → PNG for lit-room holes only (intersected with CSS radial flashlight mask). */
-  function ensureOverlayMaskCanvas() {
-    if (overlayMaskCanvas) return;
-    overlayMaskCanvas = document.createElement('canvas');
-    overlayMaskCanvas.setAttribute('aria-hidden', 'true');
-    overlayMaskCtx = overlayMaskCanvas.getContext('2d', { alpha: true });
-  }
-
-  function syncOverlayMaskCanvasSize() {
-    if (!overlayMaskCanvas) return;
+  function syncVeilCanvasSize() {
+    if (!veilCanvas || !veilCtx) return;
+    const dpr = window.devicePixelRatio || 1;
     const w = window.innerWidth;
     const h = window.innerHeight;
-    if (overlayMaskCanvas.width !== w || overlayMaskCanvas.height !== h) {
-      overlayMaskCanvas.width = w;
-      overlayMaskCanvas.height = h;
+    const bw = Math.max(1, Math.floor(w * dpr));
+    const bh = Math.max(1, Math.floor(h * dpr));
+    if (veilCanvas.width !== bw || veilCanvas.height !== bh) {
+      veilCanvas.width = bw;
+      veilCanvas.height = bh;
+    }
+    veilCanvas.style.width = `${w}px`;
+    veilCanvas.style.height = `${h}px`;
+    veilCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  function paintNightVeilCanvas(clientX, clientY) {
+    if (!veilCtx || !veilCanvas) return;
+
+    if (!shouldPaintFlashlightMask()) {
+      overlay.classList.remove('night-overlay--canvas-veil', 'night-overlay--flashlit');
+      veilCtx.setTransform(1, 0, 0, 1, 0, 0);
+      veilCtx.clearRect(0, 0, veilCanvas.width, veilCanvas.height);
+      return;
+    }
+
+    overlay.classList.add('night-overlay--canvas-veil');
+    overlay.classList.remove('night-overlay--flashlit');
+    syncVeilCanvasSize();
+
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+    const fx = Number.isFinite(clientX) ? clientX : w * 0.5;
+    const fy = Number.isFinite(clientY) ? clientY : h * 0.45;
+    const ctx = veilCtx;
+    const cs = getComputedStyle(overlay);
+    const aRaw = cs.getPropertyValue('--night-dim-alpha').trim();
+    const aParsed = parseFloat(aRaw);
+    const a = Number.isFinite(aParsed) ? aParsed : 0.88;
+    const r1 = parseInt(cs.getPropertyValue('--o-r1'), 10) || 34;
+    const g1 = parseInt(cs.getPropertyValue('--o-g1'), 10) || 22;
+    const b1 = parseInt(cs.getPropertyValue('--o-b1'), 10) || 72;
+    const r2 = parseInt(cs.getPropertyValue('--o-r2'), 10) || 4;
+    const g2 = parseInt(cs.getPropertyValue('--o-g2'), 10) || 2;
+    const b2 = parseInt(cs.getPropertyValue('--o-b2'), 10) || 14;
+    const topMul = document.body.classList.contains('night-active') ? 0.9 : 0.78;
+
+    ctx.globalCompositeOperation = 'source-over';
+    ctx.globalAlpha = 1;
+    ctx.clearRect(0, 0, w, h);
+
+    const lg = ctx.createLinearGradient(0, h * 0.12, w * 0.88, h * 0.92);
+    lg.addColorStop(0, `rgba(${r1},${g1},${b1},${a * topMul})`);
+    lg.addColorStop(1, `rgba(${r2},${g2},${b2},${a})`);
+    ctx.fillStyle = lg;
+    ctx.fillRect(0, 0, w, h);
+
+    const fr = FLASHLIGHT_RADIUS_PX;
+    ctx.globalCompositeOperation = 'destination-out';
+    const beam = ctx.createRadialGradient(fx, fy, 0, fx, fy, fr);
+    beam.addColorStop(0, 'rgba(0,0,0,1)');
+    beam.addColorStop(0.38, 'rgba(0,0,0,1)');
+    beam.addColorStop(0.72, 'rgba(0,0,0,0.08)');
+    beam.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.fillStyle = beam;
+    ctx.beginPath();
+    ctx.arc(fx, fy, fr, 0, Math.PI * 2);
+    ctx.fill();
+
+    if (nightActive && hasAnyLitRoom()) {
+      ctx.fillStyle = 'rgba(0,0,0,1)';
+      rooms.forEach((roomEl) => {
+        const id = roomEl.id;
+        if (!id || !litSet.has(id)) return;
+
+        if (id === 'living-room' && roomEl instanceof SVGPathElement) {
+          const holes = clientRectsForLitPathLivingRoom(roomEl);
+          if (holes.length > 0) {
+            holes.forEach((cr) => appendCanvasMaskRoomHole(ctx, cr, { expandPx: 0.75 }));
+            return;
+          }
+        }
+
+        const r = roomEl.getBoundingClientRect();
+        appendCanvasMaskRoomHole(ctx, r);
+      });
     }
   }
-
-  function requestNightMaskUpdate() {
-    if (!nightActive) return;
-    if (maskRaf) window.cancelAnimationFrame(maskRaf);
-    maskRaf = window.requestAnimationFrame(() => {
-      maskRaf = 0;
-      updateNightOverlayMask();
-    });
-  }
-
-  function parsePxVar(value, fallback) {
-    if (!value || typeof value !== 'string') return fallback;
-    const n = parseFloat(value);
-    return Number.isFinite(n) ? n : fallback;
-  }
-
-  /**
-   * Flashlight: radius of the radial cutout in the night overlay mask (CSS pixels).
-   * Lower = smaller pool of light around the cursor. Tweak here only.
-   */
-  const FLASHLIGHT_RADIUS_PX = 140;
 
   function rectsOverlap2D(ax, ay, aw, ah, bx, by, bw, bh) {
     return bx < ax + aw && bx + bw > ax && by < ay + ah && by + bh > ay;
@@ -253,110 +332,62 @@
     );
   }
 
-  function updateNightOverlayMask() {
-    if (!nightActive) return;
-    ensureOverlayMaskCanvas();
-    syncOverlayMaskCanvasSize();
-    const ctx = overlayMaskCtx;
-    if (!ctx || !overlayMaskCanvas) return;
+  function hasAnyLitRoom() {
+    for (let i = 0; i < rooms.length; i++) {
+      const id = rooms[i].id;
+      if (id && litSet.has(id)) return true;
+    }
+    return false;
+  }
 
+  function parsePxVar(value, fallback) {
+    if (!value || typeof value !== 'string') return fallback;
+    const n = parseFloat(value);
+    return Number.isFinite(n) ? n : fallback;
+  }
+
+  function requestNightMaskUpdate() {
+    if (!shouldPaintFlashlightMask()) return;
+    if (maskRaf) return;
+    maskRaf = window.requestAnimationFrame(() => {
+      maskRaf = 0;
+      updateNightOverlayMask();
+    });
+  }
+
+  function stripInlineMaskProps() {
+    overlay.style.removeProperty('mask');
+    overlay.style.removeProperty('-webkit-mask');
+    overlay.style.removeProperty('mask-image');
+    overlay.style.removeProperty('-webkit-mask-image');
+    overlay.style.removeProperty('mask-repeat');
+    overlay.style.removeProperty('-webkit-mask-repeat');
+    overlay.style.removeProperty('mask-size');
+    overlay.style.removeProperty('-webkit-mask-size');
+    overlay.style.removeProperty('mask-position');
+    overlay.style.removeProperty('-webkit-mask-position');
+    overlay.style.removeProperty('mask-mode');
+    overlay.style.removeProperty('-webkit-mask-mode');
+    overlay.style.removeProperty('mask-composite');
+    overlay.style.removeProperty('-webkit-mask-composite');
+  }
+
+  function updateNightOverlayMask() {
+    if (!shouldPaintFlashlightMask()) return;
     const w = window.innerWidth;
     const h = window.innerHeight;
     const fx = parsePxVar(overlay.style.getPropertyValue('--flashlight-x'), w * 0.5);
-    const fy = parsePxVar(overlay.style.getPropertyValue('--flashlight-y'), h * 0.5);
-    const fr = FLASHLIGHT_RADIUS_PX;
-
-    ctx.globalCompositeOperation = 'source-over';
-    ctx.globalAlpha = 1;
-    ctx.fillStyle = '#ffffff';
-    ctx.fillRect(0, 0, w, h);
-
-    ctx.save();
-    ctx.globalCompositeOperation = 'destination-out';
-    ctx.fillStyle = 'rgba(0,0,0,1)';
-    rooms.forEach((roomEl) => {
-      const id = roomEl.id;
-      if (!id || !litSet.has(id)) return;
-
-      if (id === 'living-room' && roomEl instanceof SVGPathElement) {
-        const holes = clientRectsForLitPathLivingRoom(roomEl);
-        if (holes.length > 0) {
-          holes.forEach((cr) => appendCanvasMaskRoomHole(ctx, cr, { expandPx: 0.75 }));
-          return;
-        }
-      }
-
-      const r = roomEl.getBoundingClientRect();
-      appendCanvasMaskRoomHole(ctx, r);
-    });
-    ctx.restore();
-
-    const roomPngUrl = overlayMaskCanvas.toDataURL('image/png');
-    bindOverlayFlashlightAndRoomMask(roomPngUrl, fx, fy, fr);
-  }
-
-  /**
-   * Flashlight = CSS radial-gradient (alpha mask; follows pointer reliably).
-   * Lit rooms = second mask layer (canvas PNG); intersect = holes from either layer.
-   */
-  function bindOverlayFlashlightAndRoomMask(roomPngDataUrl, fx, fy, fr) {
-    if (!nightActive) return;
-    /* Opaque *white* = keep the dim veil; transparent = hole. Black stops confuse luminance + alpha masking. */
-    const grad = `radial-gradient(circle ${fr}px at ${fx}px ${fy}px, transparent 0%, transparent 38%, rgba(255,255,255,0.92) 72%, white 100%)`;
-
-    let hasLitRoom = false;
-    for (let ri = 0; ri < rooms.length; ri++) {
-      const id = rooms[ri].id;
-      if (id && litSet.has(id)) {
-        hasLitRoom = true;
-        break;
-      }
-    }
-
-    overlay.style.mask = 'none';
-    overlay.style.webkitMask = 'none';
-
-    if (!hasLitRoom) {
-      overlay.style.maskImage = grad;
-      overlay.style.webkitMaskImage = grad;
-      overlay.style.maskRepeat = 'no-repeat';
-      overlay.style.webkitMaskRepeat = 'no-repeat';
-      overlay.style.maskSize = '100% 100%';
-      overlay.style.webkitMaskSize = '100% 100%';
-      overlay.style.maskPosition = '0 0';
-      overlay.style.webkitMaskPosition = '0 0';
-      overlay.style.maskMode = 'alpha';
-      overlay.style.webkitMaskMode = 'alpha';
-      overlay.style.maskComposite = '';
-      overlay.style.webkitMaskComposite = '';
-      return;
-    }
-
-    const roomUrl = `url("${roomPngDataUrl.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}")`;
-    const layers = `${grad}, ${roomUrl}`;
-    overlay.style.maskImage = layers;
-    overlay.style.webkitMaskImage = layers;
-    overlay.style.maskRepeat = 'no-repeat, no-repeat';
-    overlay.style.webkitMaskRepeat = 'no-repeat, no-repeat';
-    overlay.style.maskSize = '100% 100%, 100% 100%';
-    overlay.style.webkitMaskSize = '100% 100%, 100% 100%';
-    overlay.style.maskPosition = '0 0, 0 0';
-    overlay.style.webkitMaskPosition = '0 0, 0 0';
-    overlay.style.maskMode = 'alpha, alpha';
-    overlay.style.webkitMaskMode = 'alpha, alpha';
-    overlay.style.maskComposite = 'intersect';
-    overlay.style.webkitMaskComposite = '';
+    const fy = parsePxVar(overlay.style.getPropertyValue('--flashlight-y'), h * 0.45);
+    paintNightVeilCanvas(fx, fy);
   }
 
   function clearOverlaySvgMask() {
-    overlay.style.mask = 'none';
-    overlay.style.webkitMask = 'none';
-    overlay.style.maskImage = 'none';
-    overlay.style.webkitMaskImage = 'none';
-    overlay.style.maskMode = '';
-    overlay.style.webkitMaskMode = '';
-    overlay.style.maskComposite = '';
-    overlay.style.webkitMaskComposite = '';
+    overlay.classList.remove('night-overlay--flashlit', 'night-overlay--canvas-veil');
+    stripInlineMaskProps();
+    if (veilCtx && veilCanvas) {
+      veilCtx.setTransform(1, 0, 0, 1, 0, 0);
+      veilCtx.clearRect(0, 0, veilCanvas.width, veilCanvas.height);
+    }
   }
 
   function createClockWidget() {
@@ -626,7 +657,7 @@
     }
     persistLitRooms();
     setRoomNightLit(roomId, isLit && nightActive);
-    requestNightMaskUpdate();
+    if (shouldPaintFlashlightMask()) updateNightOverlayMask();
   }
 
   /** When night mode is on, lit lamps illuminate their whole room shape. */
@@ -642,7 +673,6 @@
       if (!id) return;
       roomEl.classList.toggle('room-night-lit', Boolean(nightActive && litSet.has(id)));
     });
-    requestNightMaskUpdate();
   }
 
   function clamp01(t) {
@@ -861,6 +891,11 @@
     }
 
     applyAmbientVisuals(now);
+    if (!shouldPaintFlashlightMask()) {
+      clearOverlaySvgMask();
+    } else {
+      updateNightOverlayMask();
+    }
   }
 
   function evaluateNightState() {
@@ -882,16 +917,13 @@
       document.body.classList.toggle('night-override-auto', nightOverride === 'auto');
       document.body.classList.toggle('night-override-day', nightOverride === 'day');
       document.body.classList.toggle('night-override-night', nightOverride === 'night');
-      if (nightActive) {
-        syncOverlayMaskCanvasSize();
-        syncRoomIllumination();
+      syncRoomIllumination();
+      applyAmbientVisuals(now);
+      if (shouldPaintFlashlightMask()) {
         updateNightOverlayMask();
       } else {
         clearOverlaySvgMask();
-        syncRoomIllumination();
       }
-
-      applyAmbientVisuals(now);
     } catch (_err) {
       /* Night/mask path must not take down the EST clock tickers. */
     }

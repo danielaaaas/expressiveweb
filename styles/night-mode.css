@@ -277,7 +277,8 @@ body.night-active svg .room.visited:not(.room-night-lit) {
 .night-overlay {
     position: fixed;
     inset: 0;
-    z-index: 95;
+    /* Above filtered .floor-plan-container stacking; below #overlay (99) and modals */
+    z-index: 98;
     pointer-events: none;
     /*
       Hue from JS (--o-r1…--o-b2): dawn/dusk warm coral–peach, night blue–violet.
@@ -300,10 +301,18 @@ body.night-ambient .night-overlay {
     opacity: 1;
 }
 
-/* Night: alpha mask — CSS radial = flashlight hole; optional 2nd layer = lit-room holes (intersect). */
-body.night-active .night-overlay {
-    mask-mode: alpha;
-    -webkit-mask-mode: alpha;
+/* Veil drawn on .night-veil-canvas (2D); hide CSS gradient so the dim is not doubled. */
+.night-overlay.night-overlay--canvas-veil {
+    background: none !important;
+}
+
+.night-overlay .night-veil-canvas {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
 }
 
 /* Flashlight window: slightly stronger veil than ambient-only hours. */
