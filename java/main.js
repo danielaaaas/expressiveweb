@@ -102,6 +102,7 @@ const visited = {};
 const bedroomMemoryHoverTips = {
     'hit-fan': 'the blades counted summer nights in slow arcs; sleep arrived easier when something else kept moving.',
     'hit-clock': 'numbers jumped when no one was watching — wrong time, right mood.',
+    'hit-water': 'condensation drew thin roads on the glass; the room pretended it wasn\'t thirsty.',
     'hit-tv': 'blue light pooled on the wall like a second sky, half-heard voices stitching stories together.',
     'hit-drawer': 'paper corners and rubber bands — the archaeology of almost-forgotten afternoons.',
     'hit-window': 'click: let the outside forget which version it was supposed to be.'
