@@ -104,13 +104,7 @@ const bedroomMemoryHoverTips = {
     'hit-clock': 'numbers jumped when no one was watching — wrong time, right mood.',
     'hit-water': 'condensation drew thin roads on the glass; the room pretended it wasn\'t thirsty.',
     'hit-tv': 'blue light pooled on the wall like a second sky, half-heard voices stitching stories together.',
-    'hit-drawer': 'paper corners and rubber bands — the archaeology of almost-forgotten afternoons.',
     'hit-window': 'click: let the outside forget which version it was supposed to be.'
-};
-
-const bedroomDrawerEntry = {
-    title: 'nightstand drawer',
-    text: 'a folded receipt, a loose hair tie, and a sentence never finished on lined paper: “tomorrow we will…”'
 };
 
 let bedroomOutsideSceneIndex = 0;
@@ -488,15 +482,6 @@ function setupBedroomMemorySvgRuntime() {
                     ];
                     tipEl.textContent = msgs[bedroomOutsideSceneIndex];
                 }
-            });
-        }
-
-        const drawer = svgDoc.getElementById('hit-drawer');
-        if (drawer) {
-            drawer.addEventListener('click', (event) => {
-                event.stopPropagation();
-                closeBedroomMemory();
-                openNotebookEntry(bedroomDrawerEntry.title, bedroomDrawerEntry.text, true, NOTEBOOK_SHELL_MASTER);
             });
         }
 
