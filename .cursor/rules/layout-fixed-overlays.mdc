@@ -1,0 +1,14 @@
+---
+description: Avoid breaking viewport-fixed overlays when changing page layout (expressiveweb apt-one).
+alwaysApply: true
+---
+
+# Layout and `position: fixed` overlays
+
+For `index.html` / `styles/aesthetics.css` (and similar entry pages):
+
+- **Do not put `display: flex` on `<body>`** when the page has full-screen **`position: fixed`** overlays (notebook dimmer, mirror, bedroom memory, closet, door note, etc.). In some browsers, fixed descendants of a flex body can stop anchoring to the viewport and sit **in-flow beside** main content (e.g. vignette to the right of the floor plan).
+
+- **Prefer:** `body { display: block; min-height: 100vh; }` and use an inner wrapper (e.g. `.floor-plan-shell`) for flex centering of the title + floor plan.
+
+- When touching `#bedroom-memory-overlay` or other modals, keep **explicit viewport pinning** (`position: fixed`, full inset / `100vw`/`100vh` as needed); avoid ancestors with `transform`/`filter` around those overlays unless intentional.
