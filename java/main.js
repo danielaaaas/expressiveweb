@@ -98,6 +98,25 @@ const bathroomHotspotEntries = {
 
 const visited = {};
 
+/** Master bedroom memory vignette (apartment one): hover tips + window cycles SVG layers */
+const bedroomMemoryHoverTips = {
+    'hit-fan': 'the blades counted summer nights in slow arcs; sleep arrived easier when something else kept moving.',
+    'hit-clock': 'numbers jumped when no one was watching — wrong time, right mood.',
+    'hit-tv': 'blue light pooled on the wall like a second sky, half-heard voices stitching stories together.',
+    'hit-drawer': 'paper corners and rubber bands — the archaeology of almost-forgotten afternoons.',
+    'hit-window': 'click: let the outside forget which version it was supposed to be.'
+};
+
+const bedroomDrawerEntry = {
+    title: 'nightstand drawer',
+    text: 'a folded receipt, a loose hair tie, and a sentence never finished on lined paper: “tomorrow we will…”'
+};
+
+let bedroomOutsideSceneIndex = 0;
+let bedroomClockIntervalId = null;
+let bedroomFanCtx = null;
+let bedroomFanOsc = null;
+
 const NOTEBOOK_SHELL_DEFAULT = 'elements/room-shell-only.svg';
 const NOTEBOOK_SHELL_BATHROOM = 'elements/room-shell-bathroom-notebook.svg';
 const NOTEBOOK_SHELL_MASTER = 'elements/room-shell-master-bedroom.svg';
@@ -222,6 +241,14 @@ document.querySelectorAll('.room').forEach(room => {
         return;
     }
 
+    // master bedroom — intimate pixel vignette (apt one)
+    if (id === 'master-bedroom') {
+        visited[id] = true;
+        room.classList.add('visited');
+        openBedroomMemory();
+        return;
+    }
+
 // closet opening 
     if (id === 'hallway-closet') {
         visited[id] = true;
@@ -254,7 +281,11 @@ document.getElementById('overlay').addEventListener('click', closeNotebook);
 
 // or closing it with the esc key
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') closeNotebook();
+  if (e.key === 'Escape') {
+    closeNotebook();
+    closeMirror();
+    closeBedroomMemory();
+  }
 });
 
 // bathroom mirror draft
@@ -303,6 +334,188 @@ function setupMirrorRoomHotspots() {
 }
 
 setupMirrorRoomHotspots();
+
+function openBedroomMemory() {
+    const roomObject = document.getElementById('bedroom-memory-svg');
+    if (roomObject) {
+        const raw = roomObject.getAttribute('data') || '';
+        const base = raw.replace(/[?#].*/, '');
+        const url = `${base}?cb=${Date.now()}`;
+        roomObject.setAttribute('data', url);
+        roomObject.data = url;
+    }
+
+    const overlay = document.getElementById('bedroom-memory-overlay');
+    if (!overlay) return;
+    overlay.classList.add('active');
+    overlay.setAttribute('aria-hidden', 'false');
+    const tip = document.getElementById('bedroom-memory-tip');
+    if (tip) {
+        tip.textContent = 'hover for fragments. click the window to shift the night outside.';
+    }
+    startBedroomFanHum();
+    setupBedroomMemorySvgRuntime();
+}
+
+function closeBedroomMemory() {
+    const overlay = document.getElementById('bedroom-memory-overlay');
+    if (!overlay || !overlay.classList.contains('active')) return;
+    overlay.classList.remove('active');
+    overlay.setAttribute('aria-hidden', 'true');
+    stopBedroomFanHum();
+    if (bedroomClockIntervalId) {
+        clearInterval(bedroomClockIntervalId);
+        bedroomClockIntervalId = null;
+    }
+}
+
+function startBedroomFanHum() {
+    stopBedroomFanHum();
+    try {
+        const Ctx = window.AudioContext || window.webkitAudioContext;
+        if (!Ctx) return;
+        bedroomFanCtx = new Ctx();
+        bedroomFanOsc = bedroomFanCtx.createOscillator();
+        const gain = bedroomFanCtx.createGain();
+        bedroomFanOsc.type = 'sine';
+        bedroomFanOsc.frequency.value = 62;
+        gain.gain.value = 0.032;
+        bedroomFanOsc.connect(gain);
+        gain.connect(bedroomFanCtx.destination);
+        bedroomFanOsc.start();
+        if (bedroomFanCtx.state === 'suspended') bedroomFanCtx.resume();
+    } catch (_) {
+        bedroomFanCtx = null;
+        bedroomFanOsc = null;
+    }
+}
+
+function stopBedroomFanHum() {
+    try {
+        bedroomFanOsc?.stop();
+        bedroomFanCtx?.close?.();
+    } catch (_) {}
+    bedroomFanOsc = null;
+    bedroomFanCtx = null;
+}
+
+function randomBedroomClockTime(svgDoc) {
+    const el = svgDoc.getElementById('clock-readout');
+    if (!el) return;
+    const h = Math.floor(Math.random() * 12) + 1;
+    const m = Math.floor(Math.random() * 60);
+    el.textContent = `${h}:${String(m).padStart(2, '0')}`;
+}
+
+function cycleBedroomOutsideScenes(svgDoc) {
+    const ids = ['outside-a', 'outside-b', 'outside-c'];
+    bedroomOutsideSceneIndex = (bedroomOutsideSceneIndex + 1) % ids.length;
+    ids.forEach((id, i) => {
+        const g = svgDoc.getElementById(id);
+        if (!g) return;
+        g.setAttribute('visibility', i === bedroomOutsideSceneIndex ? 'visible' : 'hidden');
+    });
+}
+
+/** Curtain slides left open once the embedded SVG is ready (triggered from SMIL beginElement). */
+function startBedroomCurtainOpen(svgDoc) {
+    const anim = svgDoc.getElementById('curtain-open-anim');
+    if (!anim || typeof anim.beginElement !== 'function') return;
+    try {
+        anim.beginElement();
+    } catch (_) {}
+}
+
+function setupBedroomMemorySvgRuntime() {
+    const roomObject = document.getElementById('bedroom-memory-svg');
+    if (!roomObject) return;
+
+    const bind = () => {
+        const svgDoc = roomObject.contentDocument;
+        if (!svgDoc) return;
+        const svgRoot = svgDoc.documentElement;
+        if (!svgRoot) return;
+
+        if (svgRoot.dataset.bedroomBound === 'true') {
+            bedroomOutsideSceneIndex = 0;
+            ['outside-a', 'outside-b', 'outside-c'].forEach((id, i) => {
+                const g = svgDoc.getElementById(id);
+                if (g) g.setAttribute('visibility', i === 0 ? 'visible' : 'hidden');
+            });
+            randomBedroomClockTime(svgDoc);
+            if (bedroomClockIntervalId) clearInterval(bedroomClockIntervalId);
+            bedroomClockIntervalId = window.setInterval(() => randomBedroomClockTime(svgDoc), 2800);
+            window.setTimeout(() => startBedroomCurtainOpen(svgDoc), 40);
+            return;
+        }
+
+        bedroomOutsideSceneIndex = 0;
+        ['outside-a', 'outside-b', 'outside-c'].forEach((id, i) => {
+            const g = svgDoc.getElementById(id);
+            if (g) g.setAttribute('visibility', i === 0 ? 'visible' : 'hidden');
+        });
+
+        randomBedroomClockTime(svgDoc);
+        if (bedroomClockIntervalId) clearInterval(bedroomClockIntervalId);
+        bedroomClockIntervalId = window.setInterval(() => randomBedroomClockTime(svgDoc), 2800);
+
+        const tipEl = document.getElementById('bedroom-memory-tip');
+
+        Object.entries(bedroomMemoryHoverTips).forEach(([hotspotId, tip]) => {
+            const hotspot = svgDoc.getElementById(hotspotId);
+            if (!hotspot) return;
+            hotspot.style.cursor = 'pointer';
+            hotspot.addEventListener('mouseenter', () => {
+                if (tipEl) tipEl.textContent = tip;
+            });
+            hotspot.addEventListener('mouseleave', () => {
+                if (tipEl) tipEl.textContent = 'hover for fragments. click the window to shift the night outside.';
+            });
+        });
+
+        const win = svgDoc.getElementById('hit-window');
+        if (win) {
+            win.addEventListener('click', (event) => {
+                event.stopPropagation();
+                cycleBedroomOutsideScenes(svgDoc);
+                randomBedroomClockTime(svgDoc);
+                if (tipEl) {
+                    const msgs = [
+                        'the city lights stencil themselves differently each time.',
+                        'the moon slides through glass like it owes you nothing.',
+                        'rain draws diagonal grammar no one taught you.'
+                    ];
+                    tipEl.textContent = msgs[bedroomOutsideSceneIndex];
+                }
+            });
+        }
+
+        const drawer = svgDoc.getElementById('hit-drawer');
+        if (drawer) {
+            drawer.addEventListener('click', (event) => {
+                event.stopPropagation();
+                closeBedroomMemory();
+                openNotebookEntry(bedroomDrawerEntry.title, bedroomDrawerEntry.text, true, NOTEBOOK_SHELL_MASTER);
+            });
+        }
+
+        svgRoot.dataset.bedroomBound = 'true';
+
+        window.setTimeout(() => startBedroomCurtainOpen(svgDoc), 40);
+    };
+
+    if (!roomObject.dataset.bedroomLoadHooked) {
+        roomObject.addEventListener('load', bind);
+        roomObject.dataset.bedroomLoadHooked = 'true';
+    }
+    bind();
+}
+
+const bedroomCloseBtn = document.getElementById('bedroom-memory-close');
+if (bedroomCloseBtn) bedroomCloseBtn.addEventListener('click', closeBedroomMemory);
+
+const bedroomBackdrop = document.querySelector('#bedroom-memory-overlay .bedroom-memory-backdrop');
+if (bedroomBackdrop) bedroomBackdrop.addEventListener('click', closeBedroomMemory);
 
 document.getElementById('mirror-submit').addEventListener('click', () => {
     const msg = document.getElementById('mirror-input').value.trim();

@@ -415,7 +415,7 @@ svg {
     z-index: 1;
     pointer-events: none;
     overflow: hidden;
-    opacity: 0.22;
+    opacity: 0.58;
 }
 
 .mirror-steam-page::before {
@@ -424,11 +424,11 @@ svg {
     left: 0;
     right: 0;
     bottom: 0;
-    height: 52vh;
+    height: 78vh;
     background: linear-gradient(
         to top,
-        rgba(230, 245, 255, 0.34) 0%,
-        rgba(210, 235, 250, 0.2) 44%,
+        rgba(230, 245, 255, 0.72) 0%,
+        rgba(210, 235, 250, 0.52) 44%,
         transparent 100%
     );
     pointer-events: none;
@@ -438,13 +438,13 @@ svg {
     content: '';
     position: absolute;
     inset: auto 0 0 0;
-    height: 62vh;
+    height: 92vh;
     background:
-        radial-gradient(circle at 12% 92%, rgba(255, 255, 255, 0.2) 0 18%, transparent 46%),
-        radial-gradient(circle at 36% 96%, rgba(245, 252, 255, 0.18) 0 16%, transparent 44%),
-        radial-gradient(circle at 64% 94%, rgba(255, 255, 255, 0.16) 0 18%, transparent 46%),
-        radial-gradient(circle at 88% 96%, rgba(245, 252, 255, 0.18) 0 16%, transparent 44%);
-    opacity: 0.75;
+        radial-gradient(circle at 12% 92%, rgba(255, 255, 255, 0.42) 0 18%, transparent 46%),
+        radial-gradient(circle at 36% 96%, rgba(245, 252, 255, 0.38) 0 16%, transparent 44%),
+        radial-gradient(circle at 64% 94%, rgba(255, 255, 255, 0.36) 0 18%, transparent 46%),
+        radial-gradient(circle at 88% 96%, rgba(245, 252, 255, 0.38) 0 16%, transparent 44%);
+    opacity: 1;
     filter: blur(18px);
     pointer-events: none;
 }
@@ -455,10 +455,10 @@ svg {
         opacity: 0;
     }
     14% {
-        opacity: 0.98;
+        opacity: 1;
     }
     50% {
-        opacity: 0.72;
+        opacity: 0.96;
     }
     100% {
         transform: translate3d(4vw, -118vh, 0) scale(1.32);
@@ -472,10 +472,10 @@ svg {
         opacity: 0;
     }
     12% {
-        opacity: 0.9;
+        opacity: 1;
     }
     48% {
-        opacity: 0.65;
+        opacity: 0.92;
     }
     100% {
         transform: translate3d(-5vw, -112vh, 0) scale(1.22);
@@ -492,7 +492,7 @@ svg {
         opacity: 1;
     }
     52% {
-        opacity: 0.75;
+        opacity: 0.98;
     }
     100% {
         transform: translate3d(-3vw, -125vh, 0) scale(1.42);
@@ -506,10 +506,10 @@ svg {
         opacity: 0;
     }
     10% {
-        opacity: 0.82;
+        opacity: 0.95;
     }
     45% {
-        opacity: 0.58;
+        opacity: 0.9;
     }
     100% {
         transform: translate3d(5vw, -108vh, 0) scale(1.12);
@@ -523,8 +523,8 @@ svg {
     width: 68px;
     height: 112px;
     background:
-        radial-gradient(ellipse 95% 78% at 48% 78%, rgba(255, 255, 255, 0.56) 0%, rgba(236, 248, 255, 0.3) 42%, transparent 74%),
-        radial-gradient(ellipse 50% 42% at 64% 48%, rgba(255, 255, 255, 0.3) 0%, transparent 58%);
+        radial-gradient(ellipse 95% 78% at 48% 78%, rgba(255, 255, 255, 0.92) 0%, rgba(236, 248, 255, 0.62) 42%, transparent 74%),
+        radial-gradient(ellipse 50% 42% at 64% 48%, rgba(255, 255, 255, 0.58) 0%, transparent 58%);
     filter: blur(12px);
     border-radius: 50%;
     mix-blend-mode: screen;
@@ -714,6 +714,106 @@ svg {
     animation-delay: -2.4s;
 }
 
+.steam-wisp:nth-child(19) {
+    left: 7%;
+    width: 64px;
+    height: 108px;
+    margin-left: -32px;
+    animation-name: steam-rise-a;
+    animation-duration: 10.4s;
+    animation-delay: -2.2s;
+}
+
+.steam-wisp:nth-child(20) {
+    left: 15%;
+    width: 54px;
+    height: 94px;
+    margin-left: -27px;
+    animation-name: steam-rise-b;
+    animation-duration: 12.8s;
+    animation-delay: -5.5s;
+}
+
+.steam-wisp:nth-child(21) {
+    left: 24%;
+    width: 76px;
+    height: 118px;
+    margin-left: -38px;
+    animation-name: steam-rise-c;
+    animation-duration: 11.2s;
+    animation-delay: -3.6s;
+}
+
+.steam-wisp:nth-child(22) {
+    left: 35%;
+    width: 48px;
+    height: 88px;
+    margin-left: -24px;
+    animation-name: steam-rise-d;
+    animation-duration: 13.4s;
+    animation-delay: -7.8s;
+}
+
+.steam-wisp:nth-child(23) {
+    left: 46%;
+    width: 70px;
+    height: 112px;
+    margin-left: -35px;
+    animation-name: steam-rise-a;
+    animation-duration: 10.9s;
+    animation-delay: -1.1s;
+}
+
+.steam-wisp:nth-child(24) {
+    left: 56%;
+    width: 52px;
+    height: 92px;
+    margin-left: -26px;
+    animation-name: steam-rise-b;
+    animation-duration: 14s;
+    animation-delay: -8.2s;
+}
+
+.steam-wisp:nth-child(25) {
+    left: 65%;
+    width: 58px;
+    height: 100px;
+    margin-left: -29px;
+    animation-name: steam-rise-c;
+    animation-duration: 11.7s;
+    animation-delay: -4.8s;
+}
+
+.steam-wisp:nth-child(26) {
+    left: 75%;
+    width: 46px;
+    height: 84px;
+    margin-left: -23px;
+    animation-name: steam-rise-d;
+    animation-duration: 12.3s;
+    animation-delay: -6.4s;
+}
+
+.steam-wisp:nth-child(27) {
+    left: 84%;
+    width: 72px;
+    height: 116px;
+    margin-left: -36px;
+    animation-name: steam-rise-a;
+    animation-duration: 11.1s;
+    animation-delay: -2.9s;
+}
+
+.steam-wisp:nth-child(28) {
+    left: 93%;
+    width: 56px;
+    height: 96px;
+    margin-left: -28px;
+    animation-name: steam-rise-b;
+    animation-duration: 13.5s;
+    animation-delay: -5.1s;
+}
+
 .mirror-layout {
     position: relative;
     z-index: 2;
@@ -733,8 +833,12 @@ svg {
     flex: 1 1 50%;
     width: 50%;
     min-width: 0;
-    height: min(500px, 70vh);
     max-width: 50%;
+    /* Match SVG viewBox (416×398) so object-fit:contain letterboxes less */
+    aspect-ratio: 416 / 398;
+    max-height: min(520px, 74vh);
+    height: auto;
+    align-self: flex-start;
     overflow: visible;
 }
 
@@ -745,7 +849,8 @@ svg {
     height: 100%;
     border: 0;
     object-fit: contain;
-    object-position: center center;
+    /* Pin back wall / ceiling to top of stage so the room does not look vertically centered/floating */
+    object-position: top center;
     pointer-events: auto;
     image-rendering: pixelated;
     background: transparent;
@@ -893,7 +998,9 @@ svg {
         flex: 1 1 auto;
         width: min(720px, 92vw);
         max-width: 100%;
-        height: min(420px, 58vh);
+        aspect-ratio: 416 / 398;
+        max-height: min(440px, 58vh);
+        height: auto;
     }
 
     .mirror-side {
@@ -911,8 +1018,128 @@ svg {
 @media (prefers-reduced-motion: reduce) {
     .steam-wisp {
         animation: none !important;
-        opacity: 0.28;
+        opacity: 0.52;
         transform: translate3d(0, -35vh, 0) scale(1);
+    }
+}
+
+/* master bedroom memory vignette (apt one) */
+#bedroom-memory-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: min(24px, 4vw);
+    box-sizing: border-box;
+}
+
+#bedroom-memory-overlay.active {
+    display: flex;
+}
+
+.bedroom-memory-backdrop {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 120% 80% at 50% 100%, rgba(80, 56, 96, 0.55) 0%, transparent 55%),
+        radial-gradient(ellipse 90% 60% at 20% 30%, rgba(44, 72, 96, 0.35) 0%, transparent 50%),
+        linear-gradient(180deg, #151018 0%, #221c32 48%, #181420 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+}
+
+.bedroom-memory-lift {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: min(720px, 96vw);
+    pointer-events: none;
+}
+
+.bedroom-memory-lift > * {
+    pointer-events: auto;
+}
+
+.bedroom-memory-hud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: min(680px, 94vw);
+}
+
+.bedroom-memory-tip {
+    flex: 1 1 220px;
+    margin: 0;
+    min-height: 2.6em;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', monospace;
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(210, 200, 228, 0.92);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
+}
+
+.bedroom-memory-close {
+    flex: 0 0 auto;
+    margin: 0;
+    background: rgba(40, 32, 52, 0.65);
+    border: 1px solid rgba(180, 160, 210, 0.45);
+    color: rgba(236, 228, 255, 0.92);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.bedroom-memory-close:hover {
+    border-color: rgba(220, 200, 255, 0.75);
+    background: rgba(56, 44, 72, 0.85);
+}
+
+.bedroom-memory-stage {
+    position: relative;
+    width: 100%;
+    max-width: min(680px, 94vw);
+    aspect-ratio: 480 / 320;
+    max-height: min(62vh, 520px);
+    border: 2px solid rgba(90, 78, 110, 0.65);
+    box-shadow:
+        0 0 0 1px rgba(20, 16, 28, 0.9),
+        0 18px 56px rgba(0, 0, 0, 0.55),
+        inset 0 0 48px rgba(120, 100, 160, 0.08);
+    background: #120c18;
+    overflow: hidden;
+}
+
+.bedroom-memory-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    object-position: center center;
+    image-rendering: pixelated;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .bedroom-memory-stage {
+        max-height: min(52vh, 420px);
+    }
+
+    .bedroom-memory-hud {
+        flex-direction: column;
+        align-items: stretch;
     }
 }
 
