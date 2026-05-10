@@ -1,0 +1,676 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" shape-rendering="crispEdges">
+  <title>Bedroom two memory fragment (apartment two)</title>
+  <desc>Cropped vignette: a restless transitional bedroom. Framed night-city poster on the wall, big open suitcase, mattress edge, two storage bins under a clip lamp, glowing phone. Late-night uneven light; real window shows a clipped skyline.</desc>
+
+  <defs>
+    <linearGradient id="b2Wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a2a3a"/>
+      <stop offset="100%" stop-color="#241624"/>
+    </linearGradient>
+    <linearGradient id="b2Ceiling" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a1018"/>
+      <stop offset="100%" stop-color="#3a2a3a"/>
+    </linearGradient>
+    <linearGradient id="b2Floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a2818"/>
+      <stop offset="100%" stop-color="#1a1008"/>
+    </linearGradient>
+    <linearGradient id="b2Suitcase" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#883a4a"/>
+      <stop offset="100%" stop-color="#3a1820"/>
+    </linearGradient>
+    <linearGradient id="b2SuitcaseLid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a1820"/>
+      <stop offset="100%" stop-color="#883a4a"/>
+    </linearGradient>
+    <linearGradient id="b2Bin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#586878"/>
+      <stop offset="100%" stop-color="#384858"/>
+    </linearGradient>
+    <radialGradient id="b2PhoneGlow" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#a8c8f8" stop-opacity="0.95"/>
+      <stop offset="55%" stop-color="#5878a8" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#5878a8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="b2LampGlow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#fff0c0" stop-opacity="0.78"/>
+      <stop offset="55%" stop-color="#f4c878" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#f4c878" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="b2Window" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a4858"/>
+      <stop offset="100%" stop-color="#0a0e1a"/>
+    </linearGradient>
+    <radialGradient id="b2CityGlow" cx="50%" cy="80%" r="60%">
+      <stop offset="0%" stop-color="#f4a878" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#f4a878" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="b2SidesL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="b2SidesR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="b2WindowGlassClip">
+      <rect x="316" y="26" width="124" height="88"/>
+    </clipPath>
+  </defs>
+
+  <!-- ============= WALL ============= -->
+  <rect width="480" height="320" fill="url(#b2Wall)"/>
+  <rect x="0" y="0" width="480" height="14" fill="url(#b2Ceiling)"/>
+  <rect x="0" y="14" width="480" height="2" fill="#0a0408" opacity="0.7"/>
+
+  <!-- subtle wall texture -->
+  <g pointer-events="none" opacity="0.12">
+    <rect x="0" y="60" width="480" height="1" fill="#785868"/>
+    <rect x="0" y="120" width="480" height="1" fill="#785868"/>
+    <rect x="0" y="180" width="480" height="1" fill="#785868"/>
+  </g>
+
+  <!-- side vignettes (claustrophobic edges) -->
+  <rect x="0" y="0" width="56" height="320" fill="url(#b2SidesL)" pointer-events="none"/>
+  <rect x="424" y="0" width="56" height="320" fill="url(#b2SidesR)" pointer-events="none"/>
+
+  <!-- ============= FRAMED POSTER (upper-left wall) ============= -->
+  <!-- Warm minimalist sun-and-mountains print. Distinct from the window. -->
+  <g id="b2-wall-marks" pointer-events="none">
+    <!-- faint lighter patch on the wall behind -->
+    <rect x="18" y="34" width="68" height="86" fill="#5a3a48" opacity="0.22"/>
+    <!-- outer frame (dark wood) -->
+    <rect x="20" y="36" width="64" height="82" fill="#2a1810"/>
+    <rect x="22" y="38" width="60" height="78" fill="#4a3020"/>
+    <rect x="22" y="38" width="60" height="1" fill="#6a4830"/>
+    <rect x="22" y="115" width="60" height="1" fill="#1a0e08"/>
+    <!-- mat -->
+    <rect x="24" y="40" width="56" height="74" fill="#f0e4d4"/>
+    <rect x="24" y="40" width="56" height="1" fill="#f8f0e8"/>
+    <rect x="24" y="113" width="56" height="1" fill="#c8b8a8"/>
+
+    <!-- ART AREA (26-78 wide, 42-110 tall) -->
+    <!-- sky bands: warm cream → peach → coral, top to horizon -->
+    <rect x="26" y="42" width="52" height="14" fill="#f8e0c8"/>
+    <rect x="26" y="56" width="52" height="12" fill="#f4c8a8"/>
+    <rect x="26" y="68" width="52" height="10" fill="#e8a888"/>
+    <rect x="26" y="78" width="52" height="6"  fill="#d88868"/>
+    <!-- big pale sun (octagonal pixel circle, cx=52, cy=60) -->
+    <rect x="48" y="50" width="8"  height="2" fill="#fff8e0"/>
+    <rect x="46" y="52" width="12" height="2" fill="#fff8e0"/>
+    <rect x="44" y="54" width="16" height="2" fill="#fff8e0"/>
+    <rect x="44" y="56" width="16" height="2" fill="#fff8e0"/>
+    <rect x="44" y="58" width="16" height="2" fill="#fff8e0"/>
+    <rect x="44" y="60" width="16" height="2" fill="#fff8e0"/>
+    <rect x="46" y="62" width="12" height="2" fill="#fff8e0"/>
+    <rect x="48" y="64" width="8"  height="2" fill="#fff8e0"/>
+    <!-- tiny inner sun highlight -->
+    <rect x="48" y="56" width="4" height="2" fill="#ffffff" opacity="0.7"/>
+
+    <!-- mountains (terracotta), stepped triangles -->
+    <!-- left mountain peak ~ x=40 -->
+    <rect x="38" y="80" width="4"  height="2" fill="#a85838"/>
+    <rect x="36" y="82" width="8"  height="2" fill="#a85838"/>
+    <rect x="34" y="84" width="12" height="2" fill="#a85838"/>
+    <rect x="32" y="86" width="16" height="2" fill="#a85838"/>
+    <rect x="30" y="88" width="20" height="2" fill="#a85838"/>
+    <rect x="28" y="90" width="24" height="2" fill="#a85838"/>
+    <rect x="26" y="92" width="28" height="2" fill="#a85838"/>
+    <rect x="26" y="94" width="28" height="2" fill="#a85838"/>
+    <rect x="26" y="96" width="28" height="2" fill="#a85838"/>
+    <rect x="26" y="98" width="28" height="2" fill="#a85838"/>
+    <!-- left mountain shadow side -->
+    <rect x="40" y="82" width="4"  height="2" fill="#783828"/>
+    <rect x="40" y="84" width="6"  height="2" fill="#783828"/>
+    <rect x="40" y="86" width="8"  height="2" fill="#783828"/>
+    <rect x="40" y="88" width="10" height="2" fill="#783828"/>
+    <rect x="40" y="90" width="12" height="2" fill="#783828"/>
+    <rect x="40" y="92" width="14" height="2" fill="#783828"/>
+    <rect x="40" y="94" width="14" height="2" fill="#783828"/>
+    <!-- right mountain peak ~ x=66, smaller -->
+    <rect x="64" y="84" width="4"  height="2" fill="#c86848"/>
+    <rect x="62" y="86" width="8"  height="2" fill="#c86848"/>
+    <rect x="60" y="88" width="12" height="2" fill="#c86848"/>
+    <rect x="58" y="90" width="16" height="2" fill="#c86848"/>
+    <rect x="56" y="92" width="20" height="2" fill="#c86848"/>
+    <rect x="54" y="94" width="22" height="2" fill="#c86848"/>
+    <rect x="52" y="96" width="24" height="2" fill="#c86848"/>
+    <rect x="50" y="98" width="26" height="2" fill="#c86848"/>
+    <!-- right mountain shadow side -->
+    <rect x="66" y="86" width="4"  height="2" fill="#985020"/>
+    <rect x="66" y="88" width="6"  height="2" fill="#985020"/>
+    <rect x="66" y="90" width="8"  height="2" fill="#985020"/>
+    <rect x="66" y="92" width="10" height="2" fill="#985020"/>
+    <rect x="66" y="94" width="10" height="2" fill="#985020"/>
+    <rect x="66" y="96" width="10" height="2" fill="#985020"/>
+    <rect x="66" y="98" width="10" height="2" fill="#985020"/>
+
+    <!-- foreground / dark dune -->
+    <rect x="26" y="100" width="52" height="10" fill="#3a1810"/>
+    <rect x="26" y="100" width="52" height="1"  fill="#582418" opacity="0.85"/>
+    <!-- a tiny pale signature mark -->
+    <rect x="72" y="106" width="2" height="2" fill="#785a48" opacity="0.85"/>
+    <rect x="74" y="107" width="2" height="1" fill="#785a48" opacity="0.7"/>
+
+    <!-- glass glare on print -->
+    <rect x="26" y="42" width="52" height="2" fill="#ffffff" opacity="0.14"/>
+    <!-- washi tape corners on the wall -->
+    <rect x="22" y="34" width="8" height="2" fill="#d8c8a8" opacity="0.55"/>
+    <rect x="74" y="34" width="8" height="2" fill="#d8c8a8" opacity="0.55"/>
+    <!-- shadow under frame -->
+    <rect x="20" y="118" width="64" height="2" fill="#1a0e08" opacity="0.38"/>
+  </g>
+
+  <!-- ============= WINDOW (upper-right; bottom aligned with the poster bottom) ============= -->
+  <g id="b2-window-frame" pointer-events="none">
+    <rect x="312" y="22" width="132" height="96" fill="#3a2418"/>
+    <rect x="312" y="22" width="132" height="2" fill="#5a3826"/>
+    <rect x="312" y="116" width="132" height="2" fill="#1a0e08"/>
+    <rect x="312" y="22" width="2" height="96" fill="#5a3826"/>
+    <rect x="442" y="22" width="2" height="96" fill="#1a0e08"/>
+    <g clip-path="url(#b2WindowGlassClip)">
+      <!-- glass / sky -->
+      <rect x="316" y="26" width="124" height="88" fill="url(#b2Window)"/>
+      <!-- city silhouette (all rects end at or before x=440) -->
+      <rect x="318" y="82" width="18" height="24" fill="#0a0810"/>
+      <rect x="338" y="68" width="14" height="38" fill="#0a0810"/>
+      <rect x="354" y="76" width="18" height="30" fill="#0a0810"/>
+      <rect x="374" y="62" width="14" height="44" fill="#0a0810"/>
+      <rect x="390" y="74" width="18" height="32" fill="#0a0810"/>
+      <rect x="410" y="64" width="12" height="42" fill="#0a0810"/>
+      <rect x="424" y="80" width="16" height="26" fill="#0a0810"/>
+      <!-- city windows (tiny yellow squares) -->
+      <rect x="322" y="90" width="2" height="2" fill="#f4c878"/>
+      <rect x="330" y="96" width="2" height="2" fill="#f4c878" opacity="0.7"/>
+      <rect x="342" y="84" width="2" height="2" fill="#f4c878"/>
+      <rect x="358" y="92" width="2" height="2" fill="#f4c878" opacity="0.6"/>
+      <rect x="376" y="78" width="2" height="2" fill="#f4c878"/>
+      <rect x="376" y="94" width="2" height="2" fill="#f4c878" opacity="0.85"/>
+      <rect x="398" y="88" width="2" height="2" fill="#f4c878" opacity="0.6"/>
+      <rect x="412" y="82" width="2" height="2" fill="#f4c878"/>
+      <rect x="428" y="98" width="2" height="2" fill="#f4c878" opacity="0.65"/>
+      <rect x="434" y="90" width="2" height="2" fill="#f4c878"/>
+      <!-- a window across the street that flickers (someone else awake) -->
+      <rect x="418" y="94" width="2" height="2" fill="#f4c878">
+        <animate attributeName="opacity" values="1;0.1;1;0.5;1" dur="6s" repeatCount="indefinite"/>
+      </rect>
+      <!-- glass highlight + city haze -->
+      <rect x="316" y="26" width="124" height="2" fill="#7898a8" opacity="0.45"/>
+      <rect x="316" y="62" width="124" height="40" fill="url(#b2CityGlow)" opacity="0.85"/>
+      <rect x="316" y="110" width="124" height="1" fill="#5a3a28" opacity="0.85"/>
+    </g>
+  </g>
+
+  <!-- ============= LAMP GLOW on the wall (uneven warm pool) ============= -->
+  <g id="b2-lamp-glow" pointer-events="none">
+    <ellipse cx="412" cy="220" rx="130" ry="100" fill="url(#b2LampGlow)" opacity="0.85">
+      <animate attributeName="opacity" values="0.85;0.6;0.92;0.7;0.85" dur="9s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- ============= INDEPENDENT SHADOW DRIFT on the wall ============= -->
+  <g id="b2-independent-shadow" pointer-events="none" opacity="0.32">
+    <ellipse cx="200" cy="130" rx="48" ry="14" fill="#0a0408">
+      <animate attributeName="cx" values="200;180;210;220;200" dur="19s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.32;0.18;0.36;0.20;0.32" dur="19s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- ============= FLOOR ============= -->
+  <g id="b2-floor" pointer-events="none">
+    <rect x="0" y="240" width="480" height="80" fill="url(#b2Floor)"/>
+    <rect x="0" y="240" width="480" height="2" fill="#5a3a28"/>
+    <rect x="0" y="242" width="480" height="1" fill="#1a0e08"/>
+    <rect x="0" y="262" width="480" height="1" fill="#1a0e08" opacity="0.45"/>
+    <rect x="0" y="284" width="480" height="1" fill="#1a0e08" opacity="0.45"/>
+    <rect x="0" y="306" width="480" height="1" fill="#1a0e08" opacity="0.45"/>
+  </g>
+
+  <!-- ============= PHONE GLOW on the floor (radial halo) ============= -->
+  <g id="b2-phone-glow" pointer-events="none">
+    <ellipse cx="362" cy="294" rx="64" ry="22" fill="url(#b2PhoneGlow)" opacity="0.92">
+      <animate attributeName="opacity" values="0.92;0.78;0.95;0.82;0.92" dur="3.7s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- ============= BED CORNER (lower-left) - clearer "this is a bed" silhouette ============= -->
+  <g id="b2-bed" pointer-events="none">
+    <!-- BED FRAME (dark wood box under the mattress) -->
+    <rect x="0" y="268" width="96" height="20" fill="#3a2418"/>
+    <rect x="0" y="268" width="96" height="1" fill="#5a3826"/>
+    <rect x="0" y="276" width="96" height="1" fill="#5a3826" opacity="0.55"/>
+    <rect x="0" y="286" width="96" height="2" fill="#1a0e08"/>
+    <rect x="94" y="268" width="2" height="20" fill="#1a0e08"/>
+    <!-- panel slat detail along the frame side -->
+    <rect x="6"  y="274" width="84" height="1" fill="#1a0e08" opacity="0.55"/>
+    <rect x="6"  y="282" width="84" height="1" fill="#1a0e08" opacity="0.45"/>
+
+    <!-- BED LEG at the front-right corner (bottom now flush with suitcase bottom y=302) -->
+    <rect x="82" y="288" width="10" height="14" fill="#2a1810"/>
+    <rect x="82" y="288" width="10" height="1" fill="#5a3826"/>
+    <rect x="82" y="301" width="10" height="1" fill="#0a0408"/>
+    <rect x="90" y="288" width="2" height="14" fill="#0a0408"/>
+
+    <!-- MATTRESS sitting on top of the frame (wider + taller than before) -->
+    <rect x="0" y="218" width="96" height="50" fill="#d8c8b0"/>
+    <rect x="0" y="218" width="96" height="2" fill="#e8d8c0"/>
+    <rect x="0" y="266" width="96" height="2" fill="#988878"/>
+    <rect x="94" y="218" width="2" height="48" fill="#988878"/>
+    <!-- mattress quilting tufts (tiny pixel buttons) -->
+    <rect x="20" y="230" width="2" height="2" fill="#a89878" opacity="0.7"/>
+    <rect x="48" y="230" width="2" height="2" fill="#a89878" opacity="0.7"/>
+    <rect x="76" y="230" width="2" height="2" fill="#a89878" opacity="0.7"/>
+    <rect x="20" y="252" width="2" height="2" fill="#a89878" opacity="0.7"/>
+    <rect x="48" y="252" width="2" height="2" fill="#a89878" opacity="0.7"/>
+    <rect x="76" y="252" width="2" height="2" fill="#a89878" opacity="0.7"/>
+
+    <!-- PILLOW resting on top of the mattress (bottom flush with mattress top y=218) -->
+    <rect x="4"  y="194" width="36" height="24" fill="#f0e8d8"/>
+    <rect x="4"  y="194" width="36" height="2" fill="#f8f0e8"/>
+    <rect x="4"  y="216" width="36" height="2" fill="#b8a8a0"/>
+    <rect x="38" y="194" width="2" height="24" fill="#b8a8a0"/>
+    <!-- soft head-dent on pillow -->
+    <rect x="14" y="202" width="14" height="1" fill="#c8b8a8" opacity="0.55"/>
+    <rect x="14" y="208" width="18" height="1" fill="#c8b8a8" opacity="0.45"/>
+
+    <!-- SHEET (folded, dim mauve) resting on top of mattress (bottom flush with mattress top y=218) -->
+    <rect x="42" y="184" width="50" height="34" fill="#7a6878"/>
+    <rect x="42" y="184" width="50" height="1" fill="#988a98"/>
+    <rect x="42" y="216" width="50" height="2" fill="#5a4858"/>
+    <!-- sheet wrinkles -->
+    <rect x="48" y="190" width="14" height="1" fill="#5a4858"/>
+    <rect x="64" y="194" width="20" height="1" fill="#5a4858"/>
+    <rect x="46" y="200" width="24" height="1" fill="#988a98" opacity="0.55"/>
+    <rect x="68" y="204" width="20" height="1" fill="#988a98" opacity="0.55"/>
+    <rect x="50" y="208" width="22" height="1" fill="#5a4858" opacity="0.7"/>
+  </g>
+
+  <!-- ============= CLOTHES PILE (between bed and suitcase) ============= -->
+  <g id="b2-clothes-pile" pointer-events="none">
+    <!-- folded shirt (cool blue) -->
+    <rect x="84" y="290" width="38" height="12" fill="#586870"/>
+    <rect x="84" y="290" width="38" height="1" fill="#7888a0"/>
+    <rect x="84" y="301" width="38" height="1" fill="#384858"/>
+    <!-- second item half on top (rust) -->
+    <rect x="92" y="286" width="28" height="6" fill="#a86848"/>
+    <rect x="92" y="286" width="28" height="1" fill="#c88868"/>
+    <!-- a sock -->
+    <rect x="118" y="306" width="12" height="6" fill="#888"/>
+    <rect x="118" y="306" width="12" height="1" fill="#a8a898"/>
+  </g>
+
+  <!-- ============= DISAPPEARING OBJECT slot (glass / charger / nothing) ============= -->
+  <g id="b2-disappearing" pointer-events="none">
+    <!-- variant a: a glass of water, half-full -->
+    <g id="b2-disappear-glass">
+      <rect x="130" y="270" width="14" height="22" fill="#a8c8d8" opacity="0.55"/>
+      <rect x="130" y="270" width="14" height="1" fill="#c8e0e8" opacity="0.85"/>
+      <rect x="130" y="291" width="14" height="1" fill="#688898" opacity="0.85"/>
+      <rect x="130" y="270" width="1" height="22" fill="#c8e0e8" opacity="0.5"/>
+      <rect x="143" y="270" width="1" height="22" fill="#688898" opacity="0.5"/>
+      <rect x="131" y="278" width="12" height="1" fill="#688898" opacity="0.6"/>
+      <rect x="131" y="279" width="12" height="13" fill="#7898a8" opacity="0.35"/>
+    </g>
+    <!-- variant b: a phone charger plug -->
+    <g id="b2-disappear-charger" visibility="hidden">
+      <rect x="130" y="280" width="14" height="10" fill="#181010"/>
+      <rect x="130" y="280" width="14" height="1" fill="#3a2418"/>
+      <rect x="134" y="282" width="2" height="3" fill="#888"/>
+      <rect x="138" y="282" width="2" height="3" fill="#888"/>
+      <rect x="136" y="290" width="2" height="14" fill="#181010"/>
+      <rect x="136" y="302" width="22" height="2" fill="#181010"/>
+    </g>
+    <!-- variant c: nothing -->
+    <g id="b2-disappear-empty" visibility="hidden">
+      <rect x="130" y="292" width="14" height="2" fill="#1a1008" opacity="0.55"/>
+      <rect x="130" y="292" width="1" height="2" fill="#3a2418" opacity="0.55"/>
+      <rect x="143" y="292" width="1" height="2" fill="#3a2418" opacity="0.55"/>
+    </g>
+  </g>
+
+  <!-- ============= POWER STRIP on the floor (small, unobtrusive) ============= -->
+  <g id="b2-power-strip" pointer-events="none">
+    <rect x="156" y="304" width="56" height="8" fill="#181010"/>
+    <rect x="156" y="304" width="56" height="1" fill="#3a2418"/>
+    <rect x="156" y="311" width="56" height="1" fill="#0a0408"/>
+    <rect x="160" y="306" width="6" height="4" fill="#3a2418"/>
+    <rect x="162" y="307" width="2" height="2" fill="#f4c878"/>
+    <rect x="170" y="306" width="6" height="4" fill="#3a2418"/>
+    <rect x="172" y="307" width="2" height="2" fill="#f4c878" opacity="0.7"/>
+    <rect x="180" y="306" width="6" height="4" fill="#3a2418"/>
+    <rect x="190" y="306" width="6" height="4" fill="#3a2418"/>
+    <rect x="200" y="306" width="6" height="4" fill="#3a2418"/>
+    <!-- thin cord trailing right under the suitcase -->
+    <rect x="212" y="308" width="120" height="2" fill="#181010"/>
+  </g>
+
+  <!-- ============= OPEN SUITCASE (BIG, FOCAL POINT) ============= -->
+  <!-- Hard-shell clamshell luggage: U-shaped grab handle on top, brass latches
+       at the seam, hinges, corner reinforcements, a horizontal accent rib,
+       inner welt, and a small ID tag dangling from the handle. -->
+  <g id="b2-suitcase" pointer-events="none">
+    <!-- TOP GRAB HANDLE (U-shape, clearly readable as a handle) -->
+    <!-- handle base plate where it meets the lid -->
+    <rect x="206" y="144" width="56" height="4" fill="#1a0810"/>
+    <rect x="206" y="144" width="56" height="1" fill="#3a1820"/>
+    <!-- left post -->
+    <rect x="212" y="132" width="4" height="14" fill="#2a0810"/>
+    <rect x="212" y="132" width="1" height="14" fill="#5a2838"/>
+    <!-- right post -->
+    <rect x="252" y="132" width="4" height="14" fill="#2a0810"/>
+    <rect x="252" y="132" width="1" height="14" fill="#5a2838"/>
+    <!-- crossbar (top of U) -->
+    <rect x="210" y="128" width="48" height="4" fill="#2a0810"/>
+    <rect x="210" y="128" width="48" height="1" fill="#5a2838"/>
+    <!-- rounded corner pixels on the crossbar -->
+    <rect x="208" y="130" width="2" height="2" fill="#2a0810"/>
+    <rect x="258" y="130" width="2" height="2" fill="#2a0810"/>
+
+    <!-- LUGGAGE ID TAG dangling from the right side of the handle -->
+    <line x1="254" y1="136" x2="266" y2="146" stroke="#a89878" stroke-width="1" opacity="0.85"/>
+    <rect x="262" y="146" width="14" height="18" fill="#d8c878"/>
+    <rect x="262" y="146" width="14" height="1" fill="#f0e090"/>
+    <rect x="262" y="163" width="14" height="1" fill="#785848"/>
+    <rect x="262" y="146" width="1" height="18" fill="#f0e090"/>
+    <rect x="275" y="146" width="1" height="18" fill="#785848"/>
+    <!-- a small grommet at top of tag -->
+    <rect x="267" y="148" width="4" height="2" fill="#3a2418"/>
+    <rect x="268" y="149" width="2" height="1" fill="#a89878"/>
+    <!-- handwriting on tag -->
+    <rect x="265" y="152" width="8" height="1" fill="#3a2418"/>
+    <rect x="265" y="155" width="6" height="1" fill="#3a2418"/>
+    <rect x="265" y="158" width="8" height="1" fill="#3a2418"/>
+
+    <!-- LID body (back, propped open) -->
+    <rect x="124" y="148" width="216" height="98" fill="url(#b2SuitcaseLid)"/>
+    <!-- outer highlights/shadows on lid -->
+    <rect x="124" y="148" width="216" height="2" fill="#a85868"/>
+    <rect x="124" y="244" width="216" height="2" fill="#1a0810"/>
+    <rect x="124" y="148" width="2" height="98" fill="#a85868"/>
+    <rect x="338" y="148" width="2" height="98" fill="#1a0810"/>
+    <!-- inner welt/seam (a thin frame inside the lid edge) -->
+    <rect x="130" y="154" width="204" height="1" fill="#5a2838" opacity="0.7"/>
+    <rect x="130" y="240" width="204" height="1" fill="#1a0810" opacity="0.85"/>
+    <rect x="130" y="154" width="1" height="86" fill="#5a2838" opacity="0.55"/>
+    <rect x="333" y="154" width="1" height="86" fill="#1a0810" opacity="0.7"/>
+    <!-- horizontal accent rib (hard-shell luggage signature line) -->
+    <rect x="124" y="196" width="216" height="2" fill="#1a0810" opacity="0.55"/>
+    <rect x="124" y="198" width="216" height="1" fill="#a85868" opacity="0.4"/>
+
+    <!-- CORNER REINFORCEMENTS on the lid (faux-brass plates) -->
+    <rect x="124" y="148" width="8" height="8" fill="#7a4828"/>
+    <rect x="124" y="148" width="8" height="1" fill="#a87038"/>
+    <rect x="124" y="155" width="8" height="1" fill="#3a1808"/>
+    <rect x="332" y="148" width="8" height="8" fill="#7a4828"/>
+    <rect x="332" y="148" width="8" height="1" fill="#a87038"/>
+    <rect x="332" y="155" width="8" height="1" fill="#3a1808"/>
+    <rect x="124" y="238" width="8" height="8" fill="#7a4828"/>
+    <rect x="124" y="245" width="8" height="1" fill="#3a1808"/>
+    <rect x="124" y="238" width="8" height="1" fill="#a87038"/>
+    <rect x="332" y="238" width="8" height="8" fill="#7a4828"/>
+    <rect x="332" y="245" width="8" height="1" fill="#3a1808"/>
+    <rect x="332" y="238" width="8" height="1" fill="#a87038"/>
+
+    <!-- LID inner mesh pocket (resized so the welt frame stays visible) -->
+    <rect x="142" y="168" width="180" height="64" fill="#3a1820" opacity="0.88"/>
+    <rect x="142" y="168" width="180" height="2" fill="#5a2838" opacity="0.85"/>
+    <rect x="142" y="230" width="180" height="2" fill="#1a0810" opacity="0.85"/>
+    <rect x="142" y="168" width="1" height="64" fill="#5a2838" opacity="0.6"/>
+    <rect x="321" y="168" width="1" height="64" fill="#1a0810" opacity="0.7"/>
+    <!-- mesh X criss-cross -->
+    <line x1="142" y1="168" x2="322" y2="232" stroke="#5a2838" stroke-width="1" opacity="0.45"/>
+    <line x1="322" y1="168" x2="142" y2="232" stroke="#5a2838" stroke-width="1" opacity="0.45"/>
+    <!-- envelope tucked inside -->
+    <rect x="208" y="186" width="44" height="20" fill="#6a4858" opacity="0.75"/>
+    <rect x="208" y="186" width="44" height="1" fill="#9a7888" opacity="0.7"/>
+    <rect x="208" y="205" width="44" height="1" fill="#3a2030" opacity="0.7"/>
+    <line x1="208" y1="186" x2="230" y2="196" stroke="#9a7888" stroke-width="0.5" opacity="0.55"/>
+    <line x1="230" y1="196" x2="252" y2="186" stroke="#9a7888" stroke-width="0.5" opacity="0.55"/>
+
+    <!-- HINGES at the seam (back, where lid pivots from base) -->
+    <rect x="138" y="244" width="14" height="4" fill="#5a3818"/>
+    <rect x="138" y="244" width="14" height="1" fill="#a87038"/>
+    <rect x="138" y="247" width="14" height="1" fill="#1a0e08"/>
+    <rect x="312" y="244" width="14" height="4" fill="#5a3818"/>
+    <rect x="312" y="244" width="14" height="1" fill="#a87038"/>
+    <rect x="312" y="247" width="14" height="1" fill="#1a0e08"/>
+
+    <!-- LATCHES at the seam (two brass clasps, iconic suitcase signal) -->
+    <!-- left latch -->
+    <rect x="172" y="240" width="26" height="14" fill="#7a4828"/>
+    <rect x="172" y="240" width="26" height="1" fill="#a87038"/>
+    <rect x="172" y="253" width="26" height="1" fill="#3a1808"/>
+    <rect x="172" y="240" width="1" height="14" fill="#a87038"/>
+    <rect x="197" y="240" width="1" height="14" fill="#3a1808"/>
+    <!-- inner buckle face (lever) -->
+    <rect x="176" y="244" width="18" height="6" fill="#3a1808"/>
+    <rect x="176" y="244" width="18" height="1" fill="#5a2810"/>
+    <rect x="184" y="246" width="2" height="2" fill="#a87038"/>
+    <!-- right latch -->
+    <rect x="266" y="240" width="26" height="14" fill="#7a4828"/>
+    <rect x="266" y="240" width="26" height="1" fill="#a87038"/>
+    <rect x="266" y="253" width="26" height="1" fill="#3a1808"/>
+    <rect x="266" y="240" width="1" height="14" fill="#a87038"/>
+    <rect x="291" y="240" width="1" height="14" fill="#3a1808"/>
+    <rect x="270" y="244" width="18" height="6" fill="#3a1808"/>
+    <rect x="270" y="244" width="18" height="1" fill="#5a2810"/>
+    <rect x="278" y="246" width="2" height="2" fill="#a87038"/>
+
+    <!-- BASE (bottom, lying flat with contents) -->
+    <rect x="124" y="246" width="216" height="56" fill="url(#b2Suitcase)"/>
+    <!-- outer highlights/shadows on base -->
+    <rect x="124" y="246" width="216" height="2" fill="#a85868"/>
+    <rect x="124" y="300" width="216" height="2" fill="#1a0810"/>
+    <rect x="124" y="246" width="2" height="56" fill="#a85868"/>
+    <rect x="338" y="246" width="2" height="56" fill="#1a0810"/>
+    <!-- inner welt -->
+    <rect x="130" y="252" width="204" height="1" fill="#a85868" opacity="0.6"/>
+    <rect x="130" y="298" width="204" height="1" fill="#1a0810" opacity="0.85"/>
+    <rect x="130" y="252" width="1" height="46" fill="#a85868" opacity="0.45"/>
+    <rect x="333" y="252" width="1" height="46" fill="#1a0810" opacity="0.7"/>
+    <!-- corner reinforcements on the base (front-bottom corners) -->
+    <rect x="124" y="294" width="8" height="8" fill="#7a4828"/>
+    <rect x="124" y="294" width="8" height="1" fill="#a87038"/>
+    <rect x="124" y="301" width="8" height="1" fill="#3a1808"/>
+    <rect x="332" y="294" width="8" height="8" fill="#7a4828"/>
+    <rect x="332" y="294" width="8" height="1" fill="#a87038"/>
+    <rect x="332" y="301" width="8" height="1" fill="#3a1808"/>
+
+    <!-- inner shadow seam between lid and base (bags appear heavier inside) -->
+    <rect x="124" y="246" width="216" height="3" fill="#0a0408" opacity="0.55"/>
+
+    <!-- contents: rotating variants. a default visible, b/c hidden.
+         All tops sit fully INSIDE the base; only the top of each stack is
+         visible above the red rim/welt at y=252. -->
+    <g id="b2-suitcase-contents-a">
+      <!-- folded shirts in stacks (cool blue) -->
+      <rect x="134" y="260" width="80" height="40" fill="#7888a8"/>
+      <rect x="134" y="260" width="80" height="1" fill="#98a8c8"/>
+      <rect x="134" y="299" width="80" height="1" fill="#586878"/>
+      <rect x="138" y="268" width="72" height="1" fill="#586878" opacity="0.7"/>
+      <rect x="138" y="276" width="72" height="1" fill="#586878" opacity="0.7"/>
+      <rect x="138" y="284" width="72" height="1" fill="#586878" opacity="0.7"/>
+      <rect x="138" y="292" width="72" height="1" fill="#586878" opacity="0.7"/>
+      <!-- second stack (warm rust) -->
+      <rect x="218" y="264" width="86" height="36" fill="#a86848"/>
+      <rect x="218" y="264" width="86" height="1" fill="#c88868"/>
+      <rect x="218" y="299" width="86" height="1" fill="#783828"/>
+      <rect x="222" y="272" width="78" height="1" fill="#783828" opacity="0.7"/>
+      <rect x="222" y="280" width="78" height="1" fill="#783828" opacity="0.7"/>
+      <rect x="222" y="288" width="78" height="1" fill="#783828" opacity="0.7"/>
+      <!-- a stray sock peeking out -->
+      <rect x="308" y="260" width="22" height="6" fill="#888"/>
+      <rect x="308" y="260" width="22" height="1" fill="#a8a898"/>
+      <!-- something small and hard to identify (a watch face?) -->
+      <rect x="220" y="256" width="12" height="6" fill="#5a4858"/>
+      <rect x="222" y="258" width="8" height="2" fill="#3a2838"/>
+    </g>
+    <g id="b2-suitcase-contents-b" visibility="hidden">
+      <!-- different palette: knit sweater (olive), jeans rolled, toiletry bag -->
+      <rect x="134" y="256" width="76" height="40" fill="#586848"/>
+      <rect x="134" y="256" width="76" height="1" fill="#788868"/>
+      <rect x="134" y="295" width="76" height="1" fill="#384828"/>
+      <rect x="138" y="262" width="68" height="1" fill="#384828" opacity="0.6"/>
+      <rect x="138" y="268" width="68" height="1" fill="#788868" opacity="0.5"/>
+      <rect x="138" y="276" width="68" height="1" fill="#384828" opacity="0.6"/>
+      <rect x="138" y="284" width="68" height="1" fill="#788868" opacity="0.5"/>
+      <rect x="138" y="290" width="68" height="1" fill="#384828" opacity="0.6"/>
+      <!-- jeans rolled -->
+      <rect x="214" y="260" width="90" height="18" fill="#384858"/>
+      <rect x="214" y="260" width="90" height="1" fill="#586878"/>
+      <rect x="214" y="277" width="90" height="1" fill="#181828"/>
+      <!-- belt -->
+      <rect x="214" y="282" width="90" height="4" fill="#3a2418"/>
+      <rect x="214" y="282" width="90" height="1" fill="#5a3826"/>
+      <rect x="248" y="283" width="6" height="2" fill="#888"/>
+      <!-- toiletry bag (purple) -->
+      <rect x="220" y="288" width="40" height="8" fill="#a868a8"/>
+      <rect x="220" y="288" width="40" height="1" fill="#c878c8"/>
+      <rect x="220" y="295" width="40" height="1" fill="#683868"/>
+    </g>
+    <g id="b2-suitcase-contents-c" visibility="hidden">
+      <!-- lighter, sparse: a single folded blanket and a book on top -->
+      <rect x="138" y="262" width="108" height="34" fill="#984858"/>
+      <rect x="138" y="262" width="108" height="1" fill="#b86878"/>
+      <rect x="138" y="295" width="108" height="1" fill="#682838"/>
+      <rect x="142" y="270" width="100" height="1" fill="#682838" opacity="0.6"/>
+      <rect x="142" y="278" width="100" height="1" fill="#682838" opacity="0.6"/>
+      <rect x="142" y="286" width="100" height="1" fill="#682838" opacity="0.6"/>
+      <!-- book -->
+      <rect x="252" y="262" width="56" height="28" fill="#384858"/>
+      <rect x="252" y="262" width="56" height="1" fill="#586878"/>
+      <rect x="252" y="289" width="56" height="1" fill="#181828"/>
+      <rect x="252" y="262" width="2" height="28" fill="#586878"/>
+      <rect x="306" y="262" width="2" height="28" fill="#181828"/>
+      <rect x="256" y="268" width="48" height="1" fill="#586878" opacity="0.5"/>
+      <rect x="256" y="274" width="48" height="1" fill="#586878" opacity="0.5"/>
+      <rect x="256" y="280" width="48" height="1" fill="#586878" opacity="0.5"/>
+      <!-- bookmark sticking out -->
+      <rect x="290" y="288" width="3" height="10" fill="#c88868"/>
+    </g>
+
+    <!-- a strap dangling off the front of the base -->
+    <rect x="200" y="298" width="2" height="14" fill="#3a1820"/>
+    <rect x="200" y="310" width="14" height="2" fill="#3a1820"/>
+  </g>
+
+  <!-- ============= STACKED BINS (right side, just two, properly grounded) ============= -->
+  <g id="b2-bins" pointer-events="none" transform="translate(0,6)">
+    <!-- bottom bin: solid grey, sits on the floor -->
+    <g id="b2-bin-bottom">
+      <rect x="378" y="232" width="86" height="64" fill="url(#b2Bin)"/>
+      <rect x="378" y="232" width="86" height="2" fill="#788898"/>
+      <rect x="378" y="294" width="86" height="2" fill="#283848"/>
+      <rect x="378" y="232" width="2" height="64" fill="#788898"/>
+      <rect x="462" y="232" width="2" height="64" fill="#283848"/>
+      <!-- handle -->
+      <rect x="408" y="228" width="22" height="4" fill="#283848"/>
+      <!-- WINTER label -->
+      <rect x="394" y="244" width="38" height="12" fill="#e8d8b0"/>
+      <rect x="394" y="244" width="38" height="1" fill="#f0e0c0"/>
+      <rect x="394" y="255" width="38" height="1" fill="#a89878"/>
+      <!-- W I N T E R (tiny pixel letters) -->
+      <rect x="397" y="248" width="1" height="4" fill="#3a2418"/>
+      <rect x="399" y="251" width="1" height="1" fill="#3a2418"/>
+      <rect x="400" y="248" width="1" height="4" fill="#3a2418"/>
+      <rect x="401" y="251" width="1" height="1" fill="#3a2418"/>
+      <rect x="402" y="248" width="1" height="4" fill="#3a2418"/>
+      <rect x="405" y="248" width="1" height="4" fill="#3a2418"/>
+      <rect x="408" y="248" width="1" height="4" fill="#3a2418"/>
+      <rect x="409" y="249" width="1" height="1" fill="#3a2418"/>
+      <rect x="410" y="250" width="1" height="1" fill="#3a2418"/>
+      <rect x="411" y="251" width="1" height="1" fill="#3a2418"/>
+      <rect x="412" y="248" width="1" height="4" fill="#3a2418"/>
+      <rect x="415" y="248" width="3" height="1" fill="#3a2418"/>
+      <rect x="416" y="249" width="1" height="3" fill="#3a2418"/>
+      <rect x="420" y="248" width="1" height="4" fill="#3a2418"/>
+      <rect x="421" y="248" width="2" height="1" fill="#3a2418"/>
+      <rect x="421" y="250" width="2" height="1" fill="#3a2418"/>
+      <rect x="421" y="251" width="2" height="1" fill="#3a2418"/>
+      <rect x="425" y="248" width="1" height="4" fill="#3a2418"/>
+      <rect x="426" y="248" width="1" height="1" fill="#3a2418"/>
+      <rect x="426" y="250" width="1" height="1" fill="#3a2418"/>
+      <rect x="426" y="251" width="1" height="1" fill="#3a2418"/>
+      <!-- a torn tape strip across the top edge -->
+      <rect x="386" y="238" width="20" height="2" fill="#a89878" opacity="0.55"/>
+      <rect x="436" y="238" width="22" height="2" fill="#a89878" opacity="0.55"/>
+    </g>
+    <!-- top bin: smaller, tilted -2deg, sits on the bottom bin -->
+    <g id="b2-bin-top" transform="rotate(-2 422 200)">
+      <rect x="384" y="178" width="76" height="54" fill="url(#b2Bin)"/>
+      <rect x="384" y="178" width="76" height="2" fill="#788898"/>
+      <rect x="384" y="230" width="76" height="2" fill="#283848"/>
+      <rect x="384" y="178" width="2" height="54" fill="#788898"/>
+      <rect x="458" y="178" width="2" height="54" fill="#283848"/>
+      <!-- handle -->
+      <rect x="408" y="174" width="20" height="4" fill="#283848"/>
+      <!-- a small piece of unidentified fabric peeking from under the lid -->
+      <rect x="396" y="176" width="14" height="3" fill="#984858"/>
+    </g>
+  </g>
+
+  <!-- ============= LAMP (small clip lamp on top of bins) ============= -->
+  <g id="b2-lamp" pointer-events="none" transform="translate(0,6)">
+    <!-- clip on top of top bin (~y=176, after rotation roughly the same) -->
+    <rect x="412" y="170" width="16" height="8" fill="#3a2418"/>
+    <rect x="412" y="170" width="16" height="1" fill="#5a3826"/>
+    <rect x="412" y="177" width="16" height="1" fill="#1a0e08"/>
+    <!-- vertical neck -->
+    <rect x="418" y="148" width="3" height="22" fill="#3a2418"/>
+    <!-- shade (a small bell, rectangular pixel-art) -->
+    <rect x="396" y="128" width="44" height="20" fill="#5a3a28"/>
+    <rect x="396" y="128" width="44" height="2" fill="#7a5236"/>
+    <rect x="396" y="146" width="44" height="2" fill="#1a0e08"/>
+    <rect x="396" y="128" width="2" height="20" fill="#7a5236"/>
+    <rect x="438" y="128" width="2" height="20" fill="#1a0e08"/>
+    <!-- bulb glow underneath the shade (flickers inconsistently) -->
+    <rect x="406" y="146" width="24" height="2" fill="#fff0c0">
+      <animate attributeName="opacity" values="1;0.55;1;0.7;1" dur="9s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="408" y="148" width="20" height="2" fill="#f4c878" opacity="0.85">
+      <animate attributeName="opacity" values="0.85;0.4;0.85;0.55;0.85" dur="4.3s" repeatCount="indefinite"/>
+    </rect>
+    <!-- thin cord trailing down behind bins -->
+    <rect x="426" y="178" width="1" height="50" fill="#181010" opacity="0.85"/>
+  </g>
+
+  <!-- ============= PHONE on the floor (face-up, screen black, glow leaks) ============= -->
+  <!-- Now drawn face-up so the screen reads more clearly as a phone, with the
+       glow on the floor coming from the pixel-screen itself. -->
+  <g id="b2-phone" pointer-events="none">
+    <!-- phone body -->
+    <rect x="338" y="282" width="48" height="22" fill="#0a0408"/>
+    <rect x="338" y="282" width="48" height="1" fill="#1a1018"/>
+    <rect x="338" y="303" width="48" height="1" fill="#000000"/>
+    <rect x="338" y="282" width="1" height="22" fill="#1a1018"/>
+    <rect x="385" y="282" width="1" height="22" fill="#000000"/>
+    <!-- screen (slightly inset, dark with a faint glow) -->
+    <rect x="342" y="285" width="40" height="16" fill="#0a1828"/>
+    <!-- screen content: a single notification bar -->
+    <rect x="344" y="287" width="36" height="3" fill="#a8c8f8" opacity="0.9">
+      <animate attributeName="opacity" values="0.9;0.55;0.9;0.7;0.9" dur="3.7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="346" y="291" width="32" height="1" fill="#5878a8" opacity="0.7"/>
+    <rect x="346" y="293" width="22" height="1" fill="#5878a8" opacity="0.7"/>
+    <rect x="346" y="295" width="28" height="1" fill="#5878a8" opacity="0.55"/>
+    <rect x="346" y="297" width="18" height="1" fill="#5878a8" opacity="0.55"/>
+    <!-- subtle screen glare -->
+    <rect x="342" y="285" width="40" height="1" fill="#a8c8f8" opacity="0.35"/>
+  </g>
+
+  <!-- ============= INTERACTION HOTSPOTS (transparent rects). last = highest priority. ============= -->
+  <g id="b2-hotspots">
+    <rect id="hit-floor" x="0" y="240" width="480" height="80" fill="transparent" pointer-events="all"/>
+    <rect id="hit-wall-marks" x="16" y="32" width="72" height="92" fill="transparent" pointer-events="all"/>
+    <rect id="hit-window" x="312" y="22" width="132" height="96" fill="transparent" pointer-events="all"/>
+    <rect id="hit-bins" x="378" y="172" width="86" height="124" fill="transparent" pointer-events="all"/>
+    <rect id="hit-bed" x="0" y="184" width="96" height="118" fill="transparent" pointer-events="all"/>
+    <rect id="hit-clothes-pile" x="84" y="276" width="40" height="30" fill="transparent" pointer-events="all"/>
+    <rect id="hit-disappearing" x="128" y="266" width="20" height="38" fill="transparent" pointer-events="all"/>
+    <rect id="hit-power-strip" x="156" y="302" width="58" height="14" fill="transparent" pointer-events="all"/>
+    <rect id="hit-suitcase-lid" x="124" y="128" width="216" height="118" fill="transparent" pointer-events="all"/>
+    <rect id="hit-suitcase" x="124" y="246" width="216" height="62" fill="transparent" pointer-events="all"/>
+    <rect id="hit-lamp" x="394" y="124" width="46" height="56" fill="transparent" pointer-events="all"/>
+    <rect id="hit-phone" x="334" y="278" width="56" height="30" fill="transparent" pointer-events="all"/>
+  </g>
+</svg>

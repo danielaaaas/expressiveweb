@@ -1,0 +1,537 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" shape-rendering="crispEdges">
+  <title>Bathroom memory fragment (apartment two)</title>
+  <desc>Cropped vignette: looking at a transitional, fluorescent-lit bathroom mirror in apartment two. Sparse counter, sink edge, half-unpacked hygiene products, an amber medicine bottle. Cool, dissociative palette. Reflection lags. Sometimes absent. Sometimes condensation forms hidden words at the mirror's edges.</desc>
+
+  <defs>
+    <linearGradient id="b2tWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#f4d0d0"/>
+      <stop offset="55%" stop-color="#c89098"/>
+      <stop offset="100%" stop-color="#6a3848"/>
+    </linearGradient>
+    <linearGradient id="b2tCounter" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#c8b890"/>
+      <stop offset="100%" stop-color="#6a5a40"/>
+    </linearGradient>
+    <linearGradient id="b2tSink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#f4ece0"/>
+      <stop offset="100%" stop-color="#a89878"/>
+    </linearGradient>
+    <radialGradient id="b2tSinkDepth" cx="50%" cy="40%" r="60%">
+      <stop offset="0%"  stop-color="#3a3a36" stop-opacity="0.78"/>
+      <stop offset="60%" stop-color="#3a3a36" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="b2tMirrorGlass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#5a6878"/>
+      <stop offset="50%" stop-color="#384858"/>
+      <stop offset="100%" stop-color="#1c2630"/>
+    </linearGradient>
+    <linearGradient id="b2tMirrorAbsent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#384450"/>
+      <stop offset="100%" stop-color="#101820"/>
+    </linearGradient>
+    <linearGradient id="b2tFluo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#e8f4fc"/>
+      <stop offset="100%" stop-color="#a0b0bc"/>
+    </linearGradient>
+    <radialGradient id="b2tFluoSpill" cx="50%" cy="0%" r="80%">
+      <stop offset="0%"  stop-color="#dceaf4" stop-opacity="0.42"/>
+      <stop offset="60%" stop-color="#a0b8c4" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="b2tHumidGlow" cx="50%" cy="80%" r="80%">
+      <stop offset="0%"  stop-color="#a8c0c8" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="b2tSidesL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#000000" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="b2tSidesR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%"  stop-color="#000000" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="b2tSoftBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="0.7"/>
+    </filter>
+    <filter id="b2tFog" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+    <clipPath id="b2tMirrorClip">
+      <rect x="120" y="48" width="240" height="160"/>
+    </clipPath>
+  </defs>
+
+  <!-- ============= WALL TILE BACKGROUND ============= -->
+  <rect width="480" height="320" fill="url(#b2tWall)"/>
+
+  <!-- subway tile grout (warm) -->
+  <g id="b2t-tiles" pointer-events="none" opacity="0.42">
+    <!-- horizontal -->
+    <rect x="0" y="40"  width="480" height="1" fill="#8a6850"/>
+    <rect x="0" y="80"  width="480" height="1" fill="#8a6850"/>
+    <rect x="0" y="120" width="480" height="1" fill="#8a6850"/>
+    <rect x="0" y="160" width="480" height="1" fill="#8a6850"/>
+    <rect x="0" y="200" width="480" height="1" fill="#8a6850"/>
+    <!-- vertical (offset rows like real subway tile) -->
+    <rect x="40"  y="40"  width="1" height="40" fill="#8a6850"/>
+    <rect x="80"  y="40"  width="1" height="40" fill="#8a6850"/>
+    <rect x="400" y="40"  width="1" height="40" fill="#8a6850"/>
+    <rect x="440" y="40"  width="1" height="40" fill="#8a6850"/>
+    <rect x="20"  y="80"  width="1" height="40" fill="#8a6850"/>
+    <rect x="60"  y="80"  width="1" height="40" fill="#8a6850"/>
+    <rect x="100" y="80"  width="1" height="40" fill="#8a6850"/>
+    <rect x="380" y="80"  width="1" height="40" fill="#8a6850"/>
+    <rect x="420" y="80"  width="1" height="40" fill="#8a6850"/>
+    <rect x="460" y="80"  width="1" height="40" fill="#8a6850"/>
+    <rect x="40"  y="120" width="1" height="40" fill="#8a6850"/>
+    <rect x="80"  y="120" width="1" height="40" fill="#8a6850"/>
+    <rect x="400" y="120" width="1" height="40" fill="#8a6850"/>
+    <rect x="440" y="120" width="1" height="40" fill="#8a6850"/>
+    <rect x="20"  y="160" width="1" height="40" fill="#8a6850"/>
+    <rect x="60"  y="160" width="1" height="40" fill="#8a6850"/>
+    <rect x="100" y="160" width="1" height="40" fill="#8a6850"/>
+    <rect x="380" y="160" width="1" height="40" fill="#8a6850"/>
+    <rect x="420" y="160" width="1" height="40" fill="#8a6850"/>
+    <rect x="460" y="160" width="1" height="40" fill="#8a6850"/>
+  </g>
+
+  <!-- a few faint water stains seeping down the wall tiles (warm) -->
+  <g id="b2t-wall-stains" pointer-events="none" opacity="0.32">
+    <rect x="48"  y="60"  width="2" height="22" fill="#886848"/>
+    <rect x="48"  y="80"  width="3" height="6"  fill="#886848"/>
+    <rect x="406" y="42"  width="2" height="44" fill="#886848"/>
+    <rect x="406" y="84"  width="4" height="4"  fill="#886848"/>
+    <rect x="240" y="40"  width="2" height="14" fill="#886848"/>
+    <rect x="364" y="120" width="2" height="20" fill="#886848"/>
+  </g>
+
+  <!-- ============= FLUORESCENT TUBE FIXTURE (above the mirror) ============= -->
+  <!-- a cold cool wash from above, with a long horizontal tube housing -->
+  <rect x="0" y="0" width="480" height="56" fill="url(#b2tFluoSpill)"/>
+  <g id="b2t-fixture" pointer-events="none">
+    <!-- housing -->
+    <rect x="160" y="14" width="160" height="14" fill="#3a3e44"/>
+    <rect x="160" y="14" width="160" height="2"  fill="#5a6068"/>
+    <rect x="160" y="26" width="160" height="2"  fill="#1a1e24"/>
+    <rect x="160" y="14" width="2"  height="14" fill="#1a1e24"/>
+    <rect x="318" y="14" width="2"  height="14" fill="#1a1e24"/>
+    <!-- the bare tube -->
+    <rect x="170" y="20" width="140" height="4" fill="url(#b2tFluo)">
+      <animate attributeName="opacity" values="1;0.74;1;0.55;1;0.85;1" dur="5.4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="170" y="21" width="140" height="2" fill="#fff" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.4;0.7;0.28;0.7" dur="5.4s" repeatCount="indefinite"/>
+    </rect>
+    <!-- a dim half of the tube, "uneven" lighting -->
+    <rect x="170" y="20" width="44" height="4" fill="#384458" opacity="0.45"/>
+    <!-- screws on the housing -->
+    <rect x="166" y="20" width="2" height="2" fill="#1a1e24"/>
+    <rect x="312" y="20" width="2" height="2" fill="#1a1e24"/>
+    <!-- a thin hairline crack on the right end of the housing -->
+    <line x1="306" y1="14" x2="316" y2="20" stroke="#1a1e24" stroke-width="1" opacity="0.65"/>
+  </g>
+
+  <!-- side darkening to enforce tight cinematic crop -->
+  <rect x="0"   y="0" width="50" height="320" fill="url(#b2tSidesL)"/>
+  <rect x="430" y="0" width="50" height="320" fill="url(#b2tSidesR)"/>
+
+  <!-- ============= MIRROR (frameless, on the wall, slightly off-square) ============= -->
+  <g id="b2t-mirror">
+    <!-- mirror outer thin metal rim -->
+    <rect x="116" y="44" width="248" height="168" fill="#787a80"/>
+    <rect x="116" y="44" width="248" height="2"   fill="#a8aab0"/>
+    <rect x="116" y="210" width="248" height="2"  fill="#383a40"/>
+    <rect x="116" y="44" width="2"   height="168" fill="#a8aab0"/>
+    <rect x="362" y="44" width="2"   height="168" fill="#383a40"/>
+
+    <!-- mirror glass base (default reflection) -->
+    <rect id="b2t-mirror-base" x="120" y="48" width="240" height="160" fill="url(#b2tMirrorGlass)"/>
+
+    <!-- mirror "absent reflection" overlay: a flatter, darker glass with no figure
+         (visibility toggled on the variant that drops the reflection entirely) -->
+    <rect id="b2t-mirror-absent" x="120" y="48" width="240" height="160" fill="url(#b2tMirrorAbsent)" visibility="hidden"/>
+
+    <!-- ===== REFLECTION CONTENTS (clipped to the mirror rect) ===== -->
+    <g clip-path="url(#b2tMirrorClip)">
+
+      <!-- the room behind (a faint suggestion of the doorframe + a hanging towel) -->
+      <g id="b2t-mirror-room" pointer-events="none">
+        <!-- back wall band -->
+        <rect x="120" y="48" width="240" height="160" fill="#384858" opacity="0.3"/>
+        <!-- ghost doorway on the right -->
+        <rect x="298" y="62" width="56" height="142" fill="#1a2230" opacity="0.55"/>
+        <rect x="298" y="62" width="2"  height="142" fill="#0a0e14"/>
+        <rect x="354" y="62" width="2"  height="142" fill="#0a0e14"/>
+        <rect x="298" y="62" width="56" height="2"   fill="#0a0e14"/>
+        <!-- a sliver of bedroom doorframe glow leaking through -->
+        <rect x="304" y="68" width="44" height="60" fill="#3a4858" opacity="0.5"/>
+        <!-- ghost towel on a hook in the reflection -->
+        <rect x="138" y="78" width="22" height="32" fill="#586068" opacity="0.55"/>
+        <rect x="138" y="78" width="22" height="1"  fill="#788088" opacity="0.6"/>
+        <rect x="138" y="109" width="22" height="1" fill="#384048" opacity="0.7"/>
+        <!-- faint ceiling line -->
+        <rect x="120" y="56" width="240" height="1" fill="#788088" opacity="0.4"/>
+      </g>
+
+      <!-- the figure (the person in front of the mirror): a SHADOW silhouette
+           with no facial features. slimmer, more elegant shoulders + tapered
+           neck. soft pulse + a 1-px sway so the shadow breathes/lags as one. -->
+      <g id="b2t-mirror-figure" pointer-events="none" opacity="0.78">
+        <animate attributeName="opacity" values="0.78;0.58;0.78;0.42;0.78" dur="6.2s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="translate" values="0,0;1,0;0,0;-1,0;0,0" dur="3.7s" repeatCount="indefinite"/>
+        <!-- shoulders / torso (slim, elegant trapezoid; nudged a touch wider) -->
+        <polygon points="190,210 290,210 266,156 214,156" fill="#1c2028"/>
+        <!-- soft shoulder cap (a lighter band easing the shoulder line) -->
+        <polygon points="216,156 264,156 260,150 220,150" fill="#2a3038"/>
+        <!-- neck (a slimmer column above the shoulders) -->
+        <rect x="230" y="138" width="20" height="18" fill="#1c2028"/>
+        <!-- head (slimmer oval via stacked rects, no features) -->
+        <rect x="216" y="104" width="48" height="36" fill="#1c2028"/>
+        <rect x="214" y="110" width="2"  height="24" fill="#1c2028"/>
+        <rect x="264" y="110" width="2"  height="24" fill="#1c2028"/>
+        <rect x="218" y="100" width="44" height="4"  fill="#1c2028"/>
+        <rect x="222" y="96"  width="36" height="4"  fill="#1c2028"/>
+        <rect x="226" y="92"  width="28" height="4"  fill="#1c2028"/>
+        <!-- top crown highlight -->
+        <rect x="226" y="92"  width="28" height="2"  fill="#2a3038"/>
+        <rect x="230" y="90"  width="20" height="2"  fill="#2a3038"/>
+      </g>
+
+      <!-- a soft cool light bloom from the fluorescent above, falling on the mirror -->
+      <ellipse cx="240" cy="62" rx="120" ry="22" fill="#dceaf4" opacity="0.25"/>
+
+      <!-- mirror surface scratches + a faint vertical dust line -->
+      <rect x="148" y="74" width="36" height="1" fill="#a8b0bc" opacity="0.30"/>
+      <rect x="320" y="180" width="22" height="1" fill="#a8b0bc" opacity="0.28"/>
+      <rect x="334" y="56" width="1" height="148" fill="#a8b0bc" opacity="0.18"/>
+
+      <!-- ===== CONDENSATION patches at the mirror corners (always visible) ===== -->
+      <g id="b2t-condensation" pointer-events="none">
+        <!-- top-left fog patch -->
+        <ellipse cx="142" cy="64" rx="42" ry="20" fill="#cfd8de" opacity="0.55" filter="url(#b2tFog)"/>
+        <!-- top-right fog patch -->
+        <ellipse cx="340" cy="58" rx="36" ry="14" fill="#cfd8de" opacity="0.45" filter="url(#b2tFog)"/>
+        <!-- bottom-left fog patch (humid air pooling) -->
+        <ellipse cx="156" cy="200" rx="58" ry="18" fill="#cfd8de" opacity="0.50" filter="url(#b2tFog)"/>
+        <!-- a slow, almost imperceptible expansion of the bottom band -->
+        <rect x="120" y="190" width="240" height="18" fill="#cfd8de" opacity="0.18">
+          <animate attributeName="opacity" values="0.18;0.30;0.18;0.10;0.18" dur="14s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+
+      <!-- ===== HIDDEN CONDENSATION WORD (shows only on variant c) ===== -->
+      <!-- fingertip drag through the steam: cursive lowercase "stay" -->
+      <g id="b2t-condensation-word" visibility="hidden" pointer-events="none">
+        <!-- s -->
+        <rect x="146" y="186" width="10" height="2" fill="#1a2230"/>
+        <rect x="146" y="188" width="2"  height="3" fill="#1a2230"/>
+        <rect x="146" y="190" width="10" height="2" fill="#1a2230"/>
+        <rect x="154" y="192" width="2"  height="3" fill="#1a2230"/>
+        <rect x="146" y="194" width="10" height="2" fill="#1a2230"/>
+        <!-- t -->
+        <rect x="160" y="184" width="2"  height="12" fill="#1a2230"/>
+        <rect x="158" y="186" width="6"  height="2" fill="#1a2230"/>
+        <!-- a -->
+        <rect x="168" y="190" width="10" height="2" fill="#1a2230"/>
+        <rect x="168" y="192" width="2"  height="4" fill="#1a2230"/>
+        <rect x="176" y="192" width="2"  height="4" fill="#1a2230"/>
+        <rect x="168" y="194" width="10" height="2" fill="#1a2230"/>
+        <!-- y -->
+        <rect x="182" y="190" width="2"  height="6" fill="#1a2230"/>
+        <rect x="190" y="190" width="2"  height="10" fill="#1a2230"/>
+        <rect x="182" y="194" width="10" height="2" fill="#1a2230"/>
+        <rect x="184" y="198" width="6"  height="2" fill="#1a2230"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ============= COUNTER + SINK ============= -->
+  <g id="b2t-counter" pointer-events="none">
+    <!-- counter top -->
+    <rect x="0"   y="220" width="480" height="10" fill="url(#b2tCounter)"/>
+    <rect x="0"   y="220" width="480" height="2"  fill="#c8c8c4"/>
+    <rect x="0"   y="228" width="480" height="2"  fill="#3a3a38"/>
+    <!-- water stains on the counter (warm pale rings) -->
+    <rect x="98"  y="223" width="14" height="1" fill="#a89878" opacity="0.65"/>
+    <rect x="98"  y="225" width="14" height="1" fill="#a89878" opacity="0.55"/>
+    <rect x="328" y="224" width="20" height="1" fill="#a89878" opacity="0.65"/>
+    <rect x="332" y="226" width="14" height="1" fill="#a89878" opacity="0.55"/>
+    <!-- a thin wet ring around the soap dispenser -->
+    <ellipse cx="384" cy="225" rx="22" ry="2" fill="#b8a890" opacity="0.45"/>
+
+    <!-- counter front face (warm dark wood cabinet) -->
+    <rect x="0"   y="230" width="480" height="34" fill="#4a3828"/>
+    <rect x="0"   y="230" width="480" height="1"  fill="#6a4a30" opacity="0.7"/>
+    <rect x="0"   y="263" width="480" height="1"  fill="#1a0e08" opacity="0.7"/>
+
+    <!-- baseboard / floor shadow band -->
+    <rect x="0"   y="264" width="480" height="56" fill="#241810"/>
+    <rect x="0"   y="264" width="480" height="2"  fill="#0a0604" opacity="0.85"/>
+  </g>
+
+  <!-- the sink basin: cropped, only the back rim + an arc of the bowl visible -->
+  <g id="b2t-sink-basin" pointer-events="none">
+    <!-- back rim -->
+    <rect x="186" y="216" width="116" height="6" fill="url(#b2tSink)"/>
+    <rect x="186" y="216" width="116" height="1" fill="#f0f0ec"/>
+    <rect x="186" y="221" width="116" height="1" fill="#5a5a56"/>
+    <!-- bowl interior -->
+    <rect x="180" y="222" width="128" height="42" fill="url(#b2tSink)"/>
+    <rect x="180" y="222" width="128" height="42" fill="url(#b2tSinkDepth)" opacity="0.85"/>
+    <!-- drain in the back of the bowl -->
+    <ellipse cx="244" cy="244" rx="10" ry="3" fill="#1a1a18"/>
+    <ellipse cx="244" cy="244" rx="10" ry="3" fill="none" stroke="#3a3a36" stroke-width="1"/>
+    <rect x="240" y="243" width="8" height="1" fill="#3a3a36"/>
+    <!-- bowl rim shadow on the counter -->
+    <rect x="180" y="222" width="128" height="1" fill="#000000" opacity="0.45"/>
+  </g>
+
+  <!-- chrome faucet -->
+  <g id="b2t-faucet" pointer-events="none">
+    <!-- base -->
+    <rect x="232" y="206" width="20" height="6" fill="#a8b0b8"/>
+    <rect x="232" y="206" width="20" height="1" fill="#dceaf4"/>
+    <rect x="232" y="211" width="20" height="1" fill="#586068"/>
+    <!-- spout neck rising -->
+    <rect x="240" y="194" width="4" height="14" fill="#a8b0b8"/>
+    <rect x="240" y="194" width="1" height="14" fill="#dceaf4"/>
+    <rect x="243" y="194" width="1" height="14" fill="#586068"/>
+    <!-- spout horizontal -->
+    <rect x="232" y="190" width="20" height="4" fill="#a8b0b8"/>
+    <rect x="232" y="190" width="20" height="1" fill="#dceaf4"/>
+    <rect x="232" y="193" width="20" height="1" fill="#586068"/>
+    <!-- a slow drip -->
+    <rect x="240" y="196" width="2" height="2" fill="#a0c0d0" opacity="0.85">
+      <animate attributeName="y" values="196;208;220;220" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.85;0.85;0.65;0" dur="6s" repeatCount="indefinite"/>
+    </rect>
+    <!-- handles, paired -->
+    <rect x="216" y="208" width="10" height="4" fill="#a8b0b8"/>
+    <rect x="216" y="208" width="10" height="1" fill="#dceaf4"/>
+    <rect x="216" y="211" width="10" height="1" fill="#586068"/>
+    <rect x="258" y="208" width="10" height="4" fill="#a8b0b8"/>
+    <rect x="258" y="208" width="10" height="1" fill="#dceaf4"/>
+    <rect x="258" y="211" width="10" height="1" fill="#586068"/>
+  </g>
+
+  <!-- ============= SPARSE TOILETRIES ON THE COUNTER ============= -->
+
+  <!-- LEFT: half-used toothpaste tube (laying on its side, cap off) + a single toothbrush in a cup -->
+  <g id="b2t-toothpaste" pointer-events="none">
+    <!-- tube body laying horizontally -->
+    <rect x="56" y="210" width="60" height="10" fill="#e8e8e4"/>
+    <rect x="56" y="210" width="60" height="1"  fill="#fff8f0"/>
+    <rect x="56" y="219" width="60" height="1"  fill="#888884"/>
+    <!-- crimped end (left) -->
+    <rect x="50"  y="212" width="6"  height="6" fill="#a8a8a4"/>
+    <rect x="50"  y="212" width="1"  height="6" fill="#dceaf4"/>
+    <rect x="55"  y="212" width="1"  height="6" fill="#5a5a56"/>
+    <!-- mint stripe -->
+    <rect x="62"  y="213" width="48" height="2" fill="#88c8a8"/>
+    <rect x="62"  y="215" width="48" height="2" fill="#3878a8"/>
+    <!-- "brand" tiny dots -->
+    <rect x="76"  y="217" width="2" height="1" fill="#1a2230"/>
+    <rect x="80"  y="217" width="2" height="1" fill="#1a2230"/>
+    <rect x="84"  y="217" width="2" height="1" fill="#1a2230"/>
+    <!-- nozzle (right end) -->
+    <rect x="116" y="212" width="4" height="6" fill="#a8a8a4"/>
+    <rect x="116" y="212" width="1" height="6" fill="#dceaf4"/>
+    <rect x="119" y="212" width="1" height="6" fill="#5a5a56"/>
+    <!-- a tiny squeeze of paste oozing -->
+    <rect x="120" y="214" width="3" height="2" fill="#dceaf4"/>
+    <rect x="120" y="214" width="3" height="1" fill="#fff"/>
+    <!-- the cap, sitting separately to the right -->
+    <rect x="128" y="215" width="6" height="5" fill="#3878a8"/>
+    <rect x="128" y="215" width="6" height="1" fill="#58a8c8"/>
+    <rect x="128" y="219" width="6" height="1" fill="#1a4868"/>
+  </g>
+
+  <g id="b2t-toothbrush-cup" pointer-events="none">
+    <!-- cup (translucent glass) -->
+    <rect x="20" y="190" width="22" height="32" fill="#a8c8d0" opacity="0.55"/>
+    <rect x="20" y="190" width="22" height="1"  fill="#d8e8ec" opacity="0.85"/>
+    <rect x="20" y="221" width="22" height="1"  fill="#586878"/>
+    <rect x="20" y="190" width="1"  height="32" fill="#d8e8ec" opacity="0.6"/>
+    <rect x="41" y="190" width="1"  height="32" fill="#586878" opacity="0.7"/>
+    <!-- water level inside -->
+    <rect x="22" y="206" width="18" height="14" fill="#88a8b8" opacity="0.35"/>
+    <rect x="22" y="206" width="18" height="1"  fill="#a8c8d0" opacity="0.55"/>
+    <!-- the toothbrush -->
+    <rect x="28" y="170" width="3" height="32" fill="#586068"/>
+    <rect x="28" y="170" width="3" height="2"  fill="#788088"/>
+    <rect x="26" y="168" width="7" height="4"  fill="#dceaf4"/>
+    <rect x="26" y="168" width="7" height="1"  fill="#fff"/>
+    <rect x="26" y="171" width="7" height="1"  fill="#a8b0b8"/>
+    <!-- bristle dots -->
+    <rect x="27" y="167" width="1" height="2" fill="#a8b0b8"/>
+    <rect x="29" y="166" width="1" height="3" fill="#a8b0b8"/>
+    <rect x="31" y="167" width="1" height="2" fill="#a8b0b8"/>
+  </g>
+
+  <!-- HALF-UNPACKED SHAMPOO BOTTLE: still partly inside its cardboard box -->
+  <g id="b2t-shampoo" pointer-events="none">
+    <!-- the box (open at the top) -->
+    <rect x="312" y="178" width="36" height="42" fill="#a87858"/>
+    <rect x="312" y="178" width="36" height="1"  fill="#c89878"/>
+    <rect x="312" y="219" width="36" height="1"  fill="#583828"/>
+    <rect x="312" y="178" width="1"  height="42" fill="#c89878"/>
+    <rect x="347" y="178" width="1"  height="42" fill="#583828"/>
+    <!-- box logo strip -->
+    <rect x="316" y="200" width="28" height="6" fill="#fff" opacity="0.78"/>
+    <rect x="316" y="200" width="28" height="1" fill="#3a2418"/>
+    <rect x="316" y="205" width="28" height="1" fill="#3a2418"/>
+    <rect x="320" y="202" width="20" height="1" fill="#3a2418"/>
+    <!-- box flap propped open -->
+    <polygon points="312,178 348,178 344,170 316,170" fill="#583828"/>
+    <polygon points="312,178 348,178 344,170 316,170" fill="none" stroke="#3a1808" stroke-width="1"/>
+    <!-- the bottle peeking out the top of the box -->
+    <rect x="320" y="158" width="20" height="20" fill="#688898"/>
+    <rect x="320" y="158" width="20" height="1"  fill="#88a8b8"/>
+    <rect x="320" y="177" width="20" height="1"  fill="#384858"/>
+    <rect x="320" y="158" width="1"  height="20" fill="#88a8b8"/>
+    <rect x="339" y="158" width="1"  height="20" fill="#384858"/>
+    <!-- bottle cap -->
+    <rect x="324" y="152" width="12" height="6" fill="#3a4858"/>
+    <rect x="324" y="152" width="12" height="1" fill="#5a6878"/>
+    <rect x="324" y="157" width="12" height="1" fill="#1a2230"/>
+    <!-- price sticker still on box -->
+    <rect x="316" y="184" width="14" height="10" fill="#f4d878"/>
+    <rect x="316" y="184" width="14" height="1"  fill="#fff088"/>
+    <rect x="316" y="193" width="14" height="1"  fill="#a87808"/>
+    <rect x="319" y="187" width="2"  height="1"  fill="#3a2418"/>
+    <rect x="322" y="187" width="2"  height="1"  fill="#3a2418"/>
+    <rect x="319" y="190" width="8"  height="1"  fill="#3a2418"/>
+  </g>
+
+  <!-- AMBER MEDICINE BOTTLE (with a label that has a date) -->
+  <g id="b2t-medicine" pointer-events="none">
+    <!-- bottle body (amber translucent) -->
+    <rect x="156" y="190" width="22" height="30" fill="#a86838"/>
+    <rect x="156" y="190" width="22" height="1"  fill="#c88858"/>
+    <rect x="156" y="219" width="22" height="1"  fill="#582818"/>
+    <rect x="156" y="190" width="1"  height="30" fill="#c88858"/>
+    <rect x="177" y="190" width="1"  height="30" fill="#582818"/>
+    <!-- white child-resistant cap -->
+    <rect x="158" y="184" width="18" height="6" fill="#e8e8e4"/>
+    <rect x="158" y="184" width="18" height="1" fill="#fff8f0"/>
+    <rect x="158" y="189" width="18" height="1" fill="#888884"/>
+    <!-- ridges on the cap -->
+    <rect x="160" y="185" width="1" height="4" fill="#888884"/>
+    <rect x="163" y="185" width="1" height="4" fill="#888884"/>
+    <rect x="166" y="185" width="1" height="4" fill="#888884"/>
+    <rect x="169" y="185" width="1" height="4" fill="#888884"/>
+    <rect x="172" y="185" width="1" height="4" fill="#888884"/>
+    <!-- white label wrapped around bottle -->
+    <rect id="b2t-med-label" x="156" y="198" width="22" height="16" fill="#f4f0e8"/>
+    <rect x="156" y="198" width="22" height="1"  fill="#fff8f0"/>
+    <rect x="156" y="213" width="22" height="1"  fill="#988868"/>
+    <!-- printed Rx mark -->
+    <rect x="158" y="200" width="2" height="2" fill="#3a2418"/>
+    <rect x="161" y="200" width="2" height="2" fill="#3a2418"/>
+    <rect x="158" y="203" width="2" height="2" fill="#3a2418"/>
+    <!-- date row (3 swappable variants) -->
+    <g id="b2t-med-date-a">
+      <rect x="158" y="207" width="2" height="1" fill="#3a2418"/>
+      <rect x="161" y="207" width="2" height="1" fill="#3a2418"/>
+      <rect x="164" y="207" width="2" height="1" fill="#3a2418"/>
+      <rect x="167" y="207" width="2" height="1" fill="#3a2418"/>
+      <rect x="170" y="207" width="2" height="1" fill="#3a2418"/>
+      <rect x="173" y="207" width="2" height="1" fill="#3a2418"/>
+      <rect x="158" y="209" width="14" height="1" fill="#3a2418"/>
+    </g>
+    <g id="b2t-med-date-b" visibility="hidden">
+      <rect x="158" y="207" width="3" height="1" fill="#3a2418"/>
+      <rect x="162" y="207" width="3" height="1" fill="#3a2418"/>
+      <rect x="166" y="207" width="3" height="1" fill="#3a2418"/>
+      <rect x="170" y="207" width="2" height="1" fill="#3a2418"/>
+      <rect x="173" y="207" width="2" height="1" fill="#3a2418"/>
+      <rect x="158" y="209" width="10" height="1" fill="#3a2418"/>
+    </g>
+    <g id="b2t-med-date-c" visibility="hidden">
+      <rect x="158" y="207" width="2" height="1" fill="#3a2418"/>
+      <rect x="161" y="207" width="4" height="1" fill="#3a2418"/>
+      <rect x="166" y="207" width="2" height="1" fill="#3a2418"/>
+      <rect x="169" y="207" width="3" height="1" fill="#3a2418"/>
+      <rect x="173" y="207" width="2" height="1" fill="#3a2418"/>
+      <rect x="158" y="209" width="18" height="1" fill="#3a2418"/>
+    </g>
+  </g>
+
+  <!-- SOAP DISPENSER (plastic pump, generic) -->
+  <g id="b2t-soap" pointer-events="none">
+    <!-- bottle body -->
+    <rect x="368" y="184" width="36" height="36" fill="#dceaf4"/>
+    <rect x="368" y="184" width="36" height="1"  fill="#fff"/>
+    <rect x="368" y="219" width="36" height="1"  fill="#788088"/>
+    <rect x="368" y="184" width="1"  height="36" fill="#fff"/>
+    <rect x="403" y="184" width="1"  height="36" fill="#788088"/>
+    <!-- soap level inside (a faint pink soap, half full) -->
+    <rect x="370" y="200" width="32" height="18" fill="#e0a8a8" opacity="0.65"/>
+    <rect x="370" y="200" width="32" height="1"  fill="#f0c8c8" opacity="0.85"/>
+    <!-- pump collar -->
+    <rect x="378" y="178" width="16" height="6" fill="#a8a8a4"/>
+    <rect x="378" y="178" width="16" height="1" fill="#dceaf4"/>
+    <rect x="378" y="183" width="16" height="1" fill="#5a5a56"/>
+    <!-- pump head -->
+    <rect x="380" y="170" width="12" height="8" fill="#a8a8a4"/>
+    <rect x="380" y="170" width="12" height="1" fill="#dceaf4"/>
+    <rect x="380" y="177" width="12" height="1" fill="#5a5a56"/>
+    <!-- pump nozzle -->
+    <rect x="376" y="173" width="8" height="3" fill="#a8a8a4"/>
+    <rect x="376" y="173" width="8" height="1" fill="#dceaf4"/>
+    <rect x="376" y="175" width="8" height="1" fill="#5a5a56"/>
+  </g>
+
+  <!-- HAND TOWEL hanging at the right edge of the wall (much wider, fills the
+       right wall like a real folded bath towel; warm dusty mauve so it reads
+       as fabric against the pinkish wall) -->
+  <g id="b2t-towel" pointer-events="none">
+    <!-- towel bar (long) -->
+    <rect x="394" y="156" width="82" height="2" fill="#a8a8a4"/>
+    <rect x="394" y="156" width="2"  height="6" fill="#a8a8a4"/>
+    <rect x="474" y="156" width="2"  height="6" fill="#a8a8a4"/>
+    <!-- the towel (much wider, slightly taller) -->
+    <rect x="398" y="158" width="74" height="60" fill="#7a4858"/>
+    <rect x="398" y="158" width="74" height="1"  fill="#a87888"/>
+    <rect x="398" y="217" width="74" height="1"  fill="#481828"/>
+    <rect x="398" y="158" width="1"  height="60" fill="#a87888"/>
+    <rect x="471" y="158" width="1"  height="60" fill="#481828"/>
+    <!-- two soft fold lines so the wider towel reads as fabric panels -->
+    <rect x="423" y="158" width="1" height="60" fill="#481828" opacity="0.55"/>
+    <rect x="448" y="158" width="1" height="60" fill="#481828" opacity="0.55"/>
+    <!-- towel weave lines -->
+    <rect x="402" y="166" width="66" height="1" fill="#481828" opacity="0.55"/>
+    <rect x="402" y="178" width="66" height="1" fill="#481828" opacity="0.45"/>
+    <rect x="402" y="194" width="66" height="1" fill="#481828" opacity="0.45"/>
+    <rect x="402" y="208" width="66" height="1" fill="#481828" opacity="0.45"/>
+    <!-- bottom hem: subtle drape kinks across the wider hem -->
+    <rect x="400" y="218" width="20" height="2" fill="#7a4858"/>
+    <rect x="400" y="218" width="20" height="1" fill="#a87888"/>
+    <rect x="424" y="218" width="20" height="2" fill="#7a4858"/>
+    <rect x="424" y="218" width="20" height="1" fill="#a87888"/>
+    <rect x="450" y="218" width="20" height="2" fill="#7a4858"/>
+    <rect x="450" y="218" width="20" height="1" fill="#a87888"/>
+    <!-- a small care-tag -->
+    <rect x="430" y="162" width="3" height="3" fill="#fff" opacity="0.65"/>
+  </g>
+
+  <!-- a humid floor pool reflecting the fluorescent above (just a thin band) -->
+  <ellipse cx="240" cy="290" rx="220" ry="12" fill="url(#b2tHumidGlow)"/>
+
+  <!-- ============= INTERACTION HOTSPOTS (transparent, on top of everything) ============= -->
+  <g id="b2t-hotspots">
+    <rect id="hit-mirror"      x="116" y="44"  width="248" height="168" fill="transparent" pointer-events="all"/>
+    <rect id="hit-condensation" x="120" y="180" width="100" height="32"  fill="transparent" pointer-events="all"/>
+    <rect id="hit-light"       x="160" y="14"  width="160" height="20"  fill="transparent" pointer-events="all"/>
+    <rect id="hit-toothbrush-cup" x="16" y="166" width="34" height="58" fill="transparent" pointer-events="all"/>
+    <rect id="hit-toothpaste"  x="48"  y="206" width="92"  height="18"  fill="transparent" pointer-events="all"/>
+    <rect id="hit-medicine"    x="154" y="180" width="28"  height="44"  fill="transparent" pointer-events="all"/>
+    <rect id="hit-shampoo"     x="310" y="148" width="42"  height="76"  fill="transparent" pointer-events="all"/>
+    <rect id="hit-soap"        x="364" y="166" width="44"  height="58"  fill="transparent" pointer-events="all"/>
+    <rect id="hit-towel"       x="392" y="156" width="86"  height="66"  fill="transparent" pointer-events="all"/>
+    <rect id="hit-faucet"      x="212" y="186" width="60"  height="30"  fill="transparent" pointer-events="all"/>
+    <rect id="hit-sink"        x="178" y="216" width="132" height="48"  fill="transparent" pointer-events="all"/>
+    <rect id="hit-counter"     x="0"   y="220" width="480" height="10"  fill="transparent" pointer-events="all"/>
+  </g>
+</svg>

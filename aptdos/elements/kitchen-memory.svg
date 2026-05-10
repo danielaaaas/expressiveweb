@@ -1,0 +1,683 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" shape-rendering="crispEdges">
+  <title>Kitchen memory fragment (apartment two)</title>
+  <desc>Cropped vignette: an apartment-two kitchen at late-night. Refrigerator door cracked open and glowing into a tired, fluorescent-lit counter. A grocery bag sits half-unpacked, reused containers stack on the counter, magnets and notes cling to the freezer door. Uneven cool light from above, warm spill from the fridge.</desc>
+
+  <defs>
+    <linearGradient id="k2Wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#e0a878"/>
+      <stop offset="55%" stop-color="#b07048"/>
+      <stop offset="100%" stop-color="#582818"/>
+    </linearGradient>
+    <linearGradient id="k2Tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#f0c898"/>
+      <stop offset="100%" stop-color="#885838"/>
+    </linearGradient>
+    <linearGradient id="k2Floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#1c1e22"/>
+      <stop offset="100%" stop-color="#08080a"/>
+    </linearGradient>
+    <linearGradient id="k2Counter" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#a89878"/>
+      <stop offset="100%" stop-color="#5a4a3a"/>
+    </linearGradient>
+    <linearGradient id="k2Cabinet" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#3a2a20"/>
+      <stop offset="100%" stop-color="#1a1208"/>
+    </linearGradient>
+    <linearGradient id="k2FridgeBody" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#d8d0bc"/>
+      <stop offset="50%" stop-color="#b8b09a"/>
+      <stop offset="100%" stop-color="#888070"/>
+    </linearGradient>
+    <linearGradient id="k2FridgeShadow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#000000" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="k2InsideGlow" cx="50%" cy="40%" r="65%">
+      <stop offset="0%"  stop-color="#fff4c8" stop-opacity="0.95"/>
+      <stop offset="55%" stop-color="#f4c878" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#3a2818" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="k2InsideDepth" cx="50%" cy="50%" r="60%">
+      <stop offset="0%"  stop-color="#1a1810" stop-opacity="0"/>
+      <stop offset="60%" stop-color="#0a0808" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.85"/>
+    </radialGradient>
+    <radialGradient id="k2FridgeSpill" cx="30%" cy="40%" r="78%">
+      <stop offset="0%"  stop-color="#f4e0a8" stop-opacity="0.45"/>
+      <stop offset="55%" stop-color="#d8a868" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="k2Fluorescent" cx="50%" cy="0%" r="80%">
+      <stop offset="0%"  stop-color="#e0f0f8" stop-opacity="0.40"/>
+      <stop offset="60%" stop-color="#a0b0bc" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="k2SidesL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"  stop-color="#000000" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="k2SidesR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%"  stop-color="#000000" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="k2Bag" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#f0f0f0" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#a8a8a8" stop-opacity="0.85"/>
+    </linearGradient>
+    <filter id="k2SoftGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ============= WALL + TILE BACKSPLASH ============= -->
+  <rect width="480" height="320" fill="url(#k2Wall)"/>
+
+  <!-- backsplash tile band behind the counter (right half) -->
+  <g id="k2-tile" pointer-events="none">
+    <rect x="252" y="118" width="228" height="108" fill="url(#k2Tile)"/>
+    <!-- tile grid lines -->
+    <rect x="252" y="118" width="228" height="1" fill="#fff0c8" opacity="0.6"/>
+    <rect x="252" y="226" width="228" height="1" fill="#3a1808" opacity="0.6"/>
+    <rect x="252" y="146" width="228" height="1" fill="#785030" opacity="0.55"/>
+    <rect x="252" y="174" width="228" height="1" fill="#785030" opacity="0.55"/>
+    <rect x="252" y="202" width="228" height="1" fill="#785030" opacity="0.55"/>
+    <rect x="280" y="118" width="1" height="108" fill="#785030" opacity="0.55"/>
+    <rect x="316" y="118" width="1" height="108" fill="#785030" opacity="0.55"/>
+    <rect x="352" y="118" width="1" height="108" fill="#785030" opacity="0.55"/>
+    <rect x="388" y="118" width="1" height="108" fill="#785030" opacity="0.55"/>
+    <rect x="424" y="118" width="1" height="108" fill="#785030" opacity="0.55"/>
+    <rect x="460" y="118" width="1" height="108" fill="#785030" opacity="0.55"/>
+    <!-- a couple of grime smudges -->
+    <rect x="296" y="160" width="6" height="2" fill="#3a1808" opacity="0.55"/>
+    <rect x="362" y="200" width="10" height="1" fill="#3a1808" opacity="0.55"/>
+    <rect x="412" y="138" width="4" height="1" fill="#3a1808" opacity="0.55"/>
+  </g>
+
+  <!-- ============= UNEVEN OVERHEAD FLUORESCENT ============= -->
+  <!-- a pale cool wash from above, with a faint warm cast leaking from a missing-cover bulb -->
+  <rect x="0" y="0" width="480" height="80" fill="url(#k2Fluorescent)"/>
+  <g id="k2-overhead" pointer-events="none">
+    <!-- the actual ceiling fixture (a bare fluorescent tube under a rectangle housing) -->
+    <rect x="160" y="0" width="160" height="14" fill="#1a1f24"/>
+    <rect x="160" y="0" width="160" height="2"  fill="#3a4450"/>
+    <rect x="160" y="12" width="160" height="2" fill="#0a0e14"/>
+    <!-- exposed tube, faintly buzzing -->
+    <rect x="170" y="6" width="140" height="4" fill="#e8f4fc">
+      <animate attributeName="opacity" values="1;0.78;1;0.62;1;0.86;1" dur="4.7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="170" y="7" width="140" height="2" fill="#fff" opacity="0.65">
+      <animate attributeName="opacity" values="0.65;0.4;0.65;0.3;0.65" dur="4.7s" repeatCount="indefinite"/>
+    </rect>
+    <!-- the ugly little dead-bug shadow inside the fixture -->
+    <rect x="208" y="6" width="6" height="3" fill="#0a0e14" opacity="0.6"/>
+    <rect x="266" y="6" width="4" height="3" fill="#0a0e14" opacity="0.55"/>
+  </g>
+
+  <!-- side darkening to enforce tight cinematic crop -->
+  <rect x="0"   y="0" width="40" height="320" fill="url(#k2SidesL)"/>
+  <rect x="440" y="0" width="40" height="320" fill="url(#k2SidesR)"/>
+
+  <!-- ============= FLOOR + BASEBOARD ============= -->
+  <g id="k2-floor" pointer-events="none">
+    <rect x="0" y="288" width="480" height="4"  fill="#221b14"/>
+    <rect x="0" y="288" width="480" height="2"  fill="#3a2c20"/>
+    <rect x="0" y="292" width="480" height="28" fill="url(#k2Floor)"/>
+    <!-- linoleum seams -->
+    <rect x="0"   y="304" width="480" height="1" fill="#000" opacity="0.55"/>
+    <rect x="120" y="292" width="1" height="28"  fill="#000" opacity="0.4"/>
+    <rect x="240" y="292" width="1" height="28"  fill="#000" opacity="0.4"/>
+    <rect x="360" y="292" width="1" height="28"  fill="#000" opacity="0.4"/>
+    <!-- a thin smear of fridge spill on the floor near the open door -->
+    <rect x="60"  y="296" width="86" height="1" fill="#f4c878" opacity="0.18"/>
+    <rect x="72"  y="298" width="60" height="1" fill="#f4c878" opacity="0.12"/>
+  </g>
+
+  <!-- warm pool spilling from the fridge across the floor + onto the counter base -->
+  <ellipse cx="160" cy="294" rx="180" ry="40" fill="url(#k2FridgeSpill)"/>
+
+  <!-- ============= COUNTER + LOWER CABINETS (right side) ============= -->
+  <g id="k2-counter-block" pointer-events="none">
+    <!-- countertop -->
+    <rect x="240" y="222" width="240" height="10" fill="url(#k2Counter)"/>
+    <rect x="240" y="222" width="240" height="2"  fill="#c8b890"/>
+    <rect x="240" y="230" width="240" height="2"  fill="#3a2a1a"/>
+    <!-- counter speckles -->
+    <rect x="262" y="226" width="2" height="1" fill="#5a4a3a" opacity="0.7"/>
+    <rect x="294" y="227" width="2" height="1" fill="#5a4a3a" opacity="0.7"/>
+    <rect x="332" y="225" width="2" height="1" fill="#5a4a3a" opacity="0.7"/>
+    <rect x="368" y="227" width="2" height="1" fill="#5a4a3a" opacity="0.7"/>
+    <rect x="412" y="226" width="2" height="1" fill="#5a4a3a" opacity="0.7"/>
+    <rect x="448" y="227" width="2" height="1" fill="#5a4a3a" opacity="0.7"/>
+
+    <!-- cabinet face under the counter -->
+    <rect x="240" y="232" width="240" height="56" fill="url(#k2Cabinet)"/>
+    <rect x="240" y="232" width="240" height="1"  fill="#5a3a26" opacity="0.7"/>
+    <rect x="240" y="287" width="240" height="1"  fill="#000000" opacity="0.7"/>
+    <!-- cabinet doors -->
+    <rect x="246" y="238" width="108" height="46" fill="#3a2a1e" stroke="#1a1208" stroke-width="2"/>
+    <rect x="358" y="238" width="116" height="46" fill="#3a2a1e" stroke="#1a1208" stroke-width="2"/>
+    <!-- cabinet handles -->
+    <rect x="338" y="258" width="4" height="6" fill="#a89878"/>
+    <rect x="362" y="258" width="4" height="6" fill="#a89878"/>
+    <!-- a sticky note clinging to the right cabinet (chore reminder) -->
+    <rect x="412" y="246" width="22" height="14" fill="#f4d878"/>
+    <rect x="412" y="246" width="22" height="1"  fill="#fff0a8"/>
+    <rect x="412" y="259" width="22" height="1"  fill="#a87838"/>
+    <rect x="416" y="250" width="14" height="1"  fill="#3a2a18"/>
+    <rect x="416" y="253" width="10" height="1"  fill="#3a2a18"/>
+    <rect x="416" y="256" width="12" height="1"  fill="#3a2a18"/>
+  </g>
+
+  <!-- ============= STUFF ON THE COUNTER ============= -->
+  <!-- A reused yogurt tub of leftovers, a stack of mismatched dishes, a takeout
+       container, and a half-unpacked plastic grocery bag tipping over. -->
+  <g id="k2-counter-stuff" pointer-events="none">
+
+    <!-- stack of mismatched plates (rear-left of counter) -->
+    <g id="k2-dishes">
+      <!-- biggest plate at bottom (cream) -->
+      <rect x="252" y="216" width="46" height="6" fill="#e8e0c8"/>
+      <rect x="252" y="216" width="46" height="1" fill="#f8f0d8"/>
+      <rect x="252" y="221" width="46" height="1" fill="#988868"/>
+      <!-- medium plate (chipped pink) -->
+      <rect x="256" y="210" width="38" height="6" fill="#e8b8b0"/>
+      <rect x="256" y="210" width="38" height="1" fill="#f8d0c8"/>
+      <rect x="256" y="215" width="38" height="1" fill="#a86878"/>
+      <rect x="288" y="211" width="3" height="1" fill="#683848"/>
+      <!-- small plate (sage) -->
+      <rect x="260" y="205" width="30" height="5" fill="#a8b898"/>
+      <rect x="260" y="205" width="30" height="1" fill="#c8d8b8"/>
+      <rect x="260" y="209" width="30" height="1" fill="#586848"/>
+      <!-- a stray fork resting across the top -->
+      <rect x="268" y="202" width="20" height="1" fill="#888"/>
+      <rect x="268" y="201" width="2"  height="3" fill="#aaa"/>
+      <rect x="270" y="201" width="2"  height="3" fill="#aaa" opacity="0.8"/>
+      <rect x="272" y="201" width="2"  height="3" fill="#aaa" opacity="0.6"/>
+    </g>
+
+    <!-- reused yogurt tub of leftovers (label half-peeled) -->
+    <g id="k2-yogurt-tub">
+      <rect x="312" y="206" width="36" height="16" fill="#f0e8d8"/>
+      <rect x="312" y="206" width="36" height="1"  fill="#fff8e8"/>
+      <rect x="312" y="221" width="36" height="1"  fill="#988868"/>
+      <rect x="312" y="206" width="1"  height="16" fill="#fff8e8"/>
+      <rect x="347" y="206" width="1"  height="16" fill="#988868"/>
+      <!-- the lid -->
+      <rect x="310" y="204" width="40" height="3" fill="#c8b898"/>
+      <rect x="310" y="204" width="40" height="1" fill="#e8d8b8"/>
+      <rect x="310" y="206" width="40" height="1" fill="#785a3a"/>
+      <!-- peeled label fragment -->
+      <rect x="316" y="210" width="20" height="6" fill="#a85848"/>
+      <rect x="316" y="210" width="20" height="1" fill="#c87868"/>
+      <rect x="316" y="215" width="20" height="1" fill="#682818"/>
+      <rect x="318" y="212" width="14" height="1" fill="#f0e0c8" opacity="0.8"/>
+      <rect x="318" y="214" width="10" height="1" fill="#f0e0c8" opacity="0.6"/>
+      <!-- a torn corner of label hanging -->
+      <rect x="334" y="208" width="2" height="3" fill="#a85848"/>
+      <!-- a sharpie scrawled date on the lid -->
+      <rect x="318" y="205" width="2" height="1" fill="#1a1018"/>
+      <rect x="321" y="205" width="2" height="1" fill="#1a1018"/>
+      <rect x="324" y="205" width="2" height="1" fill="#1a1018"/>
+      <rect x="328" y="205" width="2" height="1" fill="#1a1018"/>
+    </g>
+
+    <!-- takeout clamshell box (foam-white, slightly opened) -->
+    <g id="k2-takeout">
+      <rect x="358" y="208" width="58" height="14" fill="#f4f0e0"/>
+      <rect x="358" y="208" width="58" height="1"  fill="#fff8e8"/>
+      <rect x="358" y="221" width="58" height="1"  fill="#988868"/>
+      <rect x="358" y="208" width="1"  height="14" fill="#fff8e8"/>
+      <rect x="415" y="208" width="1"  height="14" fill="#988868"/>
+      <!-- the cracked-open lid (top half visible behind) -->
+      <rect x="362" y="200" width="50" height="8" fill="#e8e0c8"/>
+      <rect x="362" y="200" width="50" height="1" fill="#fff8e8"/>
+      <rect x="362" y="207" width="50" height="1" fill="#785a3a"/>
+      <!-- a ribbon of grease/sauce stain visible on the side -->
+      <rect x="368" y="216" width="20" height="1" fill="#a85a28" opacity="0.55"/>
+      <rect x="372" y="218" width="14" height="1" fill="#a85a28" opacity="0.4"/>
+      <!-- two faint clip-tabs on the front -->
+      <rect x="370" y="212" width="2" height="2" fill="#988868"/>
+      <rect x="402" y="212" width="2" height="2" fill="#988868"/>
+    </g>
+
+    <!-- HALF-UNPACKED grocery bag tipping at the right end of the counter -->
+    <g id="k2-grocery-bag">
+      <!-- bag body, tilted -->
+      <g transform="rotate(-6 442 200)">
+        <rect x="424" y="190" width="40" height="34" fill="url(#k2Bag)"/>
+        <rect x="424" y="190" width="40" height="1"  fill="#fff" opacity="0.85"/>
+        <rect x="424" y="223" width="40" height="1"  fill="#888" opacity="0.85"/>
+        <rect x="424" y="190" width="1"  height="34" fill="#fff" opacity="0.6"/>
+        <rect x="463" y="190" width="1"  height="34" fill="#888" opacity="0.7"/>
+        <!-- bag handles slumped to one side -->
+        <path d="M428 190 q4 -10 14 -10" stroke="#cccccc" stroke-width="1" fill="none" opacity="0.85"/>
+        <path d="M460 190 q-4 -10 -14 -10" stroke="#cccccc" stroke-width="1" fill="none" opacity="0.85"/>
+        <!-- visible items poking out the top -->
+        <!-- a baguette/loaf -->
+        <rect x="430" y="184" width="14" height="6" fill="#c89868"/>
+        <rect x="430" y="184" width="14" height="1" fill="#e8b878"/>
+        <rect x="430" y="189" width="14" height="1" fill="#785832"/>
+        <rect x="432" y="186" width="2" height="1" fill="#3a2818" opacity="0.7"/>
+        <rect x="436" y="187" width="2" height="1" fill="#3a2818" opacity="0.7"/>
+        <!-- a can of beans (label reused-color) -->
+        <rect x="446" y="186" width="10" height="8" fill="#a83838"/>
+        <rect x="446" y="186" width="10" height="1" fill="#c85858"/>
+        <rect x="446" y="193" width="10" height="1" fill="#681818"/>
+        <rect x="448" y="188" width="6"  height="2" fill="#f0e0a8" opacity="0.85"/>
+        <rect x="448" y="191" width="6"  height="1" fill="#1a1008"/>
+      </g>
+      <!-- a plastic bottle that has rolled out of the bag and onto the counter -->
+      <rect x="406" y="216" width="6"  height="14" fill="#a8c8d0" opacity="0.85"/>
+      <rect x="406" y="216" width="6"  height="1"  fill="#d8e8ec" opacity="0.9"/>
+      <rect x="406" y="229" width="6"  height="1"  fill="#586878"/>
+      <rect x="406" y="216" width="1"  height="14" fill="#d8e8ec" opacity="0.6"/>
+      <rect x="411" y="216" width="1"  height="14" fill="#586878" opacity="0.7"/>
+      <!-- bottle cap -->
+      <rect x="406" y="214" width="6"  height="2"  fill="#3a2418"/>
+      <rect x="406" y="214" width="6"  height="1"  fill="#5a3826"/>
+    </g>
+
+  </g>
+
+  <!-- ============= REFRIGERATOR (left, door cracked open, glow as focal point) ============= -->
+  <g id="k2-fridge" pointer-events="none">
+
+    <!-- back wall recess shadow behind fridge (a darker rectangle so the body pops) -->
+    <rect x="48" y="32" width="200" height="256" fill="#0a0c10" opacity="0.65"/>
+
+    <!-- FRIDGE BODY (closed-ish; the freezer door is on top, fresh-food door is the one cracked open) -->
+    <rect x="56" y="40" width="184" height="248" fill="url(#k2FridgeBody)"/>
+    <!-- top + side highlights -->
+    <rect x="56" y="40" width="184" height="2" fill="#f0e8d0"/>
+    <rect x="56" y="286" width="184" height="2" fill="#3a3428"/>
+    <rect x="56" y="40" width="2" height="248" fill="#f0e8d0"/>
+    <rect x="238" y="40" width="2" height="248" fill="#3a3428"/>
+    <rect x="56" y="40" width="184" height="248" fill="url(#k2FridgeShadow)" opacity="0.35"/>
+
+    <!-- horizontal seam between freezer (top) and fresh-food (bottom) -->
+    <rect x="56" y="106" width="184" height="3" fill="#3a3428"/>
+    <rect x="56" y="106" width="184" height="1" fill="#5a5040"/>
+    <rect x="56" y="108" width="184" height="1" fill="#1a1810"/>
+
+    <!-- ===== FREEZER DOOR (top, closed; covered in magnets and notes) ===== -->
+    <g id="k2-freezer-door">
+      <rect x="60" y="44" width="176" height="62" fill="url(#k2FridgeBody)"/>
+      <rect x="60" y="44" width="176" height="1" fill="#fff8e8" opacity="0.85"/>
+      <rect x="60" y="105" width="176" height="1" fill="#3a3428"/>
+      <rect x="234" y="44" width="2" height="62" fill="#3a3428" opacity="0.85"/>
+      <!-- door handle (top, vertical) -->
+      <rect x="222" y="50" width="6" height="50" fill="#3a3428"/>
+      <rect x="222" y="50" width="2" height="50" fill="#5a5040"/>
+      <rect x="226" y="50" width="2" height="50" fill="#1a1810"/>
+    </g>
+
+    <!-- ===== FRESH-FOOD DOOR (bottom; partially open, swung outward to the left) ===== -->
+    <!-- open angle: render the door as a parallelogram coming forward + reveal the lit interior -->
+    <g id="k2-fridge-door-open">
+      <!-- the inside-of-door panel (we see the back of the door from the inside; it's lighter, lined with shelves) -->
+      <polygon points="60,110 60,284 130,290 130,116" fill="#e8e0c8"/>
+      <polygon points="60,110 60,284 130,290 130,116" fill="url(#k2FridgeShadow)" opacity="0.35"/>
+      <!-- inner door highlights / shelves -->
+      <rect x="62" y="118" width="64" height="2" fill="#fff8e8" opacity="0.85"/>
+      <rect x="62" y="282" width="64" height="2" fill="#988868" opacity="0.85"/>
+      <!-- door shelf bins (3 little molded-in pockets) -->
+      <rect x="68" y="138" width="56" height="24" fill="#c8b898" opacity="0.65"/>
+      <rect x="68" y="138" width="56" height="1"  fill="#e8d8b8" opacity="0.85"/>
+      <rect x="68" y="161" width="56" height="1"  fill="#785a3a"/>
+      <rect x="68" y="180" width="56" height="24" fill="#c8b898" opacity="0.65"/>
+      <rect x="68" y="180" width="56" height="1"  fill="#e8d8b8" opacity="0.85"/>
+      <rect x="68" y="203" width="56" height="1"  fill="#785a3a"/>
+      <rect x="68" y="222" width="56" height="36" fill="#c8b898" opacity="0.65"/>
+      <rect x="68" y="222" width="56" height="1"  fill="#e8d8b8" opacity="0.85"/>
+      <rect x="68" y="257" width="56" height="1"  fill="#785a3a"/>
+      <!-- a leaning condiment bottle (mustard) in the top door pocket -->
+      <rect x="80" y="142" width="8" height="18" fill="#f4c818"/>
+      <rect x="80" y="142" width="8" height="1"  fill="#fff088"/>
+      <rect x="80" y="159" width="8" height="1"  fill="#a87808"/>
+      <rect x="80" y="140" width="8" height="2"  fill="#3a2418"/>
+      <rect x="92" y="146" width="6"  height="14" fill="#a83838"/>
+      <rect x="92" y="146" width="6"  height="1"  fill="#c85858"/>
+      <rect x="92" y="159" width="6"  height="1"  fill="#681818"/>
+      <!-- a bottle of milk in the middle pocket -->
+      <rect x="80" y="184" width="14" height="20" fill="#f0f0e8"/>
+      <rect x="80" y="184" width="14" height="1"  fill="#fff8f0"/>
+      <rect x="80" y="203" width="14" height="1"  fill="#a8a8a0"/>
+      <rect x="84" y="180" width="6"  height="4"  fill="#a83838"/>
+      <!-- a big jug at the bottom pocket -->
+      <rect x="78" y="226" width="40" height="32" fill="#a8c8d0" opacity="0.92"/>
+      <rect x="78" y="226" width="40" height="1"  fill="#d8e8ec"/>
+      <rect x="78" y="257" width="40" height="1"  fill="#586878"/>
+      <rect x="78" y="226" width="1"  height="32" fill="#d8e8ec" opacity="0.6"/>
+      <rect x="117" y="226" width="1" height="32" fill="#586878" opacity="0.7"/>
+      <rect x="92" y="222" width="14" height="4"  fill="#3a2418"/>
+      <!-- the back face of the door bordering the open seam -->
+      <polygon points="124,116 130,116 130,290 124,284" fill="#988868" opacity="0.85"/>
+    </g>
+
+    <!-- ===== INTERIOR CAVITY (visible behind the open door) ===== -->
+    <g id="k2-fridge-interior">
+      <!-- interior wall -->
+      <rect x="130" y="110" width="106" height="174" fill="#1a1612"/>
+      <!-- warm interior glow -->
+      <rect x="130" y="110" width="106" height="174" fill="url(#k2InsideGlow)"/>
+      <!-- depth shading at edges -->
+      <rect x="130" y="110" width="106" height="174" fill="url(#k2InsideDepth)" opacity="0.7"/>
+      <!-- interior side walls (subtle inset) -->
+      <rect x="130" y="110" width="2" height="174" fill="#0a0808" opacity="0.85"/>
+      <rect x="234" y="110" width="2" height="174" fill="#0a0808" opacity="0.85"/>
+      <!-- shelves (wire-style horizontal lines) -->
+      <rect x="132" y="148" width="102" height="2" fill="#3a3428" opacity="0.85"/>
+      <rect x="132" y="148" width="102" height="1" fill="#5a5040" opacity="0.7"/>
+      <rect x="132" y="200" width="102" height="2" fill="#3a3428" opacity="0.85"/>
+      <rect x="132" y="200" width="102" height="1" fill="#5a5040" opacity="0.7"/>
+      <rect x="132" y="252" width="102" height="2" fill="#3a3428" opacity="0.85"/>
+      <rect x="132" y="252" width="102" height="1" fill="#5a5040" opacity="0.7"/>
+      <!-- thin wire-grid suggestion on the top shelf -->
+      <rect x="138" y="146" width="1" height="2" fill="#0a0808" opacity="0.7"/>
+      <rect x="148" y="146" width="1" height="2" fill="#0a0808" opacity="0.7"/>
+      <rect x="158" y="146" width="1" height="2" fill="#0a0808" opacity="0.7"/>
+      <rect x="168" y="146" width="1" height="2" fill="#0a0808" opacity="0.7"/>
+      <rect x="178" y="146" width="1" height="2" fill="#0a0808" opacity="0.7"/>
+
+      <!-- interior contents: 3 rotating variants -->
+      <!-- VARIANT A: full of reused containers + leftovers -->
+      <g id="k2-interior-a">
+        <!-- top shelf: butter tub of beans + a small jar -->
+        <rect x="138" y="124" width="32" height="22" fill="#f0e8d0"/>
+        <rect x="138" y="124" width="32" height="1"  fill="#fff8e8"/>
+        <rect x="138" y="145" width="32" height="1"  fill="#988868"/>
+        <rect x="138" y="122" width="32" height="3"  fill="#c8b898"/>
+        <!-- "beans" label scrawl -->
+        <rect x="142" y="130" width="14" height="1" fill="#3a2418"/>
+        <rect x="142" y="133" width="10" height="1" fill="#3a2418"/>
+        <rect x="142" y="136" width="12" height="1" fill="#3a2418"/>
+        <!-- glass jar of something -->
+        <rect x="180" y="126" width="16" height="20" fill="#688868" opacity="0.85"/>
+        <rect x="180" y="126" width="16" height="1"  fill="#a8c8a8" opacity="0.95"/>
+        <rect x="180" y="145" width="16" height="1"  fill="#384838"/>
+        <rect x="180" y="124" width="16" height="2"  fill="#3a2418"/>
+        <!-- a small foil packet -->
+        <rect x="204" y="132" width="22" height="14" fill="#888"/>
+        <rect x="204" y="132" width="22" height="1"  fill="#aaa"/>
+        <rect x="204" y="145" width="22" height="1"  fill="#555"/>
+
+        <!-- middle shelf: leftover plate covered in cling-wrap, half a lemon -->
+        <rect x="138" y="176" width="44" height="22" fill="#e8e0c8" opacity="0.92"/>
+        <rect x="138" y="176" width="44" height="1"  fill="#fff8e8"/>
+        <rect x="138" y="197" width="44" height="1"  fill="#988868"/>
+        <!-- cling-wrap shimmer -->
+        <rect x="142" y="180" width="36" height="1" fill="#fff" opacity="0.55"/>
+        <rect x="146" y="184" width="32" height="1" fill="#fff" opacity="0.35"/>
+        <!-- contents underneath (rust + green hint) -->
+        <rect x="146" y="186" width="18" height="6" fill="#a85a28" opacity="0.75"/>
+        <rect x="166" y="188" width="12" height="4" fill="#688838" opacity="0.75"/>
+        <!-- half lemon -->
+        <rect x="194" y="184" width="18" height="14" fill="#f4d848"/>
+        <rect x="194" y="184" width="18" height="1"  fill="#fff088"/>
+        <rect x="194" y="197" width="18" height="1"  fill="#a87808"/>
+        <rect x="196" y="186" width="14" height="1" fill="#fff088" opacity="0.8"/>
+        <rect x="196" y="190" width="14" height="1" fill="#a87808" opacity="0.55"/>
+        <rect x="196" y="194" width="14" height="1" fill="#a87808" opacity="0.55"/>
+
+        <!-- bottom shelf: takeout containers stacked -->
+        <rect x="138" y="228" width="58" height="20" fill="#f4f0e0"/>
+        <rect x="138" y="228" width="58" height="1"  fill="#fff8e8"/>
+        <rect x="138" y="247" width="58" height="1"  fill="#988868"/>
+        <rect x="138" y="226" width="58" height="2"  fill="#c8b898"/>
+        <rect x="142" y="232" width="50" height="1" fill="#a85a28" opacity="0.55"/>
+        <rect x="142" y="236" width="44" height="1" fill="#a85a28" opacity="0.4"/>
+        <!-- a smaller takeout box on top of it -->
+        <rect x="200" y="234" width="32" height="14" fill="#f4f0e0"/>
+        <rect x="200" y="234" width="32" height="1"  fill="#fff8e8"/>
+        <rect x="200" y="247" width="32" height="1"  fill="#988868"/>
+        <rect x="200" y="232" width="32" height="2"  fill="#c8b898"/>
+
+        <!-- bottom-most: a soda bottle leaning against the back -->
+        <rect x="148" y="258" width="14" height="22" fill="#3a2818" opacity="0.92"/>
+        <rect x="148" y="258" width="14" height="1"  fill="#5a4838"/>
+        <rect x="148" y="279" width="14" height="1"  fill="#1a1008"/>
+        <rect x="150" y="262" width="10" height="6"  fill="#a83838"/>
+      </g>
+
+      <!-- VARIANT B: sparse - a few jars and a single takeout box, lots of empty wire shelf -->
+      <g id="k2-interior-b" visibility="hidden">
+        <!-- top shelf: just a jar pushed to the right and a tiny stick of butter -->
+        <rect x="200" y="126" width="16" height="20" fill="#688868" opacity="0.85"/>
+        <rect x="200" y="126" width="16" height="1"  fill="#a8c8a8" opacity="0.95"/>
+        <rect x="200" y="145" width="16" height="1"  fill="#384838"/>
+        <rect x="200" y="124" width="16" height="2"  fill="#3a2418"/>
+        <rect x="138" y="138" width="22" height="8" fill="#f0e0a8"/>
+        <rect x="138" y="138" width="22" height="1"  fill="#fff0c8"/>
+        <rect x="138" y="145" width="22" height="1"  fill="#988868"/>
+
+        <!-- middle shelf: nothing but a single takeout box -->
+        <rect x="160" y="180" width="58" height="20" fill="#f4f0e0"/>
+        <rect x="160" y="180" width="58" height="1"  fill="#fff8e8"/>
+        <rect x="160" y="199" width="58" height="1"  fill="#988868"/>
+        <rect x="160" y="178" width="58" height="2"  fill="#c8b898"/>
+
+        <!-- bottom: a single soda bottle and a near-empty jug -->
+        <rect x="142" y="256" width="14" height="24" fill="#3a2818" opacity="0.92"/>
+        <rect x="142" y="256" width="14" height="1"  fill="#5a4838"/>
+        <rect x="142" y="279" width="14" height="1"  fill="#1a1008"/>
+        <rect x="144" y="260" width="10" height="6"  fill="#a83838"/>
+        <rect x="172" y="260" width="40" height="22" fill="#a8c8d0" opacity="0.55"/>
+        <rect x="172" y="260" width="40" height="1"  fill="#d8e8ec" opacity="0.7"/>
+        <rect x="172" y="281" width="40" height="1"  fill="#586878"/>
+        <rect x="184" y="256" width="14" height="4"  fill="#3a2418"/>
+      </g>
+
+      <!-- VARIANT C: mismatched stranger-things - items rearranged in places they don't normally go -->
+      <g id="k2-interior-c" visibility="hidden">
+        <!-- top shelf: an unopened bag of bread that should not be here -->
+        <rect x="138" y="124" width="64" height="22" fill="#e8d0a8"/>
+        <rect x="138" y="124" width="64" height="1"  fill="#fff0c8"/>
+        <rect x="138" y="145" width="64" height="1"  fill="#988868"/>
+        <rect x="142" y="128" width="56" height="1"  fill="#a86838"/>
+        <rect x="142" y="135" width="40" height="1"  fill="#a86838"/>
+        <rect x="142" y="142" width="50" height="1"  fill="#a86838"/>
+        <!-- an apple where the bread tab would be -->
+        <rect x="208" y="130" width="14" height="14" fill="#a83838"/>
+        <rect x="208" y="130" width="14" height="1"  fill="#c85858"/>
+        <rect x="208" y="143" width="14" height="1"  fill="#681818"/>
+        <rect x="214" y="128" width="2"  height="2"  fill="#3a2418"/>
+
+        <!-- middle shelf: a bowl of cereal with a spoon -->
+        <rect x="148" y="178" width="44" height="20" fill="#a8c8d0"/>
+        <rect x="148" y="178" width="44" height="1"  fill="#d8e8ec"/>
+        <rect x="148" y="197" width="44" height="1"  fill="#586878"/>
+        <rect x="152" y="182" width="36" height="6"  fill="#f0d898"/>
+        <rect x="186" y="180" width="2"  height="14" fill="#aaa"/>
+        <rect x="186" y="194" width="6"  height="2"  fill="#aaa"/>
+
+        <!-- bottom shelf: shoes? - a pair of sandals (the absurd magical-realism one) -->
+        <rect x="138" y="262" width="46" height="6" fill="#3a2418"/>
+        <rect x="138" y="262" width="46" height="1" fill="#5a3826"/>
+        <rect x="148" y="258" width="2" height="6" fill="#a89878"/>
+        <rect x="170" y="258" width="2" height="6" fill="#a89878"/>
+        <rect x="186" y="262" width="46" height="6" fill="#3a2418"/>
+        <rect x="186" y="262" width="46" height="1" fill="#5a3826"/>
+        <rect x="196" y="258" width="2" height="6" fill="#a89878"/>
+        <rect x="218" y="258" width="2" height="6" fill="#a89878"/>
+      </g>
+
+      <!-- a faint cold-fog wisp drifting out of the open fridge -->
+      <g id="k2-cold-fog" pointer-events="none">
+        <ellipse cx="158" cy="282" rx="42" ry="6" fill="#e0eef4" opacity="0.18">
+          <animate attributeName="cx" values="158;164;156;162;158" dur="11s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.18;0.10;0.18;0.08;0.18" dur="11s" repeatCount="indefinite"/>
+        </ellipse>
+        <ellipse cx="170" cy="276" rx="32" ry="4" fill="#e0eef4" opacity="0.14">
+          <animate attributeName="cx" values="170;176;168;172;170" dur="13s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0.14;0.06;0.14;0.05;0.14" dur="13s" repeatCount="indefinite"/>
+        </ellipse>
+      </g>
+    </g>
+
+    <!-- ===== MAGNETS + NOTES on the freezer door (above the seam) ===== -->
+    <!-- 3 rotating magnet/note arrangements -->
+    <g id="k2-magnets-a">
+      <!-- a takeout menu (folded paper) magneted at the top-left of freezer -->
+      <rect x="68" y="50" width="44" height="36" fill="#f0e8c8"/>
+      <rect x="68" y="50" width="44" height="1"  fill="#fff8e0"/>
+      <rect x="68" y="85" width="44" height="1"  fill="#988868"/>
+      <rect x="68" y="50" width="1"  height="36" fill="#fff8e0"/>
+      <rect x="111" y="50" width="1" height="36" fill="#988868"/>
+      <!-- header band -->
+      <rect x="68" y="50" width="44" height="6" fill="#a83838"/>
+      <rect x="68" y="50" width="44" height="1" fill="#c85858"/>
+      <rect x="68" y="55" width="44" height="1" fill="#681818"/>
+      <!-- text lines -->
+      <rect x="72" y="60" width="34" height="1" fill="#3a2418"/>
+      <rect x="72" y="63" width="28" height="1" fill="#3a2418"/>
+      <rect x="72" y="66" width="32" height="1" fill="#3a2418"/>
+      <rect x="72" y="69" width="22" height="1" fill="#3a2418"/>
+      <rect x="72" y="72" width="30" height="1" fill="#3a2418"/>
+      <rect x="72" y="75" width="26" height="1" fill="#3a2418"/>
+      <!-- magnet (round red) holding it -->
+      <rect x="86" y="46" width="6" height="6" fill="#a83838"/>
+      <rect x="86" y="46" width="6" height="1" fill="#c85858"/>
+      <rect x="86" y="51" width="6" height="1" fill="#681818"/>
+
+      <!-- a child's drawing (little pixel sun) on the right -->
+      <rect x="124" y="52" width="42" height="34" fill="#f8f0d8"/>
+      <rect x="124" y="52" width="42" height="1"  fill="#fff8e8"/>
+      <rect x="124" y="85" width="42" height="1"  fill="#988868"/>
+      <rect x="124" y="52" width="1"  height="34" fill="#fff8e8"/>
+      <rect x="165" y="52" width="1"  height="34" fill="#988868"/>
+      <!-- crayon sun (a circle-ish + rays) -->
+      <rect x="138" y="62" width="14" height="2" fill="#f4a838"/>
+      <rect x="136" y="64" width="18" height="6" fill="#f4a838"/>
+      <rect x="138" y="70" width="14" height="2" fill="#f4a838"/>
+      <rect x="142" y="58" width="6"  height="3" fill="#f4a838"/>
+      <rect x="142" y="73" width="6"  height="3" fill="#f4a838"/>
+      <rect x="130" y="66" width="3"  height="2" fill="#f4a838"/>
+      <rect x="158" y="66" width="3"  height="2" fill="#f4a838"/>
+      <!-- a green ground line and a crooked house -->
+      <rect x="128" y="80" width="34" height="2" fill="#688838"/>
+      <rect x="140" y="76" width="6"  height="4" fill="#a85838"/>
+      <rect x="142" y="74" width="2"  height="2" fill="#3a1808"/>
+      <!-- magnet (yellow) -->
+      <rect x="142" y="48" width="6" height="6" fill="#f4c818"/>
+      <rect x="142" y="48" width="6" height="1" fill="#fff088"/>
+      <rect x="142" y="53" width="6" height="1" fill="#a87808"/>
+
+      <!-- a postcard along the bottom edge of the freezer -->
+      <rect x="180" y="64" width="46" height="22" fill="#a8c8d0"/>
+      <rect x="180" y="64" width="46" height="1"  fill="#d8e8ec"/>
+      <rect x="180" y="85" width="46" height="1"  fill="#586878"/>
+      <rect x="180" y="64" width="1"  height="22" fill="#d8e8ec"/>
+      <rect x="225" y="64" width="1"  height="22" fill="#586878"/>
+      <!-- a tiny pixel beach scene -->
+      <rect x="184" y="68" width="38" height="10" fill="#88b0c8"/>
+      <rect x="184" y="78" width="38" height="6"  fill="#e8d8a8"/>
+      <rect x="190" y="72" width="2"  height="2"  fill="#fff" opacity="0.75"/>
+      <rect x="200" y="71" width="3"  height="3"  fill="#f4c878"/>
+      <!-- magnet (blue) -->
+      <rect x="198" y="60" width="6" height="6" fill="#3878a8"/>
+      <rect x="198" y="60" width="6" height="1" fill="#58a8c8"/>
+      <rect x="198" y="65" width="6" height="1" fill="#184868"/>
+    </g>
+
+    <g id="k2-magnets-b" visibility="hidden">
+      <!-- a single appointment card centered, the others gone -->
+      <rect x="116" y="56" width="76" height="40" fill="#f8f0d8"/>
+      <rect x="116" y="56" width="76" height="1"  fill="#fff8e8"/>
+      <rect x="116" y="95" width="76" height="1"  fill="#988868"/>
+      <rect x="116" y="56" width="1"  height="40" fill="#fff8e8"/>
+      <rect x="191" y="56" width="1"  height="40" fill="#988868"/>
+      <!-- header bar -->
+      <rect x="116" y="56" width="76" height="5" fill="#3878a8"/>
+      <rect x="116" y="56" width="76" height="1" fill="#58a8c8"/>
+      <!-- date and lines -->
+      <rect x="122" y="66" width="20" height="6" fill="#3a2418"/>
+      <rect x="148" y="66" width="38" height="1" fill="#3a2418"/>
+      <rect x="148" y="69" width="32" height="1" fill="#3a2418"/>
+      <rect x="148" y="72" width="36" height="1" fill="#3a2418"/>
+      <rect x="122" y="78" width="64" height="1" fill="#3a2418"/>
+      <rect x="122" y="82" width="58" height="1" fill="#3a2418"/>
+      <rect x="122" y="86" width="48" height="1" fill="#3a2418"/>
+      <rect x="122" y="90" width="40" height="1" fill="#3a2418"/>
+      <!-- magnet -->
+      <rect x="148" y="52" width="6" height="6" fill="#a83838"/>
+      <rect x="148" y="52" width="6" height="1" fill="#c85858"/>
+      <rect x="148" y="57" width="6" height="1" fill="#681818"/>
+      <!-- a single tiny picture in the corner -->
+      <rect x="200" y="74" width="22" height="18" fill="#3a2418"/>
+      <rect x="202" y="76" width="18" height="14" fill="#788890"/>
+      <rect x="206" y="78" width="10" height="6"  fill="#c8a878"/>
+      <rect x="210" y="84" width="2"  height="6"  fill="#3a2418"/>
+      <rect x="208" y="68" width="6" height="6" fill="#f4c818"/>
+      <rect x="208" y="68" width="6" height="1" fill="#fff088"/>
+      <rect x="208" y="73" width="6" height="1" fill="#a87808"/>
+    </g>
+
+    <g id="k2-magnets-c" visibility="hidden">
+      <!-- a wall of overlapping notes - phone numbers, a grocery list, a wedding invite -->
+      <rect x="64" y="48" width="56" height="42" fill="#f0e8c8"/>
+      <rect x="64" y="48" width="56" height="1"  fill="#fff8e0"/>
+      <rect x="64" y="89" width="56" height="1"  fill="#988868"/>
+      <rect x="68" y="54" width="44" height="1"  fill="#3a2418"/>
+      <rect x="68" y="58" width="38" height="1"  fill="#3a2418"/>
+      <rect x="68" y="62" width="44" height="1"  fill="#3a2418"/>
+      <rect x="68" y="66" width="32" height="1"  fill="#3a2418"/>
+      <rect x="68" y="70" width="44" height="1"  fill="#3a2418"/>
+      <rect x="68" y="74" width="28" height="1"  fill="#3a2418"/>
+      <rect x="68" y="78" width="40" height="1"  fill="#3a2418"/>
+      <rect x="68" y="82" width="34" height="1"  fill="#3a2418"/>
+      <rect x="80" y="44" width="6" height="6" fill="#3878a8"/>
+      <rect x="80" y="44" width="6" height="1" fill="#58a8c8"/>
+
+      <!-- overlapping invite (pale green) -->
+      <rect x="116" y="58" width="50" height="40" fill="#d8e0c8" transform="rotate(4 141 78)"/>
+      <rect x="116" y="58" width="50" height="1"  fill="#e8e8d0" transform="rotate(4 141 78)"/>
+      <rect x="120" y="64" width="42" height="1"  fill="#3a2418" transform="rotate(4 141 78)"/>
+      <rect x="120" y="70" width="34" height="1"  fill="#3a2418" transform="rotate(4 141 78)"/>
+      <rect x="120" y="76" width="38" height="1"  fill="#3a2418" transform="rotate(4 141 78)"/>
+      <rect x="120" y="82" width="30" height="1"  fill="#3a2418" transform="rotate(4 141 78)"/>
+      <rect x="138" y="56" width="6" height="6" fill="#a83838"/>
+
+      <!-- a third small notepad note at the right -->
+      <rect x="178" y="52" width="44" height="32" fill="#f0d8d8"/>
+      <rect x="178" y="52" width="44" height="1"  fill="#fff0f0"/>
+      <rect x="178" y="83" width="44" height="1"  fill="#988868"/>
+      <rect x="182" y="58" width="36" height="1"  fill="#3a2418"/>
+      <rect x="182" y="62" width="32" height="1"  fill="#3a2418"/>
+      <rect x="182" y="66" width="36" height="1"  fill="#3a2418"/>
+      <rect x="182" y="70" width="28" height="1"  fill="#3a2418"/>
+      <rect x="182" y="74" width="32" height="1"  fill="#3a2418"/>
+      <rect x="182" y="78" width="22" height="1"  fill="#3a2418"/>
+      <rect x="194" y="48" width="6" height="6" fill="#f4c818"/>
+    </g>
+
+  </g>
+
+  <!-- ============= AMBIENT FLOOR DETAILS ============= -->
+  <!-- a single tile crack visible near the fridge -->
+  <g id="k2-floor-detail" pointer-events="none">
+    <line x1="44"  y1="298" x2="58"  y2="306" stroke="#000" stroke-width="1" opacity="0.45"/>
+    <line x1="58"  y1="306" x2="48"  y2="316" stroke="#000" stroke-width="1" opacity="0.4"/>
+    <!-- a stray crumb / lentil -->
+    <rect x="222" y="306" width="2" height="2" fill="#a86838"/>
+    <rect x="232" y="312" width="2" height="2" fill="#683818" opacity="0.85"/>
+  </g>
+
+  <!-- ============= INTERACTION HOTSPOTS (transparent, last so they sit on top) ============= -->
+  <g id="k2-hotspots">
+    <rect id="hit-fridge-interior" x="130" y="110" width="106" height="174" fill="transparent" pointer-events="all"/>
+    <rect id="hit-fridge-door"     x="60"  y="110" width="70"  height="180" fill="transparent" pointer-events="all"/>
+    <rect id="hit-magnets"         x="56"  y="40"  width="184" height="68"  fill="transparent" pointer-events="all"/>
+    <rect id="hit-light"           x="160" y="0"   width="160" height="20"  fill="transparent" pointer-events="all"/>
+    <rect id="hit-dishes"          x="248" y="200" width="56"  height="24"  fill="transparent" pointer-events="all"/>
+    <rect id="hit-yogurt-tub"      x="308" y="202" width="44"  height="22"  fill="transparent" pointer-events="all"/>
+    <rect id="hit-takeout"         x="356" y="198" width="62"  height="26"  fill="transparent" pointer-events="all"/>
+    <rect id="hit-grocery-bag"     x="402" y="174" width="76"  height="58"  fill="transparent" pointer-events="all"/>
+    <rect id="hit-counter"         x="240" y="222" width="240" height="10"  fill="transparent" pointer-events="all"/>
+    <rect id="hit-floor"           x="0"   y="288" width="480" height="32"  fill="transparent" pointer-events="all"/>
+  </g>
+</svg>
