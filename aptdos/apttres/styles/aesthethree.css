@@ -1128,3 +1128,779 @@ svg {
     color: rgba(220, 190, 140, 0.95);
     border-color: rgba(180, 140, 80, 0.6);
 }
+
+/* ============================
+   bedroom two memory vignette (apartment three)
+   a small writing desk in the muted blue-violet light of evening. cool
+   mauve walls, dusty pastel pinned items, faded cork board. softer and
+   sadder than bedroom one - "emotionally familiar but partially forgotten".
+   ============================ */
+#bedroom-two-memory-overlay {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    inset: 0;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: min(24px, 4vw);
+    box-sizing: border-box;
+}
+
+#bedroom-two-memory-overlay.active {
+    display: flex;
+}
+
+.bedroom-two-memory-backdrop {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 70% 45% at 50% 50%, rgba(184, 168, 200, 0.22) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 22% 22%, rgba(168, 152, 192, 0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 90% 70% at 50% 100%, rgba(36, 24, 40, 0.62) 0%, transparent 70%),
+        linear-gradient(180deg, #2c2238 0%, #4a3852 45%, #14101c 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+}
+
+.bedroom-two-memory-lift {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: min(720px, 96vw);
+    pointer-events: none;
+}
+
+.bedroom-two-memory-lift > * {
+    pointer-events: auto;
+}
+
+.bedroom-two-memory-hud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: min(680px, 94vw);
+}
+
+.bedroom-two-memory-tip {
+    flex: 1 1 220px;
+    margin: 0;
+    min-height: 2.6em;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', monospace;
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(232, 216, 232, 0.88);
+    text-shadow: 0 1px 0 rgba(20, 12, 24, 0.7);
+    transition: opacity 0.55s ease;
+}
+
+.bedroom-two-memory-tip.fading {
+    opacity: 0.30;
+}
+
+.bedroom-two-memory-tip.surfacing {
+    color: rgba(248, 224, 200, 0.95);
+    font-style: italic;
+}
+
+.bedroom-two-memory-actions {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 8px;
+}
+
+.bedroom-two-memory-close {
+    margin: 0;
+    background: rgba(56, 40, 64, 0.72);
+    border: 1px solid rgba(208, 184, 216, 0.55);
+    color: rgba(232, 216, 232, 0.92);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.bedroom-two-memory-close:hover {
+    border-color: rgba(248, 232, 248, 0.85);
+    background: rgba(72, 56, 88, 0.85);
+}
+
+.bedroom-two-memory-stage {
+    position: relative;
+    width: 100%;
+    max-width: min(680px, 94vw);
+    aspect-ratio: 480 / 320;
+    max-height: min(62vh, 520px);
+    border: 2px solid rgba(152, 128, 168, 0.7);
+    box-shadow:
+        0 0 0 1px rgba(20, 12, 24, 0.95),
+        0 18px 56px rgba(20, 12, 24, 0.65),
+        inset 0 0 60px rgba(40, 28, 56, 0.55);
+    background: #1a1020;
+    overflow: hidden;
+}
+
+.bedroom-two-memory-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    object-position: center center;
+    image-rendering: pixelated;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .bedroom-two-memory-stage {
+        max-height: min(52vh, 420px);
+    }
+
+    .bedroom-two-memory-hud {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .bedroom-two-memory-actions {
+        flex-direction: column;
+    }
+}
+
+/* ============================
+   bedroom one memory vignette (apartment three)
+   a warm room slowly fading at the edges. faded peach walls, dusty rose
+   accents, dim amber lamp. softer + more washed-out than the apt 2
+   vignettes — meant to feel like a sun-bleached photograph.
+   ============================ */
+#bedroom-one-memory-overlay {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    inset: 0;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: min(24px, 4vw);
+    box-sizing: border-box;
+}
+
+#bedroom-one-memory-overlay.active {
+    display: flex;
+}
+
+.bedroom-one-memory-backdrop {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 70% 45% at 50% 50%, rgba(248, 200, 144, 0.20) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 78% 22%, rgba(232, 184, 168, 0.16) 0%, transparent 65%),
+        radial-gradient(ellipse 90% 70% at 50% 100%, rgba(80, 48, 40, 0.55) 0%, transparent 70%),
+        linear-gradient(180deg, #4a322a 0%, #6a4a3c 45%, #2a1a14 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+}
+
+.bedroom-one-memory-lift {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: min(720px, 96vw);
+    pointer-events: none;
+}
+
+.bedroom-one-memory-lift > * {
+    pointer-events: auto;
+}
+
+.bedroom-one-memory-hud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: min(680px, 94vw);
+}
+
+.bedroom-one-memory-tip {
+    flex: 1 1 220px;
+    margin: 0;
+    min-height: 2.6em;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', monospace;
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(248, 224, 200, 0.90);
+    text-shadow: 0 1px 0 rgba(40, 18, 14, 0.7);
+    /* slow fade between hover-tip updates */
+    transition: opacity 0.45s ease;
+}
+
+.bedroom-one-memory-tip.fading {
+    opacity: 0.35;
+}
+
+.bedroom-one-memory-actions {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 8px;
+}
+
+.bedroom-one-memory-door,
+.bedroom-one-memory-close {
+    margin: 0;
+    background: rgba(72, 44, 38, 0.72);
+    border: 1px solid rgba(232, 184, 144, 0.55);
+    color: rgba(248, 224, 192, 0.92);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.bedroom-one-memory-door {
+    border-color: rgba(216, 168, 144, 0.65);
+    color: rgba(248, 216, 192, 0.94);
+}
+
+.bedroom-one-memory-door:hover,
+.bedroom-one-memory-close:hover {
+    border-color: rgba(248, 232, 200, 0.85);
+    background: rgba(96, 64, 56, 0.85);
+}
+
+.bedroom-one-memory-stage {
+    position: relative;
+    width: 100%;
+    max-width: min(680px, 94vw);
+    aspect-ratio: 480 / 320;
+    max-height: min(62vh, 520px);
+    border: 2px solid rgba(168, 120, 88, 0.7);
+    box-shadow:
+        0 0 0 1px rgba(40, 22, 18, 0.95),
+        0 18px 56px rgba(40, 18, 14, 0.55),
+        inset 0 0 60px rgba(80, 40, 32, 0.45);
+    background: #2a1a14;
+    overflow: hidden;
+}
+
+.bedroom-one-memory-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    object-position: center center;
+    image-rendering: pixelated;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .bedroom-one-memory-stage {
+        max-height: min(52vh, 420px);
+    }
+
+    .bedroom-one-memory-hud {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .bedroom-one-memory-actions {
+        flex-direction: column;
+    }
+}
+
+/* ============================
+   bathroom memory vignette (apartment three)
+   a small humid bathroom remembered softly. dusty pink tile, warm
+   brass mirror, faded peach upper wall. the mirror reflection lags;
+   condensation patches surface fragments of finger-written text.
+   ============================ */
+#bathroom-memory-overlay {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    inset: 0;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: min(24px, 4vw);
+    box-sizing: border-box;
+}
+
+#bathroom-memory-overlay.active {
+    display: flex;
+}
+
+.bathroom-memory-backdrop {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 70% 45% at 50% 50%, rgba(248, 200, 184, 0.22) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 24% 26%, rgba(232, 168, 152, 0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 78% 26%, rgba(216, 156, 144, 0.16) 0%, transparent 65%),
+        radial-gradient(ellipse 90% 70% at 50% 100%, rgba(56, 32, 28, 0.55) 0%, transparent 70%),
+        linear-gradient(180deg, #4a2a26 0%, #6a443c 45%, #1c1010 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+}
+
+.bathroom-memory-lift {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: min(720px, 96vw);
+    pointer-events: none;
+}
+
+.bathroom-memory-lift > * {
+    pointer-events: auto;
+}
+
+.bathroom-memory-hud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: min(680px, 94vw);
+}
+
+.bathroom-memory-tip {
+    flex: 1 1 220px;
+    margin: 0;
+    min-height: 2.6em;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', monospace;
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(248, 220, 200, 0.92);
+    text-shadow: 0 1px 0 rgba(40, 18, 14, 0.7);
+    transition: opacity 0.55s ease;
+}
+
+.bathroom-memory-tip.fading {
+    opacity: 0.32;
+}
+
+.bathroom-memory-tip.surfacing {
+    color: rgba(252, 232, 220, 0.96);
+    font-style: italic;
+}
+
+.bathroom-memory-actions {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 8px;
+}
+
+.bathroom-memory-close {
+    margin: 0;
+    background: rgba(72, 40, 36, 0.72);
+    border: 1px solid rgba(232, 176, 160, 0.55);
+    color: rgba(248, 224, 200, 0.92);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.bathroom-memory-close:hover {
+    border-color: rgba(248, 232, 200, 0.85);
+    background: rgba(96, 56, 48, 0.85);
+}
+
+.bathroom-memory-stage {
+    position: relative;
+    width: 100%;
+    max-width: min(680px, 94vw);
+    aspect-ratio: 480 / 320;
+    max-height: min(62vh, 520px);
+    border: 2px solid rgba(176, 120, 96, 0.7);
+    box-shadow:
+        0 0 0 1px rgba(40, 22, 16, 0.95),
+        0 18px 56px rgba(40, 18, 14, 0.55),
+        inset 0 0 60px rgba(96, 56, 40, 0.45);
+    background: #2a1810;
+    overflow: hidden;
+}
+
+.bathroom-memory-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    object-position: center center;
+    image-rendering: pixelated;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .bathroom-memory-stage {
+        max-height: min(52vh, 420px);
+    }
+
+    .bathroom-memory-hud {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .bathroom-memory-actions {
+        flex-direction: column;
+    }
+}
+
+/* ============================
+   bedroom three memory vignette (apartment three)
+   a warm tea-stained room where several time periods live at once.
+   warmer + more amber than bedroom one (apt 3), with a softly glowing
+   lamp and a slightly more dreamy/wistful hud palette.
+   ============================ */
+#bedroom-three-memory-overlay {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    inset: 0;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: min(24px, 4vw);
+    box-sizing: border-box;
+}
+
+#bedroom-three-memory-overlay.active {
+    display: flex;
+}
+
+.bedroom-three-memory-backdrop {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 70% 45% at 50% 50%, rgba(248, 216, 168, 0.24) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 24% 26%, rgba(232, 176, 136, 0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 78% 26%, rgba(216, 168, 136, 0.16) 0%, transparent 65%),
+        radial-gradient(ellipse 90% 70% at 50% 100%, rgba(64, 36, 24, 0.55) 0%, transparent 70%),
+        linear-gradient(180deg, #4a2e22 0%, #6c4a36 45%, #20120c 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+}
+
+.bedroom-three-memory-lift {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: min(720px, 96vw);
+    pointer-events: none;
+}
+
+.bedroom-three-memory-lift > * {
+    pointer-events: auto;
+}
+
+.bedroom-three-memory-hud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: min(680px, 94vw);
+}
+
+.bedroom-three-memory-tip {
+    flex: 1 1 220px;
+    margin: 0;
+    min-height: 2.6em;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', monospace;
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(248, 224, 184, 0.92);
+    text-shadow: 0 1px 0 rgba(40, 18, 10, 0.7);
+    transition: opacity 0.55s ease;
+}
+
+.bedroom-three-memory-tip.fading {
+    opacity: 0.32;
+}
+
+.bedroom-three-memory-tip.surfacing {
+    color: rgba(252, 232, 200, 0.96);
+    font-style: italic;
+}
+
+.bedroom-three-memory-actions {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 8px;
+}
+
+.bedroom-three-memory-close {
+    margin: 0;
+    background: rgba(72, 44, 28, 0.72);
+    border: 1px solid rgba(232, 184, 136, 0.55);
+    color: rgba(248, 224, 192, 0.92);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.bedroom-three-memory-close:hover {
+    border-color: rgba(248, 232, 200, 0.85);
+    background: rgba(96, 64, 40, 0.85);
+}
+
+.bedroom-three-memory-stage {
+    position: relative;
+    width: 100%;
+    max-width: min(680px, 94vw);
+    aspect-ratio: 480 / 320;
+    max-height: min(62vh, 520px);
+    border: 2px solid rgba(176, 124, 80, 0.7);
+    box-shadow:
+        0 0 0 1px rgba(40, 22, 12, 0.95),
+        0 18px 56px rgba(40, 18, 10, 0.55),
+        inset 0 0 60px rgba(96, 56, 32, 0.45);
+    background: #2c180e;
+    overflow: hidden;
+}
+
+.bedroom-three-memory-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    object-position: center center;
+    image-rendering: pixelated;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .bedroom-three-memory-stage {
+        max-height: min(52vh, 420px);
+    }
+
+    .bedroom-three-memory-hud {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .bedroom-three-memory-actions {
+        flex-direction: column;
+    }
+}
+
+/* ============================
+   living + kitchen memory vignette (apartment three)
+   warm cream walls, amber fridge glow, walnut cabinetry,
+   and a quiet bluish tv halo - the kitchen and the living room
+   share the same hour and the same backdrop palette.
+   ============================ */
+#living-kitchen-memory-overlay {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    inset: 0;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: min(24px, 4vw);
+    box-sizing: border-box;
+}
+
+#living-kitchen-memory-overlay.active {
+    display: flex;
+}
+
+.living-kitchen-memory-backdrop {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 60% 38% at 22% 58%, rgba(248, 208, 152, 0.22) 0%, transparent 65%),
+        radial-gradient(ellipse 60% 38% at 78% 58%, rgba(168, 196, 224, 0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 50% 22%, rgba(232, 184, 136, 0.16) 0%, transparent 65%),
+        radial-gradient(ellipse 90% 70% at 50% 100%, rgba(48, 28, 18, 0.55) 0%, transparent 70%),
+        linear-gradient(180deg, #3a261c 0%, #5e4030 45%, #1c100a 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+}
+
+.living-kitchen-memory-lift {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: min(720px, 96vw);
+    pointer-events: none;
+}
+
+.living-kitchen-memory-lift > * {
+    pointer-events: auto;
+}
+
+.living-kitchen-memory-hud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: min(680px, 94vw);
+}
+
+.living-kitchen-memory-tip {
+    flex: 1 1 220px;
+    margin: 0;
+    min-height: 2.6em;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', monospace;
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(248, 224, 184, 0.92);
+    text-shadow: 0 1px 0 rgba(40, 18, 10, 0.7);
+    transition: opacity 0.55s ease;
+}
+
+.living-kitchen-memory-tip.fading {
+    opacity: 0.32;
+}
+
+.living-kitchen-memory-tip.surfacing {
+    color: rgba(252, 232, 200, 0.96);
+    font-style: italic;
+}
+
+.living-kitchen-memory-actions {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 8px;
+}
+
+.living-kitchen-memory-close {
+    margin: 0;
+    background: rgba(64, 40, 28, 0.72);
+    border: 1px solid rgba(232, 184, 136, 0.55);
+    color: rgba(248, 224, 192, 0.92);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.living-kitchen-memory-close:hover {
+    border-color: rgba(248, 232, 200, 0.85);
+    background: rgba(88, 56, 36, 0.85);
+}
+
+.living-kitchen-memory-stage {
+    position: relative;
+    width: 100%;
+    max-width: min(680px, 94vw);
+    aspect-ratio: 480 / 320;
+    max-height: min(62vh, 520px);
+    border: 2px solid rgba(176, 124, 80, 0.7);
+    box-shadow:
+        0 0 0 1px rgba(36, 20, 12, 0.95),
+        0 18px 56px rgba(36, 16, 10, 0.55),
+        inset 0 0 60px rgba(96, 56, 32, 0.45);
+    background: #281610;
+    overflow: hidden;
+}
+
+.living-kitchen-memory-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    object-position: center center;
+    image-rendering: pixelated;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .living-kitchen-memory-stage {
+        max-height: min(52vh, 420px);
+    }
+
+    .living-kitchen-memory-hud {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .living-kitchen-memory-actions {
+        flex-direction: column;
+    }
+}

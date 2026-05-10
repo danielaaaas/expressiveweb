@@ -1,0 +1,567 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" shape-rendering="crispEdges">
+  <title>Bedroom two memory fragment (apartment three) - emotionally familiar but partially forgotten</title>
+  <desc>A small writing desk lit by a dim shaded lamp in the muted blue-violet light of evening. Stacked books and an open notebook sit on the desk; a small mug with a few pens leans behind them. On the wall above the desk: a cork board where some notes and photographs are still pinned and others are gone, with only the pin and a torn corner remaining. To the right of the cork board, a few rectangles of slightly lighter paint where pictures used to hang. To the left, a small window cropped at the edge of the frame shows a quiet evening sky. The corner of a bed is cropped at the left edge: a pillow and a folded blanket, the rest hidden. The whole scene is washed slightly cool, like a memory that is calm but starting to lose its outlines.</desc>
+
+  <defs>
+    <linearGradient id="b2Wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#c8b0bc"/>
+      <stop offset="60%"  stop-color="#a89098"/>
+      <stop offset="100%" stop-color="#7a6878"/>
+    </linearGradient>
+    <linearGradient id="b2Floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#a09080"/>
+      <stop offset="100%" stop-color="#5a4838"/>
+    </linearGradient>
+    <linearGradient id="b2Desk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#c8a888"/>
+      <stop offset="100%" stop-color="#7a5840"/>
+    </linearGradient>
+    <linearGradient id="b2DeskFront" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#a07858"/>
+      <stop offset="100%" stop-color="#604030"/>
+    </linearGradient>
+    <linearGradient id="b2Cork" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#b8896a"/>
+      <stop offset="100%" stop-color="#785038"/>
+    </linearGradient>
+    <linearGradient id="b2Bed" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#b0b8c0"/>
+      <stop offset="100%" stop-color="#788090"/>
+    </linearGradient>
+    <linearGradient id="b2Blanket" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#a8b0a0"/>
+      <stop offset="100%" stop-color="#5a6850"/>
+    </linearGradient>
+    <radialGradient id="b2LampPool" cx="50%" cy="50%" r="60%">
+      <stop offset="0%"   stop-color="#fde8b8" stop-opacity="0.32"/>
+      <stop offset="55%"  stop-color="#e8b888" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#e8b888" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="b2LampShade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f4e0c0"/>
+      <stop offset="100%" stop-color="#a8806c"/>
+    </linearGradient>
+
+    <!-- Three quiet evening window scenes -->
+    <linearGradient id="b2SkyDusk" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#b0a0c0"/>
+      <stop offset="100%" stop-color="#7a6890"/>
+    </linearGradient>
+    <linearGradient id="b2SkyNight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#3a3858"/>
+      <stop offset="100%" stop-color="#1a1a30"/>
+    </linearGradient>
+    <linearGradient id="b2SkyPredawn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#5a7088"/>
+      <stop offset="100%" stop-color="#a89888"/>
+    </linearGradient>
+
+    <linearGradient id="b2SidesL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#2a1a28" stop-opacity="0.40"/>
+      <stop offset="100%" stop-color="#2a1a28" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="b2SidesR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%"   stop-color="#2a1a28" stop-opacity="0.40"/>
+      <stop offset="100%" stop-color="#2a1a28" stop-opacity="0"/>
+    </linearGradient>
+
+    <clipPath id="b2WindowClip">
+      <rect x="-2" y="42" width="106" height="92"/>
+    </clipPath>
+
+    <!-- soft blur for the unnaturally-soft shadows -->
+    <filter id="b2SoftShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="1.6"/>
+    </filter>
+  </defs>
+
+  <!-- ============= WALL ============= -->
+  <rect width="480" height="320" fill="url(#b2Wall)"/>
+  <!-- subtle vertical wallpaper striping -->
+  <g pointer-events="none" opacity="0.20">
+    <rect x="40"  y="0" width="1" height="215" fill="#9a7888"/>
+    <rect x="100" y="0" width="1" height="215" fill="#9a7888"/>
+    <rect x="160" y="0" width="1" height="215" fill="#9a7888"/>
+    <rect x="220" y="0" width="1" height="215" fill="#9a7888"/>
+    <rect x="280" y="0" width="1" height="215" fill="#9a7888"/>
+    <rect x="340" y="0" width="1" height="215" fill="#9a7888"/>
+    <rect x="400" y="0" width="1" height="215" fill="#9a7888"/>
+    <rect x="460" y="0" width="1" height="215" fill="#9a7888"/>
+  </g>
+  <!-- ceiling line -->
+  <rect x="0" y="0" width="480" height="3" fill="#705068" opacity="0.55"/>
+
+  <!-- ============= FADED PAINT MARKS (where things used to hang) ============= -->
+  <g id="b2-paint" pointer-events="none">
+    <!-- portrait shape -->
+    <rect x="138" y="40" width="44" height="58" fill="#d8c0c8" opacity="0.55"/>
+    <rect x="138" y="40" width="44" height="58" fill="none" stroke="#7a6080" stroke-width="1" opacity="0.30"/>
+    <!-- landscape shape -->
+    <rect x="200" y="58" width="58" height="38" fill="#d8c0c8" opacity="0.50"/>
+    <rect x="200" y="58" width="58" height="38" fill="none" stroke="#7a6080" stroke-width="1" opacity="0.30"/>
+    <!-- pin holes / nail marks -->
+    <rect x="160" y="46" width="2" height="2" fill="#3a2838" opacity="0.55"/>
+    <rect x="228" y="64" width="2" height="2" fill="#3a2838" opacity="0.55"/>
+    <rect x="246" y="106" width="2" height="2" fill="#3a2838" opacity="0.45"/>
+    <rect x="190" y="120" width="2" height="2" fill="#3a2838" opacity="0.45"/>
+  </g>
+
+  <!-- ============= WINDOW (cropped at the left edge) ============= -->
+  <g id="b2-window-frame" pointer-events="none">
+    <rect x="-10" y="30" width="120" height="110" fill="#5a3a48"/>
+    <rect x="-10" y="30" width="120" height="2"  fill="#a87858"/>
+    <rect x="108" y="30" width="2"   height="110" fill="#3a1a28"/>
+    <rect x="-10" y="138" width="120" height="2" fill="#3a1a28"/>
+    <!-- inner sill -->
+    <rect x="-10" y="134" width="120" height="4" fill="#7a4858"/>
+  </g>
+
+  <!-- the three rotating scenes, clipped to the inner pane -->
+  <g clip-path="url(#b2WindowClip)">
+    <g id="b2-window-a" pointer-events="none">
+      <!-- A: quiet dusk (lavender / mauve sky over distant rooftops) -->
+      <rect x="-2" y="42" width="106" height="92" fill="url(#b2SkyDusk)"/>
+      <!-- distant rooftops -->
+      <rect x="-2" y="108" width="22" height="26" fill="#5a4868"/>
+      <rect x="20"  y="98"  width="14" height="36" fill="#4a3858"/>
+      <rect x="34"  y="112" width="20" height="22" fill="#5a4868"/>
+      <rect x="54"  y="102" width="14" height="32" fill="#4a3858"/>
+      <rect x="68"  y="116" width="22" height="18" fill="#5a4868"/>
+      <rect x="90"  y="108" width="16" height="26" fill="#4a3858"/>
+      <!-- a couple of soft lit windows -->
+      <rect x="42"  y="116" width="2" height="2" fill="#fde8a8"/>
+      <rect x="78"  y="120" width="2" height="2" fill="#fde8a8"/>
+    </g>
+    <g id="b2-window-b" pointer-events="none" visibility="hidden">
+      <!-- B: night with stars + warm lit windows in distance -->
+      <rect x="-2" y="42" width="106" height="92" fill="url(#b2SkyNight)"/>
+      <!-- silhouettes -->
+      <rect x="-2" y="108" width="22" height="26" fill="#1a1830"/>
+      <rect x="20"  y="98"  width="14" height="36" fill="#15132a"/>
+      <rect x="34"  y="112" width="20" height="22" fill="#1a1830"/>
+      <rect x="54"  y="102" width="14" height="32" fill="#15132a"/>
+      <rect x="68"  y="116" width="22" height="18" fill="#1a1830"/>
+      <rect x="90"  y="108" width="16" height="26" fill="#15132a"/>
+      <!-- many small lit windows -->
+      <rect x="6"   y="118" width="2" height="2" fill="#fde8a8"/>
+      <rect x="14"  y="124" width="2" height="2" fill="#fde8a8"/>
+      <rect x="26"  y="106" width="2" height="2" fill="#fde8a8"/>
+      <rect x="42"  y="118" width="2" height="2" fill="#fde8a8"/>
+      <rect x="42"  y="126" width="2" height="2" fill="#fde8a8"/>
+      <rect x="58"  y="112" width="2" height="2" fill="#fde8a8"/>
+      <rect x="74"  y="120" width="2" height="2" fill="#fde8a8"/>
+      <rect x="84"  y="124" width="2" height="2" fill="#fde8a8"/>
+      <rect x="96"  y="118" width="2" height="2" fill="#fde8a8"/>
+      <!-- stars -->
+      <rect x="10"  y="50" width="1" height="1" fill="#e8e0d0" opacity="0.85"/>
+      <rect x="32"  y="58" width="1" height="1" fill="#e8e0d0" opacity="0.65"/>
+      <rect x="62"  y="48" width="1" height="1" fill="#e8e0d0" opacity="0.85"/>
+      <rect x="84"  y="62" width="1" height="1" fill="#e8e0d0" opacity="0.6"/>
+      <rect x="100" y="54" width="1" height="1" fill="#e8e0d0" opacity="0.7"/>
+    </g>
+    <g id="b2-window-c" pointer-events="none" visibility="hidden">
+      <!-- C: quiet pre-dawn (cool teal -> warm horizon) -->
+      <rect x="-2" y="42" width="106" height="92" fill="url(#b2SkyPredawn)"/>
+      <!-- horizon glow -->
+      <rect x="-2" y="100" width="106" height="8" fill="#d89878" opacity="0.55"/>
+      <rect x="-2" y="108" width="22" height="26" fill="#3a2838"/>
+      <rect x="20"  y="98"  width="14" height="36" fill="#2a1828"/>
+      <rect x="34"  y="112" width="20" height="22" fill="#3a2838"/>
+      <rect x="54"  y="102" width="14" height="32" fill="#2a1828"/>
+      <rect x="68"  y="116" width="22" height="18" fill="#3a2838"/>
+      <rect x="90"  y="108" width="16" height="26" fill="#2a1828"/>
+      <!-- a single lit window -->
+      <rect x="42"  y="118" width="2" height="2" fill="#fde8a8"/>
+    </g>
+  </g>
+  <!-- mullions over the scene -->
+  <g pointer-events="none">
+    <rect x="-2" y="86" width="106" height="2" fill="#5a3a48"/>
+    <rect x="48" y="42" width="2"  height="92" fill="#5a3a48"/>
+  </g>
+
+  <!-- ============= CORK BOARD (above the desk) ============= -->
+  <g id="b2-pinboard">
+    <!-- frame -->
+    <rect x="288" y="32" width="174" height="124" fill="#5a3828" pointer-events="none"/>
+    <rect x="288" y="32" width="174" height="2"   fill="#a87858" pointer-events="none"/>
+    <rect x="288" y="154" width="174" height="2"  fill="#3a1a18" pointer-events="none"/>
+    <!-- cork interior -->
+    <rect x="292" y="36" width="166" height="118" fill="url(#b2Cork)" pointer-events="none"/>
+    <!-- subtle cork specks -->
+    <g pointer-events="none" opacity="0.45">
+      <rect x="306" y="48"  width="2" height="2" fill="#604030"/>
+      <rect x="334" y="62"  width="1" height="1" fill="#604030"/>
+      <rect x="378" y="56"  width="2" height="2" fill="#604030"/>
+      <rect x="412" y="78"  width="1" height="1" fill="#604030"/>
+      <rect x="324" y="98"  width="2" height="2" fill="#604030"/>
+      <rect x="358" y="120" width="1" height="1" fill="#604030"/>
+      <rect x="402" y="136" width="2" height="2" fill="#604030"/>
+      <rect x="446" y="92"  width="1" height="1" fill="#604030"/>
+    </g>
+
+    <!-- pinned items - some present, some torn (only pin + corner remaining).
+         this rotates per visit so the room "details shift between visits".
+         drawn AFTER cork so they sit on top. -->
+
+    <!-- SET A: most things still pinned -->
+    <g id="b2-pin-set-a">
+      <!-- faded photograph (top-left) -->
+      <g pointer-events="none">
+        <g transform="rotate(-3 322 70)">
+          <rect x="298" y="46" width="48" height="48" fill="#f0e0c8"/>
+          <rect x="298" y="46" width="48" height="2"  fill="#fdf0d8"/>
+          <rect x="298" y="92" width="48" height="2"  fill="#a89878"/>
+          <!-- faded sepia silhouette of a person -->
+          <rect x="312" y="58" width="20" height="14" fill="#a87858"/>
+          <rect x="316" y="54" width="12" height="4"  fill="#a87858"/>
+          <rect x="306" y="72" width="32" height="20" fill="#785848"/>
+          <!-- pin -->
+          <rect x="320" y="46" width="3" height="3"   fill="#c84858"/>
+        </g>
+      </g>
+      <!-- a yellowed note (top-right), handwritten lines -->
+      <g pointer-events="none">
+        <g transform="rotate(2 396 64)">
+          <rect x="368" y="44" width="56" height="42" fill="#f4e8c0"/>
+          <rect x="368" y="44" width="56" height="1"  fill="#fdf4d4"/>
+          <rect x="368" y="84" width="56" height="2"  fill="#a89060"/>
+          <!-- handwritten lines -->
+          <rect x="372" y="50" width="40" height="1" fill="#5a3828" opacity="0.65"/>
+          <rect x="372" y="56" width="46" height="1" fill="#5a3828" opacity="0.65"/>
+          <rect x="372" y="62" width="32" height="1" fill="#5a3828" opacity="0.65"/>
+          <rect x="372" y="68" width="44" height="1" fill="#5a3828" opacity="0.55"/>
+          <rect x="372" y="74" width="22" height="1" fill="#5a3828" opacity="0.55"/>
+          <!-- pin -->
+          <rect x="395" y="44" width="3" height="3"   fill="#c84858"/>
+        </g>
+      </g>
+      <!-- smaller pinned photo (bottom-left) -->
+      <g pointer-events="none">
+        <g transform="rotate(4 322 122)">
+          <rect x="304" y="106" width="36" height="36" fill="#f0e0c8"/>
+          <rect x="304" y="106" width="36" height="2"  fill="#fdf0d8"/>
+          <!-- a small landscape -->
+          <rect x="306" y="124" width="32" height="16" fill="#88886c"/>
+          <rect x="306" y="120" width="32" height="4"  fill="#a89888"/>
+          <rect x="316" y="116" width="2"  height="8"  fill="#3a3018"/>
+          <rect x="313" y="112" width="8"  height="6"  fill="#3a3018"/>
+          <rect x="304" y="140" width="36" height="2"  fill="#a89878"/>
+          <!-- pin -->
+          <rect x="320" y="106" width="3" height="3"   fill="#c84858"/>
+        </g>
+      </g>
+      <!-- TORN: only the pin + a triangular torn paper corner remains (bottom-center) -->
+      <g pointer-events="none" opacity="0.85">
+        <polygon points="380,120 408,120 380,134" fill="#f4e8c0"/>
+        <polygon points="380,120 408,120 380,134" fill="none" stroke="#a89060" stroke-width="1" opacity="0.5"/>
+        <rect x="384" y="120" width="3" height="3" fill="#c84858"/>
+      </g>
+      <!-- a single empty pin where something was completely removed -->
+      <rect x="438" y="58" width="3" height="3" fill="#c84858" opacity="0.85" pointer-events="none"/>
+    </g>
+
+    <!-- SET B: a different arrangement, more torn/missing items -->
+    <g id="b2-pin-set-b" visibility="hidden">
+      <!-- an old ticket stub (top-left) -->
+      <g pointer-events="none">
+        <g transform="rotate(-5 320 64)">
+          <rect x="298" y="48" width="44" height="32" fill="#e8d088"/>
+          <rect x="298" y="48" width="44" height="1"  fill="#fde0a8"/>
+          <rect x="298" y="78" width="44" height="2"  fill="#88683a"/>
+          <!-- perforation line down the middle -->
+          <rect x="320" y="48" width="1" height="32" fill="#88683a" opacity="0.6"/>
+          <!-- text-ish marks -->
+          <rect x="302" y="56" width="14" height="2" fill="#604018" opacity="0.7"/>
+          <rect x="302" y="62" width="10" height="1" fill="#604018" opacity="0.7"/>
+          <rect x="324" y="56" width="14" height="2" fill="#604018" opacity="0.7"/>
+          <rect x="324" y="62" width="10" height="1" fill="#604018" opacity="0.7"/>
+          <!-- pin -->
+          <rect x="318" y="48" width="3" height="3" fill="#c84858"/>
+        </g>
+      </g>
+      <!-- a small pencil sketch (top-right) -->
+      <g pointer-events="none">
+        <g transform="rotate(3 398 70)">
+          <rect x="372" y="50" width="52" height="40" fill="#f0e8d0"/>
+          <rect x="372" y="50" width="52" height="1"  fill="#fdf4dc"/>
+          <rect x="372" y="88" width="52" height="2"  fill="#988868"/>
+          <!-- sketch lines (a roof/building) -->
+          <polyline points="378,82 398,62 418,82" fill="none" stroke="#3a2818" stroke-width="1" opacity="0.6"/>
+          <rect x="382" y="76" width="32" height="6" fill="none" stroke="#3a2818" stroke-width="1" opacity="0.55"/>
+          <rect x="392" y="78" width="6" height="4" fill="#3a2818" opacity="0.55"/>
+          <!-- pin -->
+          <rect x="395" y="50" width="3" height="3" fill="#c84858"/>
+        </g>
+      </g>
+      <!-- TORN: pin + corner (bottom-left) -->
+      <g pointer-events="none" opacity="0.8">
+        <polygon points="306,108 332,108 306,126" fill="#f0e0c8"/>
+        <polygon points="306,108 332,108 306,126" fill="none" stroke="#a89878" stroke-width="1" opacity="0.5"/>
+        <rect x="312" y="108" width="3" height="3" fill="#c84858"/>
+      </g>
+      <!-- empty pins -->
+      <rect x="362" y="124" width="3" height="3" fill="#c84858" opacity="0.85" pointer-events="none"/>
+      <rect x="430" y="118" width="3" height="3" fill="#c84858" opacity="0.85" pointer-events="none"/>
+    </g>
+
+    <!-- SET C: mostly empty - the cork board has lost most of its history -->
+    <g id="b2-pin-set-c" visibility="hidden">
+      <!-- a single small pinned note (top-right) -->
+      <g pointer-events="none">
+        <g transform="rotate(-2 400 64)">
+          <rect x="378" y="48" width="44" height="32" fill="#f4e8c0"/>
+          <rect x="378" y="48" width="44" height="1"  fill="#fdf4d4"/>
+          <rect x="378" y="78" width="44" height="2"  fill="#a89060"/>
+          <rect x="382" y="56" width="32" height="1" fill="#5a3828" opacity="0.65"/>
+          <rect x="382" y="62" width="22" height="1" fill="#5a3828" opacity="0.55"/>
+          <rect x="382" y="68" width="28" height="1" fill="#5a3828" opacity="0.55"/>
+          <rect x="397" y="48" width="3" height="3" fill="#c84858"/>
+        </g>
+      </g>
+      <!-- TORN x3 -->
+      <g pointer-events="none" opacity="0.75">
+        <polygon points="306,52 326,52 306,66" fill="#f0e0c8"/>
+        <polygon points="306,52 326,52 306,66" fill="none" stroke="#a89878" stroke-width="1" opacity="0.5"/>
+        <rect x="310" y="52" width="3" height="3" fill="#c84858"/>
+      </g>
+      <g pointer-events="none" opacity="0.75">
+        <polygon points="324,108 350,108 324,124" fill="#f4e8c0"/>
+        <polygon points="324,108 350,108 324,124" fill="none" stroke="#a89060" stroke-width="1" opacity="0.5"/>
+        <rect x="328" y="108" width="3" height="3" fill="#c84858"/>
+      </g>
+      <!-- empty pins -->
+      <rect x="376" y="116" width="3" height="3" fill="#c84858" opacity="0.85" pointer-events="none"/>
+      <rect x="436" y="124" width="3" height="3" fill="#c84858" opacity="0.85" pointer-events="none"/>
+      <rect x="438" y="60" width="3" height="3" fill="#c84858" opacity="0.85" pointer-events="none"/>
+    </g>
+  </g>
+
+  <!-- ============= SOFT LAMP POOL ============= -->
+  <ellipse cx="280" cy="200" rx="220" ry="100" fill="url(#b2LampPool)" pointer-events="none">
+    <animate attributeName="opacity" values="0.85;1;0.78;1;0.88" dur="18s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- ============= FLOOR ============= -->
+  <rect x="0" y="215" width="480" height="3"  fill="#4a3828"/>
+  <rect x="0" y="215" width="480" height="1"  fill="#a87858"/>
+  <rect x="0" y="218" width="480" height="102" fill="url(#b2Floor)"/>
+  <!-- floorboard seams -->
+  <rect x="0"   y="278" width="480" height="1" fill="#2a1818" opacity="0.55"/>
+  <rect x="100" y="218" width="1"   height="102" fill="#2a1818" opacity="0.45"/>
+  <rect x="220" y="218" width="1"   height="102" fill="#2a1818" opacity="0.45"/>
+  <rect x="340" y="218" width="1"   height="102" fill="#2a1818" opacity="0.45"/>
+
+  <!-- ============= BED CORNER (cropped at the left edge) ============= -->
+  <g id="b2-bed" pointer-events="none">
+    <!-- headboard fragment -->
+    <rect x="-4" y="170" width="14" height="50" fill="#604848"/>
+    <rect x="-4" y="170" width="14" height="2"  fill="#88706c"/>
+    <rect x="8"  y="170" width="2"  height="50" fill="#3a2828"/>
+
+    <!-- bed frame / base -->
+    <rect x="-4" y="240" width="120" height="32" fill="#604848"/>
+    <rect x="-4" y="240" width="120" height="2"  fill="#88706c"/>
+    <rect x="-4" y="270" width="120" height="2"  fill="#2a1818"/>
+    <rect x="0"   y="272" width="6" height="14" fill="#2a1818"/>
+    <rect x="108" y="272" width="6" height="14" fill="#2a1818"/>
+
+    <!-- mattress -->
+    <rect x="-4" y="210" width="120" height="32" fill="url(#b2Bed)"/>
+    <rect x="-4" y="210" width="120" height="2"  fill="#c8d0d8"/>
+    <rect x="-4" y="240" width="120" height="2"  fill="#5a6878"/>
+
+    <!-- pillow -->
+    <rect x="10" y="186" width="68" height="28" fill="#e0d8d0"/>
+    <rect x="10" y="186" width="68" height="2"  fill="#fdf6e6"/>
+    <rect x="10" y="212" width="68" height="2"  fill="#a89888"/>
+    <rect x="10" y="186" width="2"  height="28" fill="#fdf6e6"/>
+    <rect x="76" y="186" width="2"  height="28" fill="#a89888"/>
+    <!-- a faint center fold -->
+    <rect x="42" y="190" width="1" height="20" fill="#a89888" opacity="0.5"/>
+  </g>
+
+  <!-- folded blanket on top of the mattress (faded sage/gray) -->
+  <g id="b2-blanket" pointer-events="none">
+    <rect x="20" y="216" width="92" height="20" fill="url(#b2Blanket)"/>
+    <rect x="20" y="216" width="92" height="2"  fill="#c0c8a8"/>
+    <rect x="20" y="234" width="92" height="2"  fill="#3a4838"/>
+    <!-- soft fold lines -->
+    <rect x="40" y="222" width="60" height="1" fill="#3a4838" opacity="0.5"/>
+    <rect x="30" y="228" width="80" height="1" fill="#3a4838" opacity="0.5"/>
+  </g>
+
+  <!-- ============= DESK ============= -->
+  <g id="b2-desk" pointer-events="none">
+    <!-- soft unnaturally-blurred shadow under the desk -->
+    <ellipse cx="338" cy="294" rx="120" ry="6" fill="#2a1818" opacity="0.55" filter="url(#b2SoftShadow)"/>
+
+    <!-- desk top surface (highlight) -->
+    <rect x="216" y="184" width="248" height="3" fill="#d8b89c"/>
+    <rect x="216" y="187" width="248" height="2" fill="#a87858"/>
+
+    <!-- desk body: continuous frame from top down to the legs (closes the
+         gap between the top apron and the drawer, and adds the side panels
+         that hold the drawer in place so nothing floats). -->
+    <rect x="216" y="189" width="248" height="53" fill="url(#b2DeskFront)"/>
+    <rect x="216" y="189" width="2"   height="53" fill="#a87858"/>
+    <rect x="462" y="189" width="2"   height="53" fill="#2a1810"/>
+    <rect x="216" y="240" width="248" height="2"  fill="#2a1810"/>
+    <!-- apron seam (horizontal break between top apron rail and drawer area) -->
+    <rect x="216" y="203" width="248" height="2" fill="#3a1a10" opacity="0.75"/>
+    <!-- vertical seams where the side panels meet the drawer face -->
+    <rect x="230" y="207" width="1" height="32" fill="#3a1a10" opacity="0.55"/>
+    <rect x="449" y="207" width="1" height="32" fill="#3a1a10" opacity="0.55"/>
+
+    <!-- drawer face (recessed within the body, slightly darker for contrast) -->
+    <rect x="232" y="208" width="216" height="30" fill="#785030"/>
+    <rect x="232" y="208" width="216" height="2"  fill="#a87858"/>
+    <rect x="232" y="236" width="216" height="2"  fill="#2a1810"/>
+    <rect x="232" y="208" width="2"   height="30" fill="#a87858"/>
+    <rect x="446" y="208" width="2"   height="30" fill="#2a1810"/>
+
+    <!-- drawer pull -->
+    <rect x="328" y="220" width="32" height="4" fill="#604030"/>
+    <rect x="328" y="220" width="32" height="1" fill="#a87858"/>
+    <rect x="334" y="218" width="2"  height="2" fill="#604030"/>
+    <rect x="354" y="218" width="2"  height="2" fill="#604030"/>
+
+    <!-- legs -->
+    <rect x="218" y="242" width="8" height="56" fill="#604030"/>
+    <rect x="218" y="242" width="2" height="56" fill="#a87858"/>
+    <rect x="454" y="242" width="8" height="56" fill="#604030"/>
+    <rect x="454" y="242" width="2" height="56" fill="#a87858"/>
+  </g>
+
+  <!-- ============= STACKED BOOKS on desk (center-left) ============= -->
+  <g id="b2-books" pointer-events="none">
+    <!-- bottom book (sage, slightly larger) -->
+    <rect x="288" y="170" width="64" height="14" fill="#88a878"/>
+    <rect x="288" y="170" width="64" height="1"  fill="#a8c898"/>
+    <rect x="288" y="182" width="64" height="2"  fill="#506838"/>
+    <rect x="288" y="172" width="2"  height="12" fill="#506838" opacity="0.7"/>
+    <rect x="296" y="174" width="40" height="1"  fill="#506838" opacity="0.5"/>
+    <!-- middle book (dusty blush) -->
+    <rect x="294" y="158" width="56" height="12" fill="#c89098"/>
+    <rect x="294" y="158" width="56" height="1"  fill="#e8b0b8"/>
+    <rect x="294" y="169" width="56" height="1"  fill="#785058"/>
+    <rect x="294" y="160" width="2"  height="10" fill="#785058" opacity="0.7"/>
+    <rect x="300" y="162" width="32" height="1"  fill="#785058" opacity="0.55"/>
+    <!-- top book (ochre, slightly askew) -->
+    <g transform="rotate(-3 322 152)">
+      <rect x="298" y="148" width="48" height="10" fill="#c8a868"/>
+      <rect x="298" y="148" width="48" height="1"  fill="#e8c890"/>
+      <rect x="298" y="157" width="48" height="1"  fill="#785838"/>
+      <rect x="298" y="150" width="2"  height="8"  fill="#785838" opacity="0.7"/>
+    </g>
+  </g>
+
+  <!-- ============= OPEN NOTEBOOK on desk (center-right) ============= -->
+  <g id="b2-notebook" pointer-events="none">
+    <!-- two open pages -->
+    <rect x="358" y="170" width="72" height="14" fill="#f0e8d0"/>
+    <rect x="358" y="170" width="72" height="1"  fill="#fdf4dc"/>
+    <rect x="358" y="183" width="72" height="1"  fill="#a89878"/>
+    <!-- spine fold down the middle -->
+    <rect x="393" y="170" width="1" height="14" fill="#a89878" opacity="0.7"/>
+    <!-- handwritten lines on each page -->
+    <rect x="362" y="173" width="28" height="1" fill="#3a2818" opacity="0.6"/>
+    <rect x="362" y="176" width="22" height="1" fill="#3a2818" opacity="0.55"/>
+    <rect x="362" y="179" width="26" height="1" fill="#3a2818" opacity="0.55"/>
+    <rect x="397" y="173" width="28" height="1" fill="#3a2818" opacity="0.6"/>
+    <rect x="397" y="176" width="20" height="1" fill="#3a2818" opacity="0.55"/>
+    <rect x="397" y="179" width="14" height="1" fill="#3a2818" opacity="0.55"/>
+  </g>
+
+  <!-- ============= MUG WITH PENS (right side of desk) ============= -->
+  <g id="b2-mug" pointer-events="none">
+    <!-- pens sticking up out of the mug -->
+    <rect x="438" y="148" width="2" height="32" fill="#3a2838"/>
+    <rect x="438" y="148" width="2" height="3"  fill="#88a8c0"/>
+    <rect x="442" y="142" width="2" height="38" fill="#5a3838"/>
+    <rect x="442" y="142" width="2" height="3"  fill="#c8a868"/>
+    <rect x="446" y="152" width="2" height="28" fill="#785030"/>
+    <rect x="446" y="152" width="2" height="3"  fill="#a87838"/>
+    <rect x="450" y="146" width="2" height="34" fill="#3a4858"/>
+    <rect x="450" y="146" width="2" height="3"  fill="#c8a8a8"/>
+    <!-- mug body -->
+    <rect x="434" y="166" width="22" height="20" fill="#88a098"/>
+    <rect x="434" y="166" width="22" height="2"  fill="#a8c0b8"/>
+    <rect x="434" y="184" width="22" height="2"  fill="#506858"/>
+    <rect x="434" y="166" width="2"  height="20" fill="#506858"/>
+    <rect x="454" y="166" width="2"  height="20" fill="#506858"/>
+    <!-- handle -->
+    <rect x="456" y="170" width="6" height="2" fill="#88a098"/>
+    <rect x="460" y="172" width="2" height="8" fill="#88a098"/>
+    <rect x="456" y="180" width="6" height="2" fill="#88a098"/>
+    <!-- mug face mark -->
+    <rect x="442" y="173" width="2" height="2" fill="#3a4838"/>
+    <rect x="448" y="173" width="2" height="2" fill="#3a4838"/>
+  </g>
+
+  <!-- ============= DESK LAMP (left side of desk) ============= -->
+  <g id="b2-lamp">
+    <!-- under-shade glow sliver -->
+    <ellipse cx="250" cy="178" rx="34" ry="8" fill="#fde8b8" opacity="0.42" pointer-events="none"/>
+    <!-- shade (drum) -->
+    <rect x="226" y="116" width="50" height="34" fill="url(#b2LampShade)" pointer-events="none"/>
+    <rect x="226" y="116" width="50" height="2"  fill="#fde8c8" pointer-events="none"/>
+    <rect x="226" y="148" width="50" height="2"  fill="#604030" pointer-events="none"/>
+    <rect x="226" y="116" width="2"  height="34" fill="#fde8c8" pointer-events="none"/>
+    <rect x="274" y="116" width="2"  height="34" fill="#604030" pointer-events="none"/>
+    <!-- subtle vertical fabric stripes -->
+    <rect x="240" y="118" width="1" height="30" fill="#88684c" opacity="0.45" pointer-events="none"/>
+    <rect x="252" y="118" width="1" height="30" fill="#88684c" opacity="0.45" pointer-events="none"/>
+    <rect x="264" y="118" width="1" height="30" fill="#88684c" opacity="0.45" pointer-events="none"/>
+    <!-- pole -->
+    <rect x="248" y="150" width="6" height="34" fill="#604030" pointer-events="none"/>
+    <rect x="248" y="150" width="2" height="34" fill="#a87858" pointer-events="none"/>
+    <!-- base -->
+    <rect x="238" y="184" width="26" height="3" fill="#4a3018" pointer-events="none"/>
+    <rect x="238" y="184" width="26" height="1" fill="#a87858" pointer-events="none"/>
+  </g>
+
+  <!-- ============= SOFT DRIFTING DUST / hidden fragments ============= -->
+  <g id="b2-dust" pointer-events="none">
+    <rect x="180" y="100" width="2" height="2" fill="#fde8b8" opacity="0">
+      <animate attributeName="y"       values="100;220;100" dur="18s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.45;0"    dur="18s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="280" y="60"  width="1" height="1" fill="#fde8b8" opacity="0">
+      <animate attributeName="y"       values="60;220;60"   dur="26s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.55;0"    dur="26s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="220" y="120" width="1" height="1" fill="#fde8b8" opacity="0">
+      <animate attributeName="y"       values="120;220;120" dur="22s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.55;0"    dur="22s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="148" y="80"  width="1" height="1" fill="#fde8b8" opacity="0">
+      <animate attributeName="y"       values="80;220;80"   dur="24s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.45;0"    dur="24s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- side darkening -->
+  <rect x="0"   y="0" width="34" height="320" fill="url(#b2SidesL)" pointer-events="none"/>
+  <rect x="446" y="0" width="34" height="320" fill="url(#b2SidesR)" pointer-events="none"/>
+
+  <!-- soft outer vignette -->
+  <rect width="480" height="320" fill="none" stroke="#1a0a18" stroke-width="22" opacity="0.45" pointer-events="none"/>
+
+  <!-- ============= INTERACTION HOTSPOTS (broadest first; specific items later) ============= -->
+  <g id="b2-hotspots">
+    <rect id="hit-floor"     x="0"   y="215" width="480" height="105" fill="transparent" pointer-events="all"/>
+    <rect id="hit-paint"     x="130" y="34"  width="138" height="100" fill="transparent" pointer-events="all"/>
+    <rect id="hit-window"    x="-4"  y="28"  width="116" height="116" fill="transparent" pointer-events="all"/>
+    <rect id="hit-pinboard"  x="288" y="32"  width="174" height="124" fill="transparent" pointer-events="all"/>
+    <rect id="hit-pin-empty" x="430" y="54"  width="20"  height="14"  fill="transparent" pointer-events="all"/>
+    <rect id="hit-bed"       x="-4"  y="186" width="120" height="100" fill="transparent" pointer-events="all"/>
+    <rect id="hit-pillow"    x="10"  y="186" width="68"  height="32"  fill="transparent" pointer-events="all"/>
+    <rect id="hit-blanket"   x="20"  y="216" width="92"  height="22"  fill="transparent" pointer-events="all"/>
+    <rect id="hit-desk"      x="216" y="184" width="248" height="60"  fill="transparent" pointer-events="all"/>
+    <rect id="hit-lamp"      x="222" y="114" width="58"  height="74"  fill="transparent" pointer-events="all"/>
+    <rect id="hit-books"     x="285" y="148" width="68"  height="38"  fill="transparent" pointer-events="all"/>
+    <rect id="hit-notebook"  x="356" y="168" width="76"  height="20"  fill="transparent" pointer-events="all"/>
+    <rect id="hit-mug"       x="430" y="140" width="34"  height="48"  fill="transparent" pointer-events="all"/>
+  </g>
+</svg>

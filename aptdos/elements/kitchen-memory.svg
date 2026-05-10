@@ -175,7 +175,8 @@
 
   <!-- ============= STUFF ON THE COUNTER ============= -->
   <!-- A reused yogurt tub of leftovers, a stack of mismatched dishes, a takeout
-       container, and a half-unpacked plastic grocery bag tipping over. -->
+       container, the recurring moka pot, and a half-unpacked plastic grocery
+       bag tipping over. -->
   <g id="k2-counter-stuff" pointer-events="none">
 
     <!-- stack of mismatched plates (rear-left of counter) -->
@@ -198,6 +199,90 @@
       <rect x="268" y="201" width="2"  height="3" fill="#aaa"/>
       <rect x="270" y="201" width="2"  height="3" fill="#aaa" opacity="0.8"/>
       <rect x="272" y="201" width="2"  height="3" fill="#aaa" opacity="0.6"/>
+    </g>
+
+    <!-- the recurring moka pot (Bialetti-style, faceted aluminum). it now
+         sits balanced on top of the dish stack with its base resting on the
+         top edge of the sage plate (y=205). assembled with translate(25,-13):
+         +25 horizontally centers the bottom chamber (local x=240..260) over
+         the sage plate (x=260..290, center x=275). +25 also keeps the pot
+         clear of the fridge group's back-wall recess (which paints across
+         x=48..248). -13 lifts the bottom chamber from the bare counter
+         (y=218) up to the sage-plate top (y=205). the assembly is
+         intentionally rendered AFTER the dishes group so the fork tines
+         don't draw across the bottom chamber. -->
+    <g id="k2-moka-assembly" transform="translate(25, -13)">
+    <g id="k2-moka">
+      <!-- spout (small pour on left of top chamber) -->
+      <rect x="240" y="192" width="2" height="3" fill="#888888"/>
+      <rect x="239" y="193" width="1" height="2" fill="#a0a0a0"/>
+
+      <!-- bottom chamber (wider, faceted, sits on the sage plate) -->
+      <rect x="240" y="204" width="20" height="14" fill="#b8b8b8"/>
+      <rect x="240" y="204" width="20" height="2"  fill="#d8d8d8"/>
+      <rect x="240" y="216" width="20" height="2"  fill="#585858"/>
+      <!-- faceted side hints -->
+      <rect x="240" y="206" width="2"  height="10" fill="#888888"/>
+      <rect x="258" y="206" width="2"  height="10" fill="#888888"/>
+      <rect x="244" y="206" width="1"  height="10" fill="#d8d8d8" opacity="0.6"/>
+      <rect x="250" y="206" width="1"  height="10" fill="#d8d8d8" opacity="0.5"/>
+      <rect x="256" y="206" width="1"  height="10" fill="#888888" opacity="0.7"/>
+
+      <!-- pinch ring (joint between bottom and top chamber) -->
+      <rect x="240" y="202" width="20" height="2" fill="#585858"/>
+      <rect x="242" y="201" width="16" height="1" fill="#888888"/>
+
+      <!-- top chamber (narrower, faceted) -->
+      <rect x="242" y="190" width="16" height="12" fill="#b8b8b8"/>
+      <rect x="242" y="190" width="16" height="2"  fill="#d8d8d8"/>
+      <rect x="242" y="200" width="16" height="2"  fill="#888888"/>
+      <rect x="242" y="192" width="2"  height="8"  fill="#888888"/>
+      <rect x="256" y="192" width="2"  height="8"  fill="#888888"/>
+      <rect x="246" y="192" width="1"  height="8"  fill="#d8d8d8" opacity="0.6"/>
+      <rect x="252" y="192" width="1"  height="8"  fill="#888888" opacity="0.6"/>
+
+      <!-- lid -->
+      <rect x="244" y="188" width="12" height="2" fill="#a0a0a0"/>
+      <rect x="244" y="188" width="12" height="1" fill="#c8c8c8"/>
+
+      <!-- knob (black plastic) -->
+      <rect x="248" y="184" width="4" height="4" fill="#1a1a1a"/>
+      <rect x="248" y="184" width="2" height="1" fill="#3a3a3a"/>
+
+      <!-- handle (black plastic, classic angular Bialetti shape, on right) -->
+      <rect x="260" y="204" width="3" height="14" fill="#1a1a1a"/>
+      <rect x="263" y="204" width="6" height="3"  fill="#1a1a1a"/>
+      <rect x="263" y="214" width="6" height="3"  fill="#1a1a1a"/>
+      <rect x="267" y="207" width="2" height="7"  fill="#1a1a1a"/>
+      <rect x="260" y="204" width="1" height="14" fill="#3a3a3a" opacity="0.7"/>
+
+      <!-- faint warm glint from the fridge spill on the polished aluminum -->
+      <rect x="244" y="208" width="1" height="6" fill="#f4e6c0" opacity="0.45"/>
+      <rect x="245" y="194" width="1" height="4" fill="#f4e6c0" opacity="0.35"/>
+    </g>
+
+    <!-- steam wisps drifting out of the moka pot lid (warm, off-white) -->
+    <g id="k2-moka-steam" pointer-events="none">
+      <rect x="249" y="178" width="2" height="2" fill="#f4e8d0" opacity="0">
+        <animate attributeName="y" values="180;170;158" dur="4.5s" begin="0s"   repeatCount="indefinite"/>
+        <animate attributeName="x" values="249;247;251;249" dur="4.5s" begin="0s"   repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.7;0.45;0" dur="4.5s" begin="0s"   repeatCount="indefinite"/>
+      </rect>
+      <rect x="251" y="178" width="2" height="2" fill="#f4e8d0" opacity="0">
+        <animate attributeName="y" values="180;168;156" dur="5s"   begin="1.6s" repeatCount="indefinite"/>
+        <animate attributeName="x" values="251;253;249;251" dur="5s"   begin="1.6s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.65;0.4;0" dur="5s"   begin="1.6s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="248" y="178" width="1" height="2" fill="#f4e8d0" opacity="0">
+        <animate attributeName="y" values="180;172;160" dur="4s"   begin="3.2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.6;0.4;0" dur="4s"   begin="3.2s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="250" y="178" width="2" height="1" fill="#f4e8d0" opacity="0">
+        <animate attributeName="y" values="178;166;154" dur="5.5s" begin="2.4s" repeatCount="indefinite"/>
+        <animate attributeName="x" values="250;248;252;250" dur="5.5s" begin="2.4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.55;0.35;0" dur="5.5s" begin="2.4s" repeatCount="indefinite"/>
+      </rect>
+    </g>
     </g>
 
     <!-- reused yogurt tub of leftovers (label half-peeled) -->
@@ -673,6 +758,7 @@
     <rect id="hit-fridge-door"     x="60"  y="110" width="70"  height="180" fill="transparent" pointer-events="all"/>
     <rect id="hit-magnets"         x="56"  y="40"  width="184" height="68"  fill="transparent" pointer-events="all"/>
     <rect id="hit-light"           x="160" y="0"   width="160" height="20"  fill="transparent" pointer-events="all"/>
+    <rect id="hit-moka"            x="263" y="167" width="34"  height="44"  fill="transparent" pointer-events="all"/>
     <rect id="hit-dishes"          x="248" y="200" width="56"  height="24"  fill="transparent" pointer-events="all"/>
     <rect id="hit-yogurt-tub"      x="308" y="202" width="44"  height="22"  fill="transparent" pointer-events="all"/>
     <rect id="hit-takeout"         x="356" y="198" width="62"  height="26"  fill="transparent" pointer-events="all"/>

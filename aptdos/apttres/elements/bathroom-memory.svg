@@ -1,0 +1,583 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" shape-rendering="crispEdges">
+  <title>Bathroom memory fragment (apartment three) - faded warmth, humid quiet, fragments lingering in the mirror</title>
+  <desc>A small bathroom remembered softly. Dusty cream upper wall, a band of faded pink subway tile, a cream marble counter and a soft sink basin. A large brass-framed mirror anchors the room. Inside the mirror: a soft silhouette that lags slightly behind, condensation patches with finger-written fragments still legible in places, and on certain visits a glimpse of an entirely different bathroom appears in the glass. A small wall sconce above the mirror gives off a warm pool of light that shifts very gently between moments. Sparse worn toiletries on the counter: a toothbrush cup, a bar of soap on a small dish, a faded-label bottle, a folded washcloth. A dusty rose hand towel hangs on a short bar to the right. Steam rises softly from the sink. Water stains around the faucet. The whole scene is muted and humid - more wistful than uncanny.</desc>
+
+  <defs>
+    <linearGradient id="baWallTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f0d4bc"/>
+      <stop offset="100%" stop-color="#d4a896"/>
+    </linearGradient>
+    <linearGradient id="baTile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#dcb0ac"/>
+      <stop offset="100%" stop-color="#b88c8c"/>
+    </linearGradient>
+    <linearGradient id="baCounter" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f0e2cc"/>
+      <stop offset="100%" stop-color="#c8b89c"/>
+    </linearGradient>
+    <linearGradient id="baCounterFront" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#a88478"/>
+      <stop offset="100%" stop-color="#5a4438"/>
+    </linearGradient>
+    <linearGradient id="baSinkBowl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#c8b8ac"/>
+      <stop offset="100%" stop-color="#8c7c70"/>
+    </linearGradient>
+    <linearGradient id="baMirrorFrame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#d8b070"/>
+      <stop offset="100%" stop-color="#8c6438"/>
+    </linearGradient>
+
+    <!-- mirror reflection variants. all three live inside the same clip
+         so we can swap visibility per visit. -->
+    <linearGradient id="baGlassA" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#7a8088"/>
+      <stop offset="100%" stop-color="#4a4c54"/>
+    </linearGradient>
+    <linearGradient id="baGlassB" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#a09078"/>
+      <stop offset="100%" stop-color="#5a4838"/>
+    </linearGradient>
+    <linearGradient id="baGlassC" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#7488a0"/>
+      <stop offset="100%" stop-color="#3c4458"/>
+    </linearGradient>
+
+    <!-- glimpsed-tile patterns inside the reflections (echoes of other bathrooms) -->
+    <linearGradient id="baEchoApt1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#e8c4b8"/>
+      <stop offset="100%" stop-color="#a8806c"/>
+    </linearGradient>
+    <linearGradient id="baEchoApt2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#9098a8"/>
+      <stop offset="100%" stop-color="#5c6478"/>
+    </linearGradient>
+
+    <radialGradient id="baLightPool" cx="50%" cy="0%" r="80%">
+      <stop offset="0%"   stop-color="#fde8b8" stop-opacity="0.55"/>
+      <stop offset="40%"  stop-color="#f4c890" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#f4c890" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="baTowel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#d49890"/>
+      <stop offset="100%" stop-color="#8c5048"/>
+    </linearGradient>
+
+    <linearGradient id="baSidesL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#3a1c14" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#3a1c14" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="baSidesR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%"   stop-color="#3a1c14" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#3a1c14" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="baVignette" cx="50%" cy="55%" r="70%">
+      <stop offset="55%"  stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1a0c08" stop-opacity="0.50"/>
+    </radialGradient>
+
+    <clipPath id="baMirrorClip">
+      <rect x="146" y="48" width="188" height="146"/>
+    </clipPath>
+
+    <!-- shared silhouette blur: noticeably softer edges so the reflection
+         reads as a half-formed shadow rather than a crisp pixel cutout. -->
+    <filter id="baSoftBlur" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="2.4"/>
+    </filter>
+    <filter id="baCondBlur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.6"/>
+    </filter>
+  </defs>
+
+  <!-- ============= UPPER WALL (cream / faded peach) ============= -->
+  <rect width="480" height="320" fill="url(#baWallTop)"/>
+
+  <!-- subtle vertical wall texture -->
+  <g pointer-events="none" opacity="0.16">
+    <rect x="42"  y="0" width="1" height="170" fill="#a06c54"/>
+    <rect x="98"  y="0" width="1" height="170" fill="#a06c54"/>
+    <rect x="154" y="0" width="1" height="170" fill="#a06c54"/>
+    <rect x="382" y="0" width="1" height="170" fill="#a06c54"/>
+    <rect x="438" y="0" width="1" height="170" fill="#a06c54"/>
+  </g>
+  <!-- ceiling line -->
+  <rect x="0" y="0" width="480" height="3" fill="#6c4030" opacity="0.55"/>
+
+  <!-- a wall vent (top right) -->
+  <g pointer-events="none" opacity="0.55">
+    <rect x="416" y="12" width="48" height="30" fill="#9c7860"/>
+    <rect x="416" y="12" width="48" height="2"  fill="#bc8c70"/>
+    <rect x="416" y="40" width="48" height="2"  fill="#5a3a2c"/>
+    <rect x="416" y="12" width="2"  height="30" fill="#bc8c70"/>
+    <rect x="462" y="12" width="2"  height="30" fill="#5a3a2c"/>
+    <rect x="420" y="18" width="40" height="1"  fill="#3a1f10"/>
+    <rect x="420" y="22" width="40" height="1"  fill="#3a1f10"/>
+    <rect x="420" y="26" width="40" height="1"  fill="#3a1f10"/>
+    <rect x="420" y="30" width="40" height="1"  fill="#3a1f10"/>
+    <rect x="420" y="34" width="40" height="1"  fill="#3a1f10"/>
+    <rect x="420" y="38" width="40" height="1"  fill="#3a1f10"/>
+  </g>
+
+  <!-- ============= TILE BAND (dusty pink subway tile) ============= -->
+  <rect x="0" y="170" width="480" height="70" fill="url(#baTile)"/>
+  <!-- subway tile grid: alternating offset rows, pale grout -->
+  <g pointer-events="none" opacity="0.55">
+    <!-- horizontal grout lines -->
+    <rect x="0" y="170" width="480" height="1" fill="#f4d8d4" opacity="0.6"/>
+    <rect x="0" y="187" width="480" height="1" fill="#f4d8d4" opacity="0.55"/>
+    <rect x="0" y="204" width="480" height="1" fill="#f4d8d4" opacity="0.55"/>
+    <rect x="0" y="221" width="480" height="1" fill="#f4d8d4" opacity="0.55"/>
+    <rect x="0" y="238" width="480" height="1" fill="#a06c64" opacity="0.85"/>
+    <!-- vertical grout (row 1: aligned) -->
+    <g>
+      <rect x="40"  y="171" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="80"  y="171" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="120" y="171" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="160" y="171" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="200" y="171" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="240" y="171" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="280" y="171" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="320" y="171" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="360" y="171" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="400" y="171" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="440" y="171" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+    </g>
+    <!-- row 2: offset by 20 -->
+    <g>
+      <rect x="20"  y="188" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="60"  y="188" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="100" y="188" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="140" y="188" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="180" y="188" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="220" y="188" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="260" y="188" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="300" y="188" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="340" y="188" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="380" y="188" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="420" y="188" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="460" y="188" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+    </g>
+    <!-- row 3: aligned -->
+    <g>
+      <rect x="40"  y="205" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="80"  y="205" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="120" y="205" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="160" y="205" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="200" y="205" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="240" y="205" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="280" y="205" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="320" y="205" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="360" y="205" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="400" y="205" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="440" y="205" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+    </g>
+    <!-- row 4: offset -->
+    <g>
+      <rect x="20"  y="222" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="60"  y="222" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="100" y="222" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="140" y="222" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="180" y="222" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="220" y="222" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="260" y="222" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="300" y="222" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="340" y="222" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="380" y="222" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="420" y="222" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+      <rect x="460" y="222" width="1" height="16" fill="#f4d8d4" opacity="0.55"/>
+    </g>
+    <!-- a few subtle stains/discolorations on tile -->
+    <ellipse cx="60"  cy="218" rx="8" ry="3" fill="#a8746c" opacity="0.30"/>
+    <ellipse cx="416" cy="226" rx="10" ry="3" fill="#a8746c" opacity="0.30"/>
+    <ellipse cx="396" cy="190" rx="6"  ry="2" fill="#a8746c" opacity="0.25"/>
+  </g>
+
+  <!-- ============= WALL SCONCE (above mirror) ============= -->
+  <!-- soft pool of light below it (drawn first so the sconce sits on top) -->
+  <ellipse cx="240" cy="58" rx="120" ry="46" fill="url(#baLightPool)" pointer-events="none"/>
+
+  <g id="ba-light" pointer-events="none">
+    <!-- mounting plate -->
+    <rect x="206" y="14" width="68" height="6" fill="#5a3a20"/>
+    <rect x="206" y="14" width="68" height="2" fill="#a87654"/>
+    <!-- bar -->
+    <rect x="210" y="20" width="60" height="3" fill="#8c6440"/>
+    <!-- three soft bulbs -->
+    <g>
+      <ellipse cx="222" cy="32" rx="6" ry="6" fill="#fde8b8"/>
+      <ellipse cx="222" cy="30" rx="3" ry="3" fill="#ffffff" opacity="0.70"/>
+      <ellipse cx="222" cy="32" rx="6" ry="6" fill="none" stroke="#a87654" stroke-width="1"/>
+    </g>
+    <g>
+      <ellipse cx="240" cy="32" rx="6" ry="6" fill="#fde8b8"/>
+      <ellipse cx="240" cy="30" rx="3" ry="3" fill="#ffffff" opacity="0.70"/>
+      <ellipse cx="240" cy="32" rx="6" ry="6" fill="none" stroke="#a87654" stroke-width="1"/>
+    </g>
+    <g>
+      <ellipse cx="258" cy="32" rx="6" ry="6" fill="#fde8b8"/>
+      <ellipse cx="258" cy="30" rx="3" ry="3" fill="#ffffff" opacity="0.70"/>
+      <ellipse cx="258" cy="32" rx="6" ry="6" fill="none" stroke="#a87654" stroke-width="1"/>
+    </g>
+  </g>
+
+  <!-- ============= TOWEL BAR + HAND TOWEL (right of mirror) ============= -->
+  <g id="ba-towel" pointer-events="none">
+    <!-- bar mounts -->
+    <rect x="362" y="118" width="3" height="5" fill="#7a5238"/>
+    <rect x="426" y="118" width="3" height="5" fill="#7a5238"/>
+    <!-- bar -->
+    <rect x="362" y="122" width="68" height="2" fill="#a87854"/>
+    <rect x="362" y="124" width="68" height="1" fill="#5a3818"/>
+    <!-- towel hanging (folded over) -->
+    <rect x="366" y="124" width="60" height="64" fill="url(#baTowel)"/>
+    <rect x="366" y="124" width="60" height="2"  fill="#e4a89c"/>
+    <rect x="366" y="186" width="60" height="2"  fill="#5a2820"/>
+    <rect x="366" y="124" width="2"  height="64" fill="#e4a89c" opacity="0.85"/>
+    <rect x="424" y="124" width="2"  height="64" fill="#5a2820" opacity="0.85"/>
+    <!-- soft fold lines / stitching -->
+    <rect x="370" y="142" width="52" height="1" fill="#5a2820" opacity="0.45"/>
+    <rect x="370" y="160" width="52" height="1" fill="#5a2820" opacity="0.45"/>
+    <rect x="370" y="178" width="52" height="1" fill="#5a2820" opacity="0.45"/>
+    <!-- a small embroidered initial -->
+    <rect x="394" y="170" width="2" height="2" fill="#e8c878" opacity="0.85"/>
+    <rect x="396" y="172" width="2" height="2" fill="#e8c878" opacity="0.85"/>
+    <rect x="394" y="174" width="2" height="2" fill="#e8c878" opacity="0.85"/>
+  </g>
+
+  <!-- ============= MIRROR FRAME ============= -->
+  <g id="ba-mirror-frame" pointer-events="none">
+    <!-- outer brass frame -->
+    <rect x="134" y="42" width="212" height="160" fill="url(#baMirrorFrame)"/>
+    <!-- inner shadow line -->
+    <rect x="134" y="42" width="212" height="2"   fill="#f4d8a0"/>
+    <rect x="134" y="200" width="212" height="2"  fill="#5a3818"/>
+    <rect x="134" y="42" width="2"   height="160" fill="#f4d8a0"/>
+    <rect x="344" y="42" width="2"   height="160" fill="#5a3818"/>
+    <!-- frame inner darker bevel -->
+    <rect x="144" y="48" width="192" height="2"   fill="#3a2010" opacity="0.55"/>
+    <rect x="144" y="192" width="192" height="2"  fill="#3a2010" opacity="0.55"/>
+    <rect x="144" y="48" width="2"   height="146" fill="#3a2010" opacity="0.55"/>
+    <rect x="334" y="48" width="2"   height="146" fill="#3a2010" opacity="0.55"/>
+    <!-- corner ornaments -->
+    <rect x="138" y="46" width="6" height="6" fill="#f4d8a0"/>
+    <rect x="336" y="46" width="6" height="6" fill="#f4d8a0"/>
+    <rect x="138" y="194" width="6" height="6" fill="#5a3818"/>
+    <rect x="336" y="194" width="6" height="6" fill="#5a3818"/>
+  </g>
+
+  <!-- ============= MIRROR REFLECTIONS (3 variants) + GLARE + CONDENSATION ============= -->
+  <g clip-path="url(#baMirrorClip)">
+
+    <!-- A: current room reflection (the bathroom you are in now) -->
+    <g id="ba-mirror-a" visibility="visible">
+      <rect x="146" y="48" width="188" height="146" fill="url(#baGlassA)"/>
+      <!-- echo of the dusty pink tile band visible behind -->
+      <rect x="146" y="138" width="188" height="56" fill="#9c7878" opacity="0.85"/>
+      <rect x="146" y="148" width="188" height="1"  fill="#c89c98" opacity="0.55"/>
+      <rect x="146" y="166" width="188" height="1"  fill="#c89c98" opacity="0.45"/>
+      <rect x="146" y="184" width="188" height="1"  fill="#c89c98" opacity="0.40"/>
+      <!-- echo of the wall sconce reflected from above -->
+      <rect x="222" y="48" width="36" height="3" fill="#7a6438" opacity="0.65"/>
+      <ellipse cx="240" cy="58" rx="48" ry="14" fill="#fde8b8" opacity="0.18"/>
+      <!-- soft delayed silhouette -->
+      <g filter="url(#baSoftBlur)" opacity="0.85">
+        <ellipse cx="240" cy="138" rx="22" ry="20" fill="#3a2820"/>
+        <rect    x="208" y="156" width="64" height="40" fill="#3a2820"/>
+      </g>
+      <!-- the silhouette breathes (the reflection lags a beat) -->
+      <ellipse cx="240" cy="138" rx="22" ry="20" fill="#4a3024" opacity="0.55">
+        <animate attributeName="opacity" values="0.55;0.18;0.55" dur="6s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+
+    <!-- B: glimpse of an earlier apartment - warm peach tile, narrower mirror echo -->
+    <g id="ba-mirror-b" visibility="hidden">
+      <rect x="146" y="48" width="188" height="146" fill="url(#baGlassB)"/>
+      <rect x="146" y="48" width="188" height="146" fill="url(#baEchoApt1)" opacity="0.55"/>
+      <!-- echo of a different tile pattern (smaller squares) -->
+      <g opacity="0.55">
+        <rect x="146" y="148" width="188" height="46" fill="#c8856c"/>
+        <g opacity="0.6">
+          <rect x="156" y="148" width="1" height="46" fill="#f4dcc8"/>
+          <rect x="172" y="148" width="1" height="46" fill="#f4dcc8"/>
+          <rect x="188" y="148" width="1" height="46" fill="#f4dcc8"/>
+          <rect x="204" y="148" width="1" height="46" fill="#f4dcc8"/>
+          <rect x="220" y="148" width="1" height="46" fill="#f4dcc8"/>
+          <rect x="236" y="148" width="1" height="46" fill="#f4dcc8"/>
+          <rect x="252" y="148" width="1" height="46" fill="#f4dcc8"/>
+          <rect x="268" y="148" width="1" height="46" fill="#f4dcc8"/>
+          <rect x="284" y="148" width="1" height="46" fill="#f4dcc8"/>
+          <rect x="300" y="148" width="1" height="46" fill="#f4dcc8"/>
+          <rect x="316" y="148" width="1" height="46" fill="#f4dcc8"/>
+          <rect x="146" y="160" width="188" height="1" fill="#f4dcc8"/>
+          <rect x="146" y="176" width="188" height="1" fill="#f4dcc8"/>
+        </g>
+      </g>
+      <!-- echo of a smaller, older mirror (suggested) -->
+      <rect x="180" y="62" width="120" height="80" fill="none" stroke="#5a3018" stroke-width="2" opacity="0.55"/>
+      <!-- silhouette positioned slightly differently -->
+      <g filter="url(#baSoftBlur)" opacity="0.78">
+        <ellipse cx="232" cy="142" rx="20" ry="18" fill="#3a2418"/>
+        <rect    x="204" y="158" width="58" height="36" fill="#3a2418"/>
+      </g>
+      <ellipse cx="232" cy="142" rx="20" ry="18" fill="#4a3024" opacity="0.50">
+        <animate attributeName="opacity" values="0.50;0.18;0.50" dur="6.6s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+
+    <!-- C: glimpse of another earlier apartment - cooler grey-blue, harder light -->
+    <g id="ba-mirror-c" visibility="hidden">
+      <rect x="146" y="48" width="188" height="146" fill="url(#baGlassC)"/>
+      <rect x="146" y="48" width="188" height="146" fill="url(#baEchoApt2)" opacity="0.55"/>
+      <!-- a tall narrow mirror echo / cool fluorescent light bar -->
+      <rect x="206" y="50" width="68" height="3" fill="#dce4f0" opacity="0.85"/>
+      <rect x="206" y="50" width="68" height="3" fill="none" stroke="#647488" stroke-width="1" opacity="0.5"/>
+      <!-- echo tile (large grid) -->
+      <g opacity="0.45">
+        <rect x="146" y="156" width="188" height="38" fill="#5c647c"/>
+        <rect x="186" y="156" width="1" height="38" fill="#a4b0c8"/>
+        <rect x="226" y="156" width="1" height="38" fill="#a4b0c8"/>
+        <rect x="266" y="156" width="1" height="38" fill="#a4b0c8"/>
+        <rect x="306" y="156" width="1" height="38" fill="#a4b0c8"/>
+        <rect x="146" y="174" width="188" height="1" fill="#a4b0c8"/>
+      </g>
+      <!-- silhouette: a touch larger, slightly off-center (different person, different time) -->
+      <g filter="url(#baSoftBlur)" opacity="0.82">
+        <ellipse cx="246" cy="136" rx="22" ry="20" fill="#252834"/>
+        <rect    x="214" y="154" width="64" height="40" fill="#252834"/>
+      </g>
+      <ellipse cx="246" cy="136" rx="22" ry="20" fill="#3a3e4c" opacity="0.55">
+        <animate attributeName="opacity" values="0.55;0.20;0.55" dur="5.4s" repeatCount="indefinite"/>
+      </ellipse>
+    </g>
+
+    <!-- mirror glare: diagonal lighter bands (always visible across reflection) -->
+    <g pointer-events="none" opacity="0.20">
+      <polygon points="146,80  176,48  204,48  146,108" fill="#ffffff"/>
+      <polygon points="280,194 334,124 334,194" fill="#ffffff" opacity="0.65"/>
+    </g>
+
+    <!-- CONDENSATION patches with fragmented finger-written text (3 rotating sets) -->
+    <g id="ba-cond-a" visibility="visible">
+      <ellipse cx="184" cy="86"  rx="34" ry="14" fill="#ffffff" opacity="0.32" filter="url(#baCondBlur)"/>
+      <ellipse cx="294" cy="118" rx="40" ry="14" fill="#ffffff" opacity="0.30" filter="url(#baCondBlur)"/>
+      <text x="166" y="92"  font-family="'Pixel Operator','VT323','Pixelify Sans',monospace" font-size="10" fill="#3a2418" opacity="0.55">don't forge-</text>
+      <text x="270" y="124" font-family="'Pixel Operator','VT323','Pixelify Sans',monospace" font-size="10" fill="#3a2418" opacity="0.55">remember-</text>
+    </g>
+    <g id="ba-cond-b" visibility="hidden">
+      <ellipse cx="208" cy="100" rx="42" ry="14" fill="#ffffff" opacity="0.32" filter="url(#baCondBlur)"/>
+      <ellipse cx="280" cy="78"  rx="36" ry="12" fill="#ffffff" opacity="0.30" filter="url(#baCondBlur)"/>
+      <text x="184" y="106" font-family="'Pixel Operator','VT323','Pixelify Sans',monospace" font-size="10" fill="#3a2418" opacity="0.55">i was-</text>
+      <text x="258" y="84"  font-family="'Pixel Operator','VT323','Pixelify Sans',monospace" font-size="10" fill="#3a2418" opacity="0.55">still here-</text>
+    </g>
+    <g id="ba-cond-c" visibility="hidden">
+      <ellipse cx="200" cy="116" rx="44" ry="16" fill="#ffffff" opacity="0.32" filter="url(#baCondBlur)"/>
+      <ellipse cx="296" cy="92"  rx="32" ry="12" fill="#ffffff" opacity="0.30" filter="url(#baCondBlur)"/>
+      <text x="170" y="122" font-family="'Pixel Operator','VT323','Pixelify Sans',monospace" font-size="10" fill="#3a2418" opacity="0.55">you'll be-</text>
+      <text x="278" y="98"  font-family="'Pixel Operator','VT323','Pixelify Sans',monospace" font-size="10" fill="#3a2418" opacity="0.55">ok-</text>
+    </g>
+
+    <!-- finger-drag streaks where someone wiped the condensation -->
+    <g pointer-events="none" opacity="0.18">
+      <ellipse cx="226" cy="156" rx="48" ry="3" fill="#3a2418"/>
+      <ellipse cx="252" cy="172" rx="44" ry="2" fill="#3a2418"/>
+    </g>
+  </g>
+
+  <!-- ============= COUNTER + SINK + FAUCET ============= -->
+  <g id="ba-counter" pointer-events="none">
+    <!-- counter top (cream marble) -->
+    <rect x="0" y="240" width="480" height="20" fill="url(#baCounter)"/>
+    <rect x="0" y="240" width="480" height="2"  fill="#f4e6cc"/>
+    <rect x="0" y="258" width="480" height="2"  fill="#7c684c"/>
+    <!-- subtle marble veining -->
+    <g opacity="0.30">
+      <rect x="14"  y="246" width="46" height="1" fill="#a08868"/>
+      <rect x="92"  y="252" width="62" height="1" fill="#a08868"/>
+      <rect x="186" y="244" width="40" height="1" fill="#a08868"/>
+      <rect x="324" y="250" width="58" height="1" fill="#a08868"/>
+      <rect x="402" y="246" width="46" height="1" fill="#a08868"/>
+    </g>
+    <!-- counter front -->
+    <rect x="0" y="260" width="480" height="60" fill="url(#baCounterFront)"/>
+    <rect x="0" y="318" width="480" height="2"  fill="#2a1a14"/>
+    <!-- a subtle apron seam under the counter -->
+    <rect x="0" y="276" width="480" height="1" fill="#2a1a14" opacity="0.5"/>
+
+    <!-- sink basin (oval, inset into counter) -->
+    <ellipse cx="240" cy="252" rx="60" ry="10" fill="#3a2820"/>
+    <ellipse cx="240" cy="251" rx="58" ry="8"  fill="url(#baSinkBowl)"/>
+    <ellipse cx="240" cy="251" rx="58" ry="8"  fill="none" stroke="#5a4438" stroke-width="1"/>
+    <!-- drain -->
+    <ellipse cx="240" cy="252" rx="6" ry="2" fill="#3a2820"/>
+    <ellipse cx="240" cy="252" rx="3" ry="1" fill="#1a0c08"/>
+
+    <!-- faucet -->
+    <rect x="232" y="218" width="16" height="6" fill="#5a4838"/>
+    <rect x="232" y="218" width="16" height="2" fill="#a89888"/>
+    <rect x="237" y="224" width="6"  height="14" fill="#7c684c"/>
+    <rect x="237" y="224" width="2"  height="14" fill="#bca890"/>
+    <!-- spout -->
+    <path d="M 240 232 Q 252 232 252 244 L 248 244 Q 248 236 240 236 Z" fill="#7c684c"/>
+    <path d="M 240 232 Q 252 232 252 244" fill="none" stroke="#bca890" stroke-width="1"/>
+    <!-- two handles on either side -->
+    <rect x="222" y="226" width="6" height="5" fill="#a89888"/>
+    <rect x="222" y="226" width="6" height="2" fill="#dccab4"/>
+    <rect x="222" y="231" width="6" height="2" fill="#5a4838"/>
+    <rect x="252" y="226" width="6" height="5" fill="#a89888"/>
+    <rect x="252" y="226" width="6" height="2" fill="#dccab4"/>
+    <rect x="252" y="231" width="6" height="2" fill="#5a4838"/>
+  </g>
+
+  <!-- water stains around the faucet base -->
+  <g id="ba-stains" pointer-events="none" opacity="0.55">
+    <ellipse cx="226" cy="244" rx="6" ry="2" fill="#bca890" opacity="0.55"/>
+    <ellipse cx="256" cy="244" rx="5" ry="2" fill="#bca890" opacity="0.55"/>
+    <ellipse cx="240" cy="240" rx="14" ry="2" fill="#bca890" opacity="0.45"/>
+    <ellipse cx="244" cy="248" rx="8" ry="1" fill="#bca890" opacity="0.40"/>
+  </g>
+
+  <!-- ============= COUNTER OBJECTS (sparse, worn toiletries) ============= -->
+  <!-- soap on a small dish (left) -->
+  <g id="ba-soap" pointer-events="none">
+    <!-- dish -->
+    <ellipse cx="86" cy="252" rx="16" ry="3" fill="#3a2820"/>
+    <ellipse cx="86" cy="250" rx="16" ry="3" fill="#c8b09c"/>
+    <ellipse cx="86" cy="250" rx="13" ry="2" fill="#a8907c"/>
+    <!-- bar of soap -->
+    <rect x="76" y="244" width="20" height="6" fill="#f4dcc8"/>
+    <rect x="76" y="244" width="20" height="2" fill="#fce8d8"/>
+    <rect x="76" y="248" width="20" height="2" fill="#c8a890"/>
+    <!-- a faint brand stamp -->
+    <rect x="82" y="246" width="6" height="2" fill="#a87854" opacity="0.55"/>
+  </g>
+
+  <!-- toothbrush cup (left of sink) -->
+  <g id="ba-toothbrush" pointer-events="none">
+    <!-- cup -->
+    <rect x="108" y="222" width="22" height="28" fill="#9cb8ac"/>
+    <rect x="108" y="222" width="22" height="3"  fill="#bcd4c8"/>
+    <rect x="108" y="247" width="22" height="3"  fill="#5a7a70"/>
+    <rect x="108" y="222" width="2"  height="28" fill="#bcd4c8"/>
+    <rect x="128" y="222" width="2"  height="28" fill="#5a7a70"/>
+    <!-- a small chip on the rim -->
+    <rect x="124" y="222" width="2" height="2" fill="#7a948c"/>
+    <!-- toothbrushes inside -->
+    <rect x="113" y="206" width="3" height="20" fill="#d8a8a4"/>
+    <rect x="113" y="206" width="3" height="3"  fill="#f4d8d4"/>
+    <rect x="120" y="208" width="3" height="18" fill="#a8b8d4"/>
+    <rect x="120" y="208" width="3" height="3"  fill="#c8d4e8"/>
+    <!-- faded bristles -->
+    <rect x="113" y="204" width="3" height="2" fill="#f0e2cc"/>
+    <rect x="120" y="206" width="3" height="2" fill="#f0e2cc"/>
+  </g>
+
+  <!-- worn product bottle (right of sink) -->
+  <g id="ba-bottle" pointer-events="none">
+    <!-- cap -->
+    <rect x="312" y="208" width="16" height="6" fill="#5a4838"/>
+    <rect x="312" y="208" width="16" height="2" fill="#7a6448"/>
+    <!-- neck -->
+    <rect x="316" y="214" width="8" height="3" fill="#7a6448"/>
+    <!-- body -->
+    <rect x="308" y="217" width="24" height="36" fill="#9cb8c4"/>
+    <rect x="308" y="217" width="24" height="3"  fill="#bcd4dc"/>
+    <rect x="308" y="250" width="24" height="3"  fill="#5a7a84"/>
+    <rect x="308" y="217" width="2"  height="36" fill="#bcd4dc"/>
+    <rect x="330" y="217" width="2"  height="36" fill="#5a7a84"/>
+    <!-- label (worn / faded) -->
+    <rect x="310" y="226" width="20" height="14" fill="#e8d4b8" opacity="0.85"/>
+    <rect x="310" y="226" width="20" height="1"  fill="#a08866" opacity="0.6"/>
+    <rect x="310" y="239" width="20" height="1"  fill="#a08866" opacity="0.6"/>
+    <!-- worn smudges where the label is rubbing off -->
+    <rect x="312" y="228" width="6" height="2" fill="#5a4838" opacity="0.40"/>
+    <rect x="320" y="228" width="4" height="2" fill="#5a4838" opacity="0.30"/>
+    <rect x="312" y="232" width="9" height="1" fill="#5a4838" opacity="0.30"/>
+    <rect x="312" y="235" width="6" height="1" fill="#5a4838" opacity="0.20"/>
+    <rect x="320" y="235" width="3" height="1" fill="#5a4838" opacity="0.18"/>
+    <!-- a smudged corner where the label has lifted -->
+    <polygon points="324,239 330,239 330,233" fill="#9cb8c4"/>
+  </g>
+
+  <!-- folded washcloth (right of bottle) -->
+  <g id="ba-washcloth" pointer-events="none">
+    <rect x="346" y="232" width="32" height="20" fill="#b8a89c"/>
+    <rect x="346" y="232" width="32" height="2"  fill="#d4c4b8"/>
+    <rect x="346" y="250" width="32" height="2"  fill="#7c6c60"/>
+    <!-- folded layers -->
+    <rect x="346" y="240" width="32" height="1"  fill="#5a4838" opacity="0.55"/>
+    <rect x="346" y="246" width="32" height="1"  fill="#5a4838" opacity="0.45"/>
+    <!-- a small dampened darker patch (still a bit wet) -->
+    <ellipse cx="364" cy="246" rx="6" ry="2" fill="#7c6c60" opacity="0.5"/>
+  </g>
+
+  <!-- ============= STEAM WISPS rising softly ============= -->
+  <g pointer-events="none">
+    <ellipse cx="206" cy="218" rx="6" ry="9" fill="#ffffff" opacity="0.18">
+      <animate attributeName="opacity" values="0.18;0.05;0.18" dur="6.4s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="218;200;218" dur="6.4s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="226" cy="222" rx="5" ry="8" fill="#ffffff" opacity="0.16">
+      <animate attributeName="opacity" values="0.16;0.04;0.16" dur="7.2s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="222;204;222" dur="7.2s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="252" cy="220" rx="6" ry="9" fill="#ffffff" opacity="0.18">
+      <animate attributeName="opacity" values="0.18;0.05;0.18" dur="5.8s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="220;202;220" dur="5.8s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="274" cy="218" rx="5" ry="8" fill="#ffffff" opacity="0.16">
+      <animate attributeName="opacity" values="0.16;0.04;0.16" dur="6.8s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="218;200;218" dur="6.8s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- ============= AMBIENT WARM DUST MOTES ============= -->
+  <g pointer-events="none">
+    <ellipse cx="58"  cy="106" rx="1.4" ry="1.4" fill="#fce8c8" opacity="0.65">
+      <animate attributeName="opacity" values="0.65;0.18;0.65" dur="6.4s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="106" cy="76"  rx="1.2" ry="1.2" fill="#fce8c8" opacity="0.55">
+      <animate attributeName="opacity" values="0.55;0.16;0.55" dur="5.8s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="394" cy="86"  rx="1.4" ry="1.4" fill="#fce8c8" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.18;0.6" dur="7.0s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="424" cy="118" rx="1.2" ry="1.2" fill="#fce8c8" opacity="0.55">
+      <animate attributeName="opacity" values="0.55;0.16;0.55" dur="6.6s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="42"  cy="148" rx="1.2" ry="1.2" fill="#fce8c8" opacity="0.55">
+      <animate attributeName="opacity" values="0.55;0.16;0.55" dur="7.4s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- light drift overlay - the warmth of the room shifts very gently -->
+  <rect width="480" height="320" fill="#f4d8a8" opacity="0.05" pointer-events="none">
+    <animate attributeName="opacity" values="0.05;0.11;0.05" dur="11s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- side darkening + outer vignette -->
+  <rect x="0"   y="0" width="42" height="320" fill="url(#baSidesL)" pointer-events="none"/>
+  <rect x="438" y="0" width="42" height="320" fill="url(#baSidesR)" pointer-events="none"/>
+  <rect width="480" height="320" fill="url(#baVignette)" pointer-events="none"/>
+
+  <!-- ============= INTERACTIVE HOTSPOTS ============= -->
+  <g id="ba-hotspots" fill="transparent" stroke="none">
+    <rect id="hit-light"        x="200" y="14"  width="80"  height="38"/>
+    <rect id="hit-frame"        x="134" y="42"  width="212" height="160"/>
+    <rect id="hit-mirror"       x="148" y="50"  width="184" height="80"/>
+    <rect id="hit-condensation" x="156" y="56"  width="170" height="86"/>
+    <rect id="hit-towel"        x="362" y="118" width="68"  height="74"/>
+    <rect id="hit-tile"         x="0"   y="170" width="480" height="68"/>
+    <rect id="hit-soap"         x="68"  y="240" width="36"  height="20"/>
+    <rect id="hit-toothbrush"   x="106" y="200" width="28"  height="56"/>
+    <rect id="hit-bottle"       x="306" y="206" width="28"  height="50"/>
+    <rect id="hit-washcloth"    x="344" y="230" width="36"  height="26"/>
+    <rect id="hit-faucet"       x="220" y="216" width="40"  height="32"/>
+    <rect id="hit-stains"       x="216" y="240" width="50"  height="14"/>
+    <rect id="hit-sink"         x="180" y="244" width="120" height="22"/>
+    <rect id="hit-counter"      x="0"   y="260" width="480" height="60"/>
+  </g>
+</svg>
