@@ -1,0 +1,822 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" shape-rendering="crispEdges">
+  <title>Hallway closet memory fragment</title>
+  <desc>Cropped vignette: looking into the hallway closet at night. A row of hanging clothes from different years, a shelf above with boxes and folded blankets, shoe boxes stacked at the floor, dust drifting in dim warm light.</desc>
+
+  <defs>
+    <linearGradient id="hcHallWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a4030"/>
+      <stop offset="100%" stop-color="#2c1c12"/>
+    </linearGradient>
+    <linearGradient id="hcInterior" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a4030"/>
+      <stop offset="100%" stop-color="#1a100a"/>
+    </linearGradient>
+    <radialGradient id="hcDepth" cx="50%" cy="55%" r="60%">
+      <stop offset="0%" stop-color="#3a2818" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0a0604" stop-opacity="0.95"/>
+    </radialGradient>
+    <linearGradient id="hcFrame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a2418"/>
+      <stop offset="100%" stop-color="#1a100a"/>
+    </linearGradient>
+    <linearGradient id="hcShelf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7a5236"/>
+      <stop offset="100%" stop-color="#4a3220"/>
+    </linearGradient>
+    <linearGradient id="hcFloor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a2818"/>
+      <stop offset="100%" stop-color="#1a100a"/>
+    </linearGradient>
+    <radialGradient id="hcBulbGlow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#f4d098" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#a87838" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hcSidesL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="hcSidesR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ============= -->
+  <!-- HALLWAY WALL (slivers on the left/right outside the closet doorway) -->
+  <!-- ============= -->
+  <rect width="480" height="320" fill="url(#hcHallWall)"/>
+
+  <!-- ============= -->
+  <!-- DOOR FRAME around the closet opening (we are looking THROUGH it from the hallway) -->
+  <!-- ============= -->
+  <g id="hc-frame">
+    <!-- header -->
+    <rect x="20" y="6" width="440" height="14" fill="url(#hcFrame)"/>
+    <rect x="20" y="6" width="440" height="2" fill="#5a3826"/>
+    <rect x="20" y="18" width="440" height="2" fill="#0a0604" opacity="0.7"/>
+    <!-- left jamb -->
+    <rect x="20" y="6" width="12" height="304" fill="url(#hcFrame)"/>
+    <rect x="20" y="6" width="2" height="304" fill="#5a3826" opacity="0.7"/>
+    <rect x="30" y="6" width="2" height="304" fill="#0a0604" opacity="0.8"/>
+    <!-- right jamb -->
+    <rect x="448" y="6" width="12" height="304" fill="url(#hcFrame)"/>
+    <rect x="448" y="6" width="2" height="304" fill="#0a0604" opacity="0.8"/>
+    <rect x="458" y="6" width="2" height="304" fill="#5a3826" opacity="0.5"/>
+    <!-- floor sill -->
+    <rect x="20" y="304" width="440" height="6" fill="url(#hcFrame)"/>
+    <rect x="20" y="304" width="440" height="2" fill="#5a3826"/>
+    <!-- inner frame shadow (compresses the framing inward) -->
+    <rect x="32" y="20" width="416" height="2" fill="#000000" opacity="0.55"/>
+  </g>
+
+  <!-- ============= -->
+  <!-- CLOSET INTERIOR BACK WALL -->
+  <!-- ============= -->
+  <rect x="32" y="20" width="416" height="284" fill="url(#hcInterior)"/>
+  <!-- impossible-depth darkening at the very back center (closet appears deeper than possible) -->
+  <rect x="32" y="20" width="416" height="284" fill="url(#hcDepth)" opacity="0.85" pointer-events="none"/>
+  <!-- subtle plank lines on the back wall -->
+  <g id="hc-back-tex" pointer-events="none" opacity="0.18">
+    <rect x="32" y="80" width="416" height="1" fill="#7a5a44"/>
+    <rect x="32" y="160" width="416" height="1" fill="#7a5a44"/>
+    <rect x="32" y="240" width="416" height="1" fill="#7a5a44"/>
+    <rect x="120" y="20" width="1" height="284" fill="#7a5a44"/>
+    <rect x="240" y="20" width="1" height="284" fill="#7a5a44"/>
+    <rect x="360" y="20" width="1" height="284" fill="#7a5a44"/>
+  </g>
+
+  <!-- ============= -->
+  <!-- WARM BULB GLOW spilling down from above (the dim closet light) -->
+  <!-- ============= -->
+  <g id="hc-bulb-glow" pointer-events="none">
+    <rect x="32" y="20" width="416" height="220" fill="url(#hcBulbGlow)" opacity="0.95">
+      <animate attributeName="opacity" values="0.78;1.0;0.84;0.95;0.80" dur="9.4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- THE BULB itself (small, hangs from a wire at the top center) -->
+  <g id="hc-bulb">
+    <rect x="238" y="20" width="2" height="6" fill="#3a2418"/>
+    <rect x="234" y="26" width="10" height="6" fill="#a89880"/>
+    <rect x="234" y="26" width="10" height="2" fill="#dccfb8"/>
+    <rect x="236" y="32" width="6" height="6" fill="#f4c878">
+      <animate attributeName="fill" values="#f4c878;#fff0a8;#f4c878;#e8b868;#f4c878" dur="9.4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="237" y="33" width="2" height="2" fill="#fff4d8"/>
+    <!-- bulb halo -->
+    <rect x="232" y="28" width="14" height="14" fill="#f4c878" opacity="0.18">
+      <animate attributeName="opacity" values="0.10;0.22;0.12;0.18;0.10" dur="9.4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ============= -->
+  <!-- TOP SHELF + items on it -->
+  <!-- ============= -->
+  <g id="hc-shelf">
+    <!-- shelf plank -->
+    <rect x="32" y="54" width="416" height="6" fill="url(#hcShelf)"/>
+    <rect x="32" y="54" width="416" height="2" fill="#9a6c46"/>
+    <rect x="32" y="60" width="416" height="2" fill="#1a100a" opacity="0.7"/>
+    <!-- bracket lines -->
+    <rect x="60" y="60" width="2" height="6" fill="#3a2418"/>
+    <rect x="418" y="60" width="2" height="6" fill="#3a2418"/>
+  </g>
+
+  <!-- HAT BOX (round-ish, on left of shelf) -->
+  <g id="hc-hatbox">
+    <rect x="44" y="22" width="60" height="32" fill="#a85040"/>
+    <rect x="44" y="22" width="60" height="2" fill="#c87060"/>
+    <rect x="44" y="50" width="60" height="2" fill="#7a3828" opacity="0.8"/>
+    <!-- lid line -->
+    <rect x="44" y="32" width="60" height="2" fill="#7a3828" opacity="0.7"/>
+    <!-- decorative ribbon vertical -->
+    <rect x="70" y="22" width="2" height="32" fill="#dccfb8" opacity="0.6"/>
+    <rect x="68" y="22" width="6" height="2" fill="#dccfb8" opacity="0.6"/>
+    <!-- subtle dust on top -->
+    <rect x="48" y="22" width="52" height="1" fill="#dccfb8" opacity="0.18"/>
+  </g>
+
+  <!-- FOLDED BLANKETS STACK -->
+  <g id="hc-blankets">
+    <!-- bottom blanket (cream) -->
+    <rect x="120" y="44" width="100" height="10" fill="#dccfa8"/>
+    <rect x="120" y="44" width="100" height="2" fill="#ecdfb8"/>
+    <rect x="120" y="52" width="100" height="2" fill="#a8957a" opacity="0.6"/>
+    <!-- middle blanket (faded teal) -->
+    <rect x="124" y="34" width="92" height="10" fill="#5a8a98"/>
+    <rect x="124" y="34" width="92" height="2" fill="#7aaab8"/>
+    <rect x="124" y="42" width="92" height="2" fill="#3a6a78" opacity="0.7"/>
+    <!-- top blanket (dusty rose) -->
+    <rect x="128" y="24" width="84" height="10" fill="#a85878"/>
+    <rect x="128" y="24" width="84" height="2" fill="#c87898"/>
+    <rect x="128" y="32" width="84" height="2" fill="#783858" opacity="0.7"/>
+    <!-- a single yellow note peeking out between two folds -->
+    <rect x="190" y="36" width="14" height="3" fill="#ecdfb8"/>
+    <rect x="190" y="36" width="14" height="1" fill="#fff4d8"/>
+  </g>
+
+  <!-- STORAGE BIN (lidded) -->
+  <g id="hc-bin-top">
+    <rect x="240" y="26" width="100" height="28" fill="#4a6878"/>
+    <rect x="240" y="26" width="100" height="3" fill="#6a8898"/>
+    <rect x="240" y="50" width="100" height="4" fill="#2a4858" opacity="0.7"/>
+    <!-- lid line -->
+    <rect x="240" y="32" width="100" height="2" fill="#2a4858" opacity="0.7"/>
+    <!-- handle cutout -->
+    <rect x="280" y="38" width="20" height="3" fill="#1a2838"/>
+    <rect x="280" y="38" width="20" height="1" fill="#0a1018"/>
+    <!-- masking-tape label -->
+    <rect x="252" y="44" width="40" height="6" fill="#ecdfb8"/>
+    <rect x="252" y="44" width="40" height="1" fill="#fff4d8"/>
+    <text x="272" y="49" text-anchor="middle" font-family="'Courier New', monospace" font-size="5" fill="#3a2418">WINTER</text>
+  </g>
+
+  <!-- SMALL BASKET on the right of the shelf -->
+  <g id="hc-basket">
+    <rect x="356" y="32" width="76" height="22" fill="#7a4828"/>
+    <rect x="356" y="32" width="76" height="2" fill="#a86848"/>
+    <rect x="356" y="50" width="76" height="4" fill="#4a2818" opacity="0.7"/>
+    <!-- weave -->
+    <rect x="356" y="40" width="76" height="1" fill="#3a2418" opacity="0.55"/>
+    <rect x="356" y="46" width="76" height="1" fill="#3a2418" opacity="0.55"/>
+    <rect x="368" y="32" width="1" height="22" fill="#3a2418" opacity="0.5"/>
+    <rect x="384" y="32" width="1" height="22" fill="#3a2418" opacity="0.5"/>
+    <rect x="400" y="32" width="1" height="22" fill="#3a2418" opacity="0.5"/>
+    <rect x="416" y="32" width="1" height="22" fill="#3a2418" opacity="0.5"/>
+    <!-- contents poking out: scarf tip -->
+    <rect x="372" y="28" width="10" height="6" fill="#a85040"/>
+    <rect x="372" y="28" width="10" height="2" fill="#c87060"/>
+    <!-- a glove -->
+    <rect x="402" y="29" width="6" height="5" fill="#5a8a98"/>
+  </g>
+
+  <!-- ============= -->
+  <!-- CLOSET ROD -->
+  <!-- ============= -->
+  <g id="hc-rod">
+    <!-- chrome bar -->
+    <rect x="32" y="68" width="416" height="2" fill="#a8a8b0"/>
+    <rect x="32" y="68" width="416" height="1" fill="#dcdce4"/>
+    <rect x="32" y="70" width="416" height="1" fill="#5a5a64" opacity="0.7"/>
+    <!-- end brackets -->
+    <rect x="34" y="64" width="6" height="10" fill="#5a5a64"/>
+    <rect x="440" y="64" width="6" height="10" fill="#5a5a64"/>
+  </g>
+
+  <!-- ============= -->
+  <!-- HANGING CLOTHES (mismatched hangers, garments from different years) -->
+  <!-- ============= -->
+
+  <!-- GARMENT 1: shirt slot on a wood hanger (left side); rotates between visits -->
+  <g id="hc-garment-1">
+    <!-- wood hanger (always visible) -->
+    <rect x="71" y="64" width="2" height="4" fill="#a89880"/>
+    <rect x="69" y="62" width="2" height="2" fill="#a89880"/>
+    <rect x="73" y="62" width="2" height="2" fill="#a89880"/>
+    <rect x="71" y="60" width="2" height="2" fill="#a89880"/>
+    <rect x="56" y="74" width="34" height="2" fill="#7a5236"/>
+    <rect x="58" y="73" width="30" height="1" fill="#7a5236"/>
+    <rect x="62" y="72" width="22" height="1" fill="#7a5236"/>
+
+    <!-- variant A: vintage floral cream blouse -->
+    <g id="hc-outfit-1a" class="hc-outfit-1">
+      <rect x="54" y="76" width="38" height="10" fill="#dccfa8"/>
+      <rect x="54" y="76" width="38" height="2" fill="#ecdfb8"/>
+      <rect x="58" y="86" width="30" height="80" fill="#dccfa8"/>
+      <rect x="64" y="92" width="2" height="2" fill="#a85878"/>
+      <rect x="80" y="100" width="2" height="2" fill="#5a7a48"/>
+      <rect x="68" y="118" width="2" height="2" fill="#a85878"/>
+      <rect x="78" y="130" width="2" height="2" fill="#5a7a48"/>
+      <rect x="62" y="140" width="2" height="2" fill="#a85878"/>
+      <rect x="76" y="150" width="2" height="2" fill="#5a7a48"/>
+      <rect x="66" y="158" width="2" height="2" fill="#a85878"/>
+      <rect x="58" y="166" width="30" height="3" fill="#a8957a" opacity="0.7"/>
+    </g>
+
+    <!-- variant B: pale yellow striped blouse -->
+    <g id="hc-outfit-1b" class="hc-outfit-1" visibility="hidden">
+      <rect x="54" y="76" width="38" height="10" fill="#f4dca0"/>
+      <rect x="54" y="76" width="38" height="2" fill="#ffe8b8"/>
+      <rect x="58" y="86" width="30" height="80" fill="#f4dca0"/>
+      <!-- thin vertical stripes -->
+      <rect x="62" y="86" width="1" height="80" fill="#c8a868" opacity="0.6"/>
+      <rect x="68" y="86" width="1" height="80" fill="#c8a868" opacity="0.6"/>
+      <rect x="74" y="86" width="1" height="80" fill="#c8a868" opacity="0.6"/>
+      <rect x="80" y="86" width="1" height="80" fill="#c8a868" opacity="0.6"/>
+      <rect x="86" y="86" width="1" height="80" fill="#c8a868" opacity="0.6"/>
+      <!-- collar -->
+      <rect x="68" y="86" width="10" height="4" fill="#c8a868"/>
+      <!-- hem -->
+      <rect x="58" y="166" width="30" height="3" fill="#a88848" opacity="0.7"/>
+    </g>
+
+    <!-- variant C: powder blue button-down -->
+    <g id="hc-outfit-1c" class="hc-outfit-1" visibility="hidden">
+      <rect x="54" y="76" width="38" height="10" fill="#9ab8c8"/>
+      <rect x="54" y="76" width="38" height="2" fill="#bcd4e0"/>
+      <rect x="58" y="86" width="30" height="80" fill="#9ab8c8"/>
+      <!-- button placket -->
+      <rect x="72" y="86" width="2" height="80" fill="#7898a8" opacity="0.7"/>
+      <!-- buttons -->
+      <rect x="72" y="96" width="2" height="2" fill="#dccfb8"/>
+      <rect x="72" y="112" width="2" height="2" fill="#dccfb8"/>
+      <rect x="72" y="128" width="2" height="2" fill="#dccfb8"/>
+      <rect x="72" y="144" width="2" height="2" fill="#dccfb8"/>
+      <!-- collar (V) -->
+      <rect x="68" y="86" width="2" height="4" fill="#7898a8"/>
+      <rect x="76" y="86" width="2" height="4" fill="#7898a8"/>
+      <rect x="70" y="90" width="2" height="2" fill="#7898a8"/>
+      <rect x="74" y="90" width="2" height="2" fill="#7898a8"/>
+      <!-- chest pocket -->
+      <rect x="80" y="98" width="6" height="6" fill="none" stroke="#7898a8" stroke-width="1"/>
+      <!-- hem -->
+      <rect x="58" y="166" width="30" height="3" fill="#5a7888" opacity="0.7"/>
+    </g>
+  </g>
+
+  <!-- GARMENT 2: long coat slot on a metal hanger; rotates between visits -->
+  <g id="hc-garment-2">
+    <!-- metal hanger (always visible) -->
+    <rect x="139" y="64" width="2" height="4" fill="#a8a8b0"/>
+    <rect x="137" y="62" width="2" height="2" fill="#a8a8b0"/>
+    <rect x="141" y="62" width="2" height="2" fill="#a8a8b0"/>
+    <rect x="139" y="60" width="2" height="2" fill="#a8a8b0"/>
+    <rect x="124" y="74" width="34" height="2" fill="#a8a8b0"/>
+    <rect x="126" y="73" width="30" height="1" fill="#a8a8b0"/>
+    <rect x="130" y="72" width="22" height="1" fill="#a8a8b0"/>
+
+    <!-- variant A: long dark wool coat -->
+    <g id="hc-outfit-2a" class="hc-outfit-2">
+      <rect x="118" y="76" width="46" height="10" fill="#3a2c20"/>
+      <rect x="118" y="76" width="46" height="2" fill="#5a4838"/>
+      <rect x="134" y="82" width="14" height="6" fill="#1a100a"/>
+      <rect x="122" y="86" width="38" height="124" fill="#3a2c20"/>
+      <rect x="122" y="86" width="38" height="2" fill="#5a4838" opacity="0.7"/>
+      <rect x="140" y="86" width="1" height="124" fill="#1a100a" opacity="0.65"/>
+      <rect x="139" y="100" width="3" height="3" fill="#1a100a"/>
+      <rect x="139" y="120" width="3" height="3" fill="#1a100a"/>
+      <rect x="139" y="140" width="3" height="3" fill="#1a100a"/>
+      <rect x="139" y="160" width="3" height="3" fill="#1a100a"/>
+      <rect x="139" y="180" width="3" height="3" fill="#1a100a"/>
+      <rect x="128" y="170" width="14" height="3" fill="#1a100a" opacity="0.7"/>
+      <rect x="122" y="208" width="38" height="3" fill="#1a100a" opacity="0.7"/>
+    </g>
+
+    <!-- variant B: navy double-breasted peacoat (shorter) -->
+    <g id="hc-outfit-2b" class="hc-outfit-2" visibility="hidden">
+      <rect x="118" y="76" width="46" height="10" fill="#2a3848"/>
+      <rect x="118" y="76" width="46" height="2" fill="#4a5868"/>
+      <!-- wide notched lapels -->
+      <rect x="128" y="82" width="10" height="14" fill="#1a2030"/>
+      <rect x="144" y="82" width="10" height="14" fill="#1a2030"/>
+      <rect x="138" y="82" width="6" height="6" fill="#1a2030"/>
+      <!-- body -->
+      <rect x="122" y="86" width="38" height="98" fill="#2a3848"/>
+      <rect x="122" y="86" width="38" height="2" fill="#4a5868" opacity="0.7"/>
+      <!-- double-breasted button rows -->
+      <rect x="132" y="100" width="3" height="3" fill="#a89880"/>
+      <rect x="146" y="100" width="3" height="3" fill="#a89880"/>
+      <rect x="132" y="118" width="3" height="3" fill="#a89880"/>
+      <rect x="146" y="118" width="3" height="3" fill="#a89880"/>
+      <rect x="132" y="136" width="3" height="3" fill="#a89880"/>
+      <rect x="146" y="136" width="3" height="3" fill="#a89880"/>
+      <rect x="132" y="154" width="3" height="3" fill="#a89880"/>
+      <rect x="146" y="154" width="3" height="3" fill="#a89880"/>
+      <!-- pockets -->
+      <rect x="124" y="160" width="14" height="3" fill="#1a2030" opacity="0.7"/>
+      <rect x="144" y="160" width="14" height="3" fill="#1a2030" opacity="0.7"/>
+      <!-- hem -->
+      <rect x="122" y="182" width="38" height="3" fill="#1a2030" opacity="0.8"/>
+    </g>
+
+    <!-- variant C: olive trench coat with belt -->
+    <g id="hc-outfit-2c" class="hc-outfit-2" visibility="hidden">
+      <rect x="118" y="76" width="46" height="10" fill="#6a6438"/>
+      <rect x="118" y="76" width="46" height="2" fill="#8a8458"/>
+      <!-- collar -->
+      <rect x="134" y="82" width="14" height="6" fill="#4a4420"/>
+      <rect x="134" y="82" width="14" height="1" fill="#8a8458"/>
+      <!-- body -->
+      <rect x="122" y="86" width="38" height="118" fill="#6a6438"/>
+      <rect x="122" y="86" width="38" height="2" fill="#8a8458" opacity="0.7"/>
+      <!-- front overlap -->
+      <rect x="140" y="86" width="1" height="118" fill="#4a4420" opacity="0.7"/>
+      <!-- buttons -->
+      <rect x="139" y="100" width="3" height="3" fill="#a89880"/>
+      <rect x="139" y="116" width="3" height="3" fill="#a89880"/>
+      <!-- belt across waist -->
+      <rect x="118" y="138" width="46" height="6" fill="#4a4420"/>
+      <rect x="118" y="138" width="46" height="1" fill="#6a6438"/>
+      <rect x="118" y="143" width="46" height="1" fill="#1a1408" opacity="0.7"/>
+      <!-- belt buckle -->
+      <rect x="138" y="138" width="6" height="6" fill="#a89880"/>
+      <rect x="138" y="138" width="6" height="1" fill="#dccfb8"/>
+      <rect x="140" y="140" width="2" height="2" fill="#1a1408"/>
+      <!-- buttons below belt -->
+      <rect x="139" y="156" width="3" height="3" fill="#a89880"/>
+      <rect x="139" y="174" width="3" height="3" fill="#a89880"/>
+      <!-- pocket flaps -->
+      <rect x="126" y="170" width="14" height="3" fill="#4a4420" opacity="0.7"/>
+      <rect x="142" y="170" width="14" height="3" fill="#4a4420" opacity="0.7"/>
+      <!-- hem -->
+      <rect x="122" y="202" width="38" height="3" fill="#4a4420" opacity="0.8"/>
+    </g>
+  </g>
+
+  <!-- GARMENT 3: jacket slot on a red plastic hanger; rotates between visits -->
+  <g id="hc-garment-3">
+    <!-- plastic hanger (always visible) -->
+    <rect x="209" y="64" width="2" height="4" fill="#a85040"/>
+    <rect x="207" y="62" width="2" height="2" fill="#a85040"/>
+    <rect x="211" y="62" width="2" height="2" fill="#a85040"/>
+    <rect x="209" y="60" width="2" height="2" fill="#a85040"/>
+    <rect x="194" y="74" width="34" height="2" fill="#a85040"/>
+    <rect x="196" y="73" width="30" height="1" fill="#a85040"/>
+    <rect x="200" y="72" width="22" height="1" fill="#a85040"/>
+
+    <!-- variant A: faded denim jacket -->
+    <g id="hc-outfit-3a" class="hc-outfit-3">
+      <rect x="188" y="76" width="46" height="10" fill="#5a7a98"/>
+      <rect x="188" y="76" width="46" height="2" fill="#7a9ab8"/>
+      <rect x="204" y="82" width="14" height="4" fill="#3a5a78"/>
+      <rect x="192" y="86" width="38" height="84" fill="#5a7a98"/>
+      <rect x="210" y="86" width="1" height="84" fill="#3a5a78" opacity="0.7"/>
+      <rect x="209" y="100" width="2" height="2" fill="#dccfb8"/>
+      <rect x="209" y="116" width="2" height="2" fill="#dccfb8"/>
+      <rect x="209" y="132" width="2" height="2" fill="#dccfb8"/>
+      <rect x="209" y="148" width="2" height="2" fill="#dccfb8"/>
+      <rect x="196" y="100" width="10" height="10" fill="#3a5a78" opacity="0.55"/>
+      <rect x="214" y="100" width="10" height="10" fill="#3a5a78" opacity="0.55"/>
+      <rect x="192" y="168" width="38" height="3" fill="#3a5a78" opacity="0.7"/>
+      <rect x="192" y="120" width="38" height="1" fill="#7a9ab8" opacity="0.35"/>
+    </g>
+
+    <!-- variant B: black leather jacket -->
+    <g id="hc-outfit-3b" class="hc-outfit-3" visibility="hidden">
+      <rect x="188" y="76" width="46" height="10" fill="#1a1a1a"/>
+      <rect x="188" y="76" width="46" height="2" fill="#3a3a3a"/>
+      <!-- asymmetric lapels (one wider) -->
+      <rect x="200" y="82" width="10" height="14" fill="#0a0a0a"/>
+      <rect x="216" y="82" width="6" height="10" fill="#0a0a0a"/>
+      <!-- body -->
+      <rect x="192" y="86" width="38" height="84" fill="#1a1a1a"/>
+      <rect x="192" y="86" width="38" height="2" fill="#3a3a3a" opacity="0.6"/>
+      <!-- diagonal main zipper (offset to one side) -->
+      <rect x="206" y="96" width="2" height="74" fill="#5a5a64"/>
+      <rect x="206" y="96" width="2" height="1" fill="#a8a8b0"/>
+      <!-- zipper pull -->
+      <rect x="204" y="96" width="6" height="3" fill="#a8a8b0"/>
+      <rect x="204" y="96" width="6" height="1" fill="#dccfb8"/>
+      <!-- second small zipper (chest) -->
+      <rect x="216" y="100" width="10" height="2" fill="#5a5a64"/>
+      <rect x="226" y="98" width="2" height="3" fill="#a8a8b0"/>
+      <!-- diagonal sheen highlight -->
+      <rect x="222" y="110" width="1" height="40" fill="#5a5a64" opacity="0.55"/>
+      <!-- studded shoulder -->
+      <rect x="190" y="88" width="2" height="2" fill="#a8a8b0"/>
+      <rect x="194" y="86" width="2" height="2" fill="#a8a8b0"/>
+      <rect x="198" y="88" width="2" height="2" fill="#a8a8b0"/>
+      <!-- hem -->
+      <rect x="192" y="168" width="38" height="3" fill="#0a0a0a" opacity="0.85"/>
+    </g>
+
+    <!-- variant C: tan corduroy jacket -->
+    <g id="hc-outfit-3c" class="hc-outfit-3" visibility="hidden">
+      <rect x="188" y="76" width="46" height="10" fill="#9a6838"/>
+      <rect x="188" y="76" width="46" height="2" fill="#bb8858"/>
+      <!-- collar -->
+      <rect x="204" y="82" width="14" height="6" fill="#7a4828"/>
+      <!-- body -->
+      <rect x="192" y="86" width="38" height="84" fill="#9a6838"/>
+      <!-- corduroy vertical wales -->
+      <rect x="194" y="86" width="1" height="84" fill="#7a4828" opacity="0.55"/>
+      <rect x="198" y="86" width="1" height="84" fill="#7a4828" opacity="0.55"/>
+      <rect x="202" y="86" width="1" height="84" fill="#7a4828" opacity="0.55"/>
+      <rect x="206" y="86" width="1" height="84" fill="#7a4828" opacity="0.55"/>
+      <rect x="214" y="86" width="1" height="84" fill="#7a4828" opacity="0.55"/>
+      <rect x="218" y="86" width="1" height="84" fill="#7a4828" opacity="0.55"/>
+      <rect x="222" y="86" width="1" height="84" fill="#7a4828" opacity="0.55"/>
+      <rect x="226" y="86" width="1" height="84" fill="#7a4828" opacity="0.55"/>
+      <!-- center button placket -->
+      <rect x="210" y="86" width="2" height="84" fill="#7a4828" opacity="0.8"/>
+      <!-- buttons -->
+      <rect x="210" y="100" width="2" height="2" fill="#3a2418"/>
+      <rect x="210" y="118" width="2" height="2" fill="#3a2418"/>
+      <rect x="210" y="136" width="2" height="2" fill="#3a2418"/>
+      <rect x="210" y="154" width="2" height="2" fill="#3a2418"/>
+      <!-- patch pockets -->
+      <rect x="194" y="120" width="14" height="14" fill="none" stroke="#7a4828" stroke-width="1"/>
+      <rect x="216" y="120" width="14" height="14" fill="none" stroke="#7a4828" stroke-width="1"/>
+      <!-- hem -->
+      <rect x="192" y="168" width="38" height="3" fill="#5a3818" opacity="0.8"/>
+    </g>
+  </g>
+
+  <!-- GARMENT 4: long maroon dress (THE one that changes between visits, plastic hanger) -->
+  <g id="hc-garment-4">
+    <!-- plastic hanger -->
+    <rect x="279" y="64" width="2" height="4" fill="#3a3a44"/>
+    <rect x="277" y="62" width="2" height="2" fill="#3a3a44"/>
+    <rect x="281" y="62" width="2" height="2" fill="#3a3a44"/>
+    <rect x="279" y="60" width="2" height="2" fill="#3a3a44"/>
+    <rect x="262" y="74" width="34" height="2" fill="#3a3a44"/>
+    <rect x="264" y="73" width="30" height="1" fill="#3a3a44"/>
+    <rect x="268" y="72" width="22" height="1" fill="#3a3a44"/>
+
+    <!-- variant A: long maroon dress -->
+    <g id="hc-outfit-4a" class="hc-outfit-4">
+      <rect x="258" y="76" width="42" height="10" fill="#783850"/>
+      <rect x="258" y="76" width="42" height="2" fill="#a85878"/>
+      <rect x="262" y="86" width="34" height="138" fill="#783850"/>
+      <!-- center darker line -->
+      <rect x="278" y="86" width="2" height="138" fill="#583040" opacity="0.6"/>
+      <!-- belt at waist -->
+      <rect x="262" y="140" width="34" height="3" fill="#3a1828"/>
+      <rect x="262" y="140" width="34" height="1" fill="#583040"/>
+      <!-- hem -->
+      <rect x="262" y="220" width="34" height="4" fill="#3a1828" opacity="0.8"/>
+      <rect x="258" y="220" width="42" height="2" fill="#783850" opacity="0.85"/>
+    </g>
+
+    <!-- variant B: cream slip dress -->
+    <g id="hc-outfit-4b" class="hc-outfit-4" visibility="hidden">
+      <rect x="262" y="76" width="34" height="10" fill="#ecdfb8"/>
+      <rect x="262" y="76" width="34" height="2" fill="#fff4d8"/>
+      <rect x="266" y="86" width="26" height="120" fill="#ecdfb8"/>
+      <rect x="280" y="86" width="2" height="120" fill="#c8b890" opacity="0.6"/>
+      <!-- thin straps -->
+      <rect x="268" y="74" width="2" height="4" fill="#c8b890"/>
+      <rect x="288" y="74" width="2" height="4" fill="#c8b890"/>
+      <!-- hem -->
+      <rect x="266" y="206" width="26" height="3" fill="#c8b890" opacity="0.8"/>
+    </g>
+
+    <!-- variant C: childhood overalls -->
+    <g id="hc-outfit-4c" class="hc-outfit-4" visibility="hidden">
+      <rect x="266" y="86" width="26" height="80" fill="#3a5a78"/>
+      <!-- straps -->
+      <rect x="268" y="76" width="4" height="14" fill="#3a5a78"/>
+      <rect x="286" y="76" width="4" height="14" fill="#3a5a78"/>
+      <!-- bib -->
+      <rect x="270" y="86" width="18" height="20" fill="#3a5a78"/>
+      <rect x="270" y="86" width="18" height="2" fill="#5a7a98"/>
+      <!-- buttons on straps -->
+      <rect x="269" y="86" width="2" height="2" fill="#a89880"/>
+      <rect x="287" y="86" width="2" height="2" fill="#a89880"/>
+      <!-- pocket on bib -->
+      <rect x="274" y="92" width="10" height="8" fill="none" stroke="#5a7a98" stroke-width="1"/>
+      <!-- pant legs -->
+      <rect x="266" y="166" width="11" height="40" fill="#3a5a78"/>
+      <rect x="281" y="166" width="11" height="40" fill="#3a5a78"/>
+      <!-- hems -->
+      <rect x="266" y="204" width="11" height="3" fill="#1a3858" opacity="0.7"/>
+      <rect x="281" y="204" width="11" height="3" fill="#1a3858" opacity="0.7"/>
+    </g>
+
+    <!-- variant D: long forest green velvet dress -->
+    <g id="hc-outfit-4d" class="hc-outfit-4" visibility="hidden">
+      <rect x="258" y="76" width="42" height="10" fill="#3a5a3a"/>
+      <rect x="258" y="76" width="42" height="2" fill="#5a7a48"/>
+      <rect x="262" y="86" width="34" height="138" fill="#3a5a3a"/>
+      <!-- velvet sheen highlights -->
+      <rect x="270" y="100" width="2" height="100" fill="#5a7a48" opacity="0.4"/>
+      <rect x="284" y="110" width="2" height="80" fill="#5a7a48" opacity="0.3"/>
+      <rect x="262" y="220" width="34" height="4" fill="#1a3a1a" opacity="0.8"/>
+    </g>
+  </g>
+
+  <!-- GARMENT 5: child-sized garment slot on a wood hanger; rotates between visits -->
+  <g id="hc-garment-5">
+    <!-- wood hanger (always visible) -->
+    <rect x="349" y="64" width="2" height="4" fill="#7a5236"/>
+    <rect x="347" y="62" width="2" height="2" fill="#7a5236"/>
+    <rect x="351" y="62" width="2" height="2" fill="#7a5236"/>
+    <rect x="349" y="60" width="2" height="2" fill="#7a5236"/>
+    <rect x="334" y="74" width="34" height="2" fill="#7a5236"/>
+    <rect x="336" y="73" width="30" height="1" fill="#7a5236"/>
+    <rect x="340" y="72" width="22" height="1" fill="#7a5236"/>
+
+    <!-- variant A: red-striped childhood t-shirt -->
+    <g id="hc-outfit-5a" class="hc-outfit-5">
+      <rect x="332" y="76" width="38" height="8" fill="#dccfa8"/>
+      <rect x="332" y="76" width="38" height="2" fill="#ecdfb8"/>
+      <rect x="336" y="84" width="30" height="74" fill="#dccfa8"/>
+      <rect x="336" y="92" width="30" height="3" fill="#a85040"/>
+      <rect x="336" y="100" width="30" height="3" fill="#a85040"/>
+      <rect x="336" y="108" width="30" height="3" fill="#a85040"/>
+      <rect x="336" y="116" width="30" height="3" fill="#a85040"/>
+      <rect x="336" y="124" width="30" height="3" fill="#a85040"/>
+      <rect x="336" y="132" width="30" height="3" fill="#a85040"/>
+      <rect x="336" y="140" width="30" height="3" fill="#a85040"/>
+      <rect x="336" y="148" width="30" height="3" fill="#a85040"/>
+      <rect x="346" y="82" width="10" height="4" fill="#a85040"/>
+      <rect x="336" y="156" width="30" height="3" fill="#a8957a" opacity="0.7"/>
+    </g>
+
+    <!-- variant B: school polo (white with navy collar + crest) -->
+    <g id="hc-outfit-5b" class="hc-outfit-5" visibility="hidden">
+      <rect x="332" y="76" width="38" height="8" fill="#ecdfb8"/>
+      <rect x="332" y="76" width="38" height="2" fill="#fff4d8"/>
+      <rect x="336" y="84" width="30" height="74" fill="#ecdfb8"/>
+      <!-- navy collar -->
+      <rect x="342" y="82" width="18" height="6" fill="#2a3848"/>
+      <rect x="342" y="82" width="18" height="1" fill="#4a5868"/>
+      <rect x="350" y="86" width="2" height="4" fill="#2a3848"/>
+      <!-- button placket -->
+      <rect x="350" y="88" width="2" height="14" fill="#dcd0a8" opacity="0.7"/>
+      <rect x="350" y="92" width="2" height="2" fill="#a89880"/>
+      <rect x="350" y="98" width="2" height="2" fill="#a89880"/>
+      <!-- crest patch -->
+      <rect x="340" y="108" width="8" height="10" fill="#a85040"/>
+      <rect x="340" y="108" width="8" height="1" fill="#c87060"/>
+      <rect x="343" y="112" width="2" height="2" fill="#dccfb8"/>
+      <!-- hem -->
+      <rect x="336" y="156" width="30" height="3" fill="#c8b890" opacity="0.7"/>
+    </g>
+
+    <!-- variant C: pink flannel pajama top with stars -->
+    <g id="hc-outfit-5c" class="hc-outfit-5" visibility="hidden">
+      <rect x="332" y="76" width="38" height="8" fill="#c89aa8"/>
+      <rect x="332" y="76" width="38" height="2" fill="#e0b8c8"/>
+      <rect x="336" y="84" width="30" height="74" fill="#c89aa8"/>
+      <!-- collar -->
+      <rect x="346" y="82" width="10" height="4" fill="#a87888"/>
+      <!-- button placket -->
+      <rect x="350" y="86" width="2" height="70" fill="#a87888" opacity="0.7"/>
+      <rect x="350" y="92" width="2" height="2" fill="#ecdfb8"/>
+      <rect x="350" y="106" width="2" height="2" fill="#ecdfb8"/>
+      <rect x="350" y="120" width="2" height="2" fill="#ecdfb8"/>
+      <rect x="350" y="134" width="2" height="2" fill="#ecdfb8"/>
+      <rect x="350" y="148" width="2" height="2" fill="#ecdfb8"/>
+      <!-- scattered tiny stars (cream) -->
+      <rect x="340" y="98" width="2" height="2" fill="#ecdfb8" opacity="0.85"/>
+      <rect x="358" y="106" width="2" height="2" fill="#ecdfb8" opacity="0.85"/>
+      <rect x="342" y="118" width="2" height="2" fill="#ecdfb8" opacity="0.85"/>
+      <rect x="362" y="124" width="2" height="2" fill="#ecdfb8" opacity="0.85"/>
+      <rect x="338" y="134" width="2" height="2" fill="#ecdfb8" opacity="0.85"/>
+      <rect x="356" y="140" width="2" height="2" fill="#ecdfb8" opacity="0.85"/>
+      <rect x="344" y="148" width="2" height="2" fill="#ecdfb8" opacity="0.85"/>
+      <!-- hem -->
+      <rect x="336" y="156" width="30" height="3" fill="#a87888" opacity="0.8"/>
+    </g>
+  </g>
+
+  <!-- GARMENT 6: sweater slot on a metal hanger; rotates between visits -->
+  <g id="hc-garment-6">
+    <!-- metal hanger (always visible) -->
+    <rect x="409" y="64" width="2" height="4" fill="#a8a8b0"/>
+    <rect x="407" y="62" width="2" height="2" fill="#a8a8b0"/>
+    <rect x="411" y="62" width="2" height="2" fill="#a8a8b0"/>
+    <rect x="409" y="60" width="2" height="2" fill="#a8a8b0"/>
+    <rect x="394" y="74" width="34" height="2" fill="#a8a8b0"/>
+    <rect x="396" y="73" width="30" height="1" fill="#a8a8b0"/>
+    <rect x="400" y="72" width="22" height="1" fill="#a8a8b0"/>
+
+    <!-- variant A: cream cable-knit sweater -->
+    <g id="hc-outfit-6a" class="hc-outfit-6">
+      <rect x="388" y="76" width="42" height="10" fill="#dccfa8"/>
+      <rect x="388" y="76" width="42" height="2" fill="#ecdfb8"/>
+      <rect x="404" y="76" width="10" height="4" fill="#a8957a"/>
+      <rect x="390" y="86" width="38" height="98" fill="#dccfa8"/>
+      <rect x="396" y="86" width="2" height="98" fill="#a8957a" opacity="0.55"/>
+      <rect x="406" y="86" width="2" height="98" fill="#a8957a" opacity="0.55"/>
+      <rect x="416" y="86" width="2" height="98" fill="#a8957a" opacity="0.55"/>
+      <rect x="422" y="86" width="2" height="98" fill="#a8957a" opacity="0.55"/>
+      <rect x="388" y="184" width="42" height="6" fill="#dccfa8"/>
+      <rect x="388" y="184" width="42" height="1" fill="#a8957a" opacity="0.6"/>
+      <rect x="388" y="187" width="42" height="1" fill="#a8957a" opacity="0.6"/>
+      <rect x="388" y="190" width="42" height="2" fill="#a8957a" opacity="0.7"/>
+    </g>
+
+    <!-- variant B: red holiday sweater with snowflakes -->
+    <g id="hc-outfit-6b" class="hc-outfit-6" visibility="hidden">
+      <rect x="388" y="76" width="42" height="10" fill="#a85040"/>
+      <rect x="388" y="76" width="42" height="2" fill="#c87060"/>
+      <rect x="404" y="76" width="10" height="4" fill="#7a3828"/>
+      <rect x="390" y="86" width="38" height="98" fill="#a85040"/>
+      <!-- horizontal pattern bands -->
+      <rect x="390" y="98" width="38" height="2" fill="#7a3828" opacity="0.7"/>
+      <rect x="390" y="148" width="38" height="2" fill="#7a3828" opacity="0.7"/>
+      <!-- snowflake dots scattered across -->
+      <rect x="396" y="106" width="2" height="2" fill="#ecdfb8"/>
+      <rect x="394" y="108" width="1" height="1" fill="#ecdfb8"/>
+      <rect x="399" y="108" width="1" height="1" fill="#ecdfb8"/>
+      <rect x="396" y="111" width="2" height="1" fill="#ecdfb8"/>
+      <rect x="412" y="118" width="2" height="2" fill="#ecdfb8"/>
+      <rect x="410" y="120" width="1" height="1" fill="#ecdfb8"/>
+      <rect x="415" y="120" width="1" height="1" fill="#ecdfb8"/>
+      <rect x="420" y="106" width="2" height="2" fill="#ecdfb8"/>
+      <rect x="418" y="108" width="1" height="1" fill="#ecdfb8"/>
+      <rect x="423" y="108" width="1" height="1" fill="#ecdfb8"/>
+      <rect x="402" y="130" width="2" height="2" fill="#ecdfb8"/>
+      <rect x="400" y="132" width="1" height="1" fill="#ecdfb8"/>
+      <rect x="405" y="132" width="1" height="1" fill="#ecdfb8"/>
+      <rect x="418" y="134" width="2" height="2" fill="#ecdfb8"/>
+      <!-- a small triangle (christmas tree hint) -->
+      <rect x="408" y="156" width="2" height="2" fill="#5a8a48"/>
+      <rect x="406" y="158" width="6" height="2" fill="#5a8a48"/>
+      <rect x="404" y="160" width="10" height="2" fill="#5a8a48"/>
+      <rect x="408" y="162" width="2" height="2" fill="#7a5236"/>
+      <!-- ribbed hem -->
+      <rect x="388" y="184" width="42" height="6" fill="#7a3828"/>
+      <rect x="388" y="184" width="42" height="1" fill="#a85040" opacity="0.6"/>
+      <rect x="388" y="187" width="42" height="1" fill="#5a2818" opacity="0.7"/>
+    </g>
+
+    <!-- variant C: olive striped sweatshirt -->
+    <g id="hc-outfit-6c" class="hc-outfit-6" visibility="hidden">
+      <rect x="388" y="76" width="42" height="10" fill="#6a8438"/>
+      <rect x="388" y="76" width="42" height="2" fill="#8aa458"/>
+      <!-- crew neck collar -->
+      <rect x="402" y="76" width="14" height="4" fill="#4a6418"/>
+      <rect x="402" y="76" width="14" height="1" fill="#6a8438"/>
+      <rect x="390" y="86" width="38" height="98" fill="#6a8438"/>
+      <!-- horizontal stripes (cream + dark olive) -->
+      <rect x="390" y="100" width="38" height="3" fill="#ecdfb8"/>
+      <rect x="390" y="103" width="38" height="1" fill="#a8b878" opacity="0.5"/>
+      <rect x="390" y="116" width="38" height="3" fill="#4a6418"/>
+      <rect x="390" y="132" width="38" height="3" fill="#ecdfb8"/>
+      <rect x="390" y="135" width="38" height="1" fill="#a8b878" opacity="0.5"/>
+      <rect x="390" y="148" width="38" height="3" fill="#4a6418"/>
+      <rect x="390" y="164" width="38" height="3" fill="#ecdfb8"/>
+      <rect x="390" y="167" width="38" height="1" fill="#a8b878" opacity="0.5"/>
+      <!-- printed number -->
+      <text x="409" y="178" text-anchor="middle" font-family="'Courier New', monospace" font-size="8" font-weight="bold" fill="#ecdfb8">07</text>
+      <!-- ribbed hem -->
+      <rect x="388" y="184" width="42" height="6" fill="#4a6418"/>
+      <rect x="388" y="184" width="42" height="1" fill="#6a8438" opacity="0.6"/>
+      <rect x="388" y="187" width="42" height="1" fill="#3a4818" opacity="0.7"/>
+    </g>
+  </g>
+
+  <!-- subtle independent shadow on the back wall behind garment 4 (magical realism) -->
+  <g id="hc-strange-shadow" pointer-events="none" opacity="0.55">
+    <rect x="252" y="80" width="48" height="148" fill="#0a0604" opacity="0.4">
+      <animate attributeName="opacity" values="0.20;0.55;0.30;0.50;0.25" dur="13s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="0 0; 2 0; 0 0; -1 0; 0 0" dur="13s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ============= -->
+  <!-- FLOOR ITEMS: shoe boxes + storage bin + pair of shoes peeking -->
+  <!-- ============= -->
+
+  <!-- SHOE BOX STACK (left, 3 boxes slightly askew) -->
+  <g id="hc-shoeboxes">
+    <!-- bottom box -->
+    <rect x="42" y="270" width="92" height="30" fill="#a87848"/>
+    <rect x="42" y="270" width="92" height="2" fill="#c89860"/>
+    <rect x="42" y="298" width="92" height="2" fill="#7a5028" opacity="0.8"/>
+    <rect x="42" y="278" width="92" height="2" fill="#7a5028" opacity="0.6"/>
+    <!-- label -->
+    <rect x="58" y="282" width="44" height="8" fill="#ecdfb8"/>
+    <rect x="58" y="282" width="44" height="1" fill="#fff4d8"/>
+    <text x="80" y="288" text-anchor="middle" font-family="'Courier New', monospace" font-size="5" fill="#3a2418">PHOTOS</text>
+
+    <!-- middle box (slightly offset, askew) -->
+    <rect x="48" y="246" width="86" height="24" fill="#a85040" transform="rotate(-2 91 258)"/>
+    <rect x="48" y="246" width="86" height="2" fill="#c87060" transform="rotate(-2 91 258)"/>
+    <rect x="48" y="268" width="86" height="2" fill="#7a3828" opacity="0.7" transform="rotate(-2 91 258)"/>
+    <rect x="48" y="252" width="86" height="2" fill="#7a3828" opacity="0.55" transform="rotate(-2 91 258)"/>
+
+    <!-- top box (smaller, askew the other way) -->
+    <rect x="56" y="226" width="72" height="20" fill="#5a8a98" transform="rotate(3 92 236)"/>
+    <rect x="56" y="226" width="72" height="2" fill="#7aaab8" transform="rotate(3 92 236)"/>
+    <rect x="56" y="244" width="72" height="2" fill="#3a6a78" opacity="0.7" transform="rotate(3 92 236)"/>
+    <rect x="56" y="232" width="72" height="2" fill="#3a6a78" opacity="0.55" transform="rotate(3 92 236)"/>
+    <!-- a small label -->
+    <rect x="68" y="234" width="32" height="6" fill="#ecdfb8" transform="rotate(3 92 236)"/>
+  </g>
+
+  <!-- a pair of small shoes peeking from behind the boxes -->
+  <g id="hc-floor-shoes">
+    <rect x="138" y="288" width="22" height="12" fill="#3a2418"/>
+    <rect x="138" y="288" width="22" height="2" fill="#5a3826"/>
+    <rect x="138" y="298" width="22" height="2" fill="#1a100a" opacity="0.8"/>
+    <rect x="142" y="284" width="14" height="4" fill="#3a2418"/>
+    <rect x="162" y="290" width="22" height="10" fill="#3a2418"/>
+    <rect x="162" y="290" width="22" height="2" fill="#5a3826"/>
+    <rect x="162" y="298" width="22" height="2" fill="#1a100a" opacity="0.8"/>
+    <rect x="166" y="286" width="14" height="4" fill="#3a2418"/>
+  </g>
+
+  <!-- STORAGE BIN (right, fabric/plastic, lidded) -->
+  <g id="hc-bin-floor">
+    <rect x="340" y="244" width="100" height="56" fill="#586878"/>
+    <rect x="340" y="244" width="100" height="3" fill="#7888a0"/>
+    <rect x="340" y="296" width="100" height="4" fill="#384858" opacity="0.8"/>
+    <rect x="340" y="244" width="100" height="56" fill="none" stroke="#1a2030" stroke-width="2"/>
+    <!-- lid -->
+    <rect x="338" y="240" width="104" height="6" fill="#384858"/>
+    <rect x="338" y="240" width="104" height="2" fill="#586878"/>
+    <!-- handles -->
+    <rect x="378" y="252" width="24" height="3" fill="#1a2030"/>
+    <rect x="378" y="252" width="24" height="1" fill="#0a1018"/>
+    <!-- weave texture lines -->
+    <rect x="340" y="262" width="100" height="1" fill="#1a2030" opacity="0.5"/>
+    <rect x="340" y="278" width="100" height="1" fill="#1a2030" opacity="0.5"/>
+    <!-- masking-tape label -->
+    <rect x="358" y="270" width="64" height="8" fill="#ecdfb8"/>
+    <rect x="358" y="270" width="64" height="1" fill="#fff4d8"/>
+    <text x="390" y="276" text-anchor="middle" font-family="'Courier New', monospace" font-size="6" fill="#3a2418">KEEPSAKES</text>
+  </g>
+
+  <!-- ============= -->
+  <!-- DUST PARTICLES drifting in the bulb spill -->
+  <!-- ============= -->
+  <g id="hc-dust" pointer-events="none" opacity="0.55">
+    <rect x="160" y="140" width="1" height="1" fill="#f0d8a8" opacity="0.6">
+      <animate attributeName="y" values="140;220;140" dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.6;0" dur="14s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="240" y="120" width="1" height="1" fill="#f0d8a8" opacity="0.5">
+      <animate attributeName="y" values="120;240;120" dur="17s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.5;0" dur="17s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="320" y="100" width="1" height="1" fill="#f0d8a8" opacity="0.5">
+      <animate attributeName="y" values="100;220;100" dur="19s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.5;0" dur="19s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="380" y="160" width="1" height="1" fill="#f0d8a8" opacity="0.45">
+      <animate attributeName="y" values="160;240;160" dur="22s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.5;0" dur="22s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="120" y="180" width="1" height="1" fill="#f0d8a8" opacity="0.45">
+      <animate attributeName="y" values="180;230;180" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.5;0" dur="20s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- side darkening (cinematic crop, suggests we're peering through) -->
+  <rect x="0" y="0" width="20" height="320" fill="url(#hcSidesL)" pointer-events="none"/>
+  <rect x="460" y="0" width="20" height="320" fill="url(#hcSidesR)" pointer-events="none"/>
+
+  <!-- Edge vignette -->
+  <rect width="480" height="320" fill="none" stroke="#0a0810" stroke-width="22" opacity="0.45" pointer-events="none"/>
+
+  <!-- ============= -->
+  <!-- INTERACTION HOTSPOTS -->
+  <!-- ============= -->
+  <rect id="hit-hatbox" x="42" y="20" width="64" height="36" fill="transparent" pointer-events="all"/>
+  <rect id="hit-blankets" x="118" y="22" width="104" height="34" fill="transparent" pointer-events="all"/>
+  <rect id="hit-bin-top" x="238" y="24" width="104" height="32" fill="transparent" pointer-events="all"/>
+  <rect id="hit-basket" x="354" y="26" width="80" height="30" fill="transparent" pointer-events="all"/>
+  <rect id="hit-shelf" x="32" y="54" width="416" height="8" fill="transparent" pointer-events="all"/>
+
+  <rect id="hit-bulb" x="230" y="20" width="20" height="22" fill="transparent" pointer-events="all"/>
+  <rect id="hit-rod" x="32" y="62" width="416" height="10" fill="transparent" pointer-events="all"/>
+
+  <rect id="hit-garment-1" x="52" y="60" width="42" height="112" fill="transparent" pointer-events="all"/>
+  <rect id="hit-garment-2" x="116" y="60" width="50" height="154" fill="transparent" pointer-events="all"/>
+  <rect id="hit-garment-3" x="186" y="60" width="50" height="114" fill="transparent" pointer-events="all"/>
+  <rect id="hit-garment-4" x="256" y="60" width="46" height="170" fill="transparent" pointer-events="all"/>
+  <rect id="hit-garment-5" x="330" y="60" width="40" height="104" fill="transparent" pointer-events="all"/>
+  <rect id="hit-garment-6" x="386" y="60" width="46" height="138" fill="transparent" pointer-events="all"/>
+
+  <rect id="hit-back-depth" x="232" y="80" width="48" height="148" fill="transparent" pointer-events="all"/>
+
+  <rect id="hit-shoeboxes" x="40" y="222" width="98" height="80" fill="transparent" pointer-events="all"/>
+  <rect id="hit-floor-shoes" x="136" y="282" width="52" height="20" fill="transparent" pointer-events="all"/>
+  <rect id="hit-bin-floor" x="338" y="238" width="104" height="64" fill="transparent" pointer-events="all"/>
+</svg>

@@ -1169,6 +1169,981 @@ svg {
     }
 }
 
+/* main hallway memory vignette (apt one) */
+#hallway-memory-overlay {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    inset: 0;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: min(24px, 4vw);
+    box-sizing: border-box;
+}
+
+#hallway-memory-overlay.active {
+    display: flex;
+}
+
+.hallway-memory-backdrop {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 110% 70% at 50% 100%, rgba(96, 60, 40, 0.50) 0%, transparent 55%),
+        radial-gradient(ellipse 90% 60% at 50% 0%, rgba(120, 84, 48, 0.32) 0%, transparent 55%),
+        linear-gradient(180deg, #1a120c 0%, #2c2018 48%, #15100a 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+}
+
+.hallway-memory-lift {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: min(720px, 96vw);
+    pointer-events: none;
+}
+
+.hallway-memory-lift > * {
+    pointer-events: auto;
+}
+
+.hallway-memory-hud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: min(680px, 94vw);
+}
+
+.hallway-memory-tip {
+    flex: 1 1 220px;
+    margin: 0;
+    min-height: 2.6em;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', monospace;
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(228, 210, 184, 0.92);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
+}
+
+.hallway-memory-close {
+    flex: 0 0 auto;
+    margin: 0;
+    background: rgba(48, 32, 24, 0.65);
+    border: 1px solid rgba(210, 174, 132, 0.45);
+    color: rgba(248, 232, 208, 0.92);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.hallway-memory-close:hover {
+    border-color: rgba(248, 220, 180, 0.75);
+    background: rgba(72, 48, 32, 0.85);
+}
+
+.hallway-memory-stage {
+    position: relative;
+    width: 100%;
+    max-width: min(680px, 94vw);
+    aspect-ratio: 480 / 320;
+    max-height: min(62vh, 520px);
+    border: 2px solid rgba(110, 86, 64, 0.65);
+    box-shadow:
+        0 0 0 1px rgba(20, 14, 8, 0.9),
+        0 18px 56px rgba(0, 0, 0, 0.55),
+        inset 0 0 48px rgba(160, 120, 80, 0.10);
+    background: #160e08;
+    overflow: hidden;
+}
+
+.hallway-memory-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    object-position: center center;
+    image-rendering: pixelated;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .hallway-memory-stage {
+        max-height: min(52vh, 420px);
+    }
+
+    .hallway-memory-hud {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* kitchen memory vignette (apt one) */
+#kitchen-memory-overlay {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    inset: 0;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: min(24px, 4vw);
+    box-sizing: border-box;
+}
+
+#kitchen-memory-overlay.active {
+    display: flex;
+}
+
+.kitchen-memory-backdrop {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 110% 70% at 50% 100%, rgba(80, 60, 40, 0.50) 0%, transparent 55%),
+        radial-gradient(ellipse 90% 60% at 35% 35%, rgba(196, 156, 96, 0.30) 0%, transparent 55%),
+        linear-gradient(180deg, #18120a 0%, #28200e 48%, #14100a 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+}
+
+.kitchen-memory-lift {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: min(720px, 96vw);
+    pointer-events: none;
+}
+
+.kitchen-memory-lift > * {
+    pointer-events: auto;
+}
+
+.kitchen-memory-hud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: min(680px, 94vw);
+}
+
+.kitchen-memory-tip {
+    flex: 1 1 220px;
+    margin: 0;
+    min-height: 2.6em;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', monospace;
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(232, 216, 180, 0.94);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
+}
+
+.kitchen-memory-close {
+    flex: 0 0 auto;
+    margin: 0;
+    background: rgba(48, 36, 24, 0.65);
+    border: 1px solid rgba(216, 184, 132, 0.45);
+    color: rgba(248, 232, 200, 0.92);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.kitchen-memory-close:hover {
+    border-color: rgba(248, 220, 168, 0.78);
+    background: rgba(72, 52, 32, 0.85);
+}
+
+.kitchen-memory-stage {
+    position: relative;
+    width: 100%;
+    max-width: min(680px, 94vw);
+    aspect-ratio: 480 / 320;
+    max-height: min(62vh, 520px);
+    border: 2px solid rgba(118, 88, 58, 0.65);
+    box-shadow:
+        0 0 0 1px rgba(20, 14, 8, 0.9),
+        0 18px 56px rgba(0, 0, 0, 0.55),
+        inset 0 0 56px rgba(220, 180, 110, 0.10);
+    background: #150f08;
+    overflow: hidden;
+}
+
+.kitchen-memory-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    object-position: center center;
+    image-rendering: pixelated;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .kitchen-memory-stage {
+        max-height: min(52vh, 420px);
+    }
+
+    .kitchen-memory-hud {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* bathroom memory vignette (apt one) */
+#bathroom-memory-overlay {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    inset: 0;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: min(24px, 4vw);
+    box-sizing: border-box;
+}
+
+#bathroom-memory-overlay.active {
+    display: flex;
+}
+
+.bathroom-memory-backdrop {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 100% 70% at 50% 38%, rgba(232, 200, 192, 0.32) 0%, transparent 60%),
+        radial-gradient(ellipse 110% 80% at 50% 100%, rgba(40, 24, 22, 0.65) 0%, transparent 70%),
+        linear-gradient(180deg, #181012 0%, #2a1c1c 50%, #0c0808 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+}
+
+.bathroom-memory-lift {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: min(720px, 96vw);
+    pointer-events: none;
+}
+
+.bathroom-memory-lift > * {
+    pointer-events: auto;
+}
+
+.bathroom-memory-hud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: min(680px, 94vw);
+}
+
+.bathroom-memory-tip {
+    flex: 1 1 220px;
+    margin: 0;
+    min-height: 2.6em;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', monospace;
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(240, 220, 220, 0.94);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
+}
+
+.bathroom-memory-close {
+    flex: 0 0 auto;
+    margin: 0;
+    background: rgba(56, 36, 36, 0.65);
+    border: 1px solid rgba(228, 176, 168, 0.45);
+    color: rgba(248, 224, 220, 0.92);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.bathroom-memory-close:hover {
+    border-color: rgba(248, 208, 200, 0.78);
+    background: rgba(80, 50, 50, 0.85);
+}
+
+.bathroom-memory-stage {
+    position: relative;
+    width: 100%;
+    max-width: min(680px, 94vw);
+    aspect-ratio: 480 / 320;
+    max-height: min(62vh, 520px);
+    border: 2px solid rgba(140, 92, 84, 0.65);
+    box-shadow:
+        0 0 0 1px rgba(20, 12, 10, 0.9),
+        0 18px 56px rgba(0, 0, 0, 0.55),
+        inset 0 0 56px rgba(232, 184, 176, 0.10);
+    background: #170c0c;
+    overflow: hidden;
+}
+
+.bathroom-memory-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    object-position: center center;
+    image-rendering: pixelated;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .bathroom-memory-stage {
+        max-height: min(52vh, 420px);
+    }
+
+    .bathroom-memory-hud {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* front closet memory vignette (apt one) */
+#frontcloset-memory-overlay {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    inset: 0;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: min(24px, 4vw);
+    box-sizing: border-box;
+}
+
+#frontcloset-memory-overlay.active {
+    display: flex;
+}
+
+.frontcloset-memory-backdrop {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 100% 70% at 50% 38%, rgba(180, 120, 64, 0.26) 0%, transparent 60%),
+        radial-gradient(ellipse 110% 80% at 50% 100%, rgba(28, 20, 14, 0.70) 0%, transparent 70%),
+        linear-gradient(180deg, #100c08 0%, #211810 50%, #080604 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+}
+
+.frontcloset-memory-lift {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: min(720px, 96vw);
+    pointer-events: none;
+}
+
+.frontcloset-memory-lift > * {
+    pointer-events: auto;
+}
+
+.frontcloset-memory-hud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: min(680px, 94vw);
+}
+
+.frontcloset-memory-tip {
+    flex: 1 1 220px;
+    margin: 0;
+    min-height: 2.6em;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', monospace;
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(228, 212, 180, 0.94);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
+}
+
+.frontcloset-memory-close {
+    flex: 0 0 auto;
+    margin: 0;
+    background: rgba(44, 32, 22, 0.65);
+    border: 1px solid rgba(208, 156, 108, 0.45);
+    color: rgba(244, 220, 188, 0.92);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.frontcloset-memory-close:hover {
+    border-color: rgba(244, 200, 152, 0.78);
+    background: rgba(68, 46, 30, 0.85);
+}
+
+.frontcloset-memory-stage {
+    position: relative;
+    width: 100%;
+    max-width: min(680px, 94vw);
+    aspect-ratio: 480 / 320;
+    max-height: min(62vh, 520px);
+    border: 2px solid rgba(110, 78, 52, 0.65);
+    box-shadow:
+        0 0 0 1px rgba(18, 12, 8, 0.9),
+        0 18px 56px rgba(0, 0, 0, 0.55),
+        inset 0 0 56px rgba(212, 148, 80, 0.10);
+    background: #110c08;
+    overflow: hidden;
+}
+
+.frontcloset-memory-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    object-position: center center;
+    image-rendering: pixelated;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .frontcloset-memory-stage {
+        max-height: min(52vh, 420px);
+    }
+
+    .frontcloset-memory-hud {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* hallway closet memory vignette (apt one) */
+#hallwaycloset-memory-overlay {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    inset: 0;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: min(24px, 4vw);
+    box-sizing: border-box;
+}
+
+#hallwaycloset-memory-overlay.active {
+    display: flex;
+}
+
+.hallwaycloset-memory-backdrop {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 100% 70% at 50% 40%, rgba(196, 132, 76, 0.30) 0%, transparent 60%),
+        radial-gradient(ellipse 110% 80% at 50% 100%, rgba(36, 24, 16, 0.65) 0%, transparent 70%),
+        linear-gradient(180deg, #14100a 0%, #261c14 50%, #0e0a06 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+}
+
+.hallwaycloset-memory-lift {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: min(720px, 96vw);
+    pointer-events: none;
+}
+
+.hallwaycloset-memory-lift > * {
+    pointer-events: auto;
+}
+
+.hallwaycloset-memory-hud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: min(680px, 94vw);
+}
+
+.hallwaycloset-memory-tip {
+    flex: 1 1 220px;
+    margin: 0;
+    min-height: 2.6em;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', monospace;
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(232, 216, 184, 0.94);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
+}
+
+.hallwaycloset-memory-close {
+    flex: 0 0 auto;
+    margin: 0;
+    background: rgba(48, 36, 24, 0.65);
+    border: 1px solid rgba(216, 168, 120, 0.45);
+    color: rgba(248, 224, 192, 0.92);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.hallwaycloset-memory-close:hover {
+    border-color: rgba(248, 208, 160, 0.78);
+    background: rgba(72, 50, 32, 0.85);
+}
+
+.hallwaycloset-memory-stage {
+    position: relative;
+    width: 100%;
+    max-width: min(680px, 94vw);
+    aspect-ratio: 480 / 320;
+    max-height: min(62vh, 520px);
+    border: 2px solid rgba(118, 84, 56, 0.65);
+    box-shadow:
+        0 0 0 1px rgba(20, 14, 8, 0.9),
+        0 18px 56px rgba(0, 0, 0, 0.55),
+        inset 0 0 56px rgba(220, 156, 88, 0.10);
+    background: #150f08;
+    overflow: hidden;
+}
+
+.hallwaycloset-memory-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    object-position: center center;
+    image-rendering: pixelated;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .hallwaycloset-memory-stage {
+        max-height: min(52vh, 420px);
+    }
+
+    .hallwaycloset-memory-hud {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* front hallway memory vignette (apt one) */
+#fronthallway-memory-overlay {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    inset: 0;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: min(24px, 4vw);
+    box-sizing: border-box;
+}
+
+#fronthallway-memory-overlay.active {
+    display: flex;
+}
+
+.fronthallway-memory-backdrop {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 90% 70% at 50% 90%, rgba(212, 144, 80, 0.32) 0%, transparent 60%),
+        radial-gradient(ellipse 110% 80% at 50% 30%, rgba(40, 30, 20, 0.55) 0%, transparent 65%),
+        linear-gradient(180deg, #14100a 0%, #261c14 50%, #100b08 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+}
+
+.fronthallway-memory-lift {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: min(720px, 96vw);
+    pointer-events: none;
+}
+
+.fronthallway-memory-lift > * {
+    pointer-events: auto;
+}
+
+.fronthallway-memory-hud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: min(680px, 94vw);
+}
+
+.fronthallway-memory-tip {
+    flex: 1 1 220px;
+    margin: 0;
+    min-height: 2.6em;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', monospace;
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(232, 216, 184, 0.94);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
+}
+
+.fronthallway-memory-close {
+    flex: 0 0 auto;
+    margin: 0;
+    background: rgba(48, 36, 24, 0.65);
+    border: 1px solid rgba(216, 168, 120, 0.45);
+    color: rgba(248, 224, 192, 0.92);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.fronthallway-memory-close:hover {
+    border-color: rgba(248, 208, 160, 0.78);
+    background: rgba(72, 50, 32, 0.85);
+}
+
+.fronthallway-memory-stage {
+    position: relative;
+    width: 100%;
+    max-width: min(680px, 94vw);
+    aspect-ratio: 480 / 320;
+    max-height: min(62vh, 520px);
+    border: 2px solid rgba(118, 84, 56, 0.65);
+    box-shadow:
+        0 0 0 1px rgba(20, 14, 8, 0.9),
+        0 18px 56px rgba(0, 0, 0, 0.55),
+        inset 0 0 56px rgba(220, 156, 88, 0.10);
+    background: #150f08;
+    overflow: hidden;
+}
+
+.fronthallway-memory-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    object-position: center center;
+    image-rendering: pixelated;
+    background: transparent;
+}
+
+/* peephole "look through" modal layered on top of the SVG stage */
+.fh-peephole-view {
+    position: absolute;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(ellipse 80% 80% at 50% 50%, rgba(8, 6, 4, 0.45) 0%, rgba(8, 6, 4, 0.95) 70%, #050402 100%);
+    z-index: 2;
+}
+
+.fh-peephole-view.active {
+    display: flex;
+}
+
+.fh-peephole-iris {
+    position: relative;
+    width: min(70%, 360px);
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #0a0608;
+    box-shadow:
+        0 0 0 6px rgba(168, 136, 72, 0.55),
+        0 0 0 8px rgba(20, 14, 8, 0.95),
+        inset 0 0 60px rgba(0, 0, 0, 0.85),
+        inset 0 0 120px rgba(168, 136, 72, 0.15);
+}
+
+.fh-peephole-scene {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18%;
+    background:
+        radial-gradient(circle at 50% 38%, rgba(244, 200, 120, 0.20) 0%, transparent 55%),
+        radial-gradient(circle at 50% 70%, rgba(80, 56, 32, 0.55) 0%, transparent 55%),
+        repeating-linear-gradient(0deg, rgba(20, 14, 8, 0.0) 0px, rgba(20, 14, 8, 0.0) 3px, rgba(20, 14, 8, 0.45) 3px, rgba(20, 14, 8, 0.45) 4px),
+        linear-gradient(180deg, #2a1c12 0%, #1a100a 100%);
+    color: rgba(248, 232, 200, 0.95);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', monospace;
+    font-size: 13px;
+    line-height: 1.55;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.7);
+}
+
+.fh-peephole-scene p {
+    margin: 0;
+}
+
+.fh-peephole-close {
+    position: absolute;
+    bottom: 12px;
+    right: 14px;
+    background: rgba(20, 14, 8, 0.85);
+    border: 1px solid rgba(216, 168, 120, 0.45);
+    color: rgba(248, 224, 192, 0.92);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 11px;
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.fh-peephole-close:hover {
+    border-color: rgba(248, 208, 160, 0.85);
+    background: rgba(48, 32, 20, 0.95);
+}
+
+@media (max-width: 600px) {
+    .fronthallway-memory-stage {
+        max-height: min(52vh, 420px);
+    }
+
+    .fronthallway-memory-hud {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+/* living room memory vignette (apt one) */
+#livingroom-memory-overlay {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    inset: 0;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: min(24px, 4vw);
+    box-sizing: border-box;
+}
+
+#livingroom-memory-overlay.active {
+    display: flex;
+}
+
+.livingroom-memory-backdrop {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 110% 70% at 50% 50%, rgba(196, 132, 76, 0.40) 0%, transparent 55%),
+        radial-gradient(ellipse 90% 60% at 50% 100%, rgba(80, 56, 32, 0.50) 0%, transparent 55%),
+        linear-gradient(180deg, #1a120a 0%, #2c2018 48%, #14100a 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+}
+
+.livingroom-memory-lift {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: min(720px, 96vw);
+    pointer-events: none;
+}
+
+.livingroom-memory-lift > * {
+    pointer-events: auto;
+}
+
+.livingroom-memory-hud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: min(680px, 94vw);
+}
+
+.livingroom-memory-tip {
+    flex: 1 1 220px;
+    margin: 0;
+    min-height: 2.6em;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', monospace;
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(232, 216, 184, 0.94);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
+}
+
+.livingroom-memory-close {
+    flex: 0 0 auto;
+    margin: 0;
+    background: rgba(48, 36, 24, 0.65);
+    border: 1px solid rgba(216, 168, 120, 0.45);
+    color: rgba(248, 224, 192, 0.92);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.livingroom-memory-close:hover {
+    border-color: rgba(248, 208, 160, 0.78);
+    background: rgba(72, 50, 32, 0.85);
+}
+
+.livingroom-memory-stage {
+    position: relative;
+    width: 100%;
+    max-width: min(680px, 94vw);
+    aspect-ratio: 480 / 320;
+    max-height: min(62vh, 520px);
+    border: 2px solid rgba(118, 84, 56, 0.65);
+    box-shadow:
+        0 0 0 1px rgba(20, 14, 8, 0.9),
+        0 18px 56px rgba(0, 0, 0, 0.55),
+        inset 0 0 56px rgba(220, 156, 88, 0.10);
+    background: #150f08;
+    overflow: hidden;
+}
+
+.livingroom-memory-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    object-position: center center;
+    image-rendering: pixelated;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .livingroom-memory-stage {
+        max-height: min(52vh, 420px);
+    }
+
+    .livingroom-memory-hud {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
 /* hallway closet */
 #closet-overlay {
     display: none;

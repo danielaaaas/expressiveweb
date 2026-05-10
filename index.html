@@ -197,8 +197,157 @@
                     id="bedroom-memory-svg"
                     class="bedroom-memory-embed"
                     type="image/svg+xml"
-                    data="elements/master-bedroom-memory.svg?v=24"
+                    data="elements/master-bedroom-memory.svg?v=34"
                     aria-label="master bedroom memory fragment"
+                ></object>
+            </div>
+        </div>
+     </div>
+
+     <!-- main hallway memory vignette (apartment one) -->
+     <div id="hallway-memory-overlay" aria-hidden="true">
+        <div class="hallway-memory-backdrop" aria-hidden="true"></div>
+        <div class="hallway-memory-lift">
+            <div class="hallway-memory-hud">
+                <p id="hallway-memory-tip" class="hallway-memory-tip" role="status" aria-live="polite">hover the frames for fragments. click one to step inside its scene.</p>
+                <button type="button" class="hallway-memory-close" id="hallway-memory-close" aria-label="close memory">step away</button>
+            </div>
+            <div class="hallway-memory-stage">
+                <object
+                    id="hallway-memory-svg"
+                    class="hallway-memory-embed"
+                    type="image/svg+xml"
+                    data="elements/main-hallway-memory.svg?v=1"
+                    aria-label="main hallway memory fragment"
+                ></object>
+            </div>
+        </div>
+     </div>
+
+     <!-- kitchen memory vignette (apartment one) -->
+     <div id="kitchen-memory-overlay" aria-hidden="true">
+        <div class="kitchen-memory-backdrop" aria-hidden="true"></div>
+        <div class="kitchen-memory-lift">
+            <div class="kitchen-memory-hud">
+                <p id="kitchen-memory-tip" class="kitchen-memory-tip" role="status" aria-live="polite">hover for fragments. click food, magnets, or notes to surface a memory.</p>
+                <button type="button" class="kitchen-memory-close" id="kitchen-memory-close" aria-label="close memory">close the fridge</button>
+            </div>
+            <div class="kitchen-memory-stage">
+                <object
+                    id="kitchen-memory-svg"
+                    class="kitchen-memory-embed"
+                    type="image/svg+xml"
+                    data="elements/kitchen-memory.svg?v=1"
+                    aria-label="kitchen memory fragment"
+                ></object>
+            </div>
+        </div>
+     </div>
+
+     <!-- bathroom memory vignette (apartment one) -->
+     <div id="bathroom-memory-overlay" aria-hidden="true">
+        <div class="bathroom-memory-backdrop" aria-hidden="true"></div>
+        <div class="bathroom-memory-lift">
+            <div class="bathroom-memory-hud">
+                <p id="bathroom-memory-tip" class="bathroom-memory-tip" role="status" aria-live="polite">hover for fragments. click foggy patches to wipe the mirror. click anything to remember.</p>
+                <button type="button" class="bathroom-memory-close" id="bathroom-memory-close" aria-label="close the bathroom">step out</button>
+            </div>
+            <div class="bathroom-memory-stage">
+                <object
+                    id="bathroom-memory-svg"
+                    class="bathroom-memory-embed"
+                    type="image/svg+xml"
+                    data="elements/bathroom-memory.svg?v=1"
+                    aria-label="bathroom memory fragment"
+                ></object>
+            </div>
+        </div>
+     </div>
+
+     <!-- front closet memory vignette (apartment one) -->
+     <div id="frontcloset-memory-overlay" aria-hidden="true">
+        <div class="frontcloset-memory-backdrop" aria-hidden="true"></div>
+        <div class="frontcloset-memory-lift">
+            <div class="frontcloset-memory-hud">
+                <p id="frontcloset-memory-tip" class="frontcloset-memory-tip" role="status" aria-live="polite">hover for fragments. click any object to remember. click the dark behind the shelves to hear something further in.</p>
+                <button type="button" class="frontcloset-memory-close" id="frontcloset-memory-close" aria-label="close the closet door">close the door</button>
+            </div>
+            <div class="frontcloset-memory-stage">
+                <object
+                    id="frontcloset-memory-svg"
+                    class="frontcloset-memory-embed"
+                    type="image/svg+xml"
+                    data="elements/front-closet-memory.svg?v=1"
+                    aria-label="front closet memory fragment"
+                ></object>
+            </div>
+        </div>
+     </div>
+
+     <!-- hallway closet memory vignette (apartment one) -->
+     <div id="hallwaycloset-memory-overlay" aria-hidden="true">
+        <div class="hallwaycloset-memory-backdrop" aria-hidden="true"></div>
+        <div class="hallwaycloset-memory-lift">
+            <div class="hallwaycloset-memory-hud">
+                <p id="hallwaycloset-memory-tip" class="hallwaycloset-memory-tip" role="status" aria-live="polite">hover for the smell of things. click clothes for what their pockets held. click boxes for keepsakes.</p>
+                <button type="button" class="hallwaycloset-memory-close" id="hallwaycloset-memory-close" aria-label="close the closet">close the door</button>
+            </div>
+            <div class="hallwaycloset-memory-stage">
+                <object
+                    id="hallwaycloset-memory-svg"
+                    class="hallwaycloset-memory-embed"
+                    type="image/svg+xml"
+                    data="elements/hallway-closet-memory.svg?v=1"
+                    aria-label="hallway closet memory fragment"
+                ></object>
+            </div>
+        </div>
+     </div>
+
+     <!-- front hallway memory vignette (apartment one) -->
+     <div id="fronthallway-memory-overlay" aria-hidden="true">
+        <div class="fronthallway-memory-backdrop" aria-hidden="true"></div>
+        <div class="fronthallway-memory-lift">
+            <div class="fronthallway-memory-hud">
+                <p id="fronthallway-memory-tip" class="fronthallway-memory-tip" role="status" aria-live="polite">hover for fragments. click the peephole to look outside. click anything else to remember.</p>
+                <button type="button" class="fronthallway-memory-close" id="fronthallway-memory-close" aria-label="step away from the door">step away</button>
+            </div>
+            <div class="fronthallway-memory-stage">
+                <object
+                    id="fronthallway-memory-svg"
+                    class="fronthallway-memory-embed"
+                    type="image/svg+xml"
+                    data="elements/front-hallway-memory.svg?v=1"
+                    aria-label="front hallway memory fragment"
+                ></object>
+                <!-- peephole modal: opens on click, shows the impossible building hallway outside -->
+                <div id="fh-peephole-view" class="fh-peephole-view" aria-hidden="true">
+                    <div class="fh-peephole-iris">
+                        <div class="fh-peephole-scene">
+                            <p id="fh-peephole-text">a hallway you don't recognize. the doors all wear different numbers than yours.</p>
+                        </div>
+                    </div>
+                    <button type="button" class="fh-peephole-close" id="fh-peephole-close" aria-label="step back from the peephole">step back</button>
+                </div>
+            </div>
+        </div>
+     </div>
+
+     <!-- living room memory vignette (apartment one) -->
+     <div id="livingroom-memory-overlay" aria-hidden="true">
+        <div class="livingroom-memory-backdrop" aria-hidden="true"></div>
+        <div class="livingroom-memory-lift">
+            <div class="livingroom-memory-hud">
+                <p id="livingroom-memory-tip" class="livingroom-memory-tip" role="status" aria-live="polite">hover for fragments. click the tv to change channels. click anything else to open a story.</p>
+                <button type="button" class="livingroom-memory-close" id="livingroom-memory-close" aria-label="close memory">turn it off</button>
+            </div>
+            <div class="livingroom-memory-stage">
+                <object
+                    id="livingroom-memory-svg"
+                    class="livingroom-memory-embed"
+                    type="image/svg+xml"
+                    data="elements/living-room-memory.svg?v=1"
+                    aria-label="living room memory fragment"
                 ></object>
             </div>
         </div>

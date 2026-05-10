@@ -1,0 +1,704 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" shape-rendering="crispEdges">
+  <title>Bathroom memory fragment</title>
+  <desc>Cropped vignette: looking at a Dominican-household bathroom mirror after a hot shower. The mirror dominates, fogged with steam. The counter below holds a toothbrush cup, Crece Pelo, hair oil, Agua de Violetas, mantequilla de cacao, Vick VapoRub, a soap dispenser, and a folded towel. The reflection lags slightly. Hidden text waits behind the steam.</desc>
+
+  <defs>
+    <linearGradient id="brTileWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8c8c0"/>
+      <stop offset="100%" stop-color="#c0a098"/>
+    </linearGradient>
+    <linearGradient id="brCeiling" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a2a22"/>
+      <stop offset="100%" stop-color="#6a4a40"/>
+    </linearGradient>
+    <linearGradient id="brCounter" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8d8c0"/>
+      <stop offset="100%" stop-color="#a89878"/>
+    </linearGradient>
+    <linearGradient id="brSinkBowl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a2820"/>
+      <stop offset="100%" stop-color="#7a6858"/>
+    </linearGradient>
+    <linearGradient id="brMirrorGlass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7a8898"/>
+      <stop offset="50%" stop-color="#586878"/>
+      <stop offset="100%" stop-color="#384858"/>
+    </linearGradient>
+    <linearGradient id="brMirrorAlt" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#48587a"/>
+      <stop offset="100%" stop-color="#1a2840"/>
+    </linearGradient>
+    <radialGradient id="brBulbGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff4c8" stop-opacity="0.85"/>
+      <stop offset="60%" stop-color="#f4c878" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#f4c878" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="brMirrorBulbReflect" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff4c8" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#f4c878" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="brSteam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f4ece0" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#e8d8c8" stop-opacity="0.78"/>
+    </linearGradient>
+    <linearGradient id="brMirrorFrame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c8c0b8"/>
+      <stop offset="100%" stop-color="#787068"/>
+    </linearGradient>
+    <linearGradient id="brSidesL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="brSidesR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="brSoftBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="0.8"/>
+    </filter>
+    <filter id="brSteamSoft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="0.4"/>
+    </filter>
+    <clipPath id="brMirrorClip">
+      <rect x="120" y="50" width="240" height="158"/>
+    </clipPath>
+  </defs>
+
+  <!-- ============= -->
+  <!-- TILE WALL background -->
+  <!-- ============= -->
+  <rect width="480" height="320" fill="url(#brTileWall)"/>
+
+  <!-- pastel tile grid (subtle) -->
+  <g id="br-tiles" pointer-events="none" opacity="0.32">
+    <!-- horizontal grout -->
+    <rect x="0" y="22" width="480" height="1" fill="#a87870"/>
+    <rect x="0" y="62" width="480" height="1" fill="#a87870"/>
+    <rect x="0" y="102" width="480" height="1" fill="#a87870"/>
+    <rect x="0" y="142" width="480" height="1" fill="#a87870"/>
+    <rect x="0" y="182" width="480" height="1" fill="#a87870"/>
+    <!-- vertical grout (offset like real subway tile in some rows) -->
+    <rect x="40" y="22" width="1" height="40" fill="#a87870"/>
+    <rect x="80" y="22" width="1" height="40" fill="#a87870"/>
+    <rect x="120" y="22" width="1" height="40" fill="#a87870"/>
+    <rect x="160" y="22" width="1" height="40" fill="#a87870"/>
+    <rect x="200" y="22" width="1" height="40" fill="#a87870"/>
+    <rect x="240" y="22" width="1" height="40" fill="#a87870"/>
+    <rect x="280" y="22" width="1" height="40" fill="#a87870"/>
+    <rect x="320" y="22" width="1" height="40" fill="#a87870"/>
+    <rect x="360" y="22" width="1" height="40" fill="#a87870"/>
+    <rect x="400" y="22" width="1" height="40" fill="#a87870"/>
+    <rect x="440" y="22" width="1" height="40" fill="#a87870"/>
+    <!-- offset second row -->
+    <rect x="20" y="62" width="1" height="40" fill="#a87870"/>
+    <rect x="60" y="62" width="1" height="40" fill="#a87870"/>
+    <rect x="100" y="62" width="1" height="40" fill="#a87870"/>
+    <rect x="380" y="62" width="1" height="40" fill="#a87870"/>
+    <rect x="420" y="62" width="1" height="40" fill="#a87870"/>
+    <rect x="460" y="62" width="1" height="40" fill="#a87870"/>
+    <!-- offset third row -->
+    <rect x="40" y="102" width="1" height="40" fill="#a87870"/>
+    <rect x="80" y="102" width="1" height="40" fill="#a87870"/>
+    <rect x="400" y="102" width="1" height="40" fill="#a87870"/>
+    <rect x="440" y="102" width="1" height="40" fill="#a87870"/>
+    <!-- fourth row aligned again -->
+    <rect x="20" y="142" width="1" height="40" fill="#a87870"/>
+    <rect x="60" y="142" width="1" height="40" fill="#a87870"/>
+    <rect x="100" y="142" width="1" height="40" fill="#a87870"/>
+    <rect x="380" y="142" width="1" height="40" fill="#a87870"/>
+    <rect x="420" y="142" width="1" height="40" fill="#a87870"/>
+    <rect x="460" y="142" width="1" height="40" fill="#a87870"/>
+    <!-- bottom band -->
+    <rect x="40" y="182" width="1" height="36" fill="#a87870"/>
+    <rect x="80" y="182" width="1" height="36" fill="#a87870"/>
+    <rect x="400" y="182" width="1" height="36" fill="#a87870"/>
+    <rect x="440" y="182" width="1" height="36" fill="#a87870"/>
+  </g>
+
+  <!-- one chipped tile (top-left area) -->
+  <g id="br-chipped-tile" pointer-events="none" opacity="0.55">
+    <rect x="58" y="105" width="6" height="4" fill="#9a7068"/>
+    <rect x="58" y="105" width="2" height="2" fill="#7a5048"/>
+    <rect x="62" y="107" width="2" height="2" fill="#7a5048"/>
+  </g>
+
+  <!-- faint water stains on the wall near the mirror -->
+  <g id="br-wall-stains" pointer-events="none" opacity="0.32">
+    <rect x="98" y="120" width="12" height="2" fill="#9a7068"/>
+    <rect x="100" y="122" width="8" height="2" fill="#9a7068" opacity="0.7"/>
+    <rect x="376" y="155" width="8" height="2" fill="#9a7068"/>
+    <rect x="378" y="157" width="6" height="2" fill="#9a7068" opacity="0.7"/>
+    <rect x="372" y="180" width="14" height="1" fill="#9a7068" opacity="0.6"/>
+  </g>
+
+  <!-- ============= -->
+  <!-- CEILING BAND + VANITY LIGHT FIXTURE -->
+  <!-- ============= -->
+  <rect x="0" y="0" width="480" height="20" fill="url(#brCeiling)"/>
+  <rect x="0" y="20" width="480" height="2" fill="#1a0e08" opacity="0.7"/>
+
+  <g id="br-fixture" pointer-events="none">
+    <!-- mounting plate -->
+    <rect x="200" y="14" width="80" height="6" fill="#787068"/>
+    <rect x="200" y="14" width="80" height="1" fill="#a8a098"/>
+    <rect x="200" y="19" width="80" height="1" fill="#3a3028"/>
+    <!-- light bar -->
+    <rect x="208" y="20" width="64" height="6" fill="#c8c0b8"/>
+    <rect x="208" y="20" width="64" height="1" fill="#e8e0d8"/>
+    <rect x="208" y="25" width="64" height="1" fill="#787068"/>
+    <!-- 3 bulbs underneath the bar -->
+    <rect x="218" y="26" width="8" height="6" fill="#fff4c8">
+      <animate attributeName="fill" values="#fff4c8;#f4d898;#fff4c8;#f0c878;#fff4c8" dur="9s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="236" y="26" width="8" height="6" fill="#fff4c8">
+      <animate attributeName="fill" values="#fff4c8;#f4d898;#fff4c8" dur="7.4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="254" y="26" width="8" height="6" fill="#fff4c8">
+      <animate attributeName="fill" values="#fff4c8;#f0c878;#fff4c8;#f4d898;#fff4c8" dur="11s" repeatCount="indefinite"/>
+    </rect>
+    <!-- bulb glows below -->
+    <rect x="210" y="26" width="24" height="40" fill="url(#brBulbGlow)" opacity="0.85">
+      <animate attributeName="opacity" values="0.78;0.92;0.82;0.88;0.78" dur="9s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="228" y="26" width="24" height="40" fill="url(#brBulbGlow)" opacity="0.78"/>
+    <rect x="246" y="26" width="24" height="40" fill="url(#brBulbGlow)" opacity="0.85">
+      <animate attributeName="opacity" values="0.78;0.92;0.78" dur="11s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ============= -->
+  <!-- MEDICINE CABINET / MIRROR -->
+  <!-- ============= -->
+  <!-- outer chrome frame -->
+  <g id="br-mirror-frame" pointer-events="none">
+    <rect x="116" y="46" width="248" height="166" fill="url(#brMirrorFrame)"/>
+    <rect x="116" y="46" width="248" height="2" fill="#e0d8d0"/>
+    <rect x="116" y="210" width="248" height="2" fill="#3a3028"/>
+    <rect x="116" y="46" width="2" height="166" fill="#e0d8d0"/>
+    <rect x="362" y="46" width="2" height="166" fill="#3a3028"/>
+    <!-- inner bezel -->
+    <rect x="118" y="48" width="244" height="2" fill="#3a3028" opacity="0.7"/>
+    <rect x="118" y="206" width="244" height="2" fill="#a8a098"/>
+    <!-- small hinge dots on the right (medicine cabinet door) -->
+    <rect x="358" y="68" width="4" height="6" fill="#3a3028"/>
+    <rect x="358" y="186" width="4" height="6" fill="#3a3028"/>
+    <!-- small handle on the left -->
+    <rect x="118" y="124" width="4" height="10" fill="#3a3028"/>
+    <rect x="118" y="124" width="4" height="2" fill="#a8a098"/>
+  </g>
+
+  <!-- mirror glass + reflected room (inside clip so reflection stays inside the frame) -->
+  <g id="br-mirror-inside" clip-path="url(#brMirrorClip)">
+    <!-- base reflected room -->
+    <rect x="120" y="50" width="240" height="158" fill="url(#brMirrorGlass)"/>
+
+    <!-- alternate-apartment layer: a different room briefly bleeds through -->
+    <g id="br-alt-reflection" opacity="0">
+      <rect x="120" y="50" width="240" height="158" fill="url(#brMirrorAlt)"/>
+      <!-- alt: shower curtain instead of doorway -->
+      <rect x="160" y="80" width="100" height="120" fill="#787890" opacity="0.85"/>
+      <rect x="160" y="80" width="100" height="2" fill="#888aa0" opacity="0.85"/>
+      <!-- curtain folds -->
+      <rect x="170" y="82" width="2" height="118" fill="#585870" opacity="0.7"/>
+      <rect x="184" y="82" width="2" height="118" fill="#585870" opacity="0.7"/>
+      <rect x="198" y="82" width="2" height="118" fill="#585870" opacity="0.7"/>
+      <rect x="212" y="82" width="2" height="118" fill="#585870" opacity="0.7"/>
+      <rect x="226" y="82" width="2" height="118" fill="#585870" opacity="0.7"/>
+      <rect x="240" y="82" width="2" height="118" fill="#585870" opacity="0.7"/>
+      <rect x="254" y="82" width="2" height="118" fill="#585870" opacity="0.7"/>
+      <!-- curtain rod -->
+      <rect x="158" y="78" width="104" height="3" fill="#888080" opacity="0.85"/>
+      <!-- alt ceiling tint -->
+      <rect x="120" y="50" width="240" height="14" fill="#283848" opacity="0.65"/>
+      <!-- alt floor tile suggestion -->
+      <rect x="120" y="190" width="240" height="18" fill="#1a2838" opacity="0.7"/>
+      <animate attributeName="opacity" values="0;0;0;0.32;0.42;0.18;0;0;0" dur="22s" repeatCount="indefinite"/>
+    </g>
+
+    <!-- reflected ceiling band (top of the room behind viewer) -->
+    <rect x="120" y="50" width="240" height="14" fill="#3a2a22" opacity="0.6"/>
+    <rect x="120" y="64" width="240" height="1" fill="#1a0e08" opacity="0.55"/>
+
+    <!-- reflected ceiling light blob (matches the vanity bar in front) -->
+    <ellipse cx="240" cy="58" rx="36" ry="8" fill="url(#brMirrorBulbReflect)" opacity="0.78">
+      <animate attributeName="opacity" values="0.70;0.85;0.74;0.82;0.70" dur="9s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- doorway hint behind the viewer (dark vertical rectangle) -->
+    <rect x="276" y="76" width="36" height="118" fill="#2a1818" opacity="0.62"/>
+    <rect x="276" y="76" width="36" height="2" fill="#0a0604" opacity="0.85"/>
+    <rect x="276" y="76" width="2" height="118" fill="#0a0604" opacity="0.85"/>
+    <rect x="310" y="76" width="2" height="118" fill="#3a2418" opacity="0.55"/>
+    <!-- a hint of warm hallway light spilling in from the doorway -->
+    <rect x="278" y="80" width="32" height="14" fill="#a87838" opacity="0.32"/>
+
+    <!-- towel hook bar reflection on the opposite wall -->
+    <rect x="156" y="82" width="36" height="2" fill="#787068" opacity="0.5"/>
+    <rect x="156" y="82" width="2" height="6" fill="#787068" opacity="0.5"/>
+    <rect x="190" y="82" width="2" height="6" fill="#787068" opacity="0.5"/>
+    <!-- towel hanging on it -->
+    <rect x="162" y="86" width="22" height="32" fill="#a8788a" opacity="0.4"/>
+    <rect x="162" y="86" width="22" height="2" fill="#c898a8" opacity="0.4"/>
+    <rect x="162" y="116" width="22" height="2" fill="#785868" opacity="0.5"/>
+
+    <!-- reflected hidden text (lives BEHIND the steam, only seen when wiped) -->
+    <g id="br-hidden-texts" pointer-events="none">
+      <!-- top-left wipe text: "te quiero" -->
+      <text id="br-text-1" x="158" y="98" fill="#3a4858" opacity="0.85"
+            font-family="'Pixel Operator','VT323',monospace" font-size="14" font-style="italic"
+            transform="rotate(-3 158 98)">te quiero</text>
+      <!-- center wipe text: a phone number with one digit faded -->
+      <text id="br-text-2" x="206" y="156" fill="#3a4858" opacity="0.85"
+            font-family="'Pixel Operator','VT323',monospace" font-size="11" letter-spacing="1.5">809-555-0_42</text>
+      <!-- bottom-right wipe text: "vuelve" -->
+      <text id="br-text-3" x="278" y="186" fill="#3a4858" opacity="0.85"
+            font-family="'Pixel Operator','VT323',monospace" font-size="13" font-style="italic"
+            transform="rotate(2 278 186)">vuelve</text>
+    </g>
+
+    <!-- faint silhouette of the viewer (lower portion) - drifts independently of any input -->
+    <g id="br-self-silhouette" opacity="0.42">
+      <!-- shoulders -->
+      <rect x="180" y="170" width="128" height="40" fill="#1a1820"/>
+      <rect x="180" y="170" width="128" height="2" fill="#0a0810" opacity="0.7"/>
+      <!-- head -->
+      <rect x="216" y="138" width="56" height="34" fill="#1a1820"/>
+      <rect x="216" y="138" width="56" height="2" fill="#0a0810" opacity="0.7"/>
+      <!-- neck -->
+      <rect x="232" y="170" width="24" height="6" fill="#1a1820"/>
+      <!-- subtle drift left/right; lags any imagined motion -->
+      <animateTransform attributeName="transform" type="translate"
+                        values="0 0; 3 0; 0 0; -2 1; 0 0" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.42;0.36;0.45;0.40;0.42" dur="13s" repeatCount="indefinite"/>
+    </g>
+
+    <!-- mirror surface micro-glares (always present even under steam, very subtle) -->
+    <rect x="138" y="64" width="48" height="2" fill="#f0e8e0" opacity="0.18" pointer-events="none"/>
+    <rect x="138" y="68" width="28" height="1" fill="#f0e8e0" opacity="0.12" pointer-events="none"/>
+    <rect x="320" y="180" width="32" height="2" fill="#f0e8e0" opacity="0.16" pointer-events="none"/>
+    <rect x="324" y="184" width="20" height="1" fill="#f0e8e0" opacity="0.10" pointer-events="none"/>
+
+    <!-- ============= -->
+    <!-- STEAM / CONDENSATION layer (over the reflection) -->
+    <!-- ============= -->
+    <g id="br-steam">
+      <!-- base humid blanket -->
+      <rect id="br-steam-base" x="120" y="50" width="240" height="158" fill="url(#brSteam)" opacity="0.78">
+        <animate attributeName="opacity" values="0.74;0.82;0.76;0.80;0.74" dur="14s" repeatCount="indefinite"/>
+      </rect>
+
+      <!-- drifting cloud bands -->
+      <rect x="120" y="60" width="240" height="22" fill="#f4ece0" opacity="0.4">
+        <animate attributeName="x" values="120;128;120" dur="22s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="120" y="120" width="240" height="18" fill="#f4ece0" opacity="0.32">
+        <animate attributeName="x" values="120;112;120" dur="26s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="120" y="170" width="240" height="20" fill="#f4ece0" opacity="0.36">
+        <animate attributeName="x" values="120;130;120" dur="24s" repeatCount="indefinite"/>
+      </rect>
+
+      <!-- a few condensation droplets sliding down -->
+      <rect x="146" y="60" width="2" height="3" fill="#f0e8e0" opacity="0.85">
+        <animate attributeName="y" values="60;180;60" dur="14s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.85;0.85;0" dur="14s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="208" y="80" width="2" height="3" fill="#f0e8e0" opacity="0.85">
+        <animate attributeName="y" values="80;200;80" dur="18s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.78;0.78;0" dur="18s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="284" y="70" width="2" height="3" fill="#f0e8e0" opacity="0.85">
+        <animate attributeName="y" values="70;190;70" dur="16s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.85;0.85;0" dur="16s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="332" y="90" width="2" height="3" fill="#f0e8e0" opacity="0.85">
+        <animate attributeName="y" values="90;200;90" dur="20s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.78;0.78;0" dur="20s" repeatCount="indefinite"/>
+      </rect>
+
+      <!-- the WIPE patches: opaque pieces of steam that fade out when interacted with.
+           Each one sits on top of one of the hidden text fragments. JS toggles their
+           opacity. The default is fully steamed (opacity 1). -->
+      <g id="br-steam-wipes">
+        <rect id="br-wipe-1" x="146" y="78" width="100" height="32" fill="url(#brSteam)" opacity="1"/>
+        <rect id="br-wipe-2" x="190" y="138" width="116" height="28" fill="url(#brSteam)" opacity="1"/>
+        <rect id="br-wipe-3" x="262" y="168" width="92" height="32" fill="url(#brSteam)" opacity="1"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ============= -->
+  <!-- BACKSPLASH BAND below the mirror -->
+  <!-- ============= -->
+  <rect x="0" y="212" width="480" height="8" fill="#d0a8a0"/>
+  <rect x="0" y="212" width="480" height="1" fill="#e8c8c0"/>
+  <rect x="0" y="219" width="480" height="1" fill="#9a7068"/>
+
+  <!-- ============= -->
+  <!-- COUNTER + SINK + FAUCET -->
+  <!-- ============= -->
+  <g id="br-counter">
+    <!-- counter back lip -->
+    <rect x="0" y="220" width="480" height="4" fill="#d8c8b0"/>
+    <rect x="0" y="220" width="480" height="1" fill="#f0e0c8"/>
+    <!-- counter top surface -->
+    <rect x="0" y="224" width="480" height="38" fill="url(#brCounter)"/>
+    <!-- counter front edge highlight -->
+    <rect x="0" y="258" width="480" height="2" fill="#c8b898"/>
+    <rect x="0" y="260" width="480" height="2" fill="#3a2818" opacity="0.85"/>
+    <rect x="0" y="262" width="480" height="2" fill="#5a4838"/>
+    <!-- subtle marble veining -->
+    <g id="br-counter-veins" pointer-events="none" opacity="0.32">
+      <rect x="20" y="232" width="40" height="1" fill="#a89878"/>
+      <rect x="60" y="240" width="60" height="1" fill="#a89878"/>
+      <rect x="170" y="244" width="40" height="1" fill="#a89878"/>
+      <rect x="320" y="234" width="50" height="1" fill="#a89878"/>
+      <rect x="380" y="246" width="60" height="1" fill="#a89878"/>
+    </g>
+    <!-- water droplets / faint ring near the sink -->
+    <g id="br-counter-stains" pointer-events="none" opacity="0.55">
+      <rect x="160" y="240" width="6" height="2" fill="#b8a888"/>
+      <rect x="158" y="242" width="2" height="2" fill="#b8a888"/>
+      <rect x="166" y="242" width="2" height="2" fill="#b8a888"/>
+      <rect x="160" y="244" width="6" height="1" fill="#b8a888"/>
+      <rect x="298" y="248" width="4" height="2" fill="#b8a888"/>
+      <rect x="302" y="252" width="2" height="1" fill="#b8a888"/>
+      <rect x="378" y="244" width="3" height="3" fill="#b8a888" opacity="0.75"/>
+    </g>
+  </g>
+
+  <!-- sink basin (back arc visible only) -->
+  <g id="br-sink" pointer-events="none">
+    <ellipse cx="240" cy="262" rx="58" ry="20" fill="url(#brSinkBowl)"/>
+    <!-- rim -->
+    <ellipse cx="240" cy="260" rx="60" ry="20" fill="none" stroke="#9a8878" stroke-width="2"/>
+    <!-- inner shadow -->
+    <ellipse cx="240" cy="266" rx="48" ry="14" fill="#1a0e08" opacity="0.6"/>
+    <!-- a single water drop on the inside of the bowl -->
+    <rect x="232" y="252" width="2" height="2" fill="#a8c8d0" opacity="0.85">
+      <animate attributeName="y" values="252;264;252" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.85;0.85;0" dur="9s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- faucet (rises from back of the counter, in front of the mirror's bottom edge) -->
+  <g id="br-faucet" pointer-events="none">
+    <!-- base plate -->
+    <rect x="226" y="218" width="28" height="6" fill="#888090"/>
+    <rect x="226" y="218" width="28" height="2" fill="#a8a0b0"/>
+    <rect x="226" y="222" width="28" height="2" fill="#585060"/>
+    <!-- vertical stem -->
+    <rect x="234" y="206" width="12" height="14" fill="#a8a0b0"/>
+    <rect x="234" y="206" width="2" height="14" fill="#c8c0d0"/>
+    <rect x="244" y="206" width="2" height="14" fill="#585060"/>
+    <!-- spout neck (curving forward) -->
+    <rect x="234" y="200" width="12" height="6" fill="#a8a0b0"/>
+    <rect x="234" y="200" width="12" height="2" fill="#c8c0d0"/>
+    <!-- spout arm -->
+    <rect x="234" y="204" width="22" height="4" fill="#a8a0b0"/>
+    <rect x="234" y="204" width="22" height="1" fill="#c8c0d0"/>
+    <rect x="234" y="207" width="22" height="1" fill="#585060"/>
+    <!-- spout tip -->
+    <rect x="252" y="204" width="6" height="8" fill="#888090"/>
+    <rect x="252" y="204" width="6" height="2" fill="#a8a0b0"/>
+    <rect x="252" y="210" width="6" height="2" fill="#3a3038"/>
+    <!-- single hot/cold lever knob -->
+    <rect x="246" y="194" width="6" height="6" fill="#888090"/>
+    <rect x="246" y="194" width="6" height="2" fill="#c8c0d0"/>
+    <rect x="246" y="198" width="6" height="2" fill="#3a3038"/>
+    <!-- a slow drip from the spout tip -->
+    <rect x="254" y="214" width="2" height="3" fill="#a8c8d0" opacity="0.85">
+      <animate attributeName="y" values="214;238;214" dur="6.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.85;0.85;0" dur="6.4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ============= -->
+  <!-- LEFT CLUSTER OF PRODUCTS (bottoms ~y=258) -->
+  <!-- ============= -->
+
+  <!-- toothbrush cup (ceramic, mint pastel) -->
+  <g id="br-toothbrush-cup" pointer-events="none">
+    <!-- cup body -->
+    <rect x="24" y="216" width="34" height="42" fill="#a8c8b0"/>
+    <rect x="24" y="216" width="34" height="2" fill="#c8e0c8"/>
+    <rect x="24" y="256" width="34" height="2" fill="#688868"/>
+    <rect x="24" y="216" width="2" height="42" fill="#688868"/>
+    <rect x="56" y="216" width="2" height="42" fill="#688868"/>
+    <!-- subtle ceramic shine -->
+    <rect x="28" y="222" width="2" height="20" fill="#d0e8d0" opacity="0.7"/>
+    <!-- tiny painted flower -->
+    <rect x="42" y="234" width="2" height="2" fill="#c87898"/>
+    <rect x="40" y="236" width="2" height="2" fill="#c87898"/>
+    <rect x="44" y="236" width="2" height="2" fill="#c87898"/>
+    <rect x="42" y="238" width="2" height="2" fill="#f4d878"/>
+    <!-- toothbrush 1 (pink) -->
+    <rect x="28" y="200" width="3" height="18" fill="#d8a8b8"/>
+    <rect x="28" y="200" width="3" height="2" fill="#f0c8d8"/>
+    <rect x="27" y="198" width="5" height="2" fill="#f0e8e0"/>
+    <!-- toothbrush 2 (blue) -->
+    <rect x="36" y="196" width="3" height="22" fill="#5878a0"/>
+    <rect x="36" y="196" width="3" height="2" fill="#7898c0"/>
+    <rect x="35" y="194" width="5" height="2" fill="#f0e8e0"/>
+    <!-- toothbrush 3 (yellow) -->
+    <rect x="44" y="202" width="3" height="16" fill="#c8a848"/>
+    <rect x="44" y="202" width="3" height="2" fill="#e0c068"/>
+    <rect x="43" y="200" width="5" height="2" fill="#f0e8e0"/>
+    <!-- pink afro pick poking out -->
+    <rect x="51" y="208" width="3" height="10" fill="#c87898"/>
+    <rect x="51" y="208" width="3" height="2" fill="#e098b8"/>
+    <rect x="49" y="200" width="7" height="2" fill="#c87898"/>
+    <!-- pick teeth -->
+    <rect x="49" y="202" width="1" height="6" fill="#c87898"/>
+    <rect x="51" y="202" width="1" height="6" fill="#c87898"/>
+    <rect x="53" y="202" width="1" height="6" fill="#c87898"/>
+    <rect x="55" y="202" width="1" height="6" fill="#c87898"/>
+  </g>
+
+  <!-- Vick VapoRub jar (small blue, iconic) -->
+  <g id="br-vick" pointer-events="none">
+    <!-- lid -->
+    <rect x="64" y="234" width="28" height="6" fill="#2a4878"/>
+    <rect x="64" y="234" width="28" height="2" fill="#4a6898"/>
+    <rect x="64" y="238" width="28" height="2" fill="#1a2858"/>
+    <!-- jar body -->
+    <rect x="64" y="240" width="28" height="18" fill="#4878a0"/>
+    <rect x="64" y="240" width="28" height="2" fill="#6898c0"/>
+    <rect x="64" y="256" width="28" height="2" fill="#284868"/>
+    <rect x="64" y="240" width="2" height="18" fill="#284868"/>
+    <rect x="90" y="240" width="2" height="18" fill="#284868"/>
+    <!-- white label band -->
+    <rect x="66" y="244" width="24" height="10" fill="#f0e8e0"/>
+    <rect x="66" y="244" width="24" height="1" fill="#fff8f0"/>
+    <rect x="66" y="253" width="24" height="1" fill="#a89878"/>
+    <text x="78" y="251" text-anchor="middle" fill="#284868"
+          font-family="'Pixel Operator','VT323',monospace" font-size="6" font-weight="bold" letter-spacing="0.5">VICK</text>
+    <!-- shine on jar -->
+    <rect x="68" y="242" width="2" height="14" fill="#88a8c8" opacity="0.55"/>
+  </g>
+
+  <!-- Crece Pelo jar (green/white iconic Dominican hair growth treatment) -->
+  <g id="br-crece-pelo" pointer-events="none">
+    <!-- lid -->
+    <rect x="98" y="218" width="42" height="8" fill="#2a4828"/>
+    <rect x="98" y="218" width="42" height="2" fill="#4a6848"/>
+    <rect x="98" y="224" width="42" height="2" fill="#1a2818"/>
+    <!-- jar body (squat tub) -->
+    <rect x="98" y="226" width="42" height="32" fill="#4a8848"/>
+    <rect x="98" y="226" width="42" height="2" fill="#6aa868"/>
+    <rect x="98" y="256" width="42" height="2" fill="#2a5828"/>
+    <rect x="98" y="226" width="2" height="32" fill="#2a5828"/>
+    <rect x="138" y="226" width="2" height="32" fill="#2a5828"/>
+    <!-- big white label -->
+    <rect x="100" y="232" width="38" height="22" fill="#f0e8e0"/>
+    <rect x="100" y="232" width="38" height="1" fill="#fff8f0"/>
+    <rect x="100" y="253" width="38" height="1" fill="#a89878"/>
+    <!-- label brand stripe -->
+    <rect x="100" y="234" width="38" height="3" fill="#4a8848"/>
+    <text x="119" y="244" text-anchor="middle" fill="#2a4828"
+          font-family="'Pixel Operator','VT323',monospace" font-size="6" font-weight="bold" letter-spacing="0.4">CRECE</text>
+    <text x="119" y="251" text-anchor="middle" fill="#2a4828"
+          font-family="'Pixel Operator','VT323',monospace" font-size="6" font-weight="bold" letter-spacing="0.4">PELO</text>
+    <!-- tiny accent dot -->
+    <rect x="134" y="248" width="3" height="3" fill="#a83828"/>
+    <!-- shine on jar -->
+    <rect x="102" y="228" width="2" height="28" fill="#6aa868" opacity="0.55"/>
+  </g>
+
+  <!-- hair oil bottle (amber glass) -->
+  <g id="br-hair-oil" pointer-events="none">
+    <!-- dropper cap -->
+    <rect x="152" y="206" width="20" height="6" fill="#1a0e08"/>
+    <rect x="152" y="206" width="20" height="2" fill="#3a2418"/>
+    <rect x="152" y="210" width="20" height="2" fill="#000000"/>
+    <!-- dropper bulb -->
+    <rect x="158" y="200" width="8" height="6" fill="#c87878"/>
+    <rect x="158" y="200" width="8" height="2" fill="#e09898"/>
+    <!-- bottle neck -->
+    <rect x="156" y="212" width="12" height="4" fill="#a87838" opacity="0.85"/>
+    <!-- bottle body (amber glass) -->
+    <rect x="148" y="216" width="28" height="42" fill="#a87838" opacity="0.85"/>
+    <rect x="148" y="216" width="28" height="2" fill="#c89858" opacity="0.85"/>
+    <rect x="148" y="256" width="28" height="2" fill="#785828" opacity="0.95"/>
+    <rect x="148" y="216" width="2" height="42" fill="#785828" opacity="0.85"/>
+    <rect x="174" y="216" width="2" height="42" fill="#785828" opacity="0.85"/>
+    <!-- dark oil level inside -->
+    <rect x="150" y="226" width="24" height="30" fill="#5a3818" opacity="0.85"/>
+    <rect x="150" y="226" width="24" height="2" fill="#7a5028" opacity="0.55"/>
+    <!-- cream label -->
+    <rect x="150" y="232" width="24" height="18" fill="#f0e0c8"/>
+    <rect x="150" y="232" width="24" height="1" fill="#fff8e0"/>
+    <rect x="150" y="249" width="24" height="1" fill="#a87838"/>
+    <text x="162" y="240" text-anchor="middle" fill="#5a3818"
+          font-family="'Pixel Operator','VT323',monospace" font-size="5" font-weight="bold" letter-spacing="0.4">ACEITE</text>
+    <text x="162" y="246" text-anchor="middle" fill="#5a3818"
+          font-family="'Pixel Operator','VT323',monospace" font-size="5" letter-spacing="0.4">de coco</text>
+    <!-- shine on bottle -->
+    <rect x="152" y="218" width="2" height="36" fill="#e0c098" opacity="0.55"/>
+  </g>
+
+  <!-- ============= -->
+  <!-- RIGHT CLUSTER OF PRODUCTS -->
+  <!-- ============= -->
+
+  <!-- Agua de Violetas bottle (purple, iconic, slim and tall) -->
+  <g id="br-agua-violetas" pointer-events="none">
+    <!-- white cap -->
+    <rect x="306" y="204" width="24" height="6" fill="#f0e8e0"/>
+    <rect x="306" y="204" width="24" height="2" fill="#fff8f0"/>
+    <rect x="306" y="208" width="24" height="2" fill="#a89878"/>
+    <!-- bottle neck -->
+    <rect x="312" y="210" width="12" height="6" fill="#7858a8" opacity="0.92"/>
+    <!-- bottle shoulders -->
+    <rect x="308" y="216" width="20" height="4" fill="#7858a8"/>
+    <rect x="306" y="218" width="2" height="2" fill="#7858a8"/>
+    <rect x="328" y="218" width="2" height="2" fill="#7858a8"/>
+    <!-- bottle body (violet) -->
+    <rect x="306" y="220" width="24" height="38" fill="#7858a8"/>
+    <rect x="306" y="220" width="24" height="2" fill="#9878c8"/>
+    <rect x="306" y="256" width="24" height="2" fill="#583878"/>
+    <rect x="306" y="220" width="2" height="38" fill="#583878"/>
+    <rect x="328" y="220" width="2" height="38" fill="#583878"/>
+    <!-- white oval label -->
+    <rect x="308" y="226" width="20" height="26" fill="#f0e8e0"/>
+    <rect x="308" y="226" width="20" height="1" fill="#fff8f0"/>
+    <rect x="308" y="251" width="20" height="1" fill="#a89898"/>
+    <!-- label content -->
+    <text x="318" y="234" text-anchor="middle" fill="#583878"
+          font-family="'Pixel Operator','VT323',monospace" font-size="5" font-weight="bold" letter-spacing="0.3">AGUA de</text>
+    <text x="318" y="240" text-anchor="middle" fill="#583878"
+          font-family="'Pixel Operator','VT323',monospace" font-size="5" font-weight="bold" letter-spacing="0.3">VIOLETAS</text>
+    <!-- tiny violet flower icon -->
+    <rect x="316" y="244" width="2" height="2" fill="#7858a8"/>
+    <rect x="318" y="244" width="2" height="2" fill="#7858a8"/>
+    <rect x="317" y="246" width="2" height="2" fill="#f4d878"/>
+    <rect x="316" y="248" width="2" height="2" fill="#7858a8"/>
+    <rect x="318" y="248" width="2" height="2" fill="#7858a8"/>
+    <!-- shine -->
+    <rect x="310" y="222" width="2" height="32" fill="#9878c8" opacity="0.6"/>
+  </g>
+
+  <!-- Mantequilla de cacao (small short stick/tube) -->
+  <g id="br-mantequilla" pointer-events="none">
+    <!-- cap -->
+    <rect x="338" y="232" width="20" height="6" fill="#3a1a08"/>
+    <rect x="338" y="232" width="20" height="2" fill="#5a3818"/>
+    <rect x="338" y="236" width="20" height="2" fill="#1a0a04"/>
+    <!-- body -->
+    <rect x="338" y="238" width="20" height="20" fill="#c89868"/>
+    <rect x="338" y="238" width="20" height="2" fill="#e0b888"/>
+    <rect x="338" y="256" width="20" height="2" fill="#886838"/>
+    <rect x="338" y="238" width="2" height="20" fill="#886838"/>
+    <rect x="356" y="238" width="2" height="20" fill="#886838"/>
+    <!-- label band -->
+    <rect x="338" y="244" width="20" height="10" fill="#f0e0c8"/>
+    <rect x="338" y="244" width="20" height="1" fill="#fff8e0"/>
+    <rect x="338" y="253" width="20" height="1" fill="#a87838"/>
+    <text x="348" y="250" text-anchor="middle" fill="#3a1a08"
+          font-family="'Pixel Operator','VT323',monospace" font-size="4" font-weight="bold" letter-spacing="0.3">CACAO</text>
+    <!-- shine -->
+    <rect x="340" y="240" width="2" height="14" fill="#e0b888" opacity="0.55"/>
+  </g>
+
+  <!-- soap dispenser pump (peach pastel) -->
+  <g id="br-soap" pointer-events="none">
+    <!-- pump head -->
+    <rect x="378" y="210" width="14" height="4" fill="#3a3038"/>
+    <rect x="378" y="210" width="14" height="1" fill="#5a5058"/>
+    <rect x="378" y="213" width="14" height="1" fill="#1a1018"/>
+    <!-- pump nozzle -->
+    <rect x="378" y="214" width="22" height="3" fill="#3a3038"/>
+    <rect x="378" y="214" width="22" height="1" fill="#5a5058"/>
+    <!-- pump stem -->
+    <rect x="382" y="217" width="6" height="6" fill="#a8a0a8"/>
+    <!-- bottle shoulder -->
+    <rect x="372" y="222" width="26" height="4" fill="#e0c0a8"/>
+    <rect x="370" y="224" width="2" height="2" fill="#e0c0a8"/>
+    <rect x="398" y="224" width="2" height="2" fill="#e0c0a8"/>
+    <!-- bottle body -->
+    <rect x="368" y="226" width="32" height="32" fill="#e0c0a8"/>
+    <rect x="368" y="226" width="32" height="2" fill="#f0d8c0"/>
+    <rect x="368" y="256" width="32" height="2" fill="#a88878"/>
+    <rect x="368" y="226" width="2" height="32" fill="#a88878"/>
+    <rect x="398" y="226" width="2" height="32" fill="#a88878"/>
+    <!-- soap level inside (visible through translucent) -->
+    <rect x="370" y="240" width="28" height="16" fill="#f0d8c0" opacity="0.85"/>
+    <!-- subtle frosted label -->
+    <rect x="372" y="234" width="24" height="2" fill="#f0e0d0" opacity="0.7"/>
+    <rect x="372" y="244" width="24" height="6" fill="#f0e0d0" opacity="0.5"/>
+    <!-- shine -->
+    <rect x="372" y="228" width="2" height="26" fill="#f0d8c0" opacity="0.65"/>
+  </g>
+
+  <!-- folded pink towel -->
+  <g id="br-towel" pointer-events="none">
+    <!-- bottom layer -->
+    <rect x="408" y="246" width="56" height="12" fill="#c88898"/>
+    <rect x="408" y="246" width="56" height="1" fill="#e0a8b8"/>
+    <rect x="408" y="257" width="56" height="1" fill="#986878" opacity="0.85"/>
+    <rect x="408" y="252" width="56" height="1" fill="#a87888" opacity="0.7"/>
+    <!-- top fold -->
+    <rect x="412" y="234" width="48" height="12" fill="#d8a8b8"/>
+    <rect x="412" y="234" width="48" height="1" fill="#f0c8d8"/>
+    <rect x="412" y="245" width="48" height="1" fill="#a87888"/>
+    <rect x="412" y="240" width="48" height="1" fill="#c89898" opacity="0.7"/>
+    <!-- horizontal stripe accent -->
+    <rect x="412" y="237" width="48" height="1" fill="#f0e8e0"/>
+    <rect x="412" y="242" width="48" height="1" fill="#f0e8e0" opacity="0.7"/>
+    <!-- side seam -->
+    <rect x="412" y="234" width="2" height="12" fill="#a87888"/>
+    <rect x="458" y="234" width="2" height="12" fill="#a87888"/>
+    <rect x="408" y="246" width="2" height="12" fill="#9a6878"/>
+    <rect x="462" y="246" width="2" height="12" fill="#9a6878"/>
+  </g>
+
+  <!-- ============= -->
+  <!-- COUNTER-EDGE FLOOR SHADOW (very subtle vignette below counter) -->
+  <!-- ============= -->
+  <rect x="0" y="264" width="480" height="56" fill="#1a0e08"/>
+  <rect x="0" y="264" width="480" height="2" fill="#000000" opacity="0.85"/>
+
+  <!-- side darkening -->
+  <rect x="0" y="0" width="60" height="320" fill="url(#brSidesL)" opacity="0.55" pointer-events="none"/>
+  <rect x="420" y="0" width="60" height="320" fill="url(#brSidesR)" opacity="0.55" pointer-events="none"/>
+
+  <!-- top vignette -->
+  <rect x="0" y="0" width="480" height="14" fill="#000000" opacity="0.35" pointer-events="none"/>
+
+  <!-- ============= -->
+  <!-- HOTSPOTS (transparent, on top of everything else) -->
+  <!-- ============= -->
+  <!-- mirror itself: opens the existing writable steam-mirror modal -->
+  <rect id="hit-mirror" x="118" y="48" width="244" height="160" fill="transparent" style="cursor:pointer"/>
+
+  <!-- steam wipe patches (must sit ABOVE hit-mirror so they take precedence on click) -->
+  <rect id="hit-wipe-1" x="146" y="78" width="100" height="32" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-wipe-2" x="190" y="138" width="116" height="28" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-wipe-3" x="262" y="168" width="92" height="32" fill="transparent" style="cursor:pointer"/>
+
+  <!-- medicine cabinet edge (the right hinge side) -->
+  <rect id="hit-cabinet" x="354" y="60" width="14" height="148" fill="transparent" style="cursor:pointer"/>
+
+  <!-- vanity light fixture -->
+  <rect id="hit-fixture" x="200" y="14" width="80" height="20" fill="transparent" style="cursor:pointer"/>
+
+  <!-- counter (water stains memory) - narrow band so it doesn't steal product clicks -->
+  <rect id="hit-counter" x="0" y="220" width="480" height="16" fill="transparent" style="cursor:pointer"/>
+
+  <!-- faucet -->
+  <rect id="hit-faucet" x="222" y="194" width="40" height="32" fill="transparent" style="cursor:pointer"/>
+  <!-- sink basin -->
+  <rect id="hit-sink" x="180" y="246" width="120" height="20" fill="transparent" style="cursor:pointer"/>
+
+  <!-- left products -->
+  <rect id="hit-toothbrush-cup" x="22" y="194" width="38" height="64" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-vick" x="62" y="232" width="32" height="26" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-crece-pelo" x="96" y="216" width="46" height="42" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-hair-oil" x="146" y="198" width="32" height="60" fill="transparent" style="cursor:pointer"/>
+
+  <!-- right products -->
+  <rect id="hit-agua-violetas" x="304" y="202" width="28" height="56" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-mantequilla" x="336" y="230" width="24" height="28" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-soap" x="366" y="208" width="36" height="50" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-towel" x="406" y="232" width="60" height="26" fill="transparent" style="cursor:pointer"/>
+</svg>

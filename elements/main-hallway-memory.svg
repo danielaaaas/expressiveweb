@@ -1,0 +1,444 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" shape-rendering="crispEdges">
+  <title>Main hallway memory fragment</title>
+  <desc>Cropped vignette: cluster of mismatched family frames on a dim humid hallway wall, late evening.</desc>
+
+  <defs>
+    <linearGradient id="hwWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a4438"/>
+      <stop offset="48%" stop-color="#4a3a30"/>
+      <stop offset="100%" stop-color="#36281e"/>
+    </linearGradient>
+    <linearGradient id="hwFloor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3c2a1c"/>
+      <stop offset="100%" stop-color="#1a120c"/>
+    </linearGradient>
+    <radialGradient id="hwOverhead" cx="50%" cy="0%" r="62%">
+      <stop offset="0%" stop-color="#f4c898" stop-opacity="0.22"/>
+      <stop offset="55%" stop-color="#d49860" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hwHumidGloss" cx="50%" cy="100%" r="80%">
+      <stop offset="0%" stop-color="#5a8a98" stop-opacity="0.10"/>
+      <stop offset="60%" stop-color="#3a6878" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="hwSidesL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="hwSidesR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="hwGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="hwSoftBlur" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur stdDeviation="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Wall base + warm overhead spill -->
+  <rect width="480" height="320" fill="url(#hwWall)"/>
+  <rect width="480" height="170" fill="url(#hwOverhead)"/>
+  <rect width="480" height="320" fill="url(#hwHumidGloss)" opacity="0.85"/>
+
+  <!-- Narrow hallway framing: dark side gradients to imply confined corridor -->
+  <rect x="0" y="0" width="64" height="320" fill="url(#hwSidesL)"/>
+  <rect x="416" y="0" width="64" height="320" fill="url(#hwSidesR)"/>
+
+  <!-- Ceiling shadow line -->
+  <rect x="0" y="0" width="480" height="6" fill="#1c130c" opacity="0.55"/>
+  <rect x="0" y="6" width="480" height="2" fill="#3a2a1e" opacity="0.4"/>
+
+  <!-- Subtle wall discoloration (sparse, soft) -->
+  <g id="wall-discoloration" pointer-events="none">
+    <rect x="68" y="36" width="58" height="74" fill="#3a2a22" opacity="0.28"/>
+    <rect x="80" y="60" width="22" height="22" fill="#2a1c14" opacity="0.18"/>
+    <rect x="356" y="38" width="62" height="56" fill="#2a1c14" opacity="0.22"/>
+    <rect x="372" y="46" width="22" height="14" fill="#1e140e" opacity="0.18"/>
+    <rect x="60" y="190" width="44" height="40" fill="#2a1c14" opacity="0.20"/>
+    <rect x="378" y="180" width="56" height="50" fill="#2a1c14" opacity="0.22"/>
+    <!-- humidity streaks (faint vertical drips) -->
+    <rect x="92" y="14" width="1" height="46" fill="#2a1c14" opacity="0.30"/>
+    <rect x="368" y="14" width="1" height="38" fill="#2a1c14" opacity="0.28"/>
+    <rect x="404" y="14" width="1" height="24" fill="#2a1c14" opacity="0.24"/>
+  </g>
+
+  <!-- Peeling paint patches (small, sparse) -->
+  <g id="peeling-paint" pointer-events="none">
+    <!-- patch upper-left -->
+    <polygon id="hit-paint" points="50,30 72,32 78,52 62,68 44,58" fill="#9a8068"/>
+    <polygon points="50,30 72,32 78,52 62,68 44,58" fill="#b89a7a" opacity="0.35"/>
+    <rect x="52" y="34" width="2" height="2" fill="#5a4636"/>
+    <rect x="66" y="58" width="3" height="2" fill="#5a4636"/>
+    <rect x="58" y="46" width="2" height="2" fill="#5a4636"/>
+    <!-- patch lower-right -->
+    <polygon points="404,222 430,220 442,240 422,256 406,248" fill="#9a8068" opacity="0.9"/>
+    <polygon points="404,222 430,220 442,240 422,256 406,248" fill="#b89a7a" opacity="0.30"/>
+    <rect x="412" y="226" width="2" height="2" fill="#5a4636"/>
+    <rect x="428" y="244" width="3" height="2" fill="#5a4636"/>
+    <!-- a small flake fallen near baseboard -->
+    <rect x="156" y="262" width="6" height="3" fill="#a48870" opacity="0.7"/>
+    <rect x="158" y="264" width="2" height="1" fill="#5a4636"/>
+    <rect x="312" y="262" width="4" height="2" fill="#a48870" opacity="0.55"/>
+  </g>
+
+  <!-- Floor + baseboard -->
+  <rect x="0" y="270" width="480" height="50" fill="url(#hwFloor)"/>
+  <rect x="0" y="262" width="480" height="8" fill="#6a5340"/>
+  <rect x="0" y="262" width="480" height="2" fill="#8a6f56"/>
+  <rect x="0" y="268" width="480" height="2" fill="#2a1d14" opacity="0.7"/>
+  <!-- floor plank lines (very faint) -->
+  <rect x="0" y="288" width="480" height="1" fill="#1a120c" opacity="0.55"/>
+  <rect x="0" y="304" width="480" height="1" fill="#1a120c" opacity="0.45"/>
+  <rect x="84" y="270" width="1" height="50" fill="#0e0a06" opacity="0.55"/>
+  <rect x="220" y="270" width="1" height="50" fill="#0e0a06" opacity="0.55"/>
+  <rect x="332" y="270" width="1" height="50" fill="#0e0a06" opacity="0.55"/>
+
+  <!-- Hallway shelf (just below the photo cluster) -->
+  <g id="hallway-shelf">
+    <rect x="148" y="226" width="204" height="6" fill="#4a382c"/>
+    <rect x="148" y="226" width="204" height="2" fill="#6c5440"/>
+    <rect x="148" y="232" width="204" height="3" fill="#1c130c" opacity="0.65"/>
+    <rect x="160" y="232" width="3" height="6" fill="#2a1c12" opacity="0.55"/>
+    <rect x="338" y="232" width="3" height="6" fill="#2a1c12" opacity="0.55"/>
+
+    <!-- tiny ceramic vase (left) -->
+    <g id="shelf-vase">
+      <rect x="170" y="216" width="10" height="3" fill="#7a4a36"/>
+      <rect x="168" y="219" width="14" height="7" fill="#a05a3c"/>
+      <rect x="170" y="220" width="2" height="5" fill="#b87055" opacity="0.7"/>
+      <rect x="174" y="208" width="1" height="9" fill="#6a5a3a"/>
+      <rect x="173" y="208" width="1" height="2" fill="#867548"/>
+      <rect x="176" y="210" width="1" height="2" fill="#867548"/>
+    </g>
+
+    <!-- tiny candle / trinket (right) -->
+    <g id="shelf-trinket">
+      <rect x="324" y="220" width="10" height="6" fill="#3a2a22"/>
+      <rect x="324" y="220" width="10" height="1" fill="#5a443a"/>
+      <rect x="328" y="216" width="2" height="4" fill="#d8a868"/>
+      <rect x="328" y="214" width="2" height="2" fill="#ffd49a" opacity="0.85">
+        <animate attributeName="opacity" values="0.85;0.55;0.95;0.7;0.9;0.6" dur="3.6s" repeatCount="indefinite"/>
+      </rect>
+      <!-- faint warm halo above the flame -->
+      <rect x="326" y="210" width="6" height="4" fill="#ffd49a" opacity="0.10">
+        <animate attributeName="opacity" values="0.10;0.18;0.08;0.16;0.10" dur="3.6s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- a small folded note -->
+    <g id="shelf-note">
+      <rect x="252" y="222" width="14" height="4" fill="#cdbf9a"/>
+      <rect x="252" y="222" width="14" height="1" fill="#e6daba"/>
+      <rect x="254" y="224" width="10" height="1" fill="#a89668" opacity="0.55"/>
+    </g>
+  </g>
+
+  <!-- ============================ -->
+  <!-- PHOTO CLUSTER (focal point) -->
+  <!-- ============================ -->
+  <g id="photo-cluster">
+
+    <!-- Soft cluster shadow on wall (animated subtle drift) -->
+    <g id="cluster-shadow" pointer-events="none">
+      <rect x="148" y="58" width="200" height="156" fill="#1a120c" opacity="0.18">
+        <animate attributeName="opacity" values="0.16;0.22;0.18;0.20;0.16" dur="9.2s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <!-- ============================== -->
+    <!-- FRAME A: top-left, large landscape, CHANGES BETWEEN VISITS -->
+    <!-- ============================== -->
+    <g id="frame-a">
+      <!-- shadow -->
+      <rect x="158" y="60" width="74" height="54" fill="#1a120c" opacity="0.55"/>
+      <!-- outer mat (cream/ivory, slightly worn) -->
+      <rect x="156" y="58" width="74" height="54" fill="#d4c0a4"/>
+      <rect x="156" y="58" width="74" height="2" fill="#e8d8b8"/>
+      <rect x="156" y="110" width="74" height="2" fill="#a89070"/>
+      <!-- inner bevel -->
+      <rect x="160" y="62" width="66" height="46" fill="#b09878"/>
+      <!-- photo plate -->
+      <g id="frame-a-photo">
+        <!-- photo variant 1 (default): family group / silhouette -->
+        <g id="photo-a-1" class="photo-variant">
+          <rect x="162" y="64" width="62" height="42" fill="#c8b896"/>
+          <!-- background tone -->
+          <rect x="162" y="88" width="62" height="18" fill="#a89272" opacity="0.9"/>
+          <!-- three figures, abstract heads + shoulders -->
+          <rect x="172" y="78" width="6" height="8" fill="#5a4634"/>
+          <rect x="170" y="86" width="10" height="14" fill="#5a4634"/>
+          <rect x="186" y="76" width="6" height="8" fill="#4a3826"/>
+          <rect x="184" y="84" width="10" height="16" fill="#4a3826"/>
+          <rect x="200" y="80" width="5" height="6" fill="#5a4634"/>
+          <rect x="198" y="86" width="9" height="14" fill="#5a4634"/>
+          <!-- faint horizon -->
+          <rect x="162" y="88" width="62" height="1" fill="#7a6450" opacity="0.7"/>
+          <!-- faded haze -->
+          <rect x="162" y="64" width="62" height="42" fill="#e8d6b0" opacity="0.18"/>
+        </g>
+        <!-- photo variant 2 (hidden by default): a single child by a window -->
+        <g id="photo-a-2" class="photo-variant" visibility="hidden">
+          <rect x="162" y="64" width="62" height="42" fill="#bfae8c"/>
+          <rect x="170" y="68" width="20" height="34" fill="#9c876a" opacity="0.55"/>
+          <rect x="172" y="70" width="16" height="14" fill="#d8c8a0" opacity="0.7"/>
+          <rect x="200" y="80" width="6" height="8" fill="#5a4634"/>
+          <rect x="198" y="86" width="10" height="14" fill="#5a4634"/>
+          <rect x="162" y="64" width="62" height="42" fill="#e8d6b0" opacity="0.18"/>
+        </g>
+        <!-- photo variant 3 (hidden by default): a beach / seaside -->
+        <g id="photo-a-3" class="photo-variant" visibility="hidden">
+          <rect x="162" y="64" width="62" height="42" fill="#cdbf94"/>
+          <rect x="162" y="64" width="62" height="20" fill="#b8b496" opacity="0.85"/>
+          <rect x="162" y="84" width="62" height="22" fill="#a8966c" opacity="0.85"/>
+          <rect x="162" y="80" width="62" height="2" fill="#7a6c50" opacity="0.7"/>
+          <rect x="186" y="86" width="4" height="6" fill="#4a3826"/>
+          <rect x="184" y="92" width="8" height="10" fill="#4a3826"/>
+          <rect x="162" y="64" width="62" height="42" fill="#e8d6b0" opacity="0.20"/>
+        </g>
+      </g>
+      <!-- glass shine (drifts independently) -->
+      <g id="frame-a-shine" pointer-events="none" opacity="0.22">
+        <polygon points="160,62 180,62 168,108 160,108" fill="#ffffff" opacity="0.5"/>
+        <animate attributeName="opacity" values="0.18;0.32;0.22;0.30;0.18" dur="6.8s" repeatCount="indefinite"/>
+      </g>
+    </g>
+
+    <!-- ============================== -->
+    <!-- FRAME B: top-center, small portrait (BLINKING FACE) -->
+    <!-- ============================== -->
+    <g id="frame-b">
+      <rect x="244" y="56" width="44" height="60" fill="#1a120c" opacity="0.55"/>
+      <rect x="242" y="54" width="44" height="60" fill="#3a2a1e"/>
+      <rect x="242" y="54" width="44" height="2" fill="#5a4232"/>
+      <rect x="242" y="112" width="44" height="2" fill="#1c120a"/>
+      <rect x="245" y="57" width="38" height="54" fill="#5a4232"/>
+      <!-- photo -->
+      <g id="frame-b-photo">
+        <rect x="247" y="59" width="34" height="50" fill="#c8b896"/>
+        <!-- shoulders -->
+        <rect x="252" y="92" width="24" height="17" fill="#5a4634"/>
+        <!-- collar highlight -->
+        <rect x="254" y="94" width="20" height="2" fill="#7a6044" opacity="0.7"/>
+        <!-- head -->
+        <rect x="256" y="76" width="16" height="18" fill="#a08266"/>
+        <rect x="256" y="76" width="16" height="3" fill="#6a4e34" opacity="0.6"/>
+        <rect x="254" y="78" width="20" height="6" fill="#3e2a1c"/>
+        <!-- eyes (blinking) -->
+        <g id="frame-b-eyes">
+          <rect id="frame-b-eye-l" x="259" y="84" width="2" height="2" fill="#1a1208">
+            <animate attributeName="height" values="2;2;2;0;2;2;2;2;2;2" dur="5.2s" repeatCount="indefinite"/>
+          </rect>
+          <rect id="frame-b-eye-r" x="267" y="84" width="2" height="2" fill="#1a1208">
+            <animate attributeName="height" values="2;2;2;0;2;2;2;2;2;2" dur="5.2s" repeatCount="indefinite"/>
+          </rect>
+        </g>
+        <!-- mouth -->
+        <rect x="262" y="89" width="4" height="1" fill="#5a3424" opacity="0.7"/>
+        <!-- aged haze -->
+        <rect x="247" y="59" width="34" height="50" fill="#e8d6b0" opacity="0.20"/>
+      </g>
+      <!-- glass shine -->
+      <g id="frame-b-shine" pointer-events="none">
+        <polygon points="245,57 256,57 250,111 245,111" fill="#ffffff" opacity="0.18">
+          <animate attributeName="opacity" values="0.12;0.26;0.16;0.22;0.12" dur="9.4s" repeatCount="indefinite"/>
+        </polygon>
+      </g>
+    </g>
+
+    <!-- ============================== -->
+    <!-- FRAME C: top-right, square brass -->
+    <!-- ============================== -->
+    <g id="frame-c">
+      <rect x="298" y="68" width="44" height="44" fill="#1a120c" opacity="0.55"/>
+      <rect x="296" y="66" width="44" height="44" fill="#a8864c"/>
+      <rect x="296" y="66" width="44" height="2" fill="#d4ad68"/>
+      <rect x="296" y="108" width="44" height="2" fill="#6e5224"/>
+      <rect x="299" y="69" width="38" height="38" fill="#8a6c34"/>
+      <!-- photo: faded landscape -->
+      <g id="frame-c-photo">
+        <rect x="301" y="71" width="34" height="34" fill="#bfae8c"/>
+        <rect x="301" y="71" width="34" height="14" fill="#aab298" opacity="0.85"/>
+        <rect x="301" y="85" width="34" height="20" fill="#9a8a64" opacity="0.85"/>
+        <rect x="301" y="84" width="34" height="2" fill="#6a5a44" opacity="0.7"/>
+        <!-- distant hills -->
+        <polygon points="301,85 312,79 318,85" fill="#6a644a" opacity="0.65"/>
+        <polygon points="318,85 326,77 334,85" fill="#5a5440" opacity="0.7"/>
+        <!-- a single small bird -->
+        <rect x="316" y="76" width="2" height="1" fill="#3a2c20"/>
+        <rect x="318" y="75" width="1" height="1" fill="#3a2c20"/>
+        <rect x="319" y="76" width="2" height="1" fill="#3a2c20"/>
+        <rect x="301" y="71" width="34" height="34" fill="#e8d6b0" opacity="0.22"/>
+      </g>
+      <!-- glass shine (different timing, drifts opposite-ish) -->
+      <g id="frame-c-shine" pointer-events="none">
+        <polygon points="299,69 312,69 304,107 299,107" fill="#ffffff" opacity="0.14">
+          <animate attributeName="opacity" values="0.10;0.24;0.12;0.20;0.10" dur="7.6s" repeatCount="indefinite"/>
+        </polygon>
+      </g>
+    </g>
+
+    <!-- ============================== -->
+    <!-- FRAME D: middle-left, CROOKED chipped teal -->
+    <!-- ============================== -->
+    <g id="frame-d" transform="rotate(-7 225 152)">
+      <rect x="194" y="130" width="66" height="46" fill="#1a120c" opacity="0.55"/>
+      <rect x="192" y="128" width="66" height="46" fill="#5a7a6c"/>
+      <rect x="192" y="128" width="66" height="2" fill="#7a9a8c"/>
+      <rect x="192" y="172" width="66" height="2" fill="#3a5448"/>
+      <!-- chipped paint flecks on the frame -->
+      <rect x="198" y="130" width="3" height="2" fill="#3a2a1e"/>
+      <rect x="246" y="130" width="2" height="2" fill="#3a2a1e"/>
+      <rect x="252" y="170" width="3" height="2" fill="#3a2a1e"/>
+      <rect x="195" y="171" width="2" height="2" fill="#3a2a1e"/>
+      <rect x="195" y="128" width="60" height="44" fill="#3a5448"/>
+      <!-- photo: very faded -->
+      <g id="frame-d-photo">
+        <rect x="198" y="131" width="54" height="38" fill="#c8b896"/>
+        <!-- two figures sitting -->
+        <rect x="208" y="146" width="6" height="6" fill="#5a4634"/>
+        <rect x="206" y="152" width="10" height="14" fill="#5a4634"/>
+        <rect x="222" y="148" width="5" height="6" fill="#4a3826"/>
+        <rect x="220" y="154" width="9" height="12" fill="#4a3826"/>
+        <!-- table line -->
+        <rect x="200" y="158" width="50" height="1" fill="#7a6448" opacity="0.6"/>
+        <!-- extra faded -->
+        <rect x="198" y="131" width="54" height="38" fill="#f0dfb8" opacity="0.30"/>
+      </g>
+      <!-- glass shine -->
+      <g id="frame-d-shine" pointer-events="none">
+        <polygon points="195,131 208,131 200,168 195,168" fill="#ffffff" opacity="0.16">
+          <animate attributeName="opacity" values="0.10;0.22;0.14;0.20;0.10" dur="8.8s" repeatCount="indefinite"/>
+        </polygon>
+      </g>
+    </g>
+
+    <!-- ============================== -->
+    <!-- FRAME E: middle-right, tall narrow black metal (TWO BLINKING FIGURES) -->
+    <!-- ============================== -->
+    <g id="frame-e">
+      <rect x="272" y="126" width="42" height="64" fill="#1a120c" opacity="0.55"/>
+      <rect x="270" y="124" width="42" height="64" fill="#1a1a22"/>
+      <rect x="270" y="124" width="42" height="2" fill="#3a3a44"/>
+      <rect x="270" y="186" width="42" height="2" fill="#0a0a10"/>
+      <rect x="273" y="127" width="36" height="58" fill="#2a2a32"/>
+      <g id="frame-e-photo">
+        <rect x="275" y="129" width="32" height="54" fill="#bfae8c"/>
+        <rect x="275" y="160" width="32" height="23" fill="#a09070" opacity="0.9"/>
+        <!-- two small siblings -->
+        <rect x="281" y="146" width="5" height="6" fill="#5a4634"/>
+        <rect x="279" y="152" width="9" height="14" fill="#5a4634"/>
+        <rect x="293" y="148" width="5" height="6" fill="#4a3826"/>
+        <rect x="291" y="154" width="9" height="12" fill="#4a3826"/>
+        <!-- eyes that blink (siblings) -->
+        <rect x="282" y="148" width="1" height="1" fill="#1a1208">
+          <animate attributeName="height" values="1;1;1;1;0;1;1;1;1" dur="6.2s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="284" y="148" width="1" height="1" fill="#1a1208">
+          <animate attributeName="height" values="1;1;1;1;0;1;1;1;1" dur="6.2s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="294" y="150" width="1" height="1" fill="#1a1208">
+          <animate attributeName="height" values="1;0;1;1;1;1;1;1;1" dur="7.4s" repeatCount="indefinite"/>
+        </rect>
+        <rect x="296" y="150" width="1" height="1" fill="#1a1208">
+          <animate attributeName="height" values="1;0;1;1;1;1;1;1;1" dur="7.4s" repeatCount="indefinite"/>
+        </rect>
+        <!-- haze -->
+        <rect x="275" y="129" width="32" height="54" fill="#e8d6b0" opacity="0.22"/>
+      </g>
+      <!-- glass shine -->
+      <g id="frame-e-shine" pointer-events="none">
+        <polygon points="273,127 284,127 276,184 273,184" fill="#ffffff" opacity="0.14">
+          <animate attributeName="opacity" values="0.08;0.22;0.10;0.20;0.08" dur="10.4s" repeatCount="indefinite"/>
+        </polygon>
+      </g>
+    </g>
+
+    <!-- ============================== -->
+    <!-- FRAME F: bottom-center, small landscape worn cherry -->
+    <!-- ============================== -->
+    <g id="frame-f">
+      <rect x="218" y="192" width="46" height="32" fill="#1a120c" opacity="0.55"/>
+      <rect x="216" y="190" width="46" height="32" fill="#8a4838"/>
+      <rect x="216" y="190" width="46" height="2" fill="#a85e44"/>
+      <rect x="216" y="220" width="46" height="2" fill="#5a2c20"/>
+      <rect x="219" y="193" width="40" height="26" fill="#683428"/>
+      <g id="frame-f-photo">
+        <rect x="221" y="195" width="36" height="22" fill="#c8b896"/>
+        <!-- horizon -->
+        <rect x="221" y="206" width="36" height="11" fill="#a89272" opacity="0.85"/>
+        <rect x="221" y="206" width="36" height="1" fill="#7a6450" opacity="0.7"/>
+        <!-- a tree -->
+        <rect x="234" y="200" width="2" height="9" fill="#4a3826"/>
+        <rect x="231" y="198" width="8" height="5" fill="#5a4836"/>
+        <!-- a bird -->
+        <rect x="248" y="199" width="2" height="1" fill="#3a2c20"/>
+        <rect x="250" y="198" width="1" height="1" fill="#3a2c20"/>
+        <rect x="251" y="199" width="2" height="1" fill="#3a2c20"/>
+        <rect x="221" y="195" width="36" height="22" fill="#e8d6b0" opacity="0.20"/>
+      </g>
+      <!-- glass shine -->
+      <g id="frame-f-shine" pointer-events="none">
+        <polygon points="219,193 230,193 222,217 219,217" fill="#ffffff" opacity="0.14">
+          <animate attributeName="opacity" values="0.10;0.22;0.12;0.20;0.10" dur="6.2s" repeatCount="indefinite"/>
+        </polygon>
+      </g>
+    </g>
+
+    <!-- ============================== -->
+    <!-- GHOST EMPTY FRAME: appears intermittently in negative space -->
+    <!-- ============================== -->
+    <g id="empty-frame" pointer-events="none" opacity="0" filter="url(#hwGlow)">
+      <animate attributeName="opacity" values="0;0;0;0.55;0.75;0.55;0;0;0" dur="14.5s" repeatCount="indefinite"/>
+      <rect x="124" y="126" width="40" height="32" fill="#1a120c" opacity="0.55"/>
+      <rect x="122" y="124" width="40" height="32" fill="#7a6450"/>
+      <rect x="122" y="124" width="40" height="2" fill="#9a8064"/>
+      <rect x="122" y="154" width="40" height="2" fill="#4a382c"/>
+      <rect x="125" y="127" width="34" height="26" fill="#3a2a22"/>
+      <!-- empty interior with a faint ghost outline of a figure -->
+      <rect x="125" y="127" width="34" height="26" fill="#28201c"/>
+      <rect x="138" y="135" width="6" height="6" fill="#3a2a22" opacity="0.85"/>
+      <rect x="136" y="141" width="10" height="11" fill="#3a2a22" opacity="0.85"/>
+    </g>
+
+    <!-- Click hotspot for the empty frame (always present so clicks can land when visible) -->
+    <rect id="hit-empty" x="122" y="124" width="40" height="32" fill="transparent" pointer-events="all"/>
+  </g>
+
+  <!-- Subtle dust motes drifting in the overhead glow -->
+  <g id="hw-dust" pointer-events="none" opacity="0.55">
+    <rect x="240" y="40" width="1" height="1" fill="#f0d8a8" opacity="0.6">
+      <animate attributeName="y" values="40;90;40" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.0;0.6;0.0" dur="13s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="288" y="32" width="1" height="1" fill="#f0d8a8" opacity="0.5">
+      <animate attributeName="y" values="32;110;32" dur="17s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.0;0.5;0.0" dur="17s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="196" y="46" width="1" height="1" fill="#f0d8a8" opacity="0.5">
+      <animate attributeName="y" values="46;120;46" dur="19s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.0;0.5;0.0" dur="19s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Edge vignette -->
+  <rect width="480" height="320" fill="none" stroke="#0a0810" stroke-width="22" opacity="0.42" pointer-events="none"/>
+
+  <!-- ============================== -->
+  <!-- INTERACTION HOTSPOTS -->
+  <!-- (transparent, pointer-events:all, sit above art) -->
+  <!-- ============================== -->
+  <rect id="hit-frame-a" x="156" y="58" width="74" height="54" fill="transparent" pointer-events="all"/>
+  <rect id="hit-frame-b" x="242" y="54" width="44" height="60" fill="transparent" pointer-events="all"/>
+  <rect id="hit-frame-c" x="296" y="66" width="44" height="44" fill="transparent" pointer-events="all"/>
+  <rect id="hit-frame-d" x="186" y="124" width="80" height="56" fill="transparent" pointer-events="all"/>
+  <rect id="hit-frame-e" x="270" y="124" width="42" height="64" fill="transparent" pointer-events="all"/>
+  <rect id="hit-frame-f" x="216" y="190" width="46" height="32" fill="transparent" pointer-events="all"/>
+  <rect id="hit-shelf" x="148" y="216" width="204" height="22" fill="transparent" pointer-events="all"/>
+</svg>

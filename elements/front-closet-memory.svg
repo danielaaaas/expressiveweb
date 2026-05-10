@@ -1,0 +1,1136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" shape-rendering="crispEdges">
+  <title>Front closet memory fragment</title>
+  <desc>Cropped vignette: looking into the front utility closet at night. Four stacked shelves crammed with reused grocery bags, cleaning supplies, canned food, old electronics, towels, seasonal decorations, and storage bins. A single dim bulb above. The back wall darkens impossibly into something that doesn't quite end.</desc>
+
+  <defs>
+    <linearGradient id="fcHallWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a4030"/>
+      <stop offset="100%" stop-color="#2a1c12"/>
+    </linearGradient>
+    <linearGradient id="fcInterior" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a3e2a"/>
+      <stop offset="100%" stop-color="#1a100a"/>
+    </linearGradient>
+    <radialGradient id="fcDepth" cx="50%" cy="55%" r="55%">
+      <stop offset="0%" stop-color="#3a2616" stop-opacity="0"/>
+      <stop offset="80%" stop-color="#0a0604" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0.96"/>
+    </radialGradient>
+    <radialGradient id="fcDeepEcho" cx="50%" cy="50%" r="35%">
+      <stop offset="0%" stop-color="#2a1a10" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fcFrame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a2418"/>
+      <stop offset="100%" stop-color="#1a100a"/>
+    </linearGradient>
+    <linearGradient id="fcShelf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6a4828"/>
+      <stop offset="100%" stop-color="#3a2418"/>
+    </linearGradient>
+    <radialGradient id="fcBulbGlow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#f4c878" stop-opacity="0.55"/>
+      <stop offset="55%" stop-color="#a86838" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fcSidesL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fcSidesR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="fcSoftBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="0.7"/>
+    </filter>
+  </defs>
+
+  <!-- ============= -->
+  <!-- HALLWAY WALL (slivers around the closet doorway) -->
+  <!-- ============= -->
+  <rect width="480" height="320" fill="url(#fcHallWall)"/>
+
+  <!-- ============= -->
+  <!-- DOOR FRAME (we are looking THROUGH it from the hallway) -->
+  <!-- ============= -->
+  <g id="fc-frame">
+    <!-- header -->
+    <rect x="20" y="6" width="440" height="14" fill="url(#fcFrame)"/>
+    <rect x="20" y="6" width="440" height="2" fill="#5a3826"/>
+    <rect x="20" y="18" width="440" height="2" fill="#0a0604" opacity="0.7"/>
+    <!-- left jamb -->
+    <rect x="20" y="6" width="12" height="304" fill="url(#fcFrame)"/>
+    <rect x="20" y="6" width="2" height="304" fill="#5a3826" opacity="0.7"/>
+    <rect x="30" y="6" width="2" height="304" fill="#0a0604" opacity="0.8"/>
+    <!-- right jamb -->
+    <rect x="448" y="6" width="12" height="304" fill="url(#fcFrame)"/>
+    <rect x="448" y="6" width="2" height="304" fill="#0a0604" opacity="0.8"/>
+    <rect x="458" y="6" width="2" height="304" fill="#5a3826" opacity="0.5"/>
+    <!-- floor sill -->
+    <rect x="20" y="304" width="440" height="6" fill="url(#fcFrame)"/>
+    <rect x="20" y="304" width="440" height="2" fill="#5a3826"/>
+    <!-- inner shadow band -->
+    <rect x="32" y="20" width="416" height="2" fill="#000000" opacity="0.55"/>
+  </g>
+
+  <!-- ============= -->
+  <!-- CLOSET INTERIOR BACK WALL -->
+  <!-- ============= -->
+  <rect x="32" y="20" width="416" height="284" fill="url(#fcInterior)"/>
+
+  <!-- subtle plank lines on the back wall -->
+  <g id="fc-back-tex" pointer-events="none" opacity="0.18">
+    <rect x="32" y="20" width="416" height="1" fill="#7a4e30"/>
+    <rect x="32" y="68" width="416" height="1" fill="#1a0e08"/>
+    <rect x="32" y="138" width="416" height="1" fill="#1a0e08"/>
+    <rect x="32" y="206" width="416" height="1" fill="#1a0e08"/>
+    <rect x="32" y="274" width="416" height="1" fill="#1a0e08"/>
+    <!-- vertical seams (suggests slatted back) -->
+    <rect x="120" y="20" width="1" height="284" fill="#1a0e08"/>
+    <rect x="232" y="20" width="1" height="284" fill="#1a0e08"/>
+    <rect x="344" y="20" width="1" height="284" fill="#1a0e08"/>
+  </g>
+
+  <!-- ghost shelves receding into the impossible depth (placed before the depth gradient
+       so they fade naturally into the dark) -->
+  <g id="fc-ghost-shelves" pointer-events="none" opacity="0.42">
+    <!-- a deeper shelf below shelf 1, narrower, dim -->
+    <rect x="180" y="86" width="120" height="2" fill="#5a3826"/>
+    <rect x="180" y="88" width="120" height="1" fill="#0a0604"/>
+    <!-- another deeper shelf below shelf 2 -->
+    <rect x="200" y="152" width="80" height="2" fill="#5a3826"/>
+    <rect x="200" y="154" width="80" height="1" fill="#0a0604"/>
+    <!-- a third even further back -->
+    <rect x="216" y="218" width="48" height="2" fill="#4a2e1c"/>
+    <rect x="216" y="220" width="48" height="1" fill="#0a0604"/>
+  </g>
+
+  <!-- impossibly-deep darkening at the back center -->
+  <rect x="32" y="20" width="416" height="284" fill="url(#fcDepth)" opacity="0.92" pointer-events="none"/>
+  <!-- subtle inner echo: a faint warm glimmer way back, like something is in there -->
+  <rect x="32" y="20" width="416" height="284" fill="url(#fcDeepEcho)" opacity="0.55" pointer-events="none">
+    <animate attributeName="opacity" values="0.40;0.62;0.40" dur="11s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- bulb glow spilling from the top -->
+  <rect x="160" y="20" width="160" height="180" fill="url(#fcBulbGlow)" opacity="0.85" pointer-events="none">
+    <animate attributeName="opacity" values="0.78;0.92;0.82;0.88;0.78" dur="6.8s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ============= -->
+  <!-- BULB hanging from the top -->
+  <!-- ============= -->
+  <g id="fc-bulb" pointer-events="none">
+    <!-- wire -->
+    <rect x="239" y="20" width="2" height="20" fill="#1a0e06"/>
+    <!-- socket -->
+    <rect x="234" y="40" width="12" height="6" fill="#3a2618"/>
+    <rect x="234" y="40" width="12" height="1" fill="#5a3826"/>
+    <rect x="234" y="45" width="12" height="1" fill="#0a0604"/>
+    <!-- bulb body -->
+    <rect x="234" y="46" width="12" height="10" fill="#f0d090"/>
+    <rect x="232" y="48" width="2" height="6" fill="#f0d090"/>
+    <rect x="246" y="48" width="2" height="6" fill="#f0d090"/>
+    <rect x="234" y="56" width="12" height="2" fill="#d8b070"/>
+    <!-- bulb highlight -->
+    <rect x="236" y="48" width="2" height="2" fill="#fff4c8" opacity="0.9"/>
+    <!-- subtle filament glow -->
+    <rect x="238" y="50" width="4" height="2" fill="#fff8d8" opacity="0.85">
+      <animate attributeName="opacity" values="0.75;0.95;0.78;0.92;0.75" dur="6.8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ============= -->
+  <!-- SHELF 1 (top) - y=46-50 boards, items y=22-46 -->
+  <!-- ============= -->
+  <g id="fc-shelf-1">
+    <rect x="32" y="46" width="416" height="4" fill="url(#fcShelf)"/>
+    <rect x="32" y="46" width="416" height="1" fill="#7a5236"/>
+    <rect x="32" y="49" width="416" height="1" fill="#0a0604"/>
+    <!-- subtle shadow underneath -->
+    <rect x="32" y="50" width="416" height="2" fill="#000000" opacity="0.35" pointer-events="none"/>
+  </g>
+
+  <!-- top shelf items (z-order: leftmost first) -->
+  <!-- reused grocery bags wadded up -->
+  <g id="fc-grocery-bags" pointer-events="none">
+    <!-- bag bundle silhouette: rumpled crinkled cream plastic -->
+    <rect x="44" y="30" width="74" height="16" fill="#c8c0b4"/>
+    <rect x="44" y="30" width="74" height="2" fill="#e0d8c8"/>
+    <rect x="44" y="44" width="74" height="2" fill="#a89878" opacity="0.85"/>
+    <!-- crinkled top bumps -->
+    <rect x="48" y="26" width="8" height="4" fill="#d0c8bc"/>
+    <rect x="60" y="24" width="10" height="6" fill="#d8d0c4"/>
+    <rect x="74" y="26" width="8" height="4" fill="#c8c0b4"/>
+    <rect x="86" y="22" width="12" height="8" fill="#d8d0c4"/>
+    <rect x="102" y="26" width="10" height="4" fill="#c8c0b4"/>
+    <!-- crinkle highlights -->
+    <rect x="50" y="32" width="2" height="8" fill="#e0d8c8"/>
+    <rect x="58" y="34" width="2" height="6" fill="#a89878" opacity="0.7"/>
+    <rect x="68" y="32" width="2" height="10" fill="#e0d8c8"/>
+    <rect x="78" y="34" width="2" height="6" fill="#a89878" opacity="0.7"/>
+    <rect x="88" y="32" width="2" height="10" fill="#e0d8c8"/>
+    <rect x="100" y="34" width="2" height="6" fill="#a89878" opacity="0.7"/>
+    <rect x="108" y="32" width="2" height="8" fill="#e0d8c8"/>
+    <!-- a bag handle loop poking up -->
+    <rect x="64" y="20" width="2" height="4" fill="#d8d0c4"/>
+    <rect x="64" y="20" width="6" height="2" fill="#d8d0c4"/>
+    <rect x="68" y="20" width="2" height="4" fill="#d8d0c4"/>
+    <!-- faint store-logo strip -->
+    <rect x="58" y="38" width="20" height="2" fill="#5878a0" opacity="0.55"/>
+    <rect x="84" y="38" width="14" height="2" fill="#a84838" opacity="0.55"/>
+  </g>
+
+  <!-- top storage bin (cardboard box w/ rotating label) -->
+  <g id="fc-bin-top" pointer-events="none">
+    <!-- box body -->
+    <rect x="130" y="22" width="88" height="24" fill="#a07848"/>
+    <rect x="130" y="22" width="88" height="2" fill="#c89868"/>
+    <rect x="130" y="44" width="88" height="2" fill="#6a4828"/>
+    <!-- side seams -->
+    <rect x="130" y="22" width="2" height="24" fill="#6a4828"/>
+    <rect x="216" y="22" width="2" height="24" fill="#6a4828"/>
+    <!-- packing tape strip -->
+    <rect x="130" y="32" width="88" height="3" fill="#d8c8a8" opacity="0.78"/>
+    <rect x="130" y="32" width="88" height="1" fill="#fff8e0" opacity="0.55"/>
+    <!-- label area -->
+    <rect x="148" y="36" width="52" height="8" fill="#f0e4c8"/>
+    <rect x="148" y="36" width="52" height="1" fill="#fff8e0"/>
+    <rect x="148" y="43" width="52" height="1" fill="#a87838" opacity="0.7"/>
+    <!-- rotating label text (default visible: TAXES) -->
+    <text id="fc-bin-top-label-a" x="174" y="42" text-anchor="middle" fill="#3a2418"
+          font-family="'Pixel Operator','VT323',monospace" font-size="6" font-weight="bold" letter-spacing="0.5">TAXES</text>
+    <text id="fc-bin-top-label-b" x="174" y="42" text-anchor="middle" fill="#3a2418"
+          font-family="'Pixel Operator','VT323',monospace" font-size="6" font-weight="bold" letter-spacing="0.5"
+          visibility="hidden">PHOTOS</text>
+    <text id="fc-bin-top-label-c" x="174" y="42" text-anchor="middle" fill="#3a2418"
+          font-family="'Pixel Operator','VT323',monospace" font-size="6" font-weight="bold" letter-spacing="0.5"
+          visibility="hidden">BABY</text>
+    <text id="fc-bin-top-label-d" x="174" y="42" text-anchor="middle" fill="#3a2418"
+          font-family="'Pixel Operator','VT323',monospace" font-size="6" font-weight="bold" letter-spacing="0.5"
+          visibility="hidden">??</text>
+  </g>
+
+  <!-- shoebox stack -->
+  <g id="fc-shoeboxes-top" pointer-events="none">
+    <!-- bottom shoebox -->
+    <rect x="230" y="34" width="80" height="12" fill="#b08858"/>
+    <rect x="230" y="34" width="80" height="2" fill="#c8a878"/>
+    <rect x="230" y="44" width="80" height="2" fill="#6a4828"/>
+    <rect x="230" y="38" width="80" height="2" fill="#9a7848" opacity="0.65"/>
+    <!-- side seam -->
+    <rect x="230" y="34" width="2" height="12" fill="#6a4828"/>
+    <rect x="308" y="34" width="2" height="12" fill="#6a4828"/>
+    <!-- top shoebox (slightly shifted) -->
+    <rect x="236" y="22" width="68" height="12" fill="#c8a878"/>
+    <rect x="236" y="22" width="68" height="2" fill="#e0c898"/>
+    <rect x="236" y="32" width="68" height="2" fill="#8a6838"/>
+    <rect x="236" y="26" width="68" height="2" fill="#a88858" opacity="0.55"/>
+    <rect x="236" y="22" width="2" height="12" fill="#8a6838"/>
+    <rect x="302" y="22" width="2" height="12" fill="#8a6838"/>
+    <!-- tiny label -->
+    <rect x="252" y="26" width="22" height="4" fill="#f0e4c8"/>
+    <rect x="254" y="27" width="6" height="2" fill="#5a3826"/>
+    <rect x="262" y="27" width="10" height="2" fill="#5a3826" opacity="0.6"/>
+  </g>
+
+  <!-- seasonal decorations: string lights coiled + small ornament box -->
+  <g id="fc-seasonal" pointer-events="none">
+    <!-- ornament box (red w/ ribbon) -->
+    <rect x="322" y="30" width="42" height="16" fill="#a84838"/>
+    <rect x="322" y="30" width="42" height="2" fill="#c86848"/>
+    <rect x="322" y="44" width="42" height="2" fill="#5a2818"/>
+    <rect x="322" y="30" width="2" height="16" fill="#5a2818"/>
+    <rect x="362" y="30" width="2" height="16" fill="#5a2818"/>
+    <!-- vertical ribbon -->
+    <rect x="340" y="30" width="6" height="16" fill="#f0e4c8"/>
+    <rect x="340" y="30" width="6" height="2" fill="#fff8e0"/>
+    <rect x="340" y="44" width="6" height="2" fill="#c8b888"/>
+    <!-- horizontal ribbon -->
+    <rect x="322" y="36" width="42" height="4" fill="#f0e4c8"/>
+    <rect x="322" y="36" width="42" height="1" fill="#fff8e0"/>
+    <rect x="322" y="39" width="42" height="1" fill="#c8b888"/>
+    <!-- tiny bow on top -->
+    <rect x="338" y="26" width="4" height="4" fill="#f0e4c8"/>
+    <rect x="344" y="26" width="4" height="4" fill="#f0e4c8"/>
+    <rect x="342" y="28" width="2" height="2" fill="#c8b888"/>
+
+    <!-- coiled string lights -->
+    <!-- coil base (green wire wrapped in a loose oval) -->
+    <rect x="376" y="30" width="60" height="16" fill="#3a2418" opacity="0.4"/>
+    <rect x="378" y="32" width="56" height="12" fill="#4a6838"/>
+    <rect x="378" y="32" width="56" height="1" fill="#6a8848"/>
+    <rect x="378" y="43" width="56" height="1" fill="#2a3818"/>
+    <!-- wire loops -->
+    <rect x="380" y="34" width="52" height="1" fill="#3a5028" opacity="0.85"/>
+    <rect x="380" y="38" width="52" height="1" fill="#3a5028" opacity="0.85"/>
+    <rect x="380" y="42" width="52" height="1" fill="#3a5028" opacity="0.85"/>
+    <!-- bulbs scattered (warm yellow, red, blue) -->
+    <rect x="382" y="36" width="3" height="3" fill="#f4c878"/>
+    <rect x="389" y="40" width="3" height="3" fill="#c84848"/>
+    <rect x="397" y="34" width="3" height="3" fill="#5878a0"/>
+    <rect x="404" y="38" width="3" height="3" fill="#f4c878"/>
+    <rect x="411" y="42" width="3" height="3" fill="#c84848"/>
+    <rect x="418" y="36" width="3" height="3" fill="#5878a0"/>
+    <rect x="425" y="40" width="3" height="3" fill="#f4c878"/>
+    <!-- one bulb that occasionally flickers warm -->
+    <rect x="404" y="38" width="3" height="3" fill="#fff4c8" opacity="0">
+      <animate attributeName="opacity" values="0;0;0.85;0;0;0.85;0" dur="9.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ============= -->
+  <!-- SHELF 2 - y=110-114, items y=58-110 -->
+  <!-- ============= -->
+  <g id="fc-shelf-2">
+    <rect x="32" y="110" width="416" height="4" fill="url(#fcShelf)"/>
+    <rect x="32" y="110" width="416" height="1" fill="#7a5236"/>
+    <rect x="32" y="113" width="416" height="1" fill="#0a0604"/>
+    <rect x="32" y="114" width="416" height="2" fill="#000000" opacity="0.35" pointer-events="none"/>
+  </g>
+
+  <!-- cleaning supplies cluster -->
+  <g id="fc-cleaners" pointer-events="none">
+    <!-- yellow spray bottle -->
+    <rect x="46" y="78" width="20" height="32" fill="#c8a848"/>
+    <rect x="46" y="78" width="20" height="2" fill="#e0c068"/>
+    <rect x="46" y="108" width="20" height="2" fill="#8a7028"/>
+    <rect x="46" y="78" width="2" height="32" fill="#8a7028"/>
+    <rect x="64" y="78" width="2" height="32" fill="#8a7028"/>
+    <!-- nozzle/trigger -->
+    <rect x="48" y="68" width="14" height="10" fill="#f0e4d0"/>
+    <rect x="48" y="68" width="14" height="1" fill="#fff8e0"/>
+    <rect x="48" y="76" width="14" height="2" fill="#a89878"/>
+    <rect x="60" y="70" width="6" height="2" fill="#3a2418"/>
+    <!-- label -->
+    <rect x="48" y="84" width="16" height="8" fill="#3a2418"/>
+    <rect x="48" y="84" width="16" height="1" fill="#5a3826"/>
+    <rect x="50" y="86" width="12" height="1" fill="#f0e4c8"/>
+    <rect x="50" y="89" width="12" height="1" fill="#f0e4c8" opacity="0.6"/>
+
+    <!-- blue spray bottle -->
+    <rect x="74" y="80" width="20" height="30" fill="#5878a0"/>
+    <rect x="74" y="80" width="20" height="2" fill="#7898c0"/>
+    <rect x="74" y="108" width="20" height="2" fill="#3a5878"/>
+    <rect x="74" y="80" width="2" height="30" fill="#3a5878"/>
+    <rect x="92" y="80" width="2" height="30" fill="#3a5878"/>
+    <rect x="76" y="72" width="14" height="8" fill="#f0e4d0"/>
+    <rect x="76" y="72" width="14" height="1" fill="#fff8e0"/>
+    <rect x="88" y="74" width="6" height="2" fill="#3a2418"/>
+    <rect x="76" y="86" width="16" height="8" fill="#f0e4c8"/>
+    <rect x="78" y="88" width="12" height="1" fill="#3a2418"/>
+    <rect x="78" y="91" width="12" height="1" fill="#3a2418" opacity="0.6"/>
+
+    <!-- green spray bottle -->
+    <rect x="102" y="76" width="20" height="34" fill="#6a8848"/>
+    <rect x="102" y="76" width="20" height="2" fill="#88a868"/>
+    <rect x="102" y="108" width="20" height="2" fill="#4a6828"/>
+    <rect x="102" y="76" width="2" height="34" fill="#4a6828"/>
+    <rect x="120" y="76" width="2" height="34" fill="#4a6828"/>
+    <rect x="104" y="68" width="14" height="8" fill="#f0e4d0"/>
+    <rect x="104" y="68" width="14" height="1" fill="#fff8e0"/>
+    <rect x="116" y="70" width="6" height="2" fill="#3a2418"/>
+    <rect x="104" y="84" width="16" height="8" fill="#3a2418"/>
+    <rect x="106" y="86" width="12" height="1" fill="#f0e4c8"/>
+    <rect x="106" y="89" width="12" height="1" fill="#f0e4c8" opacity="0.6"/>
+
+    <!-- sponges (yellow + green stacked) -->
+    <rect x="130" y="96" width="22" height="6" fill="#c8b048"/>
+    <rect x="130" y="96" width="22" height="1" fill="#e0c868"/>
+    <rect x="130" y="101" width="22" height="1" fill="#8a7828"/>
+    <rect x="130" y="102" width="22" height="6" fill="#6a8838"/>
+    <rect x="130" y="102" width="22" height="1" fill="#88a858"/>
+    <rect x="130" y="107" width="22" height="1" fill="#4a6828"/>
+    <!-- pore dots -->
+    <rect x="134" y="98" width="1" height="1" fill="#8a7828"/>
+    <rect x="138" y="99" width="1" height="1" fill="#8a7828"/>
+    <rect x="143" y="98" width="1" height="1" fill="#8a7828"/>
+    <rect x="147" y="100" width="1" height="1" fill="#8a7828"/>
+    <rect x="135" y="104" width="1" height="1" fill="#4a6828"/>
+    <rect x="140" y="105" width="1" height="1" fill="#4a6828"/>
+    <rect x="146" y="104" width="1" height="1" fill="#4a6828"/>
+  </g>
+
+  <!-- folded towels stack -->
+  <g id="fc-towels" pointer-events="none">
+    <!-- terracotta towel (bottom) -->
+    <rect x="166" y="98" width="92" height="12" fill="#b06848"/>
+    <rect x="166" y="98" width="92" height="1" fill="#c88868"/>
+    <rect x="166" y="109" width="92" height="1" fill="#7a4828"/>
+    <rect x="166" y="98" width="2" height="12" fill="#7a4828"/>
+    <rect x="256" y="98" width="2" height="12" fill="#7a4828"/>
+    <rect x="166" y="103" width="92" height="1" fill="#9a5838" opacity="0.65"/>
+
+    <!-- cream towel -->
+    <rect x="170" y="86" width="86" height="12" fill="#d8c8a8"/>
+    <rect x="170" y="86" width="86" height="1" fill="#f0e0c0"/>
+    <rect x="170" y="97" width="86" height="1" fill="#a89878"/>
+    <rect x="170" y="86" width="2" height="12" fill="#a89878"/>
+    <rect x="254" y="86" width="2" height="12" fill="#a89878"/>
+    <rect x="170" y="91" width="86" height="1" fill="#c8b890" opacity="0.7"/>
+
+    <!-- faded teal towel -->
+    <rect x="174" y="74" width="80" height="12" fill="#587870"/>
+    <rect x="174" y="74" width="80" height="1" fill="#789890"/>
+    <rect x="174" y="85" width="80" height="1" fill="#385850"/>
+    <rect x="174" y="74" width="2" height="12" fill="#385850"/>
+    <rect x="252" y="74" width="2" height="12" fill="#385850"/>
+    <rect x="174" y="79" width="80" height="1" fill="#486860" opacity="0.7"/>
+
+    <!-- blush towel (top, slightly smaller) -->
+    <rect x="178" y="64" width="72" height="10" fill="#b08878"/>
+    <rect x="178" y="64" width="72" height="1" fill="#c8a898"/>
+    <rect x="178" y="73" width="72" height="1" fill="#7a5848"/>
+    <rect x="178" y="64" width="2" height="10" fill="#7a5848"/>
+    <rect x="248" y="64" width="2" height="10" fill="#7a5848"/>
+    <rect x="178" y="68" width="72" height="1" fill="#a07868" opacity="0.7"/>
+  </g>
+
+  <!-- canned food row -->
+  <g id="fc-cans" pointer-events="none">
+    <!-- can 1: silver/blue (tuna-ish) -->
+    <rect x="272" y="88" width="20" height="22" fill="#989098"/>
+    <rect x="272" y="88" width="20" height="2" fill="#b8b0b8"/>
+    <rect x="272" y="108" width="20" height="2" fill="#585058"/>
+    <rect x="272" y="88" width="2" height="22" fill="#585058"/>
+    <rect x="290" y="88" width="2" height="22" fill="#585058"/>
+    <rect x="274" y="94" width="16" height="10" fill="#3a5878"/>
+    <rect x="274" y="94" width="16" height="1" fill="#5878a0"/>
+    <rect x="274" y="103" width="16" height="1" fill="#1a3858"/>
+    <rect x="276" y="97" width="12" height="1" fill="#f0e4c8"/>
+    <rect x="276" y="100" width="12" height="1" fill="#f0e4c8" opacity="0.6"/>
+
+    <!-- can 2: tomato red (taller) -->
+    <rect x="296" y="78" width="22" height="32" fill="#a84838"/>
+    <rect x="296" y="78" width="22" height="2" fill="#c86848"/>
+    <rect x="296" y="108" width="22" height="2" fill="#6a2818"/>
+    <rect x="296" y="78" width="2" height="32" fill="#6a2818"/>
+    <rect x="316" y="78" width="2" height="32" fill="#6a2818"/>
+    <rect x="298" y="86" width="18" height="14" fill="#f0e4c8"/>
+    <rect x="298" y="86" width="18" height="1" fill="#fff8e0"/>
+    <rect x="298" y="99" width="18" height="1" fill="#c8a878"/>
+    <rect x="300" y="89" width="14" height="1" fill="#a84838"/>
+    <rect x="300" y="92" width="14" height="2" fill="#3a2418"/>
+    <rect x="300" y="96" width="14" height="1" fill="#a84838"/>
+
+    <!-- can 3: yellow corn -->
+    <rect x="322" y="84" width="20" height="26" fill="#c8a848"/>
+    <rect x="322" y="84" width="20" height="2" fill="#e0c068"/>
+    <rect x="322" y="108" width="20" height="2" fill="#8a7028"/>
+    <rect x="322" y="84" width="2" height="26" fill="#8a7028"/>
+    <rect x="340" y="84" width="2" height="26" fill="#8a7028"/>
+    <rect x="324" y="91" width="16" height="12" fill="#f0e4c8"/>
+    <rect x="324" y="91" width="16" height="1" fill="#fff8e0"/>
+    <rect x="324" y="102" width="16" height="1" fill="#c8a878"/>
+    <rect x="326" y="94" width="12" height="2" fill="#c8a848"/>
+    <rect x="326" y="98" width="12" height="2" fill="#3a2418"/>
+
+    <!-- can 4: green (peas/beans) -->
+    <rect x="346" y="80" width="20" height="30" fill="#6a8848"/>
+    <rect x="346" y="80" width="20" height="2" fill="#88a868"/>
+    <rect x="346" y="108" width="20" height="2" fill="#4a6828"/>
+    <rect x="346" y="80" width="2" height="30" fill="#4a6828"/>
+    <rect x="364" y="80" width="2" height="30" fill="#4a6828"/>
+    <rect x="348" y="88" width="16" height="14" fill="#f0e4c8"/>
+    <rect x="348" y="88" width="16" height="1" fill="#fff8e0"/>
+    <rect x="348" y="101" width="16" height="1" fill="#c8a878"/>
+    <rect x="350" y="91" width="12" height="2" fill="#6a8848"/>
+    <rect x="350" y="95" width="12" height="2" fill="#3a2418"/>
+
+    <!-- can 5: silver-blue dented (smaller) -->
+    <rect x="370" y="92" width="18" height="18" fill="#a8a098"/>
+    <rect x="370" y="92" width="18" height="2" fill="#c8c0b8"/>
+    <rect x="370" y="108" width="18" height="2" fill="#686058"/>
+    <rect x="370" y="92" width="2" height="18" fill="#686058"/>
+    <rect x="386" y="92" width="2" height="18" fill="#686058"/>
+    <rect x="372" y="98" width="14" height="6" fill="#487098"/>
+    <rect x="372" y="98" width="14" height="1" fill="#6890b8"/>
+    <!-- dent shadow -->
+    <rect x="376" y="100" width="2" height="2" fill="#3a5878" opacity="0.7"/>
+
+    <!-- can 6: cream (soup, very small) -->
+    <rect x="392" y="86" width="20" height="24" fill="#c8b890"/>
+    <rect x="392" y="86" width="20" height="2" fill="#e0d0a8"/>
+    <rect x="392" y="108" width="20" height="2" fill="#8a7858"/>
+    <rect x="392" y="86" width="2" height="24" fill="#8a7858"/>
+    <rect x="410" y="86" width="2" height="24" fill="#8a7858"/>
+    <rect x="394" y="92" width="16" height="12" fill="#a84838"/>
+    <rect x="394" y="92" width="16" height="1" fill="#c86848"/>
+    <rect x="394" y="103" width="16" height="1" fill="#6a2818"/>
+    <rect x="396" y="95" width="12" height="2" fill="#f0e4c8"/>
+    <rect x="396" y="99" width="12" height="2" fill="#f0e4c8" opacity="0.7"/>
+
+    <!-- can 7: short squat (tomato paste-ish) -->
+    <rect x="416" y="98" width="22" height="12" fill="#a84838"/>
+    <rect x="416" y="98" width="22" height="1" fill="#c86848"/>
+    <rect x="416" y="108" width="22" height="2" fill="#6a2818"/>
+    <rect x="416" y="98" width="2" height="12" fill="#6a2818"/>
+    <rect x="436" y="98" width="2" height="12" fill="#6a2818"/>
+    <rect x="418" y="101" width="18" height="6" fill="#f0e4c8"/>
+    <rect x="420" y="103" width="14" height="1" fill="#a84838"/>
+    <rect x="420" y="105" width="14" height="1" fill="#3a2418"/>
+  </g>
+
+  <!-- ============= -->
+  <!-- SHELF 3 - y=176-180, items y=120-176 -->
+  <!-- ============= -->
+  <g id="fc-shelf-3">
+    <rect x="32" y="176" width="416" height="4" fill="url(#fcShelf)"/>
+    <rect x="32" y="176" width="416" height="1" fill="#7a5236"/>
+    <rect x="32" y="179" width="416" height="1" fill="#0a0604"/>
+    <rect x="32" y="180" width="416" height="2" fill="#000000" opacity="0.35" pointer-events="none"/>
+  </g>
+
+  <!-- old radio -->
+  <g id="fc-radio" pointer-events="none">
+    <!-- body -->
+    <rect x="44" y="132" width="76" height="44" fill="#a8886a"/>
+    <rect x="44" y="132" width="76" height="2" fill="#c8a888"/>
+    <rect x="44" y="174" width="76" height="2" fill="#5a3826"/>
+    <rect x="44" y="132" width="2" height="44" fill="#5a3826"/>
+    <rect x="118" y="132" width="2" height="44" fill="#5a3826"/>
+    <!-- speaker grille (left) -->
+    <rect x="50" y="140" width="34" height="28" fill="#3a2418"/>
+    <rect x="50" y="140" width="34" height="1" fill="#1a0e08"/>
+    <rect x="50" y="167" width="34" height="1" fill="#000000"/>
+    <!-- grille slats -->
+    <rect x="52" y="142" width="30" height="1" fill="#5a3826"/>
+    <rect x="52" y="146" width="30" height="1" fill="#5a3826"/>
+    <rect x="52" y="150" width="30" height="1" fill="#5a3826"/>
+    <rect x="52" y="154" width="30" height="1" fill="#5a3826"/>
+    <rect x="52" y="158" width="30" height="1" fill="#5a3826"/>
+    <rect x="52" y="162" width="30" height="1" fill="#5a3826"/>
+    <rect x="52" y="166" width="30" height="1" fill="#5a3826"/>
+    <!-- dial face -->
+    <rect x="88" y="140" width="28" height="14" fill="#e8d8a8"/>
+    <rect x="88" y="140" width="28" height="1" fill="#fff0c0"/>
+    <rect x="88" y="153" width="28" height="1" fill="#a88858"/>
+    <!-- dial tick marks -->
+    <rect x="91" y="146" width="1" height="3" fill="#3a2418"/>
+    <rect x="95" y="146" width="1" height="3" fill="#3a2418"/>
+    <rect x="99" y="146" width="1" height="3" fill="#3a2418"/>
+    <rect x="103" y="146" width="1" height="3" fill="#3a2418"/>
+    <rect x="107" y="146" width="1" height="3" fill="#3a2418"/>
+    <rect x="111" y="146" width="1" height="3" fill="#3a2418"/>
+    <!-- dial needle -->
+    <rect x="100" y="142" width="1" height="11" fill="#a83828"/>
+    <!-- knobs -->
+    <rect x="92" y="160" width="8" height="8" fill="#3a2418"/>
+    <rect x="92" y="160" width="8" height="1" fill="#5a3826"/>
+    <rect x="92" y="167" width="8" height="1" fill="#1a0e08"/>
+    <rect x="95" y="162" width="2" height="4" fill="#a88858"/>
+    <rect x="104" y="160" width="8" height="8" fill="#3a2418"/>
+    <rect x="104" y="160" width="8" height="1" fill="#5a3826"/>
+    <rect x="104" y="167" width="8" height="1" fill="#1a0e08"/>
+    <rect x="107" y="162" width="2" height="4" fill="#a88858"/>
+    <!-- top antenna stub -->
+    <rect x="58" y="128" width="1" height="4" fill="#888090"/>
+    <rect x="58" y="124" width="1" height="4" fill="#a8a0a8"/>
+  </g>
+
+  <!-- cassette tapes stack -->
+  <g id="fc-tapes" pointer-events="none">
+    <!-- bottom cassette -->
+    <rect x="128" y="166" width="40" height="10" fill="#1a1208"/>
+    <rect x="128" y="166" width="40" height="1" fill="#3a2418"/>
+    <rect x="128" y="175" width="40" height="1" fill="#000000"/>
+    <rect x="130" y="168" width="36" height="6" fill="#e0d0a8"/>
+    <rect x="132" y="170" width="14" height="1" fill="#3a2418"/>
+    <rect x="148" y="170" width="14" height="1" fill="#3a2418" opacity="0.6"/>
+    <!-- middle -->
+    <rect x="128" y="156" width="40" height="10" fill="#3a2418"/>
+    <rect x="128" y="156" width="40" height="1" fill="#5a3826"/>
+    <rect x="128" y="165" width="40" height="1" fill="#1a0e08"/>
+    <rect x="130" y="158" width="36" height="6" fill="#a88858"/>
+    <rect x="132" y="160" width="14" height="1" fill="#3a2418"/>
+    <rect x="148" y="160" width="14" height="1" fill="#3a2418" opacity="0.6"/>
+    <!-- top (tilted slightly) -->
+    <rect x="130" y="146" width="40" height="10" fill="#1a1208"/>
+    <rect x="130" y="146" width="40" height="1" fill="#3a2418"/>
+    <rect x="130" y="155" width="40" height="1" fill="#000000"/>
+    <rect x="132" y="148" width="36" height="6" fill="#a83828"/>
+    <rect x="134" y="150" width="14" height="1" fill="#f0e4c8"/>
+    <rect x="150" y="150" width="14" height="1" fill="#f0e4c8" opacity="0.6"/>
+    <!-- reel holes -->
+    <rect x="138" y="171" width="2" height="2" fill="#000000"/>
+    <rect x="156" y="171" width="2" height="2" fill="#000000"/>
+    <rect x="138" y="161" width="2" height="2" fill="#000000"/>
+    <rect x="156" y="161" width="2" height="2" fill="#000000"/>
+    <rect x="140" y="151" width="2" height="2" fill="#000000"/>
+    <rect x="158" y="151" width="2" height="2" fill="#000000"/>
+  </g>
+
+  <!-- rotary phone -->
+  <g id="fc-rotary-phone" pointer-events="none">
+    <!-- base -->
+    <rect x="180" y="156" width="58" height="20" fill="#c8a878"/>
+    <rect x="180" y="156" width="58" height="1" fill="#e0c098"/>
+    <rect x="180" y="174" width="58" height="2" fill="#7a5836"/>
+    <rect x="180" y="156" width="2" height="20" fill="#7a5836"/>
+    <rect x="236" y="156" width="2" height="20" fill="#7a5836"/>
+    <!-- rotary dial -->
+    <rect x="194" y="158" width="20" height="14" fill="#a88858"/>
+    <rect x="194" y="158" width="20" height="1" fill="#c8a878"/>
+    <rect x="194" y="171" width="20" height="1" fill="#5a3826"/>
+    <rect x="194" y="158" width="1" height="14" fill="#5a3826"/>
+    <rect x="213" y="158" width="1" height="14" fill="#5a3826"/>
+    <!-- finger holes -->
+    <rect x="197" y="161" width="2" height="2" fill="#3a2418"/>
+    <rect x="201" y="160" width="2" height="2" fill="#3a2418"/>
+    <rect x="206" y="161" width="2" height="2" fill="#3a2418"/>
+    <rect x="209" y="164" width="2" height="2" fill="#3a2418"/>
+    <rect x="208" y="167" width="2" height="2" fill="#3a2418"/>
+    <rect x="204" y="169" width="2" height="2" fill="#3a2418"/>
+    <rect x="200" y="167" width="2" height="2" fill="#3a2418"/>
+    <rect x="198" y="164" width="2" height="2" fill="#3a2418"/>
+    <!-- handset cradle (right side) -->
+    <rect x="218" y="160" width="18" height="6" fill="#a88858"/>
+    <rect x="218" y="160" width="18" height="1" fill="#c8a878"/>
+    <rect x="218" y="165" width="18" height="1" fill="#5a3826"/>
+    <!-- handset on top -->
+    <rect x="186" y="146" width="48" height="8" fill="#c8a878"/>
+    <rect x="186" y="146" width="48" height="1" fill="#e0c098"/>
+    <rect x="186" y="153" width="48" height="1" fill="#7a5836"/>
+    <rect x="184" y="148" width="2" height="4" fill="#c8a878"/>
+    <rect x="234" y="148" width="2" height="4" fill="#c8a878"/>
+    <!-- earpiece + mouthpiece dots -->
+    <rect x="190" y="148" width="6" height="4" fill="#5a3826"/>
+    <rect x="224" y="148" width="6" height="4" fill="#5a3826"/>
+    <!-- coiled cord -->
+    <rect x="232" y="170" width="2" height="6" fill="#3a2418"/>
+    <rect x="234" y="172" width="6" height="2" fill="#3a2418"/>
+    <rect x="240" y="170" width="2" height="6" fill="#3a2418"/>
+  </g>
+
+  <!-- phantom item slot: rotates between toolbox / sewing kit / cookie tin -->
+  <g id="fc-phantom-slot" pointer-events="none">
+    <!-- variant a: red toolbox -->
+    <g id="fc-phantom-a">
+      <!-- handle -->
+      <rect x="266" y="138" width="22" height="2" fill="#3a2418"/>
+      <rect x="266" y="140" width="2" height="3" fill="#3a2418"/>
+      <rect x="286" y="140" width="2" height="3" fill="#3a2418"/>
+      <!-- body -->
+      <rect x="252" y="144" width="50" height="32" fill="#a83828"/>
+      <rect x="252" y="144" width="50" height="2" fill="#c85848"/>
+      <rect x="252" y="174" width="50" height="2" fill="#5a1808"/>
+      <rect x="252" y="144" width="2" height="32" fill="#5a1808"/>
+      <rect x="300" y="144" width="2" height="32" fill="#5a1808"/>
+      <!-- lid seam -->
+      <rect x="252" y="156" width="50" height="1" fill="#5a1808"/>
+      <rect x="252" y="157" width="50" height="1" fill="#c85848" opacity="0.55"/>
+      <!-- latch -->
+      <rect x="272" y="154" width="10" height="6" fill="#888090"/>
+      <rect x="272" y="154" width="10" height="1" fill="#a8a0a8"/>
+      <rect x="272" y="159" width="10" height="1" fill="#585058"/>
+      <rect x="276" y="156" width="2" height="2" fill="#1a0e08"/>
+      <!-- side handles/lugs -->
+      <rect x="252" y="164" width="3" height="4" fill="#3a2418"/>
+      <rect x="299" y="164" width="3" height="4" fill="#3a2418"/>
+    </g>
+
+    <!-- variant b: floral sewing kit (hidden by default) -->
+    <g id="fc-phantom-b" visibility="hidden">
+      <rect x="252" y="144" width="50" height="32" fill="#b07868"/>
+      <rect x="252" y="144" width="50" height="2" fill="#c89888"/>
+      <rect x="252" y="174" width="50" height="2" fill="#7a4838"/>
+      <rect x="252" y="144" width="2" height="32" fill="#7a4838"/>
+      <rect x="300" y="144" width="2" height="32" fill="#7a4838"/>
+      <rect x="252" y="158" width="50" height="1" fill="#7a4838"/>
+      <rect x="252" y="159" width="50" height="1" fill="#c89888" opacity="0.55"/>
+      <!-- floral pattern dots -->
+      <rect x="258" y="164" width="3" height="3" fill="#f0e4c8"/>
+      <rect x="259" y="165" width="1" height="1" fill="#a83828"/>
+      <rect x="266" y="170" width="3" height="3" fill="#f0e4c8"/>
+      <rect x="267" y="171" width="1" height="1" fill="#a83828"/>
+      <rect x="276" y="164" width="3" height="3" fill="#f0e4c8"/>
+      <rect x="277" y="165" width="1" height="1" fill="#a83828"/>
+      <rect x="284" y="170" width="3" height="3" fill="#f0e4c8"/>
+      <rect x="285" y="171" width="1" height="1" fill="#a83828"/>
+      <rect x="292" y="164" width="3" height="3" fill="#f0e4c8"/>
+      <rect x="293" y="165" width="1" height="1" fill="#a83828"/>
+      <!-- leaves -->
+      <rect x="262" y="167" width="2" height="1" fill="#4a6828"/>
+      <rect x="280" y="167" width="2" height="1" fill="#4a6828"/>
+      <!-- top label -->
+      <rect x="266" y="148" width="22" height="6" fill="#f0e4c8"/>
+      <rect x="266" y="148" width="22" height="1" fill="#fff8e0"/>
+      <rect x="268" y="150" width="18" height="1" fill="#7a4838"/>
+      <rect x="268" y="152" width="14" height="1" fill="#7a4838" opacity="0.7"/>
+    </g>
+
+    <!-- variant c: blue cookie tin (hidden by default) -->
+    <g id="fc-phantom-c" visibility="hidden">
+      <rect x="252" y="148" width="50" height="28" fill="#487898"/>
+      <rect x="252" y="148" width="50" height="2" fill="#6898b8"/>
+      <rect x="252" y="174" width="50" height="2" fill="#284868"/>
+      <rect x="252" y="148" width="2" height="28" fill="#284868"/>
+      <rect x="300" y="148" width="2" height="28" fill="#284868"/>
+      <!-- lid -->
+      <rect x="250" y="142" width="54" height="8" fill="#5888a8"/>
+      <rect x="250" y="142" width="54" height="2" fill="#78a8c8"/>
+      <rect x="250" y="148" width="54" height="2" fill="#284868"/>
+      <!-- label -->
+      <rect x="262" y="156" width="30" height="14" fill="#f0e4c8"/>
+      <rect x="262" y="156" width="30" height="1" fill="#fff8e0"/>
+      <rect x="262" y="169" width="30" height="1" fill="#a87838"/>
+      <rect x="265" y="159" width="24" height="1" fill="#3a2418"/>
+      <rect x="265" y="161" width="24" height="2" fill="#a83828"/>
+      <rect x="265" y="164" width="24" height="1" fill="#3a2418"/>
+      <rect x="265" y="166" width="24" height="2" fill="#3a2418" opacity="0.7"/>
+    </g>
+  </g>
+
+  <!-- magazines / books leaning -->
+  <g id="fc-magazines" pointer-events="none">
+    <!-- back lean (faded blue) -->
+    <rect x="316" y="138" width="22" height="38" fill="#587890" transform="rotate(-6 327 157)"/>
+    <rect x="316" y="138" width="22" height="2" fill="#7898b0" transform="rotate(-6 327 157)"/>
+    <rect x="316" y="174" width="22" height="2" fill="#385878" transform="rotate(-6 327 157)"/>
+    <rect x="320" y="146" width="14" height="2" fill="#f0e4c8" transform="rotate(-6 327 157)"/>
+    <rect x="320" y="150" width="14" height="1" fill="#f0e4c8" opacity="0.7" transform="rotate(-6 327 157)"/>
+    <!-- middle (faded yellow) -->
+    <rect x="332" y="142" width="22" height="34" fill="#c8a848"/>
+    <rect x="332" y="142" width="22" height="2" fill="#e0c068"/>
+    <rect x="332" y="174" width="22" height="2" fill="#8a7028"/>
+    <rect x="336" y="148" width="14" height="2" fill="#3a2418"/>
+    <rect x="336" y="152" width="14" height="1" fill="#3a2418" opacity="0.7"/>
+    <rect x="336" y="156" width="14" height="1" fill="#3a2418" opacity="0.5"/>
+    <!-- front (faded red) -->
+    <rect x="350" y="146" width="22" height="30" fill="#a85848" transform="rotate(5 361 161)"/>
+    <rect x="350" y="146" width="22" height="2" fill="#c87868" transform="rotate(5 361 161)"/>
+    <rect x="350" y="174" width="22" height="2" fill="#7a3828" transform="rotate(5 361 161)"/>
+    <rect x="354" y="152" width="14" height="2" fill="#f0e4c8" transform="rotate(5 361 161)"/>
+    <rect x="354" y="156" width="14" height="1" fill="#f0e4c8" opacity="0.7" transform="rotate(5 361 161)"/>
+  </g>
+
+  <!-- small jar with screws/buttons -->
+  <g id="fc-jar" pointer-events="none">
+    <!-- jar glass -->
+    <rect x="386" y="148" width="28" height="28" fill="#586878" opacity="0.78"/>
+    <rect x="386" y="148" width="28" height="2" fill="#7888a0" opacity="0.7"/>
+    <rect x="386" y="174" width="28" height="2" fill="#384858" opacity="0.85"/>
+    <rect x="386" y="148" width="2" height="28" fill="#384858" opacity="0.65"/>
+    <rect x="412" y="148" width="2" height="28" fill="#384858" opacity="0.65"/>
+    <!-- contents (buttons + screws silhouette) -->
+    <rect x="389" y="160" width="2" height="2" fill="#3a2418"/>
+    <rect x="392" y="162" width="2" height="2" fill="#888090"/>
+    <rect x="395" y="158" width="2" height="2" fill="#a83828"/>
+    <rect x="398" y="164" width="2" height="2" fill="#888090"/>
+    <rect x="401" y="160" width="2" height="2" fill="#3a2418"/>
+    <rect x="404" y="162" width="2" height="2" fill="#c8a848"/>
+    <rect x="407" y="158" width="2" height="2" fill="#888090"/>
+    <rect x="410" y="164" width="2" height="2" fill="#3a2418"/>
+    <rect x="391" y="166" width="2" height="2" fill="#888090"/>
+    <rect x="396" y="168" width="2" height="2" fill="#a83828"/>
+    <rect x="402" y="166" width="2" height="2" fill="#3a2418"/>
+    <rect x="406" y="170" width="2" height="2" fill="#888090"/>
+    <rect x="394" y="172" width="2" height="2" fill="#3a2418"/>
+    <rect x="404" y="172" width="2" height="2" fill="#888090"/>
+    <!-- lid -->
+    <rect x="384" y="142" width="32" height="6" fill="#888090"/>
+    <rect x="384" y="142" width="32" height="2" fill="#a8a0a8"/>
+    <rect x="384" y="146" width="32" height="2" fill="#585058"/>
+    <!-- highlight -->
+    <rect x="389" y="152" width="2" height="14" fill="#a8b8c8" opacity="0.4"/>
+  </g>
+
+  <!-- ============= -->
+  <!-- SHELF 4 - y=242-246, items y=184-242 -->
+  <!-- ============= -->
+  <g id="fc-shelf-4">
+    <rect x="32" y="242" width="416" height="4" fill="url(#fcShelf)"/>
+    <rect x="32" y="242" width="416" height="1" fill="#7a5236"/>
+    <rect x="32" y="245" width="416" height="1" fill="#0a0604"/>
+    <rect x="32" y="246" width="416" height="2" fill="#000000" opacity="0.35" pointer-events="none"/>
+  </g>
+
+  <!-- detergent jug -->
+  <g id="fc-detergent" pointer-events="none">
+    <!-- body -->
+    <rect x="44" y="200" width="48" height="42" fill="#c87838"/>
+    <rect x="44" y="200" width="48" height="2" fill="#e09858"/>
+    <rect x="44" y="240" width="48" height="2" fill="#8a4818"/>
+    <rect x="44" y="200" width="2" height="42" fill="#8a4818"/>
+    <rect x="90" y="200" width="2" height="42" fill="#8a4818"/>
+    <!-- shoulder slope -->
+    <rect x="48" y="196" width="40" height="4" fill="#c87838"/>
+    <rect x="48" y="196" width="40" height="2" fill="#e09858"/>
+    <rect x="46" y="198" width="2" height="2" fill="#c87838"/>
+    <rect x="88" y="198" width="2" height="2" fill="#c87838"/>
+    <!-- cap -->
+    <rect x="60" y="186" width="14" height="10" fill="#5878a0"/>
+    <rect x="60" y="186" width="14" height="2" fill="#78a0c0"/>
+    <rect x="60" y="194" width="14" height="2" fill="#3a5878"/>
+    <!-- handle (right side cutout suggestion) -->
+    <rect x="86" y="208" width="6" height="2" fill="#8a4818"/>
+    <rect x="86" y="222" width="6" height="2" fill="#8a4818"/>
+    <rect x="92" y="208" width="2" height="16" fill="#8a4818" opacity="0.6"/>
+    <!-- label -->
+    <rect x="50" y="212" width="36" height="20" fill="#f0e4c8"/>
+    <rect x="50" y="212" width="36" height="1" fill="#fff8e0"/>
+    <rect x="50" y="231" width="36" height="1" fill="#a87838"/>
+    <rect x="54" y="216" width="28" height="1" fill="#5878a0"/>
+    <rect x="54" y="219" width="28" height="2" fill="#3a2418"/>
+    <rect x="54" y="223" width="28" height="1" fill="#3a2418" opacity="0.7"/>
+    <rect x="54" y="226" width="20" height="2" fill="#a83828"/>
+  </g>
+
+  <!-- yellow bucket -->
+  <g id="fc-bucket" pointer-events="none">
+    <!-- body (slightly tapered: top wider than bottom) -->
+    <rect x="102" y="206" width="50" height="36" fill="#c8a838"/>
+    <rect x="102" y="206" width="50" height="2" fill="#e0c058"/>
+    <rect x="102" y="240" width="50" height="2" fill="#8a7018"/>
+    <rect x="102" y="206" width="2" height="36" fill="#8a7018"/>
+    <rect x="150" y="206" width="2" height="36" fill="#8a7018"/>
+    <rect x="106" y="240" width="42" height="2" fill="#a88828"/>
+    <rect x="104" y="238" width="2" height="2" fill="#8a7018"/>
+    <rect x="150" y="238" width="2" height="2" fill="#8a7018"/>
+    <!-- rim -->
+    <rect x="100" y="204" width="54" height="4" fill="#a88828"/>
+    <rect x="100" y="204" width="54" height="1" fill="#c8a848"/>
+    <rect x="100" y="207" width="54" height="1" fill="#6a5818"/>
+    <!-- wire handle -->
+    <rect x="104" y="194" width="2" height="10" fill="#585058"/>
+    <rect x="148" y="194" width="2" height="10" fill="#585058"/>
+    <rect x="106" y="194" width="42" height="2" fill="#585058"/>
+    <!-- handle highlight -->
+    <rect x="106" y="194" width="42" height="1" fill="#888090"/>
+    <!-- subtle lower highlight on body -->
+    <rect x="108" y="232" width="2" height="6" fill="#e0c058" opacity="0.5"/>
+  </g>
+
+  <!-- vacuum (canister type, partial) -->
+  <g id="fc-vacuum" pointer-events="none">
+    <!-- canister body -->
+    <rect x="160" y="206" width="76" height="36" fill="#988868"/>
+    <rect x="160" y="206" width="76" height="2" fill="#b8a888"/>
+    <rect x="160" y="240" width="76" height="2" fill="#5a4828"/>
+    <rect x="160" y="206" width="2" height="36" fill="#5a4828"/>
+    <rect x="234" y="206" width="2" height="36" fill="#5a4828"/>
+    <!-- top dome -->
+    <rect x="162" y="200" width="72" height="6" fill="#a89878"/>
+    <rect x="162" y="200" width="72" height="2" fill="#b8a888"/>
+    <rect x="162" y="204" width="72" height="2" fill="#7a6848"/>
+    <rect x="160" y="202" width="2" height="4" fill="#988868"/>
+    <rect x="234" y="202" width="2" height="4" fill="#988868"/>
+    <!-- handle on top -->
+    <rect x="184" y="194" width="28" height="2" fill="#3a2418"/>
+    <rect x="184" y="194" width="2" height="6" fill="#3a2418"/>
+    <rect x="210" y="194" width="2" height="6" fill="#3a2418"/>
+    <!-- wheels -->
+    <rect x="166" y="240" width="6" height="4" fill="#1a0e08"/>
+    <rect x="166" y="240" width="6" height="1" fill="#3a2418"/>
+    <rect x="224" y="240" width="6" height="4" fill="#1a0e08"/>
+    <rect x="224" y="240" width="6" height="1" fill="#3a2418"/>
+    <!-- panel/control -->
+    <rect x="200" y="216" width="20" height="12" fill="#3a2418"/>
+    <rect x="200" y="216" width="20" height="1" fill="#5a3826"/>
+    <rect x="200" y="227" width="20" height="1" fill="#1a0e08"/>
+    <rect x="204" y="219" width="3" height="3" fill="#a83828"/>
+    <rect x="210" y="219" width="3" height="3" fill="#c8a848"/>
+    <rect x="216" y="219" width="3" height="3" fill="#6a8848"/>
+    <rect x="208" y="224" width="6" height="2" fill="#5878a0"/>
+    <!-- hose curling out the right side -->
+    <rect x="234" y="220" width="8" height="3" fill="#3a2418"/>
+    <rect x="240" y="220" width="3" height="6" fill="#3a2418"/>
+    <rect x="240" y="226" width="6" height="3" fill="#3a2418"/>
+    <rect x="244" y="226" width="3" height="6" fill="#3a2418"/>
+    <rect x="244" y="232" width="6" height="3" fill="#3a2418"/>
+    <!-- vent slats on body -->
+    <rect x="166" y="212" width="20" height="1" fill="#3a2418"/>
+    <rect x="166" y="216" width="20" height="1" fill="#3a2418"/>
+    <rect x="166" y="220" width="20" height="1" fill="#3a2418"/>
+    <rect x="166" y="224" width="20" height="1" fill="#3a2418"/>
+    <rect x="166" y="228" width="20" height="1" fill="#3a2418"/>
+    <rect x="166" y="232" width="20" height="1" fill="#3a2418"/>
+  </g>
+
+  <!-- broom + dustpan handle peeking -->
+  <g id="fc-broom" pointer-events="none">
+    <!-- broom handle -->
+    <rect x="256" y="186" width="3" height="56" fill="#a88858"/>
+    <rect x="256" y="186" width="1" height="56" fill="#c8a878"/>
+    <rect x="258" y="186" width="1" height="56" fill="#7a5836" opacity="0.7"/>
+    <!-- broom head -->
+    <rect x="250" y="226" width="14" height="6" fill="#5a3826"/>
+    <rect x="250" y="226" width="14" height="2" fill="#7a5836"/>
+    <rect x="250" y="230" width="14" height="2" fill="#3a2418"/>
+    <!-- bristles -->
+    <rect x="251" y="232" width="1" height="8" fill="#c89858"/>
+    <rect x="253" y="232" width="1" height="9" fill="#a87838"/>
+    <rect x="255" y="232" width="1" height="8" fill="#c89858"/>
+    <rect x="257" y="232" width="1" height="10" fill="#a87838"/>
+    <rect x="259" y="232" width="1" height="8" fill="#c89858"/>
+    <rect x="261" y="232" width="1" height="9" fill="#a87838"/>
+    <rect x="263" y="232" width="1" height="8" fill="#c89858"/>
+    <!-- dustpan handle next to it -->
+    <rect x="270" y="190" width="3" height="40" fill="#3a2418"/>
+    <rect x="270" y="190" width="1" height="40" fill="#5a3826"/>
+    <!-- dustpan head -->
+    <rect x="266" y="228" width="16" height="14" fill="#a83828"/>
+    <rect x="266" y="228" width="16" height="2" fill="#c85848"/>
+    <rect x="266" y="240" width="16" height="2" fill="#5a1808"/>
+    <rect x="266" y="228" width="2" height="14" fill="#5a1808"/>
+    <rect x="280" y="228" width="2" height="14" fill="#5a1808"/>
+  </g>
+
+  <!-- clear plastic stacked bins (with visible dark contents) -->
+  <g id="fc-clear-bins" pointer-events="none">
+    <!-- bottom bin -->
+    <rect x="294" y="218" width="146" height="24" fill="#586878" opacity="0.75"/>
+    <rect x="294" y="218" width="146" height="2" fill="#7888a0" opacity="0.85"/>
+    <rect x="294" y="240" width="146" height="2" fill="#384858"/>
+    <rect x="294" y="218" width="2" height="24" fill="#384858"/>
+    <rect x="438" y="218" width="2" height="24" fill="#384858"/>
+    <!-- visible contents (silhouettes inside) -->
+    <rect x="300" y="226" width="22" height="12" fill="#3a2418" opacity="0.75"/>
+    <rect x="324" y="230" width="14" height="8" fill="#5a3826" opacity="0.75"/>
+    <rect x="342" y="224" width="18" height="14" fill="#3a2418" opacity="0.75"/>
+    <rect x="364" y="232" width="20" height="6" fill="#5a3826" opacity="0.75"/>
+    <rect x="388" y="226" width="16" height="12" fill="#3a2418" opacity="0.75"/>
+    <rect x="408" y="230" width="24" height="8" fill="#5a3826" opacity="0.75"/>
+    <!-- lid handles -->
+    <rect x="312" y="216" width="14" height="2" fill="#384858"/>
+    <rect x="408" y="216" width="14" height="2" fill="#384858"/>
+
+    <!-- top bin (smaller, label "XMAS") -->
+    <rect x="306" y="194" width="124" height="24" fill="#587088" opacity="0.78"/>
+    <rect x="306" y="194" width="124" height="2" fill="#7890a8" opacity="0.85"/>
+    <rect x="306" y="216" width="124" height="2" fill="#385068"/>
+    <rect x="306" y="194" width="2" height="24" fill="#385068"/>
+    <rect x="428" y="194" width="2" height="24" fill="#385068"/>
+    <!-- contents: tinsel + bauble silhouettes -->
+    <rect x="314" y="200" width="40" height="14" fill="#4a6838" opacity="0.7"/>
+    <rect x="316" y="202" width="36" height="2" fill="#3a5028" opacity="0.8"/>
+    <rect x="316" y="206" width="36" height="2" fill="#3a5028" opacity="0.8"/>
+    <rect x="316" y="210" width="36" height="2" fill="#3a5028" opacity="0.8"/>
+    <rect x="358" y="204" width="6" height="6" fill="#a83828" opacity="0.85"/>
+    <rect x="368" y="206" width="6" height="6" fill="#c8a848" opacity="0.85"/>
+    <rect x="378" y="204" width="6" height="6" fill="#5878a0" opacity="0.85"/>
+    <rect x="388" y="206" width="6" height="6" fill="#a83828" opacity="0.85"/>
+    <rect x="398" y="204" width="6" height="6" fill="#c8a848" opacity="0.85"/>
+    <rect x="408" y="206" width="6" height="6" fill="#5878a0" opacity="0.85"/>
+    <rect x="418" y="208" width="6" height="6" fill="#a83828" opacity="0.85"/>
+    <!-- label sticker -->
+    <rect x="350" y="196" width="40" height="6" fill="#f0e4c8"/>
+    <rect x="350" y="196" width="40" height="1" fill="#fff8e0"/>
+    <text x="370" y="201" text-anchor="middle" fill="#3a2418"
+          font-family="'Pixel Operator','VT323',monospace" font-size="5" font-weight="bold" letter-spacing="0.5">HOLIDAY</text>
+    <!-- lid handle -->
+    <rect x="358" y="192" width="14" height="2" fill="#385068"/>
+  </g>
+
+  <!-- ============= -->
+  <!-- FLOOR ZONE - items resting on the closet floor (y=246-300) -->
+  <!-- ============= -->
+  <!-- floor itself (already covered by interior fill, just a subtle floor seam) -->
+  <rect x="32" y="298" width="416" height="2" fill="#0a0604" opacity="0.85" pointer-events="none"/>
+  <rect x="32" y="296" width="416" height="2" fill="#3a2818" opacity="0.55" pointer-events="none"/>
+
+  <!-- folded paper bags stack -->
+  <g id="fc-paper-bags" pointer-events="none">
+    <rect x="44" y="270" width="64" height="28" fill="#a08068"/>
+    <rect x="44" y="270" width="64" height="2" fill="#c0a088"/>
+    <rect x="44" y="296" width="64" height="2" fill="#684838"/>
+    <rect x="44" y="270" width="2" height="28" fill="#684838"/>
+    <rect x="106" y="270" width="2" height="28" fill="#684838"/>
+    <!-- fold lines -->
+    <rect x="44" y="278" width="64" height="1" fill="#684838"/>
+    <rect x="44" y="286" width="64" height="1" fill="#684838"/>
+    <rect x="44" y="294" width="64" height="1" fill="#684838"/>
+    <rect x="44" y="282" width="64" height="1" fill="#c0a088" opacity="0.6"/>
+    <rect x="44" y="290" width="64" height="1" fill="#c0a088" opacity="0.6"/>
+    <!-- crinkles -->
+    <rect x="56" y="272" width="3" height="2" fill="#c0a088" opacity="0.7"/>
+    <rect x="76" y="272" width="3" height="2" fill="#c0a088" opacity="0.7"/>
+    <rect x="92" y="272" width="3" height="2" fill="#c0a088" opacity="0.7"/>
+  </g>
+
+  <!-- old electronics box (cardboard, "ELECTRA" stencil) -->
+  <g id="fc-electronics-box" pointer-events="none">
+    <rect x="118" y="252" width="84" height="46" fill="#a07848"/>
+    <rect x="118" y="252" width="84" height="2" fill="#c89868"/>
+    <rect x="118" y="296" width="84" height="2" fill="#6a4828"/>
+    <rect x="118" y="252" width="2" height="46" fill="#6a4828"/>
+    <rect x="200" y="252" width="2" height="46" fill="#6a4828"/>
+    <!-- packing tape across the top -->
+    <rect x="118" y="262" width="84" height="3" fill="#d8c8a8" opacity="0.78"/>
+    <rect x="118" y="262" width="84" height="1" fill="#fff8e0" opacity="0.55"/>
+    <!-- horizontal seam line in middle -->
+    <rect x="118" y="278" width="84" height="1" fill="#6a4828"/>
+    <!-- stencil text -->
+    <text x="160" y="274" text-anchor="middle" fill="#3a2418"
+          font-family="'Pixel Operator','VT323',monospace" font-size="6" font-weight="bold" letter-spacing="0.6">ELECTRA</text>
+    <text x="160" y="290" text-anchor="middle" fill="#3a2418" opacity="0.7"
+          font-family="'Pixel Operator','VT323',monospace" font-size="5" letter-spacing="0.4">FRAGILE / KEEP DRY</text>
+    <!-- corner crease shadow -->
+    <rect x="120" y="252" width="2" height="46" fill="#7a5838" opacity="0.6"/>
+  </g>
+
+  <!-- pair of work boots -->
+  <g id="fc-boots" pointer-events="none">
+    <!-- left boot -->
+    <rect x="212" y="276" width="22" height="22" fill="#5a3618"/>
+    <rect x="212" y="276" width="22" height="2" fill="#7a5028"/>
+    <rect x="212" y="296" width="22" height="2" fill="#2a1808"/>
+    <rect x="212" y="276" width="2" height="22" fill="#2a1808"/>
+    <rect x="232" y="276" width="2" height="22" fill="#2a1808"/>
+    <!-- toe -->
+    <rect x="210" y="288" width="4" height="10" fill="#5a3618"/>
+    <rect x="210" y="288" width="2" height="10" fill="#2a1808"/>
+    <!-- sole -->
+    <rect x="208" y="294" width="28" height="4" fill="#1a0e08"/>
+    <rect x="208" y="294" width="28" height="1" fill="#3a2418"/>
+    <!-- laces -->
+    <rect x="218" y="280" width="10" height="1" fill="#c8a878"/>
+    <rect x="218" y="284" width="10" height="1" fill="#c8a878"/>
+    <rect x="218" y="288" width="10" height="1" fill="#c8a878"/>
+    <rect x="222" y="280" width="2" height="10" fill="#3a2418"/>
+
+    <!-- right boot (slightly behind) -->
+    <rect x="240" y="278" width="22" height="20" fill="#4a2e14"/>
+    <rect x="240" y="278" width="22" height="2" fill="#6a4824"/>
+    <rect x="240" y="296" width="22" height="2" fill="#2a1808"/>
+    <rect x="240" y="278" width="2" height="20" fill="#2a1808"/>
+    <rect x="260" y="278" width="2" height="20" fill="#2a1808"/>
+    <rect x="262" y="290" width="4" height="8" fill="#4a2e14"/>
+    <rect x="262" y="290" width="2" height="8" fill="#2a1808"/>
+    <rect x="238" y="294" width="30" height="4" fill="#1a0e08"/>
+    <rect x="238" y="294" width="30" height="1" fill="#3a2418"/>
+    <rect x="246" y="282" width="10" height="1" fill="#a88858"/>
+    <rect x="246" y="286" width="10" height="1" fill="#a88858"/>
+    <rect x="246" y="290" width="10" height="1" fill="#a88858"/>
+    <rect x="250" y="282" width="2" height="10" fill="#3a2418"/>
+  </g>
+
+  <!-- big floor storage bin (deep blue with handles) -->
+  <g id="fc-floor-bin" pointer-events="none">
+    <!-- body -->
+    <rect x="276" y="252" width="164" height="46" fill="#385868"/>
+    <rect x="276" y="252" width="164" height="2" fill="#587888"/>
+    <rect x="276" y="296" width="164" height="2" fill="#1a2838"/>
+    <rect x="276" y="252" width="2" height="46" fill="#1a2838"/>
+    <rect x="438" y="252" width="2" height="46" fill="#1a2838"/>
+    <!-- lid -->
+    <rect x="272" y="246" width="172" height="8" fill="#486878"/>
+    <rect x="272" y="246" width="172" height="2" fill="#688898"/>
+    <rect x="272" y="252" width="172" height="2" fill="#1a2838"/>
+    <!-- side ribbing -->
+    <rect x="278" y="270" width="160" height="1" fill="#1a2838" opacity="0.55"/>
+    <rect x="278" y="282" width="160" height="1" fill="#1a2838" opacity="0.55"/>
+    <!-- side handles -->
+    <rect x="288" y="266" width="20" height="8" fill="#1a2838"/>
+    <rect x="290" y="268" width="16" height="4" fill="#385868"/>
+    <rect x="408" y="266" width="20" height="8" fill="#1a2838"/>
+    <rect x="410" y="268" width="16" height="4" fill="#385868"/>
+    <!-- big white label -->
+    <rect x="328" y="270" width="60" height="14" fill="#f0e4c8"/>
+    <rect x="328" y="270" width="60" height="1" fill="#fff8e0"/>
+    <rect x="328" y="283" width="60" height="1" fill="#a87838"/>
+    <text x="358" y="278" text-anchor="middle" fill="#3a2418"
+          font-family="'Pixel Operator','VT323',monospace" font-size="6" font-weight="bold" letter-spacing="0.5">KEEPSAKES</text>
+    <text x="358" y="282" text-anchor="middle" fill="#3a2418" opacity="0.7"
+          font-family="'Pixel Operator','VT323',monospace" font-size="4" letter-spacing="0.4">do not throw out</text>
+    <!-- subtle floor highlight -->
+    <rect x="276" y="296" width="164" height="1" fill="#587888" opacity="0.4"/>
+  </g>
+
+  <!-- ============= -->
+  <!-- INDEPENDENT SHADOW - drifts behind the radio without quite matching it -->
+  <!-- ============= -->
+  <g id="fc-independent-shadow" pointer-events="none" opacity="0.45">
+    <rect x="120" y="160" width="48" height="14" fill="#0a0604">
+      <animate attributeName="x" values="120;124;120;118;120" dur="11s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.45;0.32;0.50;0.40;0.45" dur="11s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- subtle cobweb in upper right corner -->
+  <g id="fc-cobweb" pointer-events="none" opacity="0.35">
+    <rect x="430" y="22" width="1" height="6" fill="#d8c8a8"/>
+    <rect x="430" y="22" width="6" height="1" fill="#d8c8a8"/>
+    <rect x="432" y="24" width="2" height="1" fill="#d8c8a8"/>
+    <rect x="434" y="22" width="1" height="4" fill="#d8c8a8"/>
+    <rect x="436" y="24" width="2" height="1" fill="#d8c8a8"/>
+    <rect x="430" y="28" width="2" height="1" fill="#d8c8a8"/>
+  </g>
+
+  <!-- ============= -->
+  <!-- DUST MOTES drifting through the bulb glow -->
+  <!-- ============= -->
+  <g id="fc-dust" pointer-events="none">
+    <rect x="200" y="60" width="1" height="1" fill="#f4e0a8" opacity="0.7">
+      <animate attributeName="y" values="60;120;60" dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.5;0.85;0.5" dur="14s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="240" y="80" width="1" height="1" fill="#f4e0a8" opacity="0.6">
+      <animate attributeName="y" values="80;160;80" dur="18s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0.75;0.4" dur="18s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="280" y="50" width="1" height="1" fill="#f4e0a8" opacity="0.65">
+      <animate attributeName="y" values="50;110;50" dur="16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.45;0.8;0.45" dur="16s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="170" y="100" width="1" height="1" fill="#f4e0a8" opacity="0.55">
+      <animate attributeName="y" values="100;180;100" dur="20s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.35;0.7;0.35" dur="20s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="320" y="120" width="1" height="1" fill="#f4e0a8" opacity="0.6">
+      <animate attributeName="y" values="120;200;120" dur="17s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0.75;0.4" dur="17s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ============= -->
+  <!-- SIDE / EDGE DARKENING - frames the cramped feeling -->
+  <!-- ============= -->
+  <rect x="32" y="20" width="60" height="284" fill="url(#fcSidesL)" opacity="0.75" pointer-events="none"/>
+  <rect x="388" y="20" width="60" height="284" fill="url(#fcSidesR)" opacity="0.75" pointer-events="none"/>
+  <!-- top/bottom vignette -->
+  <rect x="32" y="20" width="416" height="20" fill="#000000" opacity="0.35" pointer-events="none"/>
+  <rect x="32" y="284" width="416" height="20" fill="#000000" opacity="0.45" pointer-events="none"/>
+
+  <!-- ============= -->
+  <!-- DEEP HOTSPOT - sits behind shelves; only visible darkness is clickable -->
+  <!-- placed BEFORE shelf-item hotspots so item hotspots take precedence -->
+  <!-- ============= -->
+  <rect id="hit-deeper" x="32" y="20" width="416" height="284" fill="transparent" style="cursor:pointer"/>
+
+  <!-- ============= -->
+  <!-- HOTSPOTS (transparent, on top of everything else) -->
+  <!-- ============= -->
+  <!-- top shelf -->
+  <rect id="hit-grocery-bags" x="42" y="22" width="80" height="26" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-bin-top" x="128" y="22" width="92" height="26" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-shoeboxes-top" x="228" y="22" width="84" height="26" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-seasonal" x="320" y="22" width="120" height="26" fill="transparent" style="cursor:pointer"/>
+
+  <!-- shelf 2 -->
+  <rect id="hit-cleaners" x="42" y="58" width="116" height="54" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-towels" x="164" y="62" width="96" height="50" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-cans" x="266" y="74" width="176" height="38" fill="transparent" style="cursor:pointer"/>
+
+  <!-- shelf 3 -->
+  <rect id="hit-radio" x="42" y="124" width="80" height="54" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-tapes" x="124" y="142" width="50" height="36" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-rotary-phone" x="178" y="142" width="64" height="36" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-phantom" x="248" y="134" width="58" height="44" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-magazines" x="312" y="138" width="62" height="40" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-jar" x="380" y="140" width="40" height="38" fill="transparent" style="cursor:pointer"/>
+
+  <!-- shelf 4 -->
+  <rect id="hit-detergent" x="42" y="184" width="56" height="60" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-bucket" x="98" y="190" width="58" height="54" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-vacuum" x="158" y="190" width="92" height="54" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-broom" x="248" y="184" width="38" height="60" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-clear-bins" x="290" y="190" width="152" height="54" fill="transparent" style="cursor:pointer"/>
+
+  <!-- floor -->
+  <rect id="hit-paper-bags" x="42" y="266" width="70" height="34" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-electronics-box" x="116" y="248" width="90" height="52" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-boots" x="208" y="272" width="60" height="28" fill="transparent" style="cursor:pointer"/>
+  <rect id="hit-floor-bin" x="270" y="244" width="174" height="56" fill="transparent" style="cursor:pointer"/>
+</svg>

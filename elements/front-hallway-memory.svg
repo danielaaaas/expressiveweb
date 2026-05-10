@@ -1,0 +1,589 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" shape-rendering="crispEdges">
+  <title>Front hallway memory fragment</title>
+  <desc>Cropped vignette: the apartment front door at night, key hook, hanging coat, lined-up shoes, and a thin warm light leaking under the threshold.</desc>
+
+  <defs>
+    <linearGradient id="fhWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a4030"/>
+      <stop offset="55%" stop-color="#4a3424"/>
+      <stop offset="100%" stop-color="#2c1c12"/>
+    </linearGradient>
+    <linearGradient id="fhFloor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a2818"/>
+      <stop offset="100%" stop-color="#1a100a"/>
+    </linearGradient>
+    <linearGradient id="fhDoor" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#5a7c7c"/>
+      <stop offset="50%" stop-color="#4a6a6a"/>
+      <stop offset="100%" stop-color="#3a5454"/>
+    </linearGradient>
+    <linearGradient id="fhDoorPanel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a5454"/>
+      <stop offset="100%" stop-color="#2a3e3e"/>
+    </linearGradient>
+    <linearGradient id="fhFrame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a2418"/>
+      <stop offset="100%" stop-color="#1a100a"/>
+    </linearGradient>
+    <linearGradient id="fhCoat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a4a5a"/>
+      <stop offset="100%" stop-color="#1a2438"/>
+    </linearGradient>
+    <radialGradient id="fhUnderGlow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%" stop-color="#f4c878" stop-opacity="0.85"/>
+      <stop offset="60%" stop-color="#a87838" stop-opacity="0.40"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="fhSidesL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fhSidesR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.50"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="fhSoftGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- ============= -->
+  <!-- WALL & FLOOR -->
+  <!-- ============= -->
+  <rect width="480" height="320" fill="url(#fhWall)"/>
+
+  <!-- subtle wall texture (faint vertical stripes, sparse dots) -->
+  <g id="fh-wall-tex" pointer-events="none" opacity="0.30">
+    <rect x="40" y="0" width="1" height="258" fill="#7a5a44"/>
+    <rect x="80" y="0" width="1" height="258" fill="#7a5a44"/>
+    <rect x="120" y="0" width="1" height="258" fill="#7a5a44"/>
+    <rect x="380" y="0" width="1" height="258" fill="#7a5a44"/>
+    <rect x="420" y="0" width="1" height="258" fill="#7a5a44"/>
+    <rect x="460" y="0" width="1" height="258" fill="#7a5a44"/>
+    <rect x="60" y="40" width="2" height="2" fill="#7a5a44" opacity="0.6"/>
+    <rect x="100" y="80" width="2" height="2" fill="#7a5a44" opacity="0.6"/>
+    <rect x="140" y="50" width="2" height="2" fill="#7a5a44" opacity="0.6"/>
+    <rect x="380" y="40" width="2" height="2" fill="#7a5a44" opacity="0.6"/>
+    <rect x="420" y="80" width="2" height="2" fill="#7a5a44" opacity="0.6"/>
+    <rect x="460" y="50" width="2" height="2" fill="#7a5a44" opacity="0.6"/>
+    <!-- discoloration patches near doorframe (years of fingerprints) -->
+    <rect x="120" y="140" width="32" height="60" fill="#3a2418" opacity="0.18"/>
+    <rect x="350" y="140" width="32" height="60" fill="#3a2418" opacity="0.18"/>
+  </g>
+
+  <!-- side darkening enforces the tight cinematic crop -->
+  <rect x="0" y="0" width="36" height="320" fill="url(#fhSidesL)"/>
+  <rect x="444" y="0" width="36" height="320" fill="url(#fhSidesR)"/>
+
+  <!-- ceiling shadow line -->
+  <rect x="0" y="0" width="480" height="4" fill="#1a100a" opacity="0.6"/>
+  <rect x="0" y="4" width="480" height="2" fill="#3a2418" opacity="0.4"/>
+
+  <!-- baseboard + floor -->
+  <rect x="0" y="278" width="480" height="4" fill="#5a3a26"/>
+  <rect x="0" y="278" width="480" height="2" fill="#7a5236"/>
+  <rect x="0" y="282" width="480" height="38" fill="url(#fhFloor)"/>
+  <rect x="0" y="296" width="480" height="1" fill="#0e0a06" opacity="0.55"/>
+  <rect x="0" y="312" width="480" height="1" fill="#0e0a06" opacity="0.45"/>
+  <rect x="120" y="282" width="1" height="38" fill="#0e0a06" opacity="0.45"/>
+  <rect x="240" y="282" width="1" height="38" fill="#0e0a06" opacity="0.45"/>
+  <rect x="360" y="282" width="1" height="38" fill="#0e0a06" opacity="0.45"/>
+
+  <!-- ============= -->
+  <!-- WARM LIGHT SPILL ON THE FLOOR (from under the door) -->
+  <!-- ============= -->
+  <g id="fh-floor-spill" pointer-events="none">
+    <rect x="100" y="282" width="280" height="36" fill="url(#fhUnderGlow)" opacity="0.85">
+      <animate attributeName="opacity" values="0.7;0.95;0.78;0.92;0.74;0.9" dur="7.2s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ============= -->
+  <!-- LEFT ENTRY: KEY HOOK BOARD + KEYS + MAIL + NOTE -->
+  <!-- ============= -->
+  <g id="fh-key-board">
+    <!-- wooden plank with hooks -->
+    <rect x="22" y="148" width="100" height="14" fill="#5a3826"/>
+    <rect x="22" y="148" width="100" height="3" fill="#7a5236"/>
+    <rect x="22" y="148" width="100" height="14" fill="none" stroke="#1a100a" stroke-width="1"/>
+    <!-- subtle wood grain -->
+    <rect x="22" y="155" width="100" height="1" fill="#3a2418" opacity="0.45"/>
+    <!-- 3 brass hooks under the plank -->
+    <rect x="38" y="162" width="3" height="6" fill="#a88848"/>
+    <rect x="36" y="166" width="7" height="2" fill="#a88848"/>
+    <rect x="70" y="162" width="3" height="6" fill="#a88848"/>
+    <rect x="68" y="166" width="7" height="2" fill="#a88848"/>
+    <rect x="102" y="162" width="3" height="6" fill="#a88848"/>
+    <rect x="100" y="166" width="7" height="2" fill="#a88848"/>
+  </g>
+
+  <!-- KEYS hanging on middle hook -->
+  <g id="fh-keys">
+    <!-- key ring -->
+    <rect x="68" y="172" width="6" height="6" fill="none" stroke="#a89880" stroke-width="1"/>
+    <rect x="69" y="173" width="4" height="4" fill="none" stroke="#dccfb8" stroke-width="1"/>
+    <!-- key 1 (long brass, dangling left) -->
+    <rect x="64" y="178" width="3" height="14" fill="#c8a868"/>
+    <rect x="62" y="178" width="7" height="4" fill="#c8a868"/>
+    <rect x="62" y="178" width="7" height="1" fill="#e8c888"/>
+    <rect x="64" y="190" width="3" height="2" fill="#c8a868"/>
+    <rect x="65" y="186" width="2" height="2" fill="#a88848"/>
+    <!-- key 2 (silver, center) -->
+    <rect x="70" y="178" width="3" height="16" fill="#a8a8b8"/>
+    <rect x="68" y="178" width="7" height="3" fill="#a8a8b8"/>
+    <rect x="68" y="178" width="7" height="1" fill="#c8c8d8"/>
+    <rect x="70" y="192" width="3" height="2" fill="#a8a8b8"/>
+    <!-- key 3 (small bronze, right) -->
+    <rect x="76" y="178" width="3" height="11" fill="#9a6838"/>
+    <rect x="74" y="178" width="7" height="3" fill="#9a6838"/>
+    <rect x="74" y="178" width="7" height="1" fill="#bb8858"/>
+  </g>
+
+  <!-- a single key on the LEFT hook (lonely) -->
+  <g id="fh-spare-key">
+    <rect x="38" y="172" width="4" height="4" fill="none" stroke="#a89880" stroke-width="1"/>
+    <rect x="38" y="178" width="2" height="10" fill="#c8a868"/>
+    <rect x="36" y="178" width="6" height="3" fill="#c8a868"/>
+    <rect x="36" y="178" width="6" height="1" fill="#e8c888"/>
+  </g>
+
+  <!-- MAIL POCKET / WALL BASKET below the hook board -->
+  <g id="fh-mail">
+    <rect x="22" y="186" width="100" height="40" fill="#3a2418"/>
+    <rect x="22" y="186" width="100" height="3" fill="#5a3826"/>
+    <rect x="22" y="186" width="100" height="40" fill="none" stroke="#1a100a" stroke-width="1"/>
+    <!-- weave texture -->
+    <rect x="22" y="200" width="100" height="1" fill="#1a100a" opacity="0.6"/>
+    <rect x="22" y="214" width="100" height="1" fill="#1a100a" opacity="0.6"/>
+    <rect x="40" y="186" width="1" height="40" fill="#1a100a" opacity="0.5"/>
+    <rect x="60" y="186" width="1" height="40" fill="#1a100a" opacity="0.5"/>
+    <rect x="80" y="186" width="1" height="40" fill="#1a100a" opacity="0.5"/>
+    <rect x="100" y="186" width="1" height="40" fill="#1a100a" opacity="0.5"/>
+    <!-- envelopes peeking out -->
+    <rect x="32" y="180" width="36" height="14" fill="#dccfb8"/>
+    <rect x="32" y="180" width="36" height="2" fill="#ecdfb8"/>
+    <rect x="32" y="180" width="36" height="14" fill="none" stroke="#7a5a3a" stroke-width="1"/>
+    <rect x="46" y="186" width="8" height="2" fill="#7a5a3a" opacity="0.45"/>
+    <rect x="62" y="184" width="42" height="12" fill="#c8b890"/>
+    <rect x="62" y="184" width="42" height="2" fill="#dccfa8"/>
+    <rect x="62" y="184" width="42" height="12" fill="none" stroke="#7a5a3a" stroke-width="1"/>
+    <rect x="80" y="190" width="10" height="2" fill="#a85040" opacity="0.7"/>
+  </g>
+
+  <!-- FOLDED NOTE pinned above the hook board -->
+  <g id="fh-note">
+    <rect x="78" y="118" width="22" height="24" fill="#ecdfb8" transform="rotate(-4 89 130)"/>
+    <rect x="78" y="118" width="22" height="2" fill="#fff4d8" transform="rotate(-4 89 130)"/>
+    <rect x="78" y="118" width="22" height="24" fill="none" stroke="#a89870" stroke-width="1" transform="rotate(-4 89 130)"/>
+    <!-- handwriting hint -->
+    <rect x="80" y="124" width="14" height="1" fill="#3a2418" opacity="0.55" transform="rotate(-4 89 130)"/>
+    <rect x="80" y="128" width="18" height="1" fill="#3a2418" opacity="0.55" transform="rotate(-4 89 130)"/>
+    <rect x="80" y="132" width="12" height="1" fill="#3a2418" opacity="0.55" transform="rotate(-4 89 130)"/>
+    <rect x="80" y="136" width="16" height="1" fill="#3a2418" opacity="0.55" transform="rotate(-4 89 130)"/>
+    <!-- pin -->
+    <rect x="87" y="116" width="3" height="3" fill="#a85040"/>
+    <rect x="88" y="115" width="1" height="1" fill="#c87060"/>
+  </g>
+
+  <!-- LIGHT SWITCH on left wall -->
+  <g id="fh-light-switch">
+    <rect x="124" y="160" width="14" height="22" fill="#dccfb8"/>
+    <rect x="124" y="160" width="14" height="2" fill="#ecdfb8"/>
+    <rect x="124" y="160" width="14" height="22" fill="none" stroke="#7a5a3a" stroke-width="1"/>
+    <!-- toggle (down position) -->
+    <rect x="129" y="170" width="4" height="8" fill="#a89880"/>
+    <rect x="129" y="170" width="4" height="1" fill="#dccfb8"/>
+    <rect x="129" y="177" width="4" height="1" fill="#5a4838"/>
+    <!-- tiny status dot (sometimes lit) -->
+    <rect x="130" y="164" width="2" height="2" fill="#5eff9a" opacity="0.6">
+      <animate attributeName="opacity" values="0.2;0.8;0.3;0.7;0.25" dur="6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ============= -->
+  <!-- DOOR FRAME (jamb + header) -->
+  <!-- ============= -->
+  <g id="fh-frame">
+    <!-- header -->
+    <rect x="148" y="32" width="204" height="10" fill="url(#fhFrame)"/>
+    <rect x="148" y="32" width="204" height="2" fill="#5a3826"/>
+    <!-- left jamb -->
+    <rect x="148" y="32" width="6" height="246" fill="url(#fhFrame)"/>
+    <rect x="148" y="32" width="2" height="246" fill="#5a3826" opacity="0.7"/>
+    <!-- right jamb -->
+    <rect x="346" y="32" width="6" height="246" fill="url(#fhFrame)"/>
+    <rect x="350" y="32" width="2" height="246" fill="#1a100a" opacity="0.7"/>
+    <!-- shadow above the door (from header lip) -->
+    <rect x="154" y="42" width="192" height="2" fill="#000000" opacity="0.55"/>
+  </g>
+
+  <!-- ============= -->
+  <!-- THE DOOR ITSELF -->
+  <!-- ============= -->
+  <g id="fh-door">
+    <!-- door body (animates with subtle "knock" shake every once in a while) -->
+    <g id="fh-door-shaker">
+      <animateTransform attributeName="transform" type="translate"
+        values="0 0; 0 0; 0 0; 0 0; 0 0; -0.6 0; 0.4 0; -0.4 0; 0 0; 0 0; 0 0; 0 0; 0 0; 0 0; 0 0; 0 0"
+        dur="22s" repeatCount="indefinite"/>
+
+      <rect x="154" y="40" width="192" height="240" fill="url(#fhDoor)"/>
+      <rect x="154" y="40" width="192" height="3" fill="#7a9a9a"/>
+      <rect x="154" y="276" width="192" height="3" fill="#1a2424" opacity="0.7"/>
+      <rect x="154" y="40" width="192" height="240" fill="none" stroke="#1a2424" stroke-width="1"/>
+      <rect x="344" y="40" width="2" height="240" fill="#1a2424" opacity="0.6"/>
+
+      <!-- DOOR PANELS (4 raised panels with bevel) -->
+      <!-- top-left panel -->
+      <g id="fh-panel-tl">
+        <rect x="166" y="56" width="78" height="78" fill="url(#fhDoorPanel)"/>
+        <!-- highlight (top-left bevel) -->
+        <rect x="166" y="56" width="78" height="1" fill="#7a9a9a"/>
+        <rect x="166" y="56" width="1" height="78" fill="#7a9a9a"/>
+        <!-- shadow (bottom-right bevel) -->
+        <rect x="166" y="133" width="78" height="1" fill="#1a2424"/>
+        <rect x="243" y="56" width="1" height="78" fill="#1a2424"/>
+      </g>
+      <!-- top-right panel -->
+      <g id="fh-panel-tr">
+        <rect x="256" y="56" width="78" height="78" fill="url(#fhDoorPanel)"/>
+        <rect x="256" y="56" width="78" height="1" fill="#7a9a9a"/>
+        <rect x="256" y="56" width="1" height="78" fill="#7a9a9a"/>
+        <rect x="256" y="133" width="78" height="1" fill="#1a2424"/>
+        <rect x="333" y="56" width="1" height="78" fill="#1a2424"/>
+      </g>
+      <!-- mid rail (slightly raised divider) -->
+      <rect x="156" y="138" width="188" height="6" fill="#3a5454"/>
+      <rect x="156" y="138" width="188" height="1" fill="#7a9a9a"/>
+      <rect x="156" y="143" width="188" height="1" fill="#1a2424"/>
+      <!-- bottom-left panel (taller) -->
+      <g id="fh-panel-bl">
+        <rect x="166" y="152" width="78" height="112" fill="url(#fhDoorPanel)"/>
+        <rect x="166" y="152" width="78" height="1" fill="#7a9a9a"/>
+        <rect x="166" y="152" width="1" height="112" fill="#7a9a9a"/>
+        <rect x="166" y="263" width="78" height="1" fill="#1a2424"/>
+        <rect x="243" y="152" width="1" height="112" fill="#1a2424"/>
+      </g>
+      <!-- bottom-right panel -->
+      <g id="fh-panel-br">
+        <rect x="256" y="152" width="78" height="112" fill="url(#fhDoorPanel)"/>
+        <rect x="256" y="152" width="78" height="1" fill="#7a9a9a"/>
+        <rect x="256" y="152" width="1" height="112" fill="#7a9a9a"/>
+        <rect x="256" y="263" width="78" height="1" fill="#1a2424"/>
+        <rect x="333" y="152" width="1" height="112" fill="#1a2424"/>
+      </g>
+
+      <!-- KICK PLATE at bottom of door -->
+      <rect x="156" y="266" width="188" height="10" fill="#a89880"/>
+      <rect x="156" y="266" width="188" height="2" fill="#c8b89c"/>
+      <rect x="156" y="274" width="188" height="2" fill="#5a4838" opacity="0.6"/>
+      <!-- screws on kick plate -->
+      <rect x="160" y="270" width="2" height="2" fill="#5a4838"/>
+      <rect x="338" y="270" width="2" height="2" fill="#5a4838"/>
+
+      <!-- subtle wear scuffs near doorknob -->
+      <rect x="290" y="180" width="36" height="2" fill="#1a2424" opacity="0.25"/>
+      <rect x="298" y="186" width="22" height="1" fill="#1a2424" opacity="0.25"/>
+      <rect x="295" y="170" width="14" height="1" fill="#1a2424" opacity="0.25"/>
+
+      <!-- PEEPHOLE (centered upper) -->
+      <g id="fh-peephole">
+        <rect x="244" y="92" width="12" height="12" fill="#1a100a"/>
+        <rect x="244" y="92" width="12" height="12" fill="none" stroke="#a88848" stroke-width="2"/>
+        <rect x="246" y="94" width="8" height="8" fill="#0a0608"/>
+        <!-- inner glint, very subtle pulsing (something looking back) -->
+        <rect x="248" y="96" width="2" height="2" fill="#f4c878" opacity="0.45">
+          <animate attributeName="opacity" values="0.15;0.55;0.20;0.50;0.18" dur="4.4s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+
+      <!-- CHAIN LOCK (slide rail + dangling chain, hangs unused) -->
+      <g id="fh-chain-lock">
+        <!-- slide rail mounted on the door -->
+        <rect x="158" y="116" width="44" height="8" fill="#7a7a82"/>
+        <rect x="158" y="116" width="44" height="2" fill="#a8a8b0"/>
+        <rect x="158" y="122" width="44" height="2" fill="#3a3a44" opacity="0.7"/>
+        <!-- track slot -->
+        <rect x="164" y="119" width="32" height="2" fill="#1a1a22"/>
+        <!-- slider knob -->
+        <rect x="186" y="117" width="6" height="6" fill="#c8c8d2"/>
+        <rect x="186" y="117" width="6" height="1" fill="#ecece8"/>
+        <!-- chain links hanging -->
+        <rect x="200" y="120" width="4" height="2" fill="#a8a8b0"/>
+        <rect x="204" y="122" width="3" height="2" fill="#a8a8b0"/>
+        <rect x="207" y="124" width="3" height="2" fill="#a8a8b0"/>
+        <rect x="210" y="126" width="3" height="2" fill="#a8a8b0"/>
+        <rect x="213" y="128" width="3" height="2" fill="#a8a8b0"/>
+        <rect x="216" y="130" width="3" height="2" fill="#a8a8b0"/>
+        <rect x="219" y="132" width="3" height="2" fill="#a8a8b0"/>
+        <rect x="222" y="134" width="3" height="2" fill="#a8a8b0"/>
+        <rect x="225" y="135" width="3" height="2" fill="#a8a8b0"/>
+        <!-- chain end (dangling) -->
+        <rect x="228" y="137" width="4" height="4" fill="#7a7a82"/>
+        <rect x="228" y="137" width="4" height="1" fill="#a8a8b0"/>
+        <!-- subtle chain rattle -->
+        <animateTransform attributeName="transform" type="translate"
+          values="0 0; 0 0; 0 0; 0 0; 0 0.6; 0 -0.4; 0 0.4; 0 0; 0 0; 0 0; 0 0; 0 0; 0 0; 0 0; 0 0"
+          dur="22s" repeatCount="indefinite"/>
+      </g>
+
+      <!-- DOORKNOB -->
+      <g id="fh-knob">
+        <!-- back plate -->
+        <rect x="318" y="186" width="22" height="22" fill="#a88848"/>
+        <rect x="318" y="186" width="22" height="2" fill="#d8b878"/>
+        <rect x="318" y="206" width="22" height="2" fill="#5a4828" opacity="0.7"/>
+        <!-- knob (round) -->
+        <rect x="322" y="190" width="14" height="14" fill="#c8a868"/>
+        <rect x="322" y="190" width="14" height="2" fill="#ecd098"/>
+        <rect x="322" y="202" width="14" height="2" fill="#7a5828" opacity="0.7"/>
+        <rect x="324" y="192" width="2" height="2" fill="#fff4d8"/>
+      </g>
+    </g>
+
+    <!-- ============= -->
+    <!-- LIGHT SEEPING UNDER THE DOOR (color cycles for magical realism) -->
+    <!-- ============= -->
+    <g id="fh-under-door" pointer-events="none">
+      <!-- thin warm strip directly under door, swappable color -->
+      <rect id="fh-under-strip-warm" class="fh-under-strip" x="154" y="276" width="192" height="3" fill="#f4c878" opacity="0.95"/>
+      <rect id="fh-under-strip-cool" class="fh-under-strip" x="154" y="276" width="192" height="3" fill="#88c0e8" opacity="0" visibility="hidden"/>
+      <rect id="fh-under-strip-green" class="fh-under-strip" x="154" y="276" width="192" height="3" fill="#a8e0a8" opacity="0" visibility="hidden"/>
+      <rect id="fh-under-strip-red" class="fh-under-strip" x="154" y="276" width="192" height="3" fill="#f48868" opacity="0" visibility="hidden"/>
+      <!-- subtle flicker on the strip -->
+      <rect x="154" y="276" width="192" height="3" fill="#ffffff" opacity="0.10">
+        <animate attributeName="opacity" values="0.04;0.18;0.06;0.14;0.05" dur="3.4s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+
+  <!-- ============= -->
+  <!-- RIGHT ENTRY: COAT HOOK + COAT + SHOES -->
+  <!-- ============= -->
+
+  <!-- coat hook -->
+  <g id="fh-coat-hook">
+    <rect x="394" y="84" width="38" height="6" fill="#5a3826"/>
+    <rect x="394" y="84" width="38" height="2" fill="#7a5236"/>
+    <rect x="394" y="84" width="38" height="6" fill="none" stroke="#1a100a" stroke-width="1"/>
+    <!-- hook -->
+    <rect x="411" y="90" width="3" height="6" fill="#a88848"/>
+    <rect x="409" y="94" width="7" height="2" fill="#a88848"/>
+  </g>
+
+  <!-- HANGING PUFFER COAT (hung by the small fabric loop at the back of the collar) -->
+  <g id="fh-coat">
+    <!-- COAT HANGING LOOP at back of collar, slung over the brass hook -->
+    <rect x="410" y="92" width="6" height="2" fill="#3a4a5a"/>
+    <rect x="410" y="94" width="2" height="6" fill="#3a4a5a"/>
+    <rect x="414" y="94" width="2" height="6" fill="#3a4a5a"/>
+
+    <!-- HOOD (puffy, rounded) -->
+    <rect x="396" y="100" width="34" height="2" fill="url(#fhCoat)"/>
+    <rect x="394" y="102" width="38" height="2" fill="url(#fhCoat)"/>
+    <rect x="392" y="104" width="42" height="14" fill="url(#fhCoat)"/>
+    <rect x="392" y="104" width="42" height="2" fill="#5a6a82"/>
+    <rect x="392" y="116" width="42" height="2" fill="#1a2438" opacity="0.55"/>
+    <!-- hood opening (dark inside) -->
+    <rect x="404" y="106" width="18" height="12" fill="#1a2030"/>
+    <rect x="404" y="106" width="18" height="2" fill="#0a1018"/>
+    <!-- hood drawstrings dangling, with little tipped ends -->
+    <rect x="406" y="118" width="1" height="6" fill="#3a4a5a"/>
+    <rect x="405" y="124" width="3" height="2" fill="#a89880"/>
+    <rect x="420" y="118" width="1" height="9" fill="#3a4a5a"/>
+    <rect x="419" y="127" width="3" height="2" fill="#a89880"/>
+
+    <!-- SHOULDERS (very puffy, wider than body) -->
+    <rect x="382" y="118" width="52" height="4" fill="url(#fhCoat)"/>
+    <rect x="378" y="122" width="60" height="12" fill="url(#fhCoat)"/>
+    <rect x="378" y="122" width="60" height="1" fill="#5a6a82" opacity="0.7"/>
+    <rect x="378" y="132" width="60" height="2" fill="#1a2438" opacity="0.55"/>
+
+    <!-- ZIPPER LINE (down the front) -->
+    <rect x="412" y="118" width="2" height="98" fill="#1a2030" opacity="0.85"/>
+    <!-- zipper teeth dots -->
+    <rect x="411" y="124" width="1" height="1" fill="#a89880" opacity="0.55"/>
+    <rect x="414" y="124" width="1" height="1" fill="#a89880" opacity="0.55"/>
+    <rect x="411" y="132" width="1" height="1" fill="#a89880" opacity="0.55"/>
+    <rect x="414" y="132" width="1" height="1" fill="#a89880" opacity="0.55"/>
+    <rect x="411" y="142" width="1" height="1" fill="#a89880" opacity="0.55"/>
+    <rect x="414" y="142" width="1" height="1" fill="#a89880" opacity="0.55"/>
+    <rect x="411" y="156" width="1" height="1" fill="#a89880" opacity="0.55"/>
+    <rect x="414" y="156" width="1" height="1" fill="#a89880" opacity="0.55"/>
+    <rect x="411" y="170" width="1" height="1" fill="#a89880" opacity="0.55"/>
+    <rect x="414" y="170" width="1" height="1" fill="#a89880" opacity="0.55"/>
+    <rect x="411" y="186" width="1" height="1" fill="#a89880" opacity="0.55"/>
+    <rect x="414" y="186" width="1" height="1" fill="#a89880" opacity="0.55"/>
+    <rect x="411" y="200" width="1" height="1" fill="#a89880" opacity="0.55"/>
+    <rect x="414" y="200" width="1" height="1" fill="#a89880" opacity="0.55"/>
+
+    <!-- BODY: 6 quilted horizontal puff panels (each with highlight top + shadow bottom for the puff effect) -->
+    <rect x="378" y="134" width="60" height="14" fill="url(#fhCoat)"/>
+    <rect x="378" y="134" width="60" height="2" fill="#5a6a82" opacity="0.55"/>
+    <rect x="378" y="146" width="60" height="2" fill="#1a2438" opacity="0.6"/>
+
+    <rect x="378" y="148" width="60" height="14" fill="url(#fhCoat)"/>
+    <rect x="378" y="148" width="60" height="2" fill="#5a6a82" opacity="0.55"/>
+    <rect x="378" y="160" width="60" height="2" fill="#1a2438" opacity="0.55"/>
+
+    <rect x="378" y="162" width="60" height="14" fill="url(#fhCoat)"/>
+    <rect x="378" y="162" width="60" height="2" fill="#5a6a82" opacity="0.55"/>
+    <rect x="378" y="174" width="60" height="2" fill="#1a2438" opacity="0.55"/>
+
+    <rect x="378" y="176" width="60" height="14" fill="url(#fhCoat)"/>
+    <rect x="378" y="176" width="60" height="2" fill="#5a6a82" opacity="0.55"/>
+    <rect x="378" y="188" width="60" height="2" fill="#1a2438" opacity="0.55"/>
+
+    <rect x="378" y="190" width="60" height="14" fill="url(#fhCoat)"/>
+    <rect x="378" y="190" width="60" height="2" fill="#5a6a82" opacity="0.55"/>
+    <rect x="378" y="202" width="60" height="2" fill="#1a2438" opacity="0.55"/>
+
+    <!-- hem panel (slightly different) -->
+    <rect x="378" y="204" width="60" height="12" fill="url(#fhCoat)"/>
+    <rect x="378" y="204" width="60" height="2" fill="#5a6a82" opacity="0.55"/>
+    <rect x="378" y="214" width="60" height="3" fill="#1a2030" opacity="0.85"/>
+
+    <!-- LEFT SLEEVE (puffy, with quilted horizontal segments) -->
+    <rect x="372" y="124" width="12" height="80" fill="url(#fhCoat)"/>
+    <rect x="372" y="124" width="2" height="80" fill="#5a6a82" opacity="0.5"/>
+    <rect x="372" y="142" width="12" height="2" fill="#1a2438" opacity="0.55"/>
+    <rect x="372" y="160" width="12" height="2" fill="#1a2438" opacity="0.55"/>
+    <rect x="372" y="178" width="12" height="2" fill="#1a2438" opacity="0.55"/>
+    <!-- left elastic cuff (tighter, darker) -->
+    <rect x="370" y="204" width="16" height="6" fill="#1a2030"/>
+    <rect x="370" y="204" width="16" height="1" fill="#3a4a5a"/>
+    <rect x="370" y="208" width="16" height="2" fill="#0a1018" opacity="0.7"/>
+
+    <!-- RIGHT SLEEVE -->
+    <rect x="438" y="124" width="12" height="80" fill="url(#fhCoat)"/>
+    <rect x="448" y="124" width="2" height="80" fill="#1a2438" opacity="0.55"/>
+    <rect x="438" y="142" width="12" height="2" fill="#1a2438" opacity="0.55"/>
+    <rect x="438" y="160" width="12" height="2" fill="#1a2438" opacity="0.55"/>
+    <rect x="438" y="178" width="12" height="2" fill="#1a2438" opacity="0.55"/>
+    <!-- right elastic cuff -->
+    <rect x="436" y="204" width="16" height="6" fill="#1a2030"/>
+    <rect x="436" y="204" width="16" height="1" fill="#3a4a5a"/>
+    <rect x="436" y="208" width="16" height="2" fill="#0a1018" opacity="0.7"/>
+
+    <!-- POCKET ZIPPERS (subtle, at hip level) -->
+    <rect x="386" y="184" width="22" height="2" fill="#1a2030" opacity="0.7"/>
+    <rect x="384" y="184" width="2" height="2" fill="#a89880" opacity="0.7"/>
+    <rect x="420" y="184" width="22" height="2" fill="#1a2030" opacity="0.7"/>
+    <rect x="440" y="184" width="2" height="2" fill="#a89880" opacity="0.7"/>
+
+    <!-- ZIPPER PULL at the top of the front zipper -->
+    <rect x="411" y="120" width="4" height="3" fill="#a89880"/>
+    <rect x="411" y="120" width="4" height="1" fill="#dccfb8"/>
+    <rect x="412" y="123" width="2" height="2" fill="#5a4828"/>
+
+    <!-- coat sways subtly on the hook -->
+    <animateTransform attributeName="transform" type="rotate"
+      values="0 413 96; 0.5 413 96; 0 413 96; -0.4 413 96; 0 413 96"
+      dur="14s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- SHOES lined up by the door -->
+  <g id="fh-shoes">
+    <!-- pair 1 (sneakers, bigger) -->
+    <g id="fh-shoe-1">
+      <rect x="374" y="288" width="22" height="8" fill="#dccfb8"/>
+      <rect x="374" y="286" width="22" height="2" fill="#ecdfb8"/>
+      <rect x="374" y="296" width="22" height="2" fill="#7a6848" opacity="0.7"/>
+      <rect x="378" y="282" width="14" height="6" fill="#a85040"/>
+      <rect x="378" y="282" width="14" height="1" fill="#c87060"/>
+      <!-- laces -->
+      <rect x="382" y="284" width="6" height="1" fill="#1a100a"/>
+    </g>
+    <g id="fh-shoe-2">
+      <rect x="400" y="288" width="22" height="8" fill="#dccfb8"/>
+      <rect x="400" y="286" width="22" height="2" fill="#ecdfb8"/>
+      <rect x="400" y="296" width="22" height="2" fill="#7a6848" opacity="0.7"/>
+      <rect x="404" y="282" width="14" height="6" fill="#a85040"/>
+      <rect x="404" y="282" width="14" height="1" fill="#c87060"/>
+      <rect x="408" y="284" width="6" height="1" fill="#1a100a"/>
+    </g>
+    <!-- pair 2 (small dress shoes) -->
+    <g id="fh-shoe-3">
+      <rect x="430" y="290" width="18" height="6" fill="#3a2418"/>
+      <rect x="430" y="290" width="18" height="1" fill="#5a3826"/>
+      <rect x="430" y="296" width="18" height="2" fill="#1a100a" opacity="0.7"/>
+      <rect x="434" y="287" width="10" height="3" fill="#3a2418"/>
+    </g>
+    <g id="fh-shoe-4">
+      <rect x="452" y="290" width="18" height="6" fill="#3a2418"/>
+      <rect x="452" y="290" width="18" height="1" fill="#5a3826"/>
+      <rect x="452" y="296" width="18" height="2" fill="#1a100a" opacity="0.7"/>
+      <rect x="456" y="287" width="10" height="3" fill="#3a2418"/>
+    </g>
+  </g>
+
+  <!-- a small ENTRY MAT in front of the door -->
+  <g id="fh-mat" pointer-events="none">
+    <rect x="172" y="294" width="156" height="14" fill="#7a4828"/>
+    <rect x="172" y="294" width="156" height="2" fill="#a86848"/>
+    <rect x="172" y="306" width="156" height="2" fill="#3a2418" opacity="0.7"/>
+    <!-- weave texture -->
+    <rect x="172" y="298" width="156" height="1" fill="#3a2418" opacity="0.4"/>
+    <rect x="172" y="302" width="156" height="1" fill="#3a2418" opacity="0.4"/>
+    <rect x="184" y="294" width="1" height="14" fill="#3a2418" opacity="0.5"/>
+    <rect x="200" y="294" width="1" height="14" fill="#3a2418" opacity="0.5"/>
+    <rect x="216" y="294" width="1" height="14" fill="#3a2418" opacity="0.5"/>
+    <rect x="232" y="294" width="1" height="14" fill="#3a2418" opacity="0.5"/>
+    <rect x="248" y="294" width="1" height="14" fill="#3a2418" opacity="0.5"/>
+    <rect x="264" y="294" width="1" height="14" fill="#3a2418" opacity="0.5"/>
+    <rect x="280" y="294" width="1" height="14" fill="#3a2418" opacity="0.5"/>
+    <rect x="296" y="294" width="1" height="14" fill="#3a2418" opacity="0.5"/>
+    <rect x="312" y="294" width="1" height="14" fill="#3a2418" opacity="0.5"/>
+    <!-- text on mat (faint) -->
+    <text x="250" y="304" text-anchor="middle"
+      font-family="'Courier New', monospace" font-size="6" fill="#3a2418" opacity="0.6">HOME</text>
+  </g>
+
+  <!-- shadow under the coat -->
+  <rect x="384" y="212" width="48" height="2" fill="#0a0608" opacity="0.55" pointer-events="none"/>
+
+  <!-- DUST MOTES drifting in the under-door spill -->
+  <g id="fh-dust" pointer-events="none" opacity="0.55">
+    <rect x="200" y="240" width="1" height="1" fill="#f0d8a8" opacity="0.6">
+      <animate attributeName="y" values="240;290;240" dur="13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.6;0" dur="13s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="260" y="220" width="1" height="1" fill="#f0d8a8" opacity="0.5">
+      <animate attributeName="y" values="220;290;220" dur="17s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.5;0" dur="17s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="304" y="200" width="1" height="1" fill="#f0d8a8" opacity="0.5">
+      <animate attributeName="y" values="200;290;200" dur="19s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.5;0" dur="19s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Edge vignette -->
+  <rect width="480" height="320" fill="none" stroke="#0a0810" stroke-width="22" opacity="0.45" pointer-events="none"/>
+
+  <!-- ============= -->
+  <!-- INTERACTION HOTSPOTS (transparent, on top) -->
+  <!-- ============= -->
+  <rect id="hit-door" x="154" y="40" width="192" height="240" fill="transparent" pointer-events="all"/>
+  <rect id="hit-peephole" x="240" y="88" width="20" height="20" fill="transparent" pointer-events="all"/>
+  <rect id="hit-chain" x="156" y="114" width="80" height="26" fill="transparent" pointer-events="all"/>
+  <rect id="hit-knob" x="316" y="184" width="26" height="26" fill="transparent" pointer-events="all"/>
+  <rect id="hit-kickplate" x="156" y="266" width="188" height="12" fill="transparent" pointer-events="all"/>
+  <rect id="hit-under-door" x="154" y="274" width="192" height="10" fill="transparent" pointer-events="all"/>
+  <rect id="hit-mat" x="172" y="292" width="156" height="18" fill="transparent" pointer-events="all"/>
+
+  <rect id="hit-keys" x="60" y="170" width="22" height="28" fill="transparent" pointer-events="all"/>
+  <rect id="hit-spare-key" x="34" y="170" width="14" height="22" fill="transparent" pointer-events="all"/>
+  <rect id="hit-key-board" x="20" y="146" width="104" height="24" fill="transparent" pointer-events="all"/>
+  <rect id="hit-mail" x="20" y="178" width="104" height="50" fill="transparent" pointer-events="all"/>
+  <rect id="hit-note" x="74" y="114" width="30" height="32" fill="transparent" pointer-events="all"/>
+  <rect id="hit-light-switch" x="122" y="158" width="18" height="26" fill="transparent" pointer-events="all"/>
+
+  <rect id="hit-coat" x="368" y="92" width="86" height="124" fill="transparent" pointer-events="all"/>
+  <rect id="hit-coat-hook" x="392" y="82" width="42" height="14" fill="transparent" pointer-events="all"/>
+  <rect id="hit-shoes" x="372" y="280" width="100" height="22" fill="transparent" pointer-events="all"/>
+</svg>

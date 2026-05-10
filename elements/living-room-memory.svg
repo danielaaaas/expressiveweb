@@ -1,0 +1,922 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" shape-rendering="crispEdges">
+  <title>Living room memory fragment</title>
+  <desc>Cropped vignette: a CRT television glowing in a quiet apartment, a small display cabinet with figurines and lace, the corner of a bunk bed and a couch.</desc>
+
+  <defs>
+    <linearGradient id="lvWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a4234"/>
+      <stop offset="50%" stop-color="#4a342a"/>
+      <stop offset="100%" stop-color="#32221a"/>
+    </linearGradient>
+    <linearGradient id="lvFloor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a2818"/>
+      <stop offset="100%" stop-color="#1a100a"/>
+    </linearGradient>
+    <linearGradient id="lvWood" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6a4830"/>
+      <stop offset="50%" stop-color="#5a3e28"/>
+      <stop offset="100%" stop-color="#48321e"/>
+    </linearGradient>
+    <linearGradient id="lvBunk" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3a2418"/>
+      <stop offset="100%" stop-color="#2a1810"/>
+    </linearGradient>
+    <radialGradient id="lvTvSpill" cx="50%" cy="48%" r="68%">
+      <stop offset="0%" stop-color="#f4d098" stop-opacity="0.50"/>
+      <stop offset="55%" stop-color="#c8784c" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lvScreenWarm" cx="50%" cy="55%" r="72%">
+      <stop offset="0%" stop-color="#f4d098" stop-opacity="0.62"/>
+      <stop offset="65%" stop-color="#a8643c" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#1a0e08" stop-opacity="0.45"/>
+    </radialGradient>
+    <linearGradient id="lvSidesL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lvSidesR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="#000000" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="lvSoftGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.4" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="lvScreenClip">
+      <rect x="172" y="114" width="122" height="80"/>
+    </clipPath>
+  </defs>
+
+  <!-- ============= -->
+  <!-- WALL & WALLPAPER -->
+  <!-- ============= -->
+  <rect width="480" height="320" fill="url(#lvWall)"/>
+
+  <!-- subtle vertical-stripe wallpaper + tiny floral dots -->
+  <g id="lv-wallpaper" pointer-events="none" opacity="0.30">
+    <rect x="40" y="0" width="1" height="258" fill="#7a5a44"/>
+    <rect x="80" y="0" width="1" height="258" fill="#7a5a44"/>
+    <rect x="120" y="0" width="1" height="258" fill="#7a5a44"/>
+    <rect x="160" y="0" width="1" height="258" fill="#7a5a44"/>
+    <rect x="200" y="0" width="1" height="258" fill="#7a5a44"/>
+    <rect x="240" y="0" width="1" height="258" fill="#7a5a44"/>
+    <rect x="280" y="0" width="1" height="258" fill="#7a5a44"/>
+    <rect x="320" y="0" width="1" height="258" fill="#7a5a44"/>
+    <rect x="360" y="0" width="1" height="258" fill="#7a5a44"/>
+    <rect x="400" y="0" width="1" height="258" fill="#7a5a44"/>
+    <rect x="440" y="0" width="1" height="258" fill="#7a5a44"/>
+    <rect x="60" y="40" width="2" height="2" fill="#7a5a44" opacity="0.6"/>
+    <rect x="100" y="80" width="2" height="2" fill="#7a5a44" opacity="0.6"/>
+    <rect x="140" y="50" width="2" height="2" fill="#7a5a44" opacity="0.6"/>
+    <rect x="180" y="100" width="2" height="2" fill="#7a5a44" opacity="0.6"/>
+    <rect x="220" y="40" width="2" height="2" fill="#7a5a44" opacity="0.6"/>
+    <rect x="260" y="80" width="2" height="2" fill="#7a5a44" opacity="0.6"/>
+    <rect x="300" y="50" width="2" height="2" fill="#7a5a44" opacity="0.6"/>
+    <rect x="340" y="100" width="2" height="2" fill="#7a5a44" opacity="0.6"/>
+    <rect x="380" y="40" width="2" height="2" fill="#7a5a44" opacity="0.6"/>
+    <rect x="420" y="80" width="2" height="2" fill="#7a5a44" opacity="0.6"/>
+    <!-- a discoloration patch -->
+    <rect x="320" y="40" width="48" height="44" fill="#3a2418" opacity="0.18"/>
+  </g>
+
+  <!-- side darkening enforces the tight cinematic crop -->
+  <rect x="0" y="0" width="44" height="320" fill="url(#lvSidesL)"/>
+  <rect x="436" y="0" width="44" height="320" fill="url(#lvSidesR)"/>
+
+  <!-- ceiling shadow line -->
+  <rect x="0" y="0" width="480" height="4" fill="#1a100a" opacity="0.6"/>
+  <rect x="0" y="4" width="480" height="2" fill="#3a2418" opacity="0.4"/>
+
+  <!-- ============= -->
+  <!-- WARM TV SPILL ON WALL (animated subtle flicker) -->
+  <!-- ============= -->
+  <g id="lv-tv-wall-spill" pointer-events="none">
+    <rect x="40" y="20" width="400" height="260" fill="url(#lvTvSpill)" opacity="0.92">
+      <animate attributeName="opacity" values="0.78;0.96;0.84;0.92;0.80;0.95" dur="6.4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ============= -->
+  <!-- BASEBOARD + FLOOR -->
+  <!-- ============= -->
+  <rect x="0" y="258" width="480" height="4" fill="#5a3a26"/>
+  <rect x="0" y="258" width="480" height="2" fill="#7a5236"/>
+  <rect x="0" y="262" width="480" height="58" fill="url(#lvFloor)"/>
+  <rect x="0" y="276" width="480" height="1" fill="#0e0a06" opacity="0.55"/>
+  <rect x="0" y="294" width="480" height="1" fill="#0e0a06" opacity="0.5"/>
+  <rect x="0" y="310" width="480" height="1" fill="#0e0a06" opacity="0.4"/>
+  <rect x="100" y="262" width="1" height="58" fill="#0e0a06" opacity="0.45"/>
+  <rect x="220" y="262" width="1" height="58" fill="#0e0a06" opacity="0.45"/>
+  <rect x="340" y="262" width="1" height="58" fill="#0e0a06" opacity="0.45"/>
+
+  <!-- ============= -->
+  <!-- BUNK BED (left, partial; rest goes off-frame) -->
+  <!-- ============= -->
+  <g id="lv-bunk">
+    <!-- vertical right post -->
+    <rect x="92" y="40" width="10" height="240" fill="url(#lvBunk)"/>
+    <rect x="92" y="40" width="2" height="240" fill="#5a3826" opacity="0.65"/>
+    <rect x="100" y="40" width="2" height="240" fill="#1a100a" opacity="0.7"/>
+
+    <!-- top bunk frame -->
+    <rect x="0" y="56" width="100" height="6" fill="#3a2418"/>
+    <rect x="0" y="56" width="100" height="2" fill="#5a3826" opacity="0.7"/>
+
+    <!-- top guard rail (vertical pickets) -->
+    <rect x="0" y="64" width="100" height="2" fill="#3a2418"/>
+    <rect x="20" y="66" width="2" height="14" fill="#3a2418"/>
+    <rect x="40" y="66" width="2" height="14" fill="#3a2418"/>
+    <rect x="60" y="66" width="2" height="14" fill="#3a2418"/>
+    <rect x="80" y="66" width="2" height="14" fill="#3a2418"/>
+
+    <!-- top mattress -->
+    <rect x="0" y="80" width="100" height="22" fill="#dccfa8"/>
+    <rect x="0" y="80" width="100" height="2" fill="#ecdfb8"/>
+    <rect x="0" y="100" width="100" height="2" fill="#a8957a"/>
+
+    <!-- top pillow (peeking from off-frame) -->
+    <rect x="0" y="80" width="32" height="14" fill="#f4ecd0"/>
+    <rect x="0" y="80" width="32" height="2" fill="#fff4d8"/>
+    <rect x="0" y="92" width="32" height="2" fill="#c8b898" opacity="0.55"/>
+
+    <!-- top blanket (faded teal) cascading over the edge -->
+    <rect x="0" y="102" width="100" height="42" fill="#5a8a98"/>
+    <rect x="0" y="102" width="100" height="1" fill="#7aaab8"/>
+    <rect x="0" y="142" width="100" height="2" fill="#3a6a78"/>
+    <rect x="0" y="118" width="100" height="1" fill="#3a6a78" opacity="0.5"/>
+    <rect x="0" y="128" width="100" height="1" fill="#3a6a78" opacity="0.45"/>
+    <!-- a fold near the post -->
+    <rect x="84" y="116" width="6" height="22" fill="#3a6a78" opacity="0.45"/>
+
+    <!-- mid frame (between bunks) -->
+    <rect x="0" y="148" width="100" height="6" fill="#3a2418"/>
+    <rect x="0" y="148" width="100" height="2" fill="#5a3826" opacity="0.7"/>
+
+    <!-- bottom mattress -->
+    <rect x="0" y="178" width="100" height="32" fill="#dccfa8"/>
+    <rect x="0" y="178" width="100" height="2" fill="#ecdfb8"/>
+    <rect x="0" y="208" width="100" height="2" fill="#a8957a"/>
+
+    <!-- bottom pillow -->
+    <rect x="0" y="178" width="32" height="16" fill="#f4ecd0"/>
+    <rect x="0" y="178" width="32" height="2" fill="#fff4d8"/>
+    <rect x="0" y="192" width="32" height="2" fill="#c8b898" opacity="0.55"/>
+
+    <!-- bottom blanket (dusty rose) cascading -->
+    <rect x="0" y="210" width="100" height="48" fill="#a85878"/>
+    <rect x="0" y="210" width="100" height="1" fill="#c87898"/>
+    <rect x="0" y="256" width="100" height="2" fill="#783858"/>
+    <rect x="0" y="226" width="100" height="1" fill="#783858" opacity="0.45"/>
+    <rect x="0" y="240" width="100" height="1" fill="#783858" opacity="0.4"/>
+    <!-- fold near the post -->
+    <rect x="86" y="220" width="6" height="34" fill="#783858" opacity="0.4"/>
+
+    <!-- bottom frame -->
+    <rect x="0" y="258" width="100" height="14" fill="#3a2418"/>
+    <rect x="0" y="258" width="100" height="2" fill="#5a3826" opacity="0.7"/>
+
+    <!-- ladder (5 rungs leaning against the bunk side, chunky pixel rails) -->
+    <g id="lv-bunk-ladder">
+      <!-- thicker vertical rails -->
+      <rect x="64" y="100" width="4" height="172" fill="#4a3424"/>
+      <rect x="86" y="100" width="4" height="172" fill="#4a3424"/>
+      <!-- chunky rungs spanning the full ladder width -->
+      <rect x="64" y="118" width="26" height="4" fill="#4a3424"/>
+      <rect x="64" y="146" width="26" height="4" fill="#4a3424"/>
+      <rect x="64" y="178" width="26" height="4" fill="#4a3424"/>
+      <rect x="64" y="208" width="26" height="4" fill="#4a3424"/>
+      <rect x="64" y="238" width="26" height="4" fill="#4a3424"/>
+      <!-- highlight on each rail's inner edge (warm) -->
+      <rect x="64" y="100" width="1" height="172" fill="#6a4434" opacity="0.6"/>
+      <rect x="86" y="100" width="1" height="172" fill="#6a4434" opacity="0.6"/>
+      <!-- shadow line under each rung for depth -->
+      <rect x="68" y="122" width="18" height="1" fill="#2a1810" opacity="0.6"/>
+      <rect x="68" y="150" width="18" height="1" fill="#2a1810" opacity="0.6"/>
+      <rect x="68" y="182" width="18" height="1" fill="#2a1810" opacity="0.6"/>
+      <rect x="68" y="212" width="18" height="1" fill="#2a1810" opacity="0.6"/>
+      <rect x="68" y="242" width="18" height="1" fill="#2a1810" opacity="0.6"/>
+    </g>
+
+    <!-- glow-in-the-dark star sticker on the post -->
+    <g id="lv-bunk-star" pointer-events="none">
+      <rect x="94" y="180" width="6" height="6" fill="#a8d898" opacity="0.7">
+        <animate attributeName="opacity" values="0.40;0.85;0.50;0.80;0.45;0.78" dur="5.2s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="96" y="178" width="2" height="2" fill="#a8d898" opacity="0.6"/>
+      <rect x="96" y="186" width="2" height="2" fill="#a8d898" opacity="0.6"/>
+      <rect x="92" y="182" width="2" height="2" fill="#a8d898" opacity="0.6"/>
+      <rect x="100" y="182" width="2" height="2" fill="#a8d898" opacity="0.6"/>
+      <!-- subtle warm halo -->
+      <rect x="90" y="176" width="14" height="14" fill="#a8d898" opacity="0.10">
+        <animate attributeName="opacity" values="0.06;0.16;0.08;0.14;0.06" dur="5.2s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+
+  <!-- ============= -->
+  <!-- TV CONSOLE / STAND -->
+  <!-- ============= -->
+  <g id="lv-console">
+    <rect x="140" y="216" width="194" height="60" fill="url(#lvWood)"/>
+    <rect x="140" y="216" width="194" height="3" fill="#7a5436"/>
+    <rect x="140" y="216" width="194" height="60" fill="none" stroke="#1a100a" stroke-width="2"/>
+    <!-- drawer separator (vertical) -->
+    <rect x="237" y="220" width="2" height="56" fill="#1a100a" opacity="0.65"/>
+    <!-- drawer separators (horizontal) -->
+    <rect x="142" y="246" width="93" height="2" fill="#1a100a" opacity="0.55"/>
+    <rect x="239" y="246" width="93" height="2" fill="#1a100a" opacity="0.55"/>
+    <!-- knob handles -->
+    <rect x="180" y="230" width="14" height="3" fill="#3a2418"/>
+    <rect x="180" y="230" width="14" height="1" fill="#5a3826"/>
+    <rect x="280" y="230" width="14" height="3" fill="#3a2418"/>
+    <rect x="280" y="230" width="14" height="1" fill="#5a3826"/>
+    <rect x="180" y="260" width="14" height="3" fill="#3a2418"/>
+    <rect x="180" y="260" width="14" height="1" fill="#5a3826"/>
+    <rect x="280" y="260" width="14" height="3" fill="#3a2418"/>
+    <rect x="280" y="260" width="14" height="1" fill="#5a3826"/>
+    <!-- bottom shadow on floor -->
+    <rect x="138" y="276" width="198" height="3" fill="#1a100a" opacity="0.7"/>
+  </g>
+
+  <!-- ============= -->
+  <!-- CRT TELEVISION (FOCAL POINT) -->
+  <!-- ============= -->
+  <g id="lv-tv">
+    <!-- TV body (cream/beige plastic, slightly aged) -->
+    <rect x="160" y="92" width="150" height="124" fill="#c8b89c"/>
+    <rect x="160" y="92" width="150" height="3" fill="#dccfb0"/>
+    <rect x="160" y="213" width="150" height="3" fill="#8a7a64" opacity="0.7"/>
+    <rect x="160" y="92" width="150" height="124" fill="none" stroke="#5a4838" stroke-width="2"/>
+    <!-- right-side darker (depth) -->
+    <rect x="304" y="94" width="6" height="120" fill="#a89880" opacity="0.55"/>
+    <!-- top vents -->
+    <rect x="170" y="96" width="2" height="2" fill="#5a4838" opacity="0.6"/>
+    <rect x="178" y="96" width="2" height="2" fill="#5a4838" opacity="0.6"/>
+    <rect x="186" y="96" width="2" height="2" fill="#5a4838" opacity="0.6"/>
+    <rect x="194" y="96" width="2" height="2" fill="#5a4838" opacity="0.6"/>
+
+    <!-- bezel around screen (recessed dark) -->
+    <rect x="166" y="108" width="134" height="92" fill="#3a2c20"/>
+    <rect x="166" y="108" width="134" height="92" fill="none" stroke="#1a100a" stroke-width="2"/>
+    <rect x="166" y="108" width="134" height="2" fill="#1a100a"/>
+    <!-- screen inner edge -->
+    <rect x="170" y="112" width="126" height="84" fill="#181828"/>
+
+    <!-- ============= -->
+    <!-- SCREEN CONTENT (clipped, channel layers swap visibility) -->
+    <!-- ============= -->
+    <g id="lv-tv-screen" clip-path="url(#lvScreenClip)">
+      <!-- base dark layer + warm CRT wash -->
+      <rect x="172" y="114" width="122" height="80" fill="#181828"/>
+      <rect x="172" y="114" width="122" height="80" fill="url(#lvScreenWarm)" opacity="0.7"/>
+
+      <!-- CHANNEL 1 (default): pure static -->
+      <g id="channel-1" class="tv-channel">
+        <!-- static layer A (flickers between high/low opacity) -->
+        <g id="lv-static-a">
+          <animate attributeName="opacity" values="1;0.3;0.9;0.4;1;0.5;0.95" dur="0.45s" repeatCount="indefinite"/>
+          <rect x="174" y="116" width="2" height="2" fill="#f0e8d0" opacity="0.55"/>
+          <rect x="180" y="118" width="1" height="1" fill="#a0a0a0" opacity="0.65"/>
+          <rect x="188" y="116" width="2" height="2" fill="#f0e8d0" opacity="0.45"/>
+          <rect x="196" y="120" width="1" height="1" fill="#dcdcc8" opacity="0.6"/>
+          <rect x="204" y="116" width="2" height="2" fill="#a0a0a0" opacity="0.55"/>
+          <rect x="212" y="118" width="1" height="1" fill="#f0e8d0" opacity="0.5"/>
+          <rect x="220" y="120" width="2" height="2" fill="#dcdcc8" opacity="0.6"/>
+          <rect x="228" y="116" width="1" height="1" fill="#a0a0a0" opacity="0.55"/>
+          <rect x="236" y="118" width="2" height="2" fill="#f0e8d0" opacity="0.5"/>
+          <rect x="244" y="120" width="1" height="1" fill="#dcdcc8" opacity="0.6"/>
+          <rect x="252" y="116" width="2" height="2" fill="#a0a0a0" opacity="0.5"/>
+          <rect x="260" y="118" width="1" height="1" fill="#f0e8d0" opacity="0.55"/>
+          <rect x="268" y="120" width="2" height="2" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="276" y="116" width="1" height="1" fill="#a0a0a0" opacity="0.6"/>
+          <rect x="284" y="118" width="2" height="2" fill="#f0e8d0" opacity="0.55"/>
+          <rect x="174" y="128" width="1" height="1" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="182" y="130" width="2" height="2" fill="#f0e8d0" opacity="0.5"/>
+          <rect x="190" y="128" width="1" height="1" fill="#a0a0a0" opacity="0.55"/>
+          <rect x="200" y="132" width="2" height="2" fill="#dcdcc8" opacity="0.6"/>
+          <rect x="210" y="128" width="1" height="1" fill="#f0e8d0" opacity="0.5"/>
+          <rect x="220" y="132" width="2" height="2" fill="#a0a0a0" opacity="0.55"/>
+          <rect x="232" y="128" width="1" height="1" fill="#dcdcc8" opacity="0.6"/>
+          <rect x="244" y="132" width="2" height="2" fill="#f0e8d0" opacity="0.5"/>
+          <rect x="256" y="128" width="1" height="1" fill="#a0a0a0" opacity="0.55"/>
+          <rect x="268" y="132" width="2" height="2" fill="#dcdcc8" opacity="0.6"/>
+          <rect x="282" y="128" width="1" height="1" fill="#f0e8d0" opacity="0.55"/>
+          <rect x="178" y="142" width="2" height="2" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="186" y="144" width="1" height="1" fill="#a0a0a0" opacity="0.5"/>
+          <rect x="194" y="142" width="2" height="2" fill="#f0e8d0" opacity="0.5"/>
+          <rect x="206" y="144" width="1" height="1" fill="#dcdcc8" opacity="0.6"/>
+          <rect x="218" y="142" width="2" height="2" fill="#a0a0a0" opacity="0.55"/>
+          <rect x="230" y="146" width="1" height="1" fill="#f0e8d0" opacity="0.5"/>
+          <rect x="242" y="142" width="2" height="2" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="256" y="146" width="1" height="1" fill="#a0a0a0" opacity="0.5"/>
+          <rect x="270" y="142" width="2" height="2" fill="#f0e8d0" opacity="0.55"/>
+          <rect x="284" y="146" width="1" height="1" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="174" y="156" width="1" height="1" fill="#a0a0a0" opacity="0.55"/>
+          <rect x="186" y="158" width="2" height="2" fill="#f0e8d0" opacity="0.5"/>
+          <rect x="200" y="156" width="1" height="1" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="214" y="158" width="2" height="2" fill="#a0a0a0" opacity="0.5"/>
+          <rect x="228" y="156" width="1" height="1" fill="#f0e8d0" opacity="0.55"/>
+          <rect x="242" y="158" width="2" height="2" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="258" y="156" width="1" height="1" fill="#a0a0a0" opacity="0.5"/>
+          <rect x="272" y="158" width="2" height="2" fill="#f0e8d0" opacity="0.5"/>
+          <rect x="286" y="156" width="1" height="1" fill="#dcdcc8" opacity="0.6"/>
+          <rect x="178" y="170" width="2" height="2" fill="#a0a0a0" opacity="0.55"/>
+          <rect x="190" y="172" width="1" height="1" fill="#f0e8d0" opacity="0.55"/>
+          <rect x="202" y="170" width="2" height="2" fill="#dcdcc8" opacity="0.5"/>
+          <rect x="216" y="172" width="1" height="1" fill="#a0a0a0" opacity="0.55"/>
+          <rect x="230" y="170" width="2" height="2" fill="#f0e8d0" opacity="0.5"/>
+          <rect x="246" y="172" width="1" height="1" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="260" y="170" width="2" height="2" fill="#a0a0a0" opacity="0.5"/>
+          <rect x="276" y="172" width="1" height="1" fill="#f0e8d0" opacity="0.55"/>
+          <rect x="284" y="170" width="2" height="2" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="174" y="184" width="1" height="1" fill="#a0a0a0" opacity="0.5"/>
+          <rect x="184" y="186" width="2" height="2" fill="#f0e8d0" opacity="0.55"/>
+          <rect x="196" y="184" width="1" height="1" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="208" y="186" width="2" height="2" fill="#a0a0a0" opacity="0.5"/>
+          <rect x="222" y="184" width="1" height="1" fill="#f0e8d0" opacity="0.55"/>
+          <rect x="234" y="186" width="2" height="2" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="248" y="184" width="1" height="1" fill="#a0a0a0" opacity="0.5"/>
+          <rect x="262" y="186" width="2" height="2" fill="#f0e8d0" opacity="0.55"/>
+          <rect x="278" y="184" width="1" height="1" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="288" y="186" width="2" height="2" fill="#a0a0a0" opacity="0.5"/>
+        </g>
+        <!-- static layer B (offset positions, opposite-phase animation) -->
+        <g id="lv-static-b">
+          <animate attributeName="opacity" values="0.4;1;0.45;1;0.5;1;0.4" dur="0.45s" repeatCount="indefinite"/>
+          <rect x="176" y="120" width="1" height="1" fill="#f0e8d0" opacity="0.55"/>
+          <rect x="184" y="122" width="2" height="2" fill="#dcdcc8" opacity="0.6"/>
+          <rect x="192" y="124" width="1" height="1" fill="#a0a0a0" opacity="0.55"/>
+          <rect x="200" y="122" width="2" height="2" fill="#f0e8d0" opacity="0.5"/>
+          <rect x="210" y="124" width="1" height="1" fill="#dcdcc8" opacity="0.6"/>
+          <rect x="218" y="122" width="2" height="2" fill="#a0a0a0" opacity="0.55"/>
+          <rect x="226" y="124" width="1" height="1" fill="#f0e8d0" opacity="0.5"/>
+          <rect x="234" y="122" width="2" height="2" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="244" y="124" width="1" height="1" fill="#a0a0a0" opacity="0.5"/>
+          <rect x="254" y="122" width="2" height="2" fill="#f0e8d0" opacity="0.5"/>
+          <rect x="266" y="124" width="1" height="1" fill="#dcdcc8" opacity="0.6"/>
+          <rect x="278" y="122" width="2" height="2" fill="#a0a0a0" opacity="0.5"/>
+          <rect x="288" y="124" width="1" height="1" fill="#f0e8d0" opacity="0.55"/>
+          <rect x="180" y="136" width="2" height="2" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="192" y="138" width="1" height="1" fill="#f0e8d0" opacity="0.55"/>
+          <rect x="206" y="136" width="2" height="2" fill="#a0a0a0" opacity="0.5"/>
+          <rect x="218" y="138" width="1" height="1" fill="#dcdcc8" opacity="0.6"/>
+          <rect x="230" y="136" width="2" height="2" fill="#f0e8d0" opacity="0.5"/>
+          <rect x="244" y="138" width="1" height="1" fill="#a0a0a0" opacity="0.55"/>
+          <rect x="258" y="136" width="2" height="2" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="272" y="138" width="1" height="1" fill="#f0e8d0" opacity="0.5"/>
+          <rect x="286" y="136" width="2" height="2" fill="#a0a0a0" opacity="0.55"/>
+          <rect x="174" y="150" width="2" height="2" fill="#f0e8d0" opacity="0.55"/>
+          <rect x="186" y="152" width="1" height="1" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="200" y="150" width="2" height="2" fill="#a0a0a0" opacity="0.5"/>
+          <rect x="214" y="152" width="1" height="1" fill="#f0e8d0" opacity="0.5"/>
+          <rect x="228" y="150" width="2" height="2" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="242" y="152" width="1" height="1" fill="#a0a0a0" opacity="0.5"/>
+          <rect x="256" y="150" width="2" height="2" fill="#f0e8d0" opacity="0.55"/>
+          <rect x="270" y="152" width="1" height="1" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="284" y="150" width="2" height="2" fill="#a0a0a0" opacity="0.5"/>
+          <rect x="178" y="164" width="1" height="1" fill="#f0e8d0" opacity="0.55"/>
+          <rect x="192" y="166" width="2" height="2" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="206" y="164" width="1" height="1" fill="#a0a0a0" opacity="0.5"/>
+          <rect x="222" y="166" width="2" height="2" fill="#f0e8d0" opacity="0.5"/>
+          <rect x="236" y="164" width="1" height="1" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="250" y="166" width="2" height="2" fill="#a0a0a0" opacity="0.55"/>
+          <rect x="266" y="164" width="1" height="1" fill="#f0e8d0" opacity="0.55"/>
+          <rect x="280" y="166" width="2" height="2" fill="#dcdcc8" opacity="0.5"/>
+          <rect x="290" y="164" width="1" height="1" fill="#a0a0a0" opacity="0.55"/>
+          <rect x="174" y="178" width="2" height="2" fill="#f0e8d0" opacity="0.55"/>
+          <rect x="188" y="180" width="1" height="1" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="202" y="178" width="2" height="2" fill="#a0a0a0" opacity="0.5"/>
+          <rect x="216" y="180" width="1" height="1" fill="#f0e8d0" opacity="0.55"/>
+          <rect x="232" y="178" width="2" height="2" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="248" y="180" width="1" height="1" fill="#a0a0a0" opacity="0.5"/>
+          <rect x="266" y="178" width="2" height="2" fill="#f0e8d0" opacity="0.55"/>
+          <rect x="282" y="180" width="1" height="1" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="178" y="190" width="1" height="1" fill="#a0a0a0" opacity="0.5"/>
+          <rect x="190" y="192" width="2" height="2" fill="#f0e8d0" opacity="0.55"/>
+          <rect x="206" y="190" width="1" height="1" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="222" y="192" width="2" height="2" fill="#a0a0a0" opacity="0.5"/>
+          <rect x="240" y="190" width="1" height="1" fill="#f0e8d0" opacity="0.55"/>
+          <rect x="256" y="192" width="2" height="2" fill="#dcdcc8" opacity="0.55"/>
+          <rect x="270" y="190" width="1" height="1" fill="#a0a0a0" opacity="0.5"/>
+          <rect x="284" y="192" width="2" height="2" fill="#f0e8d0" opacity="0.55"/>
+        </g>
+        <!-- HIDDEN FACE in static (fades in occasionally on default channel) -->
+        <g id="lv-static-face" pointer-events="none" opacity="0">
+          <animate attributeName="opacity" values="0;0;0;0;0;0.55;0.85;0.55;0;0;0;0;0;0;0;0;0" dur="20s" repeatCount="indefinite"/>
+          <!-- soft face outline -->
+          <rect x="208" y="138" width="36" height="1" fill="#3a2c20" opacity="0.45"/>
+          <rect x="208" y="172" width="36" height="1" fill="#3a2c20" opacity="0.45"/>
+          <rect x="208" y="138" width="1" height="34" fill="#3a2c20" opacity="0.45"/>
+          <rect x="244" y="138" width="1" height="34" fill="#3a2c20" opacity="0.45"/>
+          <!-- eyes -->
+          <rect x="216" y="148" width="3" height="3" fill="#1a0e08"/>
+          <rect x="232" y="148" width="3" height="3" fill="#1a0e08"/>
+          <!-- mouth -->
+          <rect x="218" y="162" width="14" height="2" fill="#1a0e08"/>
+        </g>
+      </g>
+
+      <!-- CHANNEL 2: empty pixel room (impossible scene) -->
+      <g id="channel-2" class="tv-channel" visibility="hidden">
+        <rect x="172" y="114" width="122" height="80" fill="#1a141a"/>
+        <!-- floor line -->
+        <rect x="172" y="170" width="122" height="2" fill="#3a2c30"/>
+        <!-- back wall darker -->
+        <rect x="172" y="114" width="122" height="56" fill="#28202c" opacity="0.85"/>
+        <!-- window slot on back wall -->
+        <rect x="216" y="128" width="32" height="22" fill="#5a4a64"/>
+        <rect x="216" y="128" width="32" height="2" fill="#7a6884"/>
+        <rect x="232" y="128" width="2" height="22" fill="#3a2c44"/>
+        <rect x="216" y="138" width="32" height="2" fill="#3a2c44"/>
+        <!-- single chair silhouette -->
+        <rect x="200" y="158" width="14" height="12" fill="#1a100a"/>
+        <rect x="198" y="146" width="2" height="14" fill="#1a100a"/>
+        <rect x="212" y="146" width="2" height="14" fill="#1a100a"/>
+        <rect x="200" y="146" width="14" height="2" fill="#1a100a"/>
+        <!-- a tiny figure standing in the doorway -->
+        <rect x="262" y="156" width="4" height="6" fill="#1a0e08"/>
+        <rect x="261" y="162" width="6" height="10" fill="#1a0e08"/>
+        <!-- subtle scan flicker -->
+        <rect x="172" y="114" width="122" height="80" fill="#f4d098" opacity="0.06">
+          <animate attributeName="opacity" values="0.04;0.10;0.05;0.08;0.04" dur="2.4s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+
+      <!-- CHANNEL 3: a hand reaching out -->
+      <g id="channel-3" class="tv-channel" visibility="hidden">
+        <rect x="172" y="114" width="122" height="80" fill="#1c1014"/>
+        <!-- swirl of warm static -->
+        <rect x="172" y="114" width="122" height="80" fill="url(#lvScreenWarm)" opacity="0.55"/>
+        <!-- arm silhouette -->
+        <rect x="200" y="180" width="48" height="12" fill="#0a0608"/>
+        <!-- forearm rising -->
+        <rect x="208" y="160" width="40" height="22" fill="#0a0608"/>
+        <!-- hand -->
+        <rect x="240" y="146" width="16" height="18" fill="#0a0608"/>
+        <!-- fingers -->
+        <rect x="240" y="138" width="3" height="10" fill="#0a0608"/>
+        <rect x="245" y="134" width="3" height="14" fill="#0a0608"/>
+        <rect x="250" y="136" width="3" height="12" fill="#0a0608"/>
+        <rect x="255" y="140" width="3" height="10" fill="#0a0608"/>
+        <!-- glint on the hand -->
+        <rect x="246" y="150" width="2" height="2" fill="#a86848" opacity="0.8">
+          <animate attributeName="opacity" values="0.4;0.9;0.5;0.85;0.4" dur="3.2s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+
+      <!-- CHANNEL 4: cartoon pixel face (warm, friendly) -->
+      <g id="channel-4" class="tv-channel" visibility="hidden">
+        <rect x="172" y="114" width="122" height="80" fill="#1a3848"/>
+        <!-- background gradient hint -->
+        <rect x="172" y="114" width="122" height="40" fill="#3a6878" opacity="0.65"/>
+        <!-- cloud -->
+        <rect x="194" y="124" width="20" height="6" fill="#dcdcd0"/>
+        <rect x="200" y="120" width="14" height="4" fill="#dcdcd0"/>
+        <!-- sun -->
+        <rect x="252" y="124" width="14" height="14" fill="#f4c860"/>
+        <rect x="258" y="120" width="2" height="2" fill="#f4c860"/>
+        <rect x="258" y="140" width="2" height="2" fill="#f4c860"/>
+        <rect x="248" y="130" width="2" height="2" fill="#f4c860"/>
+        <rect x="268" y="130" width="2" height="2" fill="#f4c860"/>
+        <!-- ground -->
+        <rect x="172" y="158" width="122" height="36" fill="#5a8a48"/>
+        <rect x="172" y="158" width="122" height="2" fill="#7aaa68"/>
+        <!-- a tiny bouncing character -->
+        <g>
+          <rect x="220" y="166" width="10" height="14" fill="#a85040">
+            <animate attributeName="y" values="166;162;166" dur="1.6s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="222" y="160" width="6" height="6" fill="#e0c098">
+            <animate attributeName="y" values="160;156;160" dur="1.6s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="223" y="162" width="1" height="1" fill="#1a0e08">
+            <animate attributeName="y" values="162;158;162" dur="1.6s" repeatCount="indefinite"/>
+          </rect>
+          <rect x="226" y="162" width="1" height="1" fill="#1a0e08">
+            <animate attributeName="y" values="162;158;162" dur="1.6s" repeatCount="indefinite"/>
+          </rect>
+        </g>
+      </g>
+
+      <!-- screen scan-line overlay (always present, subtle) -->
+      <g id="lv-scanlines" pointer-events="none" opacity="0.22">
+        <rect x="172" y="116" width="122" height="1" fill="#0a0e1a"/>
+        <rect x="172" y="120" width="122" height="1" fill="#0a0e1a"/>
+        <rect x="172" y="124" width="122" height="1" fill="#0a0e1a"/>
+        <rect x="172" y="128" width="122" height="1" fill="#0a0e1a"/>
+        <rect x="172" y="132" width="122" height="1" fill="#0a0e1a"/>
+        <rect x="172" y="136" width="122" height="1" fill="#0a0e1a"/>
+        <rect x="172" y="140" width="122" height="1" fill="#0a0e1a"/>
+        <rect x="172" y="144" width="122" height="1" fill="#0a0e1a"/>
+        <rect x="172" y="148" width="122" height="1" fill="#0a0e1a"/>
+        <rect x="172" y="152" width="122" height="1" fill="#0a0e1a"/>
+        <rect x="172" y="156" width="122" height="1" fill="#0a0e1a"/>
+        <rect x="172" y="160" width="122" height="1" fill="#0a0e1a"/>
+        <rect x="172" y="164" width="122" height="1" fill="#0a0e1a"/>
+        <rect x="172" y="168" width="122" height="1" fill="#0a0e1a"/>
+        <rect x="172" y="172" width="122" height="1" fill="#0a0e1a"/>
+        <rect x="172" y="176" width="122" height="1" fill="#0a0e1a"/>
+        <rect x="172" y="180" width="122" height="1" fill="#0a0e1a"/>
+        <rect x="172" y="184" width="122" height="1" fill="#0a0e1a"/>
+        <rect x="172" y="188" width="122" height="1" fill="#0a0e1a"/>
+        <rect x="172" y="192" width="122" height="1" fill="#0a0e1a"/>
+      </g>
+
+      <!-- horizontal roll bar (slow vertical sweep) -->
+      <g id="lv-roll-bar" pointer-events="none">
+        <rect x="172" y="114" width="122" height="6" fill="#f4d098" opacity="0.18">
+          <animate attributeName="y" values="114;200;114" dur="13s" repeatCount="indefinite"/>
+          <animate attributeName="opacity" values="0;0.22;0;0.18;0" dur="13s" repeatCount="indefinite"/>
+        </rect>
+      </g>
+    </g>
+
+    <!-- knobs / dials on the right side -->
+    <g id="lv-tv-knobs">
+      <rect x="298" y="116" width="12" height="2" fill="#5a4838"/>
+      <rect x="299" y="118" width="10" height="6" fill="#3a2c1c"/>
+      <rect x="299" y="118" width="10" height="1" fill="#5a4838"/>
+      <rect x="303" y="120" width="2" height="2" fill="#a89880"/>
+
+      <rect x="298" y="132" width="12" height="2" fill="#5a4838"/>
+      <rect x="299" y="134" width="10" height="6" fill="#3a2c1c"/>
+      <rect x="299" y="134" width="10" height="1" fill="#5a4838"/>
+      <rect x="303" y="136" width="2" height="2" fill="#a89880"/>
+
+      <rect x="298" y="160" width="12" height="2" fill="#5a4838"/>
+      <rect x="299" y="162" width="10" height="6" fill="#3a2c1c"/>
+      <rect x="299" y="162" width="10" height="1" fill="#5a4838"/>
+      <rect x="303" y="164" width="2" height="2" fill="#a89880"/>
+
+      <rect x="298" y="178" width="12" height="2" fill="#5a4838"/>
+      <rect x="299" y="180" width="10" height="6" fill="#3a2c1c"/>
+      <rect x="299" y="180" width="10" height="1" fill="#5a4838"/>
+      <rect x="303" y="182" width="2" height="2" fill="#a89880"/>
+
+      <!-- channel readout window -->
+      <rect x="298" y="194" width="12" height="6" fill="#1a1208"/>
+      <rect x="298" y="194" width="12" height="6" fill="none" stroke="#3a2c1c" stroke-width="1"/>
+      <text id="lv-channel-readout" x="304" y="199" text-anchor="middle" font-family="monospace" font-size="5" fill="#5eff9a">01</text>
+    </g>
+
+    <!-- speaker grille (bottom) -->
+    <g id="lv-tv-grille" pointer-events="none">
+      <rect x="170" y="202" width="120" height="10" fill="#3a2c20"/>
+      <rect x="172" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="176" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="180" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="184" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="188" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="192" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="196" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="200" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="204" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="208" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="212" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="216" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="220" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="224" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="228" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="232" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="236" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="240" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="244" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="248" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="252" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="256" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="260" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="264" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="268" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="272" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="276" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="280" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="284" y="204" width="1" height="6" fill="#1a100a"/>
+      <rect x="288" y="204" width="1" height="6" fill="#1a100a"/>
+    </g>
+  </g>
+
+  <!-- ============= -->
+  <!-- TV ANTENNA (rabbit ears) -->
+  <!-- ============= -->
+  <g id="lv-tv-antenna">
+    <rect x="232" y="84" width="8" height="8" fill="#3a2c1c"/>
+    <rect x="232" y="84" width="8" height="2" fill="#5a4838"/>
+    <!-- left rod -->
+    <line x1="234" y1="84" x2="216" y2="44" stroke="#3a2c1c" stroke-width="2"/>
+    <rect x="214" y="40" width="4" height="4" fill="#3a2c1c"/>
+    <!-- right rod -->
+    <line x1="238" y1="84" x2="262" y2="36" stroke="#3a2c1c" stroke-width="2"/>
+    <rect x="260" y="32" width="4" height="4" fill="#3a2c1c"/>
+  </g>
+
+  <!-- ============= -->
+  <!-- REMOTE CONTROL (on console) -->
+  <!-- ============= -->
+  <g id="lv-remote">
+    <rect x="246" y="218" width="36" height="10" fill="#1a1a22"/>
+    <rect x="246" y="218" width="36" height="2" fill="#3a3a42"/>
+    <rect x="246" y="226" width="36" height="2" fill="#0a0a10" opacity="0.7"/>
+    <rect x="248" y="222" width="2" height="2" fill="#5a4838"/>
+    <rect x="252" y="222" width="2" height="2" fill="#5a4838"/>
+    <rect x="256" y="222" width="2" height="2" fill="#a85040"/>
+    <rect x="260" y="222" width="2" height="2" fill="#5a4838"/>
+    <rect x="264" y="222" width="2" height="2" fill="#5a4838"/>
+    <rect x="270" y="222" width="6" height="2" fill="#5a4838"/>
+    <rect x="278" y="222" width="2" height="2" fill="#5a8a48"/>
+  </g>
+
+  <!-- ============= -->
+  <!-- DISPLAY CABINET (right) -->
+  <!-- ============= -->
+  <g id="lv-cabinet">
+    <!-- cabinet body -->
+    <rect x="350" y="120" width="98" height="146" fill="url(#lvWood)"/>
+    <rect x="350" y="120" width="98" height="3" fill="#7a5436"/>
+    <rect x="350" y="120" width="98" height="146" fill="none" stroke="#1a100a" stroke-width="2"/>
+    <!-- bottom shadow -->
+    <rect x="348" y="266" width="102" height="3" fill="#1a100a" opacity="0.7"/>
+    <!-- shelf rails -->
+    <rect x="350" y="172" width="98" height="2" fill="#1a100a"/>
+    <rect x="350" y="222" width="98" height="2" fill="#1a100a"/>
+    <!-- back recess (slightly darker) -->
+    <rect x="354" y="124" width="90" height="46" fill="#3a2818" opacity="0.7"/>
+    <rect x="354" y="176" width="90" height="44" fill="#3a2818" opacity="0.7"/>
+    <rect x="354" y="226" width="90" height="38" fill="#3a2818" opacity="0.7"/>
+
+    <!-- glass reflection (animates independently - magical realism) -->
+    <g id="lv-cabinet-reflection" pointer-events="none">
+      <polygon points="354,124 366,124 360,170 354,170" fill="#ffffff" opacity="0.10">
+        <animate attributeName="opacity" values="0.05;0.18;0.07;0.16;0.05" dur="9.4s" repeatCount="indefinite"/>
+      </polygon>
+      <polygon points="354,176 364,176 358,220 354,220" fill="#ffffff" opacity="0.08">
+        <animate attributeName="opacity" values="0.04;0.16;0.06;0.14;0.04" dur="13.2s" repeatCount="indefinite"/>
+      </polygon>
+    </g>
+  </g>
+
+  <!-- ============= -->
+  <!-- DOILY (lace fabric) on top of the cabinet -->
+  <!-- ============= -->
+  <g id="lv-doily">
+    <rect x="345" y="114" width="108" height="6" fill="#e8d8c0"/>
+    <rect x="345" y="114" width="108" height="1" fill="#f4e8d0"/>
+    <!-- zigzag / scallop bottom edge -->
+    <rect x="345" y="120" width="3" height="2" fill="#e8d8c0"/>
+    <rect x="350" y="120" width="3" height="2" fill="#e8d8c0"/>
+    <rect x="355" y="120" width="3" height="2" fill="#e8d8c0"/>
+    <rect x="360" y="120" width="3" height="2" fill="#e8d8c0"/>
+    <rect x="365" y="120" width="3" height="2" fill="#e8d8c0"/>
+    <rect x="370" y="120" width="3" height="2" fill="#e8d8c0"/>
+    <rect x="375" y="120" width="3" height="2" fill="#e8d8c0"/>
+    <rect x="380" y="120" width="3" height="2" fill="#e8d8c0"/>
+    <rect x="385" y="120" width="3" height="2" fill="#e8d8c0"/>
+    <rect x="390" y="120" width="3" height="2" fill="#e8d8c0"/>
+    <rect x="395" y="120" width="3" height="2" fill="#e8d8c0"/>
+    <rect x="400" y="120" width="3" height="2" fill="#e8d8c0"/>
+    <rect x="405" y="120" width="3" height="2" fill="#e8d8c0"/>
+    <rect x="410" y="120" width="3" height="2" fill="#e8d8c0"/>
+    <rect x="415" y="120" width="3" height="2" fill="#e8d8c0"/>
+    <rect x="420" y="120" width="3" height="2" fill="#e8d8c0"/>
+    <rect x="425" y="120" width="3" height="2" fill="#e8d8c0"/>
+    <rect x="430" y="120" width="3" height="2" fill="#e8d8c0"/>
+    <rect x="435" y="120" width="3" height="2" fill="#e8d8c0"/>
+    <rect x="440" y="120" width="3" height="2" fill="#e8d8c0"/>
+    <rect x="445" y="120" width="3" height="2" fill="#e8d8c0"/>
+    <rect x="450" y="120" width="3" height="2" fill="#e8d8c0"/>
+    <!-- lace holes -->
+    <rect x="350" y="116" width="2" height="2" fill="#a89880" opacity="0.55"/>
+    <rect x="358" y="116" width="2" height="2" fill="#a89880" opacity="0.55"/>
+    <rect x="366" y="116" width="2" height="2" fill="#a89880" opacity="0.55"/>
+    <rect x="374" y="116" width="2" height="2" fill="#a89880" opacity="0.55"/>
+    <rect x="382" y="116" width="2" height="2" fill="#a89880" opacity="0.55"/>
+    <rect x="390" y="116" width="2" height="2" fill="#a89880" opacity="0.55"/>
+    <rect x="398" y="116" width="2" height="2" fill="#a89880" opacity="0.55"/>
+    <rect x="406" y="116" width="2" height="2" fill="#a89880" opacity="0.55"/>
+    <rect x="414" y="116" width="2" height="2" fill="#a89880" opacity="0.55"/>
+    <rect x="422" y="116" width="2" height="2" fill="#a89880" opacity="0.55"/>
+    <rect x="430" y="116" width="2" height="2" fill="#a89880" opacity="0.55"/>
+    <rect x="438" y="116" width="2" height="2" fill="#a89880" opacity="0.55"/>
+    <rect x="446" y="116" width="2" height="2" fill="#a89880" opacity="0.55"/>
+  </g>
+
+  <!-- ============= -->
+  <!-- ITEMS ATOP CABINET (on the doily) -->
+  <!-- ============= -->
+  <g id="lv-items-top">
+    <!-- ballerina figurine -->
+    <g id="lv-figurine-1">
+      <rect x="362" y="100" width="6" height="14" fill="#e8c8d8"/>
+      <rect x="362" y="100" width="6" height="2" fill="#f4d8e8"/>
+      <rect x="364" y="92" width="2" height="6" fill="#a89880"/>
+      <rect x="358" y="102" width="4" height="2" fill="#e8c8d8"/>
+      <rect x="368" y="102" width="4" height="2" fill="#e8c8d8"/>
+      <rect x="362" y="112" width="6" height="2" fill="#a89880" opacity="0.6"/>
+    </g>
+
+    <!-- framed photo on top -->
+    <g id="lv-photo-1">
+      <rect x="378" y="92" width="22" height="22" fill="#3a2418"/>
+      <rect x="378" y="92" width="22" height="2" fill="#5a3826"/>
+      <rect x="380" y="94" width="18" height="18" fill="#c8b890"/>
+      <rect x="384" y="102" width="3" height="4" fill="#5a4634"/>
+      <rect x="383" y="106" width="5" height="6" fill="#5a4634"/>
+      <rect x="392" y="100" width="3" height="6" fill="#4a3826"/>
+      <rect x="391" y="106" width="5" height="6" fill="#4a3826"/>
+      <rect x="380" y="94" width="18" height="18" fill="#e8d6b0" opacity="0.18"/>
+    </g>
+
+    <!-- ceramic bird figurine -->
+    <g id="lv-figurine-2">
+      <rect x="412" y="100" width="10" height="10" fill="#a8b4c4"/>
+      <rect x="412" y="100" width="10" height="2" fill="#c8d4e0"/>
+      <rect x="416" y="96" width="4" height="6" fill="#a8b4c4"/>
+      <rect x="420" y="98" width="2" height="2" fill="#a8b4c4"/>
+      <rect x="416" y="98" width="1" height="1" fill="#1a0e08"/>
+      <rect x="414" y="110" width="6" height="2" fill="#a8b4c4" opacity="0.7"/>
+    </g>
+
+    <!-- small candle -->
+    <g id="lv-candle">
+      <rect x="432" y="100" width="8" height="14" fill="#dccfa8"/>
+      <rect x="432" y="100" width="8" height="2" fill="#ecdfb8"/>
+      <rect x="434" y="98" width="2" height="2" fill="#3a2418"/>
+      <rect x="434" y="92" width="2" height="6" fill="#f4c860">
+        <animate attributeName="opacity" values="0.85;0.55;0.95;0.7;0.9;0.6" dur="3.4s" repeatCount="indefinite"/>
+      </rect>
+      <rect x="433" y="88" width="4" height="4" fill="#f4c860" opacity="0.18">
+        <animate attributeName="opacity" values="0.10;0.22;0.12;0.18;0.10" dur="3.4s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+
+  <!-- ============= -->
+  <!-- ITEMS ON MIDDLE SHELF -->
+  <!-- ============= -->
+  <g id="lv-items-mid">
+    <!-- vintage book stack -->
+    <g id="lv-books">
+      <rect x="358" y="148" width="20" height="22" fill="#a86848"/>
+      <rect x="358" y="148" width="20" height="2" fill="#c88860"/>
+      <rect x="358" y="158" width="20" height="2" fill="#7a4828" opacity="0.65"/>
+      <rect x="360" y="142" width="16" height="6" fill="#5a7a6c"/>
+      <rect x="360" y="142" width="16" height="2" fill="#7a9a8c"/>
+    </g>
+
+    <!-- framed family photo -->
+    <g id="lv-photo-2">
+      <rect x="386" y="142" width="28" height="30" fill="#3a2418"/>
+      <rect x="386" y="142" width="28" height="2" fill="#5a3826"/>
+      <rect x="388" y="144" width="24" height="26" fill="#c8b890"/>
+      <rect x="394" y="148" width="4" height="6" fill="#5a4634"/>
+      <rect x="392" y="154" width="8" height="14" fill="#5a4634"/>
+      <rect x="402" y="146" width="4" height="8" fill="#4a3826"/>
+      <rect x="400" y="154" width="8" height="14" fill="#4a3826"/>
+      <rect x="388" y="144" width="24" height="26" fill="#e8d6b0" opacity="0.18"/>
+    </g>
+
+    <!-- small clock -->
+    <g id="lv-clock">
+      <rect x="422" y="150" width="20" height="20" fill="#5a3826"/>
+      <rect x="422" y="150" width="20" height="2" fill="#7a5436"/>
+      <rect x="424" y="152" width="16" height="16" fill="#dccfa8"/>
+      <rect x="424" y="152" width="16" height="2" fill="#ecdfb8"/>
+      <!-- hands -->
+      <rect x="431" y="156" width="2" height="6" fill="#3a2418"/>
+      <rect x="431" y="160" width="6" height="2" fill="#3a2418"/>
+      <!-- center -->
+      <rect x="431" y="160" width="2" height="2" fill="#1a100a"/>
+    </g>
+  </g>
+
+  <!-- ============= -->
+  <!-- ITEMS ON BOTTOM SHELF -->
+  <!-- ============= -->
+  <g id="lv-items-bottom">
+    <!-- ornate vase -->
+    <g id="lv-vase">
+      <rect x="362" y="240" width="14" height="20" fill="#586878"/>
+      <rect x="364" y="232" width="10" height="10" fill="#586878"/>
+      <rect x="366" y="228" width="6" height="4" fill="#586878"/>
+      <rect x="364" y="232" width="10" height="2" fill="#7888a0"/>
+      <rect x="362" y="240" width="14" height="2" fill="#7888a0" opacity="0.55"/>
+      <rect x="362" y="258" width="14" height="2" fill="#384858" opacity="0.7"/>
+      <!-- a faded flower poking out -->
+      <rect x="368" y="222" width="2" height="6" fill="#5a8a48"/>
+      <rect x="370" y="220" width="2" height="2" fill="#a85878"/>
+      <rect x="368" y="220" width="2" height="2" fill="#a85878"/>
+    </g>
+
+    <!-- trinket box -->
+    <g id="lv-trinket">
+      <rect x="386" y="240" width="22" height="22" fill="#5a3a26"/>
+      <rect x="386" y="240" width="22" height="2" fill="#7a5236"/>
+      <rect x="388" y="244" width="18" height="16" fill="#3a2418"/>
+      <rect x="392" y="248" width="10" height="8" fill="#a86848"/>
+      <rect x="392" y="248" width="10" height="2" fill="#c88860" opacity="0.7"/>
+      <!-- tiny key on top -->
+      <rect x="390" y="236" width="6" height="2" fill="#a89880"/>
+      <rect x="394" y="234" width="2" height="6" fill="#a89880"/>
+    </g>
+
+    <!-- a small framed photo (laid down) -->
+    <g id="lv-photo-3">
+      <rect x="416" y="246" width="24" height="14" fill="#3a2418"/>
+      <rect x="416" y="246" width="24" height="2" fill="#5a3826"/>
+      <rect x="418" y="248" width="20" height="10" fill="#c8b890"/>
+      <rect x="422" y="251" width="4" height="6" fill="#5a4634"/>
+      <rect x="430" y="251" width="4" height="6" fill="#4a3826"/>
+    </g>
+  </g>
+
+  <!-- ============= -->
+  <!-- COUCH EDGE (bottom-right, very partial) -->
+  <!-- ============= -->
+  <g id="lv-couch">
+    <!-- arm rest (sticking up from cushion) -->
+    <rect x="438" y="226" width="42" height="38" fill="#7a8478"/>
+    <rect x="438" y="226" width="42" height="3" fill="#9aa498"/>
+    <rect x="438" y="226" width="3" height="38" fill="#5a6458" opacity="0.55"/>
+    <!-- cushion top -->
+    <rect x="416" y="244" width="64" height="18" fill="#7a8478"/>
+    <rect x="416" y="244" width="64" height="3" fill="#9aa498"/>
+    <rect x="416" y="256" width="64" height="2" fill="#5a6458" opacity="0.7"/>
+    <!-- couch base / skirt -->
+    <rect x="416" y="262" width="64" height="22" fill="#5a6458"/>
+    <rect x="416" y="262" width="64" height="2" fill="#7a8478"/>
+    <rect x="416" y="282" width="64" height="2" fill="#3a4438" opacity="0.7"/>
+    <!-- a small folded throw on the cushion -->
+    <rect x="430" y="246" width="14" height="10" fill="#a85878"/>
+    <rect x="430" y="246" width="14" height="2" fill="#c87898"/>
+  </g>
+
+  <!-- ============= -->
+  <!-- TV GLOW REFLECTING ON FLOOR -->
+  <!-- ============= -->
+  <g id="lv-floor-glow" pointer-events="none">
+    <rect x="80" y="280" width="320" height="6" fill="#e8b890" opacity="0.20"/>
+    <rect x="120" y="280" width="240" height="3" fill="#f0d4a8" opacity="0.25"/>
+    <rect x="160" y="280" width="160" height="2" fill="#f4dcb0" opacity="0.30"/>
+    <!-- subtle flicker streak -->
+    <rect x="200" y="280" width="2" height="2" fill="#fff0c0" opacity="0.5">
+      <animate attributeName="opacity" values="0.1;0.7;0.2;0.6;0.1" dur="3.6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ============= -->
+  <!-- DUST MOTES drifting in TV spill -->
+  <!-- ============= -->
+  <g id="lv-dust" pointer-events="none" opacity="0.55">
+    <rect x="200" y="50" width="1" height="1" fill="#f0d8a8" opacity="0.6">
+      <animate attributeName="y" values="50;120;50" dur="14s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.6;0" dur="14s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="276" y="40" width="1" height="1" fill="#f0d8a8" opacity="0.5">
+      <animate attributeName="y" values="40;130;40" dur="17s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.5;0" dur="17s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="342" y="60" width="1" height="1" fill="#f0d8a8" opacity="0.5">
+      <animate attributeName="y" values="60;120;60" dur="19s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0;0.5;0" dur="19s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Edge vignette -->
+  <rect width="480" height="320" fill="none" stroke="#0a0810" stroke-width="22" opacity="0.45" pointer-events="none"/>
+
+  <!-- ============= -->
+  <!-- INTERACTION HOTSPOTS (transparent, on top) -->
+  <!-- ============= -->
+  <rect id="hit-tv" x="170" y="110" width="124" height="92" fill="transparent" pointer-events="all"/>
+  <rect id="hit-tv-knobs" x="296" y="110" width="16" height="92" fill="transparent" pointer-events="all"/>
+  <rect id="hit-tv-grille" x="170" y="200" width="120" height="14" fill="transparent" pointer-events="all"/>
+  <rect id="hit-antenna" x="208" y="30" width="60" height="58" fill="transparent" pointer-events="all"/>
+  <rect id="hit-remote" x="244" y="216" width="40" height="14" fill="transparent" pointer-events="all"/>
+
+  <rect id="hit-doily" x="343" y="113" width="112" height="12" fill="transparent" pointer-events="all"/>
+  <rect id="hit-figurine-1" x="358" y="90" width="14" height="26" fill="transparent" pointer-events="all"/>
+  <rect id="hit-photo-1" x="376" y="90" width="26" height="26" fill="transparent" pointer-events="all"/>
+  <rect id="hit-figurine-2" x="410" y="94" width="14" height="22" fill="transparent" pointer-events="all"/>
+  <rect id="hit-candle" x="430" y="86" width="14" height="30" fill="transparent" pointer-events="all"/>
+
+  <rect id="hit-books" x="356" y="140" width="24" height="32" fill="transparent" pointer-events="all"/>
+  <rect id="hit-photo-2" x="384" y="140" width="32" height="32" fill="transparent" pointer-events="all"/>
+  <rect id="hit-clock" x="420" y="148" width="24" height="24" fill="transparent" pointer-events="all"/>
+
+  <rect id="hit-vase" x="360" y="218" width="20" height="44" fill="transparent" pointer-events="all"/>
+  <rect id="hit-trinket" x="384" y="232" width="26" height="32" fill="transparent" pointer-events="all"/>
+  <rect id="hit-photo-3" x="414" y="244" width="28" height="20" fill="transparent" pointer-events="all"/>
+  <rect id="hit-cabinet" x="350" y="172" width="98" height="92" fill="transparent" pointer-events="all"/>
+
+  <rect id="hit-bunk-top" x="0" y="60" width="100" height="42" fill="transparent" pointer-events="all"/>
+  <rect id="hit-bunk-blanket-top" x="0" y="102" width="100" height="42" fill="transparent" pointer-events="all"/>
+  <rect id="hit-bunk-bottom" x="0" y="156" width="100" height="56" fill="transparent" pointer-events="all"/>
+  <rect id="hit-bunk-blanket-bottom" x="0" y="212" width="100" height="46" fill="transparent" pointer-events="all"/>
+  <rect id="hit-ladder" x="62" y="100" width="30" height="172" fill="transparent" pointer-events="all"/>
+  <rect id="hit-bunk-star" x="90" y="174" width="14" height="16" fill="transparent" pointer-events="all"/>
+
+  <rect id="hit-couch" x="416" y="222" width="64" height="62" fill="transparent" pointer-events="all"/>
+</svg>
