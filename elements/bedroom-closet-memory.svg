@@ -1,0 +1,884 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" shape-rendering="crispEdges">
+  <title>Bedroom closet memory fragment (apartment one)</title>
+  <desc>Looking straight into the bedroom closet from the doorway: a warm cream interior softened by a single overhead bulb. A row of mismatched hangers carries blouses, a cardigan, a long dress, and a skirt across different years. Above the rod, a small shelf holds folded blankets, a shoe box, and an old handbag. A small lower ledge holds two perfume bottles, a hair-product bottle, and an old clothing iron with its cord trailing off the back. Two stacked shoe boxes sit on the floor next to a small backpack. The back of the closet darkens past the rod in a way that suggests it is deeper than it should be. Amber dust drifts through the warm light. One garment glows softly when hovered, the way a fabric remembers a scent.</desc>
+
+  <defs>
+    <linearGradient id="bcOuterWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#ecd6b8"/>
+      <stop offset="100%" stop-color="#c8a47c"/>
+    </linearGradient>
+    <linearGradient id="bcFrame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#a07050"/>
+      <stop offset="100%" stop-color="#5a3826"/>
+    </linearGradient>
+    <linearGradient id="bcInterior" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f4e0bc"/>
+      <stop offset="55%"  stop-color="#dcb888"/>
+      <stop offset="100%" stop-color="#7a4828"/>
+    </linearGradient>
+    <radialGradient id="bcDepth" cx="50%" cy="58%" r="65%">
+      <stop offset="0%"   stop-color="#3a2418" stop-opacity="0"/>
+      <stop offset="60%"  stop-color="#2a180e" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#0a0604" stop-opacity="0.78"/>
+    </radialGradient>
+    <radialGradient id="bcBulbGlow" cx="50%" cy="0%" r="80%">
+      <stop offset="0%"   stop-color="#fce4a8" stop-opacity="0.55"/>
+      <stop offset="50%"  stop-color="#d8a868" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bcShelf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#9a6c46"/>
+      <stop offset="100%" stop-color="#5a3220"/>
+    </linearGradient>
+    <linearGradient id="bcFloor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#a07854"/>
+      <stop offset="100%" stop-color="#4a2c18"/>
+    </linearGradient>
+    <linearGradient id="bcSidesL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#3a1c10" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#3a1c10" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="bcSidesR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%"   stop-color="#3a1c10" stop-opacity="0.42"/>
+      <stop offset="100%" stop-color="#3a1c10" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="bcVignette" cx="50%" cy="55%" r="72%">
+      <stop offset="60%"  stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1a0c08" stop-opacity="0.50"/>
+    </radialGradient>
+
+    <!-- the soft halo behind the "memory" garment (slot 3); visibility is
+         toggled by hover so a fabric appears to glow when the cursor lands on it -->
+    <radialGradient id="bcGarmentGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%"   stop-color="#fce8c4" stop-opacity="0.85"/>
+      <stop offset="55%"  stop-color="#f4c878" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#f4c878" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="bcSoftGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.6"/>
+    </filter>
+
+    <style>
+      /* the "scent memory" garment (slot 3) softly surfaces a halo when hovered. */
+      #bc-garment-3 .bc-glow-halo { opacity: 0; transition: opacity 0.55s ease; }
+      #bc-garment-3:hover .bc-glow-halo { opacity: 1; }
+      /* very subtle lift on hover for the other garments too, so the closet
+         responds gently to attention without pulling focus from the glow */
+      #bc-garment-1:hover .bc-outfit-current,
+      #bc-garment-2:hover .bc-outfit-current,
+      #bc-garment-4:hover .bc-outfit-current { filter: brightness(1.06); }
+    </style>
+  </defs>
+
+  <!-- ============= OUTER (sliver of bedroom wall around the doorway) ============= -->
+  <rect width="480" height="320" fill="url(#bcOuterWall)"/>
+  <!-- a couple of vertical wall texture lines outside the closet -->
+  <g pointer-events="none" opacity="0.16">
+    <rect x="6"   y="0" width="1" height="320" fill="#a07852"/>
+    <rect x="472" y="0" width="1" height="320" fill="#a07852"/>
+  </g>
+
+  <!-- ============= DOOR FRAME (we are looking THROUGH it from the bedroom) ============= -->
+  <g id="bc-frame">
+    <!-- header -->
+    <rect x="14" y="0"  width="452" height="18" fill="url(#bcFrame)"/>
+    <rect x="14" y="0"  width="452" height="2"  fill="#bc8a60"/>
+    <rect x="14" y="16" width="452" height="2"  fill="#1a0c08" opacity="0.7"/>
+    <!-- left jamb -->
+    <rect x="14" y="0"  width="18"  height="320" fill="url(#bcFrame)"/>
+    <rect x="14" y="0"  width="2"   height="320" fill="#bc8a60"/>
+    <rect x="30" y="0"  width="2"   height="320" fill="#1a0c08" opacity="0.75"/>
+    <!-- right jamb -->
+    <rect x="448" y="0" width="18"  height="320" fill="url(#bcFrame)"/>
+    <rect x="448" y="0" width="2"   height="320" fill="#1a0c08" opacity="0.75"/>
+    <rect x="464" y="0" width="2"   height="320" fill="#bc8a60" opacity="0.55"/>
+    <!-- floor sill -->
+    <rect x="14"  y="300" width="452" height="14" fill="url(#bcFrame)"/>
+    <rect x="14"  y="300" width="452" height="2"  fill="#bc8a60"/>
+    <!-- inner frame shadow -->
+    <rect x="32"  y="18"  width="416" height="2"  fill="#000000" opacity="0.50"/>
+  </g>
+
+  <!-- ============= INTERIOR BACK WALL (warm cream to - amber) ============= -->
+  <rect x="32" y="18" width="416" height="284" fill="url(#bcInterior)"/>
+  <!-- subtle vertical plank lines on the back wall -->
+  <g id="bc-back-tex" pointer-events="none" opacity="0.18">
+    <rect x="92"  y="18" width="1" height="284" fill="#7a5232"/>
+    <rect x="178" y="18" width="1" height="284" fill="#7a5232"/>
+    <rect x="262" y="18" width="1" height="284" fill="#7a5232"/>
+    <rect x="350" y="18" width="1" height="284" fill="#7a5232"/>
+    <rect x="32"  y="98"  width="416" height="1" fill="#7a5232"/>
+    <rect x="32"  y="178" width="416" height="1" fill="#7a5232"/>
+  </g>
+  <!-- impossible-depth darkening at the back center (the closet feels deeper than possible) -->
+  <rect x="32" y="18" width="416" height="284" fill="url(#bcDepth)" opacity="0.72" pointer-events="none"/>
+
+  <!-- ============= WARM BULB GLOW from above ============= -->
+  <g id="bc-bulb-glow" pointer-events="none">
+    <rect x="32" y="18" width="416" height="220" fill="url(#bcBulbGlow)" opacity="0.95">
+      <animate attributeName="opacity" values="0.82;1.0;0.86;0.95;0.84" dur="9.4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- the bulb itself (hangs from a wire above the shelf) -->
+  <g id="bc-bulb" pointer-events="none">
+    <rect x="238" y="18" width="2" height="6" fill="#3a2418"/>
+    <rect x="234" y="24" width="10" height="6" fill="#a89880"/>
+    <rect x="234" y="24" width="10" height="2" fill="#dccfb8"/>
+    <rect x="236" y="30" width="6"  height="6" fill="#fce4a8">
+      <animate attributeName="fill" values="#fce4a8;#fff0c8;#fce4a8;#e8c878;#fce4a8" dur="9.4s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="237" y="31" width="2"  height="2" fill="#fff8e0"/>
+    <!-- bulb halo -->
+    <rect x="232" y="26" width="14" height="14" fill="#fce4a8" opacity="0.18">
+      <animate attributeName="opacity" values="0.10;0.24;0.12;0.20;0.10" dur="9.4s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ============= TOP SHELF + items ============= -->
+  <g id="bc-shelf" pointer-events="none">
+    <rect x="32" y="58" width="416" height="6" fill="url(#bcShelf)"/>
+    <rect x="32" y="58" width="416" height="2" fill="#b07c50"/>
+    <rect x="32" y="64" width="416" height="2" fill="#1a0c08" opacity="0.7"/>
+    <!-- two small brackets under the shelf -->
+    <rect x="60"  y="64" width="2" height="6" fill="#3a2418"/>
+    <rect x="418" y="64" width="2" height="6" fill="#3a2418"/>
+  </g>
+
+  <!-- folded blankets stack (left side of shelf) - 3 rotating arrangements -->
+  <g id="bc-blankets-a" class="bc-blankets" pointer-events="none" visibility="visible">
+    <!-- bottom: cream -->
+    <rect x="44" y="48" width="86" height="10" fill="#ecdfb8"/>
+    <rect x="44" y="48" width="86" height="2"  fill="#fff0c8"/>
+    <rect x="44" y="56" width="86" height="2"  fill="#a8957a" opacity="0.6"/>
+    <!-- middle: dusty rose -->
+    <rect x="48" y="38" width="78" height="10" fill="#c88898"/>
+    <rect x="48" y="38" width="78" height="2"  fill="#dca0b0"/>
+    <rect x="48" y="46" width="78" height="2"  fill="#7a4858" opacity="0.7"/>
+    <!-- top: warm tan with stripe -->
+    <rect x="52" y="28" width="70" height="10" fill="#c89868"/>
+    <rect x="52" y="28" width="70" height="2"  fill="#dcb088"/>
+    <rect x="52" y="36" width="70" height="2"  fill="#7a5232" opacity="0.7"/>
+    <rect x="52" y="32" width="70" height="1"  fill="#5a3818" opacity="0.45"/>
+    <!-- a folded note tip peeking out -->
+    <rect x="92" y="40" width="14" height="3" fill="#fff0c8"/>
+    <rect x="92" y="40" width="14" height="1" fill="#fff8e0"/>
+  </g>
+
+  <g id="bc-blankets-b" class="bc-blankets" pointer-events="none" visibility="hidden">
+    <!-- a smaller stack (some blankets must have moved) -->
+    <rect x="46" y="46" width="82" height="12" fill="#a8b898"/>
+    <rect x="46" y="46" width="82" height="2"  fill="#c8d4b0"/>
+    <rect x="46" y="56" width="82" height="2"  fill="#586848" opacity="0.7"/>
+    <rect x="50" y="34" width="74" height="12" fill="#dccfa8"/>
+    <rect x="50" y="34" width="74" height="2"  fill="#ecdfb8"/>
+    <rect x="50" y="44" width="74" height="2"  fill="#a8957a" opacity="0.6"/>
+    <!-- a single sock on top -->
+    <rect x="74" y="28" width="18" height="6"  fill="#7a8898"/>
+    <rect x="74" y="28" width="18" height="1"  fill="#a8b8c8"/>
+  </g>
+
+  <g id="bc-blankets-c" class="bc-blankets" pointer-events="none" visibility="hidden">
+    <!-- nearly empty - one folded blanket and a slip of paper -->
+    <rect x="48" y="48" width="80" height="10" fill="#dccfa8"/>
+    <rect x="48" y="48" width="80" height="2"  fill="#ecdfb8"/>
+    <rect x="48" y="56" width="80" height="2"  fill="#a8957a" opacity="0.6"/>
+    <!-- letter / note -->
+    <rect x="68" y="38" width="40" height="10" fill="#fff0c8"/>
+    <rect x="68" y="38" width="40" height="2"  fill="#fff8e0"/>
+    <rect x="72" y="42" width="32" height="1"  fill="#5a3818" opacity="0.55"/>
+    <rect x="72" y="44" width="20" height="1"  fill="#5a3818" opacity="0.45"/>
+    <!-- ghost of where the rest used to be -->
+    <rect x="46" y="32" width="86" height="6" fill="#fce6c0" opacity="0.20"/>
+  </g>
+
+  <!-- shoe box (middle of shelf) -->
+  <g id="bc-shoebox-shelf" pointer-events="none">
+    <rect x="148" y="32" width="118" height="26" fill="#dca08c"/>
+    <rect x="148" y="32" width="118" height="2"  fill="#ecbcaa"/>
+    <rect x="148" y="56" width="118" height="2"  fill="#7a4838" opacity="0.7"/>
+    <!-- lid line -->
+    <rect x="148" y="40" width="118" height="2" fill="#7a4838" opacity="0.55"/>
+    <!-- brand label -->
+    <rect x="184" y="44" width="46" height="10" fill="#f4e0c8"/>
+    <rect x="184" y="44" width="46" height="1"  fill="#fff0d8"/>
+    <text x="207" y="52" text-anchor="middle" font-family="'Courier New', monospace" font-size="6" fill="#3a2418">SOFT</text>
+    <!-- ribbon detail -->
+    <rect x="206" y="32" width="2" height="26" fill="#a85878" opacity="0.6"/>
+    <rect x="200" y="32" width="14" height="2" fill="#a85878" opacity="0.6"/>
+  </g>
+
+  <!-- handbag on the right side of the shelf (3 rotating handbag/backpack variants) -->
+  <g id="bc-bag-a" class="bc-bag" pointer-events="none" visibility="visible">
+    <!-- a small leather handbag with a chain strap -->
+    <rect x="284" y="34" width="62" height="24" fill="#5a3826"/>
+    <rect x="284" y="34" width="62" height="2"  fill="#7a4836"/>
+    <rect x="284" y="56" width="62" height="2"  fill="#1a0c08" opacity="0.8"/>
+    <rect x="284" y="34" width="2"  height="24" fill="#7a4836" opacity="0.85"/>
+    <rect x="344" y="34" width="2"  height="24" fill="#1a0c08" opacity="0.85"/>
+    <!-- chain strap arc -->
+    <rect x="294" y="26" width="2" height="3" fill="#a8a8a8"/>
+    <rect x="298" y="24" width="2" height="2" fill="#a8a8a8"/>
+    <rect x="304" y="22" width="2" height="2" fill="#a8a8a8"/>
+    <rect x="312" y="22" width="2" height="2" fill="#a8a8a8"/>
+    <rect x="320" y="22" width="2" height="2" fill="#a8a8a8"/>
+    <rect x="326" y="24" width="2" height="2" fill="#a8a8a8"/>
+    <rect x="332" y="26" width="2" height="3" fill="#a8a8a8"/>
+    <!-- clasp -->
+    <rect x="312" y="40" width="6" height="3" fill="#c8a060"/>
+    <rect x="312" y="40" width="6" height="1" fill="#dcb878"/>
+    <!-- subtle stitch line -->
+    <rect x="288" y="48" width="54" height="1" fill="#3a1c10" opacity="0.6"/>
+  </g>
+
+  <g id="bc-bag-b" class="bc-bag" pointer-events="none" visibility="hidden">
+    <!-- a small canvas backpack -->
+    <rect x="282" y="32" width="64" height="26" fill="#5a7868"/>
+    <rect x="282" y="32" width="64" height="2"  fill="#7a9888"/>
+    <rect x="282" y="56" width="64" height="2"  fill="#2a4838" opacity="0.85"/>
+    <!-- shoulder strap loop -->
+    <rect x="288" y="26" width="2" height="6" fill="#5a7868"/>
+    <rect x="338" y="26" width="2" height="6" fill="#5a7868"/>
+    <!-- top flap -->
+    <rect x="282" y="32" width="64" height="6" fill="#4a6858"/>
+    <!-- buckle -->
+    <rect x="310" y="40" width="8" height="4" fill="#c8a060"/>
+    <rect x="310" y="40" width="8" height="1" fill="#dcb878"/>
+    <!-- a small pin pinned to the front -->
+    <rect x="296" y="44" width="3" height="3" fill="#a83838"/>
+    <rect x="296" y="44" width="2" height="1" fill="#c85858"/>
+  </g>
+
+  <g id="bc-bag-c" class="bc-bag" pointer-events="none" visibility="hidden">
+    <!-- a small woven shoulder bag (warm tan with embroidered detail) -->
+    <rect x="286" y="36" width="58" height="22" fill="#a87848"/>
+    <rect x="286" y="36" width="58" height="2"  fill="#c89868"/>
+    <rect x="286" y="56" width="58" height="2"  fill="#5a3818" opacity="0.85"/>
+    <!-- weave horizontal lines -->
+    <rect x="286" y="42" width="58" height="1" fill="#5a3818" opacity="0.50"/>
+    <rect x="286" y="48" width="58" height="1" fill="#5a3818" opacity="0.50"/>
+    <rect x="286" y="54" width="58" height="1" fill="#5a3818" opacity="0.50"/>
+    <!-- embroidery dots -->
+    <rect x="298" y="44" width="2" height="2" fill="#c8d4b0"/>
+    <rect x="306" y="46" width="2" height="2" fill="#a85878"/>
+    <rect x="316" y="44" width="2" height="2" fill="#fce4a8"/>
+    <rect x="326" y="46" width="2" height="2" fill="#c8d4b0"/>
+    <!-- single strap arc -->
+    <rect x="294" y="28" width="2" height="8" fill="#a87848"/>
+    <rect x="296" y="26" width="44" height="2" fill="#a87848"/>
+    <rect x="338" y="28" width="2" height="8" fill="#a87848"/>
+  </g>
+
+  <!-- a small striped storage bin on the far right of the shelf -->
+  <g id="bc-bin" pointer-events="none">
+    <rect x="364" y="36" width="72" height="22" fill="#dcc4a0"/>
+    <rect x="364" y="36" width="72" height="2"  fill="#ecd4b0"/>
+    <rect x="364" y="56" width="72" height="2"  fill="#7a5232" opacity="0.75"/>
+    <!-- woven horizontal stripes -->
+    <rect x="364" y="42" width="72" height="2" fill="#a85878" opacity="0.55"/>
+    <rect x="364" y="48" width="72" height="2" fill="#5a7868" opacity="0.55"/>
+    <!-- a folded scarf tip poking out -->
+    <rect x="384" y="32" width="14" height="6" fill="#a85040"/>
+    <rect x="384" y="32" width="14" height="2" fill="#c87060"/>
+  </g>
+
+  <!-- ============= CLOSET ROD ============= -->
+  <g id="bc-rod" pointer-events="none">
+    <rect x="32"  y="72" width="416" height="2" fill="#c8c8d0"/>
+    <rect x="32"  y="72" width="416" height="1" fill="#f4f4fc"/>
+    <rect x="32"  y="74" width="416" height="1" fill="#7a7a84" opacity="0.7"/>
+    <!-- end brackets -->
+    <rect x="34"  y="68" width="6" height="10" fill="#5a5a64"/>
+    <rect x="440" y="68" width="6" height="10" fill="#5a5a64"/>
+  </g>
+
+  <!-- ============= HANGING CLOTHES (4 slots - 3 rotating wardrobe variants) ============= -->
+
+  <!-- GARMENT 1: blouse on a wood hanger (slot 1, xH80) -->
+  <g id="bc-garment-1">
+    <!-- wood hanger -->
+    <rect x="79"  y="68" width="2" height="4" fill="#a87848"/>
+    <rect x="77"  y="66" width="2" height="2" fill="#a87848"/>
+    <rect x="81"  y="66" width="2" height="2" fill="#a87848"/>
+    <rect x="79"  y="64" width="2" height="2" fill="#a87848"/>
+    <rect x="58"  y="78" width="44" height="2" fill="#7a5236"/>
+    <rect x="60"  y="77" width="40" height="1" fill="#7a5236"/>
+    <rect x="64"  y="76" width="32" height="1" fill="#7a5236"/>
+
+    <!-- variant A: pale cream blouse with floral specks -->
+    <g id="bc-outfit-1a" class="bc-outfit-1 bc-outfit-current">
+      <rect x="56" y="80" width="48" height="12" fill="#f4e8c8"/>
+      <rect x="56" y="80" width="48" height="2"  fill="#fff4d8"/>
+      <rect x="62" y="92" width="36" height="74" fill="#f4e8c8"/>
+      <rect x="68" y="100" width="2" height="2" fill="#a85878"/>
+      <rect x="86" y="106" width="2" height="2" fill="#5a7848"/>
+      <rect x="74" y="116" width="2" height="2" fill="#a85878"/>
+      <rect x="90" y="124" width="2" height="2" fill="#5a7848"/>
+      <rect x="68" y="134" width="2" height="2" fill="#a85878"/>
+      <rect x="84" y="144" width="2" height="2" fill="#5a7848"/>
+      <rect x="72" y="156" width="2" height="2" fill="#a85878"/>
+      <rect x="62" y="164" width="36" height="3" fill="#a89668" opacity="0.7"/>
+    </g>
+    <!-- variant B: dusty pink blouse with peter-pan collar -->
+    <g id="bc-outfit-1b" class="bc-outfit-1" visibility="hidden">
+      <rect x="56" y="80" width="48" height="12" fill="#dca0b0"/>
+      <rect x="56" y="80" width="48" height="2"  fill="#ecbcc8"/>
+      <rect x="62" y="92" width="36" height="74" fill="#dca0b0"/>
+      <!-- peter-pan collar -->
+      <rect x="68" y="92" width="10" height="4" fill="#fff4d8"/>
+      <rect x="82" y="92" width="10" height="4" fill="#fff4d8"/>
+      <!-- buttons -->
+      <rect x="79" y="100" width="2" height="2" fill="#fff4d8"/>
+      <rect x="79" y="116" width="2" height="2" fill="#fff4d8"/>
+      <rect x="79" y="132" width="2" height="2" fill="#fff4d8"/>
+      <rect x="62" y="164" width="36" height="3" fill="#7a4858" opacity="0.7"/>
+    </g>
+    <!-- variant C: faded green tee -->
+    <g id="bc-outfit-1c" class="bc-outfit-1" visibility="hidden">
+      <rect x="58" y="80" width="44" height="10" fill="#a8b898"/>
+      <rect x="58" y="80" width="44" height="2"  fill="#c8d4b0"/>
+      <rect x="64" y="90" width="32" height="68" fill="#a8b898"/>
+      <!-- faded screen-print mark -->
+      <rect x="72" y="108" width="16" height="6" fill="#586848" opacity="0.55"/>
+      <rect x="74" y="116" width="12" height="2" fill="#586848" opacity="0.45"/>
+      <rect x="64" y="156" width="32" height="3" fill="#586848" opacity="0.6"/>
+    </g>
+  </g>
+
+  <!-- GARMENT 2: cardigan on a plastic pink hanger (slot 2, xH172) -->
+  <g id="bc-garment-2">
+    <!-- pink plastic hanger -->
+    <rect x="171" y="68" width="2" height="4" fill="#dc8898"/>
+    <rect x="169" y="66" width="2" height="2" fill="#dc8898"/>
+    <rect x="173" y="66" width="2" height="2" fill="#dc8898"/>
+    <rect x="171" y="64" width="2" height="2" fill="#dc8898"/>
+    <rect x="148" y="78" width="48" height="2" fill="#dc8898"/>
+    <rect x="150" y="77" width="44" height="1" fill="#dc8898"/>
+    <rect x="154" y="76" width="36" height="1" fill="#dc8898"/>
+
+    <!-- variant A: cream knit cardigan with pearl buttons -->
+    <g id="bc-outfit-2a" class="bc-outfit-2 bc-outfit-current">
+      <rect x="146" y="80" width="52" height="12" fill="#ecdfb8"/>
+      <rect x="146" y="80" width="52" height="2"  fill="#fff4d8"/>
+      <rect x="152" y="92" width="40" height="86" fill="#ecdfb8"/>
+      <!-- knit ribbing texture -->
+      <rect x="152" y="100" width="40" height="1" fill="#a89668" opacity="0.45"/>
+      <rect x="152" y="112" width="40" height="1" fill="#a89668" opacity="0.45"/>
+      <rect x="152" y="124" width="40" height="1" fill="#a89668" opacity="0.45"/>
+      <rect x="152" y="136" width="40" height="1" fill="#a89668" opacity="0.45"/>
+      <rect x="152" y="148" width="40" height="1" fill="#a89668" opacity="0.45"/>
+      <rect x="152" y="160" width="40" height="1" fill="#a89668" opacity="0.45"/>
+      <!-- center placket -->
+      <rect x="171" y="92" width="2" height="86" fill="#c8b88a" opacity="0.65"/>
+      <!-- pearl buttons -->
+      <rect x="171" y="98"  width="2" height="2" fill="#fff8e0"/>
+      <rect x="171" y="116" width="2" height="2" fill="#fff8e0"/>
+      <rect x="171" y="134" width="2" height="2" fill="#fff8e0"/>
+      <rect x="171" y="152" width="2" height="2" fill="#fff8e0"/>
+      <!-- hem -->
+      <rect x="152" y="176" width="40" height="3" fill="#a89668" opacity="0.7"/>
+    </g>
+    <!-- variant B: oatmeal sweater with horizontal stripe -->
+    <g id="bc-outfit-2b" class="bc-outfit-2" visibility="hidden">
+      <rect x="146" y="80" width="52" height="12" fill="#dccfa8"/>
+      <rect x="146" y="80" width="52" height="2"  fill="#ecdfb8"/>
+      <rect x="152" y="92" width="40" height="84" fill="#dccfa8"/>
+      <!-- horizontal stripe -->
+      <rect x="152" y="118" width="40" height="6" fill="#7a5232" opacity="0.85"/>
+      <rect x="152" y="118" width="40" height="1" fill="#a07050" opacity="0.85"/>
+      <rect x="152" y="174" width="40" height="3" fill="#a89668" opacity="0.7"/>
+    </g>
+    <!-- variant C: deep terracotta cardigan -->
+    <g id="bc-outfit-2c" class="bc-outfit-2" visibility="hidden">
+      <rect x="146" y="80" width="52" height="12" fill="#a85040"/>
+      <rect x="146" y="80" width="52" height="2"  fill="#c87060"/>
+      <rect x="152" y="92" width="40" height="80" fill="#a85040"/>
+      <!-- buttons -->
+      <rect x="171" y="100" width="2" height="2" fill="#3a1c10"/>
+      <rect x="171" y="118" width="2" height="2" fill="#3a1c10"/>
+      <rect x="171" y="136" width="2" height="2" fill="#3a1c10"/>
+      <rect x="171" y="154" width="2" height="2" fill="#3a1c10"/>
+      <rect x="152" y="170" width="40" height="3" fill="#681818" opacity="0.7"/>
+    </g>
+  </g>
+
+  <!-- GARMENT 3: long dress on a satin-padded hanger - the "scent memory"
+       garment (softly glows on hover) (slot 3, xH260) -->
+  <g id="bc-garment-3">
+    <!-- soft halo behind the dress (toggled visible by hover via CSS) -->
+    <rect class="bc-glow-halo" x="200" y="68" width="120" height="172" fill="url(#bcGarmentGlow)" pointer-events="none" filter="url(#bcSoftGlow)"/>
+
+    <!-- padded satin hanger (cream wrap) -->
+    <rect x="259" y="68" width="2" height="4" fill="#dccfb8"/>
+    <rect x="257" y="66" width="2" height="2" fill="#dccfb8"/>
+    <rect x="261" y="66" width="2" height="2" fill="#dccfb8"/>
+    <rect x="259" y="64" width="2" height="2" fill="#dccfb8"/>
+    <rect x="232" y="76" width="56" height="6" fill="#ecdfb8"/>
+    <rect x="232" y="76" width="56" height="2" fill="#fff4d8"/>
+    <rect x="232" y="80" width="56" height="2" fill="#a89668" opacity="0.65"/>
+
+    <!-- variant A: a long blush satin slip dress (the memory garment) -->
+    <g id="bc-outfit-3a" class="bc-outfit-3 bc-outfit-current">
+      <!-- shoulders -->
+      <rect x="230" y="82" width="60" height="6" fill="#dca0a8"/>
+      <rect x="230" y="82" width="60" height="2" fill="#ecbcc4"/>
+      <!-- thin straps -->
+      <rect x="246" y="78" width="2" height="6" fill="#dca0a8"/>
+      <rect x="272" y="78" width="2" height="6" fill="#dca0a8"/>
+      <!-- bodice + skirt -->
+      <rect x="234" y="88" width="52" height="142" fill="#dca0a8"/>
+      <!-- gentle vertical drape lines -->
+      <rect x="246" y="90" width="1" height="138" fill="#a87078" opacity="0.45"/>
+      <rect x="258" y="92" width="1" height="136" fill="#a87078" opacity="0.40"/>
+      <rect x="270" y="90" width="1" height="138" fill="#a87078" opacity="0.45"/>
+      <!-- soft sheen highlights -->
+      <rect x="240" y="100" width="1" height="60" fill="#fff4d8" opacity="0.55"/>
+      <rect x="276" y="120" width="1" height="60" fill="#fff4d8" opacity="0.45"/>
+      <!-- hem -->
+      <rect x="234" y="228" width="52" height="3" fill="#a87078" opacity="0.75"/>
+      <!-- a single stitched marking near the hem -->
+      <rect x="256" y="220" width="6" height="2" fill="#a87078" opacity="0.6"/>
+    </g>
+    <!-- variant B: a long sage linen dress with embroidery -->
+    <g id="bc-outfit-3b" class="bc-outfit-3" visibility="hidden">
+      <rect x="230" y="82" width="60" height="6" fill="#a8b898"/>
+      <rect x="230" y="82" width="60" height="2" fill="#c8d4b0"/>
+      <rect x="246" y="78" width="2" height="6" fill="#a8b898"/>
+      <rect x="272" y="78" width="2" height="6" fill="#a8b898"/>
+      <rect x="234" y="88" width="52" height="138" fill="#a8b898"/>
+      <!-- embroidered band near the hem -->
+      <rect x="234" y="200" width="52" height="6" fill="#586848" opacity="0.85"/>
+      <rect x="240" y="202" width="2" height="2" fill="#fce4a8"/>
+      <rect x="248" y="202" width="2" height="2" fill="#a85878"/>
+      <rect x="256" y="202" width="2" height="2" fill="#fce4a8"/>
+      <rect x="264" y="202" width="2" height="2" fill="#a85878"/>
+      <rect x="272" y="202" width="2" height="2" fill="#fce4a8"/>
+      <rect x="280" y="202" width="2" height="2" fill="#a85878"/>
+      <rect x="234" y="224" width="52" height="3" fill="#586848" opacity="0.7"/>
+    </g>
+    <!-- variant C: a deep navy dress -->
+    <g id="bc-outfit-3c" class="bc-outfit-3" visibility="hidden">
+      <rect x="230" y="82" width="60" height="6" fill="#2a3848"/>
+      <rect x="230" y="82" width="60" height="2" fill="#4a5868"/>
+      <rect x="246" y="78" width="2" height="6" fill="#2a3848"/>
+      <rect x="272" y="78" width="2" height="6" fill="#2a3848"/>
+      <rect x="234" y="88" width="52" height="140" fill="#2a3848"/>
+      <!-- a couple of tiny silver star sequins -->
+      <rect x="244" y="120" width="2" height="2" fill="#dccfb8"/>
+      <rect x="266" y="138" width="2" height="2" fill="#dccfb8"/>
+      <rect x="252" y="160" width="2" height="2" fill="#dccfb8"/>
+      <rect x="270" y="184" width="2" height="2" fill="#dccfb8"/>
+      <rect x="234" y="226" width="52" height="3" fill="#1a2030" opacity="0.7"/>
+    </g>
+  </g>
+
+  <!-- GARMENT 4: skirt on a clip hanger (slot 4, xH360) -->
+  <g id="bc-garment-4">
+    <!-- silver clip hanger -->
+    <rect x="359" y="68" width="2" height="4" fill="#a8a8b0"/>
+    <rect x="357" y="66" width="2" height="2" fill="#a8a8b0"/>
+    <rect x="361" y="66" width="2" height="2" fill="#a8a8b0"/>
+    <rect x="359" y="64" width="2" height="2" fill="#a8a8b0"/>
+    <rect x="334" y="78" width="50" height="2" fill="#a8a8b0"/>
+    <rect x="336" y="77" width="46" height="1" fill="#a8a8b0"/>
+    <rect x="340" y="76" width="38" height="1" fill="#a8a8b0"/>
+    <!-- two small clips at the ends -->
+    <rect x="338" y="80" width="6" height="6" fill="#5a5a64"/>
+    <rect x="338" y="80" width="6" height="1" fill="#a8a8b0"/>
+    <rect x="376" y="80" width="6" height="6" fill="#5a5a64"/>
+    <rect x="376" y="80" width="6" height="1" fill="#a8a8b0"/>
+
+    <!-- variant A: pleated tan midi skirt -->
+    <g id="bc-outfit-4a" class="bc-outfit-4 bc-outfit-current">
+      <rect x="332" y="86" width="56" height="100" fill="#c89868"/>
+      <rect x="332" y="86" width="56" height="2"  fill="#dcb088"/>
+      <!-- pleat lines -->
+      <rect x="340" y="86" width="1" height="100" fill="#7a5232" opacity="0.55"/>
+      <rect x="350" y="86" width="1" height="100" fill="#7a5232" opacity="0.55"/>
+      <rect x="360" y="86" width="1" height="100" fill="#7a5232" opacity="0.55"/>
+      <rect x="370" y="86" width="1" height="100" fill="#7a5232" opacity="0.55"/>
+      <rect x="380" y="86" width="1" height="100" fill="#7a5232" opacity="0.55"/>
+      <!-- hem -->
+      <rect x="332" y="184" width="56" height="3" fill="#7a5232" opacity="0.7"/>
+    </g>
+    <!-- variant B: a long denim skirt -->
+    <g id="bc-outfit-4b" class="bc-outfit-4" visibility="hidden">
+      <rect x="332" y="86" width="56" height="120" fill="#5a7898"/>
+      <rect x="332" y="86" width="56" height="2"  fill="#7a98b8"/>
+      <!-- waistband / belt loops -->
+      <rect x="332" y="86" width="56" height="6" fill="#4a6878"/>
+      <rect x="340" y="86" width="2" height="6" fill="#3a5868"/>
+      <rect x="378" y="86" width="2" height="6" fill="#3a5868"/>
+      <!-- center seam -->
+      <rect x="359" y="92" width="2" height="114" fill="#3a5868" opacity="0.7"/>
+      <!-- subtle wash texture -->
+      <rect x="338" y="120" width="44" height="1" fill="#7a98b8" opacity="0.45"/>
+      <rect x="338" y="160" width="44" height="1" fill="#7a98b8" opacity="0.45"/>
+      <rect x="332" y="204" width="56" height="3" fill="#3a5868" opacity="0.7"/>
+    </g>
+    <!-- variant C: a charcoal a-line skirt -->
+    <g id="bc-outfit-4c" class="bc-outfit-4" visibility="hidden">
+      <rect x="334" y="86" width="52" height="92" fill="#3a3848"/>
+      <rect x="334" y="86" width="52" height="2"  fill="#5a5868"/>
+      <!-- subtle pinstripes -->
+      <rect x="340" y="86" width="1" height="92" fill="#1a1828" opacity="0.55"/>
+      <rect x="350" y="86" width="1" height="92" fill="#1a1828" opacity="0.55"/>
+      <rect x="360" y="86" width="1" height="92" fill="#1a1828" opacity="0.55"/>
+      <rect x="370" y="86" width="1" height="92" fill="#1a1828" opacity="0.55"/>
+      <rect x="380" y="86" width="1" height="92" fill="#1a1828" opacity="0.55"/>
+      <rect x="334" y="176" width="52" height="3" fill="#1a1828" opacity="0.7"/>
+    </g>
+  </g>
+
+  <!-- ============= LOWER LEDGE (perfume bottles + hair product) ============= -->
+  <g id="bc-ledge" pointer-events="none">
+    <rect x="32" y="244" width="416" height="4" fill="url(#bcShelf)"/>
+    <rect x="32" y="244" width="416" height="2" fill="#b07c50"/>
+    <rect x="32" y="248" width="416" height="1" fill="#1a0c08" opacity="0.7"/>
+  </g>
+
+  <!-- perfume bottles (3 small bottles + a hair product on the right) -->
+  <g id="bc-perfume" pointer-events="none">
+    <!-- bottle 1: amber square perfume -->
+    <rect x="58" y="226" width="14" height="18" fill="#c87838" opacity="0.85"/>
+    <rect x="58" y="226" width="14" height="2"  fill="#e89868"/>
+    <rect x="58" y="242" width="14" height="2"  fill="#783818" opacity="0.85"/>
+    <rect x="58" y="226" width="2"  height="18" fill="#e89868" opacity="0.55"/>
+    <rect x="70" y="226" width="2"  height="18" fill="#783818" opacity="0.55"/>
+    <!-- atomizer cap (gold) -->
+    <rect x="60" y="220" width="10" height="6" fill="#c8a060"/>
+    <rect x="60" y="220" width="10" height="1" fill="#dcb878"/>
+    <!-- a tiny faded label -->
+    <rect x="61" y="232" width="8" height="6" fill="#fff0c8" opacity="0.8"/>
+    <rect x="63" y="234" width="4" height="1" fill="#3a2418" opacity="0.55"/>
+
+    <!-- bottle 2: clear glass with rose-tinted liquid -->
+    <rect x="84" y="222" width="12" height="22" fill="#f4d0d8" opacity="0.55"/>
+    <rect x="84" y="222" width="12" height="2"  fill="#fff0e0"/>
+    <rect x="84" y="242" width="12" height="2"  fill="#a85878" opacity="0.85"/>
+    <rect x="84" y="222" width="2"  height="22" fill="#fff0e0" opacity="0.6"/>
+    <rect x="94" y="222" width="2"  height="22" fill="#a85878" opacity="0.55"/>
+    <!-- silver atomizer -->
+    <rect x="86" y="216" width="8"  height="6" fill="#a8a8b0"/>
+    <rect x="86" y="216" width="8"  height="1" fill="#dcdce4"/>
+    <!-- bulb spritzer -->
+    <rect x="78" y="220" width="6"  height="6" fill="#a85878" opacity="0.65"/>
+    <rect x="78" y="220" width="6"  height="2" fill="#c87898" opacity="0.65"/>
+
+    <!-- bottle 3: tall slim crystal (almost empty) -->
+    <rect x="108" y="218" width="10" height="26" fill="#dce0e8" opacity="0.55"/>
+    <rect x="108" y="218" width="10" height="2"  fill="#fff4d8"/>
+    <rect x="108" y="242" width="10" height="2"  fill="#5a6878" opacity="0.85"/>
+    <rect x="108" y="218" width="2"  height="26" fill="#fff4d8" opacity="0.6"/>
+    <rect x="116" y="218" width="2"  height="26" fill="#5a6878" opacity="0.55"/>
+    <!-- a low line of remaining liquid -->
+    <rect x="110" y="236" width="6"  height="6" fill="#fce4a8" opacity="0.7"/>
+    <!-- gold cap -->
+    <rect x="110" y="212" width="6"  height="6" fill="#c8a060"/>
+    <rect x="110" y="212" width="6"  height="1" fill="#dcb878"/>
+
+    <!-- hair-product bottle (taller, plastic, cream-and-coral label) -->
+    <rect x="140" y="210" width="20" height="34" fill="#f4ecd0"/>
+    <rect x="140" y="210" width="20" height="2"  fill="#fff4d8"/>
+    <rect x="140" y="242" width="20" height="2"  fill="#a89668" opacity="0.85"/>
+    <rect x="140" y="210" width="2"  height="34" fill="#fff4d8" opacity="0.65"/>
+    <rect x="158" y="210" width="2"  height="34" fill="#a89668" opacity="0.65"/>
+    <!-- coral label band -->
+    <rect x="140" y="218" width="20" height="14" fill="#dc8878"/>
+    <rect x="140" y="218" width="20" height="1"  fill="#ec9888"/>
+    <rect x="140" y="231" width="20" height="1"  fill="#7a3828" opacity="0.7"/>
+    <!-- label text marks -->
+    <rect x="144" y="222" width="12" height="1" fill="#3a1c10" opacity="0.7"/>
+    <rect x="144" y="225" width="8"  height="1" fill="#3a1c10" opacity="0.55"/>
+    <rect x="144" y="228" width="10" height="1" fill="#3a1c10" opacity="0.55"/>
+    <!-- pump dispenser -->
+    <rect x="146" y="204" width="8"  height="6" fill="#a8a8a8"/>
+    <rect x="146" y="204" width="8"  height="1" fill="#dcdce4"/>
+    <rect x="153" y="201" width="2"  height="3" fill="#a8a8a8"/>
+    <rect x="155" y="201" width="3"  height="2" fill="#a8a8a8"/>
+  </g>
+
+  <!-- ============= FLOOR (visible strip below the ledge) ============= -->
+  <rect x="32" y="248" width="416" height="52" fill="url(#bcFloor)"/>
+  <rect x="32" y="248" width="416" height="2"  fill="#7a5232"/>
+  <g pointer-events="none" opacity="0.30">
+    <rect x="120" y="248" width="1" height="52" fill="#3a2010"/>
+    <rect x="240" y="248" width="1" height="52" fill="#3a2010"/>
+    <rect x="360" y="248" width="1" height="52" fill="#3a2010"/>
+    <rect x="32"  y="276" width="416" height="1" fill="#3a2010"/>
+  </g>
+
+  <!-- shoe boxes stacked on the floor (rotates between two arrangements) -->
+  <g id="bc-shoebox-floor-a" class="bc-shoebox-floor" pointer-events="none" visibility="visible">
+    <!-- box 1 (bottom): tan -->
+    <rect x="234" y="282" width="106" height="20" fill="#c8a078"/>
+    <rect x="234" y="282" width="106" height="2"  fill="#dcb888"/>
+    <rect x="234" y="300" width="106" height="2"  fill="#7a5232" opacity="0.8"/>
+    <rect x="234" y="288" width="106" height="2"  fill="#7a5232" opacity="0.55"/>
+    <rect x="262" y="294" width="40" height="6" fill="#fff0c8"/>
+    <text x="282" y="299" text-anchor="middle" font-family="'Courier New', monospace" font-size="6" fill="#3a2418">FALL</text>
+    <!-- box 2 (top): blush -->
+    <rect x="244" y="266" width="86" height="16" fill="#dca8a0"/>
+    <rect x="244" y="266" width="86" height="2"  fill="#ecbcb4"/>
+    <rect x="244" y="280" width="86" height="2"  fill="#7a4848" opacity="0.85"/>
+    <rect x="244" y="272" width="86" height="2"  fill="#7a4848" opacity="0.55"/>
+  </g>
+  <g id="bc-shoebox-floor-b" class="bc-shoebox-floor" pointer-events="none" visibility="hidden">
+    <!-- only the bottom box left, lid slightly off -->
+    <rect x="234" y="282" width="106" height="20" fill="#c8a078"/>
+    <rect x="234" y="282" width="106" height="2"  fill="#dcb888"/>
+    <rect x="234" y="300" width="106" height="2"  fill="#7a5232" opacity="0.8"/>
+    <!-- lid slid off to the right -->
+    <rect x="296" y="276" width="48" height="6" fill="#dcb888"/>
+    <rect x="296" y="276" width="48" height="2" fill="#ecc89c"/>
+    <!-- one tissue-paper edge poking out -->
+    <rect x="252" y="284" width="20" height="2" fill="#fff0c8"/>
+  </g>
+
+  <!-- a small backpack slumped on the floor next to the boxes -->
+  <g id="bc-floor-bag" pointer-events="none">
+    <rect x="358" y="270" width="58" height="32" fill="#5a4c3a"/>
+    <rect x="358" y="270" width="58" height="2"  fill="#7a6a58"/>
+    <rect x="358" y="300" width="58" height="2"  fill="#1a0c08" opacity="0.85"/>
+    <!-- top flap -->
+    <rect x="358" y="270" width="58" height="6" fill="#4a3c2a"/>
+    <!-- shoulder strap loop -->
+    <rect x="368" y="266" width="2"  height="6" fill="#5a4c3a"/>
+    <rect x="404" y="266" width="2"  height="6" fill="#5a4c3a"/>
+    <!-- a metal buckle on the front -->
+    <rect x="382" y="284" width="10" height="4" fill="#c8a060"/>
+    <rect x="382" y="284" width="10" height="1" fill="#dcb878"/>
+    <!-- a side pocket -->
+    <rect x="358" y="282" width="10" height="14" fill="#4a3c2a"/>
+    <rect x="358" y="282" width="10" height="1"  fill="#7a6a58" opacity="0.7"/>
+  </g>
+
+  <!-- ============= CLOTHING IRON (lower ledge, far right, past the skirt) ============= -->
+  <g id="bc-iron" pointer-events="none">
+    <!-- soft shadow on the ledge wood -->
+    <ellipse cx="412" cy="245" rx="18" ry="1.4" fill="#1a0c08" opacity="0.42"/>
+
+    <!-- soleplate (dark brushed metal) -->
+    <rect x="398" y="240" width="32" height="4" fill="#4a4a54"/>
+    <rect x="398" y="240" width="32" height="1" fill="#6a6a78"/>
+    <rect x="398" y="243" width="32" height="1" fill="#2a2a34" opacity="0.9"/>
+    <!-- pointed nose -->
+    <rect x="430" y="240" width="3" height="3" fill="#4a4a54"/>
+    <rect x="433" y="241" width="2" height="2" fill="#4a4a54"/>
+    <rect x="435" y="242" width="1" height="1" fill="#4a4a54"/>
+    <!-- two tiny steam holes -->
+    <rect x="406" y="242" width="1" height="1" fill="#1a1a24"/>
+    <rect x="414" y="242" width="1" height="1" fill="#1a1a24"/>
+    <rect x="422" y="242" width="1" height="1" fill="#1a1a24"/>
+
+    <!-- body (cream plastic) -->
+    <rect x="400" y="232" width="28" height="8" fill="#ecdfb8"/>
+    <rect x="400" y="232" width="28" height="1" fill="#fff4d8"/>
+    <rect x="400" y="239" width="28" height="1" fill="#a89668" opacity="0.85"/>
+    <rect x="400" y="232" width="2"  height="8" fill="#fff4d8"/>
+    <rect x="426" y="232" width="2"  height="8" fill="#a89668" opacity="0.7"/>
+    <!-- body taper toward nose -->
+    <rect x="428" y="234" width="3" height="6" fill="#ecdfb8"/>
+    <rect x="428" y="234" width="3" height="1" fill="#fff4d8"/>
+
+    <!-- temperature dial -->
+    <rect x="404" y="234" width="6" height="4" fill="#5a3848"/>
+    <rect x="404" y="234" width="6" height="1" fill="#7a4858"/>
+    <rect x="406" y="235" width="2" height="2" fill="#dca0a8"/>
+
+    <!-- water-tank window -->
+    <rect x="414" y="234" width="10" height="4" fill="#7a98b8" opacity="0.55"/>
+    <rect x="414" y="234" width="10" height="1" fill="#a8c8d8" opacity="0.6"/>
+    <rect x="416" y="236" width="6"  height="1" fill="#dceaf4" opacity="0.55"/>
+
+    <!-- handle (arched) -->
+    <rect x="402" y="226" width="24" height="2" fill="#3a2418"/>
+    <rect x="400" y="228" width="2"  height="4" fill="#3a2418"/>
+    <rect x="426" y="228" width="2"  height="4" fill="#3a2418"/>
+    <rect x="402" y="226" width="24" height="1" fill="#5a3826"/>
+    <!-- handle inner cavity (shows ledge through) -->
+    <rect x="404" y="228" width="20" height="4" fill="#1a0c08" opacity="0.25"/>
+
+    <!-- power cord drooping off the back-left toward the wall -->
+    <rect x="398" y="231" width="2" height="2" fill="#3a2418"/>
+    <rect x="394" y="232" width="4" height="1" fill="#3a2418"/>
+    <rect x="390" y="233" width="4" height="1" fill="#3a2418"/>
+    <rect x="388" y="234" width="2" height="2" fill="#3a2418"/>
+    <rect x="386" y="236" width="2" height="2" fill="#3a2418"/>
+    <rect x="386" y="238" width="2" height="4" fill="#3a2418"/>
+  </g>
+
+  <!-- ============= TENNIS RACKET (lying flat on the floor, grip left / head right) ============= -->
+  <g id="bc-racket" pointer-events="none">
+    <ellipse cx="164" cy="299" rx="62" ry="2.2" fill="#1a0c08" opacity="0.40"/>
+    <rect x="174" y="288" width="58" height="14" fill="#1a0c08" opacity="0.26"/>
+
+    <!-- HEAD (horizontal oval frame) -->
+    <rect x="176" y="287" width="56" height="2" fill="#5a2838"/>
+    <rect x="174" y="289" width="60" height="2" fill="#5a2838"/>
+    <rect x="172" y="291" width="60" height="8" fill="#5a2838"/>
+    <rect x="174" y="299" width="60" height="2" fill="#5a2838"/>
+    <rect x="176" y="301" width="56" height="2" fill="#5a2838"/>
+
+    <rect x="176" y="287" width="56" height="1" fill="#7a3848"/>
+    <rect x="174" y="289" width="6" height="1" fill="#7a3848"/>
+    <rect x="172" y="291" width="4" height="1" fill="#7a3848"/>
+    <rect x="172" y="291" width="2" height="8" fill="#7a3848"/>
+
+    <rect x="230" y="291" width="2" height="8" fill="#3a1828"/>
+    <rect x="228" y="299" width="4" height="1" fill="#3a1828"/>
+    <rect x="226" y="301" width="4" height="1" fill="#3a1828"/>
+
+    <rect x="178" y="289" width="52" height="1" fill="#1a0c08"/>
+    <rect x="176" y="290" width="56" height="1" fill="#1a0c08"/>
+    <rect x="174" y="291" width="56" height="6" fill="#1a0c08"/>
+    <rect x="176" y="297" width="56" height="1" fill="#1a0c08"/>
+    <rect x="178" y="298" width="52" height="1" fill="#1a0c08"/>
+
+    <g opacity="0.42">
+      <rect x="176" y="292" width="54" height="1" fill="#ecdfb8"/>
+      <rect x="176" y="294" width="54" height="1" fill="#ecdfb8"/>
+      <rect x="176" y="296" width="54" height="1" fill="#ecdfb8"/>
+    </g>
+    <g opacity="0.42">
+      <rect x="180" y="291" width="1" height="6" fill="#ecdfb8"/>
+      <rect x="186" y="291" width="1" height="6" fill="#ecdfb8"/>
+      <rect x="192" y="291" width="1" height="6" fill="#ecdfb8"/>
+      <rect x="198" y="291" width="1" height="6" fill="#ecdfb8"/>
+      <rect x="204" y="291" width="1" height="6" fill="#ecdfb8"/>
+      <rect x="210" y="291" width="1" height="6" fill="#ecdfb8"/>
+      <rect x="216" y="291" width="1" height="6" fill="#ecdfb8"/>
+      <rect x="222" y="291" width="1" height="6" fill="#ecdfb8"/>
+    </g>
+
+    <rect x="201" y="293" width="3" height="2" fill="#dc8878" opacity="0.85"/>
+
+    <!-- THROAT + SHAFT -->
+    <rect x="168" y="293" width="8" height="4" fill="#5a2838"/>
+    <rect x="162" y="292" width="8" height="6" fill="#5a2838"/>
+    <rect x="158" y="291" width="8" height="8" fill="#5a2838"/>
+    <rect x="128" y="292" width="32" height="6" fill="#5a2838"/>
+    <rect x="128" y="292" width="3" height="6" fill="#7a3848" opacity="0.85"/>
+    <rect x="155" y="292" width="3" height="6" fill="#3a1828" opacity="0.9"/>
+
+    <!-- GRIP + BUTT (butt left of grip, no overlap) -->
+    <rect x="96" y="290" width="32" height="10" fill="#ecdfb8"/>
+    <rect x="96" y="290" width="32" height="2" fill="#fff4d8"/>
+    <rect x="96" y="298" width="32" height="2" fill="#a89668" opacity="0.65"/>
+    <rect x="96" y="290" width="2" height="10" fill="#fff4d8"/>
+    <rect x="126" y="290" width="2" height="10" fill="#a89668" opacity="0.65"/>
+    <rect x="102" y="291" width="1" height="8" fill="#7a3848" opacity="0.55"/>
+    <rect x="110" y="291" width="1" height="8" fill="#7a3848" opacity="0.55"/>
+    <rect x="118" y="291" width="1" height="8" fill="#7a3848" opacity="0.55"/>
+
+    <rect x="86" y="291" width="8" height="8" fill="#3a1828"/>
+    <rect x="86" y="291" width="8" height="1" fill="#5a2838"/>
+    <rect x="86" y="298" width="8" height="1" fill="#1a0c08" opacity="0.85"/>
+  </g>
+
+  <!-- ============= TENNIS BALLS (two on floor, one perched on lower ledge) ============= -->
+  <g id="bc-tennis-balls" pointer-events="none">
+    <!-- ball 1 (floor, tucked near the toe of the stray shoe, left of the racket butt) -->
+    <g id="bc-ball-1">
+      <ellipse cx="76" cy="295" rx="5" ry="1.4" fill="#1a0c08" opacity="0.45"/>
+      <rect x="73" y="287" width="6" height="1" fill="#c8d850"/>
+      <rect x="72" y="288" width="8" height="1" fill="#c8d850"/>
+      <rect x="72" y="289" width="8" height="5" fill="#c8d850"/>
+      <rect x="73" y="294" width="6" height="1" fill="#c8d850"/>
+      <rect x="73" y="289" width="2" height="2" fill="#f4f8b8"/>
+      <rect x="77" y="291" width="2" height="3" fill="#889838"/>
+      <rect x="78" y="290" width="1" height="1" fill="#889838"/>
+      <rect x="74" y="291" width="2" height="1" fill="#5a6828" opacity="0.85"/>
+      <rect x="76" y="290" width="1" height="1" fill="#5a6828" opacity="0.85"/>
+      <rect x="77" y="289" width="2" height="1" fill="#5a6828" opacity="0.85"/>
+    </g>
+
+    <!-- ball 2 (floor, just ahead of the racket head and the shoeboxes) -->
+    <g id="bc-ball-2">
+      <ellipse cx="218" cy="296" rx="5" ry="1.4" fill="#1a0c08" opacity="0.45"/>
+      <rect x="215" y="288" width="6" height="1" fill="#c8d850"/>
+      <rect x="214" y="289" width="8" height="1" fill="#c8d850"/>
+      <rect x="214" y="290" width="8" height="5" fill="#c8d850"/>
+      <rect x="215" y="295" width="6" height="1" fill="#c8d850"/>
+      <rect x="215" y="290" width="2" height="2" fill="#f4f8b8"/>
+      <rect x="219" y="292" width="2" height="3" fill="#889838"/>
+      <rect x="220" y="291" width="1" height="1" fill="#889838"/>
+      <rect x="216" y="292" width="2" height="1" fill="#5a6828" opacity="0.85"/>
+      <rect x="218" y="291" width="1" height="1" fill="#5a6828" opacity="0.85"/>
+      <rect x="219" y="290" width="2" height="1" fill="#5a6828" opacity="0.85"/>
+    </g>
+
+    <!-- ball 3 (perched on the lower ledge, between iron's nose and dress) -->
+    <g id="bc-ball-3">
+      <ellipse cx="222" cy="245" rx="5" ry="1.2" fill="#1a0c08" opacity="0.40"/>
+      <rect x="219" y="237" width="6" height="1" fill="#c8d850"/>
+      <rect x="218" y="238" width="8" height="1" fill="#c8d850"/>
+      <rect x="218" y="239" width="8" height="5" fill="#c8d850"/>
+      <rect x="219" y="244" width="6" height="1" fill="#c8d850"/>
+      <rect x="219" y="239" width="2" height="2" fill="#f4f8b8"/>
+      <rect x="223" y="241" width="2" height="3" fill="#889838"/>
+      <rect x="224" y="240" width="1" height="1" fill="#889838"/>
+      <rect x="219" y="240" width="2" height="1" fill="#5a6828" opacity="0.85"/>
+      <rect x="221" y="241" width="1" height="1" fill="#5a6828" opacity="0.85"/>
+      <rect x="222" y="242" width="2" height="1" fill="#5a6828" opacity="0.85"/>
+    </g>
+  </g>
+
+  <!-- ============= AMBIENT WARM DUST MOTES ============= -->
+  <g pointer-events="none">
+    <ellipse cx="120" cy="118" rx="1.4" ry="1.4" fill="#fce4a8" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.18;0.7" dur="6.4s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="218" cy="148" rx="1.2" ry="1.2" fill="#fce4a8" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.16;0.6" dur="7.4s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="306" cy="120" rx="1.4" ry="1.4" fill="#fce4a8" opacity="0.65">
+      <animate attributeName="opacity" values="0.65;0.20;0.65" dur="5.8s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="380" cy="168" rx="1.4" ry="1.4" fill="#fce4a8" opacity="0.7">
+      <animate attributeName="opacity" values="0.7;0.22;0.7" dur="6.4s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="170" cy="200" rx="1.2" ry="1.2" fill="#fce4a8" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.18;0.6" dur="7.0s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="260" cy="226" rx="1.4" ry="1.4" fill="#fce4a8" opacity="0.6">
+      <animate attributeName="opacity" values="0.6;0.18;0.6" dur="7.2s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="416" cy="118" rx="1.2" ry="1.2" fill="#fce4a8" opacity="0.55">
+      <animate attributeName="opacity" values="0.55;0.16;0.55" dur="6.6s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- soft warm light drift overlay -->
+  <rect width="480" height="320" fill="#f4d8a8" opacity="0.05" pointer-events="none">
+    <animate attributeName="opacity" values="0.04;0.10;0.04" dur="14s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- side darkening + outer vignette -->
+  <rect x="0"   y="0" width="36" height="320" fill="url(#bcSidesL)" pointer-events="none"/>
+  <rect x="444" y="0" width="36" height="320" fill="url(#bcSidesR)" pointer-events="none"/>
+  <rect width="480" height="320" fill="url(#bcVignette)" pointer-events="none"/>
+
+  <!-- ============= INTERACTIVE HOTSPOTS ============= -->
+  <g id="bc-hotspots" fill="transparent" stroke="none">
+    <rect id="hit-bulb"        x="232" y="18"  width="16"  height="22"/>
+    <rect id="hit-blankets"    x="44"  y="26"  width="84"  height="34"/>
+    <rect id="hit-shoebox-shelf" x="148" y="30" width="118" height="30"/>
+    <rect id="hit-bag"         x="282" y="22"  width="64"  height="38"/>
+    <rect id="hit-bin"         x="364" y="32"  width="72"  height="28"/>
+    <rect id="hit-rod"         x="32"  y="68"  width="416" height="6"/>
+    <rect id="hit-garment-1"   x="54"  y="76"  width="52"  height="96"/>
+    <rect id="hit-garment-2"   x="146" y="76"  width="56"  height="106"/>
+    <rect id="hit-garment-3"   x="228" y="76"  width="64"  height="158"/>
+    <rect id="hit-garment-4"   x="332" y="76"  width="58"  height="132"/>
+    <rect id="hit-perfume"     x="56"  y="200" width="68"  height="46"/>
+    <rect id="hit-hairproduct" x="138" y="200" width="26"  height="46"/>
+    <rect id="hit-shoebox-floor" x="232" y="262" width="112" height="40"/>
+    <rect id="hit-floorbag"    x="356" y="266" width="62"  height="36"/>
+    <rect id="hit-iron"        x="384" y="224" width="56"  height="22"/>
+    <rect id="hit-racket"      x="60"  y="286" width="178" height="18"/>
+    <rect id="hit-tennisballs" x="60"  y="282" width="170" height="20"/>
+    <rect id="hit-ledge-ball"  x="214" y="234" width="16"  height="14"/>
+    <rect id="hit-back"        x="180" y="100" width="120" height="100"/>
+  </g>
+</svg>

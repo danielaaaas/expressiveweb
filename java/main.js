@@ -713,10 +713,14 @@ document.querySelectorAll('.room').forEach(room => {
             }, 1500);
         };
 
-        // if no, remain on the page...nothing fancy ( sparkles would be nice though )
+        // if no, stay in the room - open the bedroom-closet memory vignette
+        // (the closet you stay in if you choose not to leave for apt 2)
         document.getElementById('note-no').onclick = () => {
             note.classList.remove('visible');
             noteOverlay.classList.remove('visible');
+            visited[id] = true;
+            room.classList.add('visited');
+            openBedroomClosetMemory();
         };
     return;
 }
@@ -819,6 +823,7 @@ document.addEventListener('keydown', e => {
     closeHallwayClosetMemory();
     closeFrontClosetMemory();
     closeBathroomMemory();
+    if (typeof closeBedroomClosetMemory === 'function') closeBedroomClosetMemory();
   }
 });
 
@@ -2390,3 +2395,451 @@ document.getElementById('closet-input').addEventListener('keydown', e => {
 });
 
 document.getElementById('closet-close').addEventListener('click', closeCloset);
+// ============================================================
+// BEDROOM CLOSET memory vignette (apartment one) - the closet you
+// stay in if you choose not to step through to apt 2. warmer and
+// more personal than the hallway closet: hanging clothes from
+// different years, folded blankets and a shoe box up top, perfume
+// bottles and a hair-product on a low ledge, a backpack slumped on
+// the floor. one fabric (slot 3) glows softly when hovered, the way
+// a garment seems to remember a scent. fragments occasionally
+// surface on their own (a faint ambient bedroom-closet hum +
+// scheduled "scent" surfacing).
+// ============================================================
+
+const bedroomclosetMemoryHoverTips = {
+    'hit-bulb':           'a single bare bulb. you forgot to replace it for years; it was always almost burned out.',
+    'hit-blankets':       'folded blankets. the cream one was on the bed every winter.',
+    'hit-shoebox-shelf':  'a shoe box you never threw away. the brand stopped existing.',
+    'hit-bag':            'an old bag from somewhere before this apartment.',
+    'hit-bin':            'a small woven bin. a scarf tip pokes out of it - the one you always forgot to put back.',
+    'hit-rod':            'the metal rod. her sleeves used to brush it on the way past.',
+    'hit-garment-1':      'a blouse you wore on ordinary mornings. the cuff is a little frayed.',
+    'hit-garment-2':      'a knit cardigan. it smells, very faintly, of the soap she used to buy.',
+    'hit-garment-3':      'a long dress you only wore once or twice. the satin still warms slightly under your hand.',
+    'hit-garment-4':      'a skirt with a worn hem. the inside of the waistband still has her handwriting.',
+    'hit-perfume':        'three small bottles. one is almost empty. one stopped being made.',
+    'hit-hairproduct':    'a hair product you have not bought in years. the bottle is still half-full.',
+    'hit-shoebox-floor':  'shoe boxes stacked on the floor. the top one held the photographs she kept loose.',
+    'hit-floorbag':       'a small backpack slumped against the wall. it has been here since the move that\u2014',
+    'hit-iron':           'her old clothing iron. the cord still wraps in the same lazy curl. the soleplate has a faint shine where she always set it down.',
+    'hit-racket':         'her old tennis racket, lying on its side on the floor. the strings have gone slack.',
+    'hit-tennisballs':    'two tennis balls on the floor. the third one keeps moving when you don\u2019t look at it.',
+    'hit-ledge-ball':     'a single tennis ball perched on the ledge. it wasn\u2019t there last time you looked.',
+    'hit-back':           'the back of the closet. it feels deeper than it should. sometimes you reach into it and your hand finds something from a different year.'
+};
+
+// per-garment-slot rotating hover tips (matches visible variant index)
+const bedroomclosetGarmentHoverByVariant = {
+    'hit-garment-1': [
+        'a pale cream blouse with tiny floral specks. the kind of thing she would have ironed on a sunday.',
+        'a dusty pink blouse with a peter-pan collar. you can almost see her shoulders inside it.',
+        'a faded green tee from a year you can\u2019t place. the print is almost gone.'
+    ],
+    'hit-garment-2': [
+        'a cream knit cardigan with pearl buttons. it still smells, faintly, of her.',
+        'an oatmeal sweater with one stripe across the chest. it always shed a little.',
+        'a deep terracotta cardigan. the elbows are softer than the rest.'
+    ],
+    'hit-garment-3': [
+        'a long blush satin slip dress. the fabric warms under your hand. it remembers something the rest of the closet has forgotten.',
+        'a long sage linen dress with embroidered hem. she wore it the year that\u2014',
+        'a deep navy dress with a couple of star sequins. you can almost remember which night.'
+    ],
+    'hit-garment-4': [
+        'a pleated tan midi skirt. the pleats still hold the way she set them.',
+        'a long denim skirt. the seam down the front is worn pale.',
+        'a charcoal a-line skirt with thin pinstripes. inside the waistband, her handwriting.'
+    ]
+};
+
+const bedroomclosetMemoryClickFragments = {
+    'hit-bulb':           'you tug the chain. nothing changes. the closet has been at this exact warmth for years.',
+    'hit-blankets':       'a folded note slipped between two folds. it says only a date. you have been staring at the date for a while.',
+    'hit-shoebox-shelf':  'inside the box: a single dried flower, a movie ticket, a strand of hair. you put the lid back on.',
+    'hit-bag':            'inside the bag: a metro card from a city that no longer uses them. a receipt for two coffees. a hair tie.',
+    'hit-bin':            'you pull the scarf tip. it keeps coming. the bin is deeper than it should be. you stop pulling.',
+    'hit-rod':            'the rod is cold against your wrist. you slide a couple of hangers along it; the others do not move.',
+    'hit-garment-1':      'in the pocket: a folded receipt for things you do not remember buying. the date is from before this apartment.',
+    'hit-garment-2':      'the cardigan still has a tissue in the sleeve. she always tucked one there.',
+    'hit-garment-3':      'the satin warms further under your hand. the room dims a little when you close your eyes against the fabric. you do not remember when you last wore it.',
+    'hit-garment-4':      'in the inside waistband: her handwriting in faded ballpoint. it says a name and a year. you read it twice.',
+    'hit-perfume':        'you press the atomizer. nothing comes out. the room smells like it anyway.',
+    'hit-hairproduct':    'the pump still works. the smell goes straight into a year you had not thought about.',
+    'hit-shoebox-floor':  'inside the top box: photographs she kept loose, in no order. you stop turning them over after the third one.',
+    'hit-floorbag':       'inside: a notebook with three pages used. the rest are blank. the handwriting on the first page is yours.',
+    'hit-iron':           'you touch the soleplate, expecting it to be cold. for a second it is faintly warm. then it isn\u2019t. the room smells like a sunday morning, briefly.',
+    'hit-racket':         'you lift the racket. the weight is exactly familiar. the grip wrap has gone smooth where her hand used to be. you lay it back down the way you found it.',
+    'hit-tennisballs':    'you press one with your thumb. it has lost most of its bounce. you nudge them back together with your foot. you count three. you only see two.',
+    'hit-ledge-ball':     'you pick up the third ball. it is warmer than the others. you set it down again and it is, very briefly, somewhere else.',
+    'hit-back':           'you reach toward the back of the closet. for a second the wall is further than it should be. then it isn\u2019t.'
+};
+
+// fragments that surface ON THEIR OWN every 24-40 seconds while the
+// vignette is open - the closet briefly remembering a scent.
+const bedroomclosetMemorySurfacingFragments = [
+    'a draft moves through the closet. the hangers shift one notch.',
+    'the smell of her soap rises briefly. then nothing.',
+    'one fabric, very softly, remembers a scent.',
+    'the back of the closet darkens a little, then comes back.',
+    'a hanger settles a quarter inch lower on the rod.',
+    'the cream cardigan smells, for a moment, like a winter that already happened.',
+    'a perfume that stopped being made surfaces in the air briefly.',
+    'the bulb dims a notch and warms back up.',
+    'a fold in the blankets relaxes. nothing was holding it.',
+    'the racket lies on the floor where she left it. the head points toward the shoeboxes.',
+    'a tennis ball rolls itself a quarter inch across the floor and stops.',
+    'you count three tennis balls. then two. then three again.',
+    'the iron, on the lower ledge, is faintly warm again for a moment.'
+];
+
+// rotating clusters - per-visit so the closet "shifts gently between visits"
+const BC_GARMENT_VARIANTS = {
+    'bc-outfit-1': ['bc-outfit-1a', 'bc-outfit-1b', 'bc-outfit-1c'],
+    'bc-outfit-2': ['bc-outfit-2a', 'bc-outfit-2b', 'bc-outfit-2c'],
+    'bc-outfit-3': ['bc-outfit-3a', 'bc-outfit-3b', 'bc-outfit-3c'],
+    'bc-outfit-4': ['bc-outfit-4a', 'bc-outfit-4b', 'bc-outfit-4c']
+};
+const BC_BLANKETS_VARIANTS = ['bc-blankets-a', 'bc-blankets-b', 'bc-blankets-c'];
+const BC_BAG_VARIANTS      = ['bc-bag-a',      'bc-bag-b',      'bc-bag-c'];
+const BC_FLOORBOX_VARIANTS = ['bc-shoebox-floor-a', 'bc-shoebox-floor-b'];
+const BC_VISIT_KEY         = 'bedroomcloset.visitCount';
+
+// per-slot offsets so opening the closet a second time shows a different
+// pairing of garments (slots don't rotate in lockstep)
+const BC_GARMENT_OFFSETS = {
+    'bc-outfit-1': 0,
+    'bc-outfit-2': 1,
+    'bc-outfit-3': 2,
+    'bc-outfit-4': 1
+};
+const BC_GARMENT_TO_HIT = {
+    'bc-outfit-1': 'hit-garment-1',
+    'bc-outfit-2': 'hit-garment-2',
+    'bc-outfit-3': 'hit-garment-3',
+    'bc-outfit-4': 'hit-garment-4'
+};
+
+let bcHumCtx = null;
+let bcHumOscLow = null;
+let bcHumOscMid = null;
+let bcHumNoise = null;
+let bcHumLfo = null;
+let bcSurfacingTimerId = null;
+
+function openBedroomClosetMemory() {
+    const roomObject = document.getElementById('bedroomcloset-memory-svg');
+    if (roomObject) {
+        const raw = roomObject.getAttribute('data') || '';
+        const base = raw.replace(/[?#].*/, '');
+        const url = `${base}?cb=${Date.now()}`;
+        roomObject.setAttribute('data', url);
+        roomObject.data = url;
+    }
+
+    const overlay = document.getElementById('bedroomcloset-memory-overlay');
+    if (!overlay) return;
+    overlay.classList.add('active');
+    overlay.setAttribute('aria-hidden', 'false');
+    const tip = document.getElementById('bedroomcloset-memory-tip');
+    if (tip) tip.textContent = 'hover for the smell of things. one fabric glows when you find it. click any garment for what its pockets remembered. click boxes for keepsakes. fragments may surface on their own.';
+    startBedroomClosetPad();
+    setupBedroomClosetMemorySvgRuntime();
+}
+
+function closeBedroomClosetMemory() {
+    const overlay = document.getElementById('bedroomcloset-memory-overlay');
+    if (!overlay || !overlay.classList.contains('active')) return;
+    overlay.classList.remove('active');
+    overlay.setAttribute('aria-hidden', 'true');
+    if (bcSurfacingTimerId) {
+        clearTimeout(bcSurfacingTimerId);
+        bcSurfacingTimerId = null;
+    }
+    stopBedroomClosetPad();
+}
+
+// the layered closet ambience: a very low wood-room rumble + a quiet
+// midrange resonant warmth + a low-passed noise floor (fabric-and-air).
+// a slow LFO swells the master gain so the closet softly breathes.
+function startBedroomClosetPad() {
+    stopBedroomClosetPad();
+    try {
+        const Ctx = window.AudioContext || window.webkitAudioContext;
+        if (!Ctx) return;
+        bcHumCtx = new Ctx();
+
+        const masterGain = bcHumCtx.createGain();
+        masterGain.gain.value = 0.016;
+        masterGain.connect(bcHumCtx.destination);
+
+        // a very low wood-room rumble (~46 Hz)
+        bcHumOscLow = bcHumCtx.createOscillator();
+        bcHumOscLow.type = 'sine';
+        bcHumOscLow.frequency.value = 46;
+        const gLow = bcHumCtx.createGain();
+        gLow.gain.value = 0.55;
+        bcHumOscLow.connect(gLow);
+        gLow.connect(masterGain);
+
+        // quiet warm partial above (~196 Hz)
+        bcHumOscMid = bcHumCtx.createOscillator();
+        bcHumOscMid.type = 'sine';
+        bcHumOscMid.frequency.value = 196;
+        bcHumOscMid.detune.value = -6;
+        const gMid = bcHumCtx.createGain();
+        gMid.gain.value = 0.08;
+        bcHumOscMid.connect(gMid);
+        gMid.connect(masterGain);
+
+        // soft low-passed noise floor (fabric, dust, dim light)
+        const bufferSize = 2 * bcHumCtx.sampleRate;
+        const noiseBuffer = bcHumCtx.createBuffer(1, bufferSize, bcHumCtx.sampleRate);
+        const data = noiseBuffer.getChannelData(0);
+        for (let i = 0; i < bufferSize; i++) {
+            data[i] = (Math.random() * 2 - 1) * 0.50;
+        }
+        bcHumNoise = bcHumCtx.createBufferSource();
+        bcHumNoise.buffer = noiseBuffer;
+        bcHumNoise.loop = true;
+        const noiseFilter = bcHumCtx.createBiquadFilter();
+        noiseFilter.type = 'lowpass';
+        noiseFilter.frequency.value = 280;
+        const noiseGain = bcHumCtx.createGain();
+        noiseGain.gain.value = 0.20;
+        bcHumNoise.connect(noiseFilter);
+        noiseFilter.connect(noiseGain);
+        noiseGain.connect(masterGain);
+
+        // very slow LFO (~26s period) - the closet softly breathes
+        bcHumLfo = bcHumCtx.createOscillator();
+        bcHumLfo.type = 'sine';
+        bcHumLfo.frequency.value = 1 / 26;
+        const lfoDepth = bcHumCtx.createGain();
+        lfoDepth.gain.value = 0.010;
+        bcHumLfo.connect(lfoDepth);
+        lfoDepth.connect(masterGain.gain);
+
+        bcHumOscLow.start();
+        bcHumOscMid.start();
+        bcHumNoise.start();
+        bcHumLfo.start();
+        if (bcHumCtx.state === 'suspended') bcHumCtx.resume();
+    } catch (_) {
+        bcHumCtx = null;
+        bcHumOscLow = null;
+        bcHumOscMid = null;
+        bcHumNoise = null;
+        bcHumLfo = null;
+    }
+}
+
+function stopBedroomClosetPad() {
+    try {
+        bcHumOscLow?.stop();
+        bcHumOscMid?.stop();
+        bcHumNoise?.stop();
+        bcHumLfo?.stop();
+        bcHumCtx?.close?.();
+    } catch (_) {}
+    bcHumOscLow = null;
+    bcHumOscMid = null;
+    bcHumNoise = null;
+    bcHumLfo = null;
+    bcHumCtx = null;
+}
+
+// a soft "fabric-rustle" played when a hidden fragment surfaces -
+// a quick filtered noise burst with a fast attack and short tail.
+function playBedroomClosetRustle() {
+    if (!bcHumCtx) return;
+    try {
+        const now = bcHumCtx.currentTime;
+        const sr = bcHumCtx.sampleRate;
+        const buf = bcHumCtx.createBuffer(1, Math.floor(sr * 0.6), sr);
+        const ch = buf.getChannelData(0);
+        for (let i = 0; i < ch.length; i++) ch[i] = (Math.random() * 2 - 1) * 0.4;
+        const src = bcHumCtx.createBufferSource();
+        src.buffer = buf;
+        const flt = bcHumCtx.createBiquadFilter();
+        flt.type = 'bandpass';
+        flt.frequency.value = 1400;
+        flt.Q.value = 2.4;
+        const g = bcHumCtx.createGain();
+        g.gain.setValueAtTime(0, now);
+        g.gain.linearRampToValueAtTime(0.024, now + 0.04);
+        g.gain.exponentialRampToValueAtTime(0.0005, now + 0.55);
+        src.connect(flt);
+        flt.connect(g);
+        g.connect(bcHumCtx.destination);
+        src.start(now);
+        src.stop(now + 0.6);
+    } catch (_) {}
+}
+
+function applyBedroomClosetRotations(svgDoc) {
+    let visits = 0;
+    try { visits = parseInt(localStorage.getItem(BC_VISIT_KEY) || '0', 10); } catch (_) {}
+    visits = Number.isFinite(visits) ? visits + 1 : 1;
+    try { localStorage.setItem(BC_VISIT_KEY, String(visits)); } catch (_) {}
+
+    const currentByHotspot = {};
+
+    // garments: each slot rotates with its own offset
+    Object.entries(BC_GARMENT_VARIANTS).forEach(([slotKey, variants]) => {
+        const offset = BC_GARMENT_OFFSETS[slotKey] || 0;
+        const idx = (visits - 1 + offset) % variants.length;
+        variants.forEach((id, i) => {
+            const node = svgDoc.getElementById(id);
+            if (node) node.setAttribute('visibility', i === idx ? 'visible' : 'hidden');
+        });
+        // mark the visible one as the "current" outfit so the small CSS
+        // brightness lift on hover targets the right child
+        variants.forEach((id, i) => {
+            const node = svgDoc.getElementById(id);
+            if (!node) return;
+            if (i === idx) node.classList.add('bc-outfit-current');
+            else node.classList.remove('bc-outfit-current');
+        });
+        currentByHotspot[BC_GARMENT_TO_HIT[slotKey]] = idx;
+    });
+
+    // blankets: rotates with a different offset
+    const blanketsIdx = (visits + 1) % BC_BLANKETS_VARIANTS.length;
+    BC_BLANKETS_VARIANTS.forEach((id, i) => {
+        const node = svgDoc.getElementById(id);
+        if (node) node.setAttribute('visibility', i === blanketsIdx ? 'visible' : 'hidden');
+    });
+
+    // bag (on the shelf): rotates with yet another offset
+    const bagIdx = (visits) % BC_BAG_VARIANTS.length;
+    BC_BAG_VARIANTS.forEach((id, i) => {
+        const node = svgDoc.getElementById(id);
+        if (node) node.setAttribute('visibility', i === bagIdx ? 'visible' : 'hidden');
+    });
+
+    // floor shoebox stack: 2 arrangements
+    const floorBoxIdx = (visits + 1) % BC_FLOORBOX_VARIANTS.length;
+    BC_FLOORBOX_VARIANTS.forEach((id, i) => {
+        const node = svgDoc.getElementById(id);
+        if (node) node.setAttribute('visibility', i === floorBoxIdx ? 'visible' : 'hidden');
+    });
+
+    return currentByHotspot;
+}
+
+function setupBedroomClosetMemorySvgRuntime() {
+    const roomObject = document.getElementById('bedroomcloset-memory-svg');
+    if (!roomObject) return;
+
+    const bind = () => {
+        const svgDoc = roomObject.contentDocument;
+        if (!svgDoc) return;
+        const svgRoot = svgDoc.documentElement;
+        if (!svgRoot) return;
+
+        const currentByHotspot = applyBedroomClosetRotations(svgDoc);
+        svgRoot._bcCurrentVariants = currentByHotspot;
+
+        if (svgRoot.dataset.bcBound === 'true') {
+            scheduleBedroomClosetSurfacing();
+            return;
+        }
+
+        const tipEl = document.getElementById('bedroomcloset-memory-tip');
+        const defaultTip = 'hover for the smell of things. one fabric glows when you find it. click any garment for what its pockets remembered. click boxes for keepsakes. fragments may surface on their own.';
+
+        let pendingTipTimer = null;
+        const setTipSlow = (text) => {
+            if (!tipEl) return;
+            if (pendingTipTimer) { clearTimeout(pendingTipTimer); pendingTipTimer = null; }
+            tipEl.classList.remove('surfacing');
+            tipEl.classList.add('fading');
+            pendingTipTimer = setTimeout(() => {
+                tipEl.textContent = text;
+                tipEl.classList.remove('fading');
+                pendingTipTimer = null;
+            }, 480);
+        };
+        const setTipImmediate = (text) => {
+            if (!tipEl) return;
+            if (pendingTipTimer) { clearTimeout(pendingTipTimer); pendingTipTimer = null; }
+            tipEl.classList.remove('fading');
+            tipEl.classList.remove('surfacing');
+            tipEl.textContent = text;
+        };
+        const setTipSurfacing = (text) => {
+            if (!tipEl) return;
+            if (pendingTipTimer) { clearTimeout(pendingTipTimer); pendingTipTimer = null; }
+            tipEl.classList.add('fading');
+            pendingTipTimer = setTimeout(() => {
+                tipEl.textContent = text;
+                tipEl.classList.remove('fading');
+                tipEl.classList.add('surfacing');
+                setTimeout(() => {
+                    if (!document.getElementById('bedroomcloset-memory-overlay')?.classList.contains('active')) return;
+                    setTipSlow(defaultTip);
+                }, 3600);
+                pendingTipTimer = null;
+            }, 520);
+        };
+        svgRoot._bcSetTipSurfacing = setTipSurfacing;
+
+        Object.entries(bedroomclosetMemoryHoverTips).forEach(([hotspotId, defaultHover]) => {
+            const hotspot = svgDoc.getElementById(hotspotId);
+            if (!hotspot) return;
+            hotspot.style.cursor = 'pointer';
+
+            hotspot.addEventListener('mouseenter', () => {
+                const variantTips = bedroomclosetGarmentHoverByVariant[hotspotId];
+                if (variantTips) {
+                    const idx = (svgRoot._bcCurrentVariants || {})[hotspotId] ?? 0;
+                    setTipSlow(variantTips[idx] || defaultHover);
+                } else {
+                    setTipSlow(defaultHover);
+                }
+            });
+            hotspot.addEventListener('mouseleave', () => setTipSlow(defaultTip));
+
+            hotspot.addEventListener('click', (event) => {
+                event.stopPropagation();
+                const fragment = bedroomclosetMemoryClickFragments[hotspotId];
+                if (fragment) setTipImmediate(fragment);
+            });
+        });
+
+        svgRoot.dataset.bcBound = 'true';
+        scheduleBedroomClosetSurfacing();
+    };
+
+    if (!roomObject.dataset.bcLoadHooked) {
+        roomObject.addEventListener('load', bind);
+        roomObject.dataset.bcLoadHooked = 'true';
+    }
+    bind();
+}
+
+// schedules a hidden fragment to surface on its own every 24-40 seconds
+function scheduleBedroomClosetSurfacing() {
+    if (bcSurfacingTimerId) clearTimeout(bcSurfacingTimerId);
+    const overlay = document.getElementById('bedroomcloset-memory-overlay');
+    if (!overlay || !overlay.classList.contains('active')) return;
+    const wait = 24000 + Math.floor(Math.random() * 16000);
+    bcSurfacingTimerId = setTimeout(() => {
+        const overlayNow = document.getElementById('bedroomcloset-memory-overlay');
+        if (!overlayNow || !overlayNow.classList.contains('active')) return;
+        const roomObject = document.getElementById('bedroomcloset-memory-svg');
+        const svgDoc = roomObject?.contentDocument;
+        const svgRoot = svgDoc?.documentElement;
+        const fragment = bedroomclosetMemorySurfacingFragments[Math.floor(Math.random() * bedroomclosetMemorySurfacingFragments.length)];
+        if (svgRoot?._bcSetTipSurfacing) {
+            svgRoot._bcSetTipSurfacing(fragment);
+            playBedroomClosetRustle();
+        }
+        scheduleBedroomClosetSurfacing();
+    }, wait);
+}
+
+const bedroomclosetCloseBtn = document.getElementById('bedroomcloset-memory-close');
+if (bedroomclosetCloseBtn) bedroomclosetCloseBtn.addEventListener('click', closeBedroomClosetMemory);
+
