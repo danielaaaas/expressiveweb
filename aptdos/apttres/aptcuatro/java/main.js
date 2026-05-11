@@ -210,7 +210,7 @@ document.querySelectorAll('.room').forEach(room => {
                 localStorage.setItem('uht-arriving-from-fourth-home', '1');
             } catch (_err) { /* private mode / quota */ }
             setTimeout(() => {
-                window.location.href = 'https://danielaaaas.github.io/unhogartemporal/index.html';
+                window.location.href = 'https://danielaaaas.github.io/expressiveweb/index.html';
             }, 1500);
         };
 

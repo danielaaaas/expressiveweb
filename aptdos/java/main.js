@@ -372,7 +372,7 @@ function openDoorNote() {
             const door = document.getElementById('door-transition');
             if (door) door.classList.add('active');
             setTimeout(() => {
-                window.location.href = 'https://danielaaaas.github.io/unhogartemporal/aptdos/apttres/index.html';
+                window.location.href = 'https://danielaaaas.github.io/expressiveweb/aptdos/apttres/index.html';
             }, 1500);
         };
     }

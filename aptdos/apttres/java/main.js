@@ -132,7 +132,7 @@ document.querySelectorAll('.room').forEach(room => {
             const door = document.getElementById('door-transition');
             door.classList.add('active');
             setTimeout(() => {
-                window.location.href = 'https://danielaaaas.github.io/unhogartemporal/aptdos/apttres/aptcuatro/index.html';
+                window.location.href = 'https://danielaaaas.github.io/expressiveweb/aptdos/apttres/aptcuatro/index.html';
             }, 1500);
         };
 
@@ -795,7 +795,7 @@ if (bedroomOneDoorBtn) {
                 const door = document.getElementById('door-transition');
                 if (door) door.classList.add('active');
                 setTimeout(() => {
-                    window.location.href = 'https://danielaaaas.github.io/unhogartemporal/aptdos/apttres/aptcuatro/index.html';
+                    window.location.href = 'https://danielaaaas.github.io/expressiveweb/aptdos/apttres/aptcuatro/index.html';
                 }, 1500);
             };
         }

@@ -709,7 +709,7 @@ document.querySelectorAll('.room').forEach(room => {
             const door = document.getElementById('door-transition');
             door.classList.add('active');
             setTimeout(() => {
-                window.location.href = 'https://danielaaaas.github.io/unhogartemporal/aptdos/index.html';
+                window.location.href = 'https://danielaaaas.github.io/expressiveweb/aptdos/index.html';
             }, 1500);
         };
 
