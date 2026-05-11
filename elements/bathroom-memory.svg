@@ -663,6 +663,11 @@
   <rect x="0" y="264" width="480" height="56" fill="#1a0e08"/>
   <rect x="0" y="264" width="480" height="2" fill="#000000" opacity="0.85"/>
 
+  <!-- soft warm light drift overlay (apt 1 tone: warmest, densest) -->
+  <rect width="480" height="320" fill="#f4d8a8" opacity="0.05" pointer-events="none">
+    <animate attributeName="opacity" values="0.04;0.10;0.04" dur="14s" repeatCount="indefinite"/>
+  </rect>
+
   <!-- side darkening -->
   <rect x="0" y="0" width="60" height="320" fill="url(#brSidesL)" opacity="0.55" pointer-events="none"/>
   <rect x="420" y="0" width="60" height="320" fill="url(#brSidesR)" opacity="0.55" pointer-events="none"/>

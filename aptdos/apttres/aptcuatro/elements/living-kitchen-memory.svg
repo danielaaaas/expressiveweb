@@ -1,0 +1,551 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" shape-rendering="crispEdges">
+  <title>Living + kitchen memory fragment (apartment four) - controlled, sparse, suspended</title>
+  <desc>Looking straight into a tightly framed apartment that holds the kitchen and the living space at the same eye level. On the left, the right edge of a slim modern fridge anchors the kitchen; a clean counter sits beneath an upper cabinet, holding only three things: a small canister, a moka pot, and a single ceramic mug. In the center of the wall, a small window with a still outdoor view of distant rooftops under a flat sky. On the right, a wide wall-mounted television throws a muted blue-grey glow onto the surrounding wall and onto the corner of a slate-blue couch with a single warm throw pillow tucked into it. Lighting is even and cool. The moka pot is not steaming. Nothing animates.</desc>
+
+  <defs>
+    <linearGradient id="lk4Wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#dcd6c8"/>
+      <stop offset="65%"  stop-color="#bcb4a0"/>
+      <stop offset="100%" stop-color="#8c8678"/>
+    </linearGradient>
+
+    <linearGradient id="lk4Fridge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#a4a8ac"/>
+      <stop offset="35%"  stop-color="#dde0e4"/>
+      <stop offset="70%"  stop-color="#b4b8bc"/>
+      <stop offset="100%" stop-color="#7c8084"/>
+    </linearGradient>
+
+    <linearGradient id="lk4Cabinet" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#e0d8c4"/>
+      <stop offset="100%" stop-color="#a89c80"/>
+    </linearGradient>
+
+    <linearGradient id="lk4Counter" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#dcd6cc"/>
+      <stop offset="60%"  stop-color="#bcb6a8"/>
+      <stop offset="100%" stop-color="#8c8880"/>
+    </linearGradient>
+
+    <linearGradient id="lk4CounterFront" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#a08c70"/>
+      <stop offset="100%" stop-color="#5c4a30"/>
+    </linearGradient>
+
+    <linearGradient id="lk4Canister" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#e0d8c4"/>
+      <stop offset="100%" stop-color="#9c9078"/>
+    </linearGradient>
+
+    <linearGradient id="lk4Mug" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f0eadc"/>
+      <stop offset="100%" stop-color="#bcb098"/>
+    </linearGradient>
+
+    <linearGradient id="lk4WindowGlass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#cfdbe2"/>
+      <stop offset="100%" stop-color="#a4b0bc"/>
+    </linearGradient>
+
+    <linearGradient id="lk4WindowFrame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#e8e0cc"/>
+      <stop offset="100%" stop-color="#a89c80"/>
+    </linearGradient>
+
+    <linearGradient id="lk4TvFrame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#2c2e32"/>
+      <stop offset="100%" stop-color="#0e1014"/>
+    </linearGradient>
+
+    <linearGradient id="lk4TvScreen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#5c7080"/>
+      <stop offset="100%" stop-color="#384858"/>
+    </linearGradient>
+
+    <linearGradient id="lk4Couch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#7c848c"/>
+      <stop offset="100%" stop-color="#4c5460"/>
+    </linearGradient>
+
+    <linearGradient id="lk4Pillow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#dcb898"/>
+      <stop offset="100%" stop-color="#9c7c5c"/>
+    </linearGradient>
+
+    <radialGradient id="lk4OverheadLight" cx="50%" cy="0%" r="60%">
+      <stop offset="0%"   stop-color="#f4faff" stop-opacity="0.22"/>
+      <stop offset="60%"  stop-color="#e0e8f0" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#e0e8f0" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="lk4TvHalo" cx="50%" cy="50%" r="55%">
+      <stop offset="0%"   stop-color="#7090a8" stop-opacity="0.32"/>
+      <stop offset="55%"  stop-color="#4c6478" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#4c6478" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="lk4FridgeGlow" cx="50%" cy="20%" r="60%">
+      <stop offset="0%"   stop-color="#f8f6e8" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#f8f6e8" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="lk4SidesL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#1a1c20" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#1a1c20" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="lk4SidesR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%"   stop-color="#1a1c20" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#1a1c20" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="lk4Vignette" cx="50%" cy="55%" r="72%">
+      <stop offset="58%"  stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0c0e12" stop-opacity="0.42"/>
+    </radialGradient>
+
+    <clipPath id="lk4ScreenClip">
+      <rect x="308" y="86" width="148" height="80"/>
+    </clipPath>
+
+    <clipPath id="lk4WindowClip">
+      <rect x="250" y="86" width="44" height="80"/>
+    </clipPath>
+  </defs>
+
+  <!-- ============= WALL ============= -->
+  <rect width="480" height="320" fill="url(#lk4Wall)"/>
+  <!-- top molding shadow -->
+  <rect x="0" y="0" width="480" height="6" fill="#5c5648" opacity="0.40" pointer-events="none"/>
+  <rect x="0" y="6" width="480" height="1" fill="#1c1810" opacity="0.55" pointer-events="none"/>
+  <!-- side trim -->
+  <rect x="0"   y="0" width="14" height="320" fill="#a89c80" opacity="0.55" pointer-events="none"/>
+  <rect x="466" y="0" width="14" height="320" fill="#a89c80" opacity="0.55" pointer-events="none"/>
+  <rect x="14"  y="0" width="1"  height="320" fill="#3c2e1c" opacity="0.55" pointer-events="none"/>
+  <rect x="465" y="0" width="1"  height="320" fill="#3c2e1c" opacity="0.55" pointer-events="none"/>
+
+  <!-- soft cool overhead light pool -->
+  <rect x="0" y="0" width="480" height="220" fill="url(#lk4OverheadLight)" pointer-events="none"/>
+
+  <!-- ============= TV WALL HALO (sits on the wall around the TV) ============= -->
+  <ellipse cx="380" cy="126" rx="180" ry="78" fill="url(#lk4TvHalo)" pointer-events="none"/>
+
+  <!-- ============= FRIDGE (right edge of a slim modern fridge anchoring the kitchen) ============= -->
+  <g id="lk4-fridge-art">
+    <!-- body -->
+    <rect x="14" y="68" width="64" height="216" fill="url(#lk4Fridge)"/>
+    <rect x="14" y="68" width="64" height="2"   fill="#f0f4f6"/>
+    <rect x="14" y="282" width="64" height="2"  fill="#3c4044" opacity="0.7"/>
+    <!-- door seam (vertical, near right edge) -->
+    <rect x="74" y="68" width="1" height="216" fill="#5c6064" opacity="0.7"/>
+    <!-- top freezer seam (horizontal) -->
+    <rect x="14" y="128" width="64" height="1" fill="#5c6064" opacity="0.7"/>
+    <rect x="14" y="129" width="64" height="1" fill="#f0f4f6" opacity="0.55"/>
+    <!-- minimalist vertical handle -->
+    <rect x="64" y="80" width="2" height="40" fill="#5c6064"/>
+    <rect x="64" y="80" width="2" height="1"  fill="#a4a8ac"/>
+    <rect x="64" y="119" width="2" height="1" fill="#1c1e22" opacity="0.7"/>
+    <rect x="64" y="138" width="2" height="120" fill="#5c6064"/>
+    <rect x="64" y="138" width="2" height="1"   fill="#a4a8ac"/>
+    <rect x="64" y="257" width="2" height="1"   fill="#1c1e22" opacity="0.7"/>
+    <!-- a faint cool glow band along the seam (interior light hint, perfectly stable) -->
+    <rect x="14" y="129" width="64" height="2" fill="url(#lk4FridgeGlow)" pointer-events="none"/>
+  </g>
+
+  <!-- ============= SMALL WALL CLOCK (frozen ~11:08, intentionally a different
+       time from the TV channel-E timestamp - rooms have their own clocks) ============= -->
+  <g id="lk4-wall-clock-art" pointer-events="none">
+    <ellipse cx="158" cy="54" rx="8" ry="8" fill="#3c2e1c"/>
+    <ellipse cx="158" cy="54" rx="7" ry="7" fill="#f4ecd8"/>
+    <ellipse cx="158" cy="54" rx="6.2" ry="6.2" fill="#fff4e0"/>
+    <rect x="157.6" y="48" width="0.8" height="2" fill="#3c2e1c"/>
+    <rect x="163"   y="53.6" width="2" height="0.8" fill="#3c2e1c"/>
+    <rect x="157.6" y="58" width="0.8" height="2" fill="#3c2e1c"/>
+    <rect x="151"   y="53.6" width="2" height="0.8" fill="#3c2e1c"/>
+    <rect x="155.5" y="50.5" width="3"   height="0.8" fill="#2a1f12" transform="rotate(-12 158 54)"/>
+    <rect x="158"   y="49.5" width="0.8" height="5"   fill="#2a1f12" transform="rotate(48 158 54)"/>
+    <ellipse cx="158" cy="54" rx="0.9" ry="0.9" fill="#1a1410"/>
+  </g>
+
+  <!-- ============= UPPER KITCHEN CABINET ============= -->
+  <g id="lk4-cabinet-art" pointer-events="none">
+    <!-- soft drop shadow under cabinet -->
+    <rect x="82" y="134" width="152" height="2" fill="#1c1810" opacity="0.30"/>
+    <!-- body -->
+    <rect x="82" y="72" width="152" height="62" fill="url(#lk4Cabinet)"/>
+    <rect x="82" y="72" width="152" height="2"  fill="#f0e8d0"/>
+    <rect x="82" y="132" width="152" height="2" fill="#3c2e1c" opacity="0.7"/>
+    <rect x="82" y="72" width="152" height="62" fill="none" stroke="#5c4a30" stroke-width="0.8"/>
+    <!-- two-door seam (centered) -->
+    <rect x="157" y="74" width="1" height="58" fill="#5c4a30" opacity="0.55"/>
+    <!-- a single tiny pull on the bottom of each door -->
+    <rect x="143" y="124" width="6" height="2" fill="#5c4a30"/>
+    <rect x="166" y="124" width="6" height="2" fill="#5c4a30"/>
+  </g>
+
+  <!-- ============= WINDOW (between kitchen and TV; frozen outdoor view) ============= -->
+  <g id="lk4-window-frame-art" pointer-events="none">
+    <!-- outer frame -->
+    <rect x="244" y="80" width="56" height="92" fill="url(#lk4WindowFrame)"/>
+    <rect x="244" y="80" width="56" height="2"  fill="#fcf4e0"/>
+    <rect x="244" y="170" width="56" height="2" fill="#3c2e1c" opacity="0.7"/>
+    <!-- inner frame edge -->
+    <rect x="248" y="84" width="48" height="84" fill="none" stroke="#5c4a30" stroke-width="1"/>
+    <!-- single mullion (horizontal, mid) -->
+    <rect x="248" y="124" width="48" height="2" fill="#5c4a30" opacity="0.55"/>
+    <!-- sill -->
+    <rect x="240" y="172" width="64" height="6" fill="#a89c80"/>
+    <rect x="240" y="172" width="64" height="1" fill="#dccca8"/>
+    <rect x="240" y="177" width="64" height="1" fill="#3c2e1c" opacity="0.85"/>
+  </g>
+
+  <!-- frozen outdoor view inside window -->
+  <g clip-path="url(#lk4WindowClip)">
+    <!-- pale flat sky -->
+    <rect x="250" y="86" width="44" height="80" fill="url(#lk4WindowGlass)"/>
+    <!-- distant rooftop silhouettes (perfectly still) -->
+    <g pointer-events="none">
+      <rect x="250" y="138" width="14" height="28" fill="#7c848c" opacity="0.85"/>
+      <rect x="250" y="138" width="14" height="1"  fill="#9ca4ac" opacity="0.85"/>
+      <rect x="262" y="146" width="10" height="20" fill="#6c747c" opacity="0.85"/>
+      <rect x="262" y="146" width="10" height="1"  fill="#8c949c" opacity="0.85"/>
+      <rect x="270" y="132" width="18" height="34" fill="#7c848c" opacity="0.85"/>
+      <rect x="270" y="132" width="18" height="1"  fill="#9ca4ac" opacity="0.85"/>
+      <rect x="284" y="142" width="10" height="24" fill="#6c747c" opacity="0.85"/>
+      <rect x="284" y="142" width="10" height="1"  fill="#8c949c" opacity="0.85"/>
+      <!-- a single stationary cloud (one rectangle, no motion) -->
+      <rect x="258" y="98"  width="14" height="3" fill="#dde2e6" opacity="0.85"/>
+      <rect x="276" y="106" width="10" height="2" fill="#dde2e6" opacity="0.65"/>
+    </g>
+    <!-- subtle vertical reflection band on glass (a fixed highlight) -->
+    <rect x="278" y="86" width="2" height="80" fill="#ffffff" opacity="0.10" pointer-events="none"/>
+  </g>
+
+  <!-- ============= TELEVISION (wall-mounted; the channel groups inside are toggled by JS) ============= -->
+  <g id="lk4-tv-frame-art" pointer-events="none">
+    <!-- frame -->
+    <rect x="304" y="82" width="156" height="88" fill="url(#lk4TvFrame)"/>
+    <rect x="304" y="82" width="156" height="2"  fill="#3c4044"/>
+    <rect x="304" y="168" width="156" height="2" fill="#0a0c0e"/>
+    <!-- inner bezel -->
+    <rect x="307" y="85" width="150" height="82" fill="none" stroke="#0a0c0e" stroke-width="1"/>
+    <!-- tiny brand dot bottom-right -->
+    <rect x="450" y="172" width="2" height="1" fill="#5c6064"/>
+  </g>
+
+  <!-- screen (each channel is a group; default visible is channel A) -->
+  <g clip-path="url(#lk4ScreenClip)">
+    <!-- base screen fill (always present, the muted glow) -->
+    <rect x="308" y="86" width="148" height="80" fill="url(#lk4TvScreen)"/>
+
+    <!-- ===== CHANNEL A: muted color bars (test card) ===== -->
+    <g id="lk4-tv-channel-A" data-channel="A">
+      <rect x="308" y="86"  width="22" height="56" fill="#7c848c"/>
+      <rect x="330" y="86"  width="22" height="56" fill="#a8a880"/>
+      <rect x="352" y="86"  width="22" height="56" fill="#8ca0a4"/>
+      <rect x="374" y="86"  width="22" height="56" fill="#a89c80"/>
+      <rect x="396" y="86"  width="22" height="56" fill="#94a4ac"/>
+      <rect x="418" y="86"  width="22" height="56" fill="#b89880"/>
+      <rect x="440" y="86"  width="16" height="56" fill="#6c747c"/>
+      <!-- lower band -->
+      <rect x="308" y="142" width="148" height="14" fill="#3c4448"/>
+      <rect x="308" y="156" width="148" height="10" fill="#252a2e"/>
+      <!-- tiny "no signal" indicator -->
+      <rect x="312" y="160" width="6" height="3" fill="#a8a880"/>
+    </g>
+
+    <!-- ===== CHANNEL B: a frozen empty doorway with light spilling ===== -->
+    <g id="lk4-tv-channel-B" data-channel="B" style="display:none">
+      <rect x="308" y="86"  width="148" height="80" fill="#1a1e22"/>
+      <!-- doorway frame -->
+      <rect x="372" y="98" width="48" height="68" fill="#22262a"/>
+      <rect x="376" y="102" width="40" height="64" fill="#2c3034"/>
+      <!-- light bleeding from inside (warm, fixed) -->
+      <rect x="378" y="102" width="36" height="64" fill="#f8e0a8" opacity="0.62"/>
+      <rect x="378" y="102" width="36" height="2"  fill="#fffbe8" opacity="0.85"/>
+      <!-- a fixed silhouette of a lamp far inside -->
+      <rect x="394" y="138" width="4" height="20" fill="#3c2e1c" opacity="0.78"/>
+      <rect x="392" y="134" width="8" height="4"  fill="#3c2e1c" opacity="0.78"/>
+      <!-- floor edge -->
+      <rect x="308" y="158" width="148" height="2" fill="#1c1810" opacity="0.78"/>
+    </g>
+
+    <!-- ===== CHANNEL C: still clouds ===== -->
+    <g id="lk4-tv-channel-C" data-channel="C" style="display:none">
+      <rect x="308" y="86" width="148" height="80" fill="#a8b8c4"/>
+      <rect x="308" y="86" width="148" height="20" fill="#bcc8d0" opacity="0.55"/>
+      <!-- horizon line (a flat wash for a faraway field) -->
+      <rect x="308" y="146" width="148" height="20" fill="#8c948c" opacity="0.85"/>
+      <rect x="308" y="146" width="148" height="1"  fill="#a4ac9c" opacity="0.85"/>
+      <!-- frozen cloud shapes (unmoving) -->
+      <rect x="324" y="100" width="36" height="6"  fill="#dde2e8" opacity="0.92"/>
+      <rect x="328" y="98"  width="28" height="2"  fill="#f0f4f8" opacity="0.85"/>
+      <rect x="368" y="116" width="44" height="5"  fill="#dde2e8" opacity="0.92"/>
+      <rect x="374" y="114" width="32" height="2"  fill="#f0f4f8" opacity="0.85"/>
+      <rect x="420" y="106" width="28" height="4"  fill="#dde2e8" opacity="0.85"/>
+    </g>
+
+    <!-- ===== CHANNEL D: still desk lamp on a desk (suspended) ===== -->
+    <g id="lk4-tv-channel-D" data-channel="D" style="display:none">
+      <rect x="308" y="86" width="148" height="80" fill="#1f242a"/>
+      <!-- desk surface line -->
+      <rect x="308" y="142" width="148" height="2" fill="#5c4a30"/>
+      <rect x="308" y="144" width="148" height="22" fill="#3c2e1c"/>
+      <!-- lamp base -->
+      <rect x="362" y="136" width="20" height="6" fill="#22262a"/>
+      <rect x="362" y="136" width="20" height="1" fill="#5c6064"/>
+      <!-- lamp arm -->
+      <rect x="370" y="116" width="2" height="20" fill="#22262a"/>
+      <rect x="370" y="116" width="22" height="2" fill="#22262a"/>
+      <!-- lamp shade -->
+      <rect x="392" y="112" width="14" height="10" fill="#22262a"/>
+      <rect x="392" y="112" width="14" height="1"  fill="#3c4044"/>
+      <!-- pool of warm light on desk under the shade (perfectly still) -->
+      <rect x="378" y="142" width="42" height="4" fill="#f8e0a8" opacity="0.55"/>
+      <ellipse cx="399" cy="148" rx="28" ry="4" fill="#f8e0a8" opacity="0.42"/>
+      <!-- a single page on desk -->
+      <rect x="384" y="146" width="22" height="4" fill="#dccca8" opacity="0.85"/>
+    </g>
+
+    <!-- ===== CHANNEL E: pure muted blue-grey field with a small white timestamp ===== -->
+    <g id="lk4-tv-channel-E" data-channel="E" style="display:none">
+      <rect x="308" y="86" width="148" height="80" fill="#3a4854"/>
+      <!-- timestamp text (rendered as small pixel rectangles to keep crisp) -->
+      <text x="437" y="160" text-anchor="end"
+            font-family="'Pixelify Sans', 'VT323', monospace" font-size="10"
+            fill="#dde6ea" opacity="0.85" font-weight="700">07:42</text>
+      <!-- a single tiny horizon hint -->
+      <rect x="308" y="120" width="148" height="1" fill="#5c6c78" opacity="0.55"/>
+    </g>
+
+    <!-- ===== CHANNEL F: a frozen pixel scene of THIS room's counter (uncanny echo) ===== -->
+    <g id="lk4-tv-channel-F" data-channel="F" style="display:none">
+      <rect x="308" y="86" width="148" height="80" fill="#bcb6a4"/>
+      <!-- echo of the counter band -->
+      <rect x="308" y="138" width="148" height="20" fill="#8c8880"/>
+      <rect x="308" y="138" width="148" height="1"  fill="#dcd4c4"/>
+      <rect x="308" y="158" width="148" height="8"  fill="#5c4a30"/>
+      <!-- echo upper cabinet -->
+      <rect x="328" y="92"  width="108" height="22" fill="#dccca8"/>
+      <rect x="328" y="92"  width="108" height="1"  fill="#f0e0bc"/>
+      <rect x="328" y="113" width="108" height="1"  fill="#5c4a30" opacity="0.85"/>
+      <!-- echo moka pot in the dead center of the echoed counter -->
+      <g pointer-events="none">
+        <rect x="376" y="130" width="14" height="8"  fill="#b8b8b8"/>
+        <rect x="376" y="130" width="14" height="1"  fill="#d8d8d8"/>
+        <rect x="376" y="138" width="14" height="1"  fill="#585858" opacity="0.85"/>
+        <rect x="378" y="124" width="10" height="6"  fill="#b8b8b8"/>
+        <rect x="378" y="124" width="10" height="1"  fill="#d8d8d8"/>
+        <rect x="380" y="122" width="6"  height="2"  fill="#a0a0a0"/>
+        <rect x="382" y="120" width="2"  height="2"  fill="#404040"/>
+        <rect x="390" y="128" width="2"  height="6"  fill="#202020"/>
+      </g>
+    </g>
+
+    <!-- soft scanline veil (very faint, fixed; no flicker) -->
+    <g pointer-events="none" opacity="0.10">
+      <rect x="308" y="92"  width="148" height="1" fill="#0a0c0e"/>
+      <rect x="308" y="106" width="148" height="1" fill="#0a0c0e"/>
+      <rect x="308" y="120" width="148" height="1" fill="#0a0c0e"/>
+      <rect x="308" y="134" width="148" height="1" fill="#0a0c0e"/>
+      <rect x="308" y="148" width="148" height="1" fill="#0a0c0e"/>
+      <rect x="308" y="162" width="148" height="1" fill="#0a0c0e"/>
+    </g>
+  </g>
+
+  <!-- ============= COUNTER (right of fridge) ============= -->
+  <g id="lk4-counter-art" pointer-events="none">
+    <!-- top surface -->
+    <rect x="78" y="190" width="156" height="40" fill="url(#lk4Counter)"/>
+    <rect x="78" y="190" width="156" height="1"  fill="#e8e2d4"/>
+    <rect x="78" y="226" width="156" height="1"  fill="#5c5648" opacity="0.55"/>
+    <!-- front fascia (warm wood) -->
+    <rect x="78" y="230" width="156" height="22" fill="url(#lk4CounterFront)"/>
+    <rect x="78" y="230" width="156" height="1"  fill="#c4a878"/>
+    <rect x="78" y="251" width="156" height="1"  fill="#1c1810" opacity="0.7"/>
+    <!-- single thin door seam in the cabinetry -->
+    <rect x="156" y="232" width="1" height="18" fill="#3c2e1c" opacity="0.55"/>
+  </g>
+
+  <!-- ============= COUNTER ITEMS ============= -->
+
+  <!-- canister (cylindrical, sealed) -->
+  <g id="lk4-canister-art">
+    <rect x="96" y="188" width="20" height="2" fill="#1c1810" opacity="0.32"/>
+    <rect x="98" y="164" width="16" height="26" fill="url(#lk4Canister)"/>
+    <rect x="98" y="164" width="16" height="1"  fill="#f0e8d0"/>
+    <rect x="98" y="189" width="16" height="1"  fill="#5c4a30" opacity="0.7"/>
+    <!-- subtle vertical highlight -->
+    <rect x="100" y="166" width="1" height="22" fill="#f0e8d0" opacity="0.55"/>
+    <!-- lid -->
+    <rect x="96" y="160" width="20" height="4" fill="#5c4a30"/>
+    <rect x="96" y="160" width="20" height="1" fill="#7c6c4c"/>
+    <rect x="96" y="163" width="20" height="1" fill="#1c1810" opacity="0.7"/>
+    <!-- minimal label band -->
+    <rect x="100" y="174" width="12" height="6" fill="#dccca8" opacity="0.85"/>
+    <rect x="100" y="174" width="12" height="1" fill="#f0e0bc" opacity="0.85"/>
+  </g>
+
+  <!-- ============= MOKA POT (recurring motif, matched to apt3 design; NOT steaming) ============= -->
+  <g id="lk4-moka-art">
+    <!-- spout (small pour on left of top chamber) -->
+    <rect x="128" y="164" width="2" height="3" fill="#888888"/>
+    <rect x="127" y="165" width="1" height="2" fill="#a0a0a0"/>
+
+    <!-- bottom chamber (wider, faceted) -->
+    <rect x="130" y="176" width="20" height="14" fill="#b8b8b8"/>
+    <rect x="130" y="176" width="20" height="2"  fill="#d8d8d8"/>
+    <rect x="130" y="188" width="20" height="2"  fill="#585858"/>
+    <!-- faceted side hints -->
+    <rect x="130" y="178" width="2"  height="10" fill="#888888"/>
+    <rect x="148" y="178" width="2"  height="10" fill="#888888"/>
+    <rect x="134" y="178" width="1"  height="10" fill="#d8d8d8" opacity="0.6"/>
+    <rect x="140" y="178" width="1"  height="10" fill="#d8d8d8" opacity="0.5"/>
+    <rect x="146" y="178" width="1"  height="10" fill="#888888" opacity="0.7"/>
+
+    <!-- pinch ring -->
+    <rect x="130" y="174" width="20" height="2" fill="#585858"/>
+    <rect x="132" y="173" width="16" height="1" fill="#888888"/>
+
+    <!-- top chamber (narrower) -->
+    <rect x="132" y="162" width="16" height="12" fill="#b8b8b8"/>
+    <rect x="132" y="162" width="16" height="2"  fill="#d8d8d8"/>
+    <rect x="132" y="172" width="16" height="2"  fill="#888888"/>
+    <rect x="132" y="164" width="2"  height="8"  fill="#888888"/>
+    <rect x="146" y="164" width="2"  height="8"  fill="#888888"/>
+    <rect x="136" y="164" width="1"  height="8"  fill="#d8d8d8" opacity="0.6"/>
+    <rect x="142" y="164" width="1"  height="8"  fill="#888888" opacity="0.6"/>
+
+    <!-- lid -->
+    <rect x="134" y="160" width="12" height="2" fill="#a0a0a0"/>
+    <rect x="134" y="160" width="12" height="1" fill="#c8c8c8"/>
+    <!-- knob -->
+    <rect x="139" y="158" width="2"  height="2" fill="#404040"/>
+    <rect x="139" y="158" width="2"  height="1" fill="#606060"/>
+
+    <!-- handle (black plastic, on right) -->
+    <rect x="150" y="170" width="3" height="14" fill="#1c1c1c"/>
+    <rect x="150" y="170" width="3" height="1"  fill="#3c3c3c"/>
+    <rect x="153" y="172" width="3" height="2"  fill="#1c1c1c"/>
+    <rect x="153" y="180" width="3" height="2"  fill="#1c1c1c"/>
+    <rect x="156" y="174" width="2" height="6"  fill="#1c1c1c"/>
+
+    <!-- subtle base shadow -->
+    <rect x="128" y="190" width="32" height="1" fill="#1c1810" opacity="0.32"/>
+  </g>
+
+  <!-- ============= SINGLE CERAMIC MUG ============= -->
+  <g id="lk4-mug-art">
+    <rect x="166" y="188" width="20" height="2" fill="#1c1810" opacity="0.30"/>
+    <rect x="168" y="172" width="16" height="18" fill="url(#lk4Mug)"/>
+    <rect x="168" y="172" width="16" height="1"  fill="#fcf4e0"/>
+    <rect x="168" y="189" width="16" height="1"  fill="#5c5648" opacity="0.55"/>
+    <!-- inner top rim (a small dark ellipse cap) -->
+    <ellipse cx="176" cy="172" rx="8" ry="2" fill="#3c2e1c" opacity="0.55"/>
+    <!-- handle (a small loop on the right) -->
+    <rect x="184" y="176" width="4" height="2" fill="url(#lk4Mug)"/>
+    <rect x="186" y="178" width="2" height="6" fill="url(#lk4Mug)"/>
+    <rect x="184" y="184" width="4" height="2" fill="url(#lk4Mug)"/>
+    <rect x="184" y="176" width="1" height="10" fill="#9c9078" opacity="0.55"/>
+    <!-- subtle highlight stripe on body -->
+    <rect x="170" y="174" width="1" height="14" fill="#f0e8d0" opacity="0.7"/>
+  </g>
+
+  <!-- ============= COUCH CORNER (right; throws a slate-blue shape into the frame) ============= -->
+  <g id="lk4-couch-art">
+    <!-- floor shadow under couch -->
+    <rect x="324" y="296" width="142" height="2" fill="#1c1810" opacity="0.42"/>
+    <!-- arm cushion (front-facing) -->
+    <rect x="378" y="234" width="84" height="64" fill="url(#lk4Couch)"/>
+    <rect x="378" y="234" width="84" height="2"  fill="#a4acb4"/>
+    <rect x="378" y="296" width="84" height="2"  fill="#2c3440" opacity="0.85"/>
+    <!-- left edge of couch arm (a darker side) -->
+    <rect x="378" y="234" width="2" height="64" fill="#2c3440" opacity="0.65"/>
+    <!-- arm top crease line -->
+    <rect x="378" y="248" width="84" height="1" fill="#5c6470" opacity="0.7"/>
+    <!-- seat cushion peeking left of arm -->
+    <rect x="324" y="252" width="56" height="46" fill="#6c7480"/>
+    <rect x="324" y="252" width="56" height="2"  fill="#a4acb4" opacity="0.55"/>
+    <rect x="324" y="296" width="56" height="2"  fill="#2c3440" opacity="0.85"/>
+    <!-- a subtle TV light wash across the seat (perfectly fixed) -->
+    <rect x="324" y="252" width="56" height="46" fill="#7090a8" opacity="0.18" pointer-events="none"/>
+  </g>
+
+  <!-- throw pillow tucked into the corner (warm contrast note) -->
+  <g id="lk4-pillow-art">
+    <rect x="328" y="244" width="44" height="22" fill="url(#lk4Pillow)"/>
+    <rect x="328" y="244" width="44" height="2"  fill="#f0c8a0"/>
+    <rect x="328" y="264" width="44" height="2"  fill="#5c4430" opacity="0.85"/>
+    <!-- tiny stitched edge -->
+    <rect x="330" y="246" width="40" height="1" fill="#fcdcb4" opacity="0.7"/>
+    <rect x="330" y="263" width="40" height="1" fill="#5c4430" opacity="0.7"/>
+  </g>
+
+  <!-- ============= FLOOR ============= -->
+  <rect y="298" width="480" height="22" fill="#bcb098" pointer-events="none"/>
+  <rect y="298" width="480" height="2"  fill="#5c4a30" opacity="0.55" pointer-events="none"/>
+  <!-- a couple of pixel plank seams -->
+  <rect x="120" y="298" width="0.5" height="22" fill="#5c4a30" opacity="0.55" pointer-events="none"/>
+  <rect x="240" y="298" width="0.5" height="22" fill="#5c4a30" opacity="0.55" pointer-events="none"/>
+  <rect x="360" y="298" width="0.5" height="22" fill="#5c4a30" opacity="0.55" pointer-events="none"/>
+
+  <!-- ============= DRIFTING DUST (very slow breath, lucid-memory motion) ============= -->
+  <g pointer-events="none" opacity="0.32">
+    <ellipse cx="220" cy="40"  rx="1.2" ry="1.2" fill="#f4faff">
+      <animate attributeName="cy" values="40;43;40" dur="38s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.82;1;0.82" dur="38s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="60"  cy="56"  rx="1.2" ry="1.2" fill="#f4faff">
+      <animate attributeName="cy" values="56;53;56" dur="44s" begin="-11s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="44s" begin="-11s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="430" cy="200" rx="1.2" ry="1.2" fill="#f4faff">
+      <animate attributeName="cy" values="200;204;200" dur="42s" begin="-24s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.82;1;0.82" dur="42s" begin="-24s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- ============= LUCID MEMORY LAYER (warm bleed + breathing haze) ============= -->
+  <defs>
+    <radialGradient id="lk4WarmBleed" cx="20%" cy="72%" r="55%">
+      <stop offset="0%"   stop-color="#fce0a8" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#fce0a8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lk4Haze" cx="50%" cy="50%" r="70%">
+      <stop offset="0%"   stop-color="#fff4d4" stop-opacity="0.055"/>
+      <stop offset="60%"  stop-color="#fff4d4" stop-opacity="0.022"/>
+      <stop offset="100%" stop-color="#fff4d4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="480" height="320" fill="url(#lk4WarmBleed)" pointer-events="none">
+    <animate attributeName="opacity" values="0.76;1;0.76" dur="26s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="0" y="0" width="480" height="320" fill="url(#lk4Haze)" pointer-events="none">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="20s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ============= EDGE DARKENING + OUTER VIGNETTE ============= -->
+  <rect x="0"   y="0" width="38" height="320" fill="url(#lk4SidesL)" pointer-events="none"/>
+  <rect x="442" y="0" width="38" height="320" fill="url(#lk4SidesR)" pointer-events="none"/>
+  <rect x="0" y="0" width="480" height="320" fill="url(#lk4Vignette)" pointer-events="none"/>
+
+  <!-- ============= INTERACTIVE HOTSPOTS ============= -->
+  <g id="lk4-hotspots" fill="transparent" stroke="none">
+    <rect id="hit-wall"      x="20"  y="2"   width="440" height="6"/>
+    <rect id="hit-floor"     x="20"  y="316" width="440" height="4"/>
+
+    <rect id="hit-fridge"    x="14"  y="68"  width="64"  height="216"/>
+    <rect id="hit-cabinet"   x="82"  y="72"  width="152" height="62"/>
+    <rect id="hit-counter"   x="78"  y="190" width="156" height="62"/>
+
+    <rect id="hit-canister"  x="94"  y="158" width="24"  height="34"/>
+    <rect id="hit-moka"      x="124" y="158" width="36"  height="34"/>
+    <rect id="hit-mug"       x="164" y="170" width="26"  height="22"/>
+
+    <rect id="hit-window"    x="244" y="80"  width="56"  height="98"/>
+
+    <rect id="hit-tv"        x="304" y="82"  width="156" height="88"/>
+
+    <rect id="hit-couch"     x="324" y="234" width="142" height="64"/>
+    <rect id="hit-pillow"    x="328" y="244" width="44"  height="22"/>
+  </g>
+</svg>

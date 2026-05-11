@@ -656,6 +656,11 @@
     </ellipse>
   </g>
 
+  <!-- soft warm light drift overlay (apt 3 tone: faded warmth, slowest, dissolving) -->
+  <rect width="480" height="320" fill="#ecd8c0" opacity="0.04" pointer-events="none">
+    <animate attributeName="opacity" values="0.03;0.07;0.03" dur="22s" repeatCount="indefinite"/>
+  </rect>
+
   <!-- side darkening (warmer than B2's) -->
   <rect x="0"   y="0" width="42" height="320" fill="url(#b3SidesL)" pointer-events="none"/>
   <rect x="438" y="0" width="42" height="320" fill="url(#b3SidesR)" pointer-events="none"/>

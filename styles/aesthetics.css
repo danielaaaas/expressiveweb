@@ -2466,3 +2466,43 @@ body.apt-one .return-demo-hint {
     color: rgba(35, 48, 58, 0.55);
     letter-spacing: 0.03em;
 }
+
+/* ============================================================
+   apartment one: final atmospheric pass.
+   warmest, densest amber outer glow on every memory stage so the
+   frame itself reads as "lived-in memory window" rather than a
+   hard rectangle. tip text gets a faint amber halo.
+   ============================================================ */
+
+.bedroom-memory-stage,
+.hallway-memory-stage,
+.kitchen-memory-stage,
+.bathroom-memory-stage,
+.frontcloset-memory-stage,
+.bedroomcloset-memory-stage,
+.hallwaycloset-memory-stage,
+.fronthallway-memory-stage,
+.livingroom-memory-stage {
+    border-color: rgba(244, 216, 168, 0.45) !important;
+    border-radius: 6px;
+    box-shadow:
+        0 0 0 1px rgba(40, 24, 14, 0.7),
+        0 0 42px rgba(244, 200, 120, 0.18),
+        0 22px 64px rgba(20, 12, 8, 0.55),
+        inset 0 0 80px rgba(244, 216, 168, 0.08),
+        inset 0 0 28px rgba(40, 28, 18, 0.35) !important;
+    transition: box-shadow 1200ms ease-in-out;
+}
+
+.bedroom-memory-tip,
+.hallway-memory-tip,
+.kitchen-memory-tip,
+.bathroom-memory-tip,
+.frontcloset-memory-tip,
+.bedroomcloset-memory-tip,
+.hallwaycloset-memory-tip,
+.fronthallway-memory-tip,
+.livingroom-memory-tip {
+    text-shadow: 0 0 6px rgba(244, 200, 120, 0.22);
+    transition: opacity 360ms ease-in-out, color 600ms ease-in-out, text-shadow 600ms ease-in-out;
+}

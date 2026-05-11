@@ -174,7 +174,7 @@ const kitchenMemoryHoverTips = {
     'hit-note-drawing': 'a child\'s drawing. a smile, a sun, a small red heart.',
     'hit-clip': 'a green clip holding a note no one reads anymore.',
     'hit-receipt': 'a receipt for one large coffee and three pastries. a good day.',
-    'hit-impossible': 'a small cold moon, hovering. probably nothing.',
+    'hit-impossible': 'a small pale moon, hovering. probably nothing.',
     'hit-moka': 'the moka pot, sighing softly to itself on the counter.',
     'hit-mug': 'a small ceramic mug, chipped on the rim. somebody\'s favourite.',
     'hit-counter': 'the counter where everything got placed and forgotten.'
@@ -581,7 +581,7 @@ const FRONTHALLWAY_PEEPHOLE_SCENES = [
 
 const FRONTHALLWAY_KNOCK_TIPS = [
     'three knocks. nobody on the other side.',
-    'a knock from the wrong direction. inside out, almost.',
+    'a knock from somewhere the door isn\u2019t. it doesn\u2019t repeat.',
     'somebody clearing their throat. or the building settling.'
 ];
 
@@ -595,7 +595,7 @@ let fronthallwayKnockId = null;
 const LIVINGROOM_CHANNELS = ['channel-1', 'channel-2', 'channel-3', 'channel-4'];
 const LIVINGROOM_CHANNEL_TIPS = [
     'channel one: the static. somewhere inside, a face you almost recognize.',
-    'channel two: an empty room you have stood in before. somebody is still in the doorway.',
+    'channel two: an empty room you have stood in before. the doorway is still full of someone you remember.',
     'channel three: a hand reaching out of the screen, slow as memory.',
     'channel four: a small bouncing creature, very pleased with itself.'
 ];

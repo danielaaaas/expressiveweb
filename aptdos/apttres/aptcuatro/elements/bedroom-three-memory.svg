@@ -1,0 +1,489 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" shape-rendering="crispEdges">
+  <title>Bedroom three memory fragment (apartment four) - emotionally unfinished</title>
+  <desc>Looking into the corner of a small, freshly-moved-into bedroom: a bare overhead bulb on a cord casts a fixed warm pool over a single bed against the right wall. The bed has a smooth off-white duvet, a single pillow at the head, and a small folded sage throw at the foot. Where the nightstand would be, a sealed cardboard moving box stands in service, with a small water glass placed on top. A leaning mirror rests on the floor against the cream wall; its tiny reflection holds the room a little too crisply. A bare nail and a single washi-taped photo are the only marks on the wall. By the window, a small black folding chair holds a stack of bedsheets still in plastic wrap. The window has a curtain rod with bare hooks on the left, and only a single sheer panel hung on the right. Beyond, a sky that has not changed for hours. Nothing animates.</desc>
+
+  <defs>
+    <linearGradient id="b34Wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#ede5d6"/>
+      <stop offset="60%"  stop-color="#dcd2bc"/>
+      <stop offset="100%" stop-color="#b8ac96"/>
+    </linearGradient>
+    <linearGradient id="b34Floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#c4b496"/>
+      <stop offset="100%" stop-color="#7a6a52"/>
+    </linearGradient>
+
+    <linearGradient id="b34Sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#cad4dc"/>
+      <stop offset="100%" stop-color="#8896a0"/>
+    </linearGradient>
+    <linearGradient id="b34Sheer" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f4eddc" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#c8c0a8" stop-opacity="0.65"/>
+    </linearGradient>
+
+    <linearGradient id="b34BedFrame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#b8a888"/>
+      <stop offset="100%" stop-color="#7a6c54"/>
+    </linearGradient>
+    <linearGradient id="b34Duvet" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f8f2e6"/>
+      <stop offset="100%" stop-color="#dcd2bc"/>
+    </linearGradient>
+    <linearGradient id="b34Pillow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f0e8d8"/>
+      <stop offset="100%" stop-color="#c8c0ac"/>
+    </linearGradient>
+    <linearGradient id="b34Throw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#b8c4b8"/>
+      <stop offset="100%" stop-color="#788878"/>
+    </linearGradient>
+
+    <linearGradient id="b34Box" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#d4b88c"/>
+      <stop offset="100%" stop-color="#9a7a52"/>
+    </linearGradient>
+    <linearGradient id="b34Tape" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#ecdaa8"/>
+      <stop offset="100%" stop-color="#b89c64"/>
+    </linearGradient>
+
+    <linearGradient id="b34MirrorFrame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#a8987c"/>
+      <stop offset="100%" stop-color="#5a4c34"/>
+    </linearGradient>
+    <linearGradient id="b34MirrorGlass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#e0d8c4"/>
+      <stop offset="100%" stop-color="#a8a08c"/>
+    </linearGradient>
+
+    <linearGradient id="b34Glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#e8eef0" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#aab4b8" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <linearGradient id="b34ChairMetal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#3a3a40"/>
+      <stop offset="100%" stop-color="#0e0e14"/>
+    </linearGradient>
+
+    <linearGradient id="b34Plastic" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#f0ecdc" stop-opacity="0.42"/>
+      <stop offset="40%"  stop-color="#ffffff" stop-opacity="0.30"/>
+      <stop offset="100%" stop-color="#dcd6c4" stop-opacity="0.42"/>
+    </linearGradient>
+
+    <radialGradient id="b34BulbPool" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#fce8b8" stop-opacity="0.32"/>
+      <stop offset="55%"  stop-color="#e8c890" stop-opacity="0.10"/>
+      <stop offset="92%"  stop-color="#e8c890" stop-opacity="0.03"/>
+      <stop offset="100%" stop-color="#e8c890" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="b34BulbHalo" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#fff4d4" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#fff4d4" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="b34SidesL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#22242a" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#22242a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="b34SidesR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%"   stop-color="#22242a" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#22242a" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="b34Vignette" cx="50%" cy="55%" r="72%">
+      <stop offset="58%"  stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1a1c20" stop-opacity="0.40"/>
+    </radialGradient>
+
+    <clipPath id="b34WindowClip">
+      <rect x="22" y="46" width="98" height="116"/>
+    </clipPath>
+
+    <clipPath id="b34MirrorClip">
+      <polygon points="190,98 226,94 228,202 192,204"/>
+    </clipPath>
+  </defs>
+
+  <!-- ============= WALL ============= -->
+  <rect width="480" height="320" fill="url(#b34Wall)"/>
+
+  <!-- ceiling line -->
+  <rect x="0" y="0" width="480" height="2" fill="#7a6c54" opacity="0.42" pointer-events="none"/>
+
+  <!-- subtle picture rail (only across the bare wall area, NOT over the window) -->
+  <rect x="140" y="72" width="288" height="1" fill="#a89878" opacity="0.32" pointer-events="none"/>
+
+  <!-- a single bare nail in the upper wall (reminder of unhung art) -->
+  <g id="b34-nail-art" pointer-events="none">
+    <rect x="196" y="80" width="2" height="4" fill="#3a3026"/>
+    <rect x="195" y="84" width="4" height="1" fill="#1e160a" opacity="0.65"/>
+  </g>
+
+  <!-- a single small washi-taped photo (only thing actually on the wall) -->
+  <g id="b34-photo-art" pointer-events="none">
+    <!-- mint washi tape strip across the top of the photo -->
+    <rect x="226" y="98" width="22" height="4" fill="#b4d4be" opacity="0.92"/>
+    <rect x="226" y="98" width="22" height="1" fill="#dcebde" opacity="0.6"/>
+    <!-- photo card -->
+    <rect x="228" y="102" width="18" height="22" fill="#f4eedc"/>
+    <rect x="228" y="102" width="18" height="22" fill="none" stroke="#9a8a6c" stroke-width="0.6"/>
+    <!-- pixel-tiny scene inside the photo -->
+    <rect x="230" y="104" width="14" height="10" fill="#a4b8c4"/>
+    <rect x="230" y="114" width="14" height="8"  fill="#c4b48c"/>
+    <rect x="234" y="116" width="2"  height="6"  fill="#7a6c54"/>
+    <rect x="238" y="116" width="3"  height="6"  fill="#7a6c54"/>
+  </g>
+
+  <!-- ============= WINDOW (left) ============= -->
+  <g id="b34-window-art">
+    <!-- frame -->
+    <rect x="20" y="44" width="102" height="120" fill="#a89878"/>
+    <rect x="22" y="46" width="98"  height="116" fill="url(#b34Sky)"/>
+    <!-- two still wisps of cloud, never moving -->
+    <g pointer-events="none" clip-path="url(#b34WindowClip)">
+      <ellipse cx="58"  cy="88"  rx="14" ry="3" fill="#e0e6ec" opacity="0.78"/>
+      <ellipse cx="92"  cy="124" rx="10" ry="2" fill="#d4dce4" opacity="0.62"/>
+    </g>
+    <!-- mullion cross -->
+    <rect x="68" y="46" width="2" height="116" fill="#a89878"/>
+    <rect x="22" y="102" width="98" height="2" fill="#a89878"/>
+    <!-- inner stop -->
+    <rect x="22" y="46" width="98" height="116" fill="none" stroke="#7a6a52" stroke-width="1"/>
+    <!-- sill -->
+    <rect x="14" y="164" width="116" height="6" fill="#9a8868"/>
+    <rect x="14" y="170" width="116" height="2" fill="#5a4a30"/>
+
+    <!-- bare curtain rod -->
+    <rect x="6"  y="36" width="130" height="2" fill="#7a6a52"/>
+    <rect x="2"  y="34" width="6"   height="6" fill="#5a4a30"/>
+    <rect x="132" y="34" width="6"  height="6" fill="#5a4a30"/>
+
+    <!-- exposed hooks on the LEFT half (no curtain hangs from them) -->
+    <g id="b34-hooks-art" pointer-events="none">
+      <rect x="22"  y="38" width="2" height="5" fill="#5a4a30"/>
+      <rect x="22"  y="43" width="4" height="1" fill="#5a4a30"/>
+      <rect x="44"  y="38" width="2" height="5" fill="#5a4a30"/>
+      <rect x="44"  y="43" width="4" height="1" fill="#5a4a30"/>
+      <rect x="66"  y="38" width="2" height="5" fill="#5a4a30"/>
+      <rect x="66"  y="43" width="4" height="1" fill="#5a4a30"/>
+      <rect x="88"  y="38" width="2" height="5" fill="#5a4a30"/>
+      <rect x="88"  y="43" width="4" height="1" fill="#5a4a30"/>
+    </g>
+
+    <!-- a single limp sheer panel hung only on the right side -->
+    <g id="b34-curtain-art" pointer-events="none">
+      <rect x="100" y="40" width="34" height="124" fill="url(#b34Sheer)"/>
+      <!-- soft folds -->
+      <rect x="106" y="40" width="1" height="124" fill="#9a8e74" opacity="0.32"/>
+      <rect x="116" y="40" width="1" height="124" fill="#9a8e74" opacity="0.28"/>
+      <rect x="126" y="40" width="1" height="124" fill="#9a8e74" opacity="0.24"/>
+      <!-- two rings holding it up -->
+      <circle cx="110" cy="40" r="2" fill="none" stroke="#5a4a30" stroke-width="1"/>
+      <circle cx="124" cy="40" r="2" fill="none" stroke="#5a4a30" stroke-width="1"/>
+    </g>
+  </g>
+
+  <!-- ============= FLOOR ============= -->
+  <rect y="194" width="480" height="126" fill="url(#b34Floor)"/>
+  <rect y="194" width="480" height="2"   fill="#5a4a30" opacity="0.58" pointer-events="none"/>
+
+  <!-- a few faint floorboard seams -->
+  <g pointer-events="none" opacity="0.30">
+    <rect x="0" y="218" width="480" height="1" fill="#5a4a30"/>
+    <rect x="0" y="244" width="480" height="1" fill="#5a4a30"/>
+    <rect x="0" y="270" width="480" height="1" fill="#5a4a30"/>
+    <rect x="0" y="296" width="480" height="1" fill="#5a4a30"/>
+  </g>
+
+  <!-- ============= SOFT BULB POOL OVER BED (sits on wall/floor, behind everything else) ============= -->
+  <ellipse cx="380" cy="140" rx="96" ry="68" fill="url(#b34BulbPool)" pointer-events="none"/>
+
+  <!-- ============= LEANING MIRROR (against wall, slight tilt) ============= -->
+  <g id="b34-mirror-art" pointer-events="none">
+    <!-- floor shadow under mirror foot -->
+    <ellipse cx="208" cy="212" rx="28" ry="3" fill="#1a1610" opacity="0.45"/>
+    <!-- frame -->
+    <polygon points="184,90 232,86 234,210 186,212" fill="url(#b34MirrorFrame)"/>
+    <polygon points="184,90 232,86 234,210 186,212" fill="none" stroke="#3a2e1c" stroke-width="1"/>
+    <!-- glass -->
+    <polygon points="190,98 226,94 228,202 192,204" fill="url(#b34MirrorGlass)"/>
+    <polygon points="190,98 226,94 228,202 192,204" fill="none" stroke="#5a4c34" stroke-width="0.6" opacity="0.7"/>
+
+    <!-- pixel-tiny too-accurate reflection of the bed/box/bulb side of the room -->
+    <g id="b34-reflection-art" clip-path="url(#b34MirrorClip)">
+      <!-- ceiling line -->
+      <rect x="190" y="100" width="38" height="1" fill="#7a6c54" opacity="0.55"/>
+      <!-- floor line -->
+      <rect x="190" y="180" width="38" height="1" fill="#5a4a30" opacity="0.65"/>
+      <!-- bulb cord -->
+      <rect x="216" y="100" width="1" height="20" fill="#1a160c"/>
+      <ellipse cx="216" cy="124" rx="2.4" ry="2.6" fill="#fff4c4"/>
+      <!-- bulb micro-pool -->
+      <ellipse cx="216" cy="138" rx="10" ry="6" fill="#fce8b8" opacity="0.32"/>
+      <!-- bed silhouette -->
+      <rect x="200" y="158" width="26" height="14" fill="#dcd2bc"/>
+      <rect x="200" y="158" width="6"  height="6"  fill="#e8e0d0"/>
+      <rect x="220" y="160" width="6"  height="2"  fill="#9aac9a"/>
+      <rect x="200" y="172" width="26" height="8"  fill="#9a8a72"/>
+      <!-- box-as-nightstand silhouette -->
+      <rect x="194" y="166" width="6"  height="14" fill="#b89868"/>
+      <rect x="194" y="170" width="6"  height="1"  fill="#dcc890"/>
+      <!-- a tiny crisp specular highlight running down the glass -->
+      <rect x="195" y="100" width="1" height="98" fill="#ffffff" opacity="0.20"/>
+    </g>
+  </g>
+
+  <!-- ============= BARE BULB ON CORD (above the bed) ============= -->
+  <g id="b34-bulb-art" pointer-events="none">
+    <!-- ceiling cap -->
+    <rect x="372" y="2" width="14" height="3" fill="#7a6c54"/>
+    <rect x="372" y="5" width="14" height="1" fill="#3a2e1c"/>
+    <!-- cord -->
+    <rect x="378" y="6" width="2" height="40" fill="#1a160c"/>
+    <!-- bulb halo (wide soft glow) -->
+    <circle cx="379" cy="54" r="14" fill="url(#b34BulbHalo)"/>
+    <!-- screw collar -->
+    <rect x="375" y="46" width="8" height="2" fill="#a8987c"/>
+    <rect x="376" y="44" width="6" height="2" fill="#8a7c5c"/>
+    <!-- bulb body -->
+    <ellipse cx="379" cy="54" rx="6" ry="7" fill="#fff4c4"/>
+    <ellipse cx="379" cy="54" rx="6" ry="7" fill="none" stroke="#caa45c" stroke-width="0.6"/>
+    <!-- filament -->
+    <path d="M376,54 Q379,50 382,54 Q379,58 376,54 Z" fill="#f4c460" opacity="0.85"/>
+    <!-- tiny specular highlight on bulb -->
+    <ellipse cx="377" cy="51" rx="1.4" ry="1.4" fill="#ffffff" opacity="0.85"/>
+  </g>
+
+  <!-- ============= CARDBOARD BOX (used as nightstand, beside bed) ============= -->
+  <g id="b34-box-art">
+    <!-- floor shadow under box -->
+    <ellipse cx="270" cy="288" rx="34" ry="3" fill="#1a1610" opacity="0.50"/>
+    <!-- box body -->
+    <rect x="240" y="222" width="62" height="64" fill="url(#b34Box)"/>
+    <rect x="240" y="222" width="62" height="64" fill="none" stroke="#5a4022" stroke-width="1"/>
+    <!-- top edge -->
+    <rect x="240" y="222" width="62" height="2" fill="#9a7a52"/>
+    <rect x="240" y="234" width="62" height="1" fill="#7a5a36" opacity="0.7"/>
+    <!-- center seam -->
+    <rect x="270" y="234" width="1" height="52" fill="#8a6840" opacity="0.60"/>
+    <!-- packing tape across the top -->
+    <g id="b34-tape-art" pointer-events="none">
+      <rect x="240" y="226" width="62" height="6" fill="url(#b34Tape)" opacity="0.92"/>
+      <rect x="240" y="226" width="62" height="1" fill="#fcefb8" opacity="0.6"/>
+      <rect x="240" y="231" width="62" height="1" fill="#9a7c44" opacity="0.55"/>
+    </g>
+    <!-- shipping label sticker -->
+    <rect x="248" y="248" width="22" height="14" fill="#f4ecd8"/>
+    <rect x="248" y="248" width="22" height="14" fill="none" stroke="#7a6c54" stroke-width="0.5"/>
+    <rect x="250" y="251" width="14" height="1" fill="#5a4a30"/>
+    <rect x="250" y="254" width="18" height="1" fill="#5a4a30" opacity="0.8"/>
+    <rect x="250" y="257" width="12" height="1" fill="#5a4a30" opacity="0.7"/>
+    <!-- one dark "FRAGILE" stripe lower-right -->
+    <rect x="282" y="276" width="16" height="3" fill="#3a2e1c"/>
+    <rect x="282" y="276" width="16" height="1" fill="#7a6c54" opacity="0.5"/>
+  </g>
+
+  <!-- ============= WATER GLASS ON THE BOX ============= -->
+  <g id="b34-glass-art" pointer-events="none">
+    <!-- ring under glass -->
+    <ellipse cx="266" cy="222" rx="9" ry="1.4" fill="#7a6c54" opacity="0.5"/>
+    <!-- glass body -->
+    <rect x="258" y="206" width="16" height="16" fill="url(#b34Glass)"/>
+    <rect x="258" y="206" width="16" height="16" fill="none" stroke="#5a6c70" stroke-width="0.6" opacity="0.7"/>
+    <!-- water inside -->
+    <rect x="259" y="212" width="14" height="9" fill="#b4c8cc" opacity="0.78"/>
+    <!-- rim line -->
+    <ellipse cx="266" cy="206" rx="8" ry="1.2" fill="#dde6e8"/>
+    <ellipse cx="266" cy="206" rx="8" ry="1.2" fill="none" stroke="#5a6c70" stroke-width="0.5"/>
+    <!-- highlight -->
+    <rect x="260" y="208" width="1" height="12" fill="#ffffff" opacity="0.55"/>
+  </g>
+
+  <!-- ============= BED (single, against right wall) ============= -->
+  <g id="b34-bed-art">
+    <!-- shadow on floor under bed -->
+    <ellipse cx="384" cy="290" rx="92" ry="4" fill="#1a1610" opacity="0.48"/>
+    <!-- frame back panel (against the wall, behind pillow) -->
+    <rect x="304" y="158" width="160" height="22" fill="url(#b34BedFrame)"/>
+    <rect x="304" y="158" width="160" height="2"  fill="#a89878"/>
+    <rect x="304" y="178" width="160" height="2"  fill="#5a4a30"/>
+    <!-- mattress / duvet -->
+    <rect x="306" y="180" width="156" height="34" fill="url(#b34Duvet)"/>
+    <rect x="306" y="180" width="156" height="2"  fill="#ffffff" opacity="0.58"/>
+    <rect x="306" y="212" width="156" height="2"  fill="#a89878" opacity="0.65"/>
+    <!-- soft duvet folds -->
+    <g pointer-events="none" opacity="0.32">
+      <rect x="320" y="184" width="2" height="26" fill="#c8bea4"/>
+      <rect x="350" y="184" width="2" height="26" fill="#c8bea4"/>
+      <rect x="380" y="184" width="2" height="26" fill="#c8bea4"/>
+      <rect x="410" y="184" width="2" height="26" fill="#c8bea4"/>
+      <rect x="440" y="184" width="2" height="26" fill="#c8bea4"/>
+    </g>
+    <!-- pillow at left (head) -->
+    <g id="b34-pillow-art" pointer-events="none">
+      <rect x="312" y="172" width="64" height="22" fill="url(#b34Pillow)"/>
+      <rect x="312" y="172" width="64" height="2"  fill="#fcf6e8"/>
+      <rect x="312" y="192" width="64" height="2"  fill="#9a8a72" opacity="0.6"/>
+      <rect x="312" y="172" width="64" height="22" fill="none" stroke="#7a6c54" stroke-width="0.6" opacity="0.65"/>
+      <rect x="343" y="174" width="1"  height="18" fill="#9a8a72" opacity="0.4"/>
+    </g>
+    <!-- folded throw at the foot (right side) -->
+    <g id="b34-blanket-art" pointer-events="none">
+      <rect x="394" y="194" width="62" height="20" fill="url(#b34Throw)"/>
+      <rect x="394" y="194" width="62" height="2"  fill="#cad4ca"/>
+      <rect x="394" y="200" width="62" height="1"  fill="#5a6e5a" opacity="0.55"/>
+      <rect x="394" y="208" width="62" height="1"  fill="#5a6e5a" opacity="0.55"/>
+      <rect x="394" y="194" width="62" height="20" fill="none" stroke="#3e4e3e" stroke-width="0.6"/>
+    </g>
+    <!-- bed frame skirt below mattress -->
+    <rect x="304" y="214" width="160" height="64" fill="url(#b34BedFrame)"/>
+    <rect x="304" y="214" width="160" height="2"  fill="#a89878"/>
+    <rect x="304" y="276" width="160" height="2"  fill="#3a2e1c" opacity="0.7"/>
+    <!-- subtle wood grain -->
+    <g pointer-events="none" opacity="0.30">
+      <rect x="316" y="220" width="136" height="1" fill="#8a7a5c"/>
+      <rect x="316" y="240" width="136" height="1" fill="#8a7a5c"/>
+      <rect x="316" y="260" width="136" height="1" fill="#8a7a5c"/>
+    </g>
+    <!-- legs -->
+    <rect x="306" y="278" width="8" height="14" fill="#5a4a30"/>
+    <rect x="454" y="278" width="8" height="14" fill="#5a4a30"/>
+    <rect x="306" y="290" width="8" height="2"  fill="#1e160a"/>
+    <rect x="454" y="290" width="8" height="2"  fill="#1e160a"/>
+  </g>
+
+  <!-- ============= FOLDING CHAIR (near window) ============= -->
+  <g id="b34-chair-art">
+    <!-- floor shadow -->
+    <ellipse cx="60" cy="290" rx="42" ry="3" fill="#1a1610" opacity="0.46"/>
+    <!-- back rest -->
+    <rect x="24" y="184" width="68" height="6" fill="url(#b34ChairMetal)"/>
+    <rect x="24" y="190" width="2"  height="6" fill="url(#b34ChairMetal)"/>
+    <rect x="90" y="190" width="2"  height="6" fill="url(#b34ChairMetal)"/>
+    <!-- seat slab -->
+    <rect x="22" y="206" width="72" height="6" fill="#5a5a64"/>
+    <rect x="22" y="206" width="72" height="1" fill="#7a7a84"/>
+    <rect x="22" y="211" width="72" height="1" fill="#0e0e14" opacity="0.85"/>
+    <!-- legs -->
+    <rect x="26" y="212" width="4" height="78" fill="url(#b34ChairMetal)"/>
+    <rect x="86" y="212" width="4" height="78" fill="url(#b34ChairMetal)"/>
+    <!-- cross brace -->
+    <rect x="26" y="252" width="64" height="2" fill="url(#b34ChairMetal)" opacity="0.85"/>
+    <!-- foot caps -->
+    <rect x="24" y="288" width="8" height="2" fill="#0e0e14"/>
+    <rect x="84" y="288" width="8" height="2" fill="#0e0e14"/>
+  </g>
+
+  <!-- ============= PLASTIC-WRAPPED FOLDED SHEETS ON CHAIR ============= -->
+  <g id="b34-sheets-art">
+    <!-- sheet stack body -->
+    <rect x="26" y="170" width="64" height="14" fill="#f0eadc"/>
+    <rect x="26" y="170" width="64" height="2"  fill="#fcf6e8"/>
+    <rect x="26" y="182" width="64" height="2"  fill="#a89878" opacity="0.55"/>
+    <!-- folds -->
+    <rect x="26" y="174" width="64" height="1" fill="#c8bea4" opacity="0.6"/>
+    <rect x="26" y="178" width="64" height="1" fill="#c8bea4" opacity="0.55"/>
+    <!-- plastic-wrap shimmer -->
+    <rect x="26" y="170" width="64" height="14" fill="url(#b34Plastic)"/>
+    <rect x="26" y="170" width="64" height="14" fill="none" stroke="#9a8e74" stroke-width="0.5" opacity="0.55"/>
+    <!-- specular highlight streaks -->
+    <rect x="36" y="171" width="2" height="12" fill="#ffffff" opacity="0.45"/>
+    <rect x="40" y="171" width="1" height="12" fill="#ffffff" opacity="0.32"/>
+    <!-- packaging label -->
+    <rect x="64" y="174" width="14" height="6" fill="#dceae0"/>
+    <rect x="65" y="176" width="12" height="1" fill="#5a6e5a"/>
+    <rect x="65" y="178" width="9"  height="1" fill="#5a6e5a" opacity="0.7"/>
+  </g>
+
+  <!-- ============= DRIFTING DUST (very slow breath, lucid-memory motion) ============= -->
+  <g pointer-events="none" opacity="0.40">
+    <ellipse cx="138" cy="106" rx="1.4" ry="1.4" fill="#fce8c8">
+      <animate attributeName="cy" values="106;102;106" dur="38s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.82;1;0.82" dur="38s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="276" cy="84"  rx="1.2" ry="1.2" fill="#fce8c8">
+      <animate attributeName="cy" values="84;88;84" dur="44s" begin="-7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.80;1;0.80" dur="44s" begin="-7s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="338" cy="120" rx="1.4" ry="1.4" fill="#fce8c8">
+      <animate attributeName="cy" values="120;116;120" dur="36s" begin="-15s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="36s" begin="-15s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="430" cy="98"  rx="1.2" ry="1.2" fill="#fce8c8">
+      <animate attributeName="cy" values="98;101;98" dur="50s" begin="-21s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="50s" begin="-21s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="120" cy="232" rx="1.2" ry="1.2" fill="#fce8c8">
+      <animate attributeName="cy" values="232;229;232" dur="42s" begin="-30s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.82;1;0.82" dur="42s" begin="-30s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- ============= LUCID MEMORY LAYER (warm bleed + breathing haze) ============= -->
+  <defs>
+    <radialGradient id="b34WarmBleed" cx="85%" cy="68%" r="55%">
+      <stop offset="0%"   stop-color="#fce0a8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#fce0a8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="b34Haze" cx="50%" cy="50%" r="70%">
+      <stop offset="0%"   stop-color="#fff4d4" stop-opacity="0.06"/>
+      <stop offset="60%"  stop-color="#fff4d4" stop-opacity="0.025"/>
+      <stop offset="100%" stop-color="#fff4d4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="480" height="320" fill="url(#b34WarmBleed)" pointer-events="none">
+    <animate attributeName="opacity" values="0.72;1;0.72" dur="22s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="0" y="0" width="480" height="320" fill="url(#b34Haze)" pointer-events="none">
+    <animate attributeName="opacity" values="0.55;1;0.55" dur="19s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ============= EDGE DARKENING + OUTER VIGNETTE ============= -->
+  <rect x="0"   y="0" width="38" height="320" fill="url(#b34SidesL)" pointer-events="none"/>
+  <rect x="442" y="0" width="38" height="320" fill="url(#b34SidesR)" pointer-events="none"/>
+  <rect x="0" y="0" width="480" height="320" fill="url(#b34Vignette)" pointer-events="none"/>
+
+  <!-- ============= INTERACTIVE HOTSPOTS (placed last, transparent) -->
+  <!-- order matters: more specific hotspots are placed AFTER broader ones so they receive clicks -->
+  <g id="b34-hotspots" fill="transparent" stroke="none">
+    <!-- broad areas first -->
+    <rect id="hit-wall"        x="124" y="2"   width="160" height="70"/>
+    <rect id="hit-floor"       x="100" y="290" width="142" height="30"/>
+
+    <!-- window region -->
+    <rect id="hit-window"      x="20"  y="42"  width="80"  height="124"/>
+    <rect id="hit-curtain"     x="100" y="38"  width="36"  height="128"/>
+    <rect id="hit-hooks"       x="14"  y="34"  width="86"  height="10"/>
+    <rect id="hit-sill"        x="14"  y="164" width="116" height="8"/>
+
+    <!-- chair + sheets stack -->
+    <rect id="hit-chair"       x="20"  y="200" width="78"  height="92"/>
+    <rect id="hit-sheets"      x="22"  y="166" width="72"  height="20"/>
+
+    <!-- bed (broad first) -->
+    <rect id="hit-bed"         x="304" y="170" width="162" height="116"/>
+    <rect id="hit-pillow"      x="310" y="170" width="68"  height="26"/>
+    <rect id="hit-blanket"     x="392" y="192" width="68"  height="24"/>
+    <rect id="hit-bed-frame"   x="304" y="214" width="162" height="68"/>
+
+    <!-- bulb -->
+    <rect id="hit-cord"        x="372" y="2"   width="14"  height="40"/>
+    <rect id="hit-bulb"        x="370" y="42"  width="20"  height="22"/>
+
+    <!-- box-as-nightstand stack -->
+    <rect id="hit-box"         x="240" y="222" width="62"  height="68"/>
+    <rect id="hit-tape"        x="240" y="222" width="62"  height="14"/>
+    <rect id="hit-glass"       x="254" y="202" width="24"  height="24"/>
+
+    <!-- mirror (drawn AFTER wall so wall doesn't intercept; nail/photo come even later) -->
+    <rect id="hit-mirror"      x="184" y="86"  width="52"  height="128"/>
+    <rect id="hit-reflection"  x="190" y="98"  width="38"  height="106"/>
+
+    <!-- smallest, most-specific items LAST -->
+    <rect id="hit-nail"        x="190" y="78"  width="14"  height="12"/>
+    <rect id="hit-photo"       x="222" y="96"  width="32"  height="32"/>
+  </g>
+</svg>

@@ -1904,3 +1904,35 @@ svg {
         flex-direction: column;
     }
 }
+
+/* ============================================================
+   apartment three: final atmospheric pass.
+   faded warmth - the gentlest, dust-cream outer glow that holds
+   the memory window without insisting on it. tip text gets the
+   faintest, most diffuse amber halo, slowest transition.
+   ============================================================ */
+
+.bedroom-one-memory-stage,
+.bedroom-two-memory-stage,
+.bedroom-three-memory-stage,
+.bathroom-memory-stage,
+.living-kitchen-memory-stage {
+    border-color: rgba(220, 208, 184, 0.38) !important;
+    border-radius: 6px;
+    box-shadow:
+        0 0 0 1px rgba(38, 32, 24, 0.65),
+        0 0 34px rgba(220, 196, 148, 0.13),
+        0 22px 64px rgba(20, 16, 12, 0.55),
+        inset 0 0 80px rgba(220, 208, 184, 0.06),
+        inset 0 0 28px rgba(38, 32, 26, 0.32) !important;
+    transition: box-shadow 1600ms ease-in-out;
+}
+
+.bedroom-one-memory-tip,
+.bedroom-two-memory-tip,
+.bedroom-three-memory-tip,
+.bathroom-memory-tip,
+.living-kitchen-memory-tip {
+    text-shadow: 0 0 6px rgba(220, 196, 148, 0.18);
+    transition: opacity 420ms ease-in-out, color 720ms ease-in-out, text-shadow 720ms ease-in-out;
+}

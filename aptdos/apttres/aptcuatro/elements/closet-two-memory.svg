@@ -1,0 +1,536 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" shape-rendering="crispEdges">
+  <title>Closet two memory fragment (apartment four) - preserved utility closet</title>
+  <desc>Looking straight into a tightly framed white-painted utility closet. Three shelves stack from top to bottom and a step stool sits on the floor between two matching pails. Every shelf is laid out in perfect left-right symmetry across the center: four matching apothecary jars on the top, two pairs of spray bottles flanking a folded towel stack on the middle, two large bottles flanking a four-pack of paper towels on the bottom. Items are clean. The light is even. Nothing is in active use. Nothing animates.</desc>
+
+  <defs>
+    <linearGradient id="co42Wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#e6e8e6"/>
+      <stop offset="65%"  stop-color="#cdd0cc"/>
+      <stop offset="100%" stop-color="#a8acaa"/>
+    </linearGradient>
+    <linearGradient id="co42ShelfPaint" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#ecebe6"/>
+      <stop offset="100%" stop-color="#9c9c94"/>
+    </linearGradient>
+
+    <linearGradient id="co42Glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#dde6ea" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#a4b2bc" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="co42JarLid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#bcc4cc"/>
+      <stop offset="100%" stop-color="#5a6068"/>
+    </linearGradient>
+
+    <linearGradient id="co42Spray1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#aebcc4"/>
+      <stop offset="100%" stop-color="#5a6c78"/>
+    </linearGradient>
+    <linearGradient id="co42Spray2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#d4c8b0"/>
+      <stop offset="100%" stop-color="#7a6e54"/>
+    </linearGradient>
+
+    <linearGradient id="co42Towel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f4eedc"/>
+      <stop offset="100%" stop-color="#b8aa8c"/>
+    </linearGradient>
+
+    <linearGradient id="co42Paper" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#fcf6e8"/>
+      <stop offset="100%" stop-color="#c8c0a8"/>
+    </linearGradient>
+
+    <linearGradient id="co42BigBottle" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#c4bca8"/>
+      <stop offset="100%" stop-color="#7a705a"/>
+    </linearGradient>
+
+    <linearGradient id="co42Stool" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#ecebe6"/>
+      <stop offset="100%" stop-color="#a8a89e"/>
+    </linearGradient>
+
+    <linearGradient id="co42Bucket" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#c4b8a0"/>
+      <stop offset="100%" stop-color="#7a6e54"/>
+    </linearGradient>
+
+    <radialGradient id="co42Light" cx="50%" cy="0%" r="65%">
+      <stop offset="0%"   stop-color="#fff8e4" stop-opacity="0.28"/>
+      <stop offset="55%"  stop-color="#f8e8c4" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#f8e8c4" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="co42SidesL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#22242a" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#22242a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="co42SidesR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%"   stop-color="#22242a" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#22242a" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="co42Vignette" cx="50%" cy="55%" r="72%">
+      <stop offset="58%"  stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1a1c20" stop-opacity="0.40"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ============= WALL ============= -->
+  <rect width="480" height="320" fill="url(#co42Wall)"/>
+
+  <!-- ceiling shadow strip -->
+  <rect x="0" y="0" width="480" height="6" fill="#7a8080" opacity="0.40" pointer-events="none"/>
+  <rect x="0" y="6" width="480" height="1" fill="#3a4044" opacity="0.5" pointer-events="none"/>
+
+  <!-- side closet trim (cool grey) -->
+  <rect x="0"   y="0" width="14" height="320" fill="#9aa0a0" opacity="0.55" pointer-events="none"/>
+  <rect x="466" y="0" width="14" height="320" fill="#9aa0a0" opacity="0.55" pointer-events="none"/>
+  <rect x="14"  y="0" width="1"  height="320" fill="#5a6064" opacity="0.55" pointer-events="none"/>
+  <rect x="465" y="0" width="1"  height="320" fill="#5a6064" opacity="0.55" pointer-events="none"/>
+
+  <!-- soft, even overhead light -->
+  <rect x="0" y="0" width="480" height="200" fill="url(#co42Light)" pointer-events="none"/>
+
+  <!-- subtle vertical center axis (the wall seam things mirror across) -->
+  <rect x="240" y="6" width="0.5" height="248" fill="#9aa0a0" opacity="0.18" pointer-events="none"/>
+
+  <!-- ============= TOP SHELF BOARD ============= -->
+  <g id="co42-top-shelf-art" pointer-events="none">
+    <rect x="16" y="80" width="448" height="8" fill="url(#co42ShelfPaint)"/>
+    <rect x="16" y="80" width="448" height="1" fill="#fcfcf6"/>
+    <rect x="16" y="87" width="448" height="1" fill="#5a6064"/>
+    <rect x="16" y="88" width="448" height="3" fill="#1a1c20" opacity="0.30"/>
+  </g>
+
+  <!-- ============= TOP SHELF: 4 matching apothecary jars (mirrored across x=240) ============= -->
+  <!-- jar centers: 78, 138, 342, 402 -->
+
+  <g id="co42-jar-1L-art">
+    <rect x="58"  y="78" width="40" height="2" fill="#1a1c20" opacity="0.28"/>
+    <rect x="60"  y="44" width="36" height="34" fill="url(#co42Glass)"/>
+    <rect x="60"  y="44" width="36" height="34" fill="none" stroke="#5a6068" stroke-width="0.6" opacity="0.7"/>
+    <!-- contents (cotton-style) -->
+    <rect x="62"  y="56" width="32" height="20" fill="#f0eee4" opacity="0.85"/>
+    <rect x="64"  y="58" width="6"  height="6"  fill="#ffffff" opacity="0.6"/>
+    <rect x="74"  y="62" width="6"  height="6"  fill="#ffffff" opacity="0.6"/>
+    <rect x="84"  y="58" width="6"  height="6"  fill="#ffffff" opacity="0.6"/>
+    <!-- lid -->
+    <rect x="58"  y="40" width="40" height="6" fill="url(#co42JarLid)"/>
+    <rect x="58"  y="40" width="40" height="1" fill="#dce0e4"/>
+    <rect x="58"  y="45" width="40" height="1" fill="#3a4044" opacity="0.7"/>
+    <!-- specular highlight -->
+    <rect x="62"  y="48" width="1" height="26" fill="#ffffff" opacity="0.45"/>
+  </g>
+
+  <g id="co42-jar-2L-art">
+    <rect x="118" y="78" width="40" height="2" fill="#1a1c20" opacity="0.28"/>
+    <rect x="120" y="44" width="36" height="34" fill="url(#co42Glass)"/>
+    <rect x="120" y="44" width="36" height="34" fill="none" stroke="#5a6068" stroke-width="0.6" opacity="0.7"/>
+    <!-- contents (q-tip style sticks) -->
+    <rect x="122" y="56" width="32" height="20" fill="#f4eedc" opacity="0.85"/>
+    <g pointer-events="none" opacity="0.85">
+      <rect x="124" y="58" width="1" height="14" fill="#9a8c70"/>
+      <rect x="128" y="58" width="1" height="14" fill="#9a8c70"/>
+      <rect x="132" y="58" width="1" height="14" fill="#9a8c70"/>
+      <rect x="136" y="58" width="1" height="14" fill="#9a8c70"/>
+      <rect x="140" y="58" width="1" height="14" fill="#9a8c70"/>
+      <rect x="144" y="58" width="1" height="14" fill="#9a8c70"/>
+      <rect x="148" y="58" width="1" height="14" fill="#9a8c70"/>
+      <rect x="152" y="58" width="1" height="14" fill="#9a8c70"/>
+    </g>
+    <!-- lid -->
+    <rect x="118" y="40" width="40" height="6" fill="url(#co42JarLid)"/>
+    <rect x="118" y="40" width="40" height="1" fill="#dce0e4"/>
+    <rect x="118" y="45" width="40" height="1" fill="#3a4044" opacity="0.7"/>
+    <rect x="122" y="48" width="1" height="26" fill="#ffffff" opacity="0.45"/>
+  </g>
+
+  <!-- right-side jars (perfect mirrors) -->
+  <g id="co42-jar-2R-art">
+    <rect x="322" y="78" width="40" height="2" fill="#1a1c20" opacity="0.28"/>
+    <rect x="324" y="44" width="36" height="34" fill="url(#co42Glass)"/>
+    <rect x="324" y="44" width="36" height="34" fill="none" stroke="#5a6068" stroke-width="0.6" opacity="0.7"/>
+    <rect x="326" y="56" width="32" height="20" fill="#f4eedc" opacity="0.85"/>
+    <g pointer-events="none" opacity="0.85">
+      <rect x="328" y="58" width="1" height="14" fill="#9a8c70"/>
+      <rect x="332" y="58" width="1" height="14" fill="#9a8c70"/>
+      <rect x="336" y="58" width="1" height="14" fill="#9a8c70"/>
+      <rect x="340" y="58" width="1" height="14" fill="#9a8c70"/>
+      <rect x="344" y="58" width="1" height="14" fill="#9a8c70"/>
+      <rect x="348" y="58" width="1" height="14" fill="#9a8c70"/>
+      <rect x="352" y="58" width="1" height="14" fill="#9a8c70"/>
+      <rect x="356" y="58" width="1" height="14" fill="#9a8c70"/>
+    </g>
+    <rect x="322" y="40" width="40" height="6" fill="url(#co42JarLid)"/>
+    <rect x="322" y="40" width="40" height="1" fill="#dce0e4"/>
+    <rect x="322" y="45" width="40" height="1" fill="#3a4044" opacity="0.7"/>
+    <rect x="326" y="48" width="1" height="26" fill="#ffffff" opacity="0.45"/>
+  </g>
+
+  <g id="co42-jar-1R-art">
+    <rect x="382" y="78" width="40" height="2" fill="#1a1c20" opacity="0.28"/>
+    <rect x="384" y="44" width="36" height="34" fill="url(#co42Glass)"/>
+    <rect x="384" y="44" width="36" height="34" fill="none" stroke="#5a6068" stroke-width="0.6" opacity="0.7"/>
+    <rect x="386" y="56" width="32" height="20" fill="#f0eee4" opacity="0.85"/>
+    <rect x="388" y="58" width="6"  height="6"  fill="#ffffff" opacity="0.6"/>
+    <rect x="398" y="62" width="6"  height="6"  fill="#ffffff" opacity="0.6"/>
+    <rect x="408" y="58" width="6"  height="6"  fill="#ffffff" opacity="0.6"/>
+    <rect x="382" y="40" width="40" height="6" fill="url(#co42JarLid)"/>
+    <rect x="382" y="40" width="40" height="1" fill="#dce0e4"/>
+    <rect x="382" y="45" width="40" height="1" fill="#3a4044" opacity="0.7"/>
+    <rect x="386" y="48" width="1" height="26" fill="#ffffff" opacity="0.45"/>
+  </g>
+
+  <!-- ============= MIDDLE SHELF BOARD ============= -->
+  <g id="co42-mid-shelf-art" pointer-events="none">
+    <rect x="16" y="164" width="448" height="8" fill="url(#co42ShelfPaint)"/>
+    <rect x="16" y="164" width="448" height="1" fill="#fcfcf6"/>
+    <rect x="16" y="171" width="448" height="1" fill="#5a6064"/>
+    <rect x="16" y="172" width="448" height="3" fill="#1a1c20" opacity="0.30"/>
+  </g>
+
+  <!-- ============= MIDDLE SHELF: 4 spray bottles flanking towel stack (mirrored across x=240) ============= -->
+  <!-- spray-1 centers: 60, 420 ; spray-2 centers: 112, 368 -->
+
+  <g id="co42-spray-1L-art">
+    <rect x="44" y="162" width="32" height="2" fill="#1a1c20" opacity="0.28"/>
+    <!-- nozzle/trigger -->
+    <rect x="46" y="100" width="14" height="6" fill="#dde2e6"/>
+    <rect x="46" y="100" width="14" height="1" fill="#fcfcf6"/>
+    <rect x="46" y="105" width="14" height="1" fill="#5a6068"/>
+    <!-- trigger handle -->
+    <rect x="60" y="106" width="6"  height="10" fill="#dde2e6"/>
+    <rect x="60" y="106" width="6"  height="1"  fill="#fcfcf6"/>
+    <rect x="60" y="115" width="6"  height="1"  fill="#5a6068"/>
+    <!-- bottle body -->
+    <rect x="46" y="116" width="28" height="46" fill="url(#co42Spray1)"/>
+    <rect x="46" y="116" width="28" height="46" fill="none" stroke="#3a4448" stroke-width="0.6" opacity="0.7"/>
+    <rect x="46" y="116" width="28" height="2"  fill="#cad6dc"/>
+    <!-- label band -->
+    <rect x="46" y="128" width="28" height="14" fill="#dde2e6"/>
+    <rect x="46" y="128" width="28" height="14" fill="none" stroke="#3a4448" stroke-width="0.5"/>
+    <rect x="48" y="131" width="24" height="1" fill="#3a4448" opacity="0.7"/>
+    <rect x="48" y="135" width="20" height="1" fill="#3a4448" opacity="0.55"/>
+    <rect x="48" y="138" width="22" height="1" fill="#3a4448" opacity="0.55"/>
+    <!-- specular -->
+    <rect x="48" y="120" width="1" height="36" fill="#ffffff" opacity="0.40"/>
+  </g>
+
+  <g id="co42-spray-2L-art">
+    <rect x="96" y="162" width="32" height="2" fill="#1a1c20" opacity="0.28"/>
+    <rect x="98" y="100" width="14" height="6" fill="#ece4cc"/>
+    <rect x="98" y="100" width="14" height="1" fill="#fcf4dc"/>
+    <rect x="98" y="105" width="14" height="1" fill="#5a4a30"/>
+    <rect x="112" y="106" width="6" height="10" fill="#ece4cc"/>
+    <rect x="112" y="106" width="6" height="1"  fill="#fcf4dc"/>
+    <rect x="112" y="115" width="6" height="1"  fill="#5a4a30"/>
+    <rect x="98" y="116" width="28" height="46" fill="url(#co42Spray2)"/>
+    <rect x="98" y="116" width="28" height="46" fill="none" stroke="#3a2e1c" stroke-width="0.6" opacity="0.7"/>
+    <rect x="98" y="116" width="28" height="2"  fill="#e0d4b4"/>
+    <rect x="98" y="128" width="28" height="14" fill="#ece4cc"/>
+    <rect x="98" y="128" width="28" height="14" fill="none" stroke="#5a4a30" stroke-width="0.5"/>
+    <rect x="100" y="131" width="24" height="1" fill="#5a4a30" opacity="0.7"/>
+    <rect x="100" y="135" width="20" height="1" fill="#5a4a30" opacity="0.55"/>
+    <rect x="100" y="138" width="22" height="1" fill="#5a4a30" opacity="0.55"/>
+    <rect x="100" y="120" width="1" height="36" fill="#ffffff" opacity="0.40"/>
+  </g>
+
+  <!-- centered towel stack -->
+  <g id="co42-towels-art">
+    <rect x="170" y="162" width="140" height="2" fill="#1a1c20" opacity="0.30"/>
+    <rect x="170" y="116" width="140" height="46" fill="url(#co42Towel)"/>
+    <rect x="170" y="116" width="140" height="46" fill="none" stroke="#7a6c54" stroke-width="0.6" opacity="0.6"/>
+    <!-- folded layer seams -->
+    <rect x="170" y="116" width="140" height="1" fill="#fcf4e0"/>
+    <rect x="170" y="125" width="140" height="1" fill="#9a8c70" opacity="0.55"/>
+    <rect x="170" y="126" width="140" height="9" fill="url(#co42Towel)"/>
+    <rect x="170" y="126" width="140" height="1" fill="#fcf4e0"/>
+    <rect x="170" y="135" width="140" height="1" fill="#9a8c70" opacity="0.55"/>
+    <rect x="170" y="136" width="140" height="9" fill="url(#co42Towel)"/>
+    <rect x="170" y="136" width="140" height="1" fill="#fcf4e0"/>
+    <rect x="170" y="145" width="140" height="1" fill="#9a8c70" opacity="0.55"/>
+    <rect x="170" y="146" width="140" height="9" fill="url(#co42Towel)"/>
+    <rect x="170" y="146" width="140" height="1" fill="#fcf4e0"/>
+    <rect x="170" y="155" width="140" height="1" fill="#9a8c70" opacity="0.55"/>
+    <!-- right-edge fold seam -->
+    <rect x="310" y="116" width="1" height="46" fill="#9a8c70" opacity="0.65"/>
+    <!-- subtle middle highlight -->
+    <rect x="172" y="118" width="1" height="42" fill="#ffffff" opacity="0.32"/>
+  </g>
+
+  <!-- right-side spray bottles (mirrors of L) -->
+  <g id="co42-spray-2R-art">
+    <rect x="352" y="162" width="32" height="2" fill="#1a1c20" opacity="0.28"/>
+    <rect x="354" y="100" width="14" height="6" fill="#ece4cc"/>
+    <rect x="354" y="100" width="14" height="1" fill="#fcf4dc"/>
+    <rect x="354" y="105" width="14" height="1" fill="#5a4a30"/>
+    <rect x="362" y="106" width="6" height="10" fill="#ece4cc"/>
+    <rect x="362" y="106" width="6" height="1"  fill="#fcf4dc"/>
+    <rect x="362" y="115" width="6" height="1"  fill="#5a4a30"/>
+    <rect x="354" y="116" width="28" height="46" fill="url(#co42Spray2)"/>
+    <rect x="354" y="116" width="28" height="46" fill="none" stroke="#3a2e1c" stroke-width="0.6" opacity="0.7"/>
+    <rect x="354" y="116" width="28" height="2"  fill="#e0d4b4"/>
+    <rect x="354" y="128" width="28" height="14" fill="#ece4cc"/>
+    <rect x="354" y="128" width="28" height="14" fill="none" stroke="#5a4a30" stroke-width="0.5"/>
+    <rect x="356" y="131" width="24" height="1" fill="#5a4a30" opacity="0.7"/>
+    <rect x="356" y="135" width="20" height="1" fill="#5a4a30" opacity="0.55"/>
+    <rect x="356" y="138" width="22" height="1" fill="#5a4a30" opacity="0.55"/>
+    <rect x="356" y="120" width="1" height="36" fill="#ffffff" opacity="0.40"/>
+  </g>
+
+  <g id="co42-spray-1R-art">
+    <rect x="404" y="162" width="32" height="2" fill="#1a1c20" opacity="0.28"/>
+    <rect x="406" y="100" width="14" height="6" fill="#dde2e6"/>
+    <rect x="406" y="100" width="14" height="1" fill="#fcfcf6"/>
+    <rect x="406" y="105" width="14" height="1" fill="#5a6068"/>
+    <rect x="414" y="106" width="6" height="10" fill="#dde2e6"/>
+    <rect x="414" y="106" width="6" height="1"  fill="#fcfcf6"/>
+    <rect x="414" y="115" width="6" height="1"  fill="#5a6068"/>
+    <rect x="406" y="116" width="28" height="46" fill="url(#co42Spray1)"/>
+    <rect x="406" y="116" width="28" height="46" fill="none" stroke="#3a4448" stroke-width="0.6" opacity="0.7"/>
+    <rect x="406" y="116" width="28" height="2"  fill="#cad6dc"/>
+    <rect x="406" y="128" width="28" height="14" fill="#dde2e6"/>
+    <rect x="406" y="128" width="28" height="14" fill="none" stroke="#3a4448" stroke-width="0.5"/>
+    <rect x="408" y="131" width="24" height="1" fill="#3a4448" opacity="0.7"/>
+    <rect x="408" y="135" width="20" height="1" fill="#3a4448" opacity="0.55"/>
+    <rect x="408" y="138" width="22" height="1" fill="#3a4448" opacity="0.55"/>
+    <rect x="408" y="120" width="1" height="36" fill="#ffffff" opacity="0.40"/>
+  </g>
+
+  <!-- ============= BOTTOM SHELF BOARD ============= -->
+  <g id="co42-bot-shelf-art" pointer-events="none">
+    <rect x="16" y="246" width="448" height="8" fill="url(#co42ShelfPaint)"/>
+    <rect x="16" y="246" width="448" height="1" fill="#fcfcf6"/>
+    <rect x="16" y="253" width="448" height="1" fill="#5a6064"/>
+    <rect x="16" y="254" width="448" height="3" fill="#1a1c20" opacity="0.30"/>
+  </g>
+
+  <!-- ============= BOTTOM SHELF: 2 large bottles flanking 4-pack of paper towels ============= -->
+
+  <!-- big bottle left -->
+  <g id="co42-bottle-L-art">
+    <rect x="40" y="244" width="60" height="2" fill="#1a1c20" opacity="0.30"/>
+    <!-- cap -->
+    <rect x="56" y="186" width="24" height="6" fill="#a8a08c"/>
+    <rect x="56" y="186" width="24" height="1" fill="#cabd9c"/>
+    <rect x="56" y="191" width="24" height="1" fill="#3a3024"/>
+    <!-- shoulder -->
+    <polygon points="44,196 96,196 100,206 40,206" fill="url(#co42BigBottle)"/>
+    <!-- body -->
+    <rect x="40" y="206" width="60" height="40" fill="url(#co42BigBottle)"/>
+    <rect x="40" y="196" width="60" height="50" fill="none" stroke="#3a3024" stroke-width="0.7" opacity="0.7"/>
+    <!-- label -->
+    <rect x="42" y="216" width="56" height="22" fill="#e8e0c8"/>
+    <rect x="42" y="216" width="56" height="22" fill="none" stroke="#5a4a30" stroke-width="0.6"/>
+    <rect x="46" y="220" width="48" height="1" fill="#5a4a30" opacity="0.85"/>
+    <rect x="46" y="224" width="40" height="1" fill="#5a4a30" opacity="0.6"/>
+    <rect x="46" y="227" width="44" height="1" fill="#5a4a30" opacity="0.6"/>
+    <rect x="46" y="230" width="36" height="1" fill="#5a4a30" opacity="0.6"/>
+    <rect x="46" y="233" width="40" height="1" fill="#5a4a30" opacity="0.6"/>
+    <!-- specular -->
+    <rect x="44" y="200" width="1" height="42" fill="#ffffff" opacity="0.30"/>
+  </g>
+
+  <!-- centered 4-pack of paper towels -->
+  <g id="co42-paper-towels-art">
+    <rect x="140" y="244" width="200" height="2" fill="#1a1c20" opacity="0.30"/>
+    <!-- 4 rolls (50 wide each) -->
+    <g id="co42-paper-roll-1">
+      <rect x="140" y="186" width="50" height="60" fill="url(#co42Paper)"/>
+      <rect x="140" y="186" width="50" height="60" fill="none" stroke="#7a6c54" stroke-width="0.6" opacity="0.6"/>
+      <rect x="140" y="186" width="50" height="2"  fill="#fcf6e8"/>
+      <ellipse cx="165" cy="186" rx="15" ry="3" fill="#a89878"/>
+      <ellipse cx="165" cy="186" rx="9"  ry="2" fill="#6a5e44"/>
+      <!-- subtle vertical stripes (perforations) -->
+      <rect x="160" y="190" width="1" height="54" fill="#a89878" opacity="0.20"/>
+      <rect x="170" y="190" width="1" height="54" fill="#a89878" opacity="0.20"/>
+    </g>
+    <g id="co42-paper-roll-2">
+      <rect x="190" y="186" width="50" height="60" fill="url(#co42Paper)"/>
+      <rect x="190" y="186" width="50" height="60" fill="none" stroke="#7a6c54" stroke-width="0.6" opacity="0.6"/>
+      <rect x="190" y="186" width="50" height="2"  fill="#fcf6e8"/>
+      <ellipse cx="215" cy="186" rx="15" ry="3" fill="#a89878"/>
+      <ellipse cx="215" cy="186" rx="9"  ry="2" fill="#6a5e44"/>
+      <rect x="210" y="190" width="1" height="54" fill="#a89878" opacity="0.20"/>
+      <rect x="220" y="190" width="1" height="54" fill="#a89878" opacity="0.20"/>
+    </g>
+    <g id="co42-paper-roll-3">
+      <rect x="240" y="186" width="50" height="60" fill="url(#co42Paper)"/>
+      <rect x="240" y="186" width="50" height="60" fill="none" stroke="#7a6c54" stroke-width="0.6" opacity="0.6"/>
+      <rect x="240" y="186" width="50" height="2"  fill="#fcf6e8"/>
+      <ellipse cx="265" cy="186" rx="15" ry="3" fill="#a89878"/>
+      <ellipse cx="265" cy="186" rx="9"  ry="2" fill="#6a5e44"/>
+      <rect x="260" y="190" width="1" height="54" fill="#a89878" opacity="0.20"/>
+      <rect x="270" y="190" width="1" height="54" fill="#a89878" opacity="0.20"/>
+    </g>
+    <g id="co42-paper-roll-4">
+      <rect x="290" y="186" width="50" height="60" fill="url(#co42Paper)"/>
+      <rect x="290" y="186" width="50" height="60" fill="none" stroke="#7a6c54" stroke-width="0.6" opacity="0.6"/>
+      <rect x="290" y="186" width="50" height="2"  fill="#fcf6e8"/>
+      <ellipse cx="315" cy="186" rx="15" ry="3" fill="#a89878"/>
+      <ellipse cx="315" cy="186" rx="9"  ry="2" fill="#6a5e44"/>
+      <rect x="310" y="190" width="1" height="54" fill="#a89878" opacity="0.20"/>
+      <rect x="320" y="190" width="1" height="54" fill="#a89878" opacity="0.20"/>
+    </g>
+    <!-- shrink-wrap shimmer over the whole 4-pack -->
+    <rect x="140" y="186" width="200" height="60" fill="#ffffff" opacity="0.06"/>
+  </g>
+
+  <!-- big bottle right (mirror of L) -->
+  <g id="co42-bottle-R-art">
+    <rect x="380" y="244" width="60" height="2" fill="#1a1c20" opacity="0.30"/>
+    <rect x="396" y="186" width="24" height="6" fill="#a8a08c"/>
+    <rect x="396" y="186" width="24" height="1" fill="#cabd9c"/>
+    <rect x="396" y="191" width="24" height="1" fill="#3a3024"/>
+    <polygon points="384,196 436,196 440,206 380,206" fill="url(#co42BigBottle)"/>
+    <rect x="380" y="206" width="60" height="40" fill="url(#co42BigBottle)"/>
+    <rect x="380" y="196" width="60" height="50" fill="none" stroke="#3a3024" stroke-width="0.7" opacity="0.7"/>
+    <rect x="382" y="216" width="56" height="22" fill="#e8e0c8"/>
+    <rect x="382" y="216" width="56" height="22" fill="none" stroke="#5a4a30" stroke-width="0.6"/>
+    <rect x="386" y="220" width="48" height="1" fill="#5a4a30" opacity="0.85"/>
+    <rect x="386" y="224" width="40" height="1" fill="#5a4a30" opacity="0.6"/>
+    <rect x="386" y="227" width="44" height="1" fill="#5a4a30" opacity="0.6"/>
+    <rect x="386" y="230" width="36" height="1" fill="#5a4a30" opacity="0.6"/>
+    <rect x="386" y="233" width="40" height="1" fill="#5a4a30" opacity="0.6"/>
+    <rect x="384" y="200" width="1" height="42" fill="#ffffff" opacity="0.30"/>
+  </g>
+
+  <!-- ============= FLOOR ============= -->
+  <rect y="254" width="480" height="66" fill="#bcbeb6" pointer-events="none"/>
+  <rect y="254" width="480" height="2"  fill="#5a6064" opacity="0.55" pointer-events="none"/>
+
+  <!-- ============= FLOOR ITEMS: 2 buckets flanking step stool (mirrored) ============= -->
+
+  <!-- bucket left -->
+  <g id="co42-bucket-L-art">
+    <rect x="36" y="316" width="72" height="2" fill="#1a1c20" opacity="0.40"/>
+    <!-- back rim ellipse -->
+    <ellipse cx="72" cy="266" rx="32" ry="3" fill="#3a3024" opacity="0.85"/>
+    <!-- body (slight taper) -->
+    <polygon points="40,266 104,266 100,316 44,316" fill="url(#co42Bucket)"/>
+    <polygon points="40,266 104,266 100,316 44,316" fill="none" stroke="#3a3024" stroke-width="1"/>
+    <!-- metal rim band -->
+    <ellipse cx="72" cy="266" rx="32" ry="3" fill="none" stroke="#888070" stroke-width="1.4"/>
+    <!-- inner mouth -->
+    <ellipse cx="72" cy="266" rx="28" ry="2.4" fill="#3a3024"/>
+    <!-- handle -->
+    <path d="M44,266 Q72,254 100,266" fill="none" stroke="#5a4a30" stroke-width="1.4"/>
+    <!-- subtle ridge -->
+    <rect x="42" y="280" width="60" height="1" fill="#9a8868" opacity="0.55"/>
+    <rect x="42" y="296" width="60" height="1" fill="#9a8868" opacity="0.55"/>
+  </g>
+
+  <!-- step stool centered -->
+  <g id="co42-stool-art">
+    <rect x="176" y="316" width="128" height="2" fill="#1a1c20" opacity="0.40"/>
+    <!-- top step -->
+    <rect x="180" y="270" width="120" height="10" fill="url(#co42Stool)"/>
+    <rect x="180" y="270" width="120" height="2"  fill="#fcfcf6"/>
+    <rect x="180" y="278" width="120" height="2"  fill="#5a6064" opacity="0.7"/>
+    <!-- riser shadow -->
+    <rect x="180" y="280" width="120" height="2" fill="#1a1c20" opacity="0.30"/>
+    <!-- lower step -->
+    <rect x="200" y="290" width="80" height="10" fill="url(#co42Stool)"/>
+    <rect x="200" y="290" width="80" height="2"  fill="#fcfcf6"/>
+    <rect x="200" y="298" width="80" height="2"  fill="#5a6064" opacity="0.7"/>
+    <!-- side legs (visible at outer edges) -->
+    <rect x="180" y="280" width="6" height="36" fill="url(#co42Stool)"/>
+    <rect x="294" y="280" width="6" height="36" fill="url(#co42Stool)"/>
+    <rect x="180" y="280" width="1" height="36" fill="#fcfcf6"/>
+    <rect x="299" y="280" width="1" height="36" fill="#5a6064"/>
+    <!-- bottom shadow line -->
+    <rect x="180" y="316" width="120" height="1" fill="#1a1c20" opacity="0.55"/>
+  </g>
+
+  <!-- bucket right (mirror of L) -->
+  <g id="co42-bucket-R-art">
+    <rect x="372" y="316" width="72" height="2" fill="#1a1c20" opacity="0.40"/>
+    <ellipse cx="408" cy="266" rx="32" ry="3" fill="#3a3024" opacity="0.85"/>
+    <polygon points="376,266 440,266 436,316 380,316" fill="url(#co42Bucket)"/>
+    <polygon points="376,266 440,266 436,316 380,316" fill="none" stroke="#3a3024" stroke-width="1"/>
+    <ellipse cx="408" cy="266" rx="32" ry="3" fill="none" stroke="#888070" stroke-width="1.4"/>
+    <ellipse cx="408" cy="266" rx="28" ry="2.4" fill="#3a3024"/>
+    <path d="M380,266 Q408,254 436,266" fill="none" stroke="#5a4a30" stroke-width="1.4"/>
+    <rect x="378" y="280" width="60" height="1" fill="#9a8868" opacity="0.55"/>
+    <rect x="378" y="296" width="60" height="1" fill="#9a8868" opacity="0.55"/>
+  </g>
+
+  <!-- ============= DRIFTING DUST (very slow breath, lucid-memory motion) ============= -->
+  <g pointer-events="none" opacity="0.36">
+    <ellipse cx="232" cy="32"  rx="1.4" ry="1.4" fill="#fce8c8">
+      <animate attributeName="cy" values="32;36;32" dur="40s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.82;1;0.82" dur="40s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="384" cy="116" rx="1.2" ry="1.2" fill="#fce8c8">
+      <animate attributeName="cy" values="116;113;116" dur="46s" begin="-12s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="46s" begin="-12s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="58"  cy="200" rx="1.2" ry="1.2" fill="#fce8c8">
+      <animate attributeName="cy" values="200;203;200" dur="42s" begin="-25s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.82;1;0.82" dur="42s" begin="-25s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- ============= LUCID MEMORY LAYER (warm bleed + breathing haze) ============= -->
+  <defs>
+    <radialGradient id="co42WarmBleed" cx="15%" cy="78%" r="55%">
+      <stop offset="0%"   stop-color="#fce0a8" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#fce0a8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="co42Haze" cx="50%" cy="50%" r="70%">
+      <stop offset="0%"   stop-color="#fff4d4" stop-opacity="0.05"/>
+      <stop offset="60%"  stop-color="#fff4d4" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#fff4d4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="480" height="320" fill="url(#co42WarmBleed)" pointer-events="none">
+    <animate attributeName="opacity" values="0.74;1;0.74" dur="28s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="0" y="0" width="480" height="320" fill="url(#co42Haze)" pointer-events="none">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="22s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ============= EDGE DARKENING + OUTER VIGNETTE ============= -->
+  <rect x="0"   y="0" width="38" height="320" fill="url(#co42SidesL)" pointer-events="none"/>
+  <rect x="442" y="0" width="38" height="320" fill="url(#co42SidesR)" pointer-events="none"/>
+  <rect x="0" y="0" width="480" height="320" fill="url(#co42Vignette)" pointer-events="none"/>
+
+  <!-- ============= INTERACTIVE HOTSPOTS (placed last, transparent) -->
+  <!-- order matters: more specific hotspots are placed AFTER broader ones so they receive clicks -->
+  <g id="co42-hotspots" fill="transparent" stroke="none">
+    <!-- broad first -->
+    <rect id="hit-wall"        x="20"  y="2"   width="440" height="34"/>
+    <rect id="hit-light"       x="180" y="2"   width="120" height="28"/>
+    <rect id="hit-floor"       x="20"  y="316" width="440" height="4"/>
+    <rect id="hit-axis"        x="238" y="6"   width="4"   height="248"/>
+
+    <rect id="hit-shelf-top"   x="16"  y="80"  width="448" height="8"/>
+    <rect id="hit-shelf-mid"   x="16"  y="164" width="448" height="8"/>
+    <rect id="hit-shelf-bot"   x="16"  y="246" width="448" height="8"/>
+
+    <!-- top-shelf jars -->
+    <rect id="hit-jar-1L"      x="56"  y="38"  width="44"  height="44"/>
+    <rect id="hit-jar-2L"      x="116" y="38"  width="44"  height="44"/>
+    <rect id="hit-jar-2R"      x="320" y="38"  width="44"  height="44"/>
+    <rect id="hit-jar-1R"      x="380" y="38"  width="44"  height="44"/>
+
+    <!-- middle-shelf items -->
+    <rect id="hit-spray-1L"    x="44"  y="98"  width="34"  height="66"/>
+    <rect id="hit-spray-2L"    x="96"  y="98"  width="34"  height="66"/>
+    <rect id="hit-towels"      x="170" y="116" width="140" height="48"/>
+    <rect id="hit-spray-2R"    x="352" y="98"  width="34"  height="66"/>
+    <rect id="hit-spray-1R"    x="404" y="98"  width="34"  height="66"/>
+
+    <!-- bottom-shelf items -->
+    <rect id="hit-bottle-L"    x="38"  y="184" width="64"  height="62"/>
+    <rect id="hit-paper-towels" x="138" y="184" width="204" height="62"/>
+    <rect id="hit-bottle-R"    x="378" y="184" width="64"  height="62"/>
+
+    <!-- floor items -->
+    <rect id="hit-bucket-L"    x="38"  y="252" width="68"  height="64"/>
+    <rect id="hit-stool"       x="178" y="266" width="124" height="50"/>
+    <rect id="hit-bucket-R"    x="374" y="252" width="68"  height="64"/>
+  </g>
+</svg>

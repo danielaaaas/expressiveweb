@@ -657,6 +657,11 @@
     </rect>
   </g>
 
+  <!-- soft warm light drift overlay (apt 2 tone: transitional, slightly cooler/slower) -->
+  <rect width="480" height="320" fill="#f0d4ac" opacity="0.05" pointer-events="none">
+    <animate attributeName="opacity" values="0.04;0.09;0.04" dur="20s" repeatCount="indefinite"/>
+  </rect>
+
   <!-- side darkening (subtle vignette to keep the focal pool centered) -->
   <rect x="0"   y="0" width="34" height="320" fill="url(#b3SidesL)" pointer-events="none"/>
   <rect x="446" y="0" width="34" height="320" fill="url(#b3SidesR)" pointer-events="none"/>

@@ -1,0 +1,530 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" shape-rendering="crispEdges">
+  <title>Bathroom memory fragment (apartment four) - polished, sterile, subtly uncanny</title>
+  <desc>Looking straight at the bathroom mirror over the sink counter. The mirror is large, polished, and centered; its frame is matte charcoal. Inside it, the room behind the camera reflects back: a cool wall, a hint of a doorway with a sliver of warm hall light, a small framed print, a wall-mounted towel ring with a folded towel, and a thin reflected ceiling light. Along the lower interior of the mirror, ghost-pale reflections of the counter toiletries float at impossible heights, mirrored left-to-right. On the counter itself, against the backsplash: a slim brass soap dispenser, a small folded hand towel, a glass tumbler with a single toothbrush, a ceramic dish with a sage bar of soap, and a tiny white vase with a sprig of eucalyptus. The faucet is wall-mounted; a single perfectly formed water drop hangs from its tip and never falls. Lighting is even and cool. There is no condensation. Nothing animates.</desc>
+
+  <defs>
+    <linearGradient id="b45Wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#dde2e6"/>
+      <stop offset="65%"  stop-color="#bcc2c8"/>
+      <stop offset="100%" stop-color="#8c9298"/>
+    </linearGradient>
+
+    <linearGradient id="b45MirrorFrame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#2a2c30"/>
+      <stop offset="100%" stop-color="#16181c"/>
+    </linearGradient>
+
+    <linearGradient id="b45MirrorWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#c8cfd6"/>
+      <stop offset="60%"  stop-color="#a4abb2"/>
+      <stop offset="100%" stop-color="#7c848c"/>
+    </linearGradient>
+
+    <linearGradient id="b45MirrorSheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#ffffff" stop-opacity="0.10"/>
+      <stop offset="40%"  stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.06"/>
+    </linearGradient>
+
+    <linearGradient id="b45Counter" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#dcd6cc"/>
+      <stop offset="50%"  stop-color="#c4bea8"/>
+      <stop offset="100%" stop-color="#9c9890"/>
+    </linearGradient>
+
+    <linearGradient id="b45Backsplash" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#ccd0d4"/>
+      <stop offset="100%" stop-color="#8c9094"/>
+    </linearGradient>
+
+    <linearGradient id="b45Sink" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f4f4ee"/>
+      <stop offset="60%"  stop-color="#e0e0d8"/>
+      <stop offset="100%" stop-color="#b8b8b0"/>
+    </linearGradient>
+
+    <linearGradient id="b45Faucet" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#d4d8dc"/>
+      <stop offset="60%"  stop-color="#9ca0a4"/>
+      <stop offset="100%" stop-color="#5c6064"/>
+    </linearGradient>
+
+    <linearGradient id="b45Brass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#dcc09c"/>
+      <stop offset="100%" stop-color="#7a5a36"/>
+    </linearGradient>
+
+    <linearGradient id="b45Glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#dde6ea" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#a4b0b8" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <linearGradient id="b45Towel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f0eadc"/>
+      <stop offset="100%" stop-color="#bcb098"/>
+    </linearGradient>
+
+    <linearGradient id="b45Vanity" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#c4bca8"/>
+      <stop offset="100%" stop-color="#7a705c"/>
+    </linearGradient>
+
+    <radialGradient id="b45Light" cx="50%" cy="0%" r="60%">
+      <stop offset="0%"   stop-color="#f4faff" stop-opacity="0.30"/>
+      <stop offset="55%"  stop-color="#dce8f4" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#dce8f4" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="b45SidesL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#1a1c20" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#1a1c20" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="b45SidesR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%"   stop-color="#1a1c20" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#1a1c20" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="b45Vignette" cx="50%" cy="55%" r="72%">
+      <stop offset="58%"  stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0c0e12" stop-opacity="0.42"/>
+    </radialGradient>
+
+    <linearGradient id="b45DoorLight" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#f8e0a8" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#f8e0a8" stop-opacity="0.55"/>
+    </linearGradient>
+
+    <clipPath id="b45MirrorClip">
+      <rect x="84" y="26" width="312" height="122"/>
+    </clipPath>
+  </defs>
+
+  <!-- ============= WALL ============= -->
+  <rect width="480" height="320" fill="url(#b45Wall)"/>
+  <!-- top molding shadow -->
+  <rect x="0" y="0" width="480" height="6" fill="#5c626a" opacity="0.40" pointer-events="none"/>
+  <rect x="0" y="6" width="480" height="1" fill="#1c1e22" opacity="0.55" pointer-events="none"/>
+  <!-- side trim -->
+  <rect x="0"   y="0" width="14" height="320" fill="#9aa0a8" opacity="0.55" pointer-events="none"/>
+  <rect x="466" y="0" width="14" height="320" fill="#9aa0a8" opacity="0.55" pointer-events="none"/>
+  <rect x="14"  y="0" width="1"  height="320" fill="#3c4048" opacity="0.55" pointer-events="none"/>
+  <rect x="465" y="0" width="1"  height="320" fill="#3c4048" opacity="0.55" pointer-events="none"/>
+
+  <!-- soft cool overhead light pool -->
+  <rect x="0" y="0" width="480" height="220" fill="url(#b45Light)" pointer-events="none"/>
+
+  <!-- ============= VANITY LIGHT BAR (above mirror) ============= -->
+  <g id="b45-light-art" pointer-events="none">
+    <!-- backplate -->
+    <rect x="160" y="10" width="160" height="6" fill="#2a2c30"/>
+    <rect x="160" y="10" width="160" height="1" fill="#5c6064"/>
+    <rect x="160" y="15" width="160" height="1" fill="#0e1014" opacity="0.7"/>
+    <!-- two small bulb housings -->
+    <rect x="200" y="6"  width="14" height="6" fill="#3a3c40"/>
+    <rect x="200" y="4"  width="14" height="2" fill="#1c1e22"/>
+    <rect x="266" y="6"  width="14" height="6" fill="#3a3c40"/>
+    <rect x="266" y="4"  width="14" height="2" fill="#1c1e22"/>
+    <!-- bulb glow (warm-cool, perfectly steady) -->
+    <ellipse cx="207" cy="9" rx="9" ry="4" fill="#fffbe8" opacity="0.65"/>
+    <ellipse cx="207" cy="9" rx="3" ry="2" fill="#ffffff" opacity="0.95"/>
+    <ellipse cx="273" cy="9" rx="9" ry="4" fill="#fffbe8" opacity="0.65"/>
+    <ellipse cx="273" cy="9" rx="3" ry="2" fill="#ffffff" opacity="0.95"/>
+    <!-- light wash spilling onto wall above mirror -->
+    <ellipse cx="240" cy="22" rx="120" ry="14" fill="#fffbe8" opacity="0.18"/>
+  </g>
+
+  <!-- ============= MIRROR FRAME ============= -->
+  <g id="b45-mirror-frame-art" pointer-events="none">
+    <!-- outer frame -->
+    <rect x="78" y="20" width="324" height="134" fill="url(#b45MirrorFrame)"/>
+    <rect x="78" y="20" width="324" height="2"   fill="#3c4044"/>
+    <rect x="78" y="152" width="324" height="2"  fill="#0a0c0e"/>
+    <!-- inner edge -->
+    <rect x="83" y="25" width="314" height="124" fill="none" stroke="#0a0c0e" stroke-width="1"/>
+  </g>
+
+  <!-- ============= MIRROR INTERIOR (clipped) ============= -->
+  <g clip-path="url(#b45MirrorClip)">
+    <!-- reflected wall (cooler than room wall) -->
+    <rect x="84" y="26" width="312" height="122" fill="url(#b45MirrorWall)"/>
+    <!-- reflected ceiling shadow -->
+    <rect x="84" y="26" width="312" height="3" fill="#5c626a" opacity="0.55"/>
+    <rect x="84" y="29" width="312" height="1" fill="#22262c" opacity="0.55"/>
+
+    <!-- reflected ceiling light (a thin bright bar near top center, the light fixture above the camera) -->
+    <g pointer-events="none">
+      <rect x="194" y="32" width="92" height="2" fill="#22262c"/>
+      <rect x="194" y="34" width="92" height="2" fill="#fffbe8" opacity="0.55"/>
+      <ellipse cx="240" cy="36" rx="60" ry="3" fill="#fffbe8" opacity="0.18"/>
+    </g>
+
+    <!-- reflected wall clock (small; frozen at ~9:24, intentionally a
+         different time from the kitchen's clock) -->
+    <g id="b45-mirror-clock-art" pointer-events="none">
+      <ellipse cx="148" cy="50" rx="7" ry="7" fill="#3c2e1c"/>
+      <ellipse cx="148" cy="50" rx="6" ry="6" fill="#f0e8d0"/>
+      <ellipse cx="148" cy="50" rx="5.2" ry="5.2" fill="#fcf2dc"/>
+      <rect x="147.6" y="45.5" width="0.8" height="1.6" fill="#3c2e1c"/>
+      <rect x="152.6" y="49.6" width="1.6" height="0.8" fill="#3c2e1c"/>
+      <rect x="147.6" y="52.9" width="0.8" height="1.6" fill="#3c2e1c"/>
+      <rect x="142.4" y="49.6" width="1.6" height="0.8" fill="#3c2e1c"/>
+      <rect x="146.5" y="49.6" width="2.4" height="0.6" fill="#2a1f12" transform="rotate(-95 148 50)"/>
+      <rect x="148"   y="46"   width="0.6" height="4"   fill="#2a1f12" transform="rotate(144 148 50)"/>
+      <ellipse cx="148" cy="50" rx="0.8" ry="0.8" fill="#1a1410"/>
+    </g>
+
+    <!-- reflected framed print (small, on the cool wall behind viewer) -->
+    <g id="b45-mirror-art-art" pointer-events="none">
+      <rect x="184" y="50" width="56" height="36" fill="#1c1e22"/>
+      <rect x="186" y="52" width="52" height="32" fill="#dde2e6"/>
+      <rect x="186" y="52" width="52" height="32" fill="none" stroke="#5c6064" stroke-width="0.6"/>
+      <!-- a single horizontal line inside (a horizon) -->
+      <rect x="186" y="68" width="52" height="1" fill="#7c848c" opacity="0.85"/>
+      <rect x="186" y="69" width="52" height="15" fill="#a4abb2" opacity="0.55"/>
+      <!-- two specks (a sun + a smaller mark) -->
+      <rect x="220" y="60" width="3" height="3" fill="#f0e8d4"/>
+      <rect x="200" y="76" width="2" height="1" fill="#6c7480" opacity="0.85"/>
+    </g>
+
+    <!-- reflected wall-mounted towel ring + folded towel (LEFT inside the mirror) -->
+    <g id="b45-mirror-towelring-art" pointer-events="none">
+      <!-- ring bracket -->
+      <rect x="106" y="60" width="2" height="6" fill="#3a3e44"/>
+      <!-- ring (drawn as a square outline for pixel cleanliness) -->
+      <rect x="100" y="64" width="22" height="14" fill="none" stroke="#7c848c" stroke-width="1.2"/>
+      <!-- folded towel hanging through ring -->
+      <rect x="102" y="74" width="18" height="34" fill="url(#b45Towel)"/>
+      <rect x="102" y="74" width="18" height="1"  fill="#fcf4e0"/>
+      <rect x="102" y="80" width="18" height="1"  fill="#9a8c70" opacity="0.55"/>
+      <rect x="102" y="92" width="18" height="1"  fill="#9a8c70" opacity="0.55"/>
+      <rect x="102" y="106" width="18" height="2" fill="#bcb098"/>
+      <!-- a single hanging shadow under the towel (sharp, unmoving) -->
+      <rect x="102" y="108" width="18" height="2" fill="#1c1e22" opacity="0.32"/>
+    </g>
+
+    <!-- reflected doorway (RIGHT inside mirror, with a sliver of warm hall light) -->
+    <g id="b45-mirror-doorway-art" pointer-events="none">
+      <!-- door frame -->
+      <rect x="316" y="44" width="54" height="100" fill="#22262c"/>
+      <!-- door slightly ajar; door panel showing -->
+      <rect x="318" y="46" width="46" height="96" fill="#3c4248"/>
+      <rect x="318" y="46" width="1"  height="96" fill="#5c6268"/>
+      <rect x="363" y="46" width="1"  height="96" fill="#0e1014"/>
+      <!-- door knob (a small dot, perfectly still) -->
+      <rect x="356" y="92" width="2" height="2" fill="#a89878"/>
+      <!-- warm light bleed at the door's opening edge -->
+      <rect x="316" y="44" width="3" height="100" fill="url(#b45DoorLight)"/>
+      <!-- floor shadow at base of door -->
+      <rect x="316" y="142" width="54" height="2" fill="#0a0c0e" opacity="0.55"/>
+    </g>
+
+    <!-- subtle reflected baseboard line (gives the reflection floor depth) -->
+    <rect x="84" y="138" width="312" height="1" fill="#5c6268" opacity="0.55" pointer-events="none"/>
+    <rect x="84" y="139" width="312" height="9" fill="#828a92" opacity="0.45" pointer-events="none"/>
+
+    <!-- ============= GHOST REFLECTIONS (mirror-bottom; impossible echoes of counter toiletries) ============= -->
+    <!-- mirrored left-to-right so the ghosts sit in the OPPOSITE side from their real items.
+         Cooler tone, slightly desaturated, a little smaller. -->
+
+    <!-- ghost VASE (real vase is far right; ghost lives on the left of the mirror) -->
+    <g id="b45-ghost-vase-art" pointer-events="none">
+      <!-- pot -->
+      <rect x="92"  y="128" width="14" height="14" fill="#dce0e4" opacity="0.78"/>
+      <rect x="92"  y="128" width="14" height="1"  fill="#f0f4f8" opacity="0.85"/>
+      <rect x="92"  y="141" width="14" height="1"  fill="#5c6268" opacity="0.55"/>
+      <!-- a tiny sprig (single mark) -->
+      <rect x="98"  y="118" width="1"  height="10" fill="#7c948c" opacity="0.78"/>
+      <rect x="96"  y="120" width="2"  height="1"  fill="#7c948c" opacity="0.78"/>
+      <rect x="100" y="124" width="2"  height="1"  fill="#7c948c" opacity="0.78"/>
+    </g>
+
+    <!-- ghost SOAP DISH (real is right of sink; ghost on left) -->
+    <g id="b45-ghost-soapdish-art" pointer-events="none">
+      <rect x="116" y="138" width="22" height="4" fill="#dcd8d0" opacity="0.78"/>
+      <rect x="116" y="138" width="22" height="1" fill="#f0eee4" opacity="0.85"/>
+      <rect x="118" y="134" width="18" height="4" fill="#a8b8a4" opacity="0.78"/>
+      <rect x="118" y="134" width="18" height="1" fill="#c4d0bc" opacity="0.85"/>
+    </g>
+
+    <!-- ghost TUMBLER + toothbrush (real on right of sink; ghost on left-center) -->
+    <g id="b45-ghost-tumbler-art" pointer-events="none">
+      <rect x="148" y="124" width="12" height="18" fill="#dde6ea" opacity="0.62"/>
+      <rect x="148" y="124" width="12" height="1"  fill="#f4f8fa" opacity="0.85"/>
+      <rect x="148" y="141" width="12" height="1"  fill="#5c6268" opacity="0.55"/>
+      <!-- ghost toothbrush poking up from tumbler -->
+      <rect x="153" y="116" width="2"  height="10" fill="#dde6ea" opacity="0.78"/>
+      <rect x="153" y="114" width="2"  height="2"  fill="#a8b8a4" opacity="0.78"/>
+    </g>
+
+    <!-- ghost FAUCET shadow at center bottom (a barely-there mark of what would reflect from the faucet) -->
+    <g pointer-events="none">
+      <rect x="234" y="138" width="12" height="2" fill="#7c848c" opacity="0.45"/>
+      <rect x="238" y="124" width="3"  height="14" fill="#9ca0a4" opacity="0.42"/>
+    </g>
+
+    <!-- ghost FOLDED HAND TOWEL (real is left of sink; ghost on right) -->
+    <g id="b45-ghost-towel-art" pointer-events="none">
+      <rect x="304" y="128" width="32" height="14" fill="#e8e2d4" opacity="0.78"/>
+      <rect x="304" y="128" width="32" height="1"  fill="#fcf4e0" opacity="0.85"/>
+      <rect x="304" y="134" width="32" height="1"  fill="#9a8c70" opacity="0.55"/>
+      <rect x="304" y="141" width="32" height="1"  fill="#9a8c70" opacity="0.55"/>
+    </g>
+
+    <!-- ghost SOAP DISPENSER (real is far left; ghost on far right) -->
+    <g id="b45-ghost-soap-art" pointer-events="none">
+      <rect x="354" y="124" width="10" height="18" fill="#caa888" opacity="0.78"/>
+      <rect x="354" y="124" width="10" height="1"  fill="#dcc09c" opacity="0.85"/>
+      <rect x="354" y="141" width="10" height="1"  fill="#5c4a30" opacity="0.55"/>
+      <!-- pump head -->
+      <rect x="356" y="118" width="6"  height="6" fill="#caa888" opacity="0.78"/>
+      <rect x="362" y="120" width="4"  height="2" fill="#9a7a4c" opacity="0.78"/>
+    </g>
+
+    <!-- mirror sheen pass (very subtle diagonal glass-feel; sits on top of all interior content) -->
+    <rect x="84" y="26" width="312" height="122" fill="url(#b45MirrorSheen)" pointer-events="none"/>
+  </g>
+
+  <!-- ============= BACKSPLASH ============= -->
+  <g id="b45-backsplash-art" pointer-events="none">
+    <rect x="14" y="156" width="452" height="14" fill="url(#b45Backsplash)"/>
+    <rect x="14" y="156" width="452" height="1"  fill="#dde2e6"/>
+    <rect x="14" y="169" width="452" height="1"  fill="#3c4044" opacity="0.55"/>
+    <!-- a single thin tile seam line -->
+    <rect x="14" y="162" width="452" height="0.5" fill="#7c848c" opacity="0.45"/>
+  </g>
+
+  <!-- ============= WALL-MOUNTED FAUCET (frozen) ============= -->
+  <g id="b45-faucet-art">
+    <!-- mounting plate on backsplash -->
+    <rect x="222" y="160" width="36" height="6" fill="url(#b45Faucet)"/>
+    <rect x="222" y="160" width="36" height="1" fill="#e0e4e8"/>
+    <rect x="222" y="165" width="36" height="1" fill="#3c4044" opacity="0.7"/>
+    <!-- two cross handles flanking spout -->
+    <g pointer-events="none">
+      <rect x="208" y="161" width="14" height="5" fill="url(#b45Faucet)"/>
+      <rect x="214" y="158" width="2"  height="11" fill="url(#b45Faucet)"/>
+      <rect x="258" y="161" width="14" height="5" fill="url(#b45Faucet)"/>
+      <rect x="264" y="158" width="2"  height="11" fill="url(#b45Faucet)"/>
+    </g>
+    <!-- spout: vertical drop then short horizontal extension over sink -->
+    <rect x="234" y="166" width="12" height="22" fill="url(#b45Faucet)"/>
+    <rect x="234" y="166" width="2"  height="22" fill="#dde2e6"/>
+    <rect x="244" y="166" width="2"  height="22" fill="#3c4044" opacity="0.85"/>
+    <rect x="232" y="186" width="16" height="4"  fill="url(#b45Faucet)"/>
+    <rect x="232" y="186" width="16" height="1"  fill="#dde2e6"/>
+    <rect x="232" y="189" width="16" height="1"  fill="#3c4044" opacity="0.85"/>
+    <!-- frozen drop (perfect teardrop, never falls) -->
+    <ellipse cx="240" cy="194" rx="2.2" ry="3" fill="#dde6ea"/>
+    <ellipse cx="240" cy="193" rx="1"   ry="1.4" fill="#ffffff" opacity="0.85"/>
+  </g>
+
+  <!-- ============= COUNTER ============= -->
+  <!-- counter top surface (slight foreshortened band) -->
+  <g pointer-events="none">
+    <rect x="14"  y="170" width="452" height="42" fill="url(#b45Counter)"/>
+    <!-- back edge highlight (against backsplash) -->
+    <rect x="14"  y="170" width="452" height="1"  fill="#e8e4d8"/>
+    <!-- subtle horizontal seam toward the front (suggests the slab depth) -->
+    <rect x="14"  y="208" width="452" height="1"  fill="#5c5650" opacity="0.45"/>
+    <!-- counter front fascia (vertical drop) -->
+    <rect x="14"  y="212" width="452" height="10" fill="#a8a298"/>
+    <rect x="14"  y="212" width="452" height="1"  fill="#c4bea8"/>
+    <rect x="14"  y="221" width="452" height="1"  fill="#3c3830" opacity="0.7"/>
+  </g>
+
+  <!-- ============= SINK BASIN (recessed in counter) ============= -->
+  <g id="b45-sink-art" pointer-events="none">
+    <!-- outer rim of basin opening -->
+    <rect x="170" y="184" width="140" height="28" fill="#5c5a52" opacity="0.40"/>
+    <!-- basin opening (porcelain bowl seen from above) -->
+    <rect x="174" y="186" width="132" height="24" fill="url(#b45Sink)"/>
+    <rect x="174" y="186" width="132" height="1"  fill="#fcfaf2"/>
+    <rect x="174" y="209" width="132" height="1"  fill="#9c9890" opacity="0.85"/>
+    <!-- subtle bowl curvature (inset highlight) -->
+    <rect x="178" y="190" width="124" height="1"  fill="#ffffff" opacity="0.45"/>
+    <rect x="178" y="206" width="124" height="1"  fill="#9c9890" opacity="0.45"/>
+    <!-- drain (a small dark slot) -->
+    <rect x="234" y="200" width="12" height="3" fill="#3c4044"/>
+    <rect x="234" y="200" width="12" height="1" fill="#1c1e22"/>
+    <rect x="235" y="201" width="2"  height="1" fill="#5c6064"/>
+    <rect x="241" y="201" width="2"  height="1" fill="#5c6064"/>
+  </g>
+
+  <!-- ============= COUNTER ITEMS (against backsplash, bases at counter top y=170) ============= -->
+
+  <!-- soap dispenser (slim brass) -->
+  <g id="b45-soap-art">
+    <rect x="106" y="168" width="20" height="2" fill="#1c1e22" opacity="0.30"/>
+    <rect x="108" y="142" width="16" height="28" fill="url(#b45Brass)"/>
+    <rect x="108" y="142" width="16" height="1"  fill="#dcc09c"/>
+    <rect x="108" y="168" width="16" height="1"  fill="#3c2c14" opacity="0.7"/>
+    <!-- pump head -->
+    <rect x="112" y="134" width="8"  height="8"  fill="url(#b45Brass)"/>
+    <rect x="112" y="134" width="8"  height="1"  fill="#e0c8a4"/>
+    <rect x="120" y="138" width="6"  height="2"  fill="#7a5a36"/>
+    <!-- subtle highlight stripe on the bottle -->
+    <rect x="110" y="146" width="1"  height="20" fill="#e8d2a8" opacity="0.7"/>
+  </g>
+
+  <!-- folded hand towel (left of sink) -->
+  <g id="b45-towel-art">
+    <rect x="132" y="168" width="40" height="2" fill="#1c1e22" opacity="0.28"/>
+    <rect x="134" y="156" width="36" height="14" fill="url(#b45Towel)"/>
+    <rect x="134" y="156" width="36" height="1"  fill="#fcf4e0"/>
+    <rect x="134" y="160" width="36" height="1"  fill="#9a8c70" opacity="0.55"/>
+    <rect x="134" y="164" width="36" height="1"  fill="#9a8c70" opacity="0.55"/>
+    <rect x="134" y="168" width="36" height="2"  fill="#bcb098"/>
+    <!-- a single embroidered band -->
+    <rect x="138" y="166" width="28" height="1"  fill="#a8b8a4" opacity="0.85"/>
+  </g>
+
+  <!-- glass tumbler with single toothbrush (right of sink) -->
+  <g id="b45-tumbler-art">
+    <rect x="312" y="168" width="20" height="2" fill="#1c1e22" opacity="0.28"/>
+    <rect x="314" y="148" width="16" height="22" fill="url(#b45Glass)"/>
+    <rect x="314" y="148" width="16" height="1"  fill="#f0f4f8" opacity="0.85"/>
+    <rect x="314" y="168" width="16" height="1"  fill="#5c6268" opacity="0.55"/>
+    <rect x="316" y="150" width="1"  height="18" fill="#ffffff" opacity="0.55"/>
+    <!-- toothbrush sticking up out of tumbler -->
+    <rect x="320" y="132" width="3"  height="18" fill="#fcfafa"/>
+    <rect x="320" y="132" width="3"  height="1"  fill="#dde2e6"/>
+    <rect x="320" y="147" width="3"  height="1"  fill="#9ca0a4" opacity="0.85"/>
+    <!-- bristles (sage tip) -->
+    <rect x="319" y="128" width="5"  height="4"  fill="#a8b8a4"/>
+    <rect x="319" y="128" width="5"  height="1"  fill="#c4d0bc"/>
+    <rect x="320" y="131" width="3"  height="1"  fill="#7c948c" opacity="0.85"/>
+  </g>
+
+  <!-- ceramic soap dish with sage bar -->
+  <g id="b45-soapdish-art">
+    <rect x="338" y="168" width="36" height="2" fill="#1c1e22" opacity="0.28"/>
+    <!-- dish -->
+    <rect x="340" y="162" width="32" height="8" fill="#e0d8c8"/>
+    <rect x="340" y="162" width="32" height="1" fill="#f0eee4"/>
+    <rect x="340" y="169" width="32" height="1" fill="#9c9890" opacity="0.85"/>
+    <!-- bar of soap -->
+    <rect x="344" y="156" width="24" height="6" fill="#a8b8a4"/>
+    <rect x="344" y="156" width="24" height="1" fill="#c4d0bc"/>
+    <rect x="344" y="161" width="24" height="1" fill="#7c948c" opacity="0.85"/>
+  </g>
+
+  <!-- small white vase with eucalyptus sprig (far right) -->
+  <g id="b45-vase-art">
+    <rect x="384" y="168" width="22" height="2" fill="#1c1e22" opacity="0.30"/>
+    <!-- vase -->
+    <rect x="386" y="148" width="18" height="22" fill="#f0eee4"/>
+    <rect x="386" y="148" width="18" height="1"  fill="#fffefa"/>
+    <rect x="386" y="169" width="18" height="1"  fill="#5c5a52" opacity="0.55"/>
+    <rect x="388" y="150" width="1"  height="18" fill="#dcd8cc" opacity="0.85"/>
+    <!-- sprig stem -->
+    <rect x="394" y="132" width="1"  height="16" fill="#7c948c"/>
+    <!-- sprig leaves -->
+    <rect x="391" y="136" width="3"  height="2" fill="#a4bcb4"/>
+    <rect x="395" y="138" width="3"  height="2" fill="#a4bcb4"/>
+    <rect x="389" y="142" width="3"  height="2" fill="#7c948c"/>
+    <rect x="395" y="144" width="3"  height="2" fill="#7c948c"/>
+    <rect x="391" y="146" width="3"  height="2" fill="#a4bcb4"/>
+  </g>
+
+  <!-- ============= VANITY FRONT (cabinet) ============= -->
+  <g id="b45-vanity-art" pointer-events="none">
+    <rect x="14" y="222" width="452" height="76" fill="url(#b45Vanity)"/>
+    <rect x="14" y="222" width="452" height="1"  fill="#dccca8"/>
+    <rect x="14" y="297" width="452" height="1"  fill="#1c1810" opacity="0.7"/>
+    <!-- two cabinet doors -->
+    <rect x="40"  y="234" width="186" height="58" fill="none" stroke="#3c3424" stroke-width="1.2"/>
+    <rect x="254" y="234" width="186" height="58" fill="none" stroke="#3c3424" stroke-width="1.2"/>
+    <!-- thin top trim -->
+    <rect x="14" y="220" width="452" height="2" fill="#3c3424"/>
+    <!-- pulls -->
+    <rect x="218" y="258" width="4" height="10" fill="#a89878"/>
+    <rect x="218" y="258" width="4" height="1"  fill="#dcc89c"/>
+    <rect x="218" y="267" width="4" height="1"  fill="#5a4a30"/>
+    <rect x="258" y="258" width="4" height="10" fill="#a89878"/>
+    <rect x="258" y="258" width="4" height="1"  fill="#dcc89c"/>
+    <rect x="258" y="267" width="4" height="1"  fill="#5a4a30"/>
+  </g>
+
+  <!-- ============= FLOOR ============= -->
+  <rect y="298" width="480" height="22" fill="#9aa0a8" pointer-events="none"/>
+  <rect y="298" width="480" height="2"  fill="#3c4044" opacity="0.55" pointer-events="none"/>
+  <!-- a couple of pixel tile seams hint -->
+  <rect x="120" y="298" width="0.5" height="22" fill="#5c6268" opacity="0.55" pointer-events="none"/>
+  <rect x="240" y="298" width="0.5" height="22" fill="#5c6268" opacity="0.55" pointer-events="none"/>
+  <rect x="360" y="298" width="0.5" height="22" fill="#5c6268" opacity="0.55" pointer-events="none"/>
+
+  <!-- ============= DRIFTING DUST (very slow breath, lucid-memory motion) ============= -->
+  <g pointer-events="none" opacity="0.32">
+    <ellipse cx="60"  cy="60"  rx="1.2" ry="1.2" fill="#f4faff">
+      <animate attributeName="cy" values="60;63;60" dur="40s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.82;1;0.82" dur="40s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="430" cy="100" rx="1.2" ry="1.2" fill="#f4faff">
+      <animate attributeName="cy" values="100;97;100" dur="46s" begin="-12s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="46s" begin="-12s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="240" cy="262" rx="1.2" ry="1.2" fill="#f4faff">
+      <animate attributeName="cy" values="262;259;262" dur="42s" begin="-26s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.82;1;0.82" dur="42s" begin="-26s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- ============= LUCID MEMORY LAYER (warm hall bleed in mirror corner + breathing haze) ============= -->
+  <defs>
+    <radialGradient id="b45WarmBleed" cx="15%" cy="25%" r="50%">
+      <stop offset="0%"   stop-color="#fce0a8" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#fce0a8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="b45Haze" cx="50%" cy="50%" r="70%">
+      <stop offset="0%"   stop-color="#f0f8ff" stop-opacity="0.05"/>
+      <stop offset="60%"  stop-color="#f0f8ff" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#f0f8ff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="480" height="320" fill="url(#b45WarmBleed)" pointer-events="none">
+    <animate attributeName="opacity" values="0.74;1;0.74" dur="28s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="0" y="0" width="480" height="320" fill="url(#b45Haze)" pointer-events="none">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="22s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ============= EDGE DARKENING + OUTER VIGNETTE ============= -->
+  <rect x="0"   y="0" width="38" height="320" fill="url(#b45SidesL)" pointer-events="none"/>
+  <rect x="442" y="0" width="38" height="320" fill="url(#b45SidesR)" pointer-events="none"/>
+  <rect x="0" y="0" width="480" height="320" fill="url(#b45Vignette)" pointer-events="none"/>
+
+  <!-- ============= INTERACTIVE HOTSPOTS (placed last) ============= -->
+  <g id="b45-hotspots" fill="transparent" stroke="none">
+    <rect id="hit-wall"        x="20"  y="2"   width="440" height="6"/>
+    <rect id="hit-floor"       x="20"  y="316" width="440" height="4"/>
+    <rect id="hit-light"       x="158" y="2"   width="164" height="18"/>
+
+    <!-- mirror surface (single big hotspot for the polished mirror itself) -->
+    <rect id="hit-mirror"      x="84"  y="26"  width="312" height="122"/>
+
+    <!-- mirror interior items (smaller, on top of mirror surface for finer interaction) -->
+    <rect id="hit-mirror-art"      x="184" y="50"  width="56"  height="36"/>
+    <rect id="hit-mirror-doorway"  x="316" y="44"  width="54"  height="100"/>
+    <rect id="hit-mirror-towelring" x="98" y="60"  width="26"  height="50"/>
+
+    <!-- backsplash + counter -->
+    <rect id="hit-backsplash"  x="14"  y="156" width="452" height="14"/>
+    <rect id="hit-counter"     x="14"  y="170" width="452" height="42"/>
+
+    <!-- faucet -->
+    <rect id="hit-faucet"      x="206" y="156" width="68"  height="40"/>
+
+    <!-- sink -->
+    <rect id="hit-sink"        x="170" y="184" width="140" height="28"/>
+
+    <!-- toiletries -->
+    <rect id="hit-soap"        x="104" y="132" width="22"  height="38"/>
+    <rect id="hit-towel"       x="132" y="154" width="40"  height="16"/>
+    <rect id="hit-tumbler"     x="312" y="126" width="20"  height="44"/>
+    <rect id="hit-soapdish"    x="338" y="154" width="36"  height="16"/>
+    <rect id="hit-vase"        x="384" y="130" width="22"  height="40"/>
+
+    <!-- vanity -->
+    <rect id="hit-vanity"      x="14"  y="222" width="452" height="76"/>
+  </g>
+</svg>

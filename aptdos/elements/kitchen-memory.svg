@@ -752,6 +752,11 @@
     <rect x="232" y="312" width="2" height="2" fill="#683818" opacity="0.85"/>
   </g>
 
+  <!-- soft warm light drift overlay (apt 2 tone: transitional, slightly cooler/slower) -->
+  <rect width="480" height="320" fill="#f0d4ac" opacity="0.05" pointer-events="none">
+    <animate attributeName="opacity" values="0.04;0.09;0.04" dur="18s" repeatCount="indefinite"/>
+  </rect>
+
   <!-- ============= INTERACTION HOTSPOTS (transparent, last so they sit on top) ============= -->
   <g id="k2-hotspots">
     <rect id="hit-fridge-interior" x="130" y="110" width="106" height="174" fill="transparent" pointer-events="all"/>

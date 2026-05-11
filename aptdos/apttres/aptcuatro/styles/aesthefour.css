@@ -1127,3 +1127,1588 @@ svg {
     color: rgba(220, 190, 140, 0.95);
     border-color: rgba(180, 140, 80, 0.6);
 }
+
+/* ============================
+   bedroom one memory vignette (apartment four)
+   cool, preserved, sharply remembered. less warmth than apt 3.
+   pale cream wall + soft slate-grey backdrop, almost overlit.
+   ============================ */
+#bedroomone-memory-overlay {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    inset: 0;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: min(24px, 4vw);
+    box-sizing: border-box;
+}
+
+#bedroomone-memory-overlay.active {
+    display: flex;
+}
+
+.bedroomone-memory-backdrop {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 60% 38% at 50% 48%, rgba(232, 224, 200, 0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 18% 22%, rgba(192, 200, 208, 0.14) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 82% 22%, rgba(192, 200, 208, 0.14) 0%, transparent 65%),
+        radial-gradient(ellipse 90% 70% at 50% 100%, rgba(20, 22, 28, 0.62) 0%, transparent 70%),
+        linear-gradient(180deg, #2a2c34 0%, #3c3e48 45%, #14161c 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+}
+
+.bedroomone-memory-lift {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: min(720px, 96vw);
+    pointer-events: none;
+}
+
+.bedroomone-memory-lift > * {
+    pointer-events: auto;
+}
+
+.bedroomone-memory-hud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: min(680px, 94vw);
+}
+
+.bedroomone-memory-tip {
+    flex: 1 1 220px;
+    margin: 0;
+    min-height: 2.6em;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', monospace;
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(232, 228, 216, 0.92);
+    text-shadow: 0 1px 0 rgba(20, 22, 28, 0.7);
+    transition: opacity 0.7s ease;
+}
+
+.bedroomone-memory-tip.fading {
+    opacity: 0.32;
+}
+
+.bedroomone-memory-tip.surfacing {
+    color: rgba(244, 240, 228, 0.96);
+    font-style: italic;
+}
+
+.bedroomone-memory-actions {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 8px;
+}
+
+.bedroomone-memory-close {
+    margin: 0;
+    background: rgba(40, 42, 50, 0.72);
+    border: 1px solid rgba(216, 208, 188, 0.55);
+    color: rgba(232, 224, 204, 0.92);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.bedroomone-memory-close:hover {
+    border-color: rgba(244, 240, 220, 0.85);
+    background: rgba(60, 62, 72, 0.85);
+}
+
+.bedroomone-memory-stage {
+    position: relative;
+    width: 100%;
+    max-width: min(680px, 94vw);
+    aspect-ratio: 480 / 320;
+    max-height: min(62vh, 520px);
+    border: 2px solid rgba(168, 160, 140, 0.7);
+    box-shadow:
+        0 0 0 1px rgba(20, 22, 28, 0.95),
+        0 18px 56px rgba(20, 22, 28, 0.55),
+        inset 0 0 60px rgba(40, 44, 52, 0.45);
+    background: #1c1e24;
+    overflow: hidden;
+}
+
+.bedroomone-memory-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    object-position: center center;
+    image-rendering: pixelated;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .bedroomone-memory-stage {
+        max-height: min(52vh, 420px);
+    }
+
+    .bedroomone-memory-hud {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .bedroomone-memory-actions {
+        flex-direction: column;
+    }
+}
+
+/* ============================
+   bedroom two memory vignette (apartment four)
+   suspended workspace, even cleaner / more sterile than bo1.
+   slightly cooler backdrop, sharper border, faintly clinical light.
+   ============================ */
+#bedroomtwo-memory-overlay {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    inset: 0;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: min(24px, 4vw);
+    box-sizing: border-box;
+}
+
+#bedroomtwo-memory-overlay.active {
+    display: flex;
+}
+
+.bedroomtwo-memory-backdrop {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 56% 36% at 50% 46%, rgba(208, 216, 224, 0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 18% 22%, rgba(168, 180, 192, 0.14) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 82% 22%, rgba(168, 180, 192, 0.14) 0%, transparent 65%),
+        radial-gradient(ellipse 90% 70% at 50% 100%, rgba(14, 16, 22, 0.65) 0%, transparent 70%),
+        linear-gradient(180deg, #20242a 0%, #2e3038 45%, #0e1014 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+}
+
+.bedroomtwo-memory-lift {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: min(720px, 96vw);
+    pointer-events: none;
+}
+
+.bedroomtwo-memory-lift > * {
+    pointer-events: auto;
+}
+
+.bedroomtwo-memory-hud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: min(680px, 94vw);
+}
+
+.bedroomtwo-memory-tip {
+    flex: 1 1 220px;
+    margin: 0;
+    min-height: 2.6em;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', monospace;
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(220, 224, 232, 0.92);
+    text-shadow: 0 1px 0 rgba(14, 16, 22, 0.7);
+    transition: opacity 0.7s ease;
+}
+
+.bedroomtwo-memory-tip.fading {
+    opacity: 0.32;
+}
+
+.bedroomtwo-memory-tip.surfacing {
+    color: rgba(236, 240, 248, 0.96);
+    font-style: italic;
+}
+
+.bedroomtwo-memory-actions {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 8px;
+}
+
+.bedroomtwo-memory-close {
+    margin: 0;
+    background: rgba(34, 38, 46, 0.72);
+    border: 1px solid rgba(196, 204, 216, 0.55);
+    color: rgba(216, 222, 232, 0.92);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.bedroomtwo-memory-close:hover {
+    border-color: rgba(232, 236, 244, 0.85);
+    background: rgba(54, 58, 68, 0.85);
+}
+
+.bedroomtwo-memory-stage {
+    position: relative;
+    width: 100%;
+    max-width: min(680px, 94vw);
+    aspect-ratio: 480 / 320;
+    max-height: min(62vh, 520px);
+    border: 2px solid rgba(148, 156, 168, 0.7);
+    box-shadow:
+        0 0 0 1px rgba(14, 16, 22, 0.95),
+        0 18px 56px rgba(14, 16, 22, 0.55),
+        inset 0 0 60px rgba(28, 32, 40, 0.45);
+    background: #14161c;
+    overflow: hidden;
+}
+
+.bedroomtwo-memory-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    object-position: center center;
+    image-rendering: pixelated;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .bedroomtwo-memory-stage {
+        max-height: min(52vh, 420px);
+    }
+
+    .bedroomtwo-memory-hud {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .bedroomtwo-memory-actions {
+        flex-direction: column;
+    }
+}
+/* ============================
+   bedroom three memory vignette (apartment four)
+   emotionally unfinished, partially decorated.
+   slightly warmer + paler backdrop than bo1/bt2 - the room
+   has not fully settled into memory yet.
+   ============================ */
+#bedroomthree-memory-overlay {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    inset: 0;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: min(24px, 4vw);
+    box-sizing: border-box;
+}
+
+#bedroomthree-memory-overlay.active {
+    display: flex;
+}
+
+.bedroomthree-memory-backdrop {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 56% 36% at 50% 46%, rgba(232, 220, 196, 0.20) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 18% 22%, rgba(196, 180, 152, 0.14) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 82% 22%, rgba(196, 180, 152, 0.14) 0%, transparent 65%),
+        radial-gradient(ellipse 90% 70% at 50% 100%, rgba(20, 18, 14, 0.62) 0%, transparent 70%),
+        linear-gradient(180deg, #28241c 0%, #38322a 45%, #14110c 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+}
+
+.bedroomthree-memory-lift {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: min(720px, 96vw);
+    pointer-events: none;
+}
+
+.bedroomthree-memory-lift > * {
+    pointer-events: auto;
+}
+
+.bedroomthree-memory-hud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: min(680px, 94vw);
+}
+
+.bedroomthree-memory-tip {
+    flex: 1 1 220px;
+    margin: 0;
+    min-height: 2.6em;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', monospace;
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(232, 224, 204, 0.92);
+    text-shadow: 0 1px 0 rgba(20, 18, 14, 0.7);
+    transition: opacity 0.7s ease;
+}
+
+.bedroomthree-memory-tip.fading {
+    opacity: 0.30;
+}
+
+.bedroomthree-memory-tip.surfacing {
+    color: rgba(244, 236, 220, 0.96);
+    font-style: italic;
+}
+
+.bedroomthree-memory-actions {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 8px;
+}
+
+.bedroomthree-memory-close {
+    margin: 0;
+    background: rgba(46, 38, 26, 0.72);
+    border: 1px solid rgba(216, 200, 168, 0.55);
+    color: rgba(232, 220, 196, 0.92);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.bedroomthree-memory-close:hover {
+    border-color: rgba(244, 236, 220, 0.85);
+    background: rgba(70, 58, 40, 0.85);
+}
+
+.bedroomthree-memory-stage {
+    position: relative;
+    width: 100%;
+    max-width: min(680px, 94vw);
+    aspect-ratio: 480 / 320;
+    max-height: min(62vh, 520px);
+    border: 2px solid rgba(168, 152, 124, 0.7);
+    box-shadow:
+        0 0 0 1px rgba(20, 18, 14, 0.95),
+        0 18px 56px rgba(20, 18, 14, 0.55),
+        inset 0 0 60px rgba(40, 32, 22, 0.45);
+    background: #1c1812;
+    overflow: hidden;
+}
+
+.bedroomthree-memory-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    object-position: center center;
+    image-rendering: pixelated;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .bedroomthree-memory-stage {
+        max-height: min(52vh, 420px);
+    }
+
+    .bedroomthree-memory-hud {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .bedroomthree-memory-actions {
+        flex-direction: column;
+    }
+}
+
+/* ============================
+   closet one memory vignette (apartment four)
+   carefully categorized, organized, emotionally restrained.
+   warm-cream backdrop with a faintly clean, archival feel.
+   ============================ */
+#closetone-memory-overlay {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    inset: 0;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: min(24px, 4vw);
+    box-sizing: border-box;
+}
+
+#closetone-memory-overlay.active {
+    display: flex;
+}
+
+.closetone-memory-backdrop {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 56% 36% at 50% 46%, rgba(232, 224, 200, 0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 18% 22%, rgba(196, 184, 156, 0.14) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 82% 22%, rgba(196, 184, 156, 0.14) 0%, transparent 65%),
+        radial-gradient(ellipse 90% 70% at 50% 100%, rgba(20, 18, 14, 0.65) 0%, transparent 70%),
+        linear-gradient(180deg, #2a261c 0%, #38322a 45%, #14110c 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+}
+
+.closetone-memory-lift {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: min(720px, 96vw);
+    pointer-events: none;
+}
+
+.closetone-memory-lift > * {
+    pointer-events: auto;
+}
+
+.closetone-memory-hud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: min(680px, 94vw);
+}
+
+.closetone-memory-tip {
+    flex: 1 1 220px;
+    margin: 0;
+    min-height: 2.6em;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', monospace;
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(232, 224, 204, 0.92);
+    text-shadow: 0 1px 0 rgba(20, 18, 14, 0.7);
+    transition: opacity 0.7s ease;
+}
+
+.closetone-memory-tip.fading {
+    opacity: 0.32;
+}
+
+.closetone-memory-tip.surfacing {
+    color: rgba(244, 236, 220, 0.96);
+    font-style: italic;
+}
+
+.closetone-memory-actions {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 8px;
+}
+
+.closetone-memory-close {
+    margin: 0;
+    background: rgba(46, 38, 26, 0.72);
+    border: 1px solid rgba(216, 200, 168, 0.55);
+    color: rgba(232, 220, 196, 0.92);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.closetone-memory-close:hover {
+    border-color: rgba(244, 236, 220, 0.85);
+    background: rgba(70, 58, 40, 0.85);
+}
+
+.closetone-memory-stage {
+    position: relative;
+    width: 100%;
+    max-width: min(680px, 94vw);
+    aspect-ratio: 480 / 320;
+    max-height: min(62vh, 520px);
+    border: 2px solid rgba(168, 152, 124, 0.7);
+    box-shadow:
+        0 0 0 1px rgba(20, 18, 14, 0.95),
+        0 18px 56px rgba(20, 18, 14, 0.55),
+        inset 0 0 60px rgba(40, 32, 22, 0.45);
+    background: #1c1812;
+    overflow: hidden;
+}
+
+.closetone-memory-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    object-position: center center;
+    image-rendering: pixelated;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .closetone-memory-stage {
+        max-height: min(52vh, 420px);
+    }
+
+    .closetone-memory-hud {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .closetone-memory-actions {
+        flex-direction: column;
+    }
+}
+
+/* ============================
+   closet two memory vignette (apartment four)
+   preserved utility closet, perfectly symmetric, sterile calm.
+   cooler, slightly more clinical backdrop than closet one.
+   ============================ */
+#closettwo-memory-overlay {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    inset: 0;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: min(24px, 4vw);
+    box-sizing: border-box;
+}
+
+#closettwo-memory-overlay.active {
+    display: flex;
+}
+
+.closettwo-memory-backdrop {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 56% 36% at 50% 46%, rgba(216, 220, 220, 0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 18% 22%, rgba(170, 178, 180, 0.14) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 82% 22%, rgba(170, 178, 180, 0.14) 0%, transparent 65%),
+        radial-gradient(ellipse 90% 70% at 50% 100%, rgba(14, 16, 20, 0.65) 0%, transparent 70%),
+        linear-gradient(180deg, #1c2024 0%, #2c3034 45%, #0c0e12 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+}
+
+.closettwo-memory-lift {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: min(720px, 96vw);
+    pointer-events: none;
+}
+
+.closettwo-memory-lift > * {
+    pointer-events: auto;
+}
+
+.closettwo-memory-hud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: min(680px, 94vw);
+}
+
+.closettwo-memory-tip {
+    flex: 1 1 220px;
+    margin: 0;
+    min-height: 2.6em;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', monospace;
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(220, 224, 228, 0.92);
+    text-shadow: 0 1px 0 rgba(14, 16, 20, 0.7);
+    transition: opacity 0.7s ease;
+}
+
+.closettwo-memory-tip.fading {
+    opacity: 0.30;
+}
+
+.closettwo-memory-tip.surfacing {
+    color: rgba(236, 240, 244, 0.96);
+    font-style: italic;
+}
+
+.closettwo-memory-actions {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 8px;
+}
+
+.closettwo-memory-close {
+    margin: 0;
+    background: rgba(34, 38, 44, 0.72);
+    border: 1px solid rgba(196, 204, 208, 0.55);
+    color: rgba(220, 224, 228, 0.92);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.closettwo-memory-close:hover {
+    border-color: rgba(232, 236, 240, 0.85);
+    background: rgba(56, 60, 68, 0.85);
+}
+
+.closettwo-memory-stage {
+    position: relative;
+    width: 100%;
+    max-width: min(680px, 94vw);
+    aspect-ratio: 480 / 320;
+    max-height: min(62vh, 520px);
+    border: 2px solid rgba(148, 156, 160, 0.7);
+    box-shadow:
+        0 0 0 1px rgba(14, 16, 20, 0.95),
+        0 18px 56px rgba(14, 16, 20, 0.55),
+        inset 0 0 60px rgba(28, 32, 38, 0.45);
+    background: #14181c;
+    overflow: hidden;
+}
+
+.closettwo-memory-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    object-position: center center;
+    image-rendering: pixelated;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .closettwo-memory-stage {
+        max-height: min(52vh, 420px);
+    }
+
+    .closettwo-memory-hud {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .closettwo-memory-actions {
+        flex-direction: column;
+    }
+}
+
+/* ============================
+   closet three memory vignette (apartment four)
+   travel/transition, preserved.
+   slightly cooler/dustier backdrop than co41 with a faint warm bottom glow
+   to echo the under-door hallway light inside the SVG.
+   ============================ */
+#closetthree-memory-overlay {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    inset: 0;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: min(24px, 4vw);
+    box-sizing: border-box;
+}
+
+#closetthree-memory-overlay.active {
+    display: flex;
+}
+
+.closetthree-memory-backdrop {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 56% 36% at 50% 46%, rgba(216, 208, 188, 0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 18% 22%, rgba(180, 168, 144, 0.14) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 82% 22%, rgba(180, 168, 144, 0.14) 0%, transparent 65%),
+        radial-gradient(ellipse 90% 28% at 50% 100%, rgba(252, 232, 184, 0.20) 0%, transparent 70%),
+        radial-gradient(ellipse 90% 70% at 50% 100%, rgba(20, 18, 14, 0.55) 0%, transparent 70%),
+        linear-gradient(180deg, #28241c 0%, #38322a 45%, #14110c 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+}
+
+.closetthree-memory-lift {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: min(720px, 96vw);
+    pointer-events: none;
+}
+
+.closetthree-memory-lift > * {
+    pointer-events: auto;
+}
+
+.closetthree-memory-hud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: min(680px, 94vw);
+}
+
+.closetthree-memory-tip {
+    flex: 1 1 220px;
+    margin: 0;
+    min-height: 2.6em;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', monospace;
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(228, 220, 200, 0.92);
+    text-shadow: 0 1px 0 rgba(20, 18, 14, 0.7);
+    transition: opacity 0.7s ease;
+}
+
+.closetthree-memory-tip.fading {
+    opacity: 0.30;
+}
+
+.closetthree-memory-tip.surfacing {
+    color: rgba(244, 232, 208, 0.96);
+    font-style: italic;
+}
+
+.closetthree-memory-actions {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 8px;
+}
+
+.closetthree-memory-close {
+    margin: 0;
+    background: rgba(46, 38, 26, 0.72);
+    border: 1px solid rgba(216, 200, 168, 0.55);
+    color: rgba(232, 220, 196, 0.92);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.closetthree-memory-close:hover {
+    border-color: rgba(244, 236, 220, 0.85);
+    background: rgba(70, 58, 40, 0.85);
+}
+
+.closetthree-memory-stage {
+    position: relative;
+    width: 100%;
+    max-width: min(680px, 94vw);
+    aspect-ratio: 480 / 320;
+    max-height: min(62vh, 520px);
+    border: 2px solid rgba(168, 152, 124, 0.7);
+    box-shadow:
+        0 0 0 1px rgba(20, 18, 14, 0.95),
+        0 18px 56px rgba(20, 18, 14, 0.55),
+        inset 0 0 60px rgba(40, 32, 22, 0.45);
+    background: #1c1812;
+    overflow: hidden;
+}
+
+.closetthree-memory-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    object-position: center center;
+    image-rendering: pixelated;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .closetthree-memory-stage {
+        max-height: min(52vh, 420px);
+    }
+
+    .closetthree-memory-hud {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .closetthree-memory-actions {
+        flex-direction: column;
+    }
+}
+
+/* ============================
+   closet four memory vignette (apartment four)
+   categorized + systemized; controlled, precise, subtly uncanny.
+   pale taupe-cream backdrop with a faintly archival edge.
+   ============================ */
+#closetfour-memory-overlay {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    inset: 0;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: min(24px, 4vw);
+    box-sizing: border-box;
+}
+
+#closetfour-memory-overlay.active {
+    display: flex;
+}
+
+.closetfour-memory-backdrop {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 56% 36% at 50% 46%, rgba(228, 220, 200, 0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 18% 22%, rgba(192, 180, 152, 0.14) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 82% 22%, rgba(192, 180, 152, 0.14) 0%, transparent 65%),
+        radial-gradient(ellipse 90% 70% at 50% 100%, rgba(20, 18, 14, 0.65) 0%, transparent 70%),
+        linear-gradient(180deg, #2a2620 0%, #38322a 45%, #14110c 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+}
+
+.closetfour-memory-lift {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: min(720px, 96vw);
+    pointer-events: none;
+}
+
+.closetfour-memory-lift > * {
+    pointer-events: auto;
+}
+
+.closetfour-memory-hud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: min(680px, 94vw);
+}
+
+.closetfour-memory-tip {
+    flex: 1 1 220px;
+    margin: 0;
+    min-height: 2.6em;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', monospace;
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(232, 224, 204, 0.92);
+    text-shadow: 0 1px 0 rgba(20, 18, 14, 0.7);
+    transition: opacity 0.7s ease;
+}
+
+.closetfour-memory-tip.fading {
+    opacity: 0.30;
+}
+
+.closetfour-memory-tip.surfacing {
+    color: rgba(244, 236, 220, 0.96);
+    font-style: italic;
+}
+
+.closetfour-memory-actions {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 8px;
+}
+
+.closetfour-memory-close {
+    margin: 0;
+    background: rgba(46, 38, 26, 0.72);
+    border: 1px solid rgba(216, 200, 168, 0.55);
+    color: rgba(232, 220, 196, 0.92);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.closetfour-memory-close:hover {
+    border-color: rgba(244, 236, 220, 0.85);
+    background: rgba(70, 58, 40, 0.85);
+}
+
+.closetfour-memory-stage {
+    position: relative;
+    width: 100%;
+    max-width: min(680px, 94vw);
+    aspect-ratio: 480 / 320;
+    max-height: min(62vh, 520px);
+    border: 2px solid rgba(168, 152, 124, 0.7);
+    box-shadow:
+        0 0 0 1px rgba(20, 18, 14, 0.95),
+        0 18px 56px rgba(20, 18, 14, 0.55),
+        inset 0 0 60px rgba(40, 32, 22, 0.45);
+    background: #1c1812;
+    overflow: hidden;
+}
+
+.closetfour-memory-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    object-position: center center;
+    image-rendering: pixelated;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .closetfour-memory-stage {
+        max-height: min(52vh, 420px);
+    }
+
+    .closetfour-memory-hud {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .closetfour-memory-actions {
+        flex-direction: column;
+    }
+}
+
+/* ============================
+   bathroom memory vignette (apartment four)
+   polished, sterile, subtly uncanny.
+   cool slate-blue backdrop with a faint chrome edge.
+   ============================ */
+#bathroom-memory-overlay {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    inset: 0;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: min(24px, 4vw);
+    box-sizing: border-box;
+}
+
+#bathroom-memory-overlay.active {
+    display: flex;
+}
+
+.bathroom-memory-backdrop {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 56% 36% at 50% 44%, rgba(212, 224, 232, 0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 18% 22%, rgba(176, 188, 200, 0.12) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 82% 22%, rgba(176, 188, 200, 0.12) 0%, transparent 65%),
+        radial-gradient(ellipse 90% 70% at 50% 100%, rgba(8, 10, 14, 0.70) 0%, transparent 70%),
+        linear-gradient(180deg, #1a1e22 0%, #2a3036 45%, #0a0c10 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+}
+
+.bathroom-memory-lift {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: min(720px, 96vw);
+    pointer-events: none;
+}
+
+.bathroom-memory-lift > * {
+    pointer-events: auto;
+}
+
+.bathroom-memory-hud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: min(680px, 94vw);
+}
+
+.bathroom-memory-tip {
+    flex: 1 1 220px;
+    margin: 0;
+    min-height: 2.6em;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', monospace;
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(216, 224, 232, 0.92);
+    text-shadow: 0 1px 0 rgba(8, 10, 14, 0.7);
+    transition: opacity 0.7s ease;
+}
+
+.bathroom-memory-tip.fading {
+    opacity: 0.30;
+}
+
+.bathroom-memory-tip.surfacing {
+    color: rgba(232, 240, 248, 0.96);
+    font-style: italic;
+}
+
+.bathroom-memory-actions {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 8px;
+}
+
+.bathroom-memory-close {
+    margin: 0;
+    background: rgba(28, 32, 38, 0.72);
+    border: 1px solid rgba(184, 196, 208, 0.55);
+    color: rgba(216, 224, 232, 0.92);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.bathroom-memory-close:hover {
+    border-color: rgba(232, 240, 248, 0.85);
+    background: rgba(48, 56, 64, 0.85);
+}
+
+.bathroom-memory-stage {
+    position: relative;
+    width: 100%;
+    max-width: min(680px, 94vw);
+    aspect-ratio: 480 / 320;
+    max-height: min(62vh, 520px);
+    border: 2px solid rgba(140, 152, 164, 0.72);
+    box-shadow:
+        0 0 0 1px rgba(8, 10, 14, 0.95),
+        0 18px 56px rgba(8, 10, 14, 0.55),
+        inset 0 0 60px rgba(20, 26, 34, 0.45);
+    background: #0e1216;
+    overflow: hidden;
+}
+
+.bathroom-memory-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    object-position: center center;
+    image-rendering: pixelated;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .bathroom-memory-stage {
+        max-height: min(52vh, 420px);
+    }
+
+    .bathroom-memory-hud {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .bathroom-memory-actions {
+        flex-direction: column;
+    }
+}
+
+/* ============================
+   living + kitchen memory vignette (apartment four)
+   controlled, sparse, suspended in time. cool overlit room with a single
+   muted-blue television glow on the right.
+   ============================ */
+#livingkitchen-memory-overlay {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    inset: 0;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: min(24px, 4vw);
+    box-sizing: border-box;
+}
+
+#livingkitchen-memory-overlay.active {
+    display: flex;
+}
+
+.livingkitchen-memory-backdrop {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 56% 36% at 50% 44%, rgba(216, 220, 208, 0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 78% 36%, rgba(120, 152, 176, 0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 22% 24%, rgba(196, 188, 168, 0.12) 0%, transparent 65%),
+        radial-gradient(ellipse 90% 70% at 50% 100%, rgba(12, 14, 18, 0.70) 0%, transparent 70%),
+        linear-gradient(180deg, #1c1e22 0%, #2a2e34 45%, #0c0e12 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+}
+
+.livingkitchen-memory-lift {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: min(720px, 96vw);
+    pointer-events: none;
+}
+
+.livingkitchen-memory-lift > * {
+    pointer-events: auto;
+}
+
+.livingkitchen-memory-hud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: min(680px, 94vw);
+}
+
+.livingkitchen-memory-tip {
+    flex: 1 1 220px;
+    margin: 0;
+    min-height: 2.6em;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', monospace;
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(220, 224, 224, 0.92);
+    text-shadow: 0 1px 0 rgba(12, 14, 18, 0.7);
+    transition: opacity 0.7s ease;
+}
+
+.livingkitchen-memory-tip.fading {
+    opacity: 0.30;
+}
+
+.livingkitchen-memory-tip.surfacing {
+    color: rgba(232, 240, 244, 0.96);
+    font-style: italic;
+}
+
+.livingkitchen-memory-actions {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 8px;
+}
+
+.livingkitchen-memory-close {
+    margin: 0;
+    background: rgba(28, 32, 38, 0.72);
+    border: 1px solid rgba(180, 196, 208, 0.55);
+    color: rgba(216, 224, 232, 0.92);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.livingkitchen-memory-close:hover {
+    border-color: rgba(232, 240, 244, 0.85);
+    background: rgba(48, 56, 64, 0.85);
+}
+
+.livingkitchen-memory-stage {
+    position: relative;
+    width: 100%;
+    max-width: min(680px, 94vw);
+    aspect-ratio: 480 / 320;
+    max-height: min(62vh, 520px);
+    border: 2px solid rgba(140, 152, 164, 0.72);
+    box-shadow:
+        0 0 0 1px rgba(8, 10, 14, 0.95),
+        0 18px 56px rgba(8, 10, 14, 0.55),
+        inset 0 0 60px rgba(20, 26, 34, 0.45);
+    background: #0e1216;
+    overflow: hidden;
+}
+
+.livingkitchen-memory-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    object-position: center center;
+    image-rendering: pixelated;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .livingkitchen-memory-stage {
+        max-height: min(52vh, 420px);
+    }
+
+    .livingkitchen-memory-hud {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .livingkitchen-memory-actions {
+        flex-direction: column;
+    }
+}
+
+/* ============================
+   front closet memory vignette (apartment four)
+   the final threshold preserved. cool muted entryway with a single
+   warm bleed of hallway light from the left edge of the stage.
+   ============================ */
+#frontcloset-memory-overlay {
+    display: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 100vh !important;
+    margin: 0 !important;
+    inset: 0;
+    z-index: 200;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: min(24px, 4vw);
+    box-sizing: border-box;
+}
+
+#frontcloset-memory-overlay.active {
+    display: flex;
+}
+
+.frontcloset-memory-backdrop {
+    position: fixed;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 56% 36% at 50% 44%, rgba(220, 214, 200, 0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 18% 28%, rgba(200, 168, 120, 0.18) 0%, transparent 65%),
+        radial-gradient(ellipse 80% 60% at 82% 24%, rgba(184, 172, 152, 0.10) 0%, transparent 65%),
+        radial-gradient(ellipse 90% 70% at 50% 100%, rgba(12, 14, 18, 0.70) 0%, transparent 70%),
+        linear-gradient(180deg, #1c1a16 0%, #2a2620 45%, #0c0a08 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 0;
+}
+
+.frontcloset-memory-lift {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: min(720px, 96vw);
+    pointer-events: none;
+}
+
+.frontcloset-memory-lift > * {
+    pointer-events: auto;
+}
+
+.frontcloset-memory-hud {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    width: 100%;
+    max-width: min(680px, 94vw);
+}
+
+.frontcloset-memory-tip {
+    flex: 1 1 220px;
+    margin: 0;
+    min-height: 2.6em;
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', monospace;
+    font-size: 13px;
+    line-height: 1.45;
+    color: rgba(228, 222, 208, 0.92);
+    text-shadow: 0 1px 0 rgba(12, 10, 8, 0.7);
+    transition: opacity 0.7s ease;
+}
+
+.frontcloset-memory-tip.fading {
+    opacity: 0.30;
+}
+
+.frontcloset-memory-tip.surfacing {
+    color: rgba(244, 236, 220, 0.96);
+    font-style: italic;
+}
+
+.frontcloset-memory-actions {
+    flex: 0 0 auto;
+    display: flex;
+    gap: 8px;
+}
+
+.frontcloset-memory-close {
+    margin: 0;
+    background: rgba(28, 24, 18, 0.72);
+    border: 1px solid rgba(216, 192, 152, 0.55);
+    color: rgba(228, 218, 196, 0.92);
+    font-family: 'Pixel Operator', 'VT323', 'Pixelify Sans', sans-serif;
+    font-size: 12px;
+    padding: 8px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background-color 0.15s;
+}
+
+.frontcloset-memory-close:hover {
+    border-color: rgba(244, 232, 200, 0.85);
+    background: rgba(60, 48, 32, 0.85);
+}
+
+.frontcloset-memory-stage {
+    position: relative;
+    width: 100%;
+    max-width: min(680px, 94vw);
+    aspect-ratio: 480 / 320;
+    max-height: min(62vh, 520px);
+    border: 2px solid rgba(168, 152, 124, 0.72);
+    box-shadow:
+        0 0 0 1px rgba(8, 8, 10, 0.95),
+        0 18px 56px rgba(8, 8, 10, 0.55),
+        inset 0 0 60px rgba(40, 32, 22, 0.45);
+    background: #14110c;
+    overflow: hidden;
+}
+
+.frontcloset-memory-embed {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    object-fit: contain;
+    object-position: center center;
+    image-rendering: pixelated;
+    background: transparent;
+}
+
+@media (max-width: 600px) {
+    .frontcloset-memory-stage {
+        max-height: min(52vh, 420px);
+    }
+
+    .frontcloset-memory-hud {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .frontcloset-memory-actions {
+        flex-direction: column;
+    }
+}
+
+/* ============================================================
+   apartment four: lucid memory pass.
+   uniformly soften the stage edges (less hard rectangle, more
+   "memory window") and add a tender warm outer glow to all
+   apartment-four memory stages. tip text gets a subtle softening
+   so it reads as remembered rather than overlaid.
+   ============================================================ */
+
+.bedroomone-memory-stage,
+.bedroomtwo-memory-stage,
+.bedroomthree-memory-stage,
+.closetone-memory-stage,
+.closettwo-memory-stage,
+.closetthree-memory-stage,
+.closetfour-memory-stage,
+.bathroom-memory-stage,
+.livingkitchen-memory-stage,
+.frontcloset-memory-stage {
+    border-color: rgba(220, 200, 160, 0.42) !important;
+    border-radius: 6px;
+    box-shadow:
+        0 0 0 1px rgba(40, 32, 22, 0.65),
+        0 0 36px rgba(252, 224, 168, 0.12),
+        0 22px 64px rgba(20, 18, 14, 0.55),
+        inset 0 0 80px rgba(252, 224, 168, 0.06),
+        inset 0 0 28px rgba(40, 36, 28, 0.32) !important;
+    transition: box-shadow 1200ms ease-in-out;
+}
+
+.bedroomone-memory-tip,
+.bedroomtwo-memory-tip,
+.bedroomthree-memory-tip,
+.closetone-memory-tip,
+.closettwo-memory-tip,
+.closetthree-memory-tip,
+.closetfour-memory-tip,
+.bathroom-memory-tip,
+.livingkitchen-memory-tip,
+.frontcloset-memory-tip {
+    text-shadow: 0 0 6px rgba(252, 224, 168, 0.18);
+    transition: opacity 360ms ease-in-out, color 600ms ease-in-out, text-shadow 600ms ease-in-out;
+}

@@ -515,6 +515,11 @@
   <!-- a humid floor pool reflecting the fluorescent above (just a thin band) -->
   <ellipse cx="240" cy="290" rx="220" ry="12" fill="url(#b2tHumidGlow)"/>
 
+  <!-- soft warm light drift overlay (apt 2 tone: transitional, slightly cooler/slower) -->
+  <rect width="480" height="320" fill="#f0d4ac" opacity="0.05" pointer-events="none">
+    <animate attributeName="opacity" values="0.04;0.09;0.04" dur="20s" repeatCount="indefinite"/>
+  </rect>
+
   <!-- ============= INTERACTION HOTSPOTS (transparent, on top of everything) ============= -->
   <g id="b2t-hotspots">
     <rect id="hit-mirror"      x="116" y="44"  width="248" height="168" fill="transparent" pointer-events="all"/>

@@ -1,0 +1,463 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" shape-rendering="crispEdges">
+  <title>Bedroom one memory fragment (apartment four) - preserved, sharp, lonely</title>
+  <desc>Looking straight at the bedside corner of a carefully made bedroom: a low pale walnut nightstand with a clean cylindrical lamp, a framed photograph placed dead-center, a small modern alarm clock with frozen hands, and a single book squared to the table edge. To the right, the corner of a bed with a smooth taupe duvet, two stacked cream pillows, and a folded dusty-teal throw at the foot. To the left, a cropped window with sheer curtains that have not moved once and a flat, unmoving sky behind them. The room is softly overlit, the lamp pool is too perfectly elliptical, the photograph's glass holds a reflection of the room that is suspiciously sharp. Very strong negative wall space. Nothing animates. The room reads as a memory still being maintained.</desc>
+
+  <defs>
+    <linearGradient id="bo4Wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#efe9dc"/>
+      <stop offset="60%"  stop-color="#e2dccc"/>
+      <stop offset="100%" stop-color="#c4bcab"/>
+    </linearGradient>
+    <linearGradient id="bo4Floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#c8b89c"/>
+      <stop offset="100%" stop-color="#8a7a60"/>
+    </linearGradient>
+
+    <linearGradient id="bo4Bedside" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#b89878"/>
+      <stop offset="100%" stop-color="#7a5e44"/>
+    </linearGradient>
+    <linearGradient id="bo4BedsideTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#cfa882"/>
+      <stop offset="100%" stop-color="#8e6c4c"/>
+    </linearGradient>
+
+    <linearGradient id="bo4Frame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#e8e2d4"/>
+      <stop offset="100%" stop-color="#b0a890"/>
+    </linearGradient>
+    <linearGradient id="bo4Comforter" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#d2cabc"/>
+      <stop offset="100%" stop-color="#a89e8c"/>
+    </linearGradient>
+    <linearGradient id="bo4Pillow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f4ede0"/>
+      <stop offset="100%" stop-color="#c8bea8"/>
+    </linearGradient>
+    <linearGradient id="bo4Throw" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#aab8be"/>
+      <stop offset="100%" stop-color="#6a7c84"/>
+    </linearGradient>
+
+    <linearGradient id="bo4Shade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f4ecd8"/>
+      <stop offset="100%" stop-color="#c8b896"/>
+    </linearGradient>
+    <!-- a deliberately *too clean* lamp pool: tighter falloff, sharper rim -->
+    <radialGradient id="bo4LampPool" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#f8e8c4" stop-opacity="0.42"/>
+      <stop offset="60%"  stop-color="#e8c890" stop-opacity="0.16"/>
+      <stop offset="92%"  stop-color="#e8c890" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#e8c890" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="bo4Sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#d8e0e4"/>
+      <stop offset="100%" stop-color="#a8b4bc"/>
+    </linearGradient>
+    <linearGradient id="bo4Sheer" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f4eddc"/>
+      <stop offset="100%" stop-color="#c8c0a8"/>
+    </linearGradient>
+
+    <linearGradient id="bo4SidesL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#3a342c" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#3a342c" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="bo4SidesR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%"   stop-color="#3a342c" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#3a342c" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="bo4Vignette" cx="50%" cy="55%" r="72%">
+      <stop offset="58%"  stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1c1810" stop-opacity="0.40"/>
+    </radialGradient>
+
+    <clipPath id="bo4WindowClip">
+      <rect x="28" y="48" width="98" height="124"/>
+    </clipPath>
+
+    <!-- soft, flat shadow under the table + bedframe -->
+    <filter id="bo4SoftShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+  </defs>
+
+  <!-- ============= WALL ============= -->
+  <rect width="480" height="320" fill="url(#bo4Wall)"/>
+
+  <!-- a single faint horizontal picture rail near the top - clean architecture -->
+  <rect x="0" y="78" width="480" height="1" fill="#a89878" opacity="0.32" pointer-events="none"/>
+  <rect x="0" y="79" width="480" height="1" fill="#f4ecd8" opacity="0.38" pointer-events="none"/>
+
+  <!-- ceiling line -->
+  <rect x="0" y="0" width="480" height="2" fill="#7a6c54" opacity="0.45" pointer-events="none"/>
+
+  <!-- baseboard at floor join (clean, modern, no skirting board ornament) -->
+  <rect x="0" y="236" width="480" height="2" fill="#7a6c54" opacity="0.55" pointer-events="none"/>
+  <rect x="0" y="234" width="480" height="2" fill="#9c8c70" opacity="0.45" pointer-events="none"/>
+
+  <!-- ============= WINDOW (cropped at left, sheer curtains, frozen sky) ============= -->
+  <g id="bo4-window-frame" pointer-events="none">
+    <!-- outer frame (matte off-white, modern) -->
+    <rect x="22" y="42" width="110" height="138" fill="#d8d0bc"/>
+    <rect x="24" y="44" width="106" height="134" fill="#e8e2d0"/>
+  </g>
+
+  <!-- glass area: a single, perfectly still flat sky -->
+  <g clip-path="url(#bo4WindowClip)">
+    <rect x="28" y="48" width="98" height="124" fill="url(#bo4Sky)"/>
+    <!-- a single distant building silhouette - clean, geometric, no smoke, no birds -->
+    <rect x="28" y="138" width="98" height="34" fill="#7a8088" opacity="0.85"/>
+    <rect x="28" y="138" width="98" height="2"  fill="#9aa0a8" opacity="0.65"/>
+    <!-- a couple of distant lit windows (precise, evenly spaced, unmoving) -->
+    <rect x="40"  y="148" width="2" height="2" fill="#dce4ec" opacity="0.85"/>
+    <rect x="52"  y="148" width="2" height="2" fill="#dce4ec" opacity="0.85"/>
+    <rect x="64"  y="148" width="2" height="2" fill="#dce4ec" opacity="0.85"/>
+    <rect x="76"  y="148" width="2" height="2" fill="#dce4ec" opacity="0.85"/>
+    <rect x="88"  y="148" width="2" height="2" fill="#dce4ec" opacity="0.85"/>
+    <rect x="100" y="148" width="2" height="2" fill="#dce4ec" opacity="0.85"/>
+    <rect x="112" y="148" width="2" height="2" fill="#dce4ec" opacity="0.85"/>
+    <rect x="40"  y="156" width="2" height="2" fill="#dce4ec" opacity="0.55"/>
+    <rect x="64"  y="156" width="2" height="2" fill="#dce4ec" opacity="0.55"/>
+    <rect x="88"  y="156" width="2" height="2" fill="#dce4ec" opacity="0.55"/>
+    <rect x="112" y="156" width="2" height="2" fill="#dce4ec" opacity="0.55"/>
+  </g>
+
+  <!-- window mullion + sash -->
+  <g pointer-events="none">
+    <rect x="22" y="108" width="110" height="2" fill="#a89878"/>
+    <rect x="74" y="42"  width="2"   height="138" fill="#a89878"/>
+  </g>
+
+  <!-- sheer curtains pulled symmetrically at the sides (deliberately *frozen*) -->
+  <g pointer-events="none" opacity="0.65">
+    <rect x="24" y="44" width="14" height="134" fill="url(#bo4Sheer)"/>
+    <rect x="24" y="44" width="2"  height="134" fill="#fff4d8" opacity="0.65"/>
+    <rect x="36" y="44" width="2"  height="134" fill="#a89878" opacity="0.40"/>
+    <rect x="116" y="44" width="14" height="134" fill="url(#bo4Sheer)"/>
+    <rect x="128" y="44" width="2"  height="134" fill="#a89878" opacity="0.40"/>
+    <rect x="116" y="44" width="2"  height="134" fill="#fff4d8" opacity="0.65"/>
+  </g>
+
+  <!-- window sill (clean, square, modern) -->
+  <rect x="20" y="180" width="114" height="3" fill="#a89878" pointer-events="none"/>
+  <rect x="20" y="183" width="114" height="2" fill="#7a6c54" pointer-events="none"/>
+
+  <!-- ============= FLOOR ============= -->
+  <rect x="0" y="238" width="480" height="82" fill="url(#bo4Floor)"/>
+  <rect x="0" y="238" width="480" height="2"  fill="#7a6a52"/>
+  <!-- modern, very subtle wood plank seams (less rustic than apt 3) -->
+  <g pointer-events="none" opacity="0.22">
+    <rect x="0"   y="262" width="480" height="1" fill="#3a2c18"/>
+    <rect x="0"   y="288" width="480" height="1" fill="#3a2c18"/>
+    <rect x="78"  y="238" width="1"   height="82" fill="#3a2c18" opacity="0.55"/>
+    <rect x="186" y="238" width="1"   height="82" fill="#3a2c18" opacity="0.55"/>
+    <rect x="294" y="238" width="1"   height="82" fill="#3a2c18" opacity="0.55"/>
+    <rect x="402" y="238" width="1"   height="82" fill="#3a2c18" opacity="0.55"/>
+  </g>
+
+  <!-- a very small wall outlet (the kind of detail "carefully maintained" rooms have) -->
+  <g pointer-events="none">
+    <rect x="350" y="222" width="14" height="11" fill="#e8e0d0"/>
+    <rect x="350" y="222" width="14" height="1"  fill="#f4ecdc"/>
+    <rect x="353" y="226" width="2"  height="3" fill="#3a342c" opacity="0.7"/>
+    <rect x="359" y="226" width="2"  height="3" fill="#3a342c" opacity="0.7"/>
+    <rect x="356" y="231" width="2"  height="1" fill="#3a342c" opacity="0.55"/>
+  </g>
+
+  <!-- ============= BED (cropped at right, low platform, smooth bedding) ============= -->
+  <g id="bo4-bed" pointer-events="none">
+    <!-- soft flat shadow under the bed frame -->
+    <ellipse cx="392" cy="262" rx="92" ry="4" fill="#1a1610" opacity="0.32" filter="url(#bo4SoftShadow)"/>
+
+    <!-- ============ HEADBOARD (slim modern panel rising at the back) ============ -->
+    <rect x="416" y="118" width="64" height="68" fill="#d8cfb8"/>
+    <rect x="416" y="118" width="64" height="2"  fill="#ecdfc0"/>
+    <rect x="416" y="118" width="2"  height="68" fill="#ecdfc0"/>
+    <rect x="416" y="184" width="64" height="2"  fill="#9c8c70"/>
+    <!-- one clean horizontal rail line -->
+    <rect x="418" y="148" width="62" height="1" fill="#9c8c70" opacity="0.55"/>
+
+    <!-- ============ BED FRAME / PLATFORM ============ -->
+    <rect x="304" y="212" width="176" height="48" fill="url(#bo4Frame)"/>
+    <rect x="304" y="212" width="176" height="2"  fill="#f0e8d4"/>
+    <rect x="304" y="258" width="176" height="2"  fill="#7a6c54" opacity="0.85"/>
+    <!-- a single clean horizontal seam -->
+    <rect x="304" y="232" width="176" height="1"  fill="#9c8c70" opacity="0.55"/>
+
+    <!-- two slim modern legs visible at the corner -->
+    <rect x="306" y="258" width="6" height="14" fill="#7a6c54"/>
+    <rect x="306" y="258" width="2" height="14" fill="#a89878"/>
+
+    <!-- ============ MATTRESS ============ -->
+    <rect x="306" y="184" width="174" height="30" fill="#ebe6d8"/>
+    <rect x="306" y="184" width="174" height="2"  fill="#f8f2e4"/>
+    <rect x="306" y="212" width="174" height="2"  fill="#9c8c70" opacity="0.85"/>
+
+    <!-- ============ COMFORTER (smooth, draped just over the side) ============ -->
+    <rect x="306" y="194" width="174" height="20" fill="url(#bo4Comforter)"/>
+    <rect x="306" y="194" width="174" height="2"  fill="#dad2c4"/>
+    <!-- a very faint seam line down the middle (folded turn-down) -->
+    <rect x="306" y="200" width="174" height="1" fill="#a89e8c" opacity="0.55"/>
+    <rect x="306" y="208" width="174" height="1" fill="#7a6c54" opacity="0.40"/>
+    <!-- tiny side drape over the bed frame edge -->
+    <rect x="306" y="214" width="174" height="6" fill="url(#bo4Comforter)"/>
+    <rect x="306" y="214" width="174" height="1" fill="#dad2c4"/>
+
+    <!-- ============ TURN-DOWN (the top sheet folded back at the head end) ============ -->
+    <!-- a crisp, sharp band visible just below the pillows -->
+    <rect x="384" y="194" width="96" height="6" fill="#f4ede0"/>
+    <rect x="384" y="194" width="96" height="2" fill="#fff8e8"/>
+    <rect x="384" y="200" width="96" height="1" fill="#9c8c70" opacity="0.55"/>
+
+    <!-- ============ STACKED PILLOWS (head of bed, right side, very neat) ============ -->
+    <!-- back pillow (taller, behind) -->
+    <rect x="402" y="148" width="78" height="40" fill="url(#bo4Pillow)"/>
+    <rect x="402" y="148" width="78" height="2"  fill="#fcf4e0"/>
+    <rect x="402" y="186" width="78" height="2"  fill="#a89878" opacity="0.85"/>
+    <rect x="402" y="148" width="2"  height="40" fill="#fcf4e0"/>
+    <!-- a very subtle vertical crease line -->
+    <rect x="438" y="150" width="1" height="36" fill="#a89878" opacity="0.45"/>
+
+    <!-- front pillow (shorter, set forward, perfectly aligned with the back one) -->
+    <rect x="406" y="158" width="74" height="32" fill="#f4ede0"/>
+    <rect x="406" y="158" width="74" height="2"  fill="#fcf4e0"/>
+    <rect x="406" y="188" width="74" height="2"  fill="#a89878" opacity="0.85"/>
+    <rect x="406" y="158" width="2"  height="32" fill="#fcf4e0"/>
+    <rect x="438" y="160" width="1"  height="28" fill="#a89878" opacity="0.40"/>
+
+    <!-- ============ FOLDED THROW (foot of bed, left end, dusty teal) ============ -->
+    <g id="bo4-throw">
+      <!-- main folded block -->
+      <rect x="312" y="186" width="58" height="22" fill="url(#bo4Throw)"/>
+      <rect x="312" y="186" width="58" height="2"  fill="#bccad0"/>
+      <rect x="312" y="206" width="58" height="2"  fill="#4e5e66" opacity="0.85"/>
+      <!-- visible folds (thin horizontal lines, evenly spaced - too perfect) -->
+      <rect x="312" y="192" width="58" height="1" fill="#4e5e66" opacity="0.45"/>
+      <rect x="312" y="198" width="58" height="1" fill="#4e5e66" opacity="0.45"/>
+      <rect x="312" y="202" width="58" height="1" fill="#4e5e66" opacity="0.40"/>
+      <!-- a tiny tasseled / fringed edge at the front -->
+      <rect x="313" y="208" width="1" height="2" fill="#6a7c84"/>
+      <rect x="316" y="208" width="1" height="2" fill="#6a7c84"/>
+      <rect x="319" y="208" width="1" height="2" fill="#6a7c84"/>
+      <rect x="322" y="208" width="1" height="2" fill="#6a7c84"/>
+      <rect x="325" y="208" width="1" height="2" fill="#6a7c84"/>
+      <rect x="328" y="208" width="1" height="2" fill="#6a7c84"/>
+      <rect x="331" y="208" width="1" height="2" fill="#6a7c84"/>
+      <rect x="334" y="208" width="1" height="2" fill="#6a7c84"/>
+      <rect x="337" y="208" width="1" height="2" fill="#6a7c84"/>
+      <rect x="340" y="208" width="1" height="2" fill="#6a7c84"/>
+      <rect x="343" y="208" width="1" height="2" fill="#6a7c84"/>
+      <rect x="346" y="208" width="1" height="2" fill="#6a7c84"/>
+      <rect x="349" y="208" width="1" height="2" fill="#6a7c84"/>
+      <rect x="352" y="208" width="1" height="2" fill="#6a7c84"/>
+      <rect x="355" y="208" width="1" height="2" fill="#6a7c84"/>
+      <rect x="358" y="208" width="1" height="2" fill="#6a7c84"/>
+      <rect x="361" y="208" width="1" height="2" fill="#6a7c84"/>
+      <rect x="364" y="208" width="1" height="2" fill="#6a7c84"/>
+      <rect x="367" y="208" width="1" height="2" fill="#6a7c84"/>
+    </g>
+  </g>
+
+  <!-- ============= BEDSIDE TABLE (low, modern, organized) ============= -->
+  <g id="bo4-bedside" pointer-events="none">
+    <!-- soft flat shadow underneath -->
+    <ellipse cx="226" cy="248" rx="74" ry="4" fill="#1a1610" opacity="0.30" filter="url(#bo4SoftShadow)"/>
+
+    <!-- table top -->
+    <rect x="158" y="172" width="136" height="3" fill="url(#bo4BedsideTop)"/>
+    <rect x="158" y="175" width="136" height="2" fill="#5a4030"/>
+    <!-- table body -->
+    <rect x="160" y="177" width="132" height="62" fill="url(#bo4Bedside)"/>
+    <rect x="160" y="177" width="2"   height="62" fill="#cca888"/>
+    <rect x="290" y="177" width="2"   height="62" fill="#3a2818"/>
+    <rect x="160" y="237" width="132" height="2"  fill="#3a2818"/>
+    <!-- a single clean drawer seam -->
+    <rect x="162" y="208" width="128" height="1" fill="#3a2818" opacity="0.65"/>
+    <!-- minimalist drawer pull (a thin slim recessed bar) -->
+    <rect x="216" y="200" width="20" height="2" fill="#3a2818" opacity="0.75"/>
+    <rect x="216" y="218" width="20" height="2" fill="#3a2818" opacity="0.75"/>
+
+    <!-- two slim modern legs -->
+    <rect x="164" y="239" width="6" height="12" fill="#3a2818"/>
+    <rect x="164" y="239" width="2" height="12" fill="#7a5a40"/>
+    <rect x="282" y="239" width="6" height="12" fill="#3a2818"/>
+    <rect x="282" y="239" width="2" height="12" fill="#7a5a40"/>
+  </g>
+
+  <!-- ============= LAMP POOL (deliberately *too perfectly* elliptical) ============= -->
+  <ellipse cx="200" cy="172" rx="58" ry="14" fill="url(#bo4LampPool)" pointer-events="none"/>
+  <!-- crisp inner highlight on the table top right under the lamp base -->
+  <ellipse cx="200" cy="172" rx="22" ry="3" fill="#fff8e0" opacity="0.45" pointer-events="none"/>
+
+  <!-- ============= LAMP (clean cylindrical drum shade, slim post, round base) ============= -->
+  <g id="bo4-lamp" pointer-events="none">
+    <!-- shade -->
+    <rect x="178" y="92" width="44" height="46" fill="url(#bo4Shade)"/>
+    <rect x="178" y="92" width="44" height="2"  fill="#fff0c8"/>
+    <rect x="178" y="138" width="44" height="2" fill="#7a5a3a"/>
+    <rect x="178" y="92" width="2"  height="46" fill="#fff0c8"/>
+    <rect x="220" y="92" width="2"  height="46" fill="#7a5a3a"/>
+    <!-- a faint warm glow at the bottom rim of the shade -->
+    <rect x="180" y="136" width="40" height="2" fill="#fde6a8" opacity="0.85"/>
+    <!-- post -->
+    <rect x="198" y="138" width="4" height="30" fill="#3a2818"/>
+    <rect x="198" y="138" width="1" height="30" fill="#7a5a40"/>
+    <!-- base (round, modern) -->
+    <ellipse cx="200" cy="170" rx="14" ry="3" fill="#2a1c10"/>
+    <ellipse cx="200" cy="169" rx="13" ry="2" fill="#5a4028"/>
+    <ellipse cx="200" cy="168" rx="11" ry="1" fill="#7a5a3a" opacity="0.85"/>
+  </g>
+
+  <!-- ============= FRAMED PHOTOGRAPH (carefully placed, suspiciously crisp reflection) ============= -->
+  <g id="bo4-photo" pointer-events="none">
+    <!-- frame (matte charcoal, exactly square to the table edge) -->
+    <rect x="234" y="138" width="32" height="38" fill="#2a2a2e"/>
+    <rect x="234" y="138" width="32" height="2"  fill="#4a4a52"/>
+    <rect x="234" y="174" width="32" height="2"  fill="#0a0a0e"/>
+    <rect x="234" y="138" width="2"  height="38" fill="#4a4a52"/>
+    <rect x="264" y="138" width="2"  height="38" fill="#0a0a0e"/>
+    <!-- inner mat -->
+    <rect x="237" y="141" width="26" height="32" fill="#e8e2d0"/>
+    <!-- the image: a soft pale silhouette of a small figure under a flat sky -->
+    <rect x="239" y="143" width="22" height="20" fill="#a8b8c0"/>
+    <rect x="239" y="143" width="22" height="6"  fill="#bcc8cc"/>
+    <!-- horizon line -->
+    <rect x="239" y="158" width="22" height="1" fill="#5a6a72" opacity="0.7"/>
+    <!-- a small still figure -->
+    <rect x="248" y="152" width="3" height="8" fill="#3a4048"/>
+    <rect x="248" y="151" width="3" height="2" fill="#3a4048"/>
+    <!-- caption strip -->
+    <rect x="239" y="165" width="22" height="8" fill="#e8e2d0"/>
+    <rect x="241" y="168" width="6" height="1" fill="#3a342c" opacity="0.55"/>
+    <rect x="249" y="168" width="6" height="1" fill="#3a342c" opacity="0.55"/>
+    <rect x="241" y="170" width="10" height="1" fill="#3a342c" opacity="0.40"/>
+
+    <!-- a tiny bottom-corner reflection of the room in the glass  too sharp,
+         contains a perfect miniature of the lamp + bedside, deliberately
+         readable. this is the magical-realism beat. -->
+    <g opacity="0.40">
+      <!-- a small ghost of the bedside table edge -->
+      <rect x="240" y="160" width="20" height="3" fill="#7a5a3a"/>
+      <!-- a small ghost of the lamp shade -->
+      <rect x="244" y="156" width="6" height="4" fill="#f4ecd8"/>
+      <!-- a tiny ghost of the alarm clock -->
+      <rect x="252" y="158" width="4" height="2" fill="#d8d2c4"/>
+    </g>
+    <!-- a very soft single specular highlight on the glass -->
+    <rect x="240" y="142" width="2" height="14" fill="#ffffff" opacity="0.18"/>
+  </g>
+
+  <!-- ============= ALARM CLOCK (small, modern, hands frozen) ============= -->
+  <g id="bo4-clock" pointer-events="none">
+    <!-- body -->
+    <rect x="270" y="156" width="20" height="20" fill="#d8d2c4"/>
+    <rect x="270" y="156" width="20" height="2"  fill="#ecdec8"/>
+    <rect x="270" y="174" width="20" height="2"  fill="#7a6c54"/>
+    <rect x="270" y="156" width="2"  height="20" fill="#ecdec8"/>
+    <rect x="288" y="156" width="2"  height="20" fill="#7a6c54"/>
+    <!-- inner dial -->
+    <rect x="273" y="159" width="14" height="14" fill="#f4ecd8"/>
+    <rect x="273" y="159" width="14" height="1"  fill="#fff4e0"/>
+    <!-- 12, 3, 6, 9 marks -->
+    <rect x="279" y="160" width="1" height="2" fill="#3a342c"/>
+    <rect x="285" y="165" width="2" height="1" fill="#3a342c"/>
+    <rect x="279" y="170" width="1" height="2" fill="#3a342c"/>
+    <rect x="273" y="165" width="2" height="1" fill="#3a342c"/>
+    <!-- frozen hands - hour pointing toward ~10 (up-left), minute toward ~2 (up-right) -->
+    <rect x="277" y="163" width="3" height="1" fill="#3a342c"/>
+    <rect x="280" y="163" width="3" height="1" fill="#3a342c"/>
+    <rect x="280" y="166" width="1" height="2" fill="#3a342c"/>
+    <!-- center dot -->
+    <rect x="279" y="165" width="2" height="2" fill="#1a1410"/>
+    <!-- two tiny feet at the bottom -->
+    <rect x="272" y="176" width="2" height="2" fill="#5a4028"/>
+    <rect x="286" y="176" width="2" height="2" fill="#5a4028"/>
+  </g>
+
+  <!-- ============= BOOK (lying flat, square to the table edge) ============= -->
+  <g id="bo4-book" pointer-events="none">
+    <rect x="170" y="170" width="22" height="6" fill="#5a6a58"/>
+    <rect x="170" y="170" width="22" height="1" fill="#7a8878"/>
+    <rect x="170" y="174" width="22" height="2" fill="#3a4838"/>
+    <rect x="170" y="170" width="2"  height="6" fill="#3a4838"/>
+    <rect x="190" y="170" width="2"  height="6" fill="#7a8878"/>
+    <!-- a thin gold band on the spine (visible from above) -->
+    <rect x="172" y="172" width="18" height="1" fill="#c8a060" opacity="0.85"/>
+    <!-- a tiny title mark -->
+    <rect x="175" y="173" width="4" height="1" fill="#3a342c" opacity="0.85"/>
+    <rect x="183" y="173" width="6" height="1" fill="#3a342c" opacity="0.65"/>
+  </g>
+
+  <!-- ============= DRIFTING DUST (very slow breath, lucid-memory motion) ============= -->
+  <g pointer-events="none" opacity="0.45">
+    <ellipse cx="156" cy="106" rx="1.4" ry="1.4" fill="#fce8c8">
+      <animate attributeName="cy" values="106;103;106" dur="34s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="34s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="262" cy="86"  rx="1.2" ry="1.2" fill="#fce8c8">
+      <animate attributeName="cy" values="86;90;86" dur="42s" begin="-6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="42s" begin="-6s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="324" cy="118" rx="1.4" ry="1.4" fill="#fce8c8">
+      <animate attributeName="cy" values="118;114;118" dur="38s" begin="-12s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="38s" begin="-12s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="378" cy="92"  rx="1.2" ry="1.2" fill="#fce8c8">
+      <animate attributeName="cy" values="92;95;92" dur="46s" begin="-18s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="46s" begin="-18s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="92"  cy="208" rx="1.2" ry="1.2" fill="#fce8c8">
+      <animate attributeName="cy" values="208;205;208" dur="40s" begin="-24s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="40s" begin="-24s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- ============= LUCID MEMORY LAYER (warm bleed + breathing haze) ============= -->
+  <defs>
+    <radialGradient id="bo4WarmBleed" cx="15%" cy="30%" r="55%">
+      <stop offset="0%"   stop-color="#fce0a8" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#fce0a8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bo4Haze" cx="50%" cy="50%" r="70%">
+      <stop offset="0%"   stop-color="#fff4d4" stop-opacity="0.06"/>
+      <stop offset="60%"  stop-color="#fff4d4" stop-opacity="0.025"/>
+      <stop offset="100%" stop-color="#fff4d4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="480" height="320" fill="url(#bo4WarmBleed)" pointer-events="none">
+    <animate attributeName="opacity" values="0.78;1;0.78" dur="24s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="0" y="0" width="480" height="320" fill="url(#bo4Haze)" pointer-events="none">
+    <animate attributeName="opacity" values="0.55;1;0.55" dur="18s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ============= EDGE DARKENING + OUTER VIGNETTE ============= -->
+  <rect x="0"   y="0" width="38" height="320" fill="url(#bo4SidesL)" pointer-events="none"/>
+  <rect x="442" y="0" width="38" height="320" fill="url(#bo4SidesR)" pointer-events="none"/>
+  <rect x="0" y="0" width="480" height="320" fill="url(#bo4Vignette)" pointer-events="none"/>
+
+  <!-- ============= INTERACTIVE HOTSPOTS (placed last, transparent) ============= -->
+  <g id="bo4-hotspots" fill="transparent" stroke="none">
+    <rect id="hit-curtain"   x="22"  y="42"  width="20"  height="138"/>
+    <rect id="hit-window"    x="42"  y="42"  width="74"  height="138"/>
+    <rect id="hit-curtain-r" x="116" y="42"  width="16"  height="138"/>
+    <rect id="hit-sill"      x="20"  y="180" width="114" height="6"/>
+    <rect id="hit-outlet"    x="350" y="222" width="14"  height="12"/>
+    <rect id="hit-headboard" x="416" y="118" width="64"  height="68"/>
+    <rect id="hit-pillows"   x="402" y="148" width="78"  height="44"/>
+    <rect id="hit-comforter" x="306" y="194" width="174" height="22"/>
+    <rect id="hit-throw"     x="312" y="184" width="58"  height="26"/>
+    <rect id="hit-frame"     x="304" y="216" width="176" height="46"/>
+    <rect id="hit-bed"       x="304" y="118" width="176" height="156"/>
+    <rect id="hit-table"     x="158" y="172" width="136" height="80"/>
+    <rect id="hit-lamp"      x="176" y="90"  width="48"  height="84"/>
+    <rect id="hit-photo"     x="232" y="136" width="36"  height="42"/>
+    <rect id="hit-clock"     x="268" y="154" width="24"  height="26"/>
+    <rect id="hit-book"      x="168" y="168" width="26"  height="10"/>
+    <rect id="hit-floor"     x="0"   y="252" width="304" height="68"/>
+    <rect id="hit-wall"      x="138" y="2"   width="160" height="76"/>
+  </g>
+</svg>

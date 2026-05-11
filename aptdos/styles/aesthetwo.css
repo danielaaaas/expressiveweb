@@ -2086,3 +2086,39 @@ svg {
         flex-direction: column;
     }
 }
+
+/* ============================================================
+   apartment two: final atmospheric pass.
+   transitional warmth - softer/cooler outer glow than apt 1, with
+   slight dreamlike unsettling at the edges. tip text gets a faint
+   warm halo, slightly cooler than apt 1.
+   ============================================================ */
+
+.bedroom-one-memory-stage,
+.bedroom-two-memory-stage,
+.bedroom-three-memory-stage,
+.living-room-memory-stage,
+.bathroom-memory-stage,
+.kitchen-memory-stage,
+.foyer-memory-stage {
+    border-color: rgba(232, 208, 168, 0.42) !important;
+    border-radius: 6px;
+    box-shadow:
+        0 0 0 1px rgba(34, 26, 20, 0.7),
+        0 0 38px rgba(232, 196, 132, 0.15),
+        0 22px 64px rgba(18, 14, 10, 0.55),
+        inset 0 0 80px rgba(232, 208, 168, 0.07),
+        inset 0 0 28px rgba(34, 28, 22, 0.34) !important;
+    transition: box-shadow 1400ms ease-in-out;
+}
+
+.bedroom-one-memory-tip,
+.bedroom-two-memory-tip,
+.bedroom-three-memory-tip,
+.living-room-memory-tip,
+.bathroom-memory-tip,
+.kitchen-memory-tip,
+.foyer-memory-tip {
+    text-shadow: 0 0 6px rgba(232, 196, 132, 0.20);
+    transition: opacity 380ms ease-in-out, color 640ms ease-in-out, text-shadow 640ms ease-in-out;
+}

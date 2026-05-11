@@ -1084,6 +1084,11 @@
     </rect>
   </g>
 
+  <!-- soft warm light drift overlay (apt 1 tone: warmest, densest) -->
+  <rect x="32" y="20" width="416" height="284" fill="#f4d8a8" opacity="0.05" pointer-events="none">
+    <animate attributeName="opacity" values="0.04;0.10;0.04" dur="15s" repeatCount="indefinite"/>
+  </rect>
+
   <!-- ============= -->
   <!-- SIDE / EDGE DARKENING - frames the cramped feeling -->
   <!-- ============= -->

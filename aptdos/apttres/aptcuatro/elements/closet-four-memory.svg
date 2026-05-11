@@ -1,0 +1,559 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" shape-rendering="crispEdges">
+  <title>Closet four memory fragment (apartment four) - categorized + systemized</title>
+  <desc>Looking straight into a tightly framed storage closet that has been organized to a museum-grade grid. The top shelf carries a row of six identical small archival cubes, each with a label tag. The middle shelf carries three identical lidded boxes with larger labels. The bottom shelf carries a small wood drawer cabinet of six labeled drawers in a 2x3 grid, flanked by two folded linen stacks. The floor carries two large lidded storage totes side by side. Every item is in line with the next; every label sits at the same height as its neighbors. The room is softly overlit and nothing animates.</desc>
+
+  <defs>
+    <linearGradient id="co44Wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#dcd6c8"/>
+      <stop offset="65%"  stop-color="#c4bcaa"/>
+      <stop offset="100%" stop-color="#9c948a"/>
+    </linearGradient>
+    <linearGradient id="co44ShelfWood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#dcc8a4"/>
+      <stop offset="100%" stop-color="#8a7a5c"/>
+    </linearGradient>
+    <linearGradient id="co44ShelfHi" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f0e0bc"/>
+      <stop offset="100%" stop-color="#9a8868"/>
+    </linearGradient>
+
+    <linearGradient id="co44Cube" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#dcd2bc"/>
+      <stop offset="100%" stop-color="#9a8e74"/>
+    </linearGradient>
+    <linearGradient id="co44Box" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#e8e0c8"/>
+      <stop offset="100%" stop-color="#a89878"/>
+    </linearGradient>
+    <linearGradient id="co44Cabinet" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#caba9c"/>
+      <stop offset="100%" stop-color="#7a6c54"/>
+    </linearGradient>
+    <linearGradient id="co44Drawer" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#e0d6bc"/>
+      <stop offset="100%" stop-color="#9a8c70"/>
+    </linearGradient>
+    <linearGradient id="co44Linen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f0eadc"/>
+      <stop offset="100%" stop-color="#bcb098"/>
+    </linearGradient>
+    <linearGradient id="co44Tote" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#c4b8a0"/>
+      <stop offset="100%" stop-color="#7a705a"/>
+    </linearGradient>
+
+    <radialGradient id="co44Light" cx="50%" cy="0%" r="65%">
+      <stop offset="0%"   stop-color="#fff4d4" stop-opacity="0.28"/>
+      <stop offset="55%"  stop-color="#f8e8c4" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#f8e8c4" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="co44SidesL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#22242a" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#22242a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="co44SidesR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%"   stop-color="#22242a" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#22242a" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="co44Vignette" cx="50%" cy="55%" r="72%">
+      <stop offset="58%"  stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1a1c20" stop-opacity="0.40"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ============= WALL ============= -->
+  <rect width="480" height="320" fill="url(#co44Wall)"/>
+
+  <!-- ceiling shadow -->
+  <rect x="0" y="0" width="480" height="6" fill="#7a6c54" opacity="0.42" pointer-events="none"/>
+  <rect x="0" y="6" width="480" height="1" fill="#3a2e1c" opacity="0.5" pointer-events="none"/>
+
+  <!-- side closet trim -->
+  <rect x="0"   y="0" width="14" height="320" fill="#a89878" opacity="0.55" pointer-events="none"/>
+  <rect x="466" y="0" width="14" height="320" fill="#a89878" opacity="0.55" pointer-events="none"/>
+  <rect x="14"  y="0" width="1"  height="320" fill="#5a4a30" opacity="0.55" pointer-events="none"/>
+  <rect x="465" y="0" width="1"  height="320" fill="#5a4a30" opacity="0.55" pointer-events="none"/>
+
+  <!-- soft overhead light pool -->
+  <rect x="0" y="0" width="480" height="200" fill="url(#co44Light)" pointer-events="none"/>
+
+  <!-- ============= TOP SHELF: 6 identical small archival cubes (perfect row) ============= -->
+  <!-- cube positions: x = 52, 116, 180, 244, 308, 372 (each 56 wide, 8 gap) -->
+  <!-- each cube: y=30..78, label at y=58 -->
+
+  <g id="co44-cube-1-art">
+    <rect x="52"  y="78" width="56" height="2" fill="#1a160c" opacity="0.30"/>
+    <rect x="52"  y="30" width="56" height="48" fill="url(#co44Cube)"/>
+    <rect x="52"  y="30" width="56" height="48" fill="none" stroke="#5a4a30" stroke-width="1"/>
+    <rect x="52"  y="30" width="56" height="2"  fill="#f0e6cc"/>
+    <rect x="52"  y="76" width="56" height="2"  fill="#5a4a30" opacity="0.55"/>
+    <!-- label tag -->
+    <rect x="62"  y="50" width="36" height="14" fill="#dcc890"/>
+    <rect x="62"  y="50" width="36" height="14" fill="none" stroke="#7a5a36" stroke-width="0.6"/>
+    <rect x="61"  y="50" width="2"  height="2"  fill="#5a4a30"/>
+    <text id="co44-label-cube-1" x="80" y="61" text-anchor="middle"
+          font-family="'Pixelify Sans', 'VT323', monospace" font-size="9"
+          fill="#3a2e1c" font-weight="700" pointer-events="none">socks</text>
+  </g>
+
+  <g id="co44-cube-2-art">
+    <rect x="116" y="78" width="56" height="2" fill="#1a160c" opacity="0.30"/>
+    <rect x="116" y="30" width="56" height="48" fill="url(#co44Cube)"/>
+    <rect x="116" y="30" width="56" height="48" fill="none" stroke="#5a4a30" stroke-width="1"/>
+    <rect x="116" y="30" width="56" height="2"  fill="#f0e6cc"/>
+    <rect x="116" y="76" width="56" height="2"  fill="#5a4a30" opacity="0.55"/>
+    <rect x="126" y="50" width="36" height="14" fill="#dcc890"/>
+    <rect x="126" y="50" width="36" height="14" fill="none" stroke="#7a5a36" stroke-width="0.6"/>
+    <rect x="125" y="50" width="2"  height="2"  fill="#5a4a30"/>
+    <text id="co44-label-cube-2" x="144" y="61" text-anchor="middle"
+          font-family="'Pixelify Sans', 'VT323', monospace" font-size="9"
+          fill="#3a2e1c" font-weight="700" pointer-events="none">bulbs</text>
+  </g>
+
+  <g id="co44-cube-3-art">
+    <rect x="180" y="78" width="56" height="2" fill="#1a160c" opacity="0.30"/>
+    <rect x="180" y="30" width="56" height="48" fill="url(#co44Cube)"/>
+    <rect x="180" y="30" width="56" height="48" fill="none" stroke="#5a4a30" stroke-width="1"/>
+    <rect x="180" y="30" width="56" height="2"  fill="#f0e6cc"/>
+    <rect x="180" y="76" width="56" height="2"  fill="#5a4a30" opacity="0.55"/>
+    <rect x="190" y="50" width="36" height="14" fill="#dcc890"/>
+    <rect x="190" y="50" width="36" height="14" fill="none" stroke="#7a5a36" stroke-width="0.6"/>
+    <rect x="189" y="50" width="2"  height="2"  fill="#5a4a30"/>
+    <text id="co44-label-cube-3" x="208" y="61" text-anchor="middle"
+          font-family="'Pixelify Sans', 'VT323', monospace" font-size="9"
+          fill="#3a2e1c" font-weight="700" pointer-events="none">candles</text>
+  </g>
+
+  <g id="co44-cube-4-art">
+    <rect x="244" y="78" width="56" height="2" fill="#1a160c" opacity="0.30"/>
+    <rect x="244" y="30" width="56" height="48" fill="url(#co44Cube)"/>
+    <rect x="244" y="30" width="56" height="48" fill="none" stroke="#5a4a30" stroke-width="1"/>
+    <rect x="244" y="30" width="56" height="2"  fill="#f0e6cc"/>
+    <rect x="244" y="76" width="56" height="2"  fill="#5a4a30" opacity="0.55"/>
+    <rect x="254" y="50" width="36" height="14" fill="#dcc890"/>
+    <rect x="254" y="50" width="36" height="14" fill="none" stroke="#7a5a36" stroke-width="0.6"/>
+    <rect x="253" y="50" width="2"  height="2"  fill="#5a4a30"/>
+    <text id="co44-label-cube-4" x="272" y="61" text-anchor="middle"
+          font-family="'Pixelify Sans', 'VT323', monospace" font-size="9"
+          fill="#3a2e1c" font-weight="700" pointer-events="none">batteries</text>
+  </g>
+
+  <g id="co44-cube-5-art">
+    <rect x="308" y="78" width="56" height="2" fill="#1a160c" opacity="0.30"/>
+    <rect x="308" y="30" width="56" height="48" fill="url(#co44Cube)"/>
+    <rect x="308" y="30" width="56" height="48" fill="none" stroke="#5a4a30" stroke-width="1"/>
+    <rect x="308" y="30" width="56" height="2"  fill="#f0e6cc"/>
+    <rect x="308" y="76" width="56" height="2"  fill="#5a4a30" opacity="0.55"/>
+    <rect x="318" y="50" width="36" height="14" fill="#dcc890"/>
+    <rect x="318" y="50" width="36" height="14" fill="none" stroke="#7a5a36" stroke-width="0.6"/>
+    <rect x="317" y="50" width="2"  height="2"  fill="#5a4a30"/>
+    <text id="co44-label-cube-5" x="336" y="61" text-anchor="middle"
+          font-family="'Pixelify Sans', 'VT323', monospace" font-size="9"
+          fill="#3a2e1c" font-weight="700" pointer-events="none">matches</text>
+  </g>
+
+  <g id="co44-cube-6-art">
+    <rect x="372" y="78" width="56" height="2" fill="#1a160c" opacity="0.30"/>
+    <rect x="372" y="30" width="56" height="48" fill="url(#co44Cube)"/>
+    <rect x="372" y="30" width="56" height="48" fill="none" stroke="#5a4a30" stroke-width="1"/>
+    <rect x="372" y="30" width="56" height="2"  fill="#f0e6cc"/>
+    <rect x="372" y="76" width="56" height="2"  fill="#5a4a30" opacity="0.55"/>
+    <rect x="382" y="50" width="36" height="14" fill="#dcc890"/>
+    <rect x="382" y="50" width="36" height="14" fill="none" stroke="#7a5a36" stroke-width="0.6"/>
+    <rect x="381" y="50" width="2"  height="2"  fill="#5a4a30"/>
+    <text id="co44-label-cube-6" x="400" y="61" text-anchor="middle"
+          font-family="'Pixelify Sans', 'VT323', monospace" font-size="9"
+          fill="#3a2e1c" font-weight="700" pointer-events="none">tools</text>
+  </g>
+
+  <!-- ============= TOP SHELF BOARD ============= -->
+  <g id="co44-top-shelf-art" pointer-events="none">
+    <rect x="16" y="80" width="448" height="8" fill="url(#co44ShelfWood)"/>
+    <rect x="16" y="80" width="448" height="1" fill="#f0e0bc"/>
+    <rect x="16" y="87" width="448" height="1" fill="#3a2e1c"/>
+    <rect x="16" y="88" width="448" height="3" fill="#1a160c" opacity="0.32"/>
+  </g>
+
+  <!-- ============= MIDDLE SHELF: 3 identical lidded boxes ============= -->
+  <!-- box positions: x=38, 178, 318 (each 124 wide, 16 gap), y=98..162 -->
+
+  <g id="co44-box-1-art">
+    <rect x="38"  y="160" width="124" height="2" fill="#1a160c" opacity="0.30"/>
+    <rect x="38"  y="98"  width="124" height="64" fill="url(#co44Box)"/>
+    <rect x="38"  y="98"  width="124" height="64" fill="none" stroke="#7a6c54" stroke-width="1"/>
+    <!-- lid -->
+    <rect x="36"  y="96"  width="128" height="8" fill="#f0e6cc"/>
+    <rect x="36"  y="96"  width="128" height="1" fill="#fcf4e0"/>
+    <rect x="36"  y="103" width="128" height="1" fill="#7a6c54" opacity="0.7"/>
+    <!-- weave hint -->
+    <g pointer-events="none" opacity="0.28">
+      <rect x="46" y="116" width="108" height="1" fill="#9a8c70"/>
+      <rect x="46" y="126" width="108" height="1" fill="#9a8c70"/>
+      <rect x="46" y="136" width="108" height="1" fill="#9a8c70"/>
+      <rect x="46" y="146" width="108" height="1" fill="#9a8c70"/>
+    </g>
+    <!-- pull cutout -->
+    <rect x="86"  y="120" width="28" height="6" fill="#3a2e1c"/>
+    <rect x="87"  y="121" width="26" height="4" fill="#7a6c54"/>
+    <!-- label -->
+    <rect x="60"  y="134" width="80" height="20" fill="#dcc890"/>
+    <rect x="60"  y="134" width="80" height="20" fill="none" stroke="#7a5a36" stroke-width="0.7"/>
+    <rect x="59"  y="134" width="2"  height="2"  fill="#5a4a30"/>
+    <text id="co44-label-box-1" x="100" y="148" text-anchor="middle"
+          font-family="'Pixelify Sans', 'VT323', monospace" font-size="11"
+          fill="#3a2e1c" font-weight="700" pointer-events="none">spare bedding</text>
+  </g>
+
+  <g id="co44-box-2-art">
+    <rect x="178" y="160" width="124" height="2" fill="#1a160c" opacity="0.30"/>
+    <rect x="178" y="98"  width="124" height="64" fill="url(#co44Box)"/>
+    <rect x="178" y="98"  width="124" height="64" fill="none" stroke="#7a6c54" stroke-width="1"/>
+    <rect x="176" y="96"  width="128" height="8" fill="#f0e6cc"/>
+    <rect x="176" y="96"  width="128" height="1" fill="#fcf4e0"/>
+    <rect x="176" y="103" width="128" height="1" fill="#7a6c54" opacity="0.7"/>
+    <g pointer-events="none" opacity="0.28">
+      <rect x="186" y="116" width="108" height="1" fill="#9a8c70"/>
+      <rect x="186" y="126" width="108" height="1" fill="#9a8c70"/>
+      <rect x="186" y="136" width="108" height="1" fill="#9a8c70"/>
+      <rect x="186" y="146" width="108" height="1" fill="#9a8c70"/>
+    </g>
+    <rect x="226" y="120" width="28" height="6" fill="#3a2e1c"/>
+    <rect x="227" y="121" width="26" height="4" fill="#7a6c54"/>
+    <rect x="200" y="134" width="80" height="20" fill="#dcc890"/>
+    <rect x="200" y="134" width="80" height="20" fill="none" stroke="#7a5a36" stroke-width="0.7"/>
+    <rect x="199" y="134" width="2"  height="2"  fill="#5a4a30"/>
+    <text id="co44-label-box-2" x="240" y="148" text-anchor="middle"
+          font-family="'Pixelify Sans', 'VT323', monospace" font-size="11"
+          fill="#3a2e1c" font-weight="700" pointer-events="none">holiday decor</text>
+  </g>
+
+  <g id="co44-box-3-art">
+    <rect x="318" y="160" width="124" height="2" fill="#1a160c" opacity="0.30"/>
+    <rect x="318" y="98"  width="124" height="64" fill="url(#co44Box)"/>
+    <rect x="318" y="98"  width="124" height="64" fill="none" stroke="#7a6c54" stroke-width="1"/>
+    <rect x="316" y="96"  width="128" height="8" fill="#f0e6cc"/>
+    <rect x="316" y="96"  width="128" height="1" fill="#fcf4e0"/>
+    <rect x="316" y="103" width="128" height="1" fill="#7a6c54" opacity="0.7"/>
+    <g pointer-events="none" opacity="0.28">
+      <rect x="326" y="116" width="108" height="1" fill="#9a8c70"/>
+      <rect x="326" y="126" width="108" height="1" fill="#9a8c70"/>
+      <rect x="326" y="136" width="108" height="1" fill="#9a8c70"/>
+      <rect x="326" y="146" width="108" height="1" fill="#9a8c70"/>
+    </g>
+    <rect x="366" y="120" width="28" height="6" fill="#3a2e1c"/>
+    <rect x="367" y="121" width="26" height="4" fill="#7a6c54"/>
+    <rect x="340" y="134" width="80" height="20" fill="#dcc890"/>
+    <rect x="340" y="134" width="80" height="20" fill="none" stroke="#7a5a36" stroke-width="0.7"/>
+    <rect x="339" y="134" width="2"  height="2"  fill="#5a4a30"/>
+    <text id="co44-label-box-3" x="380" y="148" text-anchor="middle"
+          font-family="'Pixelify Sans', 'VT323', monospace" font-size="11"
+          fill="#3a2e1c" font-weight="700" pointer-events="none">picture frames</text>
+  </g>
+
+  <!-- ============= MIDDLE SHELF BOARD ============= -->
+  <g id="co44-mid-shelf-art" pointer-events="none">
+    <rect x="16" y="166" width="448" height="8" fill="url(#co44ShelfWood)"/>
+    <rect x="16" y="166" width="448" height="1" fill="#f0e0bc"/>
+    <rect x="16" y="173" width="448" height="1" fill="#3a2e1c"/>
+    <rect x="16" y="174" width="448" height="3" fill="#1a160c" opacity="0.32"/>
+  </g>
+
+  <!-- ============= BOTTOM SHELF: drawer cabinet (6 drawers) flanked by 2 linen stacks ============= -->
+
+  <!-- left linen stack -->
+  <g id="co44-linen-L-art">
+    <rect x="30" y="252" width="100" height="2" fill="#1a160c" opacity="0.30"/>
+    <rect x="32" y="194" width="96" height="6" fill="url(#co44Linen)"/>
+    <rect x="32" y="194" width="96" height="1" fill="#fcf4e0"/>
+    <rect x="32" y="200" width="96" height="1" fill="#9a8c70" opacity="0.55"/>
+    <rect x="32" y="202" width="96" height="6" fill="url(#co44Linen)"/>
+    <rect x="32" y="202" width="96" height="1" fill="#fcf4e0"/>
+    <rect x="32" y="208" width="96" height="1" fill="#9a8c70" opacity="0.55"/>
+    <rect x="32" y="210" width="96" height="6" fill="url(#co44Linen)"/>
+    <rect x="32" y="210" width="96" height="1" fill="#fcf4e0"/>
+    <rect x="32" y="216" width="96" height="1" fill="#9a8c70" opacity="0.55"/>
+    <rect x="32" y="218" width="96" height="6" fill="url(#co44Linen)"/>
+    <rect x="32" y="218" width="96" height="1" fill="#fcf4e0"/>
+    <rect x="32" y="224" width="96" height="1" fill="#9a8c70" opacity="0.55"/>
+    <rect x="32" y="226" width="96" height="6" fill="url(#co44Linen)"/>
+    <rect x="32" y="226" width="96" height="1" fill="#fcf4e0"/>
+    <rect x="32" y="232" width="96" height="1" fill="#9a8c70" opacity="0.55"/>
+    <rect x="32" y="234" width="96" height="6" fill="url(#co44Linen)"/>
+    <rect x="32" y="234" width="96" height="1" fill="#fcf4e0"/>
+    <rect x="32" y="240" width="96" height="1" fill="#9a8c70" opacity="0.55"/>
+    <rect x="32" y="242" width="96" height="10" fill="url(#co44Linen)"/>
+    <rect x="128" y="194" width="1" height="58" fill="#9a8c70" opacity="0.65"/>
+    <rect x="32" y="194" width="96" height="58" fill="none" stroke="#7a6c54" stroke-width="0.6" opacity="0.55"/>
+  </g>
+
+  <!-- centered drawer cabinet -->
+  <g id="co44-cabinet-art">
+    <rect x="140" y="252" width="200" height="2" fill="#1a160c" opacity="0.36"/>
+    <!-- cabinet body -->
+    <rect x="140" y="186" width="200" height="66" fill="url(#co44Cabinet)"/>
+    <rect x="140" y="186" width="200" height="66" fill="none" stroke="#3a2e1c" stroke-width="1"/>
+    <!-- top edge -->
+    <rect x="140" y="186" width="200" height="2"  fill="#e0d4b4"/>
+    <!-- middle horizontal divider -->
+    <rect x="140" y="218" width="200" height="2"  fill="#5a4a30"/>
+    <!-- vertical dividers -->
+    <rect x="206" y="188" width="2" height="62" fill="#5a4a30"/>
+    <rect x="272" y="188" width="2" height="62" fill="#5a4a30"/>
+    <!-- back inside shadow -->
+    <rect x="140" y="250" width="200" height="2" fill="#1a160c" opacity="0.55"/>
+  </g>
+
+  <!-- 6 drawer fronts (2 rows x 3 cols) -->
+  <!-- row 1 (top): y=190..216 -->
+  <!-- col centers x: 173, 239, 305 ; widths 60 -->
+  <g id="co44-drawer-1-art">
+    <rect x="143" y="190" width="62" height="26" fill="url(#co44Drawer)"/>
+    <rect x="143" y="190" width="62" height="26" fill="none" stroke="#5a4a30" stroke-width="0.7"/>
+    <rect x="143" y="190" width="62" height="1"  fill="#f0e6cc"/>
+    <!-- pull -->
+    <rect x="170" y="200" width="8"  height="3" fill="#a89878"/>
+    <rect x="170" y="200" width="8"  height="1" fill="#dcc89c"/>
+    <rect x="170" y="202" width="8"  height="1" fill="#5a4a30"/>
+    <!-- mini label -->
+    <rect x="148" y="194" width="34" height="10" fill="#dcc890"/>
+    <rect x="148" y="194" width="34" height="10" fill="none" stroke="#7a5a36" stroke-width="0.5"/>
+    <text id="co44-label-drawer-1" x="165" y="202" text-anchor="middle"
+          font-family="'Pixelify Sans', 'VT323', monospace" font-size="7"
+          fill="#3a2e1c" font-weight="700" pointer-events="none">pens</text>
+  </g>
+
+  <g id="co44-drawer-2-art">
+    <rect x="209" y="190" width="62" height="26" fill="url(#co44Drawer)"/>
+    <rect x="209" y="190" width="62" height="26" fill="none" stroke="#5a4a30" stroke-width="0.7"/>
+    <rect x="209" y="190" width="62" height="1"  fill="#f0e6cc"/>
+    <rect x="236" y="200" width="8"  height="3" fill="#a89878"/>
+    <rect x="236" y="200" width="8"  height="1" fill="#dcc89c"/>
+    <rect x="236" y="202" width="8"  height="1" fill="#5a4a30"/>
+    <rect x="214" y="194" width="34" height="10" fill="#dcc890"/>
+    <rect x="214" y="194" width="34" height="10" fill="none" stroke="#7a5a36" stroke-width="0.5"/>
+    <text id="co44-label-drawer-2" x="231" y="202" text-anchor="middle"
+          font-family="'Pixelify Sans', 'VT323', monospace" font-size="7"
+          fill="#3a2e1c" font-weight="700" pointer-events="none">clips</text>
+  </g>
+
+  <g id="co44-drawer-3-art">
+    <rect x="275" y="190" width="62" height="26" fill="url(#co44Drawer)"/>
+    <rect x="275" y="190" width="62" height="26" fill="none" stroke="#5a4a30" stroke-width="0.7"/>
+    <rect x="275" y="190" width="62" height="1"  fill="#f0e6cc"/>
+    <rect x="302" y="200" width="8"  height="3" fill="#a89878"/>
+    <rect x="302" y="200" width="8"  height="1" fill="#dcc89c"/>
+    <rect x="302" y="202" width="8"  height="1" fill="#5a4a30"/>
+    <rect x="280" y="194" width="34" height="10" fill="#dcc890"/>
+    <rect x="280" y="194" width="34" height="10" fill="none" stroke="#7a5a36" stroke-width="0.5"/>
+    <text id="co44-label-drawer-3" x="297" y="202" text-anchor="middle"
+          font-family="'Pixelify Sans', 'VT323', monospace" font-size="7"
+          fill="#3a2e1c" font-weight="700" pointer-events="none">stamps</text>
+  </g>
+
+  <!-- row 2 (bottom): y=222..248 -->
+  <g id="co44-drawer-4-art">
+    <rect x="143" y="222" width="62" height="26" fill="url(#co44Drawer)"/>
+    <rect x="143" y="222" width="62" height="26" fill="none" stroke="#5a4a30" stroke-width="0.7"/>
+    <rect x="143" y="222" width="62" height="1"  fill="#f0e6cc"/>
+    <rect x="170" y="232" width="8"  height="3" fill="#a89878"/>
+    <rect x="170" y="232" width="8"  height="1" fill="#dcc89c"/>
+    <rect x="170" y="234" width="8"  height="1" fill="#5a4a30"/>
+    <rect x="148" y="226" width="34" height="10" fill="#dcc890"/>
+    <rect x="148" y="226" width="34" height="10" fill="none" stroke="#7a5a36" stroke-width="0.5"/>
+    <text id="co44-label-drawer-4" x="165" y="234" text-anchor="middle"
+          font-family="'Pixelify Sans', 'VT323', monospace" font-size="7"
+          fill="#3a2e1c" font-weight="700" pointer-events="none">cords</text>
+  </g>
+
+  <g id="co44-drawer-5-art">
+    <rect x="209" y="222" width="62" height="26" fill="url(#co44Drawer)"/>
+    <rect x="209" y="222" width="62" height="26" fill="none" stroke="#5a4a30" stroke-width="0.7"/>
+    <rect x="209" y="222" width="62" height="1"  fill="#f0e6cc"/>
+    <rect x="236" y="232" width="8"  height="3" fill="#a89878"/>
+    <rect x="236" y="232" width="8"  height="1" fill="#dcc89c"/>
+    <rect x="236" y="234" width="8"  height="1" fill="#5a4a30"/>
+    <rect x="214" y="226" width="34" height="10" fill="#dcc890"/>
+    <rect x="214" y="226" width="34" height="10" fill="none" stroke="#7a5a36" stroke-width="0.5"/>
+    <text id="co44-label-drawer-5" x="231" y="234" text-anchor="middle"
+          font-family="'Pixelify Sans', 'VT323', monospace" font-size="7"
+          fill="#3a2e1c" font-weight="700" pointer-events="none">nails</text>
+  </g>
+
+  <g id="co44-drawer-6-art">
+    <rect x="275" y="222" width="62" height="26" fill="url(#co44Drawer)"/>
+    <rect x="275" y="222" width="62" height="26" fill="none" stroke="#5a4a30" stroke-width="0.7"/>
+    <rect x="275" y="222" width="62" height="1"  fill="#f0e6cc"/>
+    <rect x="302" y="232" width="8"  height="3" fill="#a89878"/>
+    <rect x="302" y="232" width="8"  height="1" fill="#dcc89c"/>
+    <rect x="302" y="234" width="8"  height="1" fill="#5a4a30"/>
+    <rect x="280" y="226" width="34" height="10" fill="#dcc890"/>
+    <rect x="280" y="226" width="34" height="10" fill="none" stroke="#7a5a36" stroke-width="0.5"/>
+    <text id="co44-label-drawer-6" x="297" y="234" text-anchor="middle"
+          font-family="'Pixelify Sans', 'VT323', monospace" font-size="7"
+          fill="#3a2e1c" font-weight="700" pointer-events="none">hooks</text>
+  </g>
+
+  <!-- right linen stack -->
+  <g id="co44-linen-R-art">
+    <rect x="350" y="252" width="100" height="2" fill="#1a160c" opacity="0.30"/>
+    <rect x="352" y="194" width="96" height="6" fill="url(#co44Linen)"/>
+    <rect x="352" y="194" width="96" height="1" fill="#fcf4e0"/>
+    <rect x="352" y="200" width="96" height="1" fill="#9a8c70" opacity="0.55"/>
+    <rect x="352" y="202" width="96" height="6" fill="url(#co44Linen)"/>
+    <rect x="352" y="202" width="96" height="1" fill="#fcf4e0"/>
+    <rect x="352" y="208" width="96" height="1" fill="#9a8c70" opacity="0.55"/>
+    <rect x="352" y="210" width="96" height="6" fill="url(#co44Linen)"/>
+    <rect x="352" y="210" width="96" height="1" fill="#fcf4e0"/>
+    <rect x="352" y="216" width="96" height="1" fill="#9a8c70" opacity="0.55"/>
+    <rect x="352" y="218" width="96" height="6" fill="url(#co44Linen)"/>
+    <rect x="352" y="218" width="96" height="1" fill="#fcf4e0"/>
+    <rect x="352" y="224" width="96" height="1" fill="#9a8c70" opacity="0.55"/>
+    <rect x="352" y="226" width="96" height="6" fill="url(#co44Linen)"/>
+    <rect x="352" y="226" width="96" height="1" fill="#fcf4e0"/>
+    <rect x="352" y="232" width="96" height="1" fill="#9a8c70" opacity="0.55"/>
+    <rect x="352" y="234" width="96" height="6" fill="url(#co44Linen)"/>
+    <rect x="352" y="234" width="96" height="1" fill="#fcf4e0"/>
+    <rect x="352" y="240" width="96" height="1" fill="#9a8c70" opacity="0.55"/>
+    <rect x="352" y="242" width="96" height="10" fill="url(#co44Linen)"/>
+    <rect x="448" y="194" width="1" height="58" fill="#9a8c70" opacity="0.65"/>
+    <rect x="352" y="194" width="96" height="58" fill="none" stroke="#7a6c54" stroke-width="0.6" opacity="0.55"/>
+  </g>
+
+  <!-- ============= BOTTOM SHELF BOARD ============= -->
+  <g id="co44-bot-shelf-art" pointer-events="none">
+    <rect x="16" y="254" width="448" height="8" fill="url(#co44ShelfWood)"/>
+    <rect x="16" y="254" width="448" height="1" fill="#f0e0bc"/>
+    <rect x="16" y="261" width="448" height="1" fill="#3a2e1c"/>
+    <rect x="16" y="262" width="448" height="3" fill="#1a160c" opacity="0.32"/>
+  </g>
+
+  <!-- ============= FLOOR ============= -->
+  <rect y="265" width="480" height="55" fill="#b8ac96" pointer-events="none" opacity="0.92"/>
+  <rect y="265" width="480" height="2"  fill="#5a4a30" opacity="0.55" pointer-events="none"/>
+
+  <!-- ============= FLOOR ITEMS: 2 large lidded totes ============= -->
+
+  <g id="co44-tote-L-art">
+    <rect x="22" y="316" width="208" height="2" fill="#1a160c" opacity="0.40"/>
+    <rect x="24" y="276" width="204" height="42" fill="url(#co44Tote)"/>
+    <rect x="24" y="276" width="204" height="42" fill="none" stroke="#4a4030" stroke-width="1"/>
+    <!-- lid -->
+    <rect x="22" y="274" width="208" height="6" fill="#d0c4a8"/>
+    <rect x="22" y="274" width="208" height="1" fill="#f0e0bc"/>
+    <rect x="22" y="279" width="208" height="1" fill="#5a4a30" opacity="0.7"/>
+    <!-- handle cutouts -->
+    <rect x="48"  y="294" width="20" height="6" fill="#3a2e1c"/>
+    <rect x="49"  y="295" width="18" height="4" fill="#7a6c54"/>
+    <rect x="184" y="294" width="20" height="6" fill="#3a2e1c"/>
+    <rect x="185" y="295" width="18" height="4" fill="#7a6c54"/>
+    <!-- label -->
+    <rect x="84"  y="290" width="84" height="20" fill="#dcc890"/>
+    <rect x="84"  y="290" width="84" height="20" fill="none" stroke="#7a5a36" stroke-width="0.7"/>
+    <rect x="83"  y="290" width="2"  height="2"  fill="#5a4a30"/>
+    <text id="co44-label-tote-L" x="126" y="304" text-anchor="middle"
+          font-family="'Pixelify Sans', 'VT323', monospace" font-size="11"
+          fill="#3a2e1c" font-weight="700" pointer-events="none">blankets</text>
+  </g>
+
+  <g id="co44-tote-R-art">
+    <rect x="250" y="316" width="208" height="2" fill="#1a160c" opacity="0.40"/>
+    <rect x="252" y="276" width="204" height="42" fill="url(#co44Tote)"/>
+    <rect x="252" y="276" width="204" height="42" fill="none" stroke="#4a4030" stroke-width="1"/>
+    <rect x="250" y="274" width="208" height="6" fill="#d0c4a8"/>
+    <rect x="250" y="274" width="208" height="1" fill="#f0e0bc"/>
+    <rect x="250" y="279" width="208" height="1" fill="#5a4a30" opacity="0.7"/>
+    <rect x="276" y="294" width="20" height="6" fill="#3a2e1c"/>
+    <rect x="277" y="295" width="18" height="4" fill="#7a6c54"/>
+    <rect x="412" y="294" width="20" height="6" fill="#3a2e1c"/>
+    <rect x="413" y="295" width="18" height="4" fill="#7a6c54"/>
+    <rect x="312" y="290" width="84" height="20" fill="#dcc890"/>
+    <rect x="312" y="290" width="84" height="20" fill="none" stroke="#7a5a36" stroke-width="0.7"/>
+    <rect x="311" y="290" width="2"  height="2"  fill="#5a4a30"/>
+    <text id="co44-label-tote-R" x="354" y="304" text-anchor="middle"
+          font-family="'Pixelify Sans', 'VT323', monospace" font-size="11"
+          fill="#3a2e1c" font-weight="700" pointer-events="none">comforters</text>
+  </g>
+
+  <!-- ============= DRIFTING DUST (very slow breath, lucid-memory motion) ============= -->
+  <g pointer-events="none" opacity="0.36">
+    <ellipse cx="232" cy="22"  rx="1.2" ry="1.2" fill="#fce8c8">
+      <animate attributeName="cy" values="22;26;22" dur="42s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="42s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="404" cy="120" rx="1.2" ry="1.2" fill="#fce8c8">
+      <animate attributeName="cy" values="120;117;120" dur="48s" begin="-13s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.82;1;0.82" dur="48s" begin="-13s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="58"  cy="180" rx="1.2" ry="1.2" fill="#fce8c8">
+      <animate attributeName="cy" values="180;183;180" dur="44s" begin="-26s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="44s" begin="-26s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- ============= LUCID MEMORY LAYER (warm bleed + breathing haze) ============= -->
+  <defs>
+    <radialGradient id="co44WarmBleed" cx="80%" cy="22%" r="55%">
+      <stop offset="0%"   stop-color="#fce0a8" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#fce0a8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="co44Haze" cx="50%" cy="50%" r="70%">
+      <stop offset="0%"   stop-color="#fff4d4" stop-opacity="0.05"/>
+      <stop offset="60%"  stop-color="#fff4d4" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#fff4d4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="480" height="320" fill="url(#co44WarmBleed)" pointer-events="none">
+    <animate attributeName="opacity" values="0.74;1;0.74" dur="30s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="0" y="0" width="480" height="320" fill="url(#co44Haze)" pointer-events="none">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="23s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ============= EDGE DARKENING + OUTER VIGNETTE ============= -->
+  <rect x="0"   y="0" width="38" height="320" fill="url(#co44SidesL)" pointer-events="none"/>
+  <rect x="442" y="0" width="38" height="320" fill="url(#co44SidesR)" pointer-events="none"/>
+  <rect x="0" y="0" width="480" height="320" fill="url(#co44Vignette)" pointer-events="none"/>
+
+  <!-- ============= INTERACTIVE HOTSPOTS (placed last, transparent) -->
+  <g id="co44-hotspots" fill="transparent" stroke="none">
+    <!-- broad first -->
+    <rect id="hit-wall"        x="20"  y="2"   width="440" height="26"/>
+    <rect id="hit-floor"       x="20"  y="316" width="440" height="4"/>
+
+    <rect id="hit-shelf-top"   x="16"  y="80"  width="448" height="8"/>
+    <rect id="hit-shelf-mid"   x="16"  y="166" width="448" height="8"/>
+    <rect id="hit-shelf-bot"   x="16"  y="254" width="448" height="8"/>
+
+    <!-- top-shelf cubes -->
+    <rect id="hit-cube-1"      x="50"  y="28"  width="60"  height="52"/>
+    <rect id="hit-cube-2"      x="114" y="28"  width="60"  height="52"/>
+    <rect id="hit-cube-3"      x="178" y="28"  width="60"  height="52"/>
+    <rect id="hit-cube-4"      x="242" y="28"  width="60"  height="52"/>
+    <rect id="hit-cube-5"      x="306" y="28"  width="60"  height="52"/>
+    <rect id="hit-cube-6"      x="370" y="28"  width="60"  height="52"/>
+
+    <!-- middle-shelf boxes -->
+    <rect id="hit-box-1"       x="36"  y="94"  width="128" height="68"/>
+    <rect id="hit-box-2"       x="176" y="94"  width="128" height="68"/>
+    <rect id="hit-box-3"       x="316" y="94"  width="128" height="68"/>
+
+    <!-- bottom-shelf items -->
+    <rect id="hit-linen-L"     x="30"  y="190" width="100" height="62"/>
+    <rect id="hit-cabinet"     x="140" y="184" width="200" height="68"/>
+    <rect id="hit-linen-R"     x="350" y="190" width="100" height="62"/>
+
+    <!-- drawer sub-hotspots (sit on top of cabinet for finer interaction) -->
+    <rect id="hit-drawer-1"    x="143" y="190" width="62"  height="26"/>
+    <rect id="hit-drawer-2"    x="209" y="190" width="62"  height="26"/>
+    <rect id="hit-drawer-3"    x="275" y="190" width="62"  height="26"/>
+    <rect id="hit-drawer-4"    x="143" y="222" width="62"  height="26"/>
+    <rect id="hit-drawer-5"    x="209" y="222" width="62"  height="26"/>
+    <rect id="hit-drawer-6"    x="275" y="222" width="62"  height="26"/>
+
+    <!-- floor totes -->
+    <rect id="hit-tote-L"      x="22"  y="272" width="208" height="46"/>
+    <rect id="hit-tote-R"      x="250" y="272" width="208" height="46"/>
+  </g>
+</svg>

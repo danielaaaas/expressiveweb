@@ -1,0 +1,549 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" shape-rendering="crispEdges">
+  <title>Front closet memory fragment (apartment four) - the final threshold preserved</title>
+  <desc>Looking straight at the entry vestibule of the apartment. On the left, the front door of the apartment stands ajar by a narrow gap; through the gap, a fixed warm light from the building hallway, the faint outline of an opposite apartment door, a small wall sconce that does not flicker. A short stretch of inside wall holds a single key hook with a set of keys hanging from it. On the right, the front closet stands open: a top shelf with a hat box and a folded scarf, a hanging rod with a long charcoal overcoat, an empty hanger, a tan trench, and a black blazer; on the floor below, four pairs of shoes are perfectly aligned on a pale runner, and a charcoal cane umbrella leans into the right corner. Lighting is even and cool. Nothing animates.</desc>
+
+  <defs>
+    <linearGradient id="fc4Wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#dcd6c8"/>
+      <stop offset="65%"  stop-color="#bcb4a0"/>
+      <stop offset="100%" stop-color="#8c8678"/>
+    </linearGradient>
+
+    <linearGradient id="fc4Door" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#a88460"/>
+      <stop offset="50%"  stop-color="#caa888"/>
+      <stop offset="100%" stop-color="#7a5a36"/>
+    </linearGradient>
+
+    <linearGradient id="fc4DoorPanel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#a08060"/>
+      <stop offset="100%" stop-color="#5c4030"/>
+    </linearGradient>
+
+    <linearGradient id="fc4HallWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f0d8a8"/>
+      <stop offset="60%"  stop-color="#d4b078"/>
+      <stop offset="100%" stop-color="#7c5a30"/>
+    </linearGradient>
+
+    <linearGradient id="fc4HallSconce" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#fff4c4" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#fff4c4" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="fc4ClosetWall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#c8c2b4"/>
+      <stop offset="100%" stop-color="#807a6c"/>
+    </linearGradient>
+
+    <linearGradient id="fc4Shelf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#dcc8a4"/>
+      <stop offset="100%" stop-color="#8a7a5c"/>
+    </linearGradient>
+
+    <linearGradient id="fc4HatBox" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#e8e0c8"/>
+      <stop offset="100%" stop-color="#a89c80"/>
+    </linearGradient>
+
+    <linearGradient id="fc4Scarf" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#d4a4a0"/>
+      <stop offset="100%" stop-color="#8c605c"/>
+    </linearGradient>
+
+    <linearGradient id="fc4Charcoal" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#3c4248"/>
+      <stop offset="100%" stop-color="#1c2024"/>
+    </linearGradient>
+
+    <linearGradient id="fc4Tan" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#a88864"/>
+      <stop offset="100%" stop-color="#5c4830"/>
+    </linearGradient>
+
+    <linearGradient id="fc4Black" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#22242a"/>
+      <stop offset="100%" stop-color="#0a0c10"/>
+    </linearGradient>
+
+    <linearGradient id="fc4Mat" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#dcd0bc"/>
+      <stop offset="100%" stop-color="#9c8c70"/>
+    </linearGradient>
+
+    <linearGradient id="fc4Floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#bcb098"/>
+      <stop offset="100%" stop-color="#7c705c"/>
+    </linearGradient>
+
+    <radialGradient id="fc4OverheadLight" cx="50%" cy="0%" r="60%">
+      <stop offset="0%"   stop-color="#f4faff" stop-opacity="0.20"/>
+      <stop offset="55%"  stop-color="#dce4ec" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#dce4ec" stop-opacity="0"/>
+    </radialGradient>
+
+    <radialGradient id="fc4HallSpill" cx="50%" cy="50%" r="60%">
+      <stop offset="0%"   stop-color="#f8e0a8" stop-opacity="0.55"/>
+      <stop offset="60%"  stop-color="#e8c890" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#e8c890" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="fc4SidesL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#1a1c20" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#1a1c20" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="fc4SidesR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%"   stop-color="#1a1c20" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#1a1c20" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="fc4Vignette" cx="50%" cy="55%" r="72%">
+      <stop offset="58%"  stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#0c0e12" stop-opacity="0.42"/>
+    </radialGradient>
+
+    <clipPath id="fc4HallClip">
+      <rect x="136" y="18" width="14" height="280"/>
+    </clipPath>
+  </defs>
+
+  <!-- ============= WALL ============= -->
+  <rect width="480" height="320" fill="url(#fc4Wall)"/>
+  <!-- top molding shadow -->
+  <rect x="0" y="0" width="480" height="6" fill="#5c5648" opacity="0.40" pointer-events="none"/>
+  <rect x="0" y="6" width="480" height="1" fill="#1c1810" opacity="0.55" pointer-events="none"/>
+  <!-- side trim -->
+  <rect x="0"   y="0" width="6"  height="320" fill="#a89c80" opacity="0.55" pointer-events="none"/>
+  <rect x="466" y="0" width="14" height="320" fill="#a89c80" opacity="0.55" pointer-events="none"/>
+  <rect x="6"   y="0" width="1"  height="320" fill="#3c2e1c" opacity="0.55" pointer-events="none"/>
+  <rect x="465" y="0" width="1"  height="320" fill="#3c2e1c" opacity="0.55" pointer-events="none"/>
+
+  <!-- soft cool overhead light pool -->
+  <rect x="0" y="0" width="480" height="220" fill="url(#fc4OverheadLight)" pointer-events="none"/>
+
+  <!-- ============= HALLWAY SLIVER (visible through ajar door gap) ============= -->
+  <!-- frame: x=136..150, the "open gap" where the hallway shows through -->
+  <g clip-path="url(#fc4HallClip)">
+    <!-- warm hallway wall (different palette from interior) -->
+    <rect x="136" y="18" width="14" height="280" fill="url(#fc4HallWall)"/>
+    <!-- sconce glow halo (a fixed warm wash) -->
+    <ellipse cx="143" cy="118" rx="10" ry="22" fill="url(#fc4HallSpill)" pointer-events="none"/>
+    <!-- the sconce itself: a tiny brass cup -->
+    <rect x="141" y="116" width="4" height="6" fill="#7a5a36"/>
+    <rect x="141" y="116" width="4" height="1" fill="#a88860"/>
+    <rect x="141" y="121" width="4" height="1" fill="#3c2e1c"/>
+    <rect x="141" y="120" width="4" height="2" fill="#fff4c4" opacity="0.85"/>
+    <!-- faint outline of the OPPOSITE apartment door, far in the hallway -->
+    <rect x="138" y="148" width="10" height="100" fill="#8c6840" opacity="0.62"/>
+    <rect x="138" y="148" width="10" height="1"  fill="#b88860" opacity="0.55"/>
+    <rect x="138" y="247" width="10" height="1"  fill="#3c2814" opacity="0.85"/>
+    <!-- a tiny number plaque on the opposite door -->
+    <rect x="142" y="180" width="3" height="3" fill="#dcc89c" opacity="0.78"/>
+    <!-- hallway floor (a darker warm wood band) -->
+    <rect x="136" y="248" width="14" height="50" fill="#7c5a30"/>
+    <rect x="136" y="248" width="14" height="1"  fill="#a88864"/>
+    <!-- baseboard line in the hallway -->
+    <rect x="136" y="252" width="14" height="1" fill="#3c2814" opacity="0.85"/>
+  </g>
+
+  <!-- ============= FRONT DOOR (ajar; pivots on left, gap on right) ============= -->
+  <g id="fc4-door-art">
+    <!-- door panel -->
+    <rect x="6"  y="14" width="130" height="284" fill="url(#fc4Door)"/>
+    <!-- inset panels (two stacked, classic door) -->
+    <rect x="20"  y="32"  width="104" height="100" fill="url(#fc4DoorPanel)"/>
+    <rect x="20"  y="32"  width="104" height="100" fill="none" stroke="#3c2814" stroke-width="1.2"/>
+    <rect x="22"  y="34"  width="100" height="2"   fill="#caa888" opacity="0.6"/>
+    <rect x="22"  y="130" width="100" height="2"   fill="#3c2814" opacity="0.85"/>
+    <rect x="20"  y="148" width="104" height="124" fill="url(#fc4DoorPanel)"/>
+    <rect x="20"  y="148" width="104" height="124" fill="none" stroke="#3c2814" stroke-width="1.2"/>
+    <rect x="22"  y="150" width="100" height="2"   fill="#caa888" opacity="0.6"/>
+    <rect x="22"  y="270" width="100" height="2"   fill="#3c2814" opacity="0.85"/>
+
+    <!-- right edge of the door (a thin shadow line; this is the side that's pulled inward, ajar) -->
+    <rect x="134" y="14" width="2" height="284" fill="#3c2814" opacity="0.85"/>
+
+    <!-- door handle (interior side) -->
+    <rect x="118" y="158" width="6" height="14" fill="#5c6064"/>
+    <rect x="118" y="158" width="6" height="1"  fill="#a4a8ac"/>
+    <rect x="118" y="171" width="6" height="1"  fill="#1c1e22" opacity="0.85"/>
+    <!-- handle plate -->
+    <rect x="116" y="156" width="10" height="18" fill="none" stroke="#3c4044" stroke-width="0.7"/>
+    <!-- key escutcheon below handle -->
+    <rect x="118" y="180" width="6" height="6" fill="#5c6064"/>
+    <rect x="120" y="183" width="2" height="2" fill="#1c1e22"/>
+
+    <!-- a slim warm light bleed running along the right edge of the door (light from the hall) -->
+    <rect x="132" y="14" width="2" height="284" fill="#fff4c4" opacity="0.45" pointer-events="none"/>
+  </g>
+
+  <!-- ============= DOOR JAMB / FRAME (right side of the doorway) ============= -->
+  <g id="fc4-jamb-art" pointer-events="none">
+    <rect x="150" y="14" width="6" height="284" fill="#a89c80"/>
+    <rect x="150" y="14" width="1" height="284" fill="#dccca8"/>
+    <rect x="155" y="14" width="1" height="284" fill="#3c2e1c" opacity="0.85"/>
+  </g>
+
+  <!-- ============= SMALL WALL CLOCK (frozen ~4:13, intentionally a different
+       time from the kitchen clock and the mirror clock - rooms drift)
+       centered on the wall column between the doorjamb (x=156) and the
+       closet back wall (x=200): center at x=178 ============= -->
+  <g id="fc4-wall-clock-art" pointer-events="none">
+    <ellipse cx="178" cy="92" rx="8" ry="8" fill="#3c2814"/>
+    <ellipse cx="178" cy="92" rx="7" ry="7" fill="#f0e6cc"/>
+    <ellipse cx="178" cy="92" rx="6.2" ry="6.2" fill="#fcf2dc"/>
+    <rect x="177.6" y="86" width="0.8" height="2" fill="#3c2814"/>
+    <rect x="183" y="91.6" width="2" height="0.8" fill="#3c2814"/>
+    <rect x="177.6" y="96" width="0.8" height="2" fill="#3c2814"/>
+    <rect x="171" y="91.6" width="2" height="0.8" fill="#3c2814"/>
+    <rect x="177.5" y="91.6" width="2.8" height="0.8" fill="#2a1f12" transform="rotate(127 178 92)"/>
+    <rect x="178" y="87.5" width="0.6" height="4.5" fill="#2a1f12" transform="rotate(78 178 92)"/>
+    <ellipse cx="178" cy="92" rx="0.9" ry="0.9" fill="#1a1410"/>
+  </g>
+
+  <!-- ============= WALL SECTION + KEY HOOK ============= -->
+  <g id="fc4-keyhook-art">
+    <!-- the small wall hook -->
+    <rect x="174" y="120" width="2" height="6" fill="#5c4a30"/>
+    <rect x="172" y="124" width="6" height="2" fill="#5c4a30"/>
+    <rect x="172" y="124" width="6" height="1" fill="#7c6a4c"/>
+    <!-- mounting plate -->
+    <rect x="170" y="118" width="10" height="4" fill="#7c6a4c"/>
+    <rect x="170" y="118" width="10" height="1" fill="#a89c80"/>
+    <rect x="170" y="121" width="10" height="1" fill="#3c2e1c" opacity="0.85"/>
+  </g>
+
+  <!-- keys hanging from the hook -->
+  <g id="fc4-keys-art">
+    <!-- key ring -->
+    <rect x="172" y="128" width="6" height="6" fill="none" stroke="#a4a8ac" stroke-width="1.2"/>
+    <!-- hanging string/chain -->
+    <rect x="174" y="134" width="2" height="6" fill="#5c4a30"/>
+    <!-- two keys hanging from the ring -->
+    <!-- key one (brass) -->
+    <rect x="170" y="140" width="3" height="14" fill="url(#fc4Door)"/>
+    <rect x="170" y="140" width="3" height="1"  fill="#dcc89c"/>
+    <rect x="170" y="153" width="3" height="1"  fill="#5c4a30"/>
+    <rect x="168" y="138" width="7" height="4"  fill="url(#fc4Door)"/>
+    <rect x="168" y="138" width="7" height="1"  fill="#dcc89c"/>
+    <!-- teeth -->
+    <rect x="173" y="148" width="2" height="2"  fill="#7a5a36"/>
+    <rect x="173" y="151" width="2" height="2"  fill="#7a5a36"/>
+    <!-- key two (silver, slightly behind) -->
+    <rect x="176" y="142" width="3" height="12" fill="#a4a8ac"/>
+    <rect x="176" y="142" width="3" height="1"  fill="#dde0e4"/>
+    <rect x="176" y="153" width="3" height="1"  fill="#5c6064"/>
+    <rect x="174" y="140" width="7" height="4"  fill="#a4a8ac"/>
+    <rect x="174" y="140" width="7" height="1"  fill="#dde0e4"/>
+    <rect x="179" y="148" width="2" height="2"  fill="#5c6064"/>
+  </g>
+
+  <!-- ============= CLOSET INTERIOR (right side of frame) ============= -->
+
+  <!-- closet back wall (slightly darker / more shaded than room wall) -->
+  <g id="fc4-closet-wall-art" pointer-events="none">
+    <rect x="200" y="14" width="266" height="284" fill="url(#fc4ClosetWall)"/>
+    <!-- left edge shadow inside closet (where the closet door would be when open) -->
+    <rect x="200" y="14" width="3" height="284" fill="#1c1810" opacity="0.42"/>
+    <!-- top corner shadow -->
+    <rect x="200" y="14" width="266" height="2" fill="#5c5648" opacity="0.55"/>
+  </g>
+
+  <!-- ============= CLOSET TOP SHELF + ITEMS ============= -->
+  <g id="fc4-shelf-art" pointer-events="none">
+    <!-- shelf board -->
+    <rect x="200" y="58" width="266" height="8" fill="url(#fc4Shelf)"/>
+    <rect x="200" y="58" width="266" height="1" fill="#f0e0bc"/>
+    <rect x="200" y="65" width="266" height="1" fill="#3c2e1c"/>
+    <rect x="200" y="66" width="266" height="3" fill="#1c1810" opacity="0.32"/>
+  </g>
+
+  <!-- hat box on the left of the shelf -->
+  <g id="fc4-hatbox-art">
+    <rect x="216" y="56" width="50" height="2" fill="#1c1810" opacity="0.32"/>
+    <rect x="216" y="22" width="50" height="36" fill="url(#fc4HatBox)"/>
+    <rect x="216" y="22" width="50" height="1"  fill="#f0e8d0"/>
+    <rect x="216" y="56" width="50" height="1"  fill="#5c4a30" opacity="0.85"/>
+    <!-- lid line -->
+    <rect x="216" y="30" width="50" height="2" fill="#a89c80"/>
+    <rect x="216" y="30" width="50" height="1" fill="#dccca8" opacity="0.85"/>
+    <!-- a single ribbon band -->
+    <rect x="238" y="22" width="6" height="36" fill="#7c5a36" opacity="0.62"/>
+    <rect x="216" y="44" width="50" height="2" fill="#7c5a36" opacity="0.62"/>
+  </g>
+
+  <!-- folded scarf on the right of the shelf -->
+  <g id="fc4-scarf-art">
+    <rect x="380" y="56" width="68" height="2" fill="#1c1810" opacity="0.30"/>
+    <rect x="382" y="34" width="64" height="6" fill="url(#fc4Scarf)"/>
+    <rect x="382" y="34" width="64" height="1" fill="#e8c4b8"/>
+    <rect x="382" y="40" width="64" height="1" fill="#7c5048" opacity="0.55"/>
+    <rect x="382" y="42" width="64" height="6" fill="url(#fc4Scarf)"/>
+    <rect x="382" y="42" width="64" height="1" fill="#e8c4b8"/>
+    <rect x="382" y="48" width="64" height="1" fill="#7c5048" opacity="0.55"/>
+    <rect x="382" y="50" width="64" height="6" fill="url(#fc4Scarf)"/>
+    <rect x="382" y="50" width="64" height="1" fill="#e8c4b8"/>
+    <rect x="382" y="56" width="64" height="1" fill="#7c5048" opacity="0.55"/>
+    <rect x="446" y="34" width="1"  height="22" fill="#7c5048" opacity="0.7"/>
+    <!-- a thin fringe at the bottom -->
+    <rect x="384" y="55" width="1" height="2" fill="#7c5048"/>
+    <rect x="388" y="55" width="1" height="2" fill="#7c5048"/>
+    <rect x="392" y="55" width="1" height="2" fill="#7c5048"/>
+    <rect x="396" y="55" width="1" height="2" fill="#7c5048"/>
+    <rect x="400" y="55" width="1" height="2" fill="#7c5048"/>
+  </g>
+
+  <!-- ============= HANGING ROD ============= -->
+  <g id="fc4-rod-art" pointer-events="none">
+    <rect x="208" y="80" width="252" height="2" fill="#9aa0a4"/>
+    <rect x="208" y="80" width="252" height="1" fill="#dde2e6"/>
+    <rect x="208" y="82" width="252" height="1" fill="#3c4044" opacity="0.85"/>
+    <!-- brackets at each end -->
+    <rect x="206" y="76" width="4" height="10" fill="#7c8084"/>
+    <rect x="460" y="76" width="4" height="10" fill="#7c8084"/>
+  </g>
+
+  <!-- ============= HANGERS + COATS ============= -->
+
+  <!-- hanger 1: long charcoal overcoat -->
+  <g id="fc4-coat-charcoal-art">
+    <!-- hanger -->
+    <rect x="218" y="74" width="2" height="6"  fill="#7c8084"/>
+    <rect x="208" y="80" width="22" height="2" fill="#7c8084"/>
+    <!-- coat shoulders -->
+    <rect x="200" y="82" width="38" height="6" fill="url(#fc4Charcoal)"/>
+    <rect x="200" y="82" width="38" height="1" fill="#52585e"/>
+    <!-- coat body (long) -->
+    <rect x="202" y="88" width="34" height="146" fill="url(#fc4Charcoal)"/>
+    <rect x="202" y="88" width="34" height="1"   fill="#52585e" opacity="0.85"/>
+    <rect x="202" y="234" width="34" height="2"  fill="#0a0c10" opacity="0.85"/>
+    <!-- center seam -->
+    <rect x="218" y="88" width="2" height="146" fill="#0a0c10" opacity="0.62"/>
+    <!-- a single button -->
+    <rect x="216" y="128" width="2" height="2" fill="#1c1e22"/>
+    <!-- collar fold -->
+    <rect x="208" y="86" width="22" height="3" fill="#52585e" opacity="0.62"/>
+  </g>
+
+  <!-- hanger 2: tan trench coat -->
+  <g id="fc4-coat-tan-art">
+    <rect x="278" y="74" width="2" height="6"  fill="#7c8084"/>
+    <rect x="268" y="80" width="22" height="2" fill="#7c8084"/>
+    <rect x="260" y="82" width="38" height="6" fill="url(#fc4Tan)"/>
+    <rect x="260" y="82" width="38" height="1" fill="#bca080"/>
+    <rect x="262" y="88" width="34" height="124" fill="url(#fc4Tan)"/>
+    <rect x="262" y="88" width="34" height="1"   fill="#bca080" opacity="0.85"/>
+    <rect x="262" y="212" width="34" height="2"  fill="#3c2814" opacity="0.85"/>
+    <rect x="278" y="88" width="2" height="124" fill="#5c4830" opacity="0.62"/>
+    <!-- belt -->
+    <rect x="262" y="156" width="34" height="3" fill="#5c4830"/>
+    <rect x="262" y="156" width="34" height="1" fill="#7c6440" opacity="0.85"/>
+    <rect x="262" y="158" width="34" height="1" fill="#3c2814" opacity="0.85"/>
+    <!-- belt buckle -->
+    <rect x="276" y="156" width="6" height="3" fill="#a89878"/>
+    <rect x="276" y="156" width="6" height="1" fill="#dcc89c"/>
+    <!-- collar -->
+    <rect x="268" y="86" width="22" height="3" fill="#bca080" opacity="0.62"/>
+  </g>
+
+  <!-- hanger 3: EMPTY hanger (the coat that was taken) -->
+  <g id="fc4-coat-empty-art">
+    <!-- just the bare hanger - the most emotionally loaded element -->
+    <rect x="338" y="74" width="2" height="6"  fill="#7c8084"/>
+    <rect x="320" y="80" width="38" height="2" fill="#7c8084"/>
+    <!-- wire of the hanger angles -->
+    <rect x="320" y="82" width="4" height="2" fill="#7c8084"/>
+    <rect x="324" y="84" width="4" height="2" fill="#7c8084"/>
+    <rect x="328" y="86" width="3" height="2" fill="#7c8084"/>
+    <rect x="354" y="82" width="4" height="2" fill="#7c8084"/>
+    <rect x="350" y="84" width="4" height="2" fill="#7c8084"/>
+    <rect x="347" y="86" width="3" height="2" fill="#7c8084"/>
+    <!-- a tiny shadow on the back wall behind the empty hanger (the only mark of absence) -->
+    <rect x="320" y="80" width="38" height="1" fill="#dde2e6" opacity="0.32" pointer-events="none"/>
+  </g>
+
+  <!-- hanger 4: black blazer -->
+  <g id="fc4-coat-black-art">
+    <rect x="398" y="74" width="2" height="6"  fill="#7c8084"/>
+    <rect x="388" y="80" width="22" height="2" fill="#7c8084"/>
+    <rect x="380" y="82" width="38" height="6" fill="url(#fc4Black)"/>
+    <rect x="380" y="82" width="38" height="1" fill="#3c4044"/>
+    <rect x="382" y="88" width="34" height="86" fill="url(#fc4Black)"/>
+    <rect x="382" y="88" width="34" height="1"  fill="#3c4044" opacity="0.85"/>
+    <rect x="382" y="174" width="34" height="2" fill="#0a0c10" opacity="0.85"/>
+    <rect x="398" y="88" width="2" height="86"  fill="#0a0c10" opacity="0.62"/>
+    <!-- two buttons -->
+    <rect x="396" y="120" width="2" height="2" fill="#1c1e22"/>
+    <rect x="396" y="140" width="2" height="2" fill="#1c1e22"/>
+    <!-- lapels -->
+    <rect x="388" y="86" width="22" height="3" fill="#3c4044" opacity="0.62"/>
+    <rect x="396" y="89" width="2" height="14" fill="#3c4044" opacity="0.62"/>
+  </g>
+
+  <!-- ============= MAT / RUNNER ON CLOSET FLOOR ============= -->
+  <g id="fc4-mat-art" pointer-events="none">
+    <rect x="200" y="282" width="262" height="14" fill="url(#fc4Mat)"/>
+    <rect x="200" y="282" width="262" height="1"  fill="#f0e8d0"/>
+    <rect x="200" y="295" width="262" height="1"  fill="#5c4a30" opacity="0.85"/>
+    <!-- a thin border -->
+    <rect x="204" y="284" width="254" height="1"  fill="#a89c80" opacity="0.55"/>
+    <rect x="204" y="293" width="254" height="1"  fill="#a89c80" opacity="0.55"/>
+  </g>
+
+  <!-- ============= SHOES (4 pairs neatly aligned, on the mat) ============= -->
+
+  <!-- shoes 1: ankle boots (charcoal) -->
+  <g id="fc4-shoes-1-art">
+    <rect x="208" y="282" width="36" height="2" fill="#1c1810" opacity="0.32"/>
+    <rect x="208" y="270" width="16" height="14" fill="#3c4248"/>
+    <rect x="208" y="270" width="16" height="1"  fill="#5c6268" opacity="0.85"/>
+    <rect x="208" y="282" width="16" height="2"  fill="#0a0c10"/>
+    <rect x="220" y="276" width="6" height="6" fill="#3c4248"/>
+    <rect x="226" y="270" width="16" height="14" fill="#3c4248"/>
+    <rect x="226" y="270" width="16" height="1"  fill="#5c6268" opacity="0.85"/>
+    <rect x="226" y="282" width="16" height="2"  fill="#0a0c10"/>
+  </g>
+
+  <!-- shoes 2: brown loafers -->
+  <g id="fc4-shoes-2-art">
+    <rect x="252" y="282" width="36" height="2" fill="#1c1810" opacity="0.32"/>
+    <rect x="252" y="276" width="16" height="8" fill="#7c5a36"/>
+    <rect x="252" y="276" width="16" height="1" fill="#a8845c" opacity="0.85"/>
+    <rect x="252" y="282" width="16" height="2" fill="#3c2814" opacity="0.85"/>
+    <rect x="270" y="276" width="16" height="8" fill="#7c5a36"/>
+    <rect x="270" y="276" width="16" height="1" fill="#a8845c" opacity="0.85"/>
+    <rect x="270" y="282" width="16" height="2" fill="#3c2814" opacity="0.85"/>
+    <!-- a single seam line on each -->
+    <rect x="256" y="280" width="8" height="1" fill="#5c4030" opacity="0.85"/>
+    <rect x="274" y="280" width="8" height="1" fill="#5c4030" opacity="0.85"/>
+  </g>
+
+  <!-- shoes 3: white-cream sneakers -->
+  <g id="fc4-shoes-3-art">
+    <rect x="296" y="282" width="38" height="2" fill="#1c1810" opacity="0.30"/>
+    <rect x="296" y="274" width="18" height="10" fill="#e8e2d4"/>
+    <rect x="296" y="274" width="18" height="1"  fill="#fcf4e0"/>
+    <rect x="296" y="282" width="18" height="2"  fill="#3c2e1c"/>
+    <rect x="316" y="274" width="18" height="10" fill="#e8e2d4"/>
+    <rect x="316" y="274" width="18" height="1"  fill="#fcf4e0"/>
+    <rect x="316" y="282" width="18" height="2"  fill="#3c2e1c"/>
+    <!-- laces hint -->
+    <rect x="300" y="276" width="10" height="1" fill="#a89c80" opacity="0.85"/>
+    <rect x="300" y="278" width="10" height="1" fill="#a89c80" opacity="0.55"/>
+    <rect x="320" y="276" width="10" height="1" fill="#a89c80" opacity="0.85"/>
+    <rect x="320" y="278" width="10" height="1" fill="#a89c80" opacity="0.55"/>
+  </g>
+
+  <!-- shoes 4: black flats -->
+  <g id="fc4-shoes-4-art">
+    <rect x="346" y="282" width="32" height="2" fill="#1c1810" opacity="0.30"/>
+    <rect x="346" y="276" width="14" height="8" fill="#1c1c1c"/>
+    <rect x="346" y="276" width="14" height="1" fill="#3c4044" opacity="0.85"/>
+    <rect x="346" y="282" width="14" height="2" fill="#0a0c0e"/>
+    <rect x="362" y="276" width="14" height="8" fill="#1c1c1c"/>
+    <rect x="362" y="276" width="14" height="1" fill="#3c4044" opacity="0.85"/>
+    <rect x="362" y="282" width="14" height="2" fill="#0a0c0e"/>
+    <!-- a tiny rounded toe highlight on each -->
+    <rect x="356" y="278" width="2" height="2" fill="#3c4044" opacity="0.85"/>
+    <rect x="372" y="278" width="2" height="2" fill="#3c4044" opacity="0.85"/>
+  </g>
+
+  <!-- ============= UMBRELLA (leaning in the right corner of the closet) ============= -->
+  <g id="fc4-umbrella-art">
+    <rect x="438" y="294" width="20" height="2" fill="#1c1810" opacity="0.40"/>
+    <!-- shaft (slight lean from upper-right to lower-right) -->
+    <rect x="450" y="200" width="2" height="92" fill="#3c2e1c"/>
+    <rect x="450" y="200" width="2" height="1"  fill="#5c4a30"/>
+    <!-- canopy bunched at the top -->
+    <rect x="442" y="190" width="18" height="14" fill="url(#fc4Charcoal)"/>
+    <rect x="442" y="190" width="18" height="1"  fill="#52585e"/>
+    <rect x="442" y="203" width="18" height="1"  fill="#0a0c10" opacity="0.85"/>
+    <!-- ribs hint -->
+    <rect x="446" y="190" width="1" height="14" fill="#0a0c10" opacity="0.55"/>
+    <rect x="450" y="190" width="1" height="14" fill="#0a0c10" opacity="0.55"/>
+    <rect x="454" y="190" width="1" height="14" fill="#0a0c10" opacity="0.55"/>
+    <!-- tip at top -->
+    <rect x="450" y="186" width="2" height="4"  fill="#3c2e1c"/>
+    <!-- cane handle at the bottom -->
+    <rect x="450" y="284" width="2"  height="8" fill="#5c4a30"/>
+    <rect x="446" y="284" width="6"  height="2" fill="#5c4a30"/>
+    <rect x="444" y="282" width="2"  height="4" fill="#5c4a30"/>
+    <rect x="446" y="282" width="6"  height="1" fill="#7c6a4c"/>
+  </g>
+
+  <!-- ============= ENTRYWAY FLOOR ============= -->
+  <rect y="298" width="480" height="22" fill="url(#fc4Floor)" pointer-events="none"/>
+  <rect y="298" width="480" height="2"  fill="#5c4a30" opacity="0.55" pointer-events="none"/>
+  <!-- a couple of plank seams in the entryway -->
+  <rect x="60"  y="298" width="0.5" height="22" fill="#5c4a30" opacity="0.55" pointer-events="none"/>
+  <rect x="180" y="298" width="0.5" height="22" fill="#5c4a30" opacity="0.55" pointer-events="none"/>
+
+  <!-- ============= DRIFTING DUST (very slow breath, lucid-memory motion) ============= -->
+  <g pointer-events="none" opacity="0.32">
+    <ellipse cx="270" cy="40"  rx="1.2" ry="1.2" fill="#f4faff">
+      <animate attributeName="cy" values="40;43;40" dur="36s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.82;1;0.82" dur="36s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="430" cy="180" rx="1.2" ry="1.2" fill="#f4faff">
+      <animate attributeName="cy" values="180;177;180" dur="44s" begin="-12s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="44s" begin="-12s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="180" cy="240" rx="1.2" ry="1.2" fill="#f4faff">
+      <animate attributeName="cy" values="240;236;240" dur="40s" begin="-22s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.82;1;0.82" dur="40s" begin="-22s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- ============= LUCID MEMORY LAYER (warm hallway sliver bleed + breathing haze) ============= -->
+  <defs>
+    <radialGradient id="fc4WarmBleed" cx="12%" cy="32%" r="55%">
+      <stop offset="0%"   stop-color="#fce0a8" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#fce0a8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fc4Haze" cx="50%" cy="50%" r="70%">
+      <stop offset="0%"   stop-color="#fff4d4" stop-opacity="0.055"/>
+      <stop offset="60%"  stop-color="#fff4d4" stop-opacity="0.022"/>
+      <stop offset="100%" stop-color="#fff4d4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="480" height="320" fill="url(#fc4WarmBleed)" pointer-events="none">
+    <animate attributeName="opacity" values="0.74;1;0.74" dur="28s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="0" y="0" width="480" height="320" fill="url(#fc4Haze)" pointer-events="none">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="22s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ============= EDGE DARKENING + OUTER VIGNETTE ============= -->
+  <rect x="0"   y="0" width="38" height="320" fill="url(#fc4SidesL)" pointer-events="none"/>
+  <rect x="442" y="0" width="38" height="320" fill="url(#fc4SidesR)" pointer-events="none"/>
+  <rect x="0" y="0" width="480" height="320" fill="url(#fc4Vignette)" pointer-events="none"/>
+
+  <!-- ============= INTERACTIVE HOTSPOTS ============= -->
+  <g id="fc4-hotspots" fill="transparent" stroke="none">
+    <rect id="hit-wall"          x="160" y="2"   width="300" height="6"/>
+    <rect id="hit-floor"         x="20"  y="316" width="440" height="4"/>
+
+    <rect id="hit-front-door"    x="6"   y="14"  width="130" height="284"/>
+    <rect id="hit-door-handle"   x="114" y="154" width="14"  height="34"/>
+    <rect id="hit-hallway"       x="136" y="18"  width="14"  height="280"/>
+
+    <rect id="hit-keys"          x="166" y="116" width="20"  height="42"/>
+
+    <rect id="hit-shelf"         x="200" y="58"  width="266" height="8"/>
+    <rect id="hit-hatbox"        x="214" y="20"  width="54"  height="38"/>
+    <rect id="hit-scarf"         x="380" y="32"  width="68"  height="26"/>
+
+    <rect id="hit-coat-charcoal" x="200" y="74"  width="38"  height="160"/>
+    <rect id="hit-coat-tan"      x="260" y="74"  width="38"  height="140"/>
+    <rect id="hit-coat-empty"    x="318" y="74"  width="42"  height="16"/>
+    <rect id="hit-coat-black"    x="380" y="74"  width="38"  height="100"/>
+
+    <rect id="hit-mat"           x="200" y="282" width="262" height="14"/>
+    <rect id="hit-shoes-1"       x="206" y="268" width="38"  height="18"/>
+    <rect id="hit-shoes-2"       x="250" y="274" width="38"  height="12"/>
+    <rect id="hit-shoes-3"       x="294" y="272" width="42"  height="14"/>
+    <rect id="hit-shoes-4"       x="344" y="274" width="34"  height="12"/>
+
+    <rect id="hit-umbrella"      x="438" y="184" width="24"  height="112"/>
+  </g>
+</svg>

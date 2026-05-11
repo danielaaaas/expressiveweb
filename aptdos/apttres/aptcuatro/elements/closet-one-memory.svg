@@ -1,0 +1,465 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" shape-rendering="crispEdges">
+  <title>Closet one memory fragment (apartment four) - carefully categorized</title>
+  <desc>Looking straight into a tightly framed closet wall: three shelves stack from top to bottom, with a row of fabric storage bins along the floor. The top shelf holds three small labeled tins. The middle shelf holds three tidy stacks of folded clothing in cream, sage, and slate, plus a lidded fabric cube on the right. The bottom shelf holds two large labeled storage boxes side by side. The floor row has four small fabric bins, each in a different muted color. A soft warm light from above evens out the entire wall. Every label is hand-tagged. Nothing is out of alignment.</desc>
+
+  <defs>
+    <linearGradient id="co41Wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#ece6d8"/>
+      <stop offset="65%"  stop-color="#dcd2bc"/>
+      <stop offset="100%" stop-color="#bcb098"/>
+    </linearGradient>
+    <linearGradient id="co41ShelfWood" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#caba9c"/>
+      <stop offset="100%" stop-color="#7a6a52"/>
+    </linearGradient>
+    <linearGradient id="co41ShelfEdge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#a89878"/>
+      <stop offset="100%" stop-color="#5a4a30"/>
+    </linearGradient>
+
+    <!-- folded clothing palettes -->
+    <linearGradient id="co41Cream" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f4eedc"/>
+      <stop offset="100%" stop-color="#c4bca4"/>
+    </linearGradient>
+    <linearGradient id="co41Sage" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#bcc8b8"/>
+      <stop offset="100%" stop-color="#5a6e5a"/>
+    </linearGradient>
+    <linearGradient id="co41Slate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#a4aeb8"/>
+      <stop offset="100%" stop-color="#4a5460"/>
+    </linearGradient>
+    <linearGradient id="co41Rose" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#dcbab8"/>
+      <stop offset="100%" stop-color="#8a6c6a"/>
+    </linearGradient>
+
+    <!-- storage box palettes -->
+    <linearGradient id="co41Linen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#e8e0c8"/>
+      <stop offset="100%" stop-color="#a89878"/>
+    </linearGradient>
+    <linearGradient id="co41Kraft" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#d4b48c"/>
+      <stop offset="100%" stop-color="#9a7a52"/>
+    </linearGradient>
+    <linearGradient id="co41Tin" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#dcd2bc"/>
+      <stop offset="100%" stop-color="#9a8c70"/>
+    </linearGradient>
+    <linearGradient id="co41Cube" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#e8e0cc"/>
+      <stop offset="100%" stop-color="#a89c80"/>
+    </linearGradient>
+
+    <!-- soft overhead light pool -->
+    <radialGradient id="co41Light" cx="50%" cy="0%" r="65%">
+      <stop offset="0%"   stop-color="#fff4d4" stop-opacity="0.32"/>
+      <stop offset="55%"  stop-color="#f8e8c4" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#f8e8c4" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="co41SidesL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#22242a" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#22242a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="co41SidesR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%"   stop-color="#22242a" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#22242a" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="co41Vignette" cx="50%" cy="55%" r="72%">
+      <stop offset="58%"  stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1a1c20" stop-opacity="0.40"/>
+    </radialGradient>
+  </defs>
+
+  <!-- ============= WALL ============= -->
+  <rect width="480" height="320" fill="url(#co41Wall)"/>
+
+  <!-- ceiling shadow strip -->
+  <rect x="0" y="0" width="480" height="6" fill="#7a6c54" opacity="0.45" pointer-events="none"/>
+  <rect x="0" y="6" width="480" height="1" fill="#3a2e1c" opacity="0.5" pointer-events="none"/>
+
+  <!-- side closet trim -->
+  <rect x="0"   y="0" width="14" height="320" fill="#a89878" opacity="0.55" pointer-events="none"/>
+  <rect x="466" y="0" width="14" height="320" fill="#a89878" opacity="0.55" pointer-events="none"/>
+  <rect x="14"  y="0" width="1"  height="320" fill="#5a4a30" opacity="0.55" pointer-events="none"/>
+  <rect x="465" y="0" width="1"  height="320" fill="#5a4a30" opacity="0.55" pointer-events="none"/>
+
+  <!-- soft overhead light pool -->
+  <rect x="0" y="0" width="480" height="200" fill="url(#co41Light)" pointer-events="none"/>
+
+  <!-- ============= TOP SHELF BOARD (carries items above) ============= -->
+  <g id="co41-top-shelf-art" pointer-events="none">
+    <rect x="16" y="86" width="448" height="8" fill="url(#co41ShelfWood)"/>
+    <rect x="16" y="86" width="448" height="1" fill="#e0d4b4"/>
+    <rect x="16" y="93" width="448" height="1" fill="#3a2e1c"/>
+    <!-- under-shelf shadow on the wall just below -->
+    <rect x="16" y="94" width="448" height="3" fill="#1a160c" opacity="0.32"/>
+  </g>
+
+  <!-- ============= TOP SHELF ITEMS (3 small labeled tins, evenly spaced) ============= -->
+  <!-- tin 1 -->
+  <g id="co41-tin-1-art">
+    <rect x="80"  y="44" width="68" height="42" fill="url(#co41Tin)"/>
+    <rect x="80"  y="44" width="68" height="42" fill="none" stroke="#5a4a30" stroke-width="1"/>
+    <rect x="80"  y="44" width="68" height="3"  fill="#f0e6cc"/>
+    <rect x="80"  y="50" width="68" height="1"  fill="#9a8c70" opacity="0.7"/>
+    <!-- knob -->
+    <rect x="110" y="42" width="8"  height="3"  fill="#a89878"/>
+    <rect x="110" y="44" width="8"  height="1"  fill="#5a4a30"/>
+    <!-- label tag -->
+    <rect x="92"  y="62" width="44" height="14" fill="#dcc890"/>
+    <rect x="92"  y="62" width="44" height="14" fill="none" stroke="#7a5a36" stroke-width="0.8"/>
+    <rect x="91"  y="62" width="2"  height="2"  fill="#5a4a30"/>
+    <text id="co41-label-1" x="114" y="73" text-anchor="middle"
+          font-family="'Pixelify Sans', 'VT323', monospace" font-size="9"
+          fill="#3a2e1c" font-weight="700" pointer-events="none">letters</text>
+  </g>
+
+  <!-- tin 2 -->
+  <g id="co41-tin-2-art">
+    <rect x="180" y="44" width="76" height="42" fill="url(#co41Linen)"/>
+    <rect x="180" y="44" width="76" height="42" fill="none" stroke="#5a4a30" stroke-width="1"/>
+    <rect x="180" y="44" width="76" height="3"  fill="#f4ecd2"/>
+    <rect x="180" y="50" width="76" height="1"  fill="#9a8c70" opacity="0.7"/>
+    <rect x="214" y="42" width="8"  height="3"  fill="#a89878"/>
+    <rect x="214" y="44" width="8"  height="1"  fill="#5a4a30"/>
+    <!-- label tag -->
+    <rect x="194" y="62" width="48" height="14" fill="#dcc890"/>
+    <rect x="194" y="62" width="48" height="14" fill="none" stroke="#7a5a36" stroke-width="0.8"/>
+    <rect x="193" y="62" width="2"  height="2"  fill="#5a4a30"/>
+    <text id="co41-label-2" x="218" y="73" text-anchor="middle"
+          font-family="'Pixelify Sans', 'VT323', monospace" font-size="9"
+          fill="#3a2e1c" font-weight="700" pointer-events="none">winter</text>
+  </g>
+
+  <!-- tin 3 -->
+  <g id="co41-tin-3-art">
+    <rect x="290" y="48" width="80" height="38" fill="url(#co41Kraft)"/>
+    <rect x="290" y="48" width="80" height="38" fill="none" stroke="#5a4022" stroke-width="1"/>
+    <rect x="290" y="48" width="80" height="3"  fill="#e0c294"/>
+    <rect x="290" y="54" width="80" height="1"  fill="#7a5a36" opacity="0.7"/>
+    <!-- handles -->
+    <rect x="298" y="44" width="10" height="4"  fill="none" stroke="#5a4022" stroke-width="1"/>
+    <rect x="352" y="44" width="10" height="4"  fill="none" stroke="#5a4022" stroke-width="1"/>
+    <!-- label tag -->
+    <rect x="306" y="64" width="48" height="14" fill="#dcc890"/>
+    <rect x="306" y="64" width="48" height="14" fill="none" stroke="#7a5a36" stroke-width="0.8"/>
+    <rect x="305" y="64" width="2"  height="2"  fill="#5a4a30"/>
+    <text id="co41-label-3" x="330" y="75" text-anchor="middle"
+          font-family="'Pixelify Sans', 'VT323', monospace" font-size="9"
+          fill="#3a2e1c" font-weight="700" pointer-events="none">tapes</text>
+  </g>
+
+  <!-- ============= MIDDLE SHELF BOARD ============= -->
+  <g id="co41-mid-shelf-art" pointer-events="none">
+    <rect x="16" y="176" width="448" height="8" fill="url(#co41ShelfWood)"/>
+    <rect x="16" y="176" width="448" height="1" fill="#e0d4b4"/>
+    <rect x="16" y="183" width="448" height="1" fill="#3a2e1c"/>
+    <rect x="16" y="184" width="448" height="3" fill="#1a160c" opacity="0.32"/>
+  </g>
+
+  <!-- ============= MIDDLE SHELF ITEMS (folded stacks + cube) ============= -->
+
+  <!-- folded stack 1 (cream, 5 layers) -->
+  <g id="co41-stack-1-art">
+    <!-- shadow on shelf below -->
+    <rect x="38" y="174" width="80" height="2" fill="#1a160c" opacity="0.30"/>
+    <!-- 5 layers -->
+    <rect x="40" y="142" width="76" height="6" fill="url(#co41Cream)"/>
+    <rect x="40" y="142" width="76" height="1" fill="#fcf4e0"/>
+    <rect x="40" y="148" width="76" height="1" fill="#9a8c70" opacity="0.55"/>
+    <rect x="40" y="150" width="76" height="6" fill="url(#co41Cream)"/>
+    <rect x="40" y="150" width="76" height="1" fill="#fcf4e0"/>
+    <rect x="40" y="156" width="76" height="1" fill="#9a8c70" opacity="0.55"/>
+    <rect x="40" y="158" width="76" height="6" fill="url(#co41Cream)"/>
+    <rect x="40" y="158" width="76" height="1" fill="#fcf4e0"/>
+    <rect x="40" y="164" width="76" height="1" fill="#9a8c70" opacity="0.55"/>
+    <rect x="40" y="166" width="76" height="6" fill="url(#co41Cream)"/>
+    <rect x="40" y="166" width="76" height="1" fill="#fcf4e0"/>
+    <rect x="40" y="172" width="76" height="1" fill="#9a8c70" opacity="0.55"/>
+    <rect x="40" y="174" width="76" height="2" fill="url(#co41Cream)"/>
+    <!-- right-edge fold seam -->
+    <rect x="116" y="142" width="1" height="34" fill="#9a8c70" opacity="0.65"/>
+    <!-- outline -->
+    <rect x="40" y="142" width="76" height="34" fill="none" stroke="#7a6c54" stroke-width="0.6" opacity="0.55"/>
+  </g>
+
+  <!-- folded stack 2 (sage) -->
+  <g id="co41-stack-2-art">
+    <rect x="128" y="174" width="80" height="2" fill="#1a160c" opacity="0.30"/>
+    <rect x="130" y="138" width="76" height="6" fill="url(#co41Sage)"/>
+    <rect x="130" y="138" width="76" height="1" fill="#cad4ca"/>
+    <rect x="130" y="144" width="76" height="1" fill="#3e4e3e" opacity="0.7"/>
+    <rect x="130" y="146" width="76" height="6" fill="url(#co41Sage)"/>
+    <rect x="130" y="146" width="76" height="1" fill="#cad4ca"/>
+    <rect x="130" y="152" width="76" height="1" fill="#3e4e3e" opacity="0.7"/>
+    <rect x="130" y="154" width="76" height="6" fill="url(#co41Sage)"/>
+    <rect x="130" y="154" width="76" height="1" fill="#cad4ca"/>
+    <rect x="130" y="160" width="76" height="1" fill="#3e4e3e" opacity="0.7"/>
+    <rect x="130" y="162" width="76" height="6" fill="url(#co41Sage)"/>
+    <rect x="130" y="162" width="76" height="1" fill="#cad4ca"/>
+    <rect x="130" y="168" width="76" height="1" fill="#3e4e3e" opacity="0.7"/>
+    <rect x="130" y="170" width="76" height="6" fill="url(#co41Sage)"/>
+    <rect x="130" y="170" width="76" height="1" fill="#cad4ca"/>
+    <rect x="130" y="176" width="76" height="0" fill="url(#co41Sage)"/>
+    <rect x="206" y="138" width="1" height="38" fill="#3e4e3e" opacity="0.7"/>
+    <rect x="130" y="138" width="76" height="38" fill="none" stroke="#3e4e3e" stroke-width="0.6" opacity="0.55"/>
+  </g>
+
+  <!-- folded stack 3 (slate) -->
+  <g id="co41-stack-3-art">
+    <rect x="218" y="174" width="80" height="2" fill="#1a160c" opacity="0.30"/>
+    <rect x="220" y="142" width="76" height="6" fill="url(#co41Slate)"/>
+    <rect x="220" y="142" width="76" height="1" fill="#c4ccd4"/>
+    <rect x="220" y="148" width="76" height="1" fill="#2a3440" opacity="0.7"/>
+    <rect x="220" y="150" width="76" height="6" fill="url(#co41Slate)"/>
+    <rect x="220" y="150" width="76" height="1" fill="#c4ccd4"/>
+    <rect x="220" y="156" width="76" height="1" fill="#2a3440" opacity="0.7"/>
+    <rect x="220" y="158" width="76" height="6" fill="url(#co41Slate)"/>
+    <rect x="220" y="158" width="76" height="1" fill="#c4ccd4"/>
+    <rect x="220" y="164" width="76" height="1" fill="#2a3440" opacity="0.7"/>
+    <rect x="220" y="166" width="76" height="6" fill="url(#co41Slate)"/>
+    <rect x="220" y="166" width="76" height="1" fill="#c4ccd4"/>
+    <rect x="220" y="172" width="76" height="1" fill="#2a3440" opacity="0.7"/>
+    <rect x="220" y="174" width="76" height="2" fill="url(#co41Slate)"/>
+    <rect x="296" y="142" width="1" height="34" fill="#2a3440" opacity="0.7"/>
+    <rect x="220" y="142" width="76" height="34" fill="none" stroke="#2a3440" stroke-width="0.6" opacity="0.55"/>
+  </g>
+
+  <!-- lidded fabric cube ("linens") -->
+  <g id="co41-cube-art">
+    <rect x="318" y="174" width="106" height="2" fill="#1a160c" opacity="0.36"/>
+    <rect x="320" y="106" width="100" height="68" fill="url(#co41Cube)"/>
+    <rect x="320" y="106" width="100" height="68" fill="none" stroke="#7a6c54" stroke-width="1"/>
+    <!-- lid band -->
+    <rect x="320" y="106" width="100" height="10" fill="#dcd2b4"/>
+    <rect x="320" y="116" width="100" height="1"  fill="#7a6c54" opacity="0.6"/>
+    <!-- weave texture lines -->
+    <g pointer-events="none" opacity="0.30">
+      <rect x="328" y="124" width="84" height="1" fill="#9a8c70"/>
+      <rect x="328" y="134" width="84" height="1" fill="#9a8c70"/>
+      <rect x="328" y="144" width="84" height="1" fill="#9a8c70"/>
+      <rect x="328" y="154" width="84" height="1" fill="#9a8c70"/>
+      <rect x="328" y="164" width="84" height="1" fill="#9a8c70"/>
+    </g>
+    <!-- lid handle (looped fabric) -->
+    <rect x="358" y="100" width="24" height="6" fill="none" stroke="#7a6c54" stroke-width="1.4"/>
+    <!-- label tag -->
+    <rect x="340" y="138" width="60" height="18" fill="#dcc890"/>
+    <rect x="340" y="138" width="60" height="18" fill="none" stroke="#7a5a36" stroke-width="0.8"/>
+    <rect x="339" y="138" width="2"  height="2"  fill="#5a4a30"/>
+    <text id="co41-label-4" x="370" y="151" text-anchor="middle"
+          font-family="'Pixelify Sans', 'VT323', monospace" font-size="11"
+          fill="#3a2e1c" font-weight="700" pointer-events="none">linens</text>
+  </g>
+
+  <!-- ============= BOTTOM SHELF BOARD ============= -->
+  <g id="co41-bot-shelf-art" pointer-events="none">
+    <rect x="16" y="266" width="448" height="8" fill="url(#co41ShelfWood)"/>
+    <rect x="16" y="266" width="448" height="1" fill="#e0d4b4"/>
+    <rect x="16" y="273" width="448" height="1" fill="#3a2e1c"/>
+    <rect x="16" y="274" width="448" height="3" fill="#1a160c" opacity="0.32"/>
+  </g>
+
+  <!-- ============= BOTTOM SHELF ITEMS (2 large labeled boxes) ============= -->
+
+  <!-- coats box (linen lidded) -->
+  <g id="co41-coats-art">
+    <rect x="36" y="264" width="200" height="2" fill="#1a160c" opacity="0.36"/>
+    <rect x="38" y="200" width="194" height="66" fill="url(#co41Linen)"/>
+    <rect x="38" y="200" width="194" height="66" fill="none" stroke="#7a6c54" stroke-width="1"/>
+    <!-- lid -->
+    <rect x="36" y="198" width="198" height="8" fill="#e8e0c8"/>
+    <rect x="36" y="198" width="198" height="1" fill="#fcf4e0"/>
+    <rect x="36" y="205" width="198" height="1" fill="#7a6c54" opacity="0.7"/>
+    <!-- weave texture -->
+    <g pointer-events="none" opacity="0.28">
+      <rect x="46" y="216" width="180" height="1" fill="#9a8c70"/>
+      <rect x="46" y="226" width="180" height="1" fill="#9a8c70"/>
+      <rect x="46" y="236" width="180" height="1" fill="#9a8c70"/>
+      <rect x="46" y="246" width="180" height="1" fill="#9a8c70"/>
+      <rect x="46" y="256" width="180" height="1" fill="#9a8c70"/>
+    </g>
+    <!-- pull handle (cutout) -->
+    <rect x="124" y="218" width="22" height="6" fill="#3a2e1c"/>
+    <rect x="125" y="219" width="20" height="4" fill="#7a6c54"/>
+    <!-- label tag -->
+    <rect x="74" y="232" width="80" height="20" fill="#dcc890"/>
+    <rect x="74" y="232" width="80" height="20" fill="none" stroke="#7a5a36" stroke-width="0.8"/>
+    <rect x="73" y="232" width="2"  height="2"  fill="#5a4a30"/>
+    <text id="co41-label-5" x="114" y="246" text-anchor="middle"
+          font-family="'Pixelify Sans', 'VT323', monospace" font-size="11"
+          fill="#3a2e1c" font-weight="700" pointer-events="none">coats</text>
+  </g>
+
+  <!-- papers box (kraft cardboard with handles) -->
+  <g id="co41-papers-art">
+    <rect x="248" y="264" width="200" height="2" fill="#1a160c" opacity="0.36"/>
+    <rect x="250" y="200" width="194" height="66" fill="url(#co41Kraft)"/>
+    <rect x="250" y="200" width="194" height="66" fill="none" stroke="#5a4022" stroke-width="1"/>
+    <!-- lid -->
+    <rect x="248" y="198" width="198" height="8" fill="#dcb88c"/>
+    <rect x="248" y="198" width="198" height="1" fill="#f0d09c"/>
+    <rect x="248" y="205" width="198" height="1" fill="#5a4022" opacity="0.7"/>
+    <!-- center seam -->
+    <rect x="346" y="208" width="1" height="58" fill="#5a4022" opacity="0.55"/>
+    <!-- side handle cutouts -->
+    <rect x="266" y="226" width="18" height="6" fill="#3a2e1c"/>
+    <rect x="267" y="227" width="16" height="4" fill="#7a5a36"/>
+    <rect x="408" y="226" width="18" height="6" fill="#3a2e1c"/>
+    <rect x="409" y="227" width="16" height="4" fill="#7a5a36"/>
+    <!-- label tag -->
+    <rect x="306" y="232" width="80" height="20" fill="#dcc890"/>
+    <rect x="306" y="232" width="80" height="20" fill="none" stroke="#7a5a36" stroke-width="0.8"/>
+    <rect x="305" y="232" width="2"  height="2"  fill="#5a4a30"/>
+    <text id="co41-label-6" x="346" y="246" text-anchor="middle"
+          font-family="'Pixelify Sans', 'VT323', monospace" font-size="11"
+          fill="#3a2e1c" font-weight="700" pointer-events="none">papers</text>
+  </g>
+
+  <!-- ============= FLOOR ROW (4 small fabric bins) ============= -->
+
+  <!-- bin sage -->
+  <g id="co41-bin-sage-art">
+    <rect x="36" y="316" width="100" height="2" fill="#1a160c" opacity="0.36"/>
+    <polygon points="40,282 138,282 134,316 44,316" fill="#a4b4a4"/>
+    <polygon points="40,282 138,282 134,316 44,316" fill="none" stroke="#3e4e3e" stroke-width="1"/>
+    <rect x="40" y="282" width="98" height="3" fill="#cad8ca"/>
+    <!-- weave texture -->
+    <g pointer-events="none" opacity="0.32">
+      <rect x="50" y="290" width="78" height="1" fill="#3e4e3e"/>
+      <rect x="50" y="298" width="78" height="1" fill="#3e4e3e"/>
+      <rect x="50" y="306" width="78" height="1" fill="#3e4e3e"/>
+    </g>
+    <!-- mini fabric tag -->
+    <rect x="80" y="294" width="18" height="8" fill="#dcc890"/>
+    <rect x="80" y="294" width="18" height="8" fill="none" stroke="#7a5a36" stroke-width="0.5"/>
+  </g>
+
+  <!-- bin cream -->
+  <g id="co41-bin-cream-art">
+    <rect x="142" y="316" width="100" height="2" fill="#1a160c" opacity="0.36"/>
+    <polygon points="146,282 244,282 240,316 150,316" fill="#e8e0c8"/>
+    <polygon points="146,282 244,282 240,316 150,316" fill="none" stroke="#7a6c54" stroke-width="1"/>
+    <rect x="146" y="282" width="98" height="3" fill="#fcf4e0"/>
+    <g pointer-events="none" opacity="0.30">
+      <rect x="156" y="290" width="78" height="1" fill="#9a8c70"/>
+      <rect x="156" y="298" width="78" height="1" fill="#9a8c70"/>
+      <rect x="156" y="306" width="78" height="1" fill="#9a8c70"/>
+    </g>
+    <rect x="186" y="294" width="18" height="8" fill="#dcc890"/>
+    <rect x="186" y="294" width="18" height="8" fill="none" stroke="#7a5a36" stroke-width="0.5"/>
+  </g>
+
+  <!-- bin slate -->
+  <g id="co41-bin-slate-art">
+    <rect x="248" y="316" width="100" height="2" fill="#1a160c" opacity="0.36"/>
+    <polygon points="252,282 350,282 346,316 256,316" fill="#94a0ac"/>
+    <polygon points="252,282 350,282 346,316 256,316" fill="none" stroke="#2a3440" stroke-width="1"/>
+    <rect x="252" y="282" width="98" height="3" fill="#bfc8d2"/>
+    <g pointer-events="none" opacity="0.32">
+      <rect x="262" y="290" width="78" height="1" fill="#2a3440"/>
+      <rect x="262" y="298" width="78" height="1" fill="#2a3440"/>
+      <rect x="262" y="306" width="78" height="1" fill="#2a3440"/>
+    </g>
+    <rect x="292" y="294" width="18" height="8" fill="#dcc890"/>
+    <rect x="292" y="294" width="18" height="8" fill="none" stroke="#7a5a36" stroke-width="0.5"/>
+  </g>
+
+  <!-- bin rose -->
+  <g id="co41-bin-rose-art">
+    <rect x="354" y="316" width="100" height="2" fill="#1a160c" opacity="0.36"/>
+    <polygon points="358,282 456,282 452,316 362,316" fill="#d0b4b4"/>
+    <polygon points="358,282 456,282 452,316 362,316" fill="none" stroke="#6a4c4a" stroke-width="1"/>
+    <rect x="358" y="282" width="98" height="3" fill="#e8d0d0"/>
+    <g pointer-events="none" opacity="0.30">
+      <rect x="368" y="290" width="78" height="1" fill="#6a4c4a"/>
+      <rect x="368" y="298" width="78" height="1" fill="#6a4c4a"/>
+      <rect x="368" y="306" width="78" height="1" fill="#6a4c4a"/>
+    </g>
+    <rect x="398" y="294" width="18" height="8" fill="#dcc890"/>
+    <rect x="398" y="294" width="18" height="8" fill="none" stroke="#7a5a36" stroke-width="0.5"/>
+  </g>
+
+  <!-- ============= DRIFTING DUST (very slow breath, lucid-memory motion) ============= -->
+  <g pointer-events="none" opacity="0.40">
+    <ellipse cx="232" cy="32"  rx="1.4" ry="1.4" fill="#fce8c8">
+      <animate attributeName="cy" values="32;35;32" dur="38s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.82;1;0.82" dur="38s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="384" cy="116" rx="1.2" ry="1.2" fill="#fce8c8">
+      <animate attributeName="cy" values="116;113;116" dur="44s" begin="-9s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="44s" begin="-9s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="58"  cy="200" rx="1.2" ry="1.2" fill="#fce8c8">
+      <animate attributeName="cy" values="200;204;200" dur="40s" begin="-16s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.82;1;0.82" dur="40s" begin="-16s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="406" cy="226" rx="1.2" ry="1.2" fill="#fce8c8">
+      <animate attributeName="cy" values="226;223;226" dur="46s" begin="-23s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="46s" begin="-23s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- ============= LUCID MEMORY LAYER (warm bleed + breathing haze) ============= -->
+  <defs>
+    <radialGradient id="co41WarmBleed" cx="50%" cy="22%" r="50%">
+      <stop offset="0%"   stop-color="#fce0a8" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#fce0a8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="co41Haze" cx="50%" cy="50%" r="70%">
+      <stop offset="0%"   stop-color="#fff4d4" stop-opacity="0.055"/>
+      <stop offset="60%"  stop-color="#fff4d4" stop-opacity="0.022"/>
+      <stop offset="100%" stop-color="#fff4d4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="480" height="320" fill="url(#co41WarmBleed)" pointer-events="none">
+    <animate attributeName="opacity" values="0.78;1;0.78" dur="24s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="0" y="0" width="480" height="320" fill="url(#co41Haze)" pointer-events="none">
+    <animate attributeName="opacity" values="0.55;1;0.55" dur="20s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ============= EDGE DARKENING + OUTER VIGNETTE ============= -->
+  <rect x="0"   y="0" width="38" height="320" fill="url(#co41SidesL)" pointer-events="none"/>
+  <rect x="442" y="0" width="38" height="320" fill="url(#co41SidesR)" pointer-events="none"/>
+  <rect x="0" y="0" width="480" height="320" fill="url(#co41Vignette)" pointer-events="none"/>
+
+  <!-- ============= INTERACTIVE HOTSPOTS (placed last, transparent) -->
+  <!-- order matters: more specific hotspots are placed AFTER broader ones so they receive clicks -->
+  <g id="co41-hotspots" fill="transparent" stroke="none">
+    <!-- broad areas first -->
+    <rect id="hit-wall"        x="20"  y="2"   width="440" height="36"/>
+    <rect id="hit-light"       x="180" y="2"   width="120" height="30"/>
+    <rect id="hit-floor"       x="20"  y="316" width="440" height="4"/>
+
+    <rect id="hit-shelf-top"   x="16"  y="86"  width="448" height="8"/>
+    <rect id="hit-shelf-mid"   x="16"  y="176" width="448" height="8"/>
+    <rect id="hit-shelf-bot"   x="16"  y="266" width="448" height="8"/>
+
+    <!-- top-shelf items -->
+    <rect id="hit-tin-1"       x="78"  y="38"  width="74" height="50"/>
+    <rect id="hit-tin-2"       x="178" y="38"  width="80" height="50"/>
+    <rect id="hit-tin-3"       x="288" y="42"  width="84" height="46"/>
+
+    <!-- middle-shelf items -->
+    <rect id="hit-stack-1"     x="38"  y="138" width="80" height="38"/>
+    <rect id="hit-stack-2"     x="128" y="134" width="80" height="42"/>
+    <rect id="hit-stack-3"     x="218" y="138" width="80" height="38"/>
+    <rect id="hit-cube"        x="318" y="100" width="106" height="76"/>
+
+    <!-- bottom-shelf items -->
+    <rect id="hit-coats"       x="36"  y="196" width="200" height="70"/>
+    <rect id="hit-papers"      x="248" y="196" width="200" height="70"/>
+
+    <!-- floor bins -->
+    <rect id="hit-bin-sage"    x="36"  y="280" width="104" height="38"/>
+    <rect id="hit-bin-cream"   x="142" y="280" width="104" height="38"/>
+    <rect id="hit-bin-slate"   x="248" y="280" width="104" height="38"/>
+    <rect id="hit-bin-rose"    x="354" y="280" width="104" height="38"/>
+  </g>
+</svg>

@@ -1,0 +1,511 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 320" shape-rendering="crispEdges">
+  <title>Bedroom two memory fragment (apartment four) - suspended workspace</title>
+  <desc>Looking straight at the desk corner of a quiet bedroom-workspace: a low matte-oak desk with a slim black monitor that reflects a perfect miniature of the room back at the camera, a wireless keyboard centered in front of it, a small arc lamp casting a too-sharp shadow on the desk top, a dusty-sage coffee mug, a small stack of two notebooks with a pen squared exactly on top, and organized cables clipped to the back leg of the desk. A mid-back mesh office chair sits in front, its back rising into frame from below. A cropped window on the left looks out onto a flat sky that has not changed shade for hours. A single small framed print hangs on the wall, perfectly level. The room is softly overlit, sparsely furnished, and nothing animates. The cursor on the screen does not blink. Time appears paused.</desc>
+
+  <defs>
+    <linearGradient id="bt4Wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#ece6d8"/>
+      <stop offset="60%"  stop-color="#dcd6c8"/>
+      <stop offset="100%" stop-color="#b8b2a4"/>
+    </linearGradient>
+    <linearGradient id="bt4Floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#c4b8a0"/>
+      <stop offset="100%" stop-color="#867862"/>
+    </linearGradient>
+
+    <linearGradient id="bt4DeskTop" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#d8c4a4"/>
+      <stop offset="100%" stop-color="#a08868"/>
+    </linearGradient>
+    <linearGradient id="bt4DeskApron" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#b89878"/>
+      <stop offset="100%" stop-color="#7a5e44"/>
+    </linearGradient>
+
+    <linearGradient id="bt4Sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#cad4dc"/>
+      <stop offset="100%" stop-color="#8896a0"/>
+    </linearGradient>
+    <linearGradient id="bt4Sheer" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f4eddc"/>
+      <stop offset="100%" stop-color="#c8c0a8"/>
+    </linearGradient>
+
+    <linearGradient id="bt4Mesh" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#2a2a30"/>
+      <stop offset="100%" stop-color="#08080c"/>
+    </linearGradient>
+    <linearGradient id="bt4Mug" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#a8bca0"/>
+      <stop offset="100%" stop-color="#5a7058"/>
+    </linearGradient>
+
+    <radialGradient id="bt4LampPool" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#f8e8c4" stop-opacity="0.40"/>
+      <stop offset="58%"  stop-color="#e8c890" stop-opacity="0.14"/>
+      <stop offset="92%"  stop-color="#e8c890" stop-opacity="0.04"/>
+      <stop offset="100%" stop-color="#e8c890" stop-opacity="0"/>
+    </radialGradient>
+
+    <linearGradient id="bt4SidesL" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#22242a" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#22242a" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="bt4SidesR" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%"   stop-color="#22242a" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#22242a" stop-opacity="0"/>
+    </linearGradient>
+
+    <radialGradient id="bt4Vignette" cx="50%" cy="55%" r="72%">
+      <stop offset="58%"  stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#181a1e" stop-opacity="0.42"/>
+    </radialGradient>
+
+    <clipPath id="bt4WindowClip">
+      <rect x="28" y="48" width="98" height="124"/>
+    </clipPath>
+
+    <filter id="bt4SoftShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="1.2"/>
+    </filter>
+  </defs>
+
+  <!-- ============= WALL ============= -->
+  <rect width="480" height="320" fill="url(#bt4Wall)"/>
+
+  <!-- ceiling line -->
+  <rect x="0" y="0" width="480" height="2" fill="#7a6c54" opacity="0.45" pointer-events="none"/>
+
+  <!-- subtle picture rail near the top -->
+  <rect x="0" y="74" width="480" height="1" fill="#a89878" opacity="0.28" pointer-events="none"/>
+  <rect x="0" y="75" width="480" height="1" fill="#f4ecd8" opacity="0.32" pointer-events="none"/>
+
+  <!-- baseboard at floor join -->
+  <rect x="0" y="234" width="480" height="2" fill="#9c8c70" opacity="0.42" pointer-events="none"/>
+  <rect x="0" y="236" width="480" height="2" fill="#7a6c54" opacity="0.55" pointer-events="none"/>
+
+  <!-- ============= WINDOW (cropped at left, sheer pulled to one side) ============= -->
+  <g id="bt4-window-frame" pointer-events="none">
+    <rect x="22" y="42" width="110" height="138" fill="#d8d0bc"/>
+    <rect x="24" y="44" width="106" height="134" fill="#e8e2d0"/>
+  </g>
+
+  <g clip-path="url(#bt4WindowClip)">
+    <!-- a single, perfectly still flat sky -->
+    <rect x="28" y="48" width="98" height="124" fill="url(#bt4Sky)"/>
+    <!-- a single distant low building, evenly lit -->
+    <rect x="28" y="142" width="98" height="30" fill="#5a6068" opacity="0.85"/>
+    <rect x="28" y="142" width="98" height="2"  fill="#7a808a" opacity="0.75"/>
+    <!-- a row of distant windows, perfectly evenly spaced -->
+    <rect x="36"  y="150" width="2" height="2" fill="#dce4ec" opacity="0.85"/>
+    <rect x="46"  y="150" width="2" height="2" fill="#dce4ec" opacity="0.85"/>
+    <rect x="56"  y="150" width="2" height="2" fill="#dce4ec" opacity="0.85"/>
+    <rect x="66"  y="150" width="2" height="2" fill="#dce4ec" opacity="0.85"/>
+    <rect x="76"  y="150" width="2" height="2" fill="#dce4ec" opacity="0.85"/>
+    <rect x="86"  y="150" width="2" height="2" fill="#dce4ec" opacity="0.85"/>
+    <rect x="96"  y="150" width="2" height="2" fill="#dce4ec" opacity="0.85"/>
+    <rect x="106" y="150" width="2" height="2" fill="#dce4ec" opacity="0.85"/>
+    <rect x="116" y="150" width="2" height="2" fill="#dce4ec" opacity="0.85"/>
+    <rect x="36"  y="158" width="2" height="2" fill="#dce4ec" opacity="0.55"/>
+    <rect x="56"  y="158" width="2" height="2" fill="#dce4ec" opacity="0.55"/>
+    <rect x="76"  y="158" width="2" height="2" fill="#dce4ec" opacity="0.55"/>
+    <rect x="96"  y="158" width="2" height="2" fill="#dce4ec" opacity="0.55"/>
+    <rect x="116" y="158" width="2" height="2" fill="#dce4ec" opacity="0.55"/>
+  </g>
+
+  <!-- mullion + sash -->
+  <g pointer-events="none">
+    <rect x="22" y="108" width="110" height="2" fill="#a89878"/>
+    <rect x="74" y="42"  width="2"   height="138" fill="#a89878"/>
+  </g>
+
+  <!-- sheer curtain pulled to ONE side (asymmetric, but still frozen) -->
+  <g pointer-events="none" opacity="0.65">
+    <rect x="116" y="44" width="14" height="134" fill="url(#bt4Sheer)"/>
+    <rect x="128" y="44" width="2"  height="134" fill="#a89878" opacity="0.40"/>
+    <rect x="116" y="44" width="2"  height="134" fill="#fff4d8" opacity="0.65"/>
+  </g>
+
+  <!-- window sill -->
+  <rect x="20" y="180" width="114" height="3" fill="#a89878" pointer-events="none"/>
+  <rect x="20" y="183" width="114" height="2" fill="#7a6c54" pointer-events="none"/>
+
+  <!-- ============= SMALL FRAMED PRINT (one piece of wall art, perfectly level) ============= -->
+  <g id="bt4-frame" pointer-events="none">
+    <!-- frame (matte black, square) -->
+    <rect x="362" y="46" width="44" height="46" fill="#1a1a20"/>
+    <rect x="362" y="46" width="44" height="2"  fill="#3a3a40"/>
+    <rect x="362" y="90" width="44" height="2"  fill="#08080c"/>
+    <rect x="362" y="46" width="2"  height="46" fill="#3a3a40"/>
+    <rect x="404" y="46" width="2"  height="46" fill="#08080c"/>
+    <!-- inner mat -->
+    <rect x="365" y="49" width="38" height="40" fill="#e8e2d0"/>
+    <!-- a single flat geometric mark inside (a small offset circle) -->
+    <circle cx="384" cy="69" r="9" fill="#7a8088" opacity="0.85"/>
+    <circle cx="384" cy="69" r="9" fill="none" stroke="#3a3e46" stroke-width="1" opacity="0.55"/>
+    <!-- caption strip -->
+    <rect x="365" y="82" width="38" height="6" fill="#e8e2d0"/>
+    <rect x="372" y="84" width="6" height="1" fill="#3a342c" opacity="0.65"/>
+    <rect x="382" y="84" width="14" height="1" fill="#3a342c" opacity="0.55"/>
+  </g>
+
+  <!-- ============= FLOOR ============= -->
+  <rect x="0" y="238" width="480" height="82" fill="url(#bt4Floor)"/>
+  <rect x="0" y="238" width="480" height="2"  fill="#7a6a52"/>
+  <g pointer-events="none" opacity="0.22">
+    <rect x="0"   y="262" width="480" height="1" fill="#3a2c18"/>
+    <rect x="0"   y="288" width="480" height="1" fill="#3a2c18"/>
+    <rect x="78"  y="238" width="1"   height="82" fill="#3a2c18" opacity="0.55"/>
+    <rect x="186" y="238" width="1"   height="82" fill="#3a2c18" opacity="0.55"/>
+    <rect x="294" y="238" width="1"   height="82" fill="#3a2c18" opacity="0.55"/>
+    <rect x="402" y="238" width="1"   height="82" fill="#3a2c18" opacity="0.55"/>
+  </g>
+
+  <!-- ============= DESK (low, matte-oak, two slim metal legs) ============= -->
+  <g id="bt4-desk" pointer-events="none">
+    <!-- soft, perfectly flat shadow under the desk (no falloff variation) -->
+    <ellipse cx="290" cy="262" rx="160" ry="4" fill="#1a1610" opacity="0.30" filter="url(#bt4SoftShadow)"/>
+
+    <!-- desk top -->
+    <rect x="140" y="174" width="300" height="3" fill="url(#bt4DeskTop)"/>
+    <rect x="140" y="177" width="300" height="2" fill="#5a4030"/>
+    <!-- desk apron -->
+    <rect x="146" y="179" width="288" height="22" fill="url(#bt4DeskApron)"/>
+    <rect x="146" y="179" width="2"   height="22" fill="#cca888"/>
+    <rect x="432" y="179" width="2"   height="22" fill="#3a2818"/>
+    <rect x="146" y="199" width="288" height="2"  fill="#3a2818"/>
+    <!-- one drawer at left with finger-pull recess -->
+    <rect x="156" y="184" width="80" height="14" fill="#a88860"/>
+    <rect x="156" y="184" width="80" height="2"  fill="#c4a482" opacity="0.85"/>
+    <rect x="156" y="196" width="80" height="2"  fill="#3a2818" opacity="0.85"/>
+    <rect x="186" y="190" width="20" height="2"  fill="#3a2818" opacity="0.85"/>
+
+    <!-- two slim metal legs -->
+    <rect x="148" y="201" width="3" height="60" fill="#3a3a40"/>
+    <rect x="148" y="201" width="1" height="60" fill="#5a5a64"/>
+    <rect x="429" y="201" width="3" height="60" fill="#3a3a40"/>
+    <rect x="429" y="201" width="1" height="60" fill="#5a5a64"/>
+    <!-- a slim crossbar near the floor for cable management -->
+    <rect x="148" y="252" width="284" height="2" fill="#3a3a40"/>
+  </g>
+
+  <!-- ============= LAMP POOL (tighter, sharper than bo1 - softly sterile) ============= -->
+  <ellipse cx="240" cy="172" rx="90" ry="14" fill="url(#bt4LampPool)" pointer-events="none"/>
+  <ellipse cx="220" cy="172" rx="22" ry="3" fill="#fff8e0" opacity="0.40" pointer-events="none"/>
+
+  <!-- ============= ARC DESK LAMP (small, modern, sits at left of desk) ============= -->
+  <g id="bt4-lamp" pointer-events="none">
+    <!-- weighted disc base -->
+    <ellipse cx="170" cy="172" rx="14" ry="2.4" fill="#1a1a20"/>
+    <ellipse cx="170" cy="171" rx="13" ry="1.8" fill="#3a3a40"/>
+    <!-- vertical post (slim metal) -->
+    <rect x="168" y="118" width="3" height="54" fill="#1a1a20"/>
+    <rect x="168" y="118" width="1" height="54" fill="#3a3a40"/>
+    <!-- horizontal arm reaching toward center -->
+    <rect x="168" y="116" width="44" height="3" fill="#1a1a20"/>
+    <rect x="168" y="116" width="44" height="1" fill="#3a3a40"/>
+    <!-- slim downward neck before the shade -->
+    <rect x="208" y="118" width="3" height="10" fill="#1a1a20"/>
+    <rect x="208" y="118" width="1" height="10" fill="#3a3a40"/>
+    <!-- shade (small cone hanging down) -->
+    <polygon points="200,128 220,128 217,144 203,144" fill="#e8dcc0"/>
+    <polygon points="200,128 220,128 217,144 203,144" fill="none" stroke="#7a5a3a" stroke-width="1"/>
+    <rect x="203" y="143" width="14" height="2" fill="#5a4028"/>
+    <!-- inner warm glow at shade rim -->
+    <rect x="204" y="142" width="12" height="1" fill="#fde6a8" opacity="0.85"/>
+
+    <!-- DELIBERATELY TOO-SHARP STATIC SHADOW on the desk surface, cast by the lamp -->
+    <polygon points="208,176 246,176 252,182 218,182" fill="#1a1410" opacity="0.32"/>
+    <polygon points="208,176 246,176 252,182 218,182" fill="none" stroke="#1a1410" stroke-width="1" opacity="0.45"/>
+  </g>
+
+  <!-- ============= MONITOR (slim, matte-black, screen reflects the room back) ============= -->
+  <g id="bt4-monitor" pointer-events="none">
+    <!-- stand base (small block on the desk) -->
+    <rect x="240" y="170" width="36" height="4" fill="#1a1a20"/>
+    <rect x="240" y="170" width="36" height="1" fill="#3a3a40"/>
+    <!-- stand neck (slim) -->
+    <rect x="254" y="148" width="8" height="22" fill="#1a1a20"/>
+    <rect x="254" y="148" width="2" height="22" fill="#3a3a40"/>
+    <!-- monitor body (widescreen, slim bezel) -->
+    <rect x="200" y="100" width="116" height="50" fill="#14141a"/>
+    <rect x="200" y="100" width="116" height="2"  fill="#2a2a30"/>
+    <rect x="200" y="148" width="116" height="2"  fill="#04040a"/>
+    <rect x="200" y="100" width="2"   height="50" fill="#2a2a30"/>
+    <rect x="314" y="100" width="2"   height="50" fill="#04040a"/>
+    <!-- screen area -->
+    <rect x="204" y="104" width="108" height="42" fill="#2a3a48"/>
+    <rect x="204" y="104" width="108" height="1"  fill="#5a7888" opacity="0.6"/>
+
+    <!-- ============ SCREEN REFLECTION: tiny pixel-perfect ghost of the room ============ -->
+    <!-- a faint mini desk top stretching across the screen -->
+    <rect x="206" y="138" width="104" height="2" fill="#a08868" opacity="0.32"/>
+    <!-- mini-monitor (a black rectangle reflected in the actual monitor) -->
+    <rect x="252" y="124" width="20" height="14" fill="#04040a" opacity="0.42"/>
+    <rect x="254" y="126" width="16" height="10" fill="#2a3a48" opacity="0.38"/>
+    <!-- mini-lamp shade -->
+    <polygon points="216,128 222,128 221,134 217,134" fill="#e8dcc0" opacity="0.30"/>
+    <rect x="218" y="120" width="1" height="8" fill="#3a3a40" opacity="0.32"/>
+    <!-- mini-mug -->
+    <rect x="278" y="132" width="6" height="6" fill="#7a8c78" opacity="0.40"/>
+    <!-- mini-notebooks -->
+    <rect x="290" y="132" width="14" height="6" fill="#6a7c84" opacity="0.32"/>
+    <rect x="292" y="130" width="10" height="2" fill="#c89880" opacity="0.32"/>
+
+    <!-- a single un-blinking cursor rectangle on the screen (NOT animated) -->
+    <rect x="210" y="116" width="2" height="6" fill="#f0e8d4" opacity="0.85"/>
+    <!-- a couple of soft text-line ghosts -->
+    <rect x="214" y="118" width="36" height="1" fill="#dce4ec" opacity="0.55"/>
+    <rect x="214" y="120" width="48" height="1" fill="#dce4ec" opacity="0.45"/>
+    <rect x="214" y="122" width="28" height="1" fill="#dce4ec" opacity="0.55"/>
+
+    <!-- a small status-bar style band at the bottom of the screen -->
+    <rect x="204" y="142" width="108" height="3" fill="#1a2230" opacity="0.85"/>
+    <!-- a frozen clock readout (no animation) -->
+    <rect x="298" y="143" width="12" height="2" fill="#dce4ec" opacity="0.85"/>
+  </g>
+
+  <!-- ============= WIRELESS KEYBOARD (slim slab, in front of the monitor) ============= -->
+  <g id="bt4-keyboard" pointer-events="none">
+    <rect x="208" y="160" width="100" height="10" fill="#dccfb8"/>
+    <rect x="208" y="160" width="100" height="2"  fill="#ecdfc0"/>
+    <rect x="208" y="168" width="100" height="2"  fill="#a89878"/>
+    <rect x="208" y="160" width="2"   height="10" fill="#ecdfc0"/>
+    <rect x="306" y="160" width="2"   height="10" fill="#a89878"/>
+    <!-- subtle key marks (just hints of rows) -->
+    <rect x="212" y="163" width="92" height="1" fill="#a89878" opacity="0.45"/>
+    <rect x="212" y="166" width="92" height="1" fill="#a89878" opacity="0.45"/>
+  </g>
+
+  <!-- ============= COFFEE MUG (dusty sage, half full) ============= -->
+  <g id="bt4-mug" pointer-events="none">
+    <!-- handle (right side) -->
+    <rect x="338" y="160" width="6" height="2" fill="#5a7058"/>
+    <rect x="338" y="160" width="2" height="14" fill="#5a7058"/>
+    <rect x="338" y="172" width="6" height="2" fill="#5a7058"/>
+    <!-- body -->
+    <rect x="322" y="156" width="18" height="20" fill="url(#bt4Mug)"/>
+    <rect x="322" y="156" width="18" height="2"  fill="#bccfb4"/>
+    <rect x="322" y="174" width="18" height="2"  fill="#3a4a38" opacity="0.85"/>
+    <rect x="322" y="156" width="2"  height="20" fill="#bccfb4"/>
+    <rect x="338" y="156" width="2"  height="20" fill="#3a4a38" opacity="0.7"/>
+    <!-- coffee surface visible at the top (very faint) -->
+    <rect x="324" y="158" width="14" height="2" fill="#3a2818" opacity="0.85"/>
+    <rect x="324" y="158" width="14" height="1" fill="#5a3a20" opacity="0.85"/>
+  </g>
+
+  <!-- ============= STACKED NOTEBOOKS + PEN (squared on top) ============= -->
+  <g id="bt4-notebooks" pointer-events="none">
+    <!-- bottom notebook (dusty rose, larger) -->
+    <rect x="352" y="166" width="60" height="10" fill="#c89880"/>
+    <rect x="352" y="166" width="60" height="2"  fill="#dca890"/>
+    <rect x="352" y="174" width="60" height="2"  fill="#6a4838" opacity="0.85"/>
+    <rect x="352" y="166" width="2"  height="10" fill="#dca890"/>
+    <rect x="410" y="166" width="2"  height="10" fill="#6a4838"/>
+    <!-- a thin gold band on the spine -->
+    <rect x="354" y="170" width="56" height="1" fill="#c8a060" opacity="0.55"/>
+
+    <!-- top notebook (slate, smaller, perfectly aligned) -->
+    <rect x="358" y="158" width="48" height="8" fill="#6a7c84"/>
+    <rect x="358" y="158" width="48" height="2"  fill="#8898a0"/>
+    <rect x="358" y="164" width="48" height="2"  fill="#3a484e" opacity="0.85"/>
+    <rect x="358" y="158" width="2"  height="8"  fill="#8898a0"/>
+    <rect x="404" y="158" width="2"  height="8"  fill="#3a484e"/>
+    <!-- a thin elastic strap across the cover -->
+    <rect x="358" y="161" width="48" height="1" fill="#1a1a20" opacity="0.65"/>
+
+    <!-- pen squared exactly on top -->
+    <g id="bt4-pen">
+      <rect x="368" y="156" width="30" height="2" fill="#1a1a20"/>
+      <rect x="368" y="156" width="30" height="1" fill="#3a3a40"/>
+      <!-- pen tip -->
+      <rect x="396" y="156" width="2" height="2" fill="#a8a8b0"/>
+      <!-- pen cap accent -->
+      <rect x="368" y="156" width="6" height="2" fill="#5a3a48"/>
+    </g>
+  </g>
+
+  <!-- ============= ORGANIZED CABLES (clipped to back leg of desk) ============= -->
+  <g id="bt4-cables" pointer-events="none">
+    <!-- cable bundle behind the monitor going down to the floor along the back-right leg -->
+    <rect x="316" y="150" width="2" height="6" fill="#1a1a20"/>
+    <rect x="318" y="156" width="2" height="6" fill="#1a1a20"/>
+    <rect x="320" y="162" width="2" height="6" fill="#1a1a20"/>
+    <rect x="322" y="168" width="2" height="6" fill="#1a1a20"/>
+    <rect x="324" y="174" width="2" height="6" fill="#1a1a20"/>
+    <!-- cable tie / clip on the apron -->
+    <rect x="326" y="180" width="6" height="3" fill="#dccfb8"/>
+    <rect x="326" y="180" width="6" height="1" fill="#ecdfc0"/>
+    <!-- cable continues down the back leg -->
+    <rect x="326" y="183" width="2" height="22" fill="#1a1a20"/>
+    <rect x="328" y="205" width="2" height="20" fill="#1a1a20"/>
+    <rect x="330" y="225" width="2" height="20" fill="#1a1a20"/>
+    <rect x="332" y="245" width="2" height="14" fill="#1a1a20"/>
+    <!-- a second cable from the lamp post going down -->
+    <rect x="172" y="172" width="2" height="20" fill="#1a1a20"/>
+    <rect x="174" y="192" width="2" height="14" fill="#1a1a20"/>
+    <rect x="176" y="206" width="2" height="20" fill="#1a1a20"/>
+    <rect x="178" y="226" width="2" height="22" fill="#1a1a20"/>
+    <rect x="180" y="248" width="2" height="14" fill="#1a1a20"/>
+  </g>
+
+  <!-- ============= MID-BACK MESH OFFICE CHAIR (rising from below) ============= -->
+  <g id="bt4-chair" pointer-events="none">
+    <!-- chair back (mesh, rounded shoulders) -->
+    <rect x="244" y="208" width="92" height="60" fill="url(#bt4Mesh)"/>
+    <rect x="244" y="208" width="92" height="2"  fill="#3a3a40"/>
+    <rect x="244" y="208" width="2"  height="60" fill="#3a3a40"/>
+    <rect x="334" y="208" width="2"  height="60" fill="#08080c"/>
+    <!-- mesh weave pattern (very subtle) -->
+    <g opacity="0.45">
+      <rect x="246" y="216" width="88" height="1" fill="#3a3a40"/>
+      <rect x="246" y="226" width="88" height="1" fill="#3a3a40"/>
+      <rect x="246" y="236" width="88" height="1" fill="#3a3a40"/>
+      <rect x="246" y="246" width="88" height="1" fill="#3a3a40"/>
+      <rect x="246" y="256" width="88" height="1" fill="#3a3a40"/>
+      <rect x="258" y="210" width="1" height="56" fill="#3a3a40"/>
+      <rect x="278" y="210" width="1" height="56" fill="#3a3a40"/>
+      <rect x="298" y="210" width="1" height="56" fill="#3a3a40"/>
+      <rect x="318" y="210" width="1" height="56" fill="#3a3a40"/>
+    </g>
+    <!-- shoulder cap rail at top of chair back -->
+    <rect x="244" y="206" width="92" height="3" fill="#1a1a20"/>
+    <rect x="244" y="206" width="92" height="1" fill="#3a3a40"/>
+
+    <!-- gas lift cylinder behind the chair -->
+    <rect x="288" y="268" width="4" height="22" fill="#3a3a40"/>
+    <rect x="288" y="268" width="2" height="22" fill="#5a5a64"/>
+
+    <!-- 5-star base + wheels (we see the front 3 spokes) -->
+    <rect x="252" y="290" width="76" height="3" fill="#3a3a40"/>
+    <rect x="252" y="290" width="76" height="1" fill="#5a5a64"/>
+    <!-- spokes radiating -->
+    <rect x="288" y="284" width="4" height="6" fill="#3a3a40"/>
+    <!-- wheels -->
+    <ellipse cx="256" cy="296" rx="6" ry="3" fill="#1a1a20"/>
+    <ellipse cx="256" cy="295" rx="5" ry="2" fill="#3a3a40"/>
+    <ellipse cx="290" cy="298" rx="6" ry="3" fill="#1a1a20"/>
+    <ellipse cx="290" cy="297" rx="5" ry="2" fill="#3a3a40"/>
+    <ellipse cx="324" cy="296" rx="6" ry="3" fill="#1a1a20"/>
+    <ellipse cx="324" cy="295" rx="5" ry="2" fill="#3a3a40"/>
+  </g>
+
+  <!-- ============= WASTEBASKET (matte-charcoal pedal bin, right of desk) ============= -->
+  <g id="bt4-wastebasket" pointer-events="none">
+    <!-- soft floor shadow -->
+    <ellipse cx="416" cy="298" rx="24" ry="2.4" fill="#1a1610" opacity="0.55"/>
+
+    <!-- rim back-shadow ellipse (so the rim reads as a 3D ring) -->
+    <ellipse cx="416" cy="260" rx="20" ry="3.5" fill="#0e0e14"/>
+
+    <!-- bin body (tapered cylinder, matte charcoal) -->
+    <polygon points="396,260 436,260 432,298 400,298" fill="#2a2a30"/>
+
+    <!-- vertical edge highlight (left) + shadow (right) for cylindrical form -->
+    <rect x="397" y="262" width="2" height="34" fill="#3a3a44" opacity="0.85"/>
+    <rect x="433" y="262" width="2" height="34" fill="#08080c" opacity="0.85"/>
+
+    <!-- subtle horizontal banding suggests metal seams on the cylinder -->
+    <rect x="399" y="272" width="34" height="1" fill="#08080c" opacity="0.55"/>
+    <rect x="400" y="284" width="32" height="1" fill="#08080c" opacity="0.55"/>
+
+    <!-- soft cream specular running down one side (overhead light glancing the cylinder) -->
+    <rect x="404" y="264" width="1" height="30" fill="#a8a8b4" opacity="0.32"/>
+    <rect x="405" y="264" width="1" height="30" fill="#dcdce4" opacity="0.18"/>
+
+    <!-- TOP RIM (lighter metal band - clearly a ring) -->
+    <ellipse cx="416" cy="260" rx="20" ry="3.5" fill="none" stroke="#5a5a64" stroke-width="1.5"/>
+    <ellipse cx="416" cy="259" rx="19" ry="2.8" fill="none" stroke="#7a7a84" stroke-width="1" opacity="0.85"/>
+
+    <!-- INNER MOUTH (deep dark void inside the bin - the most important readability cue) -->
+    <ellipse cx="416" cy="260" rx="17" ry="2.6" fill="#04040a"/>
+
+    <!-- crumpled paper visible inside the bin, just below the rim -->
+    <rect x="409" y="259" width="6" height="2" fill="#e8e2d0" opacity="0.85"/>
+    <rect x="410" y="261" width="4" height="1" fill="#c8c2b0" opacity="0.85"/>
+    <rect x="418" y="259" width="5" height="2" fill="#dcd6c4" opacity="0.7"/>
+    <rect x="420" y="261" width="2" height="1" fill="#a8a294" opacity="0.85"/>
+
+    <!-- floor contact line under the bin (grounds it firmly to the floor) -->
+    <rect x="400" y="297" width="32" height="2" fill="#04040a" opacity="0.85"/>
+
+    <!-- small step pedal sticking out the front-right (the unmistakable "trash can" cue) -->
+    <rect x="428" y="293" width="10" height="2" fill="#3a3a44"/>
+    <rect x="428" y="293" width="10" height="1" fill="#5a5a64"/>
+    <rect x="428" y="295" width="10" height="2" fill="#1a1a20"/>
+    <!-- hinge link from pedal up to the rim (very thin) -->
+    <rect x="437" y="266" width="1" height="28" fill="#3a3a44" opacity="0.85"/>
+  </g>
+
+  <!-- ============= DRIFTING DUST (very slow breath, lucid-memory motion) ============= -->
+  <g pointer-events="none" opacity="0.42">
+    <ellipse cx="160" cy="106" rx="1.4" ry="1.4" fill="#fce8c8">
+      <animate attributeName="cy" values="106;109;106" dur="36s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.82;1;0.82" dur="36s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="280" cy="84"  rx="1.2" ry="1.2" fill="#fce8c8">
+      <animate attributeName="cy" values="84;81;84" dur="44s" begin="-9s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="44s" begin="-9s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="346" cy="120" rx="1.4" ry="1.4" fill="#fce8c8">
+      <animate attributeName="cy" values="120;124;120" dur="40s" begin="-14s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.85;1;0.85" dur="40s" begin="-14s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="424" cy="98"  rx="1.2" ry="1.2" fill="#fce8c8">
+      <animate attributeName="cy" values="98;95;98" dur="48s" begin="-22s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.78;1;0.78" dur="48s" begin="-22s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="92"  cy="216" rx="1.2" ry="1.2" fill="#fce8c8">
+      <animate attributeName="cy" values="216;213;216" dur="42s" begin="-28s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.82;1;0.82" dur="42s" begin="-28s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <!-- ============= LUCID MEMORY LAYER (warm bleed + breathing haze) ============= -->
+  <defs>
+    <radialGradient id="bt4WarmBleed" cx="85%" cy="32%" r="55%">
+      <stop offset="0%"   stop-color="#fce0a8" stop-opacity="0.20"/>
+      <stop offset="100%" stop-color="#fce0a8" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bt4Haze" cx="50%" cy="50%" r="70%">
+      <stop offset="0%"   stop-color="#fff4d4" stop-opacity="0.055"/>
+      <stop offset="60%"  stop-color="#fff4d4" stop-opacity="0.022"/>
+      <stop offset="100%" stop-color="#fff4d4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect x="0" y="0" width="480" height="320" fill="url(#bt4WarmBleed)" pointer-events="none">
+    <animate attributeName="opacity" values="0.74;1;0.74" dur="26s" repeatCount="indefinite"/>
+  </rect>
+  <rect x="0" y="0" width="480" height="320" fill="url(#bt4Haze)" pointer-events="none">
+    <animate attributeName="opacity" values="0.55;1;0.55" dur="20s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- ============= EDGE DARKENING + OUTER VIGNETTE ============= -->
+  <rect x="0"   y="0" width="38" height="320" fill="url(#bt4SidesL)" pointer-events="none"/>
+  <rect x="442" y="0" width="38" height="320" fill="url(#bt4SidesR)" pointer-events="none"/>
+  <rect x="0" y="0" width="480" height="320" fill="url(#bt4Vignette)" pointer-events="none"/>
+
+  <!-- ============= INTERACTIVE HOTSPOTS (placed last, transparent) ============= -->
+  <g id="bt4-hotspots" fill="transparent" stroke="none">
+    <rect id="hit-window"      x="22"  y="42"  width="92"  height="138"/>
+    <rect id="hit-curtain"     x="114" y="42"  width="18"  height="138"/>
+    <rect id="hit-sill"        x="20"  y="180" width="114" height="6"/>
+    <rect id="hit-frame"       x="360" y="44"  width="48"  height="50"/>
+    <rect id="hit-desk"        x="140" y="174" width="300" height="80"/>
+    <rect id="hit-drawer"      x="156" y="184" width="80"  height="14"/>
+    <rect id="hit-monitor"     x="198" y="100" width="120" height="50"/>
+    <rect id="hit-screen"      x="204" y="104" width="108" height="42"/>
+    <rect id="hit-keyboard"    x="208" y="160" width="100" height="10"/>
+    <rect id="hit-lamp"        x="156" y="116" width="68"  height="60"/>
+    <rect id="hit-shadow"      x="206" y="176" width="48"  height="8"/>
+    <rect id="hit-mug"         x="320" y="156" width="26"  height="22"/>
+    <rect id="hit-notebooks"   x="350" y="166" width="62"  height="12"/>
+    <rect id="hit-pen"         x="366" y="154" width="34"  height="6"/>
+    <rect id="hit-cables"      x="316" y="150" width="22"  height="110"/>
+    <rect id="hit-chair"       x="244" y="206" width="92"  height="86"/>
+    <rect id="hit-wheels"      x="248" y="290" width="84"  height="14"/>
+    <rect id="hit-wastebasket" x="394" y="256" width="46"  height="44"/>
+    <rect id="hit-floor"       x="0"   y="252" width="140" height="68"/>
+    <rect id="hit-wall"        x="138" y="2"   width="220" height="72"/>
+  </g>
+</svg>

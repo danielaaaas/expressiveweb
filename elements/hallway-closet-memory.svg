@@ -788,6 +788,11 @@
     </rect>
   </g>
 
+  <!-- soft warm light drift overlay (apt 1 tone: warmest, densest) -->
+  <rect width="480" height="320" fill="#f4d8a8" opacity="0.05" pointer-events="none">
+    <animate attributeName="opacity" values="0.04;0.10;0.04" dur="15s" repeatCount="indefinite"/>
+  </rect>
+
   <!-- side darkening (cinematic crop, suggests we're peering through) -->
   <rect x="0" y="0" width="20" height="320" fill="url(#hcSidesL)" pointer-events="none"/>
   <rect x="460" y="0" width="20" height="320" fill="url(#hcSidesR)" pointer-events="none"/>

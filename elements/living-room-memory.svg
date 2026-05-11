@@ -884,6 +884,11 @@
     </rect>
   </g>
 
+  <!-- soft warm light drift overlay (apt 1 tone: warmest, densest) -->
+  <rect width="480" height="320" fill="#f4d8a8" opacity="0.05" pointer-events="none">
+    <animate attributeName="opacity" values="0.04;0.10;0.04" dur="15s" repeatCount="indefinite"/>
+  </rect>
+
   <!-- Edge vignette -->
   <rect width="480" height="320" fill="none" stroke="#0a0810" stroke-width="22" opacity="0.45" pointer-events="none"/>
 

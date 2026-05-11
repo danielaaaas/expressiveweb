@@ -658,6 +658,11 @@
     <rect x="342" y="285" width="40" height="1" fill="#a8c8f8" opacity="0.35"/>
   </g>
 
+  <!-- soft warm light drift overlay (apt 2 tone: transitional, slightly cooler/slower) -->
+  <rect width="480" height="320" fill="#f0d4ac" opacity="0.05" pointer-events="none">
+    <animate attributeName="opacity" values="0.04;0.09;0.04" dur="19s" repeatCount="indefinite"/>
+  </rect>
+
   <!-- ============= INTERACTION HOTSPOTS (transparent rects). last = highest priority. ============= -->
   <g id="b2-hotspots">
     <rect id="hit-floor" x="0" y="240" width="480" height="80" fill="transparent" pointer-events="all"/>
