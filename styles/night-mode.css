@@ -358,8 +358,14 @@ body.night-active #room-lamp-layer {
     outline: none;
 }
 
+/* the wide ergonomic hit area must let clicks pass through to the room rect
+   underneath — otherwise small rooms (apt 4 closets, etc.) become unclickable
+   at night because the transparent hit dominates their interior. lamp toggling
+   still works because the visible sprite parts (.room-lamp-shade/-bulb/-base/
+   -outline) are non-transparent and bubble click to the parent .room-lamp. */
 .room-lamp-hit {
     fill: transparent;
+    pointer-events: none;
 }
 
 .room-lamp-shade { fill: #baa184; }
