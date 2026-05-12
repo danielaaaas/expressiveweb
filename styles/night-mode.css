@@ -398,3 +398,27 @@ body.demo-return .room-lamp.room-lit .room-light {
 .room-lamp.room-lit .room-lamp-bulb {
     fill: #fff3bf;
 }
+
+/* Flashlight cursor — when the light switch is on 'night', swap the day-time
+   pixel cursor for a tiny pixel-art flashlight angled toward the top-left, so
+   the painted beam reads as "you're holding a flashlight you're shining around
+   the apartment". The hot spot (0 0) sits at the tip of the warm beam glow,
+   lined up with where the painted beam centers on .night-veil-canvas. SVG is
+   inlined as a data URI to stay crisp at any DPR and to avoid an extra network
+   round-trip. Scoped to .floor-plan-container so memory overlays keep their
+   normal cursors.
+
+   !important is required because cursorworkaround/key.js sets the daytime
+   pixel-paw cursor as an inline `style.cursor` on <body> and each .room, and
+   inline styles beat author CSS unless we mark ours important. The inline
+   declaration is restored automatically when night ends because we only target
+   body.night-active. */
+body.night-active,
+body.night-active .floor-plan-container,
+body.night-active .floor-plan-container svg,
+body.night-active .floor-plan-container .room,
+body.night-active .floor-plan-container .room:hover,
+body.night-active .floor-plan-container .room.visited,
+body.night-active .floor-plan-container .room-item {
+    cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='22' height='22' viewBox='0 0 22 22' shape-rendering='crispEdges'><rect x='0' y='0' width='1' height='1' fill='%23fff8d0'/><rect x='1' y='0' width='2' height='1' fill='%23fff3a8'/><rect x='0' y='1' width='1' height='2' fill='%23fff3a8'/><rect x='1' y='1' width='2' height='2' fill='%23ffe07a'/><rect x='2' y='2' width='2' height='2' fill='%23ffd454'/><rect x='3' y='3' width='2' height='2' fill='%23f5b738'/><rect x='3' y='4' width='1' height='2' fill='%23a26a1c'/><rect x='4' y='3' width='2' height='1' fill='%23a26a1c'/><rect x='4' y='4' width='3' height='3' fill='%23533a26'/><rect x='5' y='5' width='3' height='3' fill='%236b4b32'/><rect x='7' y='7' width='2' height='2' fill='%237a5a40'/><rect x='8' y='8' width='2' height='2' fill='%231f120a'/><rect x='9' y='9' width='2' height='2' fill='%231f120a'/><rect x='10' y='10' width='2' height='2' fill='%231f120a'/><rect x='11' y='11' width='2' height='2' fill='%231f120a'/><rect x='12' y='12' width='2' height='2' fill='%231f120a'/><rect x='13' y='13' width='2' height='2' fill='%231f120a'/><rect x='8' y='8' width='1' height='1' fill='%234a3a2a'/><rect x='10' y='10' width='1' height='1' fill='%234a3a2a'/><rect x='12' y='12' width='1' height='1' fill='%234a3a2a'/><rect x='14' y='14' width='3' height='3' fill='%23120804'/></svg>") 0 0, auto !important;
+}
