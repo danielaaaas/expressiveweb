@@ -36,6 +36,21 @@
   /** Radius of the radial cutout in the night overlay mask (CSS px); matches --flashlight-r. */
   const FLASHLIGHT_RADIUS_PX = 140;
 
+  /* Overlay sky hues (RGB); strength comes from --night-dim-alpha in CSS.
+     Declared up here (above the bootstrap calls to refreshClock/evaluateNightState)
+     so the temporal dead zone never bites: when nightOverride is 'night' or 'auto'
+     during deep hours, applyAmbientVisuals() needs O_NIGHT_T immediately on first
+     run, otherwise the script throws and never finishes initializing — which kills
+     the flashlight, lamps, and lit-room state. */
+  const O_NIGHT_T = [34, 22, 72];
+  const O_NIGHT_B = [4, 2, 14];
+  const O_SUNRISE_T = [255, 186, 148];
+  const O_SUNRISE_B = [112, 52, 88];
+  const O_SUNSET_T = [255, 138, 96];
+  const O_SUNSET_B = [78, 28, 58];
+  const O_EVENING_T = [52, 34, 98];
+  const O_EVENING_B = [14, 8, 32];
+
   let maskRaf = 0;
   /** Full-viewport canvas inside .night-overlay: draws dim + flashlight + lit-room holes (no CSS mask). */
   let veilCanvas = null;
@@ -691,15 +706,9 @@
     ];
   }
 
-  /** Overlay sky hues (RGB); strength still comes from --night-dim-alpha in CSS. */
-  const O_NIGHT_T = [34, 22, 72];
-  const O_NIGHT_B = [4, 2, 14];
-  const O_SUNRISE_T = [255, 186, 148];
-  const O_SUNRISE_B = [112, 52, 88];
-  const O_SUNSET_T = [255, 138, 96];
-  const O_SUNSET_B = [78, 28, 58];
-  const O_EVENING_T = [52, 34, 98];
-  const O_EVENING_B = [14, 8, 32];
+  /* O_NIGHT_T/B + O_SUNRISE/SUNSET/EVENING constants live near the top of the
+     IIFE (before the bootstrap calls) so applyAmbientVisuals can reach them on
+     first run. See comment up there. */
 
   function pushOverlayTint(topRgb, botRgb) {
     overlay.style.setProperty('--o-r1', String(topRgb[0]));
